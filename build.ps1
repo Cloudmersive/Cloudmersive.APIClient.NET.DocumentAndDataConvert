@@ -8,11 +8,30 @@
 
 
 
-(Get-Content ./client/src/Cloudmersive.APIClient.NETCore.DocumentAndDataConvert/Cloudmersive.APIClient.NETCore.DocumentAndDataConvert.csproj).replace('<Authors>Swagger</Authors>', "<Authors>Cloudmersive</Authors>") | Set-Content ./client/src/Cloudmersive.APIClient.NETCore.DocumentAndDataConvert/Cloudmersive.APIClient.NETCore.DocumentAndDataConvert.csproj
-(Get-Content ./client/src/Cloudmersive.APIClient.NETCore.DocumentAndDataConvert/Cloudmersive.APIClient.NETCore.DocumentAndDataConvert.csproj).replace('<Company>Swagger</Company>', "<Company>Cloudmersive</Company>") | Set-Content ./client/src/Cloudmersive.APIClient.NETCore.DocumentAndDataConvert/Cloudmersive.APIClient.NETCore.DocumentAndDataConvert.csproj
-(Get-Content ./client/src/Cloudmersive.APIClient.NETCore.DocumentAndDataConvert/Cloudmersive.APIClient.NETCore.DocumentAndDataConvert.csproj).replace('<AssemblyTitle>Swagger Library</AssemblyTitle>', "<AssemblyTitle>Cloudmersive Convert API Client</AssemblyTitle>") | Set-Content ./client/src/Cloudmersive.APIClient.NETCore.DocumentAndDataConvert/Cloudmersive.APIClient.NETCore.DocumentAndDataConvert.csproj
-(Get-Content ./client/src/Cloudmersive.APIClient.NETCore.DocumentAndDataConvert/Cloudmersive.APIClient.NETCore.DocumentAndDataConvert.csproj).replace('<Description>A library generated from a Swagger doc</Description>', "<Description>Convert files and data effortlessly. Convert DOCX to PDF. Convert CSV to JSON. And much more.</Description>") | Set-Content ./client/src/Cloudmersive.APIClient.NETCore.DocumentAndDataConvert/Cloudmersive.APIClient.NETCore.DocumentAndDataConvert.csproj
-(Get-Content ./client/src/Cloudmersive.APIClient.NETCore.DocumentAndDataConvert/Cloudmersive.APIClient.NETCore.DocumentAndDataConvert.csproj).replace('<TargetFramework>net45</TargetFramework>', "<TargetFramework>netcoreapp2.1</TargetFramework>") | Set-Content ./client/src/Cloudmersive.APIClient.NETCore.DocumentAndDataConvert/Cloudmersive.APIClient.NETCore.DocumentAndDataConvert.csproj
 
-& dotnet build ./client/src/Cloudmersive.APIClient.NETCore.DocumentAndDataConvert/Cloudmersive.APIClient.NETCore.DocumentAndDataConvert.csproj -c Release
-& dotnet pack ./client/src/Cloudmersive.APIClient.NETCore.DocumentAndDataConvert/Cloudmersive.APIClient.NETCore.DocumentAndDataConvert.csproj -c Release
+
+$csprojpath = Resolve-Path ./client/src/Cloudmersive.APIClient.NET.DocumentAndDataConvert/Cloudmersive.APIClient.NET.DocumentAndDataConvert.csproj
+$csprojtestpath = Resolve-Path ./client/src/Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test/Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test.csproj
+$nuspecpath = Resolve-Path ./client/src/Cloudmersive.APIClient.NET.DocumentAndDataConvert/Cloudmersive.APIClient.NET.DocumentAndDataConvert.nuspec
+$slnpath = Resolve-Path ./client/Cloudmersive.APIClient.NET.DocumentAndDataConvert.sln
+
+
+(Get-Content $nuspecpath).replace('<title>Swagger Library</title>', "<title>Cloudmersive Convert API Client</title>") | Set-Content $nuspecpath
+(Get-Content $nuspecpath).replace('<authors>$author$</authors>', "<authors>Cloudmersive</authors>") | Set-Content $nuspecpath
+(Get-Content $nuspecpath).replace('<owners>$author$</owners>', "<owners>Cloudmersive</owners>") | Set-Content $nuspecpath
+(Get-Content $nuspecpath).replace('<description>A library generated from a Swagger doc</description>', "<description>Convert files and data effortlessly. Convert DOCX to PDF. Convert CSV to JSON. And much more.</description>") | Set-Content $nuspecpath
+(Get-Content $nuspecpath).replace('<!-- Authors contain text that appears directly on the gallery -->', "<iconUrl>https://cloudmersive.com/images/cmsdk.png</iconUrl>") | Set-Content $nuspecpath
+
+
+
+
+
+
+
+./nuget.exe restore $csprojpath -SolutionDirectory ./client
+
+./nuget.exe restore $csprojtestpath -SolutionDirectory ./client
+
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\msbuild.exe $slnpath /t:rebuild 
+
+./nuget.exe pack $csprojpath
