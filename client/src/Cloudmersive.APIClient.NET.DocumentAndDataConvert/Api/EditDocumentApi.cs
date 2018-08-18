@@ -14,170 +14,159 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
 using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
 
 namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface IMergeDocumentApi : IApiAccessor
+    public interface IEditDocumentApi : IApiAccessor
     {
         #region Synchronous Operations
         /// <summary>
-        /// Merge Multple Word DOCX Together
+        /// Begin editing a document
         /// </summary>
         /// <remarks>
-        /// Combine multiple Office Word Documents (docx) into one single Office Word document
+        /// Uploads a document to Cloudmersive to begin a series of one or more editing operations
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inputFile1">First input file to perform the operation on.</param>
-        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
-        /// <returns>byte[]</returns>
-        byte[] MergeDocumentDocx (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>string</returns>
+        string EditDocumentBeginEditing (System.IO.Stream inputFile);
 
         /// <summary>
-        /// Merge Multple Word DOCX Together
+        /// Begin editing a document
         /// </summary>
         /// <remarks>
-        /// Combine multiple Office Word Documents (docx) into one single Office Word document
+        /// Uploads a document to Cloudmersive to begin a series of one or more editing operations
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inputFile1">First input file to perform the operation on.</param>
-        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
-        /// <returns>ApiResponse of byte[]</returns>
-        ApiResponse<byte[]> MergeDocumentDocxWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> EditDocumentBeginEditingWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// Merge Multple PowerPoint PPTX Together
+        /// Replace string in DOCX
         /// </summary>
         /// <remarks>
-        /// Combine multiple Office PowerPoint presentations (pptx) into one single Office PowerPoint presentation
+        /// Replace all instances of a string in an Office Word Document (docx)
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inputFile1">First input file to perform the operation on.</param>
-        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="reqConfig"></param>
         /// <returns>byte[]</returns>
-        byte[] MergeDocumentPptx (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+        byte[] EditDocumentDocxReplace (ReplaceStringRequest reqConfig);
 
         /// <summary>
-        /// Merge Multple PowerPoint PPTX Together
+        /// Replace string in DOCX
         /// </summary>
         /// <remarks>
-        /// Combine multiple Office PowerPoint presentations (pptx) into one single Office PowerPoint presentation
+        /// Replace all instances of a string in an Office Word Document (docx)
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inputFile1">First input file to perform the operation on.</param>
-        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="reqConfig"></param>
         /// <returns>ApiResponse of byte[]</returns>
-        ApiResponse<byte[]> MergeDocumentPptxWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+        ApiResponse<byte[]> EditDocumentDocxReplaceWithHttpInfo (ReplaceStringRequest reqConfig);
         /// <summary>
-        /// Merge Multple Excel XLSX Together
+        /// Replace string in PPTX
         /// </summary>
         /// <remarks>
-        /// Combine multiple Office Excel spreadsheets (xlsx) into a single Office Excel spreadsheet
+        /// Replace all instances of a string in an Office PowerPoint Document (pptx)
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inputFile1">First input file to perform the operation on.</param>
-        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="reqConfig"></param>
         /// <returns>byte[]</returns>
-        byte[] MergeDocumentXlsx (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+        byte[] EditDocumentPptxReplace (ReplaceStringRequest reqConfig);
 
         /// <summary>
-        /// Merge Multple Excel XLSX Together
+        /// Replace string in PPTX
         /// </summary>
         /// <remarks>
-        /// Combine multiple Office Excel spreadsheets (xlsx) into a single Office Excel spreadsheet
+        /// Replace all instances of a string in an Office PowerPoint Document (pptx)
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inputFile1">First input file to perform the operation on.</param>
-        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="reqConfig"></param>
         /// <returns>ApiResponse of byte[]</returns>
-        ApiResponse<byte[]> MergeDocumentXlsxWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+        ApiResponse<byte[]> EditDocumentPptxReplaceWithHttpInfo (ReplaceStringRequest reqConfig);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Merge Multple Word DOCX Together
+        /// Begin editing a document
         /// </summary>
         /// <remarks>
-        /// Combine multiple Office Word Documents (docx) into one single Office Word document
+        /// Uploads a document to Cloudmersive to begin a series of one or more editing operations
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inputFile1">First input file to perform the operation on.</param>
-        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
-        /// <returns>Task of byte[]</returns>
-        System.Threading.Tasks.Task<byte[]> MergeDocumentDocxAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> EditDocumentBeginEditingAsync (System.IO.Stream inputFile);
 
         /// <summary>
-        /// Merge Multple Word DOCX Together
+        /// Begin editing a document
         /// </summary>
         /// <remarks>
-        /// Combine multiple Office Word Documents (docx) into one single Office Word document
+        /// Uploads a document to Cloudmersive to begin a series of one or more editing operations
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inputFile1">First input file to perform the operation on.</param>
-        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
-        /// <returns>Task of ApiResponse (byte[])</returns>
-        System.Threading.Tasks.Task<ApiResponse<byte[]>> MergeDocumentDocxAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> EditDocumentBeginEditingAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// Merge Multple PowerPoint PPTX Together
+        /// Replace string in DOCX
         /// </summary>
         /// <remarks>
-        /// Combine multiple Office PowerPoint presentations (pptx) into one single Office PowerPoint presentation
+        /// Replace all instances of a string in an Office Word Document (docx)
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inputFile1">First input file to perform the operation on.</param>
-        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="reqConfig"></param>
         /// <returns>Task of byte[]</returns>
-        System.Threading.Tasks.Task<byte[]> MergeDocumentPptxAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+        System.Threading.Tasks.Task<byte[]> EditDocumentDocxReplaceAsync (ReplaceStringRequest reqConfig);
 
         /// <summary>
-        /// Merge Multple PowerPoint PPTX Together
+        /// Replace string in DOCX
         /// </summary>
         /// <remarks>
-        /// Combine multiple Office PowerPoint presentations (pptx) into one single Office PowerPoint presentation
+        /// Replace all instances of a string in an Office Word Document (docx)
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inputFile1">First input file to perform the operation on.</param>
-        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="reqConfig"></param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        System.Threading.Tasks.Task<ApiResponse<byte[]>> MergeDocumentPptxAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDocumentDocxReplaceAsyncWithHttpInfo (ReplaceStringRequest reqConfig);
         /// <summary>
-        /// Merge Multple Excel XLSX Together
+        /// Replace string in PPTX
         /// </summary>
         /// <remarks>
-        /// Combine multiple Office Excel spreadsheets (xlsx) into a single Office Excel spreadsheet
+        /// Replace all instances of a string in an Office PowerPoint Document (pptx)
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inputFile1">First input file to perform the operation on.</param>
-        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="reqConfig"></param>
         /// <returns>Task of byte[]</returns>
-        System.Threading.Tasks.Task<byte[]> MergeDocumentXlsxAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+        System.Threading.Tasks.Task<byte[]> EditDocumentPptxReplaceAsync (ReplaceStringRequest reqConfig);
 
         /// <summary>
-        /// Merge Multple Excel XLSX Together
+        /// Replace string in PPTX
         /// </summary>
         /// <remarks>
-        /// Combine multiple Office Excel spreadsheets (xlsx) into a single Office Excel spreadsheet
+        /// Replace all instances of a string in an Office PowerPoint Document (pptx)
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inputFile1">First input file to perform the operation on.</param>
-        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="reqConfig"></param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        System.Threading.Tasks.Task<ApiResponse<byte[]>> MergeDocumentXlsxAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDocumentPptxReplaceAsyncWithHttpInfo (ReplaceStringRequest reqConfig);
         #endregion Asynchronous Operations
     }
 
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public partial class MergeDocumentApi : IMergeDocumentApi
+    public partial class EditDocumentApi : IEditDocumentApi
     {
         private Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="MergeDocumentApi"/> class.
+        /// Initializes a new instance of the <see cref="EditDocumentApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public MergeDocumentApi(String basePath)
+        public EditDocumentApi(String basePath)
         {
             this.Configuration = new Configuration { BasePath = basePath };
 
@@ -185,12 +174,12 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="MergeDocumentApi"/> class
+        /// Initializes a new instance of the <see cref="EditDocumentApi"/> class
         /// using Configuration object
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public MergeDocumentApi(Configuration configuration = null)
+        public EditDocumentApi(Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
                 this.Configuration = Configuration.Default;
@@ -264,35 +253,30 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Merge Multple Word DOCX Together Combine multiple Office Word Documents (docx) into one single Office Word document
+        /// Begin editing a document Uploads a document to Cloudmersive to begin a series of one or more editing operations
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inputFile1">First input file to perform the operation on.</param>
-        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
-        /// <returns>byte[]</returns>
-        public byte[] MergeDocumentDocx (System.IO.Stream inputFile1, System.IO.Stream inputFile2)
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>string</returns>
+        public string EditDocumentBeginEditing (System.IO.Stream inputFile)
         {
-             ApiResponse<byte[]> localVarResponse = MergeDocumentDocxWithHttpInfo(inputFile1, inputFile2);
+             ApiResponse<string> localVarResponse = EditDocumentBeginEditingWithHttpInfo(inputFile);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Merge Multple Word DOCX Together Combine multiple Office Word Documents (docx) into one single Office Word document
+        /// Begin editing a document Uploads a document to Cloudmersive to begin a series of one or more editing operations
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inputFile1">First input file to perform the operation on.</param>
-        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
-        /// <returns>ApiResponse of byte[]</returns>
-        public ApiResponse< byte[] > MergeDocumentDocxWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2)
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > EditDocumentBeginEditingWithHttpInfo (System.IO.Stream inputFile)
         {
-            // verify the required parameter 'inputFile1' is set
-            if (inputFile1 == null)
-                throw new ApiException(400, "Missing required parameter 'inputFile1' when calling MergeDocumentApi->MergeDocumentDocx");
-            // verify the required parameter 'inputFile2' is set
-            if (inputFile2 == null)
-                throw new ApiException(400, "Missing required parameter 'inputFile2' when calling MergeDocumentApi->MergeDocumentDocx");
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditDocumentApi->EditDocumentBeginEditing");
 
-            var localVarPath = "/convert/merge/docx";
+            var localVarPath = "/convert/edit/begin-editing";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -314,8 +298,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (inputFile1 != null) localVarFileParams.Add("inputFile1", Configuration.ApiClient.ParameterToFile("inputFile1", inputFile1));
-            if (inputFile2 != null) localVarFileParams.Add("inputFile2", Configuration.ApiClient.ParameterToFile("inputFile2", inputFile2));
+            if (inputFile != null) localVarFileParams.Add("inputFile", Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
 
             // authentication (Apikey) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
@@ -332,46 +315,41 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("MergeDocumentDocx", localVarResponse);
+                Exception exception = ExceptionFactory("EditDocumentBeginEditing", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<byte[]>(localVarStatusCode,
+            return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (byte[]) Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
         /// <summary>
-        /// Merge Multple Word DOCX Together Combine multiple Office Word Documents (docx) into one single Office Word document
+        /// Begin editing a document Uploads a document to Cloudmersive to begin a series of one or more editing operations
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inputFile1">First input file to perform the operation on.</param>
-        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
-        /// <returns>Task of byte[]</returns>
-        public async System.Threading.Tasks.Task<byte[]> MergeDocumentDocxAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2)
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> EditDocumentBeginEditingAsync (System.IO.Stream inputFile)
         {
-             ApiResponse<byte[]> localVarResponse = await MergeDocumentDocxAsyncWithHttpInfo(inputFile1, inputFile2);
+             ApiResponse<string> localVarResponse = await EditDocumentBeginEditingAsyncWithHttpInfo(inputFile);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Merge Multple Word DOCX Together Combine multiple Office Word Documents (docx) into one single Office Word document
+        /// Begin editing a document Uploads a document to Cloudmersive to begin a series of one or more editing operations
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inputFile1">First input file to perform the operation on.</param>
-        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
-        /// <returns>Task of ApiResponse (byte[])</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> MergeDocumentDocxAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2)
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> EditDocumentBeginEditingAsyncWithHttpInfo (System.IO.Stream inputFile)
         {
-            // verify the required parameter 'inputFile1' is set
-            if (inputFile1 == null)
-                throw new ApiException(400, "Missing required parameter 'inputFile1' when calling MergeDocumentApi->MergeDocumentDocx");
-            // verify the required parameter 'inputFile2' is set
-            if (inputFile2 == null)
-                throw new ApiException(400, "Missing required parameter 'inputFile2' when calling MergeDocumentApi->MergeDocumentDocx");
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditDocumentApi->EditDocumentBeginEditing");
 
-            var localVarPath = "/convert/merge/docx";
+            var localVarPath = "/convert/edit/begin-editing";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -393,8 +371,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (inputFile1 != null) localVarFileParams.Add("inputFile1", Configuration.ApiClient.ParameterToFile("inputFile1", inputFile1));
-            if (inputFile2 != null) localVarFileParams.Add("inputFile2", Configuration.ApiClient.ParameterToFile("inputFile2", inputFile2));
+            if (inputFile != null) localVarFileParams.Add("inputFile", Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
 
             // authentication (Apikey) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
@@ -411,45 +388,40 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("MergeDocumentDocx", localVarResponse);
+                Exception exception = ExceptionFactory("EditDocumentBeginEditing", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<byte[]>(localVarStatusCode,
+            return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (byte[]) Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
         /// <summary>
-        /// Merge Multple PowerPoint PPTX Together Combine multiple Office PowerPoint presentations (pptx) into one single Office PowerPoint presentation
+        /// Replace string in DOCX Replace all instances of a string in an Office Word Document (docx)
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inputFile1">First input file to perform the operation on.</param>
-        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="reqConfig"></param>
         /// <returns>byte[]</returns>
-        public byte[] MergeDocumentPptx (System.IO.Stream inputFile1, System.IO.Stream inputFile2)
+        public byte[] EditDocumentDocxReplace (ReplaceStringRequest reqConfig)
         {
-             ApiResponse<byte[]> localVarResponse = MergeDocumentPptxWithHttpInfo(inputFile1, inputFile2);
+             ApiResponse<byte[]> localVarResponse = EditDocumentDocxReplaceWithHttpInfo(reqConfig);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Merge Multple PowerPoint PPTX Together Combine multiple Office PowerPoint presentations (pptx) into one single Office PowerPoint presentation
+        /// Replace string in DOCX Replace all instances of a string in an Office Word Document (docx)
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inputFile1">First input file to perform the operation on.</param>
-        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="reqConfig"></param>
         /// <returns>ApiResponse of byte[]</returns>
-        public ApiResponse< byte[] > MergeDocumentPptxWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2)
+        public ApiResponse< byte[] > EditDocumentDocxReplaceWithHttpInfo (ReplaceStringRequest reqConfig)
         {
-            // verify the required parameter 'inputFile1' is set
-            if (inputFile1 == null)
-                throw new ApiException(400, "Missing required parameter 'inputFile1' when calling MergeDocumentApi->MergeDocumentPptx");
-            // verify the required parameter 'inputFile2' is set
-            if (inputFile2 == null)
-                throw new ApiException(400, "Missing required parameter 'inputFile2' when calling MergeDocumentApi->MergeDocumentPptx");
+            // verify the required parameter 'reqConfig' is set
+            if (reqConfig == null)
+                throw new ApiException(400, "Missing required parameter 'reqConfig' when calling EditDocumentApi->EditDocumentDocxReplace");
 
-            var localVarPath = "/convert/merge/pptx";
+            var localVarPath = "/convert/edit/docx/replace-all";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -459,7 +431,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "multipart/form-data"
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -471,8 +447,14 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (inputFile1 != null) localVarFileParams.Add("inputFile1", Configuration.ApiClient.ParameterToFile("inputFile1", inputFile1));
-            if (inputFile2 != null) localVarFileParams.Add("inputFile2", Configuration.ApiClient.ParameterToFile("inputFile2", inputFile2));
+            if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reqConfig; // byte array
+            }
 
             // authentication (Apikey) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
@@ -489,7 +471,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("MergeDocumentPptx", localVarResponse);
+                Exception exception = ExceptionFactory("EditDocumentDocxReplace", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -499,36 +481,31 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Merge Multple PowerPoint PPTX Together Combine multiple Office PowerPoint presentations (pptx) into one single Office PowerPoint presentation
+        /// Replace string in DOCX Replace all instances of a string in an Office Word Document (docx)
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inputFile1">First input file to perform the operation on.</param>
-        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="reqConfig"></param>
         /// <returns>Task of byte[]</returns>
-        public async System.Threading.Tasks.Task<byte[]> MergeDocumentPptxAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2)
+        public async System.Threading.Tasks.Task<byte[]> EditDocumentDocxReplaceAsync (ReplaceStringRequest reqConfig)
         {
-             ApiResponse<byte[]> localVarResponse = await MergeDocumentPptxAsyncWithHttpInfo(inputFile1, inputFile2);
+             ApiResponse<byte[]> localVarResponse = await EditDocumentDocxReplaceAsyncWithHttpInfo(reqConfig);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Merge Multple PowerPoint PPTX Together Combine multiple Office PowerPoint presentations (pptx) into one single Office PowerPoint presentation
+        /// Replace string in DOCX Replace all instances of a string in an Office Word Document (docx)
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inputFile1">First input file to perform the operation on.</param>
-        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="reqConfig"></param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> MergeDocumentPptxAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2)
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDocumentDocxReplaceAsyncWithHttpInfo (ReplaceStringRequest reqConfig)
         {
-            // verify the required parameter 'inputFile1' is set
-            if (inputFile1 == null)
-                throw new ApiException(400, "Missing required parameter 'inputFile1' when calling MergeDocumentApi->MergeDocumentPptx");
-            // verify the required parameter 'inputFile2' is set
-            if (inputFile2 == null)
-                throw new ApiException(400, "Missing required parameter 'inputFile2' when calling MergeDocumentApi->MergeDocumentPptx");
+            // verify the required parameter 'reqConfig' is set
+            if (reqConfig == null)
+                throw new ApiException(400, "Missing required parameter 'reqConfig' when calling EditDocumentApi->EditDocumentDocxReplace");
 
-            var localVarPath = "/convert/merge/pptx";
+            var localVarPath = "/convert/edit/docx/replace-all";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -538,7 +515,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "multipart/form-data"
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -550,8 +531,14 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (inputFile1 != null) localVarFileParams.Add("inputFile1", Configuration.ApiClient.ParameterToFile("inputFile1", inputFile1));
-            if (inputFile2 != null) localVarFileParams.Add("inputFile2", Configuration.ApiClient.ParameterToFile("inputFile2", inputFile2));
+            if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reqConfig; // byte array
+            }
 
             // authentication (Apikey) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
@@ -568,7 +555,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("MergeDocumentPptx", localVarResponse);
+                Exception exception = ExceptionFactory("EditDocumentDocxReplace", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -578,35 +565,30 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Merge Multple Excel XLSX Together Combine multiple Office Excel spreadsheets (xlsx) into a single Office Excel spreadsheet
+        /// Replace string in PPTX Replace all instances of a string in an Office PowerPoint Document (pptx)
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inputFile1">First input file to perform the operation on.</param>
-        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="reqConfig"></param>
         /// <returns>byte[]</returns>
-        public byte[] MergeDocumentXlsx (System.IO.Stream inputFile1, System.IO.Stream inputFile2)
+        public byte[] EditDocumentPptxReplace (ReplaceStringRequest reqConfig)
         {
-             ApiResponse<byte[]> localVarResponse = MergeDocumentXlsxWithHttpInfo(inputFile1, inputFile2);
+             ApiResponse<byte[]> localVarResponse = EditDocumentPptxReplaceWithHttpInfo(reqConfig);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Merge Multple Excel XLSX Together Combine multiple Office Excel spreadsheets (xlsx) into a single Office Excel spreadsheet
+        /// Replace string in PPTX Replace all instances of a string in an Office PowerPoint Document (pptx)
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inputFile1">First input file to perform the operation on.</param>
-        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="reqConfig"></param>
         /// <returns>ApiResponse of byte[]</returns>
-        public ApiResponse< byte[] > MergeDocumentXlsxWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2)
+        public ApiResponse< byte[] > EditDocumentPptxReplaceWithHttpInfo (ReplaceStringRequest reqConfig)
         {
-            // verify the required parameter 'inputFile1' is set
-            if (inputFile1 == null)
-                throw new ApiException(400, "Missing required parameter 'inputFile1' when calling MergeDocumentApi->MergeDocumentXlsx");
-            // verify the required parameter 'inputFile2' is set
-            if (inputFile2 == null)
-                throw new ApiException(400, "Missing required parameter 'inputFile2' when calling MergeDocumentApi->MergeDocumentXlsx");
+            // verify the required parameter 'reqConfig' is set
+            if (reqConfig == null)
+                throw new ApiException(400, "Missing required parameter 'reqConfig' when calling EditDocumentApi->EditDocumentPptxReplace");
 
-            var localVarPath = "/convert/merge/xlsx";
+            var localVarPath = "/convert/edit/pptx/replace-all";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -616,7 +598,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "multipart/form-data"
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -628,8 +614,14 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (inputFile1 != null) localVarFileParams.Add("inputFile1", Configuration.ApiClient.ParameterToFile("inputFile1", inputFile1));
-            if (inputFile2 != null) localVarFileParams.Add("inputFile2", Configuration.ApiClient.ParameterToFile("inputFile2", inputFile2));
+            if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reqConfig; // byte array
+            }
 
             // authentication (Apikey) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
@@ -646,7 +638,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("MergeDocumentXlsx", localVarResponse);
+                Exception exception = ExceptionFactory("EditDocumentPptxReplace", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -656,36 +648,31 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Merge Multple Excel XLSX Together Combine multiple Office Excel spreadsheets (xlsx) into a single Office Excel spreadsheet
+        /// Replace string in PPTX Replace all instances of a string in an Office PowerPoint Document (pptx)
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inputFile1">First input file to perform the operation on.</param>
-        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="reqConfig"></param>
         /// <returns>Task of byte[]</returns>
-        public async System.Threading.Tasks.Task<byte[]> MergeDocumentXlsxAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2)
+        public async System.Threading.Tasks.Task<byte[]> EditDocumentPptxReplaceAsync (ReplaceStringRequest reqConfig)
         {
-             ApiResponse<byte[]> localVarResponse = await MergeDocumentXlsxAsyncWithHttpInfo(inputFile1, inputFile2);
+             ApiResponse<byte[]> localVarResponse = await EditDocumentPptxReplaceAsyncWithHttpInfo(reqConfig);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Merge Multple Excel XLSX Together Combine multiple Office Excel spreadsheets (xlsx) into a single Office Excel spreadsheet
+        /// Replace string in PPTX Replace all instances of a string in an Office PowerPoint Document (pptx)
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inputFile1">First input file to perform the operation on.</param>
-        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="reqConfig"></param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> MergeDocumentXlsxAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2)
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDocumentPptxReplaceAsyncWithHttpInfo (ReplaceStringRequest reqConfig)
         {
-            // verify the required parameter 'inputFile1' is set
-            if (inputFile1 == null)
-                throw new ApiException(400, "Missing required parameter 'inputFile1' when calling MergeDocumentApi->MergeDocumentXlsx");
-            // verify the required parameter 'inputFile2' is set
-            if (inputFile2 == null)
-                throw new ApiException(400, "Missing required parameter 'inputFile2' when calling MergeDocumentApi->MergeDocumentXlsx");
+            // verify the required parameter 'reqConfig' is set
+            if (reqConfig == null)
+                throw new ApiException(400, "Missing required parameter 'reqConfig' when calling EditDocumentApi->EditDocumentPptxReplace");
 
-            var localVarPath = "/convert/merge/xlsx";
+            var localVarPath = "/convert/edit/pptx/replace-all";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -695,7 +682,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "multipart/form-data"
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -707,8 +698,14 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (inputFile1 != null) localVarFileParams.Add("inputFile1", Configuration.ApiClient.ParameterToFile("inputFile1", inputFile1));
-            if (inputFile2 != null) localVarFileParams.Add("inputFile2", Configuration.ApiClient.ParameterToFile("inputFile2", inputFile2));
+            if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reqConfig; // byte array
+            }
 
             // authentication (Apikey) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
@@ -725,7 +722,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("MergeDocumentXlsx", localVarResponse);
+                Exception exception = ExceptionFactory("EditDocumentPptxReplace", localVarResponse);
                 if (exception != null) throw exception;
             }
 

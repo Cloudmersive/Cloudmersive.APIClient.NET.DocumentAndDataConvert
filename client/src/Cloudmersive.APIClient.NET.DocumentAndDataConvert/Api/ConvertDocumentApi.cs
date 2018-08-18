@@ -14,6 +14,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
 using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
 
 namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 {
@@ -45,7 +46,49 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> ConvertDocumentAutodetectToPdfWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// Word DOC (97-2003) to PDF
+        /// CSV to Excel XLSX
+        /// </summary>
+        /// <remarks>
+        /// Convert CSV file to Office Excel XLSX Workbooks file format.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>byte[]</returns>
+        byte[] ConvertDocumentCsvToXlsx (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// CSV to Excel XLSX
+        /// </summary>
+        /// <remarks>
+        /// Convert CSV file to Office Excel XLSX Workbooks file format.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> ConvertDocumentCsvToXlsxWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// Word DOC (97-03) to DOCX
+        /// </summary>
+        /// <remarks>
+        /// Convert/upgrade Office Word (97-2003 Format) Documents (doc) to the modern DOCX format
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>byte[]</returns>
+        byte[] ConvertDocumentDocToDocx (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Word DOC (97-03) to DOCX
+        /// </summary>
+        /// <remarks>
+        /// Convert/upgrade Office Word (97-2003 Format) Documents (doc) to the modern DOCX format
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> ConvertDocumentDocToDocxWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// Word DOC (97-03) to PDF
         /// </summary>
         /// <remarks>
         /// Convert Office Word (97-2003 Format) Documents (doc) to standard PDF
@@ -56,7 +99,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         byte[] ConvertDocumentDocToPdf (System.IO.Stream inputFile);
 
         /// <summary>
-        /// Word DOC (97-2003) to PDF
+        /// Word DOC (97-03) to PDF
         /// </summary>
         /// <remarks>
         /// Convert Office Word (97-2003 Format) Documents (doc) to standard PDF
@@ -87,7 +130,28 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> ConvertDocumentDocxToPdfWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// PowerPoint PPT (97-2003) to PDF
+        /// PDF to PNG Array
+        /// </summary>
+        /// <remarks>
+        /// Convert PDF document to PNG array, one image per page.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>PdfToPngResult</returns>
+        PdfToPngResult ConvertDocumentPdfToPngArray (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// PDF to PNG Array
+        /// </summary>
+        /// <remarks>
+        /// Convert PDF document to PNG array, one image per page.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of PdfToPngResult</returns>
+        ApiResponse<PdfToPngResult> ConvertDocumentPdfToPngArrayWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// PowerPoint PPT (97-03) to PDF
         /// </summary>
         /// <remarks>
         /// Convert Office PowerPoint (97-2003) Documents (ppt) to standard PDF
@@ -98,7 +162,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         byte[] ConvertDocumentPptToPdf (System.IO.Stream inputFile);
 
         /// <summary>
-        /// PowerPoint PPT (97-2003) to PDF
+        /// PowerPoint PPT (97-03) to PDF
         /// </summary>
         /// <remarks>
         /// Convert Office PowerPoint (97-2003) Documents (ppt) to standard PDF
@@ -107,6 +171,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> ConvertDocumentPptToPdfWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// PowerPoint PPT (97-03) to PPTX
+        /// </summary>
+        /// <remarks>
+        /// Convert/upgrade Office PowerPoint (97-2003) Documents (ppt) to modern PPTX
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>byte[]</returns>
+        byte[] ConvertDocumentPptToPptx (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// PowerPoint PPT (97-03) to PPTX
+        /// </summary>
+        /// <remarks>
+        /// Convert/upgrade Office PowerPoint (97-2003) Documents (ppt) to modern PPTX
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> ConvertDocumentPptToPptxWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
         /// PowerPoint PPTX to PDF
         /// </summary>
@@ -129,7 +214,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> ConvertDocumentPptxToPdfWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// Excel XLS (97-2003) to PDF
+        /// Excel XLS (97-03) to PDF
         /// </summary>
         /// <remarks>
         /// Convert Office Excel (97-2003) Workbooks (xls) to standard PDF.  Converts all worksheets in the workbook to PDF.
@@ -140,7 +225,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         Object ConvertDocumentXlsToPdf (System.IO.Stream inputFile);
 
         /// <summary>
-        /// Excel XLS (97-2003) to PDF
+        /// Excel XLS (97-03) to PDF
         /// </summary>
         /// <remarks>
         /// Convert Office Excel (97-2003) Workbooks (xls) to standard PDF.  Converts all worksheets in the workbook to PDF.
@@ -149,6 +234,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> ConvertDocumentXlsToPdfWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// Excel XLS (97-03) to XLSX
+        /// </summary>
+        /// <remarks>
+        /// Convert/upgrade Office Excel (97-2003) Workbooks (xls) to modern XLSX format.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>byte[]</returns>
+        byte[] ConvertDocumentXlsToXlsx (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Excel XLS (97-03) to XLSX
+        /// </summary>
+        /// <remarks>
+        /// Convert/upgrade Office Excel (97-2003) Workbooks (xls) to modern XLSX format.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> ConvertDocumentXlsToXlsxWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
         /// Excel XLSX to CSV
         /// </summary>
@@ -215,7 +321,49 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentAutodetectToPdfAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// Word DOC (97-2003) to PDF
+        /// CSV to Excel XLSX
+        /// </summary>
+        /// <remarks>
+        /// Convert CSV file to Office Excel XLSX Workbooks file format.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> ConvertDocumentCsvToXlsxAsync (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// CSV to Excel XLSX
+        /// </summary>
+        /// <remarks>
+        /// Convert CSV file to Office Excel XLSX Workbooks file format.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentCsvToXlsxAsyncWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// Word DOC (97-03) to DOCX
+        /// </summary>
+        /// <remarks>
+        /// Convert/upgrade Office Word (97-2003 Format) Documents (doc) to the modern DOCX format
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> ConvertDocumentDocToDocxAsync (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Word DOC (97-03) to DOCX
+        /// </summary>
+        /// <remarks>
+        /// Convert/upgrade Office Word (97-2003 Format) Documents (doc) to the modern DOCX format
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentDocToDocxAsyncWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// Word DOC (97-03) to PDF
         /// </summary>
         /// <remarks>
         /// Convert Office Word (97-2003 Format) Documents (doc) to standard PDF
@@ -226,7 +374,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<byte[]> ConvertDocumentDocToPdfAsync (System.IO.Stream inputFile);
 
         /// <summary>
-        /// Word DOC (97-2003) to PDF
+        /// Word DOC (97-03) to PDF
         /// </summary>
         /// <remarks>
         /// Convert Office Word (97-2003 Format) Documents (doc) to standard PDF
@@ -257,7 +405,28 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentDocxToPdfAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// PowerPoint PPT (97-2003) to PDF
+        /// PDF to PNG Array
+        /// </summary>
+        /// <remarks>
+        /// Convert PDF document to PNG array, one image per page.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of PdfToPngResult</returns>
+        System.Threading.Tasks.Task<PdfToPngResult> ConvertDocumentPdfToPngArrayAsync (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// PDF to PNG Array
+        /// </summary>
+        /// <remarks>
+        /// Convert PDF document to PNG array, one image per page.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (PdfToPngResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PdfToPngResult>> ConvertDocumentPdfToPngArrayAsyncWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// PowerPoint PPT (97-03) to PDF
         /// </summary>
         /// <remarks>
         /// Convert Office PowerPoint (97-2003) Documents (ppt) to standard PDF
@@ -268,7 +437,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<byte[]> ConvertDocumentPptToPdfAsync (System.IO.Stream inputFile);
 
         /// <summary>
-        /// PowerPoint PPT (97-2003) to PDF
+        /// PowerPoint PPT (97-03) to PDF
         /// </summary>
         /// <remarks>
         /// Convert Office PowerPoint (97-2003) Documents (ppt) to standard PDF
@@ -277,6 +446,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentPptToPdfAsyncWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// PowerPoint PPT (97-03) to PPTX
+        /// </summary>
+        /// <remarks>
+        /// Convert/upgrade Office PowerPoint (97-2003) Documents (ppt) to modern PPTX
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> ConvertDocumentPptToPptxAsync (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// PowerPoint PPT (97-03) to PPTX
+        /// </summary>
+        /// <remarks>
+        /// Convert/upgrade Office PowerPoint (97-2003) Documents (ppt) to modern PPTX
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentPptToPptxAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
         /// PowerPoint PPTX to PDF
         /// </summary>
@@ -299,7 +489,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentPptxToPdfAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// Excel XLS (97-2003) to PDF
+        /// Excel XLS (97-03) to PDF
         /// </summary>
         /// <remarks>
         /// Convert Office Excel (97-2003) Workbooks (xls) to standard PDF.  Converts all worksheets in the workbook to PDF.
@@ -310,7 +500,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<Object> ConvertDocumentXlsToPdfAsync (System.IO.Stream inputFile);
 
         /// <summary>
-        /// Excel XLS (97-2003) to PDF
+        /// Excel XLS (97-03) to PDF
         /// </summary>
         /// <remarks>
         /// Convert Office Excel (97-2003) Workbooks (xls) to standard PDF.  Converts all worksheets in the workbook to PDF.
@@ -319,6 +509,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ConvertDocumentXlsToPdfAsyncWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// Excel XLS (97-03) to XLSX
+        /// </summary>
+        /// <remarks>
+        /// Convert/upgrade Office Excel (97-2003) Workbooks (xls) to modern XLSX format.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> ConvertDocumentXlsToXlsxAsync (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Excel XLS (97-03) to XLSX
+        /// </summary>
+        /// <remarks>
+        /// Convert/upgrade Office Excel (97-2003) Workbooks (xls) to modern XLSX format.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentXlsToXlsxAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
         /// Excel XLSX to CSV
         /// </summary>
@@ -607,7 +818,297 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Word DOC (97-2003) to PDF Convert Office Word (97-2003 Format) Documents (doc) to standard PDF
+        /// CSV to Excel XLSX Convert CSV file to Office Excel XLSX Workbooks file format.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>byte[]</returns>
+        public byte[] ConvertDocumentCsvToXlsx (System.IO.Stream inputFile)
+        {
+             ApiResponse<byte[]> localVarResponse = ConvertDocumentCsvToXlsxWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// CSV to Excel XLSX Convert CSV file to Office Excel XLSX Workbooks file format.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > ConvertDocumentCsvToXlsxWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentCsvToXlsx");
+
+            var localVarPath = "/convert/csv/to/xlsx";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentCsvToXlsx", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// CSV to Excel XLSX Convert CSV file to Office Excel XLSX Workbooks file format.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> ConvertDocumentCsvToXlsxAsync (System.IO.Stream inputFile)
+        {
+             ApiResponse<byte[]> localVarResponse = await ConvertDocumentCsvToXlsxAsyncWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// CSV to Excel XLSX Convert CSV file to Office Excel XLSX Workbooks file format.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentCsvToXlsxAsyncWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentCsvToXlsx");
+
+            var localVarPath = "/convert/csv/to/xlsx";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentCsvToXlsx", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Word DOC (97-03) to DOCX Convert/upgrade Office Word (97-2003 Format) Documents (doc) to the modern DOCX format
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>byte[]</returns>
+        public byte[] ConvertDocumentDocToDocx (System.IO.Stream inputFile)
+        {
+             ApiResponse<byte[]> localVarResponse = ConvertDocumentDocToDocxWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Word DOC (97-03) to DOCX Convert/upgrade Office Word (97-2003 Format) Documents (doc) to the modern DOCX format
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > ConvertDocumentDocToDocxWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentDocToDocx");
+
+            var localVarPath = "/convert/doc/to/docx";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentDocToDocx", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Word DOC (97-03) to DOCX Convert/upgrade Office Word (97-2003 Format) Documents (doc) to the modern DOCX format
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> ConvertDocumentDocToDocxAsync (System.IO.Stream inputFile)
+        {
+             ApiResponse<byte[]> localVarResponse = await ConvertDocumentDocToDocxAsyncWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Word DOC (97-03) to DOCX Convert/upgrade Office Word (97-2003 Format) Documents (doc) to the modern DOCX format
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentDocToDocxAsyncWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentDocToDocx");
+
+            var localVarPath = "/convert/doc/to/docx";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentDocToDocx", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Word DOC (97-03) to PDF Convert Office Word (97-2003 Format) Documents (doc) to standard PDF
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -619,7 +1120,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Word DOC (97-2003) to PDF Convert Office Word (97-2003 Format) Documents (doc) to standard PDF
+        /// Word DOC (97-03) to PDF Convert Office Word (97-2003 Format) Documents (doc) to standard PDF
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -679,7 +1180,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Word DOC (97-2003) to PDF Convert Office Word (97-2003 Format) Documents (doc) to standard PDF
+        /// Word DOC (97-03) to PDF Convert Office Word (97-2003 Format) Documents (doc) to standard PDF
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -692,7 +1193,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Word DOC (97-2003) to PDF Convert Office Word (97-2003 Format) Documents (doc) to standard PDF
+        /// Word DOC (97-03) to PDF Convert Office Word (97-2003 Format) Documents (doc) to standard PDF
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -897,7 +1398,152 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PowerPoint PPT (97-2003) to PDF Convert Office PowerPoint (97-2003) Documents (ppt) to standard PDF
+        /// PDF to PNG Array Convert PDF document to PNG array, one image per page.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>PdfToPngResult</returns>
+        public PdfToPngResult ConvertDocumentPdfToPngArray (System.IO.Stream inputFile)
+        {
+             ApiResponse<PdfToPngResult> localVarResponse = ConvertDocumentPdfToPngArrayWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// PDF to PNG Array Convert PDF document to PNG array, one image per page.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of PdfToPngResult</returns>
+        public ApiResponse< PdfToPngResult > ConvertDocumentPdfToPngArrayWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentPdfToPngArray");
+
+            var localVarPath = "/convert/pdf/to/png";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentPdfToPngArray", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<PdfToPngResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PdfToPngResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PdfToPngResult)));
+        }
+
+        /// <summary>
+        /// PDF to PNG Array Convert PDF document to PNG array, one image per page.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of PdfToPngResult</returns>
+        public async System.Threading.Tasks.Task<PdfToPngResult> ConvertDocumentPdfToPngArrayAsync (System.IO.Stream inputFile)
+        {
+             ApiResponse<PdfToPngResult> localVarResponse = await ConvertDocumentPdfToPngArrayAsyncWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// PDF to PNG Array Convert PDF document to PNG array, one image per page.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (PdfToPngResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PdfToPngResult>> ConvertDocumentPdfToPngArrayAsyncWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentPdfToPngArray");
+
+            var localVarPath = "/convert/pdf/to/png";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentPdfToPngArray", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<PdfToPngResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PdfToPngResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PdfToPngResult)));
+        }
+
+        /// <summary>
+        /// PowerPoint PPT (97-03) to PDF Convert Office PowerPoint (97-2003) Documents (ppt) to standard PDF
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -909,7 +1555,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PowerPoint PPT (97-2003) to PDF Convert Office PowerPoint (97-2003) Documents (ppt) to standard PDF
+        /// PowerPoint PPT (97-03) to PDF Convert Office PowerPoint (97-2003) Documents (ppt) to standard PDF
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -969,7 +1615,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PowerPoint PPT (97-2003) to PDF Convert Office PowerPoint (97-2003) Documents (ppt) to standard PDF
+        /// PowerPoint PPT (97-03) to PDF Convert Office PowerPoint (97-2003) Documents (ppt) to standard PDF
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -982,7 +1628,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PowerPoint PPT (97-2003) to PDF Convert Office PowerPoint (97-2003) Documents (ppt) to standard PDF
+        /// PowerPoint PPT (97-03) to PDF Convert Office PowerPoint (97-2003) Documents (ppt) to standard PDF
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -1033,6 +1679,151 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("ConvertDocumentPptToPdf", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// PowerPoint PPT (97-03) to PPTX Convert/upgrade Office PowerPoint (97-2003) Documents (ppt) to modern PPTX
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>byte[]</returns>
+        public byte[] ConvertDocumentPptToPptx (System.IO.Stream inputFile)
+        {
+             ApiResponse<byte[]> localVarResponse = ConvertDocumentPptToPptxWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// PowerPoint PPT (97-03) to PPTX Convert/upgrade Office PowerPoint (97-2003) Documents (ppt) to modern PPTX
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > ConvertDocumentPptToPptxWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentPptToPptx");
+
+            var localVarPath = "/convert/ppt/to/pptx";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentPptToPptx", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// PowerPoint PPT (97-03) to PPTX Convert/upgrade Office PowerPoint (97-2003) Documents (ppt) to modern PPTX
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> ConvertDocumentPptToPptxAsync (System.IO.Stream inputFile)
+        {
+             ApiResponse<byte[]> localVarResponse = await ConvertDocumentPptToPptxAsyncWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// PowerPoint PPT (97-03) to PPTX Convert/upgrade Office PowerPoint (97-2003) Documents (ppt) to modern PPTX
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentPptToPptxAsyncWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentPptToPptx");
+
+            var localVarPath = "/convert/ppt/to/pptx";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentPptToPptx", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1187,7 +1978,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Excel XLS (97-2003) to PDF Convert Office Excel (97-2003) Workbooks (xls) to standard PDF.  Converts all worksheets in the workbook to PDF.
+        /// Excel XLS (97-03) to PDF Convert Office Excel (97-2003) Workbooks (xls) to standard PDF.  Converts all worksheets in the workbook to PDF.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -1199,7 +1990,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Excel XLS (97-2003) to PDF Convert Office Excel (97-2003) Workbooks (xls) to standard PDF.  Converts all worksheets in the workbook to PDF.
+        /// Excel XLS (97-03) to PDF Convert Office Excel (97-2003) Workbooks (xls) to standard PDF.  Converts all worksheets in the workbook to PDF.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -1259,7 +2050,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Excel XLS (97-2003) to PDF Convert Office Excel (97-2003) Workbooks (xls) to standard PDF.  Converts all worksheets in the workbook to PDF.
+        /// Excel XLS (97-03) to PDF Convert Office Excel (97-2003) Workbooks (xls) to standard PDF.  Converts all worksheets in the workbook to PDF.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -1272,7 +2063,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Excel XLS (97-2003) to PDF Convert Office Excel (97-2003) Workbooks (xls) to standard PDF.  Converts all worksheets in the workbook to PDF.
+        /// Excel XLS (97-03) to PDF Convert Office Excel (97-2003) Workbooks (xls) to standard PDF.  Converts all worksheets in the workbook to PDF.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -1329,6 +2120,151 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Excel XLS (97-03) to XLSX Convert/upgrade Office Excel (97-2003) Workbooks (xls) to modern XLSX format.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>byte[]</returns>
+        public byte[] ConvertDocumentXlsToXlsx (System.IO.Stream inputFile)
+        {
+             ApiResponse<byte[]> localVarResponse = ConvertDocumentXlsToXlsxWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Excel XLS (97-03) to XLSX Convert/upgrade Office Excel (97-2003) Workbooks (xls) to modern XLSX format.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > ConvertDocumentXlsToXlsxWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentXlsToXlsx");
+
+            var localVarPath = "/convert/xls/to/xlsx";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentXlsToXlsx", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Excel XLS (97-03) to XLSX Convert/upgrade Office Excel (97-2003) Workbooks (xls) to modern XLSX format.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> ConvertDocumentXlsToXlsxAsync (System.IO.Stream inputFile)
+        {
+             ApiResponse<byte[]> localVarResponse = await ConvertDocumentXlsToXlsxAsyncWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Excel XLS (97-03) to XLSX Convert/upgrade Office Excel (97-2003) Workbooks (xls) to modern XLSX format.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentXlsToXlsxAsyncWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentXlsToXlsx");
+
+            var localVarPath = "/convert/xls/to/xlsx";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentXlsToXlsx", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
