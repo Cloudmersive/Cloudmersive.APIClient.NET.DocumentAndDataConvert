@@ -77,6 +77,78 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test EditDocumentDocxGetHeadersAndFooters
+        /// </summary>
+        [Test]
+        public void EditDocumentDocxGetHeadersAndFootersTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //GetDocxHeadersAndFootersRequest reqConfig = null;
+            //var response = instance.EditDocumentDocxGetHeadersAndFooters(reqConfig);
+            //Assert.IsInstanceOf<GetDocxHeadersAndFootersResponse> (response, "response is GetDocxHeadersAndFootersResponse");
+        }
+        
+        /// <summary>
+        /// Test EditDocumentDocxGetStyles
+        /// </summary>
+        [Test]
+        public void EditDocumentDocxGetStylesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //GetDocxStylesRequest reqConfig = null;
+            //var response = instance.EditDocumentDocxGetStyles(reqConfig);
+            //Assert.IsInstanceOf<GetDocxStylesResponse> (response, "response is GetDocxStylesResponse");
+        }
+        
+        /// <summary>
+        /// Test EditDocumentDocxGetTables
+        /// </summary>
+        [Test]
+        public void EditDocumentDocxGetTablesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //GetDocxTablesRequest reqConfig = null;
+            //var response = instance.EditDocumentDocxGetTables(reqConfig);
+            //Assert.IsInstanceOf<GetDocxTablesResponse> (response, "response is GetDocxTablesResponse");
+        }
+        
+        /// <summary>
+        /// Test EditDocumentDocxInsertImage
+        /// </summary>
+        [Test]
+        public void EditDocumentDocxInsertImageTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //DocxInsertImageRequest reqConfig = null;
+            //var response = instance.EditDocumentDocxInsertImage(reqConfig);
+            //Assert.IsInstanceOf<DocxInsertImageResponse> (response, "response is DocxInsertImageResponse");
+        }
+        
+        /// <summary>
+        /// Test EditDocumentDocxInsertTable
+        /// </summary>
+        [Test]
+        public void EditDocumentDocxInsertTableTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //InsertDocxTablesRequest reqConfig = null;
+            //var response = instance.EditDocumentDocxInsertTable(reqConfig);
+            //Assert.IsInstanceOf<InsertDocxTablesResponse> (response, "response is InsertDocxTablesResponse");
+        }
+        
+        /// <summary>
+        /// Test EditDocumentDocxRemoveHeadersAndFooters
+        /// </summary>
+        [Test]
+        public void EditDocumentDocxRemoveHeadersAndFootersTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //RemoveDocxHeadersAndFootersRequest reqConfig = null;
+            //var response = instance.EditDocumentDocxRemoveHeadersAndFooters(reqConfig);
+            //Assert.IsInstanceOf<RemoveDocxHeadersAndFootersResponse> (response, "response is RemoveDocxHeadersAndFootersResponse");
+        }
+        
+        /// <summary>
         /// Test EditDocumentDocxReplace
         /// </summary>
         [Test]
@@ -85,6 +157,42 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             // TODO uncomment below to test the method and replace null with proper value
             //ReplaceStringRequest reqConfig = null;
             //var response = instance.EditDocumentDocxReplace(reqConfig);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
+        /// Test EditDocumentDocxSetFooter
+        /// </summary>
+        [Test]
+        public void EditDocumentDocxSetFooterTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //DocxSetFooterRequest reqConfig = null;
+            //var response = instance.EditDocumentDocxSetFooter(reqConfig);
+            //Assert.IsInstanceOf<DocxSetFooterResponse> (response, "response is DocxSetFooterResponse");
+        }
+        
+        /// <summary>
+        /// Test EditDocumentDocxSetHeader
+        /// </summary>
+        [Test]
+        public void EditDocumentDocxSetHeaderTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //DocxSetHeaderRequest reqConfig = null;
+            //var response = instance.EditDocumentDocxSetHeader(reqConfig);
+            //Assert.IsInstanceOf<DocxSetHeaderResponse> (response, "response is DocxSetHeaderResponse");
+        }
+        
+        /// <summary>
+        /// Test EditDocumentFinishEditing
+        /// </summary>
+        [Test]
+        public void EditDocumentFinishEditingTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //FinishEditingRequest reqConfig = null;
+            //var response = instance.EditDocumentFinishEditing(reqConfig);
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         

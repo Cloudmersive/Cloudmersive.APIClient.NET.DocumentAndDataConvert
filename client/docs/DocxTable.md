@@ -1,0 +1,46 @@
+# Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model.DocxTable
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**TableID** | **string** | The ID of the table | [optional] 
+**Width** | **string** | The Width of the table, or 0 if not specified | [optional] 
+**WidthType** | **string** | The Width configuration type of the table | [optional] 
+**TableRows** | [**List&lt;DocxTableRow&gt;**](DocxTableRow.md) | Rows in the table; this is where the contents is located | [optional] 
+**TopBorderType** | **string** | Type for the top border - can be a Single, DashDotStroked, Dashed, DashSmallGap, DotDash, DotDotDash, Dotted, Double, DoubleWave, Inset, Nil, None, Outset, Thick, ThickThinLargeGap, ThickThinMediumGap, ThickThinSmallGap, ThinThickLargeGap, ThinThickMediumGap, ThinThickSmallGap, ThinThickThinLargeGap, ThinThickThinMediumGap, ThinThickThinSmallGap, ThreeDEmboss, ThreeDEngrave, Triple, Wave | [optional] 
+**TopBorderSize** | **int?** | Width of the border in points (1/72nd of an inch) | [optional] 
+**TopBorderSpace** | **int?** | Spacing around the border in points (1/72nd of an inch) | [optional] 
+**TopBorderColor** | **string** | HTML-style color hex value (do not include a #) | [optional] 
+**BottomBorderType** | **string** | Type for the bottom border - can be a Single, DashDotStroked, Dashed, DashSmallGap, DotDash, DotDotDash, Dotted, Double, DoubleWave, Inset, Nil, None, Outset, Thick, ThickThinLargeGap, ThickThinMediumGap, ThickThinSmallGap, ThinThickLargeGap, ThinThickMediumGap, ThinThickSmallGap, ThinThickThinLargeGap, ThinThickThinMediumGap, ThinThickThinSmallGap, ThreeDEmboss, ThreeDEngrave, Triple, Wave | [optional] 
+**BottomBorderSize** | **int?** | Width of the border in points (1/72nd of an inch) | [optional] 
+**BottomBorderSpace** | **int?** | Spacing around the border in points (1/72nd of an inch) | [optional] 
+**BottomBorderColor** | **string** | HTML-style color hex value (do not include a #) | [optional] 
+**LeftBorderType** | **string** | Type for the left border - can be a Single, DashDotStroked, Dashed, DashSmallGap, DotDash, DotDotDash, Dotted, Double, DoubleWave, Inset, Nil, None, Outset, Thick, ThickThinLargeGap, ThickThinMediumGap, ThickThinSmallGap, ThinThickLargeGap, ThinThickMediumGap, ThinThickSmallGap, ThinThickThinLargeGap, ThinThickThinMediumGap, ThinThickThinSmallGap, ThreeDEmboss, ThreeDEngrave, Triple, Wave | [optional] 
+**LeftBorderSize** | **int?** | Width of the border in points (1/72nd of an inch) | [optional] 
+**LeftBorderSpace** | **int?** | Spacing around the border in points (1/72nd of an inch) | [optional] 
+**LeftBorderColor** | **string** | HTML-style color hex value (do not include a #) | [optional] 
+**RightBorderType** | **string** | Type for the right border - can be a Single, DashDotStroked, Dashed, DashSmallGap, DotDash, DotDotDash, Dotted, Double, DoubleWave, Inset, Nil, None, Outset, Thick, ThickThinLargeGap, ThickThinMediumGap, ThickThinSmallGap, ThinThickLargeGap, ThinThickMediumGap, ThinThickSmallGap, ThinThickThinLargeGap, ThinThickThinMediumGap, ThinThickThinSmallGap, ThreeDEmboss, ThreeDEngrave, Triple, Wave | [optional] 
+**RightBorderSize** | **int?** | Width of the border in points (1/72nd of an inch) | [optional] 
+**RightBorderSpace** | **int?** | Spacing around the border in points (1/72nd of an inch) | [optional] 
+**RightBorderColor** | **string** | HTML-style color hex value (do not include a #) | [optional] 
+**CellHorizontalBorderType** | **string** | Type for the cell horizontal border - can be a Single, DashDotStroked, Dashed, DashSmallGap, DotDash, DotDotDash, Dotted, Double, DoubleWave, Inset, Nil, None, Outset, Thick, ThickThinLargeGap, ThickThinMediumGap, ThickThinSmallGap, ThinThickLargeGap, ThinThickMediumGap, ThinThickSmallGap, ThinThickThinLargeGap, ThinThickThinMediumGap, ThinThickThinSmallGap, ThreeDEmboss, ThreeDEngrave, Triple, Wave | [optional] 
+**CellHorizontalBorderSize** | **int?** | Width of the border in points (1/72nd of an inch) | [optional] 
+**CellHorizontalBorderSpace** | **int?** | Spacing around the border in points (1/72nd of an inch) | [optional] 
+**CellHorizontalBorderColor** | **string** | HTML-style color hex value (do not include a #) | [optional] 
+**CellVerticalBorderType** | **string** | Type for the cell vertical border - can be a Single, DashDotStroked, Dashed, DashSmallGap, DotDash, DotDotDash, Dotted, Double, DoubleWave, Inset, Nil, None, Outset, Thick, ThickThinLargeGap, ThickThinMediumGap, ThickThinSmallGap, ThinThickLargeGap, ThinThickMediumGap, ThinThickSmallGap, ThinThickThinLargeGap, ThinThickThinMediumGap, ThinThickThinSmallGap, ThreeDEmboss, ThreeDEngrave, Triple, Wave | [optional] 
+**CellVerticalBorderSize** | **int?** | Width of the border in points (1/72nd of an inch) | [optional] 
+**CellVerticalBorderSpace** | **int?** | Spacing around the border in points (1/72nd of an inch) | [optional] 
+**CellVerticalBorderColor** | **string** | HTML-style color hex value (do not include a #) | [optional] 
+**StartBorderType** | **string** | Type for the start border - can be a Single, DashDotStroked, Dashed, DashSmallGap, DotDash, DotDotDash, Dotted, Double, DoubleWave, Inset, Nil, None, Outset, Thick, ThickThinLargeGap, ThickThinMediumGap, ThickThinSmallGap, ThinThickLargeGap, ThinThickMediumGap, ThinThickSmallGap, ThinThickThinLargeGap, ThinThickThinMediumGap, ThinThickThinSmallGap, ThreeDEmboss, ThreeDEngrave, Triple, Wave | [optional] 
+**StartBorderSize** | **int?** | Width of the border in points (1/72nd of an inch) | [optional] 
+**StartBorderSpace** | **int?** | Spacing around the border in points (1/72nd of an inch) | [optional] 
+**StartBorderColor** | **string** | HTML-style color hex value (do not include a #) | [optional] 
+**EndBorderType** | **string** | Type for the end border - can be a Single, DashDotStroked, Dashed, DashSmallGap, DotDash, DotDotDash, Dotted, Double, DoubleWave, Inset, Nil, None, Outset, Thick, ThickThinLargeGap, ThickThinMediumGap, ThickThinSmallGap, ThinThickLargeGap, ThinThickMediumGap, ThinThickSmallGap, ThinThickThinLargeGap, ThinThickThinMediumGap, ThinThickThinSmallGap, ThreeDEmboss, ThreeDEngrave, Triple, Wave | [optional] 
+**EndBorderSize** | **int?** | Width of the border in points (1/72nd of an inch) | [optional] 
+**EndBorderSpace** | **int?** | Spacing around the border in points (1/72nd of an inch) | [optional] 
+**EndBorderColor** | **string** | HTML-style color hex value (do not include a #) | [optional] 
+**TableIndentationMode** | **string** | Table indentation type | [optional] 
+**TableIndentationWidth** | **int?** | Table indentation width | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
