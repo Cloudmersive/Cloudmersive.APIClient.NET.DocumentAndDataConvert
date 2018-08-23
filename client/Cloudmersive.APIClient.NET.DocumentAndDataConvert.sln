@@ -1,8 +1,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-VisualStudioVersion = 12.0.0.0
-MinimumVisualStudioVersion = 10.0.0.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cloudmersive.APIClient.NET.DocumentAndDataConvert", "src\Cloudmersive.APIClient.NET.DocumentAndDataConvert\Cloudmersive.APIClient.NET.DocumentAndDataConvert.csproj", "10685302-ea07-49c8-a775-91df17a55330"
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cloudmersive.APIClient.NET.DocumentAndDataConvert", "src\Cloudmersive.APIClient.NET.DocumentAndDataConvert\Cloudmersive.APIClient.NET.DocumentAndDataConvert.csproj", "{10685302-EA07-49C8-A775-91DF17A55330}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test", "src\Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test\Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test.csproj", "{19F1DEBC-DE5E-4517-8062-F000CD499087}"
 EndProject
@@ -12,10 +12,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		10685302-ea07-49c8-a775-91df17a55330.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		10685302-ea07-49c8-a775-91df17a55330.Debug|Any CPU.Build.0 = Debug|Any CPU
-		10685302-ea07-49c8-a775-91df17a55330.Release|Any CPU.ActiveCfg = Release|Any CPU
-		10685302-ea07-49c8-a775-91df17a55330.Release|Any CPU.Build.0 = Release|Any CPU
+		{10685302-EA07-49C8-A775-91DF17A55330}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10685302-EA07-49C8-A775-91DF17A55330}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10685302-EA07-49C8-A775-91DF17A55330}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10685302-EA07-49C8-A775-91DF17A55330}.Release|Any CPU.Build.0 = Release|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -23,5 +23,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D3F7ABB6-B430-40EC-9624-8E3803346CCB}
 	EndGlobalSection
 EndGlobal
