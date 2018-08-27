@@ -33,14 +33,23 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DocxFooter" /> class.
         /// </summary>
+        /// <param name="Path">The Path of the location of this object; leave blank for new tables.</param>
         /// <param name="Paragraphs">Paragraphs in this footer.</param>
         /// <param name="SectionsWithFooter">Sections that the footer is applied to.</param>
-        public DocxFooter(List<DocxParagraph> Paragraphs = default(List<DocxParagraph>), List<DocxSection> SectionsWithFooter = default(List<DocxSection>))
+        public DocxFooter(string Path = default(string), List<DocxParagraph> Paragraphs = default(List<DocxParagraph>), List<DocxSection> SectionsWithFooter = default(List<DocxSection>))
         {
+            this.Path = Path;
             this.Paragraphs = Paragraphs;
             this.SectionsWithFooter = SectionsWithFooter;
         }
         
+        /// <summary>
+        /// The Path of the location of this object; leave blank for new tables
+        /// </summary>
+        /// <value>The Path of the location of this object; leave blank for new tables</value>
+        [DataMember(Name="Path", EmitDefaultValue=false)]
+        public string Path { get; set; }
+
         /// <summary>
         /// Paragraphs in this footer
         /// </summary>
@@ -63,6 +72,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DocxFooter {\n");
+            sb.Append("  Path: ").Append(Path).Append("\n");
             sb.Append("  Paragraphs: ").Append(Paragraphs).Append("\n");
             sb.Append("  SectionsWithFooter: ").Append(SectionsWithFooter).Append("\n");
             sb.Append("}\n");
@@ -100,6 +110,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
 
             return 
                 (
+                    this.Path == input.Path ||
+                    (this.Path != null &&
+                    this.Path.Equals(input.Path))
+                ) && 
+                (
                     this.Paragraphs == input.Paragraphs ||
                     this.Paragraphs != null &&
                     this.Paragraphs.SequenceEqual(input.Paragraphs)
@@ -120,6 +135,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.Path != null)
+                    hashCode = hashCode * 59 + this.Path.GetHashCode();
                 if (this.Paragraphs != null)
                     hashCode = hashCode * 59 + this.Paragraphs.GetHashCode();
                 if (this.SectionsWithFooter != null)

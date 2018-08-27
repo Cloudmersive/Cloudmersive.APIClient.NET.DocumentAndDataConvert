@@ -34,15 +34,17 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Initializes a new instance of the <see cref="DocxTableCell" /> class.
         /// </summary>
         /// <param name="CellIndex">The index of the cell, 0-based.</param>
+        /// <param name="Path">The Path of the location of this object; leave blank for new tables.</param>
         /// <param name="Paragraphs">Paragraphs inside the cell; this is where the contents of the cell are stored.</param>
         /// <param name="CellShadingColor">Color of the cell shading.</param>
         /// <param name="CellShadingFill">Fill of the cell shading.</param>
         /// <param name="CellShadingPattern">Pattern of the cell shading.</param>
         /// <param name="CellWidthMode">Width mode of the cell; can be auto (for automatic) or manual.</param>
         /// <param name="CellWidth">Width of the cell.</param>
-        public DocxTableCell(int? CellIndex = default(int?), List<DocxParagraph> Paragraphs = default(List<DocxParagraph>), string CellShadingColor = default(string), string CellShadingFill = default(string), string CellShadingPattern = default(string), string CellWidthMode = default(string), string CellWidth = default(string))
+        public DocxTableCell(int? CellIndex = default(int?), string Path = default(string), List<DocxParagraph> Paragraphs = default(List<DocxParagraph>), string CellShadingColor = default(string), string CellShadingFill = default(string), string CellShadingPattern = default(string), string CellWidthMode = default(string), string CellWidth = default(string))
         {
             this.CellIndex = CellIndex;
+            this.Path = Path;
             this.Paragraphs = Paragraphs;
             this.CellShadingColor = CellShadingColor;
             this.CellShadingFill = CellShadingFill;
@@ -57,6 +59,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <value>The index of the cell, 0-based</value>
         [DataMember(Name="CellIndex", EmitDefaultValue=false)]
         public int? CellIndex { get; set; }
+
+        /// <summary>
+        /// The Path of the location of this object; leave blank for new tables
+        /// </summary>
+        /// <value>The Path of the location of this object; leave blank for new tables</value>
+        [DataMember(Name="Path", EmitDefaultValue=false)]
+        public string Path { get; set; }
 
         /// <summary>
         /// Paragraphs inside the cell; this is where the contents of the cell are stored
@@ -109,6 +118,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
             var sb = new StringBuilder();
             sb.Append("class DocxTableCell {\n");
             sb.Append("  CellIndex: ").Append(CellIndex).Append("\n");
+            sb.Append("  Path: ").Append(Path).Append("\n");
             sb.Append("  Paragraphs: ").Append(Paragraphs).Append("\n");
             sb.Append("  CellShadingColor: ").Append(CellShadingColor).Append("\n");
             sb.Append("  CellShadingFill: ").Append(CellShadingFill).Append("\n");
@@ -155,6 +165,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                     this.CellIndex.Equals(input.CellIndex))
                 ) && 
                 (
+                    this.Path == input.Path ||
+                    (this.Path != null &&
+                    this.Path.Equals(input.Path))
+                ) && 
+                (
                     this.Paragraphs == input.Paragraphs ||
                     this.Paragraphs != null &&
                     this.Paragraphs.SequenceEqual(input.Paragraphs)
@@ -197,6 +212,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                 int hashCode = 41;
                 if (this.CellIndex != null)
                     hashCode = hashCode * 59 + this.CellIndex.GetHashCode();
+                if (this.Path != null)
+                    hashCode = hashCode * 59 + this.Path.GetHashCode();
                 if (this.Paragraphs != null)
                     hashCode = hashCode * 59 + this.Paragraphs.GetHashCode();
                 if (this.CellShadingColor != null)

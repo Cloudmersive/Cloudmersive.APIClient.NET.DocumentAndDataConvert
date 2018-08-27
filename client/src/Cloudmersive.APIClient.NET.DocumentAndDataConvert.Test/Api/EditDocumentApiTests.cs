@@ -77,6 +77,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test EditDocumentDocxBody
+        /// </summary>
+        [Test]
+        public void EditDocumentDocxBodyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //GetDocxBodyRequest reqConfig = null;
+            //var response = instance.EditDocumentDocxBody(reqConfig);
+            //Assert.IsInstanceOf<GetDocxBodyResponse> (response, "response is GetDocxBodyResponse");
+        }
+        
+        /// <summary>
         /// Test EditDocumentDocxGetHeadersAndFooters
         /// </summary>
         [Test]
@@ -86,6 +98,30 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //GetDocxHeadersAndFootersRequest reqConfig = null;
             //var response = instance.EditDocumentDocxGetHeadersAndFooters(reqConfig);
             //Assert.IsInstanceOf<GetDocxHeadersAndFootersResponse> (response, "response is GetDocxHeadersAndFootersResponse");
+        }
+        
+        /// <summary>
+        /// Test EditDocumentDocxGetImages
+        /// </summary>
+        [Test]
+        public void EditDocumentDocxGetImagesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //GetDocxImagesRequest reqConfig = null;
+            //var response = instance.EditDocumentDocxGetImages(reqConfig);
+            //Assert.IsInstanceOf<GetDocxImagesResponse> (response, "response is GetDocxImagesResponse");
+        }
+        
+        /// <summary>
+        /// Test EditDocumentDocxGetSections
+        /// </summary>
+        [Test]
+        public void EditDocumentDocxGetSectionsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //GetDocxSectionsRequest reqConfig = null;
+            //var response = instance.EditDocumentDocxGetSections(reqConfig);
+            //Assert.IsInstanceOf<GetDocxSectionsResponse> (response, "response is GetDocxSectionsResponse");
         }
         
         /// <summary>
@@ -125,6 +161,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test EditDocumentDocxInsertParagraph
+        /// </summary>
+        [Test]
+        public void EditDocumentDocxInsertParagraphTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //InsertDocxInsertParagraphRequest reqConfig = null;
+            //var response = instance.EditDocumentDocxInsertParagraph(reqConfig);
+            //Assert.IsInstanceOf<InsertDocxInsertParagraphResponse> (response, "response is InsertDocxInsertParagraphResponse");
+        }
+        
+        /// <summary>
         /// Test EditDocumentDocxInsertTable
         /// </summary>
         [Test]
@@ -146,6 +194,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //RemoveDocxHeadersAndFootersRequest reqConfig = null;
             //var response = instance.EditDocumentDocxRemoveHeadersAndFooters(reqConfig);
             //Assert.IsInstanceOf<RemoveDocxHeadersAndFootersResponse> (response, "response is RemoveDocxHeadersAndFootersResponse");
+        }
+        
+        /// <summary>
+        /// Test EditDocumentDocxRemoveObject
+        /// </summary>
+        [Test]
+        public void EditDocumentDocxRemoveObjectTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //DocxRemoveObjectRequest reqConfig = null;
+            //var response = instance.EditDocumentDocxRemoveObject(reqConfig);
+            //Assert.IsInstanceOf<DocxRemoveObjectResponse> (response, "response is DocxRemoveObjectResponse");
         }
         
         /// <summary>
@@ -206,6 +266,78 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //ReplaceStringRequest reqConfig = null;
             //var response = instance.EditDocumentPptxReplace(reqConfig);
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
+        /// Test EditDocumentXlsxGetColumns
+        /// </summary>
+        [Test]
+        public void EditDocumentXlsxGetColumnsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //GetXlsxColumnsRequest input = null;
+            //var response = instance.EditDocumentXlsxGetColumns(input);
+            //Assert.IsInstanceOf<GetXlsxColumnsResponse> (response, "response is GetXlsxColumnsResponse");
+        }
+        
+        /// <summary>
+        /// Test EditDocumentXlsxGetImages
+        /// </summary>
+        [Test]
+        public void EditDocumentXlsxGetImagesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //GetXlsxImagesRequest input = null;
+            //var response = instance.EditDocumentXlsxGetImages(input);
+            //Assert.IsInstanceOf<GetXlsxImagesResponse> (response, "response is GetXlsxImagesResponse");
+        }
+        
+        /// <summary>
+        /// Test EditDocumentXlsxGetRowsAndCells
+        /// </summary>
+        [Test]
+        public void EditDocumentXlsxGetRowsAndCellsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //GetXlsxRowsAndCellsRequest input = null;
+            //var response = instance.EditDocumentXlsxGetRowsAndCells(input);
+            //Assert.IsInstanceOf<GetXlsxRowsAndCellsResponse> (response, "response is GetXlsxRowsAndCellsResponse");
+        }
+        
+        /// <summary>
+        /// Test EditDocumentXlsxGetStyles
+        /// </summary>
+        [Test]
+        public void EditDocumentXlsxGetStylesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //GetXlsxStylesRequest input = null;
+            //var response = instance.EditDocumentXlsxGetStyles(input);
+            //Assert.IsInstanceOf<GetXlsxStylesResponse> (response, "response is GetXlsxStylesResponse");
+        }
+        
+        /// <summary>
+        /// Test EditDocumentXlsxGetWorksheets
+        /// </summary>
+        [Test]
+        public void EditDocumentXlsxGetWorksheetsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //GetXlsxWorksheetsRequest input = null;
+            //var response = instance.EditDocumentXlsxGetWorksheets(input);
+            //Assert.IsInstanceOf<GetXlsxWorksheetsResponse> (response, "response is GetXlsxWorksheetsResponse");
+        }
+        
+        /// <summary>
+        /// Test EditDocumentXlsxInsertWorksheet
+        /// </summary>
+        [Test]
+        public void EditDocumentXlsxInsertWorksheetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //InsertXlsxWorksheetRequest input = null;
+            //var response = instance.EditDocumentXlsxInsertWorksheet(input);
+            //Assert.IsInstanceOf<InsertXlsxWorksheetResponse> (response, "response is InsertXlsxWorksheetResponse");
         }
         
     }

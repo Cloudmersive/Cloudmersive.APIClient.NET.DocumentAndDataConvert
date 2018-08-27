@@ -34,15 +34,17 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Initializes a new instance of the <see cref="DocxRun" /> class.
         /// </summary>
         /// <param name="RunIndex">Index of the run, 0-based.</param>
+        /// <param name="Path">The Path of the location of this object; leave blank for new tables.</param>
         /// <param name="TextItems">Text items inside the run; this is where the actual text content is stored.</param>
         /// <param name="Bold">True to make the text bold, false otherwise.</param>
         /// <param name="Italic">True to make the text italic, false otherwise.</param>
         /// <param name="Underline">Underline mode for the text; possible values are: Words, Double, Thick, Dotted, DottedHeavy, Dash, DashedHeavy, DashLong, DashLongHeavy, DotDash, DashDotHeavy, DotDotDash, DashDotDotHeavy, Wave, WavyHeavy, WavyDouble, None.</param>
         /// <param name="FontFamily">Font Family name for the text, e.g. \&quot;Arial\&quot; or \&quot;Times New Roman\&quot;.</param>
         /// <param name="FontSize">Font size in font points (e.g. \&quot;24\&quot;).</param>
-        public DocxRun(int? RunIndex = default(int?), List<DocxText> TextItems = default(List<DocxText>), bool? Bold = default(bool?), bool? Italic = default(bool?), string Underline = default(string), string FontFamily = default(string), string FontSize = default(string))
+        public DocxRun(int? RunIndex = default(int?), string Path = default(string), List<DocxText> TextItems = default(List<DocxText>), bool? Bold = default(bool?), bool? Italic = default(bool?), string Underline = default(string), string FontFamily = default(string), string FontSize = default(string))
         {
             this.RunIndex = RunIndex;
+            this.Path = Path;
             this.TextItems = TextItems;
             this.Bold = Bold;
             this.Italic = Italic;
@@ -57,6 +59,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <value>Index of the run, 0-based</value>
         [DataMember(Name="RunIndex", EmitDefaultValue=false)]
         public int? RunIndex { get; set; }
+
+        /// <summary>
+        /// The Path of the location of this object; leave blank for new tables
+        /// </summary>
+        /// <value>The Path of the location of this object; leave blank for new tables</value>
+        [DataMember(Name="Path", EmitDefaultValue=false)]
+        public string Path { get; set; }
 
         /// <summary>
         /// Text items inside the run; this is where the actual text content is stored
@@ -109,6 +118,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
             var sb = new StringBuilder();
             sb.Append("class DocxRun {\n");
             sb.Append("  RunIndex: ").Append(RunIndex).Append("\n");
+            sb.Append("  Path: ").Append(Path).Append("\n");
             sb.Append("  TextItems: ").Append(TextItems).Append("\n");
             sb.Append("  Bold: ").Append(Bold).Append("\n");
             sb.Append("  Italic: ").Append(Italic).Append("\n");
@@ -155,6 +165,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                     this.RunIndex.Equals(input.RunIndex))
                 ) && 
                 (
+                    this.Path == input.Path ||
+                    (this.Path != null &&
+                    this.Path.Equals(input.Path))
+                ) && 
+                (
                     this.TextItems == input.TextItems ||
                     this.TextItems != null &&
                     this.TextItems.SequenceEqual(input.TextItems)
@@ -197,6 +212,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                 int hashCode = 41;
                 if (this.RunIndex != null)
                     hashCode = hashCode * 59 + this.RunIndex.GetHashCode();
+                if (this.Path != null)
+                    hashCode = hashCode * 59 + this.Path.GetHashCode();
                 if (this.TextItems != null)
                     hashCode = hashCode * 59 + this.TextItems.GetHashCode();
                 if (this.Bold != null)

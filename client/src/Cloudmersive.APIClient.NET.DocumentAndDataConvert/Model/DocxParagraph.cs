@@ -34,11 +34,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Initializes a new instance of the <see cref="DocxParagraph" /> class.
         /// </summary>
         /// <param name="ParagraphIndex">The index of the paragraph; 0-based.</param>
+        /// <param name="Path">The Path of the location of this object; leave blank for new tables.</param>
         /// <param name="ContentRuns">The content runs in the paragraph - this is where text is stored; similar to a span in HTML.</param>
         /// <param name="StyleID">Style ID of the style applied to the paragraph; null if no style is applied.</param>
-        public DocxParagraph(int? ParagraphIndex = default(int?), List<DocxRun> ContentRuns = default(List<DocxRun>), string StyleID = default(string))
+        public DocxParagraph(int? ParagraphIndex = default(int?), string Path = default(string), List<DocxRun> ContentRuns = default(List<DocxRun>), string StyleID = default(string))
         {
             this.ParagraphIndex = ParagraphIndex;
+            this.Path = Path;
             this.ContentRuns = ContentRuns;
             this.StyleID = StyleID;
         }
@@ -49,6 +51,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <value>The index of the paragraph; 0-based</value>
         [DataMember(Name="ParagraphIndex", EmitDefaultValue=false)]
         public int? ParagraphIndex { get; set; }
+
+        /// <summary>
+        /// The Path of the location of this object; leave blank for new tables
+        /// </summary>
+        /// <value>The Path of the location of this object; leave blank for new tables</value>
+        [DataMember(Name="Path", EmitDefaultValue=false)]
+        public string Path { get; set; }
 
         /// <summary>
         /// The content runs in the paragraph - this is where text is stored; similar to a span in HTML
@@ -73,6 +82,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
             var sb = new StringBuilder();
             sb.Append("class DocxParagraph {\n");
             sb.Append("  ParagraphIndex: ").Append(ParagraphIndex).Append("\n");
+            sb.Append("  Path: ").Append(Path).Append("\n");
             sb.Append("  ContentRuns: ").Append(ContentRuns).Append("\n");
             sb.Append("  StyleID: ").Append(StyleID).Append("\n");
             sb.Append("}\n");
@@ -115,6 +125,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                     this.ParagraphIndex.Equals(input.ParagraphIndex))
                 ) && 
                 (
+                    this.Path == input.Path ||
+                    (this.Path != null &&
+                    this.Path.Equals(input.Path))
+                ) && 
+                (
                     this.ContentRuns == input.ContentRuns ||
                     this.ContentRuns != null &&
                     this.ContentRuns.SequenceEqual(input.ContentRuns)
@@ -137,6 +152,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                 int hashCode = 41;
                 if (this.ParagraphIndex != null)
                     hashCode = hashCode * 59 + this.ParagraphIndex.GetHashCode();
+                if (this.Path != null)
+                    hashCode = hashCode * 59 + this.Path.GetHashCode();
                 if (this.ContentRuns != null)
                     hashCode = hashCode * 59 + this.ContentRuns.GetHashCode();
                 if (this.StyleID != null)

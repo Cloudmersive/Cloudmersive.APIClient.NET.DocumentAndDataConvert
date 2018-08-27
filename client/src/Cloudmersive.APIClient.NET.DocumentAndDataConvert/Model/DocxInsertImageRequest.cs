@@ -35,18 +35,20 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// </summary>
         /// <param name="InputDocumentFileBytes">Optional: Bytes of the input file to operate on.</param>
         /// <param name="InputDocumentFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public)..</param>
-        /// <param name="InputImageFileBytes">Optional: Bytes of the input image file to operate on.</param>
-        /// <param name="InputImageFileUrl">Optional: URL of an image file to operate on as input.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public)..</param>
-        /// <param name="ImageWidth">Width in points of the image, set to 0 for default.</param>
-        /// <param name="ImageHeight">Height in point of the image, set to 0 for default.</param>
-        public DocxInsertImageRequest(byte[] InputDocumentFileBytes = default(byte[]), string InputDocumentFileUrl = default(string), byte[] InputImageFileBytes = default(byte[]), string InputImageFileUrl = default(string), long? ImageWidth = default(long?), long? ImageHeight = default(long?))
+        /// <param name="InputImageFileBytes">Optional: Bytes of the input image file to operate on; if you supply this value do not supply InputImageFileUrl or ImageToAdd..</param>
+        /// <param name="InputImageFileUrl">Optional: URL of an image file to operate on as input; if you supply this value do not supply InputImageFileBytes or ImageToAdd.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public)..</param>
+        /// <param name="ImageToAdd">Optional: Image to add; if you supply in this object, do not supply InputImageFileBytes or InputImageFileUrl..</param>
+        /// <param name="InsertPlacement">Optional; default is DocumentEnd.  Placement Type of the insert; possible values are: DocumentStart (very beginning of the document), DocumentEnd (very end of the document), BeforeExistingObject (right before an existing object - fill in the InsertPath field using the Path value from an existing object), AfterExistingObject (right after an existing object - fill in the InsertPath field using the Path value from an existing object).</param>
+        /// <param name="InsertPath">Optional; location within the document to insert the object; fill in the InsertPath field using the Path value from an existing object.  Used with InsertPlacement of BeforeExistingObject or AfterExistingObject.</param>
+        public DocxInsertImageRequest(byte[] InputDocumentFileBytes = default(byte[]), string InputDocumentFileUrl = default(string), byte[] InputImageFileBytes = default(byte[]), string InputImageFileUrl = default(string), DocxImage ImageToAdd = default(DocxImage), string InsertPlacement = default(string), string InsertPath = default(string))
         {
             this.InputDocumentFileBytes = InputDocumentFileBytes;
             this.InputDocumentFileUrl = InputDocumentFileUrl;
             this.InputImageFileBytes = InputImageFileBytes;
             this.InputImageFileUrl = InputImageFileUrl;
-            this.ImageWidth = ImageWidth;
-            this.ImageHeight = ImageHeight;
+            this.ImageToAdd = ImageToAdd;
+            this.InsertPlacement = InsertPlacement;
+            this.InsertPath = InsertPath;
         }
         
         /// <summary>
@@ -64,32 +66,39 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         public string InputDocumentFileUrl { get; set; }
 
         /// <summary>
-        /// Optional: Bytes of the input image file to operate on
+        /// Optional: Bytes of the input image file to operate on; if you supply this value do not supply InputImageFileUrl or ImageToAdd.
         /// </summary>
-        /// <value>Optional: Bytes of the input image file to operate on</value>
+        /// <value>Optional: Bytes of the input image file to operate on; if you supply this value do not supply InputImageFileUrl or ImageToAdd.</value>
         [DataMember(Name="InputImageFileBytes", EmitDefaultValue=false)]
         public byte[] InputImageFileBytes { get; set; }
 
         /// <summary>
-        /// Optional: URL of an image file to operate on as input.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public).
+        /// Optional: URL of an image file to operate on as input; if you supply this value do not supply InputImageFileBytes or ImageToAdd.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public).
         /// </summary>
-        /// <value>Optional: URL of an image file to operate on as input.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public).</value>
+        /// <value>Optional: URL of an image file to operate on as input; if you supply this value do not supply InputImageFileBytes or ImageToAdd.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public).</value>
         [DataMember(Name="InputImageFileUrl", EmitDefaultValue=false)]
         public string InputImageFileUrl { get; set; }
 
         /// <summary>
-        /// Width in points of the image, set to 0 for default
+        /// Optional: Image to add; if you supply in this object, do not supply InputImageFileBytes or InputImageFileUrl.
         /// </summary>
-        /// <value>Width in points of the image, set to 0 for default</value>
-        [DataMember(Name="ImageWidth", EmitDefaultValue=false)]
-        public long? ImageWidth { get; set; }
+        /// <value>Optional: Image to add; if you supply in this object, do not supply InputImageFileBytes or InputImageFileUrl.</value>
+        [DataMember(Name="ImageToAdd", EmitDefaultValue=false)]
+        public DocxImage ImageToAdd { get; set; }
 
         /// <summary>
-        /// Height in point of the image, set to 0 for default
+        /// Optional; default is DocumentEnd.  Placement Type of the insert; possible values are: DocumentStart (very beginning of the document), DocumentEnd (very end of the document), BeforeExistingObject (right before an existing object - fill in the InsertPath field using the Path value from an existing object), AfterExistingObject (right after an existing object - fill in the InsertPath field using the Path value from an existing object)
         /// </summary>
-        /// <value>Height in point of the image, set to 0 for default</value>
-        [DataMember(Name="ImageHeight", EmitDefaultValue=false)]
-        public long? ImageHeight { get; set; }
+        /// <value>Optional; default is DocumentEnd.  Placement Type of the insert; possible values are: DocumentStart (very beginning of the document), DocumentEnd (very end of the document), BeforeExistingObject (right before an existing object - fill in the InsertPath field using the Path value from an existing object), AfterExistingObject (right after an existing object - fill in the InsertPath field using the Path value from an existing object)</value>
+        [DataMember(Name="InsertPlacement", EmitDefaultValue=false)]
+        public string InsertPlacement { get; set; }
+
+        /// <summary>
+        /// Optional; location within the document to insert the object; fill in the InsertPath field using the Path value from an existing object.  Used with InsertPlacement of BeforeExistingObject or AfterExistingObject
+        /// </summary>
+        /// <value>Optional; location within the document to insert the object; fill in the InsertPath field using the Path value from an existing object.  Used with InsertPlacement of BeforeExistingObject or AfterExistingObject</value>
+        [DataMember(Name="InsertPath", EmitDefaultValue=false)]
+        public string InsertPath { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -103,8 +112,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
             sb.Append("  InputDocumentFileUrl: ").Append(InputDocumentFileUrl).Append("\n");
             sb.Append("  InputImageFileBytes: ").Append(InputImageFileBytes).Append("\n");
             sb.Append("  InputImageFileUrl: ").Append(InputImageFileUrl).Append("\n");
-            sb.Append("  ImageWidth: ").Append(ImageWidth).Append("\n");
-            sb.Append("  ImageHeight: ").Append(ImageHeight).Append("\n");
+            sb.Append("  ImageToAdd: ").Append(ImageToAdd).Append("\n");
+            sb.Append("  InsertPlacement: ").Append(InsertPlacement).Append("\n");
+            sb.Append("  InsertPath: ").Append(InsertPath).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -160,14 +170,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                     this.InputImageFileUrl.Equals(input.InputImageFileUrl))
                 ) && 
                 (
-                    this.ImageWidth == input.ImageWidth ||
-                    (this.ImageWidth != null &&
-                    this.ImageWidth.Equals(input.ImageWidth))
+                    this.ImageToAdd == input.ImageToAdd ||
+                    (this.ImageToAdd != null &&
+                    this.ImageToAdd.Equals(input.ImageToAdd))
                 ) && 
                 (
-                    this.ImageHeight == input.ImageHeight ||
-                    (this.ImageHeight != null &&
-                    this.ImageHeight.Equals(input.ImageHeight))
+                    this.InsertPlacement == input.InsertPlacement ||
+                    (this.InsertPlacement != null &&
+                    this.InsertPlacement.Equals(input.InsertPlacement))
+                ) && 
+                (
+                    this.InsertPath == input.InsertPath ||
+                    (this.InsertPath != null &&
+                    this.InsertPath.Equals(input.InsertPath))
                 );
         }
 
@@ -188,10 +203,12 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                     hashCode = hashCode * 59 + this.InputImageFileBytes.GetHashCode();
                 if (this.InputImageFileUrl != null)
                     hashCode = hashCode * 59 + this.InputImageFileUrl.GetHashCode();
-                if (this.ImageWidth != null)
-                    hashCode = hashCode * 59 + this.ImageWidth.GetHashCode();
-                if (this.ImageHeight != null)
-                    hashCode = hashCode * 59 + this.ImageHeight.GetHashCode();
+                if (this.ImageToAdd != null)
+                    hashCode = hashCode * 59 + this.ImageToAdd.GetHashCode();
+                if (this.InsertPlacement != null)
+                    hashCode = hashCode * 59 + this.InsertPlacement.GetHashCode();
+                if (this.InsertPath != null)
+                    hashCode = hashCode * 59 + this.InsertPath.GetHashCode();
                 return hashCode;
             }
         }

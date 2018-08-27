@@ -99,20 +99,28 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             // TODO unit test for the property 'InputImageFileUrl'
         }
         /// <summary>
-        /// Test the property 'ImageWidth'
+        /// Test the property 'ImageToAdd'
         /// </summary>
         [Test]
-        public void ImageWidthTest()
+        public void ImageToAddTest()
         {
-            // TODO unit test for the property 'ImageWidth'
+            // TODO unit test for the property 'ImageToAdd'
         }
         /// <summary>
-        /// Test the property 'ImageHeight'
+        /// Test the property 'InsertPlacement'
         /// </summary>
         [Test]
-        public void ImageHeightTest()
+        public void InsertPlacementTest()
         {
-            // TODO unit test for the property 'ImageHeight'
+            // TODO unit test for the property 'InsertPlacement'
+        }
+        /// <summary>
+        /// Test the property 'InsertPath'
+        /// </summary>
+        [Test]
+        public void InsertPathTest()
+        {
+            // TODO unit test for the property 'InsertPath'
         }
 
     }

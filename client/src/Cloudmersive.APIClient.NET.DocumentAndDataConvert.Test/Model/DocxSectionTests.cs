@@ -74,6 +74,14 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         {
             // TODO unit test for the property 'StartingPageNumbers'
         }
+        /// <summary>
+        /// Test the property 'Path'
+        /// </summary>
+        [Test]
+        public void PathTest()
+        {
+            // TODO unit test for the property 'Path'
+        }
 
     }
 

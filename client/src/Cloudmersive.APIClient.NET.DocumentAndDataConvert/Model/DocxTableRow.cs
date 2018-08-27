@@ -34,10 +34,12 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Initializes a new instance of the <see cref="DocxTableRow" /> class.
         /// </summary>
         /// <param name="RowIndex">Index of the row, 0-based.</param>
+        /// <param name="Path">The Path of the location of this object; leave blank for new tables.</param>
         /// <param name="RowCells">Cells in the row; this is where the contents of the row is stored.</param>
-        public DocxTableRow(int? RowIndex = default(int?), List<DocxTableCell> RowCells = default(List<DocxTableCell>))
+        public DocxTableRow(int? RowIndex = default(int?), string Path = default(string), List<DocxTableCell> RowCells = default(List<DocxTableCell>))
         {
             this.RowIndex = RowIndex;
+            this.Path = Path;
             this.RowCells = RowCells;
         }
         
@@ -47,6 +49,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <value>Index of the row, 0-based</value>
         [DataMember(Name="RowIndex", EmitDefaultValue=false)]
         public int? RowIndex { get; set; }
+
+        /// <summary>
+        /// The Path of the location of this object; leave blank for new tables
+        /// </summary>
+        /// <value>The Path of the location of this object; leave blank for new tables</value>
+        [DataMember(Name="Path", EmitDefaultValue=false)]
+        public string Path { get; set; }
 
         /// <summary>
         /// Cells in the row; this is where the contents of the row is stored
@@ -64,6 +73,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
             var sb = new StringBuilder();
             sb.Append("class DocxTableRow {\n");
             sb.Append("  RowIndex: ").Append(RowIndex).Append("\n");
+            sb.Append("  Path: ").Append(Path).Append("\n");
             sb.Append("  RowCells: ").Append(RowCells).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -105,6 +115,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                     this.RowIndex.Equals(input.RowIndex))
                 ) && 
                 (
+                    this.Path == input.Path ||
+                    (this.Path != null &&
+                    this.Path.Equals(input.Path))
+                ) && 
+                (
                     this.RowCells == input.RowCells ||
                     this.RowCells != null &&
                     this.RowCells.SequenceEqual(input.RowCells)
@@ -122,6 +137,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                 int hashCode = 41;
                 if (this.RowIndex != null)
                     hashCode = hashCode * 59 + this.RowIndex.GetHashCode();
+                if (this.Path != null)
+                    hashCode = hashCode * 59 + this.Path.GetHashCode();
                 if (this.RowCells != null)
                     hashCode = hashCode * 59 + this.RowCells.GetHashCode();
                 return hashCode;

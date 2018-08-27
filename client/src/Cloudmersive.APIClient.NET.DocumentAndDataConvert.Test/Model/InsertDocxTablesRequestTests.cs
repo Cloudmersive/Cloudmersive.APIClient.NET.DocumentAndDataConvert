@@ -90,6 +90,22 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         {
             // TODO unit test for the property 'TableToInsert'
         }
+        /// <summary>
+        /// Test the property 'InsertPlacement'
+        /// </summary>
+        [Test]
+        public void InsertPlacementTest()
+        {
+            // TODO unit test for the property 'InsertPlacement'
+        }
+        /// <summary>
+        /// Test the property 'InsertPath'
+        /// </summary>
+        [Test]
+        public void InsertPathTest()
+        {
+            // TODO unit test for the property 'InsertPath'
+        }
 
     }
 

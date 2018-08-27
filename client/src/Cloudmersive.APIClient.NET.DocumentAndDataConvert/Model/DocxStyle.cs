@@ -34,14 +34,16 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Initializes a new instance of the <see cref="DocxStyle" /> class.
         /// </summary>
         /// <param name="StyleID">ID of the style.</param>
+        /// <param name="Path">The Path of the location of this object; leave blank for new tables.</param>
         /// <param name="Bold">Style applies bold formatting.</param>
         /// <param name="Italic">Style applies italic formatting.</param>
         /// <param name="Underline">Style applies underline formatting.</param>
         /// <param name="FontSize">Font size.</param>
         /// <param name="FontFamily">Font family.</param>
-        public DocxStyle(string StyleID = default(string), bool? Bold = default(bool?), bool? Italic = default(bool?), bool? Underline = default(bool?), string FontSize = default(string), string FontFamily = default(string))
+        public DocxStyle(string StyleID = default(string), string Path = default(string), bool? Bold = default(bool?), bool? Italic = default(bool?), bool? Underline = default(bool?), string FontSize = default(string), string FontFamily = default(string))
         {
             this.StyleID = StyleID;
+            this.Path = Path;
             this.Bold = Bold;
             this.Italic = Italic;
             this.Underline = Underline;
@@ -55,6 +57,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <value>ID of the style</value>
         [DataMember(Name="StyleID", EmitDefaultValue=false)]
         public string StyleID { get; set; }
+
+        /// <summary>
+        /// The Path of the location of this object; leave blank for new tables
+        /// </summary>
+        /// <value>The Path of the location of this object; leave blank for new tables</value>
+        [DataMember(Name="Path", EmitDefaultValue=false)]
+        public string Path { get; set; }
 
         /// <summary>
         /// Style applies bold formatting
@@ -100,6 +109,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
             var sb = new StringBuilder();
             sb.Append("class DocxStyle {\n");
             sb.Append("  StyleID: ").Append(StyleID).Append("\n");
+            sb.Append("  Path: ").Append(Path).Append("\n");
             sb.Append("  Bold: ").Append(Bold).Append("\n");
             sb.Append("  Italic: ").Append(Italic).Append("\n");
             sb.Append("  Underline: ").Append(Underline).Append("\n");
@@ -145,6 +155,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                     this.StyleID.Equals(input.StyleID))
                 ) && 
                 (
+                    this.Path == input.Path ||
+                    (this.Path != null &&
+                    this.Path.Equals(input.Path))
+                ) && 
+                (
                     this.Bold == input.Bold ||
                     (this.Bold != null &&
                     this.Bold.Equals(input.Bold))
@@ -182,6 +197,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                 int hashCode = 41;
                 if (this.StyleID != null)
                     hashCode = hashCode * 59 + this.StyleID.GetHashCode();
+                if (this.Path != null)
+                    hashCode = hashCode * 59 + this.Path.GetHashCode();
                 if (this.Bold != null)
                     hashCode = hashCode * 59 + this.Bold.GetHashCode();
                 if (this.Italic != null)

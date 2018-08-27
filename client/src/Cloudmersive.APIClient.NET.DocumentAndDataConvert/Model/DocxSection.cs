@@ -34,9 +34,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Initializes a new instance of the <see cref="DocxSection" /> class.
         /// </summary>
         /// <param name="StartingPageNumbers">Page numbers that the section starts at, typically just one.</param>
-        public DocxSection(List<int?> StartingPageNumbers = default(List<int?>))
+        /// <param name="Path">The Path of the location of this object; leave blank for new tables.</param>
+        public DocxSection(List<int?> StartingPageNumbers = default(List<int?>), string Path = default(string))
         {
             this.StartingPageNumbers = StartingPageNumbers;
+            this.Path = Path;
         }
         
         /// <summary>
@@ -47,6 +49,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         public List<int?> StartingPageNumbers { get; set; }
 
         /// <summary>
+        /// The Path of the location of this object; leave blank for new tables
+        /// </summary>
+        /// <value>The Path of the location of this object; leave blank for new tables</value>
+        [DataMember(Name="Path", EmitDefaultValue=false)]
+        public string Path { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -55,6 +64,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
             var sb = new StringBuilder();
             sb.Append("class DocxSection {\n");
             sb.Append("  StartingPageNumbers: ").Append(StartingPageNumbers).Append("\n");
+            sb.Append("  Path: ").Append(Path).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -93,6 +103,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                     this.StartingPageNumbers == input.StartingPageNumbers ||
                     this.StartingPageNumbers != null &&
                     this.StartingPageNumbers.SequenceEqual(input.StartingPageNumbers)
+                ) && 
+                (
+                    this.Path == input.Path ||
+                    (this.Path != null &&
+                    this.Path.Equals(input.Path))
                 );
         }
 
@@ -107,6 +122,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                 int hashCode = 41;
                 if (this.StartingPageNumbers != null)
                     hashCode = hashCode * 59 + this.StartingPageNumbers.GetHashCode();
+                if (this.Path != null)
+                    hashCode = hashCode * 59 + this.Path.GetHashCode();
                 return hashCode;
             }
         }

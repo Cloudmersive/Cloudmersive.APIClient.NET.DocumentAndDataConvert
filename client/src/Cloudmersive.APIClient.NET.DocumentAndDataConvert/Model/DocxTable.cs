@@ -33,7 +33,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DocxTable" /> class.
         /// </summary>
-        /// <param name="TableID">The ID of the table.</param>
+        /// <param name="TableID">The ID of the table; leave blank for new tables.</param>
+        /// <param name="Path">The Path of the location of this object; leave blank for new tables.</param>
         /// <param name="Width">The Width of the table, or 0 if not specified.</param>
         /// <param name="WidthType">The Width configuration type of the table.</param>
         /// <param name="TableRows">Rows in the table; this is where the contents is located.</param>
@@ -71,9 +72,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <param name="EndBorderColor">HTML-style color hex value (do not include a #).</param>
         /// <param name="TableIndentationMode">Table indentation type.</param>
         /// <param name="TableIndentationWidth">Table indentation width.</param>
-        public DocxTable(string TableID = default(string), string Width = default(string), string WidthType = default(string), List<DocxTableRow> TableRows = default(List<DocxTableRow>), string TopBorderType = default(string), int? TopBorderSize = default(int?), int? TopBorderSpace = default(int?), string TopBorderColor = default(string), string BottomBorderType = default(string), int? BottomBorderSize = default(int?), int? BottomBorderSpace = default(int?), string BottomBorderColor = default(string), string LeftBorderType = default(string), int? LeftBorderSize = default(int?), int? LeftBorderSpace = default(int?), string LeftBorderColor = default(string), string RightBorderType = default(string), int? RightBorderSize = default(int?), int? RightBorderSpace = default(int?), string RightBorderColor = default(string), string CellHorizontalBorderType = default(string), int? CellHorizontalBorderSize = default(int?), int? CellHorizontalBorderSpace = default(int?), string CellHorizontalBorderColor = default(string), string CellVerticalBorderType = default(string), int? CellVerticalBorderSize = default(int?), int? CellVerticalBorderSpace = default(int?), string CellVerticalBorderColor = default(string), string StartBorderType = default(string), int? StartBorderSize = default(int?), int? StartBorderSpace = default(int?), string StartBorderColor = default(string), string EndBorderType = default(string), int? EndBorderSize = default(int?), int? EndBorderSpace = default(int?), string EndBorderColor = default(string), string TableIndentationMode = default(string), int? TableIndentationWidth = default(int?))
+        public DocxTable(string TableID = default(string), string Path = default(string), string Width = default(string), string WidthType = default(string), List<DocxTableRow> TableRows = default(List<DocxTableRow>), string TopBorderType = default(string), int? TopBorderSize = default(int?), int? TopBorderSpace = default(int?), string TopBorderColor = default(string), string BottomBorderType = default(string), int? BottomBorderSize = default(int?), int? BottomBorderSpace = default(int?), string BottomBorderColor = default(string), string LeftBorderType = default(string), int? LeftBorderSize = default(int?), int? LeftBorderSpace = default(int?), string LeftBorderColor = default(string), string RightBorderType = default(string), int? RightBorderSize = default(int?), int? RightBorderSpace = default(int?), string RightBorderColor = default(string), string CellHorizontalBorderType = default(string), int? CellHorizontalBorderSize = default(int?), int? CellHorizontalBorderSpace = default(int?), string CellHorizontalBorderColor = default(string), string CellVerticalBorderType = default(string), int? CellVerticalBorderSize = default(int?), int? CellVerticalBorderSpace = default(int?), string CellVerticalBorderColor = default(string), string StartBorderType = default(string), int? StartBorderSize = default(int?), int? StartBorderSpace = default(int?), string StartBorderColor = default(string), string EndBorderType = default(string), int? EndBorderSize = default(int?), int? EndBorderSpace = default(int?), string EndBorderColor = default(string), string TableIndentationMode = default(string), int? TableIndentationWidth = default(int?))
         {
             this.TableID = TableID;
+            this.Path = Path;
             this.Width = Width;
             this.WidthType = WidthType;
             this.TableRows = TableRows;
@@ -114,11 +116,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         }
         
         /// <summary>
-        /// The ID of the table
+        /// The ID of the table; leave blank for new tables
         /// </summary>
-        /// <value>The ID of the table</value>
+        /// <value>The ID of the table; leave blank for new tables</value>
         [DataMember(Name="TableID", EmitDefaultValue=false)]
         public string TableID { get; set; }
+
+        /// <summary>
+        /// The Path of the location of this object; leave blank for new tables
+        /// </summary>
+        /// <value>The Path of the location of this object; leave blank for new tables</value>
+        [DataMember(Name="Path", EmitDefaultValue=false)]
+        public string Path { get; set; }
 
         /// <summary>
         /// The Width of the table, or 0 if not specified
@@ -388,6 +397,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
             var sb = new StringBuilder();
             sb.Append("class DocxTable {\n");
             sb.Append("  TableID: ").Append(TableID).Append("\n");
+            sb.Append("  Path: ").Append(Path).Append("\n");
             sb.Append("  Width: ").Append(Width).Append("\n");
             sb.Append("  WidthType: ").Append(WidthType).Append("\n");
             sb.Append("  TableRows: ").Append(TableRows).Append("\n");
@@ -463,6 +473,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                     this.TableID == input.TableID ||
                     (this.TableID != null &&
                     this.TableID.Equals(input.TableID))
+                ) && 
+                (
+                    this.Path == input.Path ||
+                    (this.Path != null &&
+                    this.Path.Equals(input.Path))
                 ) && 
                 (
                     this.Width == input.Width ||
@@ -662,6 +677,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                 int hashCode = 41;
                 if (this.TableID != null)
                     hashCode = hashCode * 59 + this.TableID.GetHashCode();
+                if (this.Path != null)
+                    hashCode = hashCode * 59 + this.Path.GetHashCode();
                 if (this.Width != null)
                     hashCode = hashCode * 59 + this.Width.GetHashCode();
                 if (this.WidthType != null)

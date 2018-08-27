@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **CellIndex** | **int?** | The index of the cell, 0-based | [optional] 
+**Path** | **string** | The Path of the location of this object; leave blank for new tables | [optional] 
 **Paragraphs** | [**List&lt;DocxParagraph&gt;**](DocxParagraph.md) | Paragraphs inside the cell; this is where the contents of the cell are stored | [optional] 
 **CellShadingColor** | **string** | Color of the cell shading | [optional] 
 **CellShadingFill** | **string** | Fill of the cell shading | [optional] 

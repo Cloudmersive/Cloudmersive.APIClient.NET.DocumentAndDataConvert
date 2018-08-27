@@ -3,6 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**Path** | **string** | The Path of the location of this object; leave blank for new tables | [optional] 
 **Paragraphs** | [**List&lt;DocxParagraph&gt;**](DocxParagraph.md) | Paragraphs in this header | [optional] 
 **SectionsWithHeader** | [**List&lt;DocxSection&gt;**](DocxSection.md) | Sections that the header is applied to | [optional] 
 

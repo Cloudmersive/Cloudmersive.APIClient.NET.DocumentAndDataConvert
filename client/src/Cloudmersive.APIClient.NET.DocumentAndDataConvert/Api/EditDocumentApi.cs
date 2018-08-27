@@ -46,6 +46,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> EditDocumentBeginEditingWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
+        /// Get body from a DOCX
+        /// </summary>
+        /// <remarks>
+        /// Returns the body defined in the Word Document (DOCX) format file; this is the main content part of a DOCX document
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>GetDocxBodyResponse</returns>
+        GetDocxBodyResponse EditDocumentDocxBody (GetDocxBodyRequest reqConfig);
+
+        /// <summary>
+        /// Get body from a DOCX
+        /// </summary>
+        /// <remarks>
+        /// Returns the body defined in the Word Document (DOCX) format file; this is the main content part of a DOCX document
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>ApiResponse of GetDocxBodyResponse</returns>
+        ApiResponse<GetDocxBodyResponse> EditDocumentDocxBodyWithHttpInfo (GetDocxBodyRequest reqConfig);
+        /// <summary>
         /// Get content of a footer from a DOCX
         /// </summary>
         /// <remarks>
@@ -66,6 +87,48 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="reqConfig"></param>
         /// <returns>ApiResponse of GetDocxHeadersAndFootersResponse</returns>
         ApiResponse<GetDocxHeadersAndFootersResponse> EditDocumentDocxGetHeadersAndFootersWithHttpInfo (GetDocxHeadersAndFootersRequest reqConfig);
+        /// <summary>
+        /// Get images from a DOCX
+        /// </summary>
+        /// <remarks>
+        /// Returns the images defined in the Word Document (DOCX) format file
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>GetDocxImagesResponse</returns>
+        GetDocxImagesResponse EditDocumentDocxGetImages (GetDocxImagesRequest reqConfig);
+
+        /// <summary>
+        /// Get images from a DOCX
+        /// </summary>
+        /// <remarks>
+        /// Returns the images defined in the Word Document (DOCX) format file
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>ApiResponse of GetDocxImagesResponse</returns>
+        ApiResponse<GetDocxImagesResponse> EditDocumentDocxGetImagesWithHttpInfo (GetDocxImagesRequest reqConfig);
+        /// <summary>
+        /// Get sections from a DOCX
+        /// </summary>
+        /// <remarks>
+        /// Returns the sections defined in the Word Document (DOCX) format file
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>GetDocxSectionsResponse</returns>
+        GetDocxSectionsResponse EditDocumentDocxGetSections (GetDocxSectionsRequest reqConfig);
+
+        /// <summary>
+        /// Get sections from a DOCX
+        /// </summary>
+        /// <remarks>
+        /// Returns the sections defined in the Word Document (DOCX) format file
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>ApiResponse of GetDocxSectionsResponse</returns>
+        ApiResponse<GetDocxSectionsResponse> EditDocumentDocxGetSectionsWithHttpInfo (GetDocxSectionsRequest reqConfig);
         /// <summary>
         /// Get styles from a DOCX
         /// </summary>
@@ -130,6 +193,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of DocxInsertImageResponse</returns>
         ApiResponse<DocxInsertImageResponse> EditDocumentDocxInsertImageWithHttpInfo (DocxInsertImageRequest reqConfig);
         /// <summary>
+        /// Insert a new paragraph into a DOCX
+        /// </summary>
+        /// <remarks>
+        /// Adds a new paragraph into a DOCX and returns the result.  You can insert at the beginning/end of a document, or before/after an existing object using its Path (location within the document).
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>InsertDocxInsertParagraphResponse</returns>
+        InsertDocxInsertParagraphResponse EditDocumentDocxInsertParagraph (InsertDocxInsertParagraphRequest reqConfig);
+
+        /// <summary>
+        /// Insert a new paragraph into a DOCX
+        /// </summary>
+        /// <remarks>
+        /// Adds a new paragraph into a DOCX and returns the result.  You can insert at the beginning/end of a document, or before/after an existing object using its Path (location within the document).
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>ApiResponse of InsertDocxInsertParagraphResponse</returns>
+        ApiResponse<InsertDocxInsertParagraphResponse> EditDocumentDocxInsertParagraphWithHttpInfo (InsertDocxInsertParagraphRequest reqConfig);
+        /// <summary>
         /// Insert a new table into a DOCX
         /// </summary>
         /// <remarks>
@@ -171,6 +255,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="reqConfig"></param>
         /// <returns>ApiResponse of RemoveDocxHeadersAndFootersResponse</returns>
         ApiResponse<RemoveDocxHeadersAndFootersResponse> EditDocumentDocxRemoveHeadersAndFootersWithHttpInfo (RemoveDocxHeadersAndFootersRequest reqConfig);
+        /// <summary>
+        /// Delete any object in a DOCX
+        /// </summary>
+        /// <remarks>
+        /// Delete any object, such as a paragraph, table, image, etc. from a Word Document (DOCX).  Pass in the Path of the object you would like to delete.  You can call other functions such as Get-Tables, Get-Images, Get-Body, etc. to get the paths of the objects in the document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>DocxRemoveObjectResponse</returns>
+        DocxRemoveObjectResponse EditDocumentDocxRemoveObject (DocxRemoveObjectRequest reqConfig);
+
+        /// <summary>
+        /// Delete any object in a DOCX
+        /// </summary>
+        /// <remarks>
+        /// Delete any object, such as a paragraph, table, image, etc. from a Word Document (DOCX).  Pass in the Path of the object you would like to delete.  You can call other functions such as Get-Tables, Get-Images, Get-Body, etc. to get the paths of the objects in the document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>ApiResponse of DocxRemoveObjectResponse</returns>
+        ApiResponse<DocxRemoveObjectResponse> EditDocumentDocxRemoveObjectWithHttpInfo (DocxRemoveObjectRequest reqConfig);
         /// <summary>
         /// Replace string in DOCX
         /// </summary>
@@ -276,6 +381,132 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="reqConfig"></param>
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> EditDocumentPptxReplaceWithHttpInfo (ReplaceStringRequest reqConfig);
+        /// <summary>
+        /// Get rows and cells from a XLSX worksheet
+        /// </summary>
+        /// <remarks>
+        /// Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>GetXlsxColumnsResponse</returns>
+        GetXlsxColumnsResponse EditDocumentXlsxGetColumns (GetXlsxColumnsRequest input);
+
+        /// <summary>
+        /// Get rows and cells from a XLSX worksheet
+        /// </summary>
+        /// <remarks>
+        /// Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>ApiResponse of GetXlsxColumnsResponse</returns>
+        ApiResponse<GetXlsxColumnsResponse> EditDocumentXlsxGetColumnsWithHttpInfo (GetXlsxColumnsRequest input);
+        /// <summary>
+        /// Get images from a XLSX worksheet
+        /// </summary>
+        /// <remarks>
+        /// Returns the images defined in the Excel Spreadsheet worksheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>GetXlsxImagesResponse</returns>
+        GetXlsxImagesResponse EditDocumentXlsxGetImages (GetXlsxImagesRequest input);
+
+        /// <summary>
+        /// Get images from a XLSX worksheet
+        /// </summary>
+        /// <remarks>
+        /// Returns the images defined in the Excel Spreadsheet worksheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>ApiResponse of GetXlsxImagesResponse</returns>
+        ApiResponse<GetXlsxImagesResponse> EditDocumentXlsxGetImagesWithHttpInfo (GetXlsxImagesRequest input);
+        /// <summary>
+        /// Get rows and cells from a XLSX worksheet
+        /// </summary>
+        /// <remarks>
+        /// Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>GetXlsxRowsAndCellsResponse</returns>
+        GetXlsxRowsAndCellsResponse EditDocumentXlsxGetRowsAndCells (GetXlsxRowsAndCellsRequest input);
+
+        /// <summary>
+        /// Get rows and cells from a XLSX worksheet
+        /// </summary>
+        /// <remarks>
+        /// Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>ApiResponse of GetXlsxRowsAndCellsResponse</returns>
+        ApiResponse<GetXlsxRowsAndCellsResponse> EditDocumentXlsxGetRowsAndCellsWithHttpInfo (GetXlsxRowsAndCellsRequest input);
+        /// <summary>
+        /// Get styles from a XLSX worksheet
+        /// </summary>
+        /// <remarks>
+        /// Returns the style defined in the Excel Spreadsheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>GetXlsxStylesResponse</returns>
+        GetXlsxStylesResponse EditDocumentXlsxGetStyles (GetXlsxStylesRequest input);
+
+        /// <summary>
+        /// Get styles from a XLSX worksheet
+        /// </summary>
+        /// <remarks>
+        /// Returns the style defined in the Excel Spreadsheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>ApiResponse of GetXlsxStylesResponse</returns>
+        ApiResponse<GetXlsxStylesResponse> EditDocumentXlsxGetStylesWithHttpInfo (GetXlsxStylesRequest input);
+        /// <summary>
+        /// Get worksheets from a XLSX
+        /// </summary>
+        /// <remarks>
+        /// Returns the worksheets (tabs) defined in the Excel Spreadsheet (XLSX) format file
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>GetXlsxWorksheetsResponse</returns>
+        GetXlsxWorksheetsResponse EditDocumentXlsxGetWorksheets (GetXlsxWorksheetsRequest input);
+
+        /// <summary>
+        /// Get worksheets from a XLSX
+        /// </summary>
+        /// <remarks>
+        /// Returns the worksheets (tabs) defined in the Excel Spreadsheet (XLSX) format file
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>ApiResponse of GetXlsxWorksheetsResponse</returns>
+        ApiResponse<GetXlsxWorksheetsResponse> EditDocumentXlsxGetWorksheetsWithHttpInfo (GetXlsxWorksheetsRequest input);
+        /// <summary>
+        /// Insert a new worksheet into an XLSX spreadsheet
+        /// </summary>
+        /// <remarks>
+        /// Inserts a new worksheet into an Excel Spreadsheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>InsertXlsxWorksheetResponse</returns>
+        InsertXlsxWorksheetResponse EditDocumentXlsxInsertWorksheet (InsertXlsxWorksheetRequest input);
+
+        /// <summary>
+        /// Insert a new worksheet into an XLSX spreadsheet
+        /// </summary>
+        /// <remarks>
+        /// Inserts a new worksheet into an Excel Spreadsheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>ApiResponse of InsertXlsxWorksheetResponse</returns>
+        ApiResponse<InsertXlsxWorksheetResponse> EditDocumentXlsxInsertWorksheetWithHttpInfo (InsertXlsxWorksheetRequest input);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -300,6 +531,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> EditDocumentBeginEditingAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
+        /// Get body from a DOCX
+        /// </summary>
+        /// <remarks>
+        /// Returns the body defined in the Word Document (DOCX) format file; this is the main content part of a DOCX document
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>Task of GetDocxBodyResponse</returns>
+        System.Threading.Tasks.Task<GetDocxBodyResponse> EditDocumentDocxBodyAsync (GetDocxBodyRequest reqConfig);
+
+        /// <summary>
+        /// Get body from a DOCX
+        /// </summary>
+        /// <remarks>
+        /// Returns the body defined in the Word Document (DOCX) format file; this is the main content part of a DOCX document
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>Task of ApiResponse (GetDocxBodyResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetDocxBodyResponse>> EditDocumentDocxBodyAsyncWithHttpInfo (GetDocxBodyRequest reqConfig);
+        /// <summary>
         /// Get content of a footer from a DOCX
         /// </summary>
         /// <remarks>
@@ -320,6 +572,48 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="reqConfig"></param>
         /// <returns>Task of ApiResponse (GetDocxHeadersAndFootersResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetDocxHeadersAndFootersResponse>> EditDocumentDocxGetHeadersAndFootersAsyncWithHttpInfo (GetDocxHeadersAndFootersRequest reqConfig);
+        /// <summary>
+        /// Get images from a DOCX
+        /// </summary>
+        /// <remarks>
+        /// Returns the images defined in the Word Document (DOCX) format file
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>Task of GetDocxImagesResponse</returns>
+        System.Threading.Tasks.Task<GetDocxImagesResponse> EditDocumentDocxGetImagesAsync (GetDocxImagesRequest reqConfig);
+
+        /// <summary>
+        /// Get images from a DOCX
+        /// </summary>
+        /// <remarks>
+        /// Returns the images defined in the Word Document (DOCX) format file
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>Task of ApiResponse (GetDocxImagesResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetDocxImagesResponse>> EditDocumentDocxGetImagesAsyncWithHttpInfo (GetDocxImagesRequest reqConfig);
+        /// <summary>
+        /// Get sections from a DOCX
+        /// </summary>
+        /// <remarks>
+        /// Returns the sections defined in the Word Document (DOCX) format file
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>Task of GetDocxSectionsResponse</returns>
+        System.Threading.Tasks.Task<GetDocxSectionsResponse> EditDocumentDocxGetSectionsAsync (GetDocxSectionsRequest reqConfig);
+
+        /// <summary>
+        /// Get sections from a DOCX
+        /// </summary>
+        /// <remarks>
+        /// Returns the sections defined in the Word Document (DOCX) format file
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>Task of ApiResponse (GetDocxSectionsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetDocxSectionsResponse>> EditDocumentDocxGetSectionsAsyncWithHttpInfo (GetDocxSectionsRequest reqConfig);
         /// <summary>
         /// Get styles from a DOCX
         /// </summary>
@@ -384,6 +678,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (DocxInsertImageResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<DocxInsertImageResponse>> EditDocumentDocxInsertImageAsyncWithHttpInfo (DocxInsertImageRequest reqConfig);
         /// <summary>
+        /// Insert a new paragraph into a DOCX
+        /// </summary>
+        /// <remarks>
+        /// Adds a new paragraph into a DOCX and returns the result.  You can insert at the beginning/end of a document, or before/after an existing object using its Path (location within the document).
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>Task of InsertDocxInsertParagraphResponse</returns>
+        System.Threading.Tasks.Task<InsertDocxInsertParagraphResponse> EditDocumentDocxInsertParagraphAsync (InsertDocxInsertParagraphRequest reqConfig);
+
+        /// <summary>
+        /// Insert a new paragraph into a DOCX
+        /// </summary>
+        /// <remarks>
+        /// Adds a new paragraph into a DOCX and returns the result.  You can insert at the beginning/end of a document, or before/after an existing object using its Path (location within the document).
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>Task of ApiResponse (InsertDocxInsertParagraphResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InsertDocxInsertParagraphResponse>> EditDocumentDocxInsertParagraphAsyncWithHttpInfo (InsertDocxInsertParagraphRequest reqConfig);
+        /// <summary>
         /// Insert a new table into a DOCX
         /// </summary>
         /// <remarks>
@@ -425,6 +740,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="reqConfig"></param>
         /// <returns>Task of ApiResponse (RemoveDocxHeadersAndFootersResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<RemoveDocxHeadersAndFootersResponse>> EditDocumentDocxRemoveHeadersAndFootersAsyncWithHttpInfo (RemoveDocxHeadersAndFootersRequest reqConfig);
+        /// <summary>
+        /// Delete any object in a DOCX
+        /// </summary>
+        /// <remarks>
+        /// Delete any object, such as a paragraph, table, image, etc. from a Word Document (DOCX).  Pass in the Path of the object you would like to delete.  You can call other functions such as Get-Tables, Get-Images, Get-Body, etc. to get the paths of the objects in the document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>Task of DocxRemoveObjectResponse</returns>
+        System.Threading.Tasks.Task<DocxRemoveObjectResponse> EditDocumentDocxRemoveObjectAsync (DocxRemoveObjectRequest reqConfig);
+
+        /// <summary>
+        /// Delete any object in a DOCX
+        /// </summary>
+        /// <remarks>
+        /// Delete any object, such as a paragraph, table, image, etc. from a Word Document (DOCX).  Pass in the Path of the object you would like to delete.  You can call other functions such as Get-Tables, Get-Images, Get-Body, etc. to get the paths of the objects in the document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>Task of ApiResponse (DocxRemoveObjectResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DocxRemoveObjectResponse>> EditDocumentDocxRemoveObjectAsyncWithHttpInfo (DocxRemoveObjectRequest reqConfig);
         /// <summary>
         /// Replace string in DOCX
         /// </summary>
@@ -530,6 +866,132 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="reqConfig"></param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDocumentPptxReplaceAsyncWithHttpInfo (ReplaceStringRequest reqConfig);
+        /// <summary>
+        /// Get rows and cells from a XLSX worksheet
+        /// </summary>
+        /// <remarks>
+        /// Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>Task of GetXlsxColumnsResponse</returns>
+        System.Threading.Tasks.Task<GetXlsxColumnsResponse> EditDocumentXlsxGetColumnsAsync (GetXlsxColumnsRequest input);
+
+        /// <summary>
+        /// Get rows and cells from a XLSX worksheet
+        /// </summary>
+        /// <remarks>
+        /// Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>Task of ApiResponse (GetXlsxColumnsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetXlsxColumnsResponse>> EditDocumentXlsxGetColumnsAsyncWithHttpInfo (GetXlsxColumnsRequest input);
+        /// <summary>
+        /// Get images from a XLSX worksheet
+        /// </summary>
+        /// <remarks>
+        /// Returns the images defined in the Excel Spreadsheet worksheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>Task of GetXlsxImagesResponse</returns>
+        System.Threading.Tasks.Task<GetXlsxImagesResponse> EditDocumentXlsxGetImagesAsync (GetXlsxImagesRequest input);
+
+        /// <summary>
+        /// Get images from a XLSX worksheet
+        /// </summary>
+        /// <remarks>
+        /// Returns the images defined in the Excel Spreadsheet worksheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>Task of ApiResponse (GetXlsxImagesResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetXlsxImagesResponse>> EditDocumentXlsxGetImagesAsyncWithHttpInfo (GetXlsxImagesRequest input);
+        /// <summary>
+        /// Get rows and cells from a XLSX worksheet
+        /// </summary>
+        /// <remarks>
+        /// Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>Task of GetXlsxRowsAndCellsResponse</returns>
+        System.Threading.Tasks.Task<GetXlsxRowsAndCellsResponse> EditDocumentXlsxGetRowsAndCellsAsync (GetXlsxRowsAndCellsRequest input);
+
+        /// <summary>
+        /// Get rows and cells from a XLSX worksheet
+        /// </summary>
+        /// <remarks>
+        /// Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>Task of ApiResponse (GetXlsxRowsAndCellsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetXlsxRowsAndCellsResponse>> EditDocumentXlsxGetRowsAndCellsAsyncWithHttpInfo (GetXlsxRowsAndCellsRequest input);
+        /// <summary>
+        /// Get styles from a XLSX worksheet
+        /// </summary>
+        /// <remarks>
+        /// Returns the style defined in the Excel Spreadsheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>Task of GetXlsxStylesResponse</returns>
+        System.Threading.Tasks.Task<GetXlsxStylesResponse> EditDocumentXlsxGetStylesAsync (GetXlsxStylesRequest input);
+
+        /// <summary>
+        /// Get styles from a XLSX worksheet
+        /// </summary>
+        /// <remarks>
+        /// Returns the style defined in the Excel Spreadsheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>Task of ApiResponse (GetXlsxStylesResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetXlsxStylesResponse>> EditDocumentXlsxGetStylesAsyncWithHttpInfo (GetXlsxStylesRequest input);
+        /// <summary>
+        /// Get worksheets from a XLSX
+        /// </summary>
+        /// <remarks>
+        /// Returns the worksheets (tabs) defined in the Excel Spreadsheet (XLSX) format file
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>Task of GetXlsxWorksheetsResponse</returns>
+        System.Threading.Tasks.Task<GetXlsxWorksheetsResponse> EditDocumentXlsxGetWorksheetsAsync (GetXlsxWorksheetsRequest input);
+
+        /// <summary>
+        /// Get worksheets from a XLSX
+        /// </summary>
+        /// <remarks>
+        /// Returns the worksheets (tabs) defined in the Excel Spreadsheet (XLSX) format file
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>Task of ApiResponse (GetXlsxWorksheetsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetXlsxWorksheetsResponse>> EditDocumentXlsxGetWorksheetsAsyncWithHttpInfo (GetXlsxWorksheetsRequest input);
+        /// <summary>
+        /// Insert a new worksheet into an XLSX spreadsheet
+        /// </summary>
+        /// <remarks>
+        /// Inserts a new worksheet into an Excel Spreadsheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>Task of InsertXlsxWorksheetResponse</returns>
+        System.Threading.Tasks.Task<InsertXlsxWorksheetResponse> EditDocumentXlsxInsertWorksheetAsync (InsertXlsxWorksheetRequest input);
+
+        /// <summary>
+        /// Insert a new worksheet into an XLSX spreadsheet
+        /// </summary>
+        /// <remarks>
+        /// Inserts a new worksheet into an Excel Spreadsheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>Task of ApiResponse (InsertXlsxWorksheetResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InsertXlsxWorksheetResponse>> EditDocumentXlsxInsertWorksheetAsyncWithHttpInfo (InsertXlsxWorksheetRequest input);
         #endregion Asynchronous Operations
     }
 
@@ -776,6 +1238,173 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
+        /// Get body from a DOCX Returns the body defined in the Word Document (DOCX) format file; this is the main content part of a DOCX document
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>GetDocxBodyResponse</returns>
+        public GetDocxBodyResponse EditDocumentDocxBody (GetDocxBodyRequest reqConfig)
+        {
+             ApiResponse<GetDocxBodyResponse> localVarResponse = EditDocumentDocxBodyWithHttpInfo(reqConfig);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get body from a DOCX Returns the body defined in the Word Document (DOCX) format file; this is the main content part of a DOCX document
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>ApiResponse of GetDocxBodyResponse</returns>
+        public ApiResponse< GetDocxBodyResponse > EditDocumentDocxBodyWithHttpInfo (GetDocxBodyRequest reqConfig)
+        {
+            // verify the required parameter 'reqConfig' is set
+            if (reqConfig == null)
+                throw new ApiException(400, "Missing required parameter 'reqConfig' when calling EditDocumentApi->EditDocumentDocxBody");
+
+            var localVarPath = "/convert/edit/docx/get-body";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reqConfig; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentDocxBody", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetDocxBodyResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetDocxBodyResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxBodyResponse)));
+        }
+
+        /// <summary>
+        /// Get body from a DOCX Returns the body defined in the Word Document (DOCX) format file; this is the main content part of a DOCX document
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>Task of GetDocxBodyResponse</returns>
+        public async System.Threading.Tasks.Task<GetDocxBodyResponse> EditDocumentDocxBodyAsync (GetDocxBodyRequest reqConfig)
+        {
+             ApiResponse<GetDocxBodyResponse> localVarResponse = await EditDocumentDocxBodyAsyncWithHttpInfo(reqConfig);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get body from a DOCX Returns the body defined in the Word Document (DOCX) format file; this is the main content part of a DOCX document
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>Task of ApiResponse (GetDocxBodyResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetDocxBodyResponse>> EditDocumentDocxBodyAsyncWithHttpInfo (GetDocxBodyRequest reqConfig)
+        {
+            // verify the required parameter 'reqConfig' is set
+            if (reqConfig == null)
+                throw new ApiException(400, "Missing required parameter 'reqConfig' when calling EditDocumentApi->EditDocumentDocxBody");
+
+            var localVarPath = "/convert/edit/docx/get-body";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reqConfig; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentDocxBody", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetDocxBodyResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetDocxBodyResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxBodyResponse)));
+        }
+
+        /// <summary>
         /// Get content of a footer from a DOCX Returns the footer content from a Word Document (DOCX) format file
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
@@ -940,6 +1569,340 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<GetDocxHeadersAndFootersResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (GetDocxHeadersAndFootersResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxHeadersAndFootersResponse)));
+        }
+
+        /// <summary>
+        /// Get images from a DOCX Returns the images defined in the Word Document (DOCX) format file
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>GetDocxImagesResponse</returns>
+        public GetDocxImagesResponse EditDocumentDocxGetImages (GetDocxImagesRequest reqConfig)
+        {
+             ApiResponse<GetDocxImagesResponse> localVarResponse = EditDocumentDocxGetImagesWithHttpInfo(reqConfig);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get images from a DOCX Returns the images defined in the Word Document (DOCX) format file
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>ApiResponse of GetDocxImagesResponse</returns>
+        public ApiResponse< GetDocxImagesResponse > EditDocumentDocxGetImagesWithHttpInfo (GetDocxImagesRequest reqConfig)
+        {
+            // verify the required parameter 'reqConfig' is set
+            if (reqConfig == null)
+                throw new ApiException(400, "Missing required parameter 'reqConfig' when calling EditDocumentApi->EditDocumentDocxGetImages");
+
+            var localVarPath = "/convert/edit/docx/get-images";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reqConfig; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentDocxGetImages", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetDocxImagesResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetDocxImagesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxImagesResponse)));
+        }
+
+        /// <summary>
+        /// Get images from a DOCX Returns the images defined in the Word Document (DOCX) format file
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>Task of GetDocxImagesResponse</returns>
+        public async System.Threading.Tasks.Task<GetDocxImagesResponse> EditDocumentDocxGetImagesAsync (GetDocxImagesRequest reqConfig)
+        {
+             ApiResponse<GetDocxImagesResponse> localVarResponse = await EditDocumentDocxGetImagesAsyncWithHttpInfo(reqConfig);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get images from a DOCX Returns the images defined in the Word Document (DOCX) format file
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>Task of ApiResponse (GetDocxImagesResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetDocxImagesResponse>> EditDocumentDocxGetImagesAsyncWithHttpInfo (GetDocxImagesRequest reqConfig)
+        {
+            // verify the required parameter 'reqConfig' is set
+            if (reqConfig == null)
+                throw new ApiException(400, "Missing required parameter 'reqConfig' when calling EditDocumentApi->EditDocumentDocxGetImages");
+
+            var localVarPath = "/convert/edit/docx/get-images";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reqConfig; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentDocxGetImages", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetDocxImagesResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetDocxImagesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxImagesResponse)));
+        }
+
+        /// <summary>
+        /// Get sections from a DOCX Returns the sections defined in the Word Document (DOCX) format file
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>GetDocxSectionsResponse</returns>
+        public GetDocxSectionsResponse EditDocumentDocxGetSections (GetDocxSectionsRequest reqConfig)
+        {
+             ApiResponse<GetDocxSectionsResponse> localVarResponse = EditDocumentDocxGetSectionsWithHttpInfo(reqConfig);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get sections from a DOCX Returns the sections defined in the Word Document (DOCX) format file
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>ApiResponse of GetDocxSectionsResponse</returns>
+        public ApiResponse< GetDocxSectionsResponse > EditDocumentDocxGetSectionsWithHttpInfo (GetDocxSectionsRequest reqConfig)
+        {
+            // verify the required parameter 'reqConfig' is set
+            if (reqConfig == null)
+                throw new ApiException(400, "Missing required parameter 'reqConfig' when calling EditDocumentApi->EditDocumentDocxGetSections");
+
+            var localVarPath = "/convert/edit/docx/get-sections";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reqConfig; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentDocxGetSections", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetDocxSectionsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetDocxSectionsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxSectionsResponse)));
+        }
+
+        /// <summary>
+        /// Get sections from a DOCX Returns the sections defined in the Word Document (DOCX) format file
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>Task of GetDocxSectionsResponse</returns>
+        public async System.Threading.Tasks.Task<GetDocxSectionsResponse> EditDocumentDocxGetSectionsAsync (GetDocxSectionsRequest reqConfig)
+        {
+             ApiResponse<GetDocxSectionsResponse> localVarResponse = await EditDocumentDocxGetSectionsAsyncWithHttpInfo(reqConfig);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get sections from a DOCX Returns the sections defined in the Word Document (DOCX) format file
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>Task of ApiResponse (GetDocxSectionsResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetDocxSectionsResponse>> EditDocumentDocxGetSectionsAsyncWithHttpInfo (GetDocxSectionsRequest reqConfig)
+        {
+            // verify the required parameter 'reqConfig' is set
+            if (reqConfig == null)
+                throw new ApiException(400, "Missing required parameter 'reqConfig' when calling EditDocumentApi->EditDocumentDocxGetSections");
+
+            var localVarPath = "/convert/edit/docx/get-sections";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reqConfig; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentDocxGetSections", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetDocxSectionsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetDocxSectionsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxSectionsResponse)));
         }
 
         /// <summary>
@@ -1444,6 +2407,173 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
+        /// Insert a new paragraph into a DOCX Adds a new paragraph into a DOCX and returns the result.  You can insert at the beginning/end of a document, or before/after an existing object using its Path (location within the document).
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>InsertDocxInsertParagraphResponse</returns>
+        public InsertDocxInsertParagraphResponse EditDocumentDocxInsertParagraph (InsertDocxInsertParagraphRequest reqConfig)
+        {
+             ApiResponse<InsertDocxInsertParagraphResponse> localVarResponse = EditDocumentDocxInsertParagraphWithHttpInfo(reqConfig);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Insert a new paragraph into a DOCX Adds a new paragraph into a DOCX and returns the result.  You can insert at the beginning/end of a document, or before/after an existing object using its Path (location within the document).
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>ApiResponse of InsertDocxInsertParagraphResponse</returns>
+        public ApiResponse< InsertDocxInsertParagraphResponse > EditDocumentDocxInsertParagraphWithHttpInfo (InsertDocxInsertParagraphRequest reqConfig)
+        {
+            // verify the required parameter 'reqConfig' is set
+            if (reqConfig == null)
+                throw new ApiException(400, "Missing required parameter 'reqConfig' when calling EditDocumentApi->EditDocumentDocxInsertParagraph");
+
+            var localVarPath = "/convert/edit/docx/insert-paragraph";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reqConfig; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentDocxInsertParagraph", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<InsertDocxInsertParagraphResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (InsertDocxInsertParagraphResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InsertDocxInsertParagraphResponse)));
+        }
+
+        /// <summary>
+        /// Insert a new paragraph into a DOCX Adds a new paragraph into a DOCX and returns the result.  You can insert at the beginning/end of a document, or before/after an existing object using its Path (location within the document).
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>Task of InsertDocxInsertParagraphResponse</returns>
+        public async System.Threading.Tasks.Task<InsertDocxInsertParagraphResponse> EditDocumentDocxInsertParagraphAsync (InsertDocxInsertParagraphRequest reqConfig)
+        {
+             ApiResponse<InsertDocxInsertParagraphResponse> localVarResponse = await EditDocumentDocxInsertParagraphAsyncWithHttpInfo(reqConfig);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Insert a new paragraph into a DOCX Adds a new paragraph into a DOCX and returns the result.  You can insert at the beginning/end of a document, or before/after an existing object using its Path (location within the document).
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>Task of ApiResponse (InsertDocxInsertParagraphResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<InsertDocxInsertParagraphResponse>> EditDocumentDocxInsertParagraphAsyncWithHttpInfo (InsertDocxInsertParagraphRequest reqConfig)
+        {
+            // verify the required parameter 'reqConfig' is set
+            if (reqConfig == null)
+                throw new ApiException(400, "Missing required parameter 'reqConfig' when calling EditDocumentApi->EditDocumentDocxInsertParagraph");
+
+            var localVarPath = "/convert/edit/docx/insert-paragraph";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reqConfig; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentDocxInsertParagraph", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<InsertDocxInsertParagraphResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (InsertDocxInsertParagraphResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InsertDocxInsertParagraphResponse)));
+        }
+
+        /// <summary>
         /// Insert a new table into a DOCX Adds a new table into a DOCX and returns the result
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1775,6 +2905,173 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<RemoveDocxHeadersAndFootersResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RemoveDocxHeadersAndFootersResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RemoveDocxHeadersAndFootersResponse)));
+        }
+
+        /// <summary>
+        /// Delete any object in a DOCX Delete any object, such as a paragraph, table, image, etc. from a Word Document (DOCX).  Pass in the Path of the object you would like to delete.  You can call other functions such as Get-Tables, Get-Images, Get-Body, etc. to get the paths of the objects in the document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>DocxRemoveObjectResponse</returns>
+        public DocxRemoveObjectResponse EditDocumentDocxRemoveObject (DocxRemoveObjectRequest reqConfig)
+        {
+             ApiResponse<DocxRemoveObjectResponse> localVarResponse = EditDocumentDocxRemoveObjectWithHttpInfo(reqConfig);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Delete any object in a DOCX Delete any object, such as a paragraph, table, image, etc. from a Word Document (DOCX).  Pass in the Path of the object you would like to delete.  You can call other functions such as Get-Tables, Get-Images, Get-Body, etc. to get the paths of the objects in the document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>ApiResponse of DocxRemoveObjectResponse</returns>
+        public ApiResponse< DocxRemoveObjectResponse > EditDocumentDocxRemoveObjectWithHttpInfo (DocxRemoveObjectRequest reqConfig)
+        {
+            // verify the required parameter 'reqConfig' is set
+            if (reqConfig == null)
+                throw new ApiException(400, "Missing required parameter 'reqConfig' when calling EditDocumentApi->EditDocumentDocxRemoveObject");
+
+            var localVarPath = "/convert/edit/docx/remove-object";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reqConfig; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentDocxRemoveObject", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DocxRemoveObjectResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DocxRemoveObjectResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocxRemoveObjectResponse)));
+        }
+
+        /// <summary>
+        /// Delete any object in a DOCX Delete any object, such as a paragraph, table, image, etc. from a Word Document (DOCX).  Pass in the Path of the object you would like to delete.  You can call other functions such as Get-Tables, Get-Images, Get-Body, etc. to get the paths of the objects in the document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>Task of DocxRemoveObjectResponse</returns>
+        public async System.Threading.Tasks.Task<DocxRemoveObjectResponse> EditDocumentDocxRemoveObjectAsync (DocxRemoveObjectRequest reqConfig)
+        {
+             ApiResponse<DocxRemoveObjectResponse> localVarResponse = await EditDocumentDocxRemoveObjectAsyncWithHttpInfo(reqConfig);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Delete any object in a DOCX Delete any object, such as a paragraph, table, image, etc. from a Word Document (DOCX).  Pass in the Path of the object you would like to delete.  You can call other functions such as Get-Tables, Get-Images, Get-Body, etc. to get the paths of the objects in the document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>Task of ApiResponse (DocxRemoveObjectResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DocxRemoveObjectResponse>> EditDocumentDocxRemoveObjectAsyncWithHttpInfo (DocxRemoveObjectRequest reqConfig)
+        {
+            // verify the required parameter 'reqConfig' is set
+            if (reqConfig == null)
+                throw new ApiException(400, "Missing required parameter 'reqConfig' when calling EditDocumentApi->EditDocumentDocxRemoveObject");
+
+            var localVarPath = "/convert/edit/docx/remove-object";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reqConfig; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentDocxRemoveObject", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DocxRemoveObjectResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DocxRemoveObjectResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocxRemoveObjectResponse)));
         }
 
         /// <summary>
@@ -2610,6 +3907,1008 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (byte[]) Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Get rows and cells from a XLSX worksheet Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>GetXlsxColumnsResponse</returns>
+        public GetXlsxColumnsResponse EditDocumentXlsxGetColumns (GetXlsxColumnsRequest input)
+        {
+             ApiResponse<GetXlsxColumnsResponse> localVarResponse = EditDocumentXlsxGetColumnsWithHttpInfo(input);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get rows and cells from a XLSX worksheet Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>ApiResponse of GetXlsxColumnsResponse</returns>
+        public ApiResponse< GetXlsxColumnsResponse > EditDocumentXlsxGetColumnsWithHttpInfo (GetXlsxColumnsRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling EditDocumentApi->EditDocumentXlsxGetColumns");
+
+            var localVarPath = "/convert/edit/xlsx/get-columns";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentXlsxGetColumns", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetXlsxColumnsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetXlsxColumnsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetXlsxColumnsResponse)));
+        }
+
+        /// <summary>
+        /// Get rows and cells from a XLSX worksheet Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>Task of GetXlsxColumnsResponse</returns>
+        public async System.Threading.Tasks.Task<GetXlsxColumnsResponse> EditDocumentXlsxGetColumnsAsync (GetXlsxColumnsRequest input)
+        {
+             ApiResponse<GetXlsxColumnsResponse> localVarResponse = await EditDocumentXlsxGetColumnsAsyncWithHttpInfo(input);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get rows and cells from a XLSX worksheet Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>Task of ApiResponse (GetXlsxColumnsResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetXlsxColumnsResponse>> EditDocumentXlsxGetColumnsAsyncWithHttpInfo (GetXlsxColumnsRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling EditDocumentApi->EditDocumentXlsxGetColumns");
+
+            var localVarPath = "/convert/edit/xlsx/get-columns";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentXlsxGetColumns", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetXlsxColumnsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetXlsxColumnsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetXlsxColumnsResponse)));
+        }
+
+        /// <summary>
+        /// Get images from a XLSX worksheet Returns the images defined in the Excel Spreadsheet worksheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>GetXlsxImagesResponse</returns>
+        public GetXlsxImagesResponse EditDocumentXlsxGetImages (GetXlsxImagesRequest input)
+        {
+             ApiResponse<GetXlsxImagesResponse> localVarResponse = EditDocumentXlsxGetImagesWithHttpInfo(input);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get images from a XLSX worksheet Returns the images defined in the Excel Spreadsheet worksheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>ApiResponse of GetXlsxImagesResponse</returns>
+        public ApiResponse< GetXlsxImagesResponse > EditDocumentXlsxGetImagesWithHttpInfo (GetXlsxImagesRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling EditDocumentApi->EditDocumentXlsxGetImages");
+
+            var localVarPath = "/convert/edit/xlsx/get-images";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentXlsxGetImages", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetXlsxImagesResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetXlsxImagesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetXlsxImagesResponse)));
+        }
+
+        /// <summary>
+        /// Get images from a XLSX worksheet Returns the images defined in the Excel Spreadsheet worksheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>Task of GetXlsxImagesResponse</returns>
+        public async System.Threading.Tasks.Task<GetXlsxImagesResponse> EditDocumentXlsxGetImagesAsync (GetXlsxImagesRequest input)
+        {
+             ApiResponse<GetXlsxImagesResponse> localVarResponse = await EditDocumentXlsxGetImagesAsyncWithHttpInfo(input);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get images from a XLSX worksheet Returns the images defined in the Excel Spreadsheet worksheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>Task of ApiResponse (GetXlsxImagesResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetXlsxImagesResponse>> EditDocumentXlsxGetImagesAsyncWithHttpInfo (GetXlsxImagesRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling EditDocumentApi->EditDocumentXlsxGetImages");
+
+            var localVarPath = "/convert/edit/xlsx/get-images";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentXlsxGetImages", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetXlsxImagesResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetXlsxImagesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetXlsxImagesResponse)));
+        }
+
+        /// <summary>
+        /// Get rows and cells from a XLSX worksheet Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>GetXlsxRowsAndCellsResponse</returns>
+        public GetXlsxRowsAndCellsResponse EditDocumentXlsxGetRowsAndCells (GetXlsxRowsAndCellsRequest input)
+        {
+             ApiResponse<GetXlsxRowsAndCellsResponse> localVarResponse = EditDocumentXlsxGetRowsAndCellsWithHttpInfo(input);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get rows and cells from a XLSX worksheet Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>ApiResponse of GetXlsxRowsAndCellsResponse</returns>
+        public ApiResponse< GetXlsxRowsAndCellsResponse > EditDocumentXlsxGetRowsAndCellsWithHttpInfo (GetXlsxRowsAndCellsRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling EditDocumentApi->EditDocumentXlsxGetRowsAndCells");
+
+            var localVarPath = "/convert/edit/xlsx/get-rows-and-cells";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentXlsxGetRowsAndCells", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetXlsxRowsAndCellsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetXlsxRowsAndCellsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetXlsxRowsAndCellsResponse)));
+        }
+
+        /// <summary>
+        /// Get rows and cells from a XLSX worksheet Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>Task of GetXlsxRowsAndCellsResponse</returns>
+        public async System.Threading.Tasks.Task<GetXlsxRowsAndCellsResponse> EditDocumentXlsxGetRowsAndCellsAsync (GetXlsxRowsAndCellsRequest input)
+        {
+             ApiResponse<GetXlsxRowsAndCellsResponse> localVarResponse = await EditDocumentXlsxGetRowsAndCellsAsyncWithHttpInfo(input);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get rows and cells from a XLSX worksheet Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>Task of ApiResponse (GetXlsxRowsAndCellsResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetXlsxRowsAndCellsResponse>> EditDocumentXlsxGetRowsAndCellsAsyncWithHttpInfo (GetXlsxRowsAndCellsRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling EditDocumentApi->EditDocumentXlsxGetRowsAndCells");
+
+            var localVarPath = "/convert/edit/xlsx/get-rows-and-cells";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentXlsxGetRowsAndCells", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetXlsxRowsAndCellsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetXlsxRowsAndCellsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetXlsxRowsAndCellsResponse)));
+        }
+
+        /// <summary>
+        /// Get styles from a XLSX worksheet Returns the style defined in the Excel Spreadsheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>GetXlsxStylesResponse</returns>
+        public GetXlsxStylesResponse EditDocumentXlsxGetStyles (GetXlsxStylesRequest input)
+        {
+             ApiResponse<GetXlsxStylesResponse> localVarResponse = EditDocumentXlsxGetStylesWithHttpInfo(input);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get styles from a XLSX worksheet Returns the style defined in the Excel Spreadsheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>ApiResponse of GetXlsxStylesResponse</returns>
+        public ApiResponse< GetXlsxStylesResponse > EditDocumentXlsxGetStylesWithHttpInfo (GetXlsxStylesRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling EditDocumentApi->EditDocumentXlsxGetStyles");
+
+            var localVarPath = "/convert/edit/xlsx/get-styles";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentXlsxGetStyles", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetXlsxStylesResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetXlsxStylesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetXlsxStylesResponse)));
+        }
+
+        /// <summary>
+        /// Get styles from a XLSX worksheet Returns the style defined in the Excel Spreadsheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>Task of GetXlsxStylesResponse</returns>
+        public async System.Threading.Tasks.Task<GetXlsxStylesResponse> EditDocumentXlsxGetStylesAsync (GetXlsxStylesRequest input)
+        {
+             ApiResponse<GetXlsxStylesResponse> localVarResponse = await EditDocumentXlsxGetStylesAsyncWithHttpInfo(input);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get styles from a XLSX worksheet Returns the style defined in the Excel Spreadsheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>Task of ApiResponse (GetXlsxStylesResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetXlsxStylesResponse>> EditDocumentXlsxGetStylesAsyncWithHttpInfo (GetXlsxStylesRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling EditDocumentApi->EditDocumentXlsxGetStyles");
+
+            var localVarPath = "/convert/edit/xlsx/get-styles";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentXlsxGetStyles", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetXlsxStylesResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetXlsxStylesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetXlsxStylesResponse)));
+        }
+
+        /// <summary>
+        /// Get worksheets from a XLSX Returns the worksheets (tabs) defined in the Excel Spreadsheet (XLSX) format file
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>GetXlsxWorksheetsResponse</returns>
+        public GetXlsxWorksheetsResponse EditDocumentXlsxGetWorksheets (GetXlsxWorksheetsRequest input)
+        {
+             ApiResponse<GetXlsxWorksheetsResponse> localVarResponse = EditDocumentXlsxGetWorksheetsWithHttpInfo(input);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get worksheets from a XLSX Returns the worksheets (tabs) defined in the Excel Spreadsheet (XLSX) format file
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>ApiResponse of GetXlsxWorksheetsResponse</returns>
+        public ApiResponse< GetXlsxWorksheetsResponse > EditDocumentXlsxGetWorksheetsWithHttpInfo (GetXlsxWorksheetsRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling EditDocumentApi->EditDocumentXlsxGetWorksheets");
+
+            var localVarPath = "/convert/edit/xlsx/get-worksheets";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentXlsxGetWorksheets", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetXlsxWorksheetsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetXlsxWorksheetsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetXlsxWorksheetsResponse)));
+        }
+
+        /// <summary>
+        /// Get worksheets from a XLSX Returns the worksheets (tabs) defined in the Excel Spreadsheet (XLSX) format file
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>Task of GetXlsxWorksheetsResponse</returns>
+        public async System.Threading.Tasks.Task<GetXlsxWorksheetsResponse> EditDocumentXlsxGetWorksheetsAsync (GetXlsxWorksheetsRequest input)
+        {
+             ApiResponse<GetXlsxWorksheetsResponse> localVarResponse = await EditDocumentXlsxGetWorksheetsAsyncWithHttpInfo(input);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get worksheets from a XLSX Returns the worksheets (tabs) defined in the Excel Spreadsheet (XLSX) format file
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>Task of ApiResponse (GetXlsxWorksheetsResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetXlsxWorksheetsResponse>> EditDocumentXlsxGetWorksheetsAsyncWithHttpInfo (GetXlsxWorksheetsRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling EditDocumentApi->EditDocumentXlsxGetWorksheets");
+
+            var localVarPath = "/convert/edit/xlsx/get-worksheets";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentXlsxGetWorksheets", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetXlsxWorksheetsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetXlsxWorksheetsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetXlsxWorksheetsResponse)));
+        }
+
+        /// <summary>
+        /// Insert a new worksheet into an XLSX spreadsheet Inserts a new worksheet into an Excel Spreadsheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>InsertXlsxWorksheetResponse</returns>
+        public InsertXlsxWorksheetResponse EditDocumentXlsxInsertWorksheet (InsertXlsxWorksheetRequest input)
+        {
+             ApiResponse<InsertXlsxWorksheetResponse> localVarResponse = EditDocumentXlsxInsertWorksheetWithHttpInfo(input);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Insert a new worksheet into an XLSX spreadsheet Inserts a new worksheet into an Excel Spreadsheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>ApiResponse of InsertXlsxWorksheetResponse</returns>
+        public ApiResponse< InsertXlsxWorksheetResponse > EditDocumentXlsxInsertWorksheetWithHttpInfo (InsertXlsxWorksheetRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling EditDocumentApi->EditDocumentXlsxInsertWorksheet");
+
+            var localVarPath = "/convert/edit/xlsx/insert-worksheet";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentXlsxInsertWorksheet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<InsertXlsxWorksheetResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (InsertXlsxWorksheetResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InsertXlsxWorksheetResponse)));
+        }
+
+        /// <summary>
+        /// Insert a new worksheet into an XLSX spreadsheet Inserts a new worksheet into an Excel Spreadsheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>Task of InsertXlsxWorksheetResponse</returns>
+        public async System.Threading.Tasks.Task<InsertXlsxWorksheetResponse> EditDocumentXlsxInsertWorksheetAsync (InsertXlsxWorksheetRequest input)
+        {
+             ApiResponse<InsertXlsxWorksheetResponse> localVarResponse = await EditDocumentXlsxInsertWorksheetAsyncWithHttpInfo(input);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Insert a new worksheet into an XLSX spreadsheet Inserts a new worksheet into an Excel Spreadsheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>Task of ApiResponse (InsertXlsxWorksheetResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<InsertXlsxWorksheetResponse>> EditDocumentXlsxInsertWorksheetAsyncWithHttpInfo (InsertXlsxWorksheetRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling EditDocumentApi->EditDocumentXlsxInsertWorksheet");
+
+            var localVarPath = "/convert/edit/xlsx/insert-worksheet";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentXlsxInsertWorksheet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<InsertXlsxWorksheetResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (InsertXlsxWorksheetResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InsertXlsxWorksheetResponse)));
         }
 
     }

@@ -36,11 +36,15 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <param name="InputFileBytes">Optional: Bytes of the input file to operate on.</param>
         /// <param name="InputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public)..</param>
         /// <param name="TableToInsert">Table you would like to insert.</param>
-        public InsertDocxTablesRequest(byte[] InputFileBytes = default(byte[]), string InputFileUrl = default(string), DocxTable TableToInsert = default(DocxTable))
+        /// <param name="InsertPlacement">Optional; default is DocumentEnd.  Placement Type of the insert; possible values are: DocumentStart (very beginning of the document), DocumentEnd (very end of the document), BeforeExistingObject (right before an existing object - fill in the InsertPath field using the Path value from an existing object), AfterExistingObject (right after an existing object - fill in the InsertPath field using the Path value from an existing object).</param>
+        /// <param name="InsertPath">Optional; location within the document to insert the object; fill in the InsertPath field using the Path value from an existing object.  Used with InsertPlacement of BeforeExistingObject or AfterExistingObject.</param>
+        public InsertDocxTablesRequest(byte[] InputFileBytes = default(byte[]), string InputFileUrl = default(string), DocxTable TableToInsert = default(DocxTable), string InsertPlacement = default(string), string InsertPath = default(string))
         {
             this.InputFileBytes = InputFileBytes;
             this.InputFileUrl = InputFileUrl;
             this.TableToInsert = TableToInsert;
+            this.InsertPlacement = InsertPlacement;
+            this.InsertPath = InsertPath;
         }
         
         /// <summary>
@@ -65,6 +69,20 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         public DocxTable TableToInsert { get; set; }
 
         /// <summary>
+        /// Optional; default is DocumentEnd.  Placement Type of the insert; possible values are: DocumentStart (very beginning of the document), DocumentEnd (very end of the document), BeforeExistingObject (right before an existing object - fill in the InsertPath field using the Path value from an existing object), AfterExistingObject (right after an existing object - fill in the InsertPath field using the Path value from an existing object)
+        /// </summary>
+        /// <value>Optional; default is DocumentEnd.  Placement Type of the insert; possible values are: DocumentStart (very beginning of the document), DocumentEnd (very end of the document), BeforeExistingObject (right before an existing object - fill in the InsertPath field using the Path value from an existing object), AfterExistingObject (right after an existing object - fill in the InsertPath field using the Path value from an existing object)</value>
+        [DataMember(Name="InsertPlacement", EmitDefaultValue=false)]
+        public string InsertPlacement { get; set; }
+
+        /// <summary>
+        /// Optional; location within the document to insert the object; fill in the InsertPath field using the Path value from an existing object.  Used with InsertPlacement of BeforeExistingObject or AfterExistingObject
+        /// </summary>
+        /// <value>Optional; location within the document to insert the object; fill in the InsertPath field using the Path value from an existing object.  Used with InsertPlacement of BeforeExistingObject or AfterExistingObject</value>
+        [DataMember(Name="InsertPath", EmitDefaultValue=false)]
+        public string InsertPath { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -75,6 +93,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
             sb.Append("  InputFileBytes: ").Append(InputFileBytes).Append("\n");
             sb.Append("  InputFileUrl: ").Append(InputFileUrl).Append("\n");
             sb.Append("  TableToInsert: ").Append(TableToInsert).Append("\n");
+            sb.Append("  InsertPlacement: ").Append(InsertPlacement).Append("\n");
+            sb.Append("  InsertPath: ").Append(InsertPath).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -123,6 +143,16 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                     this.TableToInsert == input.TableToInsert ||
                     (this.TableToInsert != null &&
                     this.TableToInsert.Equals(input.TableToInsert))
+                ) && 
+                (
+                    this.InsertPlacement == input.InsertPlacement ||
+                    (this.InsertPlacement != null &&
+                    this.InsertPlacement.Equals(input.InsertPlacement))
+                ) && 
+                (
+                    this.InsertPath == input.InsertPath ||
+                    (this.InsertPath != null &&
+                    this.InsertPath.Equals(input.InsertPath))
                 );
         }
 
@@ -141,6 +171,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                     hashCode = hashCode * 59 + this.InputFileUrl.GetHashCode();
                 if (this.TableToInsert != null)
                     hashCode = hashCode * 59 + this.TableToInsert.GetHashCode();
+                if (this.InsertPlacement != null)
+                    hashCode = hashCode * 59 + this.InsertPlacement.GetHashCode();
+                if (this.InsertPath != null)
+                    hashCode = hashCode * 59 + this.InsertPath.GetHashCode();
                 return hashCode;
             }
         }

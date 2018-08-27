@@ -34,10 +34,12 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Initializes a new instance of the <see cref="DocxText" /> class.
         /// </summary>
         /// <param name="TextIndex">Index of the text content in the run; 0-based.</param>
+        /// <param name="Path">The Path of the location of this object; leave blank for new tables.</param>
         /// <param name="TextContent">Text string containing the text content of this text content item.</param>
-        public DocxText(int? TextIndex = default(int?), string TextContent = default(string))
+        public DocxText(int? TextIndex = default(int?), string Path = default(string), string TextContent = default(string))
         {
             this.TextIndex = TextIndex;
+            this.Path = Path;
             this.TextContent = TextContent;
         }
         
@@ -47,6 +49,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <value>Index of the text content in the run; 0-based</value>
         [DataMember(Name="TextIndex", EmitDefaultValue=false)]
         public int? TextIndex { get; set; }
+
+        /// <summary>
+        /// The Path of the location of this object; leave blank for new tables
+        /// </summary>
+        /// <value>The Path of the location of this object; leave blank for new tables</value>
+        [DataMember(Name="Path", EmitDefaultValue=false)]
+        public string Path { get; set; }
 
         /// <summary>
         /// Text string containing the text content of this text content item
@@ -64,6 +73,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
             var sb = new StringBuilder();
             sb.Append("class DocxText {\n");
             sb.Append("  TextIndex: ").Append(TextIndex).Append("\n");
+            sb.Append("  Path: ").Append(Path).Append("\n");
             sb.Append("  TextContent: ").Append(TextContent).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -105,6 +115,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                     this.TextIndex.Equals(input.TextIndex))
                 ) && 
                 (
+                    this.Path == input.Path ||
+                    (this.Path != null &&
+                    this.Path.Equals(input.Path))
+                ) && 
+                (
                     this.TextContent == input.TextContent ||
                     (this.TextContent != null &&
                     this.TextContent.Equals(input.TextContent))
@@ -122,6 +137,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                 int hashCode = 41;
                 if (this.TextIndex != null)
                     hashCode = hashCode * 59 + this.TextIndex.GetHashCode();
+                if (this.Path != null)
+                    hashCode = hashCode * 59 + this.Path.GetHashCode();
                 if (this.TextContent != null)
                     hashCode = hashCode * 59 + this.TextContent.GetHashCode();
                 return hashCode;
