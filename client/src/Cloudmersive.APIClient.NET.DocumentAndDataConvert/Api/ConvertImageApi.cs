@@ -14,6 +14,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
 using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
 
 namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 {
@@ -23,6 +24,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
     public interface IConvertImageApi : IApiAccessor
     {
         #region Synchronous Operations
+        /// <summary>
+        /// Get information about an image
+        /// </summary>
+        /// <remarks>
+        /// Get details from an image such as size, format and MIME type, compression, EXIF data such as location, DPI, unique colors, transparency information, and more
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>GetImageInfoResult</returns>
+        GetImageInfoResult ConvertImageGetImageInfo (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Get information about an image
+        /// </summary>
+        /// <remarks>
+        /// Get details from an image such as size, format and MIME type, compression, EXIF data such as location, DPI, unique colors, transparency information, and more
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of GetImageInfoResult</returns>
+        ApiResponse<GetImageInfoResult> ConvertImageGetImageInfoWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
         /// Image format conversion
         /// </summary>
@@ -48,8 +70,52 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> ConvertImageImageFormatConvertWithHttpInfo (string format1, string format2, System.IO.Stream inputFile);
+        /// <summary>
+        /// Change image DPI
+        /// </summary>
+        /// <remarks>
+        /// Resize an image to have a different DPI
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dpi">New DPI in pixels-per-inch, for example 300 DPI or 600 DPI</param>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>byte[]</returns>
+        byte[] ConvertImageImageSetDPI (int? dpi, System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Change image DPI
+        /// </summary>
+        /// <remarks>
+        /// Resize an image to have a different DPI
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dpi">New DPI in pixels-per-inch, for example 300 DPI or 600 DPI</param>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> ConvertImageImageSetDPIWithHttpInfo (int? dpi, System.IO.Stream inputFile);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// Get information about an image
+        /// </summary>
+        /// <remarks>
+        /// Get details from an image such as size, format and MIME type, compression, EXIF data such as location, DPI, unique colors, transparency information, and more
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of GetImageInfoResult</returns>
+        System.Threading.Tasks.Task<GetImageInfoResult> ConvertImageGetImageInfoAsync (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Get information about an image
+        /// </summary>
+        /// <remarks>
+        /// Get details from an image such as size, format and MIME type, compression, EXIF data such as location, DPI, unique colors, transparency information, and more
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (GetImageInfoResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetImageInfoResult>> ConvertImageGetImageInfoAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
         /// Image format conversion
         /// </summary>
@@ -75,6 +141,29 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertImageImageFormatConvertAsyncWithHttpInfo (string format1, string format2, System.IO.Stream inputFile);
+        /// <summary>
+        /// Change image DPI
+        /// </summary>
+        /// <remarks>
+        /// Resize an image to have a different DPI
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dpi">New DPI in pixels-per-inch, for example 300 DPI or 600 DPI</param>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> ConvertImageImageSetDPIAsync (int? dpi, System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Change image DPI
+        /// </summary>
+        /// <remarks>
+        /// Resize an image to have a different DPI
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dpi">New DPI in pixels-per-inch, for example 300 DPI or 600 DPI</param>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertImageImageSetDPIAsyncWithHttpInfo (int? dpi, System.IO.Stream inputFile);
         #endregion Asynchronous Operations
     }
 
@@ -173,6 +262,157 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// Get information about an image Get details from an image such as size, format and MIME type, compression, EXIF data such as location, DPI, unique colors, transparency information, and more
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>GetImageInfoResult</returns>
+        public GetImageInfoResult ConvertImageGetImageInfo (System.IO.Stream inputFile)
+        {
+             ApiResponse<GetImageInfoResult> localVarResponse = ConvertImageGetImageInfoWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get information about an image Get details from an image such as size, format and MIME type, compression, EXIF data such as location, DPI, unique colors, transparency information, and more
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of GetImageInfoResult</returns>
+        public ApiResponse< GetImageInfoResult > ConvertImageGetImageInfoWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertImageApi->ConvertImageGetImageInfo");
+
+            var localVarPath = "/convert/image/get-info";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertImageGetImageInfo", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetImageInfoResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetImageInfoResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetImageInfoResult)));
+        }
+
+        /// <summary>
+        /// Get information about an image Get details from an image such as size, format and MIME type, compression, EXIF data such as location, DPI, unique colors, transparency information, and more
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of GetImageInfoResult</returns>
+        public async System.Threading.Tasks.Task<GetImageInfoResult> ConvertImageGetImageInfoAsync (System.IO.Stream inputFile)
+        {
+             ApiResponse<GetImageInfoResult> localVarResponse = await ConvertImageGetImageInfoAsyncWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get information about an image Get details from an image such as size, format and MIME type, compression, EXIF data such as location, DPI, unique colors, transparency information, and more
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (GetImageInfoResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetImageInfoResult>> ConvertImageGetImageInfoAsyncWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertImageApi->ConvertImageGetImageInfo");
+
+            var localVarPath = "/convert/image/get-info";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertImageGetImageInfo", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetImageInfoResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetImageInfoResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetImageInfoResult)));
         }
 
         /// <summary>
@@ -342,6 +582,169 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("ConvertImageImageFormatConvert", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Change image DPI Resize an image to have a different DPI
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dpi">New DPI in pixels-per-inch, for example 300 DPI or 600 DPI</param>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>byte[]</returns>
+        public byte[] ConvertImageImageSetDPI (int? dpi, System.IO.Stream inputFile)
+        {
+             ApiResponse<byte[]> localVarResponse = ConvertImageImageSetDPIWithHttpInfo(dpi, inputFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Change image DPI Resize an image to have a different DPI
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dpi">New DPI in pixels-per-inch, for example 300 DPI or 600 DPI</param>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > ConvertImageImageSetDPIWithHttpInfo (int? dpi, System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'dpi' is set
+            if (dpi == null)
+                throw new ApiException(400, "Missing required parameter 'dpi' when calling ConvertImageApi->ConvertImageImageSetDPI");
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertImageApi->ConvertImageImageSetDPI");
+
+            var localVarPath = "/convert/image/set-dpi/{dpi}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (dpi != null) localVarPathParams.Add("dpi", Configuration.ApiClient.ParameterToString(dpi)); // path parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertImageImageSetDPI", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Change image DPI Resize an image to have a different DPI
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dpi">New DPI in pixels-per-inch, for example 300 DPI or 600 DPI</param>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> ConvertImageImageSetDPIAsync (int? dpi, System.IO.Stream inputFile)
+        {
+             ApiResponse<byte[]> localVarResponse = await ConvertImageImageSetDPIAsyncWithHttpInfo(dpi, inputFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Change image DPI Resize an image to have a different DPI
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dpi">New DPI in pixels-per-inch, for example 300 DPI or 600 DPI</param>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertImageImageSetDPIAsyncWithHttpInfo (int? dpi, System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'dpi' is set
+            if (dpi == null)
+                throw new ApiException(400, "Missing required parameter 'dpi' when calling ConvertImageApi->ConvertImageImageSetDPI");
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertImageApi->ConvertImageImageSetDPI");
+
+            var localVarPath = "/convert/image/set-dpi/{dpi}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (dpi != null) localVarPathParams.Add("dpi", Configuration.ApiClient.ParameterToString(dpi)); // path parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertImageImageSetDPI", localVarResponse);
                 if (exception != null) throw exception;
             }
 
