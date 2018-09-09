@@ -163,12 +163,12 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             // TODO unit test for the property 'ImageContentsURL'
         }
         /// <summary>
-        /// Test the property 'Inline'
+        /// Test the property 'InlineWithText'
         /// </summary>
         [Test]
-        public void InlineTest()
+        public void InlineWithTextTest()
         {
-            // TODO unit test for the property 'Inline'
+            // TODO unit test for the property 'InlineWithText'
         }
 
     }

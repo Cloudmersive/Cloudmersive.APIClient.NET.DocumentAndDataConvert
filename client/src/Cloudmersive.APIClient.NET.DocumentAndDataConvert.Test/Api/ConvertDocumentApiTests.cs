@@ -65,6 +65,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
 
         
         /// <summary>
+        /// Test ConvertDocumentAutodetectGetInfo
+        /// </summary>
+        [Test]
+        public void ConvertDocumentAutodetectGetInfoTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.ConvertDocumentAutodetectGetInfo(inputFile);
+            //Assert.IsInstanceOf<AutodetectGetInfoResult> (response, "response is AutodetectGetInfoResult");
+        }
+        
+        /// <summary>
         /// Test ConvertDocumentAutodetectToPdf
         /// </summary>
         [Test]

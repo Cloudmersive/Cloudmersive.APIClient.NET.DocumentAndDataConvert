@@ -45,8 +45,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <param name="ImageDataContentType">Read-only; image data MIME content-type.</param>
         /// <param name="ImageInternalFileName">Read-only; internal file name/path for the image.</param>
         /// <param name="ImageContentsURL">URL to the image contents; file is stored in an in-memory cache and will be deleted.  Call Finish-Editing to get the contents..</param>
-        /// <param name="Inline">True if the image is inline with the text; false if it is floating.</param>
-        public DocxImage(string Path = default(string), string ImageName = default(string), long? ImageId = default(long?), string ImageDescription = default(string), long? ImageWidth = default(long?), long? ImageHeight = default(long?), long? XOffset = default(long?), long? YOffset = default(long?), string ImageDataEmbedId = default(string), string ImageDataContentType = default(string), string ImageInternalFileName = default(string), string ImageContentsURL = default(string), bool? Inline = default(bool?))
+        /// <param name="InlineWithText">True if the image is inline with the text; false if it is floating.</param>
+        public DocxImage(string Path = default(string), string ImageName = default(string), long? ImageId = default(long?), string ImageDescription = default(string), long? ImageWidth = default(long?), long? ImageHeight = default(long?), long? XOffset = default(long?), long? YOffset = default(long?), string ImageDataEmbedId = default(string), string ImageDataContentType = default(string), string ImageInternalFileName = default(string), string ImageContentsURL = default(string), bool? InlineWithText = default(bool?))
         {
             this.Path = Path;
             this.ImageName = ImageName;
@@ -60,7 +60,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
             this.ImageDataContentType = ImageDataContentType;
             this.ImageInternalFileName = ImageInternalFileName;
             this.ImageContentsURL = ImageContentsURL;
-            this.Inline = Inline;
+            this.InlineWithText = InlineWithText;
         }
         
         /// <summary>
@@ -151,8 +151,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// True if the image is inline with the text; false if it is floating
         /// </summary>
         /// <value>True if the image is inline with the text; false if it is floating</value>
-        [DataMember(Name="Inline", EmitDefaultValue=false)]
-        public bool? Inline { get; set; }
+        [DataMember(Name="InlineWithText", EmitDefaultValue=false)]
+        public bool? InlineWithText { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -174,7 +174,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
             sb.Append("  ImageDataContentType: ").Append(ImageDataContentType).Append("\n");
             sb.Append("  ImageInternalFileName: ").Append(ImageInternalFileName).Append("\n");
             sb.Append("  ImageContentsURL: ").Append(ImageContentsURL).Append("\n");
-            sb.Append("  Inline: ").Append(Inline).Append("\n");
+            sb.Append("  InlineWithText: ").Append(InlineWithText).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -270,9 +270,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                     this.ImageContentsURL.Equals(input.ImageContentsURL))
                 ) && 
                 (
-                    this.Inline == input.Inline ||
-                    (this.Inline != null &&
-                    this.Inline.Equals(input.Inline))
+                    this.InlineWithText == input.InlineWithText ||
+                    (this.InlineWithText != null &&
+                    this.InlineWithText.Equals(input.InlineWithText))
                 );
         }
 
@@ -309,8 +309,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                     hashCode = hashCode * 59 + this.ImageInternalFileName.GetHashCode();
                 if (this.ImageContentsURL != null)
                     hashCode = hashCode * 59 + this.ImageContentsURL.GetHashCode();
-                if (this.Inline != null)
-                    hashCode = hashCode * 59 + this.Inline.GetHashCode();
+                if (this.InlineWithText != null)
+                    hashCode = hashCode * 59 + this.InlineWithText.GetHashCode();
                 return hashCode;
             }
         }

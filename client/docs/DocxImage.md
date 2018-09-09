@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **ImageDataContentType** | **string** | Read-only; image data MIME content-type | [optional] 
 **ImageInternalFileName** | **string** | Read-only; internal file name/path for the image | [optional] 
 **ImageContentsURL** | **string** | URL to the image contents; file is stored in an in-memory cache and will be deleted.  Call Finish-Editing to get the contents. | [optional] 
-**Inline** | **bool?** | True if the image is inline with the text; false if it is floating | [optional] 
+**InlineWithText** | **bool?** | True if the image is inline with the text; false if it is floating | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

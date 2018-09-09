@@ -25,6 +25,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Get document type information
+        /// </summary>
+        /// <remarks>
+        /// Auto-detects a document&#39;s type information; does not require file extension.  Analyzes file contents to confirm file type.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>AutodetectGetInfoResult</returns>
+        AutodetectGetInfoResult ConvertDocumentAutodetectGetInfo (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Get document type information
+        /// </summary>
+        /// <remarks>
+        /// Auto-detects a document&#39;s type information; does not require file extension.  Analyzes file contents to confirm file type.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of AutodetectGetInfoResult</returns>
+        ApiResponse<AutodetectGetInfoResult> ConvertDocumentAutodetectGetInfoWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
         /// Convert Document to PDF
         /// </summary>
         /// <remarks>
@@ -299,6 +320,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         ApiResponse<byte[]> ConvertDocumentXlsxToPdfWithHttpInfo (System.IO.Stream inputFile);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// Get document type information
+        /// </summary>
+        /// <remarks>
+        /// Auto-detects a document&#39;s type information; does not require file extension.  Analyzes file contents to confirm file type.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of AutodetectGetInfoResult</returns>
+        System.Threading.Tasks.Task<AutodetectGetInfoResult> ConvertDocumentAutodetectGetInfoAsync (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Get document type information
+        /// </summary>
+        /// <remarks>
+        /// Auto-detects a document&#39;s type information; does not require file extension.  Analyzes file contents to confirm file type.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (AutodetectGetInfoResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AutodetectGetInfoResult>> ConvertDocumentAutodetectGetInfoAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
         /// Convert Document to PDF
         /// </summary>
@@ -670,6 +712,151 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// Get document type information Auto-detects a document&#39;s type information; does not require file extension.  Analyzes file contents to confirm file type.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>AutodetectGetInfoResult</returns>
+        public AutodetectGetInfoResult ConvertDocumentAutodetectGetInfo (System.IO.Stream inputFile)
+        {
+             ApiResponse<AutodetectGetInfoResult> localVarResponse = ConvertDocumentAutodetectGetInfoWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get document type information Auto-detects a document&#39;s type information; does not require file extension.  Analyzes file contents to confirm file type.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of AutodetectGetInfoResult</returns>
+        public ApiResponse< AutodetectGetInfoResult > ConvertDocumentAutodetectGetInfoWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentAutodetectGetInfo");
+
+            var localVarPath = "/convert/autodetect/get-info";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentAutodetectGetInfo", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<AutodetectGetInfoResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AutodetectGetInfoResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AutodetectGetInfoResult)));
+        }
+
+        /// <summary>
+        /// Get document type information Auto-detects a document&#39;s type information; does not require file extension.  Analyzes file contents to confirm file type.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of AutodetectGetInfoResult</returns>
+        public async System.Threading.Tasks.Task<AutodetectGetInfoResult> ConvertDocumentAutodetectGetInfoAsync (System.IO.Stream inputFile)
+        {
+             ApiResponse<AutodetectGetInfoResult> localVarResponse = await ConvertDocumentAutodetectGetInfoAsyncWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get document type information Auto-detects a document&#39;s type information; does not require file extension.  Analyzes file contents to confirm file type.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (AutodetectGetInfoResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AutodetectGetInfoResult>> ConvertDocumentAutodetectGetInfoAsyncWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentAutodetectGetInfo");
+
+            var localVarPath = "/convert/autodetect/get-info";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentAutodetectGetInfo", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<AutodetectGetInfoResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AutodetectGetInfoResult) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AutodetectGetInfoResult)));
         }
 
         /// <summary>
