@@ -35,10 +35,14 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// </summary>
         /// <param name="Url">Url.</param>
         /// <param name="ExtraLoadingWait">ExtraLoadingWait.</param>
-        public ScreenshotRequest(string Url = default(string), int? ExtraLoadingWait = default(int?))
+        /// <param name="ScreenshotWidth">ScreenshotWidth.</param>
+        /// <param name="ScreenshotHeight">ScreenshotHeight.</param>
+        public ScreenshotRequest(string Url = default(string), int? ExtraLoadingWait = default(int?), int? ScreenshotWidth = default(int?), int? ScreenshotHeight = default(int?))
         {
             this.Url = Url;
             this.ExtraLoadingWait = ExtraLoadingWait;
+            this.ScreenshotWidth = ScreenshotWidth;
+            this.ScreenshotHeight = ScreenshotHeight;
         }
         
         /// <summary>
@@ -54,6 +58,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         public int? ExtraLoadingWait { get; set; }
 
         /// <summary>
+        /// Gets or Sets ScreenshotWidth
+        /// </summary>
+        [DataMember(Name="ScreenshotWidth", EmitDefaultValue=false)]
+        public int? ScreenshotWidth { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ScreenshotHeight
+        /// </summary>
+        [DataMember(Name="ScreenshotHeight", EmitDefaultValue=false)]
+        public int? ScreenshotHeight { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -63,6 +79,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
             sb.Append("class ScreenshotRequest {\n");
             sb.Append("  Url: ").Append(Url).Append("\n");
             sb.Append("  ExtraLoadingWait: ").Append(ExtraLoadingWait).Append("\n");
+            sb.Append("  ScreenshotWidth: ").Append(ScreenshotWidth).Append("\n");
+            sb.Append("  ScreenshotHeight: ").Append(ScreenshotHeight).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -106,6 +124,16 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                     this.ExtraLoadingWait == input.ExtraLoadingWait ||
                     (this.ExtraLoadingWait != null &&
                     this.ExtraLoadingWait.Equals(input.ExtraLoadingWait))
+                ) && 
+                (
+                    this.ScreenshotWidth == input.ScreenshotWidth ||
+                    (this.ScreenshotWidth != null &&
+                    this.ScreenshotWidth.Equals(input.ScreenshotWidth))
+                ) && 
+                (
+                    this.ScreenshotHeight == input.ScreenshotHeight ||
+                    (this.ScreenshotHeight != null &&
+                    this.ScreenshotHeight.Equals(input.ScreenshotHeight))
                 );
         }
 
@@ -122,6 +150,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                     hashCode = hashCode * 59 + this.Url.GetHashCode();
                 if (this.ExtraLoadingWait != null)
                     hashCode = hashCode * 59 + this.ExtraLoadingWait.GetHashCode();
+                if (this.ScreenshotWidth != null)
+                    hashCode = hashCode * 59 + this.ScreenshotWidth.GetHashCode();
+                if (this.ScreenshotHeight != null)
+                    hashCode = hashCode * 59 + this.ScreenshotHeight.GetHashCode();
                 return hashCode;
             }
         }

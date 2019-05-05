@@ -82,6 +82,22 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         {
             // TODO unit test for the property 'ExtraLoadingWait'
         }
+        /// <summary>
+        /// Test the property 'ScreenshotWidth'
+        /// </summary>
+        [Test]
+        public void ScreenshotWidthTest()
+        {
+            // TODO unit test for the property 'ScreenshotWidth'
+        }
+        /// <summary>
+        /// Test the property 'ScreenshotHeight'
+        /// </summary>
+        [Test]
+        public void ScreenshotHeightTest()
+        {
+            // TODO unit test for the property 'ScreenshotHeight'
+        }
 
     }
 
