@@ -35,3 +35,5 @@ $slnpath = Resolve-Path ./client/Cloudmersive.APIClient.NET.DocumentAndDataConve
 C:\Windows\Microsoft.NET\Framework\v4.0.30319\msbuild.exe $slnpath /t:rebuild 
 
 ./nuget.exe pack $csprojpath
+
+Copy-Item ./client/README.md ./README.md
