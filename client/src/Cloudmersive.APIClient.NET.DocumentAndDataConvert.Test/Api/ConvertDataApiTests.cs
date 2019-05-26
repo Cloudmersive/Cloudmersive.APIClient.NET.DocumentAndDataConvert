@@ -76,6 +76,30 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test ConvertDataXlsToJson
+        /// </summary>
+        [Test]
+        public void ConvertDataXlsToJsonTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.ConvertDataXlsToJson(inputFile);
+            //Assert.IsInstanceOf<Object> (response, "response is Object");
+        }
+        
+        /// <summary>
+        /// Test ConvertDataXlsxToJson
+        /// </summary>
+        [Test]
+        public void ConvertDataXlsxToJsonTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.ConvertDataXlsxToJson(inputFile);
+            //Assert.IsInstanceOf<Object> (response, "response is Object");
+        }
+        
+        /// <summary>
         /// Test ConvertDataXmlToJson
         /// </summary>
         [Test]
