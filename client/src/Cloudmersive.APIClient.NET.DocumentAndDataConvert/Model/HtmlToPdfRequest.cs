@@ -33,12 +33,12 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="HtmlToPdfRequest" /> class.
         /// </summary>
-        /// <param name="Html">Html.</param>
-        /// <param name="ExtraLoadingWait">ExtraLoadingWait.</param>
-        public HtmlToPdfRequest(string Html = default(string), int? ExtraLoadingWait = default(int?))
+        /// <param name="html">html.</param>
+        /// <param name="extraLoadingWait">extraLoadingWait.</param>
+        public HtmlToPdfRequest(string html = default(string), int? extraLoadingWait = default(int?))
         {
-            this.Html = Html;
-            this.ExtraLoadingWait = ExtraLoadingWait;
+            this.Html = html;
+            this.ExtraLoadingWait = extraLoadingWait;
         }
         
         /// <summary>
@@ -71,7 +71,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

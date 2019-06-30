@@ -33,24 +33,24 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DocxTableCell" /> class.
         /// </summary>
-        /// <param name="CellIndex">The index of the cell, 0-based.</param>
-        /// <param name="Path">The Path of the location of this object; leave blank for new tables.</param>
-        /// <param name="Paragraphs">Paragraphs inside the cell; this is where the contents of the cell are stored.</param>
-        /// <param name="CellShadingColor">Color of the cell shading.</param>
-        /// <param name="CellShadingFill">Fill of the cell shading.</param>
-        /// <param name="CellShadingPattern">Pattern of the cell shading.</param>
-        /// <param name="CellWidthMode">Width mode of the cell; can be auto (for automatic) or manual.</param>
-        /// <param name="CellWidth">Width of the cell.</param>
-        public DocxTableCell(int? CellIndex = default(int?), string Path = default(string), List<DocxParagraph> Paragraphs = default(List<DocxParagraph>), string CellShadingColor = default(string), string CellShadingFill = default(string), string CellShadingPattern = default(string), string CellWidthMode = default(string), string CellWidth = default(string))
+        /// <param name="cellIndex">The index of the cell, 0-based.</param>
+        /// <param name="path">The Path of the location of this object; leave blank for new tables.</param>
+        /// <param name="paragraphs">Paragraphs inside the cell; this is where the contents of the cell are stored.</param>
+        /// <param name="cellShadingColor">Color of the cell shading.</param>
+        /// <param name="cellShadingFill">Fill of the cell shading.</param>
+        /// <param name="cellShadingPattern">Pattern of the cell shading.</param>
+        /// <param name="cellWidthMode">Width mode of the cell; can be auto (for automatic) or manual.</param>
+        /// <param name="cellWidth">Width of the cell.</param>
+        public DocxTableCell(int? cellIndex = default(int?), string path = default(string), List<DocxParagraph> paragraphs = default(List<DocxParagraph>), string cellShadingColor = default(string), string cellShadingFill = default(string), string cellShadingPattern = default(string), string cellWidthMode = default(string), string cellWidth = default(string))
         {
-            this.CellIndex = CellIndex;
-            this.Path = Path;
-            this.Paragraphs = Paragraphs;
-            this.CellShadingColor = CellShadingColor;
-            this.CellShadingFill = CellShadingFill;
-            this.CellShadingPattern = CellShadingPattern;
-            this.CellWidthMode = CellWidthMode;
-            this.CellWidth = CellWidth;
+            this.CellIndex = cellIndex;
+            this.Path = path;
+            this.Paragraphs = paragraphs;
+            this.CellShadingColor = cellShadingColor;
+            this.CellShadingFill = cellShadingFill;
+            this.CellShadingPattern = cellShadingPattern;
+            this.CellWidthMode = cellWidthMode;
+            this.CellWidth = cellWidth;
         }
         
         /// <summary>
@@ -133,7 +133,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

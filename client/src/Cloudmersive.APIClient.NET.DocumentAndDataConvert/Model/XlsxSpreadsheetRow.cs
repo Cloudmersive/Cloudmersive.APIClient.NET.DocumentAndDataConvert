@@ -33,12 +33,12 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="XlsxSpreadsheetRow" /> class.
         /// </summary>
-        /// <param name="Path">The Path of the location of this object; leave blank for new rows.</param>
-        /// <param name="Cells">Spreadsheet Cells in the spreadsheet row.</param>
-        public XlsxSpreadsheetRow(string Path = default(string), List<XlsxSpreadsheetCell> Cells = default(List<XlsxSpreadsheetCell>))
+        /// <param name="path">The Path of the location of this object; leave blank for new rows.</param>
+        /// <param name="cells">Spreadsheet Cells in the spreadsheet row.</param>
+        public XlsxSpreadsheetRow(string path = default(string), List<XlsxSpreadsheetCell> cells = default(List<XlsxSpreadsheetCell>))
         {
-            this.Path = Path;
-            this.Cells = Cells;
+            this.Path = path;
+            this.Cells = cells;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

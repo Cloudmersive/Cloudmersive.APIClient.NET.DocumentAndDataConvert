@@ -33,14 +33,14 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DocxHeader" /> class.
         /// </summary>
-        /// <param name="Path">The Path of the location of this object; leave blank for new tables.</param>
-        /// <param name="Paragraphs">Paragraphs in this header.</param>
-        /// <param name="SectionsWithHeader">Sections that the header is applied to.</param>
-        public DocxHeader(string Path = default(string), List<DocxParagraph> Paragraphs = default(List<DocxParagraph>), List<DocxSection> SectionsWithHeader = default(List<DocxSection>))
+        /// <param name="path">The Path of the location of this object; leave blank for new tables.</param>
+        /// <param name="paragraphs">Paragraphs in this header.</param>
+        /// <param name="sectionsWithHeader">Sections that the header is applied to.</param>
+        public DocxHeader(string path = default(string), List<DocxParagraph> paragraphs = default(List<DocxParagraph>), List<DocxSection> sectionsWithHeader = default(List<DocxSection>))
         {
-            this.Path = Path;
-            this.Paragraphs = Paragraphs;
-            this.SectionsWithHeader = SectionsWithHeader;
+            this.Path = path;
+            this.Paragraphs = paragraphs;
+            this.SectionsWithHeader = sectionsWithHeader;
         }
         
         /// <summary>
@@ -83,7 +83,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

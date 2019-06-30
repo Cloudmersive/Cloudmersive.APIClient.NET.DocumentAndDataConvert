@@ -33,12 +33,12 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="XlsxWorksheet" /> class.
         /// </summary>
-        /// <param name="Path">The Path of the location of this object; leave blank for new worksheets.</param>
-        /// <param name="WorksheetName">User-facing name of the worksheet tab.</param>
-        public XlsxWorksheet(string Path = default(string), string WorksheetName = default(string))
+        /// <param name="path">The Path of the location of this object; leave blank for new worksheets.</param>
+        /// <param name="worksheetName">User-facing name of the worksheet tab.</param>
+        public XlsxWorksheet(string path = default(string), string worksheetName = default(string))
         {
-            this.Path = Path;
-            this.WorksheetName = WorksheetName;
+            this.Path = path;
+            this.WorksheetName = worksheetName;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

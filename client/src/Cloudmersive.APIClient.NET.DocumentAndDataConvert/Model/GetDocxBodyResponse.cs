@@ -33,12 +33,12 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GetDocxBodyResponse" /> class.
         /// </summary>
-        /// <param name="Successful">True if successful, false otherwise.</param>
-        /// <param name="Body">Body in the DOCX document.</param>
-        public GetDocxBodyResponse(bool? Successful = default(bool?), DocxBody Body = default(DocxBody))
+        /// <param name="successful">True if successful, false otherwise.</param>
+        /// <param name="body">Body in the DOCX document.</param>
+        public GetDocxBodyResponse(bool? successful = default(bool?), DocxBody body = default(DocxBody))
         {
-            this.Successful = Successful;
-            this.Body = Body;
+            this.Successful = successful;
+            this.Body = body;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

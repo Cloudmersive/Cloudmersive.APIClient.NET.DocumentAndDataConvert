@@ -33,12 +33,12 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GetDocxStylesResponse" /> class.
         /// </summary>
-        /// <param name="Successful">True if successful, false otherwise.</param>
-        /// <param name="Styles">Styles in the DOCX document.</param>
-        public GetDocxStylesResponse(bool? Successful = default(bool?), List<DocxStyle> Styles = default(List<DocxStyle>))
+        /// <param name="successful">True if successful, false otherwise.</param>
+        /// <param name="styles">Styles in the DOCX document.</param>
+        public GetDocxStylesResponse(bool? successful = default(bool?), List<DocxStyle> styles = default(List<DocxStyle>))
         {
-            this.Successful = Successful;
-            this.Styles = Styles;
+            this.Successful = successful;
+            this.Styles = styles;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

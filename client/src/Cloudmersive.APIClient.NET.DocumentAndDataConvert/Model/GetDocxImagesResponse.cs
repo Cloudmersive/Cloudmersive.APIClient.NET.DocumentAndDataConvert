@@ -33,12 +33,12 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GetDocxImagesResponse" /> class.
         /// </summary>
-        /// <param name="Successful">True if successful, false otherwise.</param>
-        /// <param name="Images">Images in the DOCX document.</param>
-        public GetDocxImagesResponse(bool? Successful = default(bool?), List<DocxImage> Images = default(List<DocxImage>))
+        /// <param name="successful">True if successful, false otherwise.</param>
+        /// <param name="images">Images in the DOCX document.</param>
+        public GetDocxImagesResponse(bool? successful = default(bool?), List<DocxImage> images = default(List<DocxImage>))
         {
-            this.Successful = Successful;
-            this.Images = Images;
+            this.Successful = successful;
+            this.Images = images;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

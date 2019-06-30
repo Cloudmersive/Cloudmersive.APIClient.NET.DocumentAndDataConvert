@@ -33,16 +33,16 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentValidationResult" /> class.
         /// </summary>
-        /// <param name="DocumentIsValid">True if the document is valid and has no errors, false otherwise.</param>
-        /// <param name="ErrorCount">Number of validation errors found in the document.</param>
-        /// <param name="WarningCount">Number of validation warnings found in the document.</param>
-        /// <param name="ErrorsAndWarnings">Details of errors and warnings found.</param>
-        public DocumentValidationResult(bool? DocumentIsValid = default(bool?), int? ErrorCount = default(int?), int? WarningCount = default(int?), List<DocumentValidationError> ErrorsAndWarnings = default(List<DocumentValidationError>))
+        /// <param name="documentIsValid">True if the document is valid and has no errors, false otherwise.</param>
+        /// <param name="errorCount">Number of validation errors found in the document.</param>
+        /// <param name="warningCount">Number of validation warnings found in the document.</param>
+        /// <param name="errorsAndWarnings">Details of errors and warnings found.</param>
+        public DocumentValidationResult(bool? documentIsValid = default(bool?), int? errorCount = default(int?), int? warningCount = default(int?), List<DocumentValidationError> errorsAndWarnings = default(List<DocumentValidationError>))
         {
-            this.DocumentIsValid = DocumentIsValid;
-            this.ErrorCount = ErrorCount;
-            this.WarningCount = WarningCount;
-            this.ErrorsAndWarnings = ErrorsAndWarnings;
+            this.DocumentIsValid = documentIsValid;
+            this.ErrorCount = errorCount;
+            this.WarningCount = warningCount;
+            this.ErrorsAndWarnings = errorsAndWarnings;
         }
         
         /// <summary>
@@ -93,7 +93,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

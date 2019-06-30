@@ -33,16 +33,16 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DocxCellStyle" /> class.
         /// </summary>
-        /// <param name="Path">The Path of the location of this object; leave blank for new rows.</param>
-        /// <param name="Name">Name of the style.</param>
-        /// <param name="FormatID">Format ID of the cell style.</param>
-        /// <param name="BuiltInID">Built&#x3D;in ID of the cell style.</param>
-        public DocxCellStyle(string Path = default(string), string Name = default(string), int? FormatID = default(int?), int? BuiltInID = default(int?))
+        /// <param name="path">The Path of the location of this object; leave blank for new rows.</param>
+        /// <param name="name">Name of the style.</param>
+        /// <param name="formatID">Format ID of the cell style.</param>
+        /// <param name="builtInID">Built&#x3D;in ID of the cell style.</param>
+        public DocxCellStyle(string path = default(string), string name = default(string), int? formatID = default(int?), int? builtInID = default(int?))
         {
-            this.Path = Path;
-            this.Name = Name;
-            this.FormatID = FormatID;
-            this.BuiltInID = BuiltInID;
+            this.Path = path;
+            this.Name = name;
+            this.FormatID = formatID;
+            this.BuiltInID = builtInID;
         }
         
         /// <summary>
@@ -93,7 +93,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

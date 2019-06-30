@@ -33,12 +33,12 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GetDocxSectionsResponse" /> class.
         /// </summary>
-        /// <param name="Successful">True if successful, false otherwise.</param>
-        /// <param name="Sections">Sections in the DOCX document.</param>
-        public GetDocxSectionsResponse(bool? Successful = default(bool?), List<DocxSection> Sections = default(List<DocxSection>))
+        /// <param name="successful">True if successful, false otherwise.</param>
+        /// <param name="sections">Sections in the DOCX document.</param>
+        public GetDocxSectionsResponse(bool? successful = default(bool?), List<DocxSection> sections = default(List<DocxSection>))
         {
-            this.Successful = Successful;
-            this.Sections = Sections;
+            this.Successful = successful;
+            this.Sections = sections;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

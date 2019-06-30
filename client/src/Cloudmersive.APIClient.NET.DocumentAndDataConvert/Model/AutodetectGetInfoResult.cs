@@ -33,16 +33,16 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AutodetectGetInfoResult" /> class.
         /// </summary>
-        /// <param name="Successful">True if the operation was successful, false otherwise.</param>
-        /// <param name="DetectedFileExtension">Detected file extension of the file format, with a leading period.</param>
-        /// <param name="DetectedMimeType">MIME type of this file extension.</param>
-        /// <param name="AlternateFileTypeCandidates">Alternate file type options and their probability.</param>
-        public AutodetectGetInfoResult(bool? Successful = default(bool?), string DetectedFileExtension = default(string), string DetectedMimeType = default(string), List<AlternateFileFormatCandidate> AlternateFileTypeCandidates = default(List<AlternateFileFormatCandidate>))
+        /// <param name="successful">True if the operation was successful, false otherwise.</param>
+        /// <param name="detectedFileExtension">Detected file extension of the file format, with a leading period.</param>
+        /// <param name="detectedMimeType">MIME type of this file extension.</param>
+        /// <param name="alternateFileTypeCandidates">Alternate file type options and their probability.</param>
+        public AutodetectGetInfoResult(bool? successful = default(bool?), string detectedFileExtension = default(string), string detectedMimeType = default(string), List<AlternateFileFormatCandidate> alternateFileTypeCandidates = default(List<AlternateFileFormatCandidate>))
         {
-            this.Successful = Successful;
-            this.DetectedFileExtension = DetectedFileExtension;
-            this.DetectedMimeType = DetectedMimeType;
-            this.AlternateFileTypeCandidates = AlternateFileTypeCandidates;
+            this.Successful = successful;
+            this.DetectedFileExtension = detectedFileExtension;
+            this.DetectedMimeType = detectedMimeType;
+            this.AlternateFileTypeCandidates = alternateFileTypeCandidates;
         }
         
         /// <summary>
@@ -93,7 +93,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

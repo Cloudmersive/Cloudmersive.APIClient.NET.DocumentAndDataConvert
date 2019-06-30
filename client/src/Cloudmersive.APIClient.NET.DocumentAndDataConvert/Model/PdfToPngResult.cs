@@ -33,12 +33,12 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PdfToPngResult" /> class.
         /// </summary>
-        /// <param name="Successful">True if the operation was successful, false otherwise.</param>
-        /// <param name="PngResultPages">Array of converted pages.</param>
-        public PdfToPngResult(bool? Successful = default(bool?), List<ConvertedPngPage> PngResultPages = default(List<ConvertedPngPage>))
+        /// <param name="successful">True if the operation was successful, false otherwise.</param>
+        /// <param name="pngResultPages">Array of converted pages.</param>
+        public PdfToPngResult(bool? successful = default(bool?), List<ConvertedPngPage> pngResultPages = default(List<ConvertedPngPage>))
         {
-            this.Successful = Successful;
-            this.PngResultPages = PngResultPages;
+            this.Successful = successful;
+            this.PngResultPages = pngResultPages;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

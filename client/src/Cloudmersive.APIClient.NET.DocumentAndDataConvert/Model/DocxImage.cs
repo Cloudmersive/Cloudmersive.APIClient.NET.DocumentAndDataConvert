@@ -33,34 +33,34 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DocxImage" /> class.
         /// </summary>
-        /// <param name="Path">The Path of the location of this object; leave blank for new tables.</param>
-        /// <param name="ImageName">The Name of the image.</param>
-        /// <param name="ImageId">The Id of the image.</param>
-        /// <param name="ImageDescription">The Description of the image.</param>
-        /// <param name="ImageWidth">Width of the image in EMUs (English Metric Units); set to 0 to default to page width and aspect-ratio based height.</param>
-        /// <param name="ImageHeight">Height of the image in EMUs (English Metric Units); set to 0 to default to page width and aspect-ratio based height.</param>
-        /// <param name="XOffset">X (horizontal) offset of the image.</param>
-        /// <param name="YOffset">Y (vertical) offset of the image.</param>
-        /// <param name="ImageDataEmbedId">Read-only; internal ID for the image contents.</param>
-        /// <param name="ImageDataContentType">Read-only; image data MIME content-type.</param>
-        /// <param name="ImageInternalFileName">Read-only; internal file name/path for the image.</param>
-        /// <param name="ImageContentsURL">URL to the image contents; file is stored in an in-memory cache and will be deleted.  Call Finish-Editing to get the contents..</param>
-        /// <param name="InlineWithText">True if the image is inline with the text; false if it is floating.</param>
-        public DocxImage(string Path = default(string), string ImageName = default(string), long? ImageId = default(long?), string ImageDescription = default(string), long? ImageWidth = default(long?), long? ImageHeight = default(long?), long? XOffset = default(long?), long? YOffset = default(long?), string ImageDataEmbedId = default(string), string ImageDataContentType = default(string), string ImageInternalFileName = default(string), string ImageContentsURL = default(string), bool? InlineWithText = default(bool?))
+        /// <param name="path">The Path of the location of this object; leave blank for new tables.</param>
+        /// <param name="imageName">The Name of the image.</param>
+        /// <param name="imageId">The Id of the image.</param>
+        /// <param name="imageDescription">The Description of the image.</param>
+        /// <param name="imageWidth">Width of the image in EMUs (English Metric Units); set to 0 to default to page width and aspect-ratio based height.</param>
+        /// <param name="imageHeight">Height of the image in EMUs (English Metric Units); set to 0 to default to page width and aspect-ratio based height.</param>
+        /// <param name="xOffset">X (horizontal) offset of the image.</param>
+        /// <param name="yOffset">Y (vertical) offset of the image.</param>
+        /// <param name="imageDataEmbedId">Read-only; internal ID for the image contents.</param>
+        /// <param name="imageDataContentType">Read-only; image data MIME content-type.</param>
+        /// <param name="imageInternalFileName">Read-only; internal file name/path for the image.</param>
+        /// <param name="imageContentsURL">URL to the image contents; file is stored in an in-memory cache and will be deleted.  Call Finish-Editing to get the contents..</param>
+        /// <param name="inlineWithText">True if the image is inline with the text; false if it is floating.</param>
+        public DocxImage(string path = default(string), string imageName = default(string), long? imageId = default(long?), string imageDescription = default(string), long? imageWidth = default(long?), long? imageHeight = default(long?), long? xOffset = default(long?), long? yOffset = default(long?), string imageDataEmbedId = default(string), string imageDataContentType = default(string), string imageInternalFileName = default(string), string imageContentsURL = default(string), bool? inlineWithText = default(bool?))
         {
-            this.Path = Path;
-            this.ImageName = ImageName;
-            this.ImageId = ImageId;
-            this.ImageDescription = ImageDescription;
-            this.ImageWidth = ImageWidth;
-            this.ImageHeight = ImageHeight;
-            this.XOffset = XOffset;
-            this.YOffset = YOffset;
-            this.ImageDataEmbedId = ImageDataEmbedId;
-            this.ImageDataContentType = ImageDataContentType;
-            this.ImageInternalFileName = ImageInternalFileName;
-            this.ImageContentsURL = ImageContentsURL;
-            this.InlineWithText = InlineWithText;
+            this.Path = path;
+            this.ImageName = imageName;
+            this.ImageId = imageId;
+            this.ImageDescription = imageDescription;
+            this.ImageWidth = imageWidth;
+            this.ImageHeight = imageHeight;
+            this.XOffset = xOffset;
+            this.YOffset = yOffset;
+            this.ImageDataEmbedId = imageDataEmbedId;
+            this.ImageDataContentType = imageDataContentType;
+            this.ImageInternalFileName = imageInternalFileName;
+            this.ImageContentsURL = imageContentsURL;
+            this.InlineWithText = inlineWithText;
         }
         
         /// <summary>
@@ -183,7 +183,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

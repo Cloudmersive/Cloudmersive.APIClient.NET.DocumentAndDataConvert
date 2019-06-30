@@ -33,12 +33,12 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GetDocxTablesResponse" /> class.
         /// </summary>
-        /// <param name="Successful">True if successful, false otherwise.</param>
-        /// <param name="Tables">Tables in the DOCX file.</param>
-        public GetDocxTablesResponse(bool? Successful = default(bool?), List<DocxTable> Tables = default(List<DocxTable>))
+        /// <param name="successful">True if successful, false otherwise.</param>
+        /// <param name="tables">Tables in the DOCX file.</param>
+        public GetDocxTablesResponse(bool? successful = default(bool?), List<DocxTable> tables = default(List<DocxTable>))
         {
-            this.Successful = Successful;
-            this.Tables = Tables;
+            this.Successful = successful;
+            this.Tables = tables;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

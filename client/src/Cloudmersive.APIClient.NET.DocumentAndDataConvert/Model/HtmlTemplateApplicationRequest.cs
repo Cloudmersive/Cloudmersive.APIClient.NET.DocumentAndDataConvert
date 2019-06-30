@@ -33,14 +33,14 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="HtmlTemplateApplicationRequest" /> class.
         /// </summary>
-        /// <param name="HtmlTemplate">HtmlTemplate.</param>
-        /// <param name="HtmlTemplateUrl">HtmlTemplateUrl.</param>
-        /// <param name="Operations">Operations.</param>
-        public HtmlTemplateApplicationRequest(string HtmlTemplate = default(string), string HtmlTemplateUrl = default(string), List<HtmlTemplateOperation> Operations = default(List<HtmlTemplateOperation>))
+        /// <param name="htmlTemplate">htmlTemplate.</param>
+        /// <param name="htmlTemplateUrl">htmlTemplateUrl.</param>
+        /// <param name="operations">operations.</param>
+        public HtmlTemplateApplicationRequest(string htmlTemplate = default(string), string htmlTemplateUrl = default(string), List<HtmlTemplateOperation> operations = default(List<HtmlTemplateOperation>))
         {
-            this.HtmlTemplate = HtmlTemplate;
-            this.HtmlTemplateUrl = HtmlTemplateUrl;
-            this.Operations = Operations;
+            this.HtmlTemplate = htmlTemplate;
+            this.HtmlTemplateUrl = htmlTemplateUrl;
+            this.Operations = operations;
         }
         
         /// <summary>
@@ -80,7 +80,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

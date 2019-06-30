@@ -33,12 +33,12 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ViewerResponse" /> class.
         /// </summary>
-        /// <param name="HtmlEmbed">HtmlEmbed.</param>
-        /// <param name="Successful">Successful.</param>
-        public ViewerResponse(string HtmlEmbed = default(string), bool? Successful = default(bool?))
+        /// <param name="htmlEmbed">htmlEmbed.</param>
+        /// <param name="successful">successful.</param>
+        public ViewerResponse(string htmlEmbed = default(string), bool? successful = default(bool?))
         {
-            this.HtmlEmbed = HtmlEmbed;
-            this.Successful = Successful;
+            this.HtmlEmbed = htmlEmbed;
+            this.Successful = successful;
         }
         
         /// <summary>
@@ -71,7 +71,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

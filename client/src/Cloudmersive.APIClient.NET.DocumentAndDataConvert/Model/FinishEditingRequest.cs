@@ -33,10 +33,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FinishEditingRequest" /> class.
         /// </summary>
-        /// <param name="InputFileUrl">URL of a document being edited to get the contents of..</param>
-        public FinishEditingRequest(string InputFileUrl = default(string))
+        /// <param name="inputFileUrl">URL of a document being edited to get the contents of..</param>
+        public FinishEditingRequest(string inputFileUrl = default(string))
         {
-            this.InputFileUrl = InputFileUrl;
+            this.InputFileUrl = inputFileUrl;
         }
         
         /// <summary>
@@ -63,7 +63,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

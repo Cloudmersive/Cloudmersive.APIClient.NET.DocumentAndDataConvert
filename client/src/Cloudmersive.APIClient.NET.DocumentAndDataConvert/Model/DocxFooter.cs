@@ -33,14 +33,14 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DocxFooter" /> class.
         /// </summary>
-        /// <param name="Path">The Path of the location of this object; leave blank for new tables.</param>
-        /// <param name="Paragraphs">Paragraphs in this footer.</param>
-        /// <param name="SectionsWithFooter">Sections that the footer is applied to.</param>
-        public DocxFooter(string Path = default(string), List<DocxParagraph> Paragraphs = default(List<DocxParagraph>), List<DocxSection> SectionsWithFooter = default(List<DocxSection>))
+        /// <param name="path">The Path of the location of this object; leave blank for new tables.</param>
+        /// <param name="paragraphs">Paragraphs in this footer.</param>
+        /// <param name="sectionsWithFooter">Sections that the footer is applied to.</param>
+        public DocxFooter(string path = default(string), List<DocxParagraph> paragraphs = default(List<DocxParagraph>), List<DocxSection> sectionsWithFooter = default(List<DocxSection>))
         {
-            this.Path = Path;
-            this.Paragraphs = Paragraphs;
-            this.SectionsWithFooter = SectionsWithFooter;
+            this.Path = path;
+            this.Paragraphs = paragraphs;
+            this.SectionsWithFooter = sectionsWithFooter;
         }
         
         /// <summary>
@@ -83,7 +83,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

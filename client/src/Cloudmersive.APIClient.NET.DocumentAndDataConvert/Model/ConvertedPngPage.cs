@@ -33,12 +33,12 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConvertedPngPage" /> class.
         /// </summary>
-        /// <param name="PageNumber">Page number of the converted page, starting with 1.</param>
-        /// <param name="URL">URL to the PNG file of this page; file is stored in an in-memory cache and will be deleted.</param>
-        public ConvertedPngPage(int? PageNumber = default(int?), string URL = default(string))
+        /// <param name="pageNumber">Page number of the converted page, starting with 1.</param>
+        /// <param name="uRL">URL to the PNG file of this page; file is stored in an in-memory cache and will be deleted.</param>
+        public ConvertedPngPage(int? pageNumber = default(int?), string uRL = default(string))
         {
-            this.PageNumber = PageNumber;
-            this.URL = URL;
+            this.PageNumber = pageNumber;
+            this.URL = uRL;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

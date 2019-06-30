@@ -33,18 +33,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="XlsxSpreadsheetCell" /> class.
         /// </summary>
-        /// <param name="Path">The Path of the location of this object; leave blank for new rows.</param>
-        /// <param name="TextValue">Text value of the cell.</param>
-        /// <param name="CellIdentifier">Cell reference of the cell, e.g. A1, Z22, etc..</param>
-        /// <param name="StyleIndex">Identifier for the style to apply to this style.</param>
-        /// <param name="Formula">Formula.</param>
-        public XlsxSpreadsheetCell(string Path = default(string), string TextValue = default(string), string CellIdentifier = default(string), int? StyleIndex = default(int?), string Formula = default(string))
+        /// <param name="path">The Path of the location of this object; leave blank for new rows.</param>
+        /// <param name="textValue">Text value of the cell.</param>
+        /// <param name="cellIdentifier">Cell reference of the cell, e.g. A1, Z22, etc..</param>
+        /// <param name="styleIndex">Identifier for the style to apply to this style.</param>
+        /// <param name="formula">formula.</param>
+        public XlsxSpreadsheetCell(string path = default(string), string textValue = default(string), string cellIdentifier = default(string), int? styleIndex = default(int?), string formula = default(string))
         {
-            this.Path = Path;
-            this.TextValue = TextValue;
-            this.CellIdentifier = CellIdentifier;
-            this.StyleIndex = StyleIndex;
-            this.Formula = Formula;
+            this.Path = path;
+            this.TextValue = textValue;
+            this.CellIdentifier = cellIdentifier;
+            this.StyleIndex = styleIndex;
+            this.Formula = formula;
         }
         
         /// <summary>
@@ -102,7 +102,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -33,12 +33,12 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DocxSection" /> class.
         /// </summary>
-        /// <param name="StartingPageNumbers">Page numbers that the section starts at, typically just one.</param>
-        /// <param name="Path">The Path of the location of this object; leave blank for new tables.</param>
-        public DocxSection(List<int?> StartingPageNumbers = default(List<int?>), string Path = default(string))
+        /// <param name="startingPageNumbers">Page numbers that the section starts at, typically just one.</param>
+        /// <param name="path">The Path of the location of this object; leave blank for new tables.</param>
+        public DocxSection(List<int?> startingPageNumbers = default(List<int?>), string path = default(string))
         {
-            this.StartingPageNumbers = StartingPageNumbers;
-            this.Path = Path;
+            this.StartingPageNumbers = startingPageNumbers;
+            this.Path = path;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

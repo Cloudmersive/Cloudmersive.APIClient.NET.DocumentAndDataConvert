@@ -33,10 +33,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="HtmlToOfficeRequest" /> class.
         /// </summary>
-        /// <param name="Html">Html.</param>
-        public HtmlToOfficeRequest(string Html = default(string))
+        /// <param name="html">html.</param>
+        public HtmlToOfficeRequest(string html = default(string))
         {
-            this.Html = Html;
+            this.Html = html;
         }
         
         /// <summary>
@@ -62,7 +62,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

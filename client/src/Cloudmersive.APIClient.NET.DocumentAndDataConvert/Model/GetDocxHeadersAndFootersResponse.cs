@@ -33,14 +33,14 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GetDocxHeadersAndFootersResponse" /> class.
         /// </summary>
-        /// <param name="Successful">True if successful, false otherwise.</param>
-        /// <param name="Headers">Headers.</param>
-        /// <param name="Footers">Footers.</param>
-        public GetDocxHeadersAndFootersResponse(bool? Successful = default(bool?), List<DocxHeader> Headers = default(List<DocxHeader>), List<DocxFooter> Footers = default(List<DocxFooter>))
+        /// <param name="successful">True if successful, false otherwise.</param>
+        /// <param name="headers">headers.</param>
+        /// <param name="footers">footers.</param>
+        public GetDocxHeadersAndFootersResponse(bool? successful = default(bool?), List<DocxHeader> headers = default(List<DocxHeader>), List<DocxFooter> footers = default(List<DocxFooter>))
         {
-            this.Successful = Successful;
-            this.Headers = Headers;
-            this.Footers = Footers;
+            this.Successful = successful;
+            this.Headers = headers;
+            this.Footers = footers;
         }
         
         /// <summary>
@@ -81,7 +81,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

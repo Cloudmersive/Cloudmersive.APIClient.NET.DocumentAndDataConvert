@@ -33,14 +33,14 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DocxTableRow" /> class.
         /// </summary>
-        /// <param name="RowIndex">Index of the row, 0-based.</param>
-        /// <param name="Path">The Path of the location of this object; leave blank for new tables.</param>
-        /// <param name="RowCells">Cells in the row; this is where the contents of the row is stored.</param>
-        public DocxTableRow(int? RowIndex = default(int?), string Path = default(string), List<DocxTableCell> RowCells = default(List<DocxTableCell>))
+        /// <param name="rowIndex">Index of the row, 0-based.</param>
+        /// <param name="path">The Path of the location of this object; leave blank for new tables.</param>
+        /// <param name="rowCells">Cells in the row; this is where the contents of the row is stored.</param>
+        public DocxTableRow(int? rowIndex = default(int?), string path = default(string), List<DocxTableCell> rowCells = default(List<DocxTableCell>))
         {
-            this.RowIndex = RowIndex;
-            this.Path = Path;
-            this.RowCells = RowCells;
+            this.RowIndex = rowIndex;
+            this.Path = path;
+            this.RowCells = rowCells;
         }
         
         /// <summary>
@@ -83,7 +83,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

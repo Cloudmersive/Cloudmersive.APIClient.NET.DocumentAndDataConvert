@@ -33,22 +33,22 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DocxStyle" /> class.
         /// </summary>
-        /// <param name="StyleID">ID of the style.</param>
-        /// <param name="Path">The Path of the location of this object; leave blank for new tables.</param>
-        /// <param name="Bold">Style applies bold formatting.</param>
-        /// <param name="Italic">Style applies italic formatting.</param>
-        /// <param name="Underline">Style applies underline formatting.</param>
-        /// <param name="FontSize">Font size.</param>
-        /// <param name="FontFamily">Font family.</param>
-        public DocxStyle(string StyleID = default(string), string Path = default(string), bool? Bold = default(bool?), bool? Italic = default(bool?), bool? Underline = default(bool?), string FontSize = default(string), string FontFamily = default(string))
+        /// <param name="styleID">ID of the style.</param>
+        /// <param name="path">The Path of the location of this object; leave blank for new tables.</param>
+        /// <param name="bold">Style applies bold formatting.</param>
+        /// <param name="italic">Style applies italic formatting.</param>
+        /// <param name="underline">Style applies underline formatting.</param>
+        /// <param name="fontSize">Font size.</param>
+        /// <param name="fontFamily">Font family.</param>
+        public DocxStyle(string styleID = default(string), string path = default(string), bool? bold = default(bool?), bool? italic = default(bool?), bool? underline = default(bool?), string fontSize = default(string), string fontFamily = default(string))
         {
-            this.StyleID = StyleID;
-            this.Path = Path;
-            this.Bold = Bold;
-            this.Italic = Italic;
-            this.Underline = Underline;
-            this.FontSize = FontSize;
-            this.FontFamily = FontFamily;
+            this.StyleID = styleID;
+            this.Path = path;
+            this.Bold = bold;
+            this.Italic = italic;
+            this.Underline = underline;
+            this.FontSize = fontSize;
+            this.FontFamily = fontFamily;
         }
         
         /// <summary>
@@ -123,7 +123,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -33,42 +33,42 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GetImageInfoResult" /> class.
         /// </summary>
-        /// <param name="Successful">Successful.</param>
-        /// <param name="ColorSpace">Color space of the image.</param>
-        /// <param name="ColorType">Color type of the image.</param>
-        /// <param name="Width">Width in pixels of the image.</param>
-        /// <param name="Height">Height in pixels of the image.</param>
-        /// <param name="CompressionLevel">Compression level value from 0 (lowest quality) to 100 (highest quality).</param>
-        /// <param name="ImageHashSignature">SHA256 hash signature of the image.</param>
-        /// <param name="HasTransparency">True if the image contains transparency, otherwise false.</param>
-        /// <param name="MimeType">MIME type of the image format.</param>
-        /// <param name="ImageFormat">Image format.</param>
-        /// <param name="DPIUnit">Units of the DPI measurement; can be either in Inches or Centimeters.</param>
-        /// <param name="DPI">DPI (pixels per unit, e.g. pixels per inch) of the image.</param>
-        /// <param name="ColorCount">Unique colors in the image.</param>
-        /// <param name="BitDepth">Bit depth of the image.</param>
-        /// <param name="Comment">Comment string in the image.</param>
-        /// <param name="ExifProfileName">Name of the EXIF profile used.</param>
-        /// <param name="ExifValues">EXIF tags and values embedded in the image.</param>
-        public GetImageInfoResult(bool? Successful = default(bool?), string ColorSpace = default(string), string ColorType = default(string), int? Width = default(int?), int? Height = default(int?), int? CompressionLevel = default(int?), string ImageHashSignature = default(string), bool? HasTransparency = default(bool?), string MimeType = default(string), string ImageFormat = default(string), string DPIUnit = default(string), double? DPI = default(double?), int? ColorCount = default(int?), int? BitDepth = default(int?), string Comment = default(string), string ExifProfileName = default(string), List<ExifValue> ExifValues = default(List<ExifValue>))
+        /// <param name="successful">successful.</param>
+        /// <param name="colorSpace">Color space of the image.</param>
+        /// <param name="colorType">Color type of the image.</param>
+        /// <param name="width">Width in pixels of the image.</param>
+        /// <param name="height">Height in pixels of the image.</param>
+        /// <param name="compressionLevel">Compression level value from 0 (lowest quality) to 100 (highest quality).</param>
+        /// <param name="imageHashSignature">SHA256 hash signature of the image.</param>
+        /// <param name="hasTransparency">True if the image contains transparency, otherwise false.</param>
+        /// <param name="mimeType">MIME type of the image format.</param>
+        /// <param name="imageFormat">Image format.</param>
+        /// <param name="dPIUnit">Units of the DPI measurement; can be either in Inches or Centimeters.</param>
+        /// <param name="dPI">DPI (pixels per unit, e.g. pixels per inch) of the image.</param>
+        /// <param name="colorCount">Unique colors in the image.</param>
+        /// <param name="bitDepth">Bit depth of the image.</param>
+        /// <param name="comment">Comment string in the image.</param>
+        /// <param name="exifProfileName">Name of the EXIF profile used.</param>
+        /// <param name="exifValues">EXIF tags and values embedded in the image.</param>
+        public GetImageInfoResult(bool? successful = default(bool?), string colorSpace = default(string), string colorType = default(string), int? width = default(int?), int? height = default(int?), int? compressionLevel = default(int?), string imageHashSignature = default(string), bool? hasTransparency = default(bool?), string mimeType = default(string), string imageFormat = default(string), string dPIUnit = default(string), double? dPI = default(double?), int? colorCount = default(int?), int? bitDepth = default(int?), string comment = default(string), string exifProfileName = default(string), List<ExifValue> exifValues = default(List<ExifValue>))
         {
-            this.Successful = Successful;
-            this.ColorSpace = ColorSpace;
-            this.ColorType = ColorType;
-            this.Width = Width;
-            this.Height = Height;
-            this.CompressionLevel = CompressionLevel;
-            this.ImageHashSignature = ImageHashSignature;
-            this.HasTransparency = HasTransparency;
-            this.MimeType = MimeType;
-            this.ImageFormat = ImageFormat;
-            this.DPIUnit = DPIUnit;
-            this.DPI = DPI;
-            this.ColorCount = ColorCount;
-            this.BitDepth = BitDepth;
-            this.Comment = Comment;
-            this.ExifProfileName = ExifProfileName;
-            this.ExifValues = ExifValues;
+            this.Successful = successful;
+            this.ColorSpace = colorSpace;
+            this.ColorType = colorType;
+            this.Width = width;
+            this.Height = height;
+            this.CompressionLevel = compressionLevel;
+            this.ImageHashSignature = imageHashSignature;
+            this.HasTransparency = hasTransparency;
+            this.MimeType = mimeType;
+            this.ImageFormat = imageFormat;
+            this.DPIUnit = dPIUnit;
+            this.DPI = dPI;
+            this.ColorCount = colorCount;
+            this.BitDepth = bitDepth;
+            this.Comment = comment;
+            this.ExifProfileName = exifProfileName;
+            this.ExifValues = exifValues;
         }
         
         /// <summary>
@@ -222,7 +222,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

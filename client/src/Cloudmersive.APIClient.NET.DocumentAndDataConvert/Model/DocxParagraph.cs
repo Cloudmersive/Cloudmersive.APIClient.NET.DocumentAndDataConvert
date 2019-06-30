@@ -33,16 +33,16 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DocxParagraph" /> class.
         /// </summary>
-        /// <param name="ParagraphIndex">The index of the paragraph; 0-based.</param>
-        /// <param name="Path">The Path of the location of this object; leave blank for new tables.</param>
-        /// <param name="ContentRuns">The content runs in the paragraph - this is where text is stored; similar to a span in HTML.</param>
-        /// <param name="StyleID">Style ID of the style applied to the paragraph; null if no style is applied.</param>
-        public DocxParagraph(int? ParagraphIndex = default(int?), string Path = default(string), List<DocxRun> ContentRuns = default(List<DocxRun>), string StyleID = default(string))
+        /// <param name="paragraphIndex">The index of the paragraph; 0-based.</param>
+        /// <param name="path">The Path of the location of this object; leave blank for new tables.</param>
+        /// <param name="contentRuns">The content runs in the paragraph - this is where text is stored; similar to a span in HTML.</param>
+        /// <param name="styleID">Style ID of the style applied to the paragraph; null if no style is applied.</param>
+        public DocxParagraph(int? paragraphIndex = default(int?), string path = default(string), List<DocxRun> contentRuns = default(List<DocxRun>), string styleID = default(string))
         {
-            this.ParagraphIndex = ParagraphIndex;
-            this.Path = Path;
-            this.ContentRuns = ContentRuns;
-            this.StyleID = StyleID;
+            this.ParagraphIndex = paragraphIndex;
+            this.Path = path;
+            this.ContentRuns = contentRuns;
+            this.StyleID = styleID;
         }
         
         /// <summary>
@@ -93,7 +93,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

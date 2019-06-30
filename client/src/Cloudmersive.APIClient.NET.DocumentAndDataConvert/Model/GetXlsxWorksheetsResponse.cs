@@ -33,12 +33,12 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GetXlsxWorksheetsResponse" /> class.
         /// </summary>
-        /// <param name="Successful">True if successful, false otherwise.</param>
-        /// <param name="Worksheets">Styles in the DOCX document.</param>
-        public GetXlsxWorksheetsResponse(bool? Successful = default(bool?), List<XlsxWorksheet> Worksheets = default(List<XlsxWorksheet>))
+        /// <param name="successful">True if successful, false otherwise.</param>
+        /// <param name="worksheets">Styles in the DOCX document.</param>
+        public GetXlsxWorksheetsResponse(bool? successful = default(bool?), List<XlsxWorksheet> worksheets = default(List<XlsxWorksheet>))
         {
-            this.Successful = Successful;
-            this.Worksheets = Worksheets;
+            this.Successful = successful;
+            this.Worksheets = worksheets;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

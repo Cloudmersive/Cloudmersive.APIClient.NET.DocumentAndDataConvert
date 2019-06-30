@@ -33,86 +33,86 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DocxTable" /> class.
         /// </summary>
-        /// <param name="TableID">The ID of the table; leave blank for new tables.</param>
-        /// <param name="Path">The Path of the location of this object; leave blank for new tables.</param>
-        /// <param name="Width">The Width of the table, or 0 if not specified.</param>
-        /// <param name="WidthType">The Width configuration type of the table.</param>
-        /// <param name="TableRows">Rows in the table; this is where the contents is located.</param>
-        /// <param name="TopBorderType">Type for the top border - can be a Single, DashDotStroked, Dashed, DashSmallGap, DotDash, DotDotDash, Dotted, Double, DoubleWave, Inset, Nil, None, Outset, Thick, ThickThinLargeGap, ThickThinMediumGap, ThickThinSmallGap, ThinThickLargeGap, ThinThickMediumGap, ThinThickSmallGap, ThinThickThinLargeGap, ThinThickThinMediumGap, ThinThickThinSmallGap, ThreeDEmboss, ThreeDEngrave, Triple, Wave.</param>
-        /// <param name="TopBorderSize">Width of the border in points (1/72nd of an inch).</param>
-        /// <param name="TopBorderSpace">Spacing around the border in points (1/72nd of an inch).</param>
-        /// <param name="TopBorderColor">HTML-style color hex value (do not include a #).</param>
-        /// <param name="BottomBorderType">Type for the bottom border - can be a Single, DashDotStroked, Dashed, DashSmallGap, DotDash, DotDotDash, Dotted, Double, DoubleWave, Inset, Nil, None, Outset, Thick, ThickThinLargeGap, ThickThinMediumGap, ThickThinSmallGap, ThinThickLargeGap, ThinThickMediumGap, ThinThickSmallGap, ThinThickThinLargeGap, ThinThickThinMediumGap, ThinThickThinSmallGap, ThreeDEmboss, ThreeDEngrave, Triple, Wave.</param>
-        /// <param name="BottomBorderSize">Width of the border in points (1/72nd of an inch).</param>
-        /// <param name="BottomBorderSpace">Spacing around the border in points (1/72nd of an inch).</param>
-        /// <param name="BottomBorderColor">HTML-style color hex value (do not include a #).</param>
-        /// <param name="LeftBorderType">Type for the left border - can be a Single, DashDotStroked, Dashed, DashSmallGap, DotDash, DotDotDash, Dotted, Double, DoubleWave, Inset, Nil, None, Outset, Thick, ThickThinLargeGap, ThickThinMediumGap, ThickThinSmallGap, ThinThickLargeGap, ThinThickMediumGap, ThinThickSmallGap, ThinThickThinLargeGap, ThinThickThinMediumGap, ThinThickThinSmallGap, ThreeDEmboss, ThreeDEngrave, Triple, Wave.</param>
-        /// <param name="LeftBorderSize">Width of the border in points (1/72nd of an inch).</param>
-        /// <param name="LeftBorderSpace">Spacing around the border in points (1/72nd of an inch).</param>
-        /// <param name="LeftBorderColor">HTML-style color hex value (do not include a #).</param>
-        /// <param name="RightBorderType">Type for the right border - can be a Single, DashDotStroked, Dashed, DashSmallGap, DotDash, DotDotDash, Dotted, Double, DoubleWave, Inset, Nil, None, Outset, Thick, ThickThinLargeGap, ThickThinMediumGap, ThickThinSmallGap, ThinThickLargeGap, ThinThickMediumGap, ThinThickSmallGap, ThinThickThinLargeGap, ThinThickThinMediumGap, ThinThickThinSmallGap, ThreeDEmboss, ThreeDEngrave, Triple, Wave.</param>
-        /// <param name="RightBorderSize">Width of the border in points (1/72nd of an inch).</param>
-        /// <param name="RightBorderSpace">Spacing around the border in points (1/72nd of an inch).</param>
-        /// <param name="RightBorderColor">HTML-style color hex value (do not include a #).</param>
-        /// <param name="CellHorizontalBorderType">Type for the cell horizontal border - can be a Single, DashDotStroked, Dashed, DashSmallGap, DotDash, DotDotDash, Dotted, Double, DoubleWave, Inset, Nil, None, Outset, Thick, ThickThinLargeGap, ThickThinMediumGap, ThickThinSmallGap, ThinThickLargeGap, ThinThickMediumGap, ThinThickSmallGap, ThinThickThinLargeGap, ThinThickThinMediumGap, ThinThickThinSmallGap, ThreeDEmboss, ThreeDEngrave, Triple, Wave.</param>
-        /// <param name="CellHorizontalBorderSize">Width of the border in points (1/72nd of an inch).</param>
-        /// <param name="CellHorizontalBorderSpace">Spacing around the border in points (1/72nd of an inch).</param>
-        /// <param name="CellHorizontalBorderColor">HTML-style color hex value (do not include a #).</param>
-        /// <param name="CellVerticalBorderType">Type for the cell vertical border - can be a Single, DashDotStroked, Dashed, DashSmallGap, DotDash, DotDotDash, Dotted, Double, DoubleWave, Inset, Nil, None, Outset, Thick, ThickThinLargeGap, ThickThinMediumGap, ThickThinSmallGap, ThinThickLargeGap, ThinThickMediumGap, ThinThickSmallGap, ThinThickThinLargeGap, ThinThickThinMediumGap, ThinThickThinSmallGap, ThreeDEmboss, ThreeDEngrave, Triple, Wave.</param>
-        /// <param name="CellVerticalBorderSize">Width of the border in points (1/72nd of an inch).</param>
-        /// <param name="CellVerticalBorderSpace">Spacing around the border in points (1/72nd of an inch).</param>
-        /// <param name="CellVerticalBorderColor">HTML-style color hex value (do not include a #).</param>
-        /// <param name="StartBorderType">Type for the start border - can be a Single, DashDotStroked, Dashed, DashSmallGap, DotDash, DotDotDash, Dotted, Double, DoubleWave, Inset, Nil, None, Outset, Thick, ThickThinLargeGap, ThickThinMediumGap, ThickThinSmallGap, ThinThickLargeGap, ThinThickMediumGap, ThinThickSmallGap, ThinThickThinLargeGap, ThinThickThinMediumGap, ThinThickThinSmallGap, ThreeDEmboss, ThreeDEngrave, Triple, Wave.</param>
-        /// <param name="StartBorderSize">Width of the border in points (1/72nd of an inch).</param>
-        /// <param name="StartBorderSpace">Spacing around the border in points (1/72nd of an inch).</param>
-        /// <param name="StartBorderColor">HTML-style color hex value (do not include a #).</param>
-        /// <param name="EndBorderType">Type for the end border - can be a Single, DashDotStroked, Dashed, DashSmallGap, DotDash, DotDotDash, Dotted, Double, DoubleWave, Inset, Nil, None, Outset, Thick, ThickThinLargeGap, ThickThinMediumGap, ThickThinSmallGap, ThinThickLargeGap, ThinThickMediumGap, ThinThickSmallGap, ThinThickThinLargeGap, ThinThickThinMediumGap, ThinThickThinSmallGap, ThreeDEmboss, ThreeDEngrave, Triple, Wave.</param>
-        /// <param name="EndBorderSize">Width of the border in points (1/72nd of an inch).</param>
-        /// <param name="EndBorderSpace">Spacing around the border in points (1/72nd of an inch).</param>
-        /// <param name="EndBorderColor">HTML-style color hex value (do not include a #).</param>
-        /// <param name="TableIndentationMode">Table indentation type.</param>
-        /// <param name="TableIndentationWidth">Table indentation width.</param>
-        public DocxTable(string TableID = default(string), string Path = default(string), string Width = default(string), string WidthType = default(string), List<DocxTableRow> TableRows = default(List<DocxTableRow>), string TopBorderType = default(string), int? TopBorderSize = default(int?), int? TopBorderSpace = default(int?), string TopBorderColor = default(string), string BottomBorderType = default(string), int? BottomBorderSize = default(int?), int? BottomBorderSpace = default(int?), string BottomBorderColor = default(string), string LeftBorderType = default(string), int? LeftBorderSize = default(int?), int? LeftBorderSpace = default(int?), string LeftBorderColor = default(string), string RightBorderType = default(string), int? RightBorderSize = default(int?), int? RightBorderSpace = default(int?), string RightBorderColor = default(string), string CellHorizontalBorderType = default(string), int? CellHorizontalBorderSize = default(int?), int? CellHorizontalBorderSpace = default(int?), string CellHorizontalBorderColor = default(string), string CellVerticalBorderType = default(string), int? CellVerticalBorderSize = default(int?), int? CellVerticalBorderSpace = default(int?), string CellVerticalBorderColor = default(string), string StartBorderType = default(string), int? StartBorderSize = default(int?), int? StartBorderSpace = default(int?), string StartBorderColor = default(string), string EndBorderType = default(string), int? EndBorderSize = default(int?), int? EndBorderSpace = default(int?), string EndBorderColor = default(string), string TableIndentationMode = default(string), int? TableIndentationWidth = default(int?))
+        /// <param name="tableID">The ID of the table; leave blank for new tables.</param>
+        /// <param name="path">The Path of the location of this object; leave blank for new tables.</param>
+        /// <param name="width">The Width of the table, or 0 if not specified.</param>
+        /// <param name="widthType">The Width configuration type of the table.</param>
+        /// <param name="tableRows">Rows in the table; this is where the contents is located.</param>
+        /// <param name="topBorderType">Type for the top border - can be a Single, DashDotStroked, Dashed, DashSmallGap, DotDash, DotDotDash, Dotted, Double, DoubleWave, Inset, Nil, None, Outset, Thick, ThickThinLargeGap, ThickThinMediumGap, ThickThinSmallGap, ThinThickLargeGap, ThinThickMediumGap, ThinThickSmallGap, ThinThickThinLargeGap, ThinThickThinMediumGap, ThinThickThinSmallGap, ThreeDEmboss, ThreeDEngrave, Triple, Wave.</param>
+        /// <param name="topBorderSize">Width of the border in points (1/72nd of an inch).</param>
+        /// <param name="topBorderSpace">Spacing around the border in points (1/72nd of an inch).</param>
+        /// <param name="topBorderColor">HTML-style color hex value (do not include a #).</param>
+        /// <param name="bottomBorderType">Type for the bottom border - can be a Single, DashDotStroked, Dashed, DashSmallGap, DotDash, DotDotDash, Dotted, Double, DoubleWave, Inset, Nil, None, Outset, Thick, ThickThinLargeGap, ThickThinMediumGap, ThickThinSmallGap, ThinThickLargeGap, ThinThickMediumGap, ThinThickSmallGap, ThinThickThinLargeGap, ThinThickThinMediumGap, ThinThickThinSmallGap, ThreeDEmboss, ThreeDEngrave, Triple, Wave.</param>
+        /// <param name="bottomBorderSize">Width of the border in points (1/72nd of an inch).</param>
+        /// <param name="bottomBorderSpace">Spacing around the border in points (1/72nd of an inch).</param>
+        /// <param name="bottomBorderColor">HTML-style color hex value (do not include a #).</param>
+        /// <param name="leftBorderType">Type for the left border - can be a Single, DashDotStroked, Dashed, DashSmallGap, DotDash, DotDotDash, Dotted, Double, DoubleWave, Inset, Nil, None, Outset, Thick, ThickThinLargeGap, ThickThinMediumGap, ThickThinSmallGap, ThinThickLargeGap, ThinThickMediumGap, ThinThickSmallGap, ThinThickThinLargeGap, ThinThickThinMediumGap, ThinThickThinSmallGap, ThreeDEmboss, ThreeDEngrave, Triple, Wave.</param>
+        /// <param name="leftBorderSize">Width of the border in points (1/72nd of an inch).</param>
+        /// <param name="leftBorderSpace">Spacing around the border in points (1/72nd of an inch).</param>
+        /// <param name="leftBorderColor">HTML-style color hex value (do not include a #).</param>
+        /// <param name="rightBorderType">Type for the right border - can be a Single, DashDotStroked, Dashed, DashSmallGap, DotDash, DotDotDash, Dotted, Double, DoubleWave, Inset, Nil, None, Outset, Thick, ThickThinLargeGap, ThickThinMediumGap, ThickThinSmallGap, ThinThickLargeGap, ThinThickMediumGap, ThinThickSmallGap, ThinThickThinLargeGap, ThinThickThinMediumGap, ThinThickThinSmallGap, ThreeDEmboss, ThreeDEngrave, Triple, Wave.</param>
+        /// <param name="rightBorderSize">Width of the border in points (1/72nd of an inch).</param>
+        /// <param name="rightBorderSpace">Spacing around the border in points (1/72nd of an inch).</param>
+        /// <param name="rightBorderColor">HTML-style color hex value (do not include a #).</param>
+        /// <param name="cellHorizontalBorderType">Type for the cell horizontal border - can be a Single, DashDotStroked, Dashed, DashSmallGap, DotDash, DotDotDash, Dotted, Double, DoubleWave, Inset, Nil, None, Outset, Thick, ThickThinLargeGap, ThickThinMediumGap, ThickThinSmallGap, ThinThickLargeGap, ThinThickMediumGap, ThinThickSmallGap, ThinThickThinLargeGap, ThinThickThinMediumGap, ThinThickThinSmallGap, ThreeDEmboss, ThreeDEngrave, Triple, Wave.</param>
+        /// <param name="cellHorizontalBorderSize">Width of the border in points (1/72nd of an inch).</param>
+        /// <param name="cellHorizontalBorderSpace">Spacing around the border in points (1/72nd of an inch).</param>
+        /// <param name="cellHorizontalBorderColor">HTML-style color hex value (do not include a #).</param>
+        /// <param name="cellVerticalBorderType">Type for the cell vertical border - can be a Single, DashDotStroked, Dashed, DashSmallGap, DotDash, DotDotDash, Dotted, Double, DoubleWave, Inset, Nil, None, Outset, Thick, ThickThinLargeGap, ThickThinMediumGap, ThickThinSmallGap, ThinThickLargeGap, ThinThickMediumGap, ThinThickSmallGap, ThinThickThinLargeGap, ThinThickThinMediumGap, ThinThickThinSmallGap, ThreeDEmboss, ThreeDEngrave, Triple, Wave.</param>
+        /// <param name="cellVerticalBorderSize">Width of the border in points (1/72nd of an inch).</param>
+        /// <param name="cellVerticalBorderSpace">Spacing around the border in points (1/72nd of an inch).</param>
+        /// <param name="cellVerticalBorderColor">HTML-style color hex value (do not include a #).</param>
+        /// <param name="startBorderType">Type for the start border - can be a Single, DashDotStroked, Dashed, DashSmallGap, DotDash, DotDotDash, Dotted, Double, DoubleWave, Inset, Nil, None, Outset, Thick, ThickThinLargeGap, ThickThinMediumGap, ThickThinSmallGap, ThinThickLargeGap, ThinThickMediumGap, ThinThickSmallGap, ThinThickThinLargeGap, ThinThickThinMediumGap, ThinThickThinSmallGap, ThreeDEmboss, ThreeDEngrave, Triple, Wave.</param>
+        /// <param name="startBorderSize">Width of the border in points (1/72nd of an inch).</param>
+        /// <param name="startBorderSpace">Spacing around the border in points (1/72nd of an inch).</param>
+        /// <param name="startBorderColor">HTML-style color hex value (do not include a #).</param>
+        /// <param name="endBorderType">Type for the end border - can be a Single, DashDotStroked, Dashed, DashSmallGap, DotDash, DotDotDash, Dotted, Double, DoubleWave, Inset, Nil, None, Outset, Thick, ThickThinLargeGap, ThickThinMediumGap, ThickThinSmallGap, ThinThickLargeGap, ThinThickMediumGap, ThinThickSmallGap, ThinThickThinLargeGap, ThinThickThinMediumGap, ThinThickThinSmallGap, ThreeDEmboss, ThreeDEngrave, Triple, Wave.</param>
+        /// <param name="endBorderSize">Width of the border in points (1/72nd of an inch).</param>
+        /// <param name="endBorderSpace">Spacing around the border in points (1/72nd of an inch).</param>
+        /// <param name="endBorderColor">HTML-style color hex value (do not include a #).</param>
+        /// <param name="tableIndentationMode">Table indentation type.</param>
+        /// <param name="tableIndentationWidth">Table indentation width.</param>
+        public DocxTable(string tableID = default(string), string path = default(string), string width = default(string), string widthType = default(string), List<DocxTableRow> tableRows = default(List<DocxTableRow>), string topBorderType = default(string), int? topBorderSize = default(int?), int? topBorderSpace = default(int?), string topBorderColor = default(string), string bottomBorderType = default(string), int? bottomBorderSize = default(int?), int? bottomBorderSpace = default(int?), string bottomBorderColor = default(string), string leftBorderType = default(string), int? leftBorderSize = default(int?), int? leftBorderSpace = default(int?), string leftBorderColor = default(string), string rightBorderType = default(string), int? rightBorderSize = default(int?), int? rightBorderSpace = default(int?), string rightBorderColor = default(string), string cellHorizontalBorderType = default(string), int? cellHorizontalBorderSize = default(int?), int? cellHorizontalBorderSpace = default(int?), string cellHorizontalBorderColor = default(string), string cellVerticalBorderType = default(string), int? cellVerticalBorderSize = default(int?), int? cellVerticalBorderSpace = default(int?), string cellVerticalBorderColor = default(string), string startBorderType = default(string), int? startBorderSize = default(int?), int? startBorderSpace = default(int?), string startBorderColor = default(string), string endBorderType = default(string), int? endBorderSize = default(int?), int? endBorderSpace = default(int?), string endBorderColor = default(string), string tableIndentationMode = default(string), int? tableIndentationWidth = default(int?))
         {
-            this.TableID = TableID;
-            this.Path = Path;
-            this.Width = Width;
-            this.WidthType = WidthType;
-            this.TableRows = TableRows;
-            this.TopBorderType = TopBorderType;
-            this.TopBorderSize = TopBorderSize;
-            this.TopBorderSpace = TopBorderSpace;
-            this.TopBorderColor = TopBorderColor;
-            this.BottomBorderType = BottomBorderType;
-            this.BottomBorderSize = BottomBorderSize;
-            this.BottomBorderSpace = BottomBorderSpace;
-            this.BottomBorderColor = BottomBorderColor;
-            this.LeftBorderType = LeftBorderType;
-            this.LeftBorderSize = LeftBorderSize;
-            this.LeftBorderSpace = LeftBorderSpace;
-            this.LeftBorderColor = LeftBorderColor;
-            this.RightBorderType = RightBorderType;
-            this.RightBorderSize = RightBorderSize;
-            this.RightBorderSpace = RightBorderSpace;
-            this.RightBorderColor = RightBorderColor;
-            this.CellHorizontalBorderType = CellHorizontalBorderType;
-            this.CellHorizontalBorderSize = CellHorizontalBorderSize;
-            this.CellHorizontalBorderSpace = CellHorizontalBorderSpace;
-            this.CellHorizontalBorderColor = CellHorizontalBorderColor;
-            this.CellVerticalBorderType = CellVerticalBorderType;
-            this.CellVerticalBorderSize = CellVerticalBorderSize;
-            this.CellVerticalBorderSpace = CellVerticalBorderSpace;
-            this.CellVerticalBorderColor = CellVerticalBorderColor;
-            this.StartBorderType = StartBorderType;
-            this.StartBorderSize = StartBorderSize;
-            this.StartBorderSpace = StartBorderSpace;
-            this.StartBorderColor = StartBorderColor;
-            this.EndBorderType = EndBorderType;
-            this.EndBorderSize = EndBorderSize;
-            this.EndBorderSpace = EndBorderSpace;
-            this.EndBorderColor = EndBorderColor;
-            this.TableIndentationMode = TableIndentationMode;
-            this.TableIndentationWidth = TableIndentationWidth;
+            this.TableID = tableID;
+            this.Path = path;
+            this.Width = width;
+            this.WidthType = widthType;
+            this.TableRows = tableRows;
+            this.TopBorderType = topBorderType;
+            this.TopBorderSize = topBorderSize;
+            this.TopBorderSpace = topBorderSpace;
+            this.TopBorderColor = topBorderColor;
+            this.BottomBorderType = bottomBorderType;
+            this.BottomBorderSize = bottomBorderSize;
+            this.BottomBorderSpace = bottomBorderSpace;
+            this.BottomBorderColor = bottomBorderColor;
+            this.LeftBorderType = leftBorderType;
+            this.LeftBorderSize = leftBorderSize;
+            this.LeftBorderSpace = leftBorderSpace;
+            this.LeftBorderColor = leftBorderColor;
+            this.RightBorderType = rightBorderType;
+            this.RightBorderSize = rightBorderSize;
+            this.RightBorderSpace = rightBorderSpace;
+            this.RightBorderColor = rightBorderColor;
+            this.CellHorizontalBorderType = cellHorizontalBorderType;
+            this.CellHorizontalBorderSize = cellHorizontalBorderSize;
+            this.CellHorizontalBorderSpace = cellHorizontalBorderSpace;
+            this.CellHorizontalBorderColor = cellHorizontalBorderColor;
+            this.CellVerticalBorderType = cellVerticalBorderType;
+            this.CellVerticalBorderSize = cellVerticalBorderSize;
+            this.CellVerticalBorderSpace = cellVerticalBorderSpace;
+            this.CellVerticalBorderColor = cellVerticalBorderColor;
+            this.StartBorderType = startBorderType;
+            this.StartBorderSize = startBorderSize;
+            this.StartBorderSpace = startBorderSpace;
+            this.StartBorderColor = startBorderColor;
+            this.EndBorderType = endBorderType;
+            this.EndBorderSize = endBorderSize;
+            this.EndBorderSpace = endBorderSpace;
+            this.EndBorderColor = endBorderColor;
+            this.TableIndentationMode = tableIndentationMode;
+            this.TableIndentationWidth = tableIndentationWidth;
         }
         
         /// <summary>
@@ -443,7 +443,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

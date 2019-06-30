@@ -33,12 +33,12 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DocxRemoveObjectResponse" /> class.
         /// </summary>
-        /// <param name="Successful">True if successful, false otherwise.</param>
-        /// <param name="EditedDocumentURL">URL to the edited DOCX file; file is stored in an in-memory cache and will be deleted.  Call Finish-Editing to get the result document contents..</param>
-        public DocxRemoveObjectResponse(bool? Successful = default(bool?), string EditedDocumentURL = default(string))
+        /// <param name="successful">True if successful, false otherwise.</param>
+        /// <param name="editedDocumentURL">URL to the edited DOCX file; file is stored in an in-memory cache and will be deleted.  Call Finish-Editing to get the result document contents..</param>
+        public DocxRemoveObjectResponse(bool? successful = default(bool?), string editedDocumentURL = default(string))
         {
-            this.Successful = Successful;
-            this.EditedDocumentURL = EditedDocumentURL;
+            this.Successful = successful;
+            this.EditedDocumentURL = editedDocumentURL;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

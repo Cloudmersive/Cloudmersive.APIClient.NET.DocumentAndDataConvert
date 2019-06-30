@@ -33,16 +33,16 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScreenshotRequest" /> class.
         /// </summary>
-        /// <param name="Url">Url.</param>
-        /// <param name="ExtraLoadingWait">ExtraLoadingWait.</param>
-        /// <param name="ScreenshotWidth">ScreenshotWidth.</param>
-        /// <param name="ScreenshotHeight">ScreenshotHeight.</param>
-        public ScreenshotRequest(string Url = default(string), int? ExtraLoadingWait = default(int?), int? ScreenshotWidth = default(int?), int? ScreenshotHeight = default(int?))
+        /// <param name="url">url.</param>
+        /// <param name="extraLoadingWait">extraLoadingWait.</param>
+        /// <param name="screenshotWidth">screenshotWidth.</param>
+        /// <param name="screenshotHeight">screenshotHeight.</param>
+        public ScreenshotRequest(string url = default(string), int? extraLoadingWait = default(int?), int? screenshotWidth = default(int?), int? screenshotHeight = default(int?))
         {
-            this.Url = Url;
-            this.ExtraLoadingWait = ExtraLoadingWait;
-            this.ScreenshotWidth = ScreenshotWidth;
-            this.ScreenshotHeight = ScreenshotHeight;
+            this.Url = url;
+            this.ExtraLoadingWait = extraLoadingWait;
+            this.ScreenshotWidth = screenshotWidth;
+            this.ScreenshotHeight = screenshotHeight;
         }
         
         /// <summary>
@@ -89,7 +89,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -33,14 +33,14 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ExifValue" /> class.
         /// </summary>
-        /// <param name="Tag">Tag.</param>
-        /// <param name="DataType">DataType.</param>
-        /// <param name="DataValue">DataValue.</param>
-        public ExifValue(string Tag = default(string), string DataType = default(string), string DataValue = default(string))
+        /// <param name="tag">tag.</param>
+        /// <param name="dataType">dataType.</param>
+        /// <param name="dataValue">dataValue.</param>
+        public ExifValue(string tag = default(string), string dataType = default(string), string dataValue = default(string))
         {
-            this.Tag = Tag;
-            this.DataType = DataType;
-            this.DataValue = DataValue;
+            this.Tag = tag;
+            this.DataType = dataType;
+            this.DataValue = dataValue;
         }
         
         /// <summary>
@@ -80,7 +80,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

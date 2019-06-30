@@ -51,14 +51,14 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="HtmlTemplateOperation" /> class.
         /// </summary>
-        /// <param name="Action">Action.</param>
-        /// <param name="MatchAgsint">MatchAgsint.</param>
-        /// <param name="ReplaceWith">ReplaceWith.</param>
-        public HtmlTemplateOperation(ActionEnum? Action = default(ActionEnum?), string MatchAgsint = default(string), string ReplaceWith = default(string))
+        /// <param name="action">action.</param>
+        /// <param name="matchAgsint">matchAgsint.</param>
+        /// <param name="replaceWith">replaceWith.</param>
+        public HtmlTemplateOperation(ActionEnum? action = default(ActionEnum?), string matchAgsint = default(string), string replaceWith = default(string))
         {
-            this.Action = Action;
-            this.MatchAgsint = MatchAgsint;
-            this.ReplaceWith = ReplaceWith;
+            this.Action = action;
+            this.MatchAgsint = matchAgsint;
+            this.ReplaceWith = replaceWith;
         }
         
 
@@ -93,7 +93,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

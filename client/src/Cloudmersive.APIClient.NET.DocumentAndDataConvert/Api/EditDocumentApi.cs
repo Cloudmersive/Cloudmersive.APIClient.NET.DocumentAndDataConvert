@@ -1008,7 +1008,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns></returns>
         public EditDocumentApi(String basePath)
         {
-            this.Configuration = new Configuration { BasePath = basePath };
+            this.Configuration = new Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.Configuration { BasePath = basePath };
 
             ExceptionFactory = Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.Configuration.DefaultExceptionFactory;
         }
@@ -1019,10 +1019,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public EditDocumentApi(Configuration configuration = null)
+        public EditDocumentApi(Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = Configuration.Default;
+                this.Configuration = Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
@@ -1052,7 +1052,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public Configuration Configuration {get; set;}
+        public Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
@@ -1119,7 +1119,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/begin-editing";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -1128,26 +1128,26 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             String[] localVarHttpContentTypes = new String[] {
                 "multipart/form-data"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (inputFile != null) localVarFileParams.Add("inputFile", Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -1161,7 +1161,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
         /// <summary>
@@ -1192,7 +1192,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/begin-editing";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -1201,26 +1201,26 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             String[] localVarHttpContentTypes = new String[] {
                 "multipart/form-data"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (inputFile != null) localVarFileParams.Add("inputFile", Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -1234,7 +1234,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
         }
 
         /// <summary>
@@ -1264,7 +1264,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/docx/get-body";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -1277,19 +1277,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
             }
             else
             {
@@ -1297,13 +1297,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -1317,7 +1317,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<GetDocxBodyResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetDocxBodyResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxBodyResponse)));
+                (GetDocxBodyResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxBodyResponse)));
         }
 
         /// <summary>
@@ -1348,7 +1348,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/docx/get-body";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -1361,19 +1361,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
             }
             else
             {
@@ -1381,13 +1381,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -1401,7 +1401,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<GetDocxBodyResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetDocxBodyResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxBodyResponse)));
+                (GetDocxBodyResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxBodyResponse)));
         }
 
         /// <summary>
@@ -1431,7 +1431,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/docx/get-headers-and-footers";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -1444,19 +1444,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
             }
             else
             {
@@ -1464,13 +1464,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -1484,7 +1484,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<GetDocxHeadersAndFootersResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetDocxHeadersAndFootersResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxHeadersAndFootersResponse)));
+                (GetDocxHeadersAndFootersResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxHeadersAndFootersResponse)));
         }
 
         /// <summary>
@@ -1515,7 +1515,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/docx/get-headers-and-footers";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -1528,19 +1528,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
             }
             else
             {
@@ -1548,13 +1548,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -1568,7 +1568,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<GetDocxHeadersAndFootersResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetDocxHeadersAndFootersResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxHeadersAndFootersResponse)));
+                (GetDocxHeadersAndFootersResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxHeadersAndFootersResponse)));
         }
 
         /// <summary>
@@ -1598,7 +1598,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/docx/get-images";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -1611,19 +1611,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
             }
             else
             {
@@ -1631,13 +1631,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -1651,7 +1651,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<GetDocxImagesResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetDocxImagesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxImagesResponse)));
+                (GetDocxImagesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxImagesResponse)));
         }
 
         /// <summary>
@@ -1682,7 +1682,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/docx/get-images";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -1695,19 +1695,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
             }
             else
             {
@@ -1715,13 +1715,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -1735,7 +1735,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<GetDocxImagesResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetDocxImagesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxImagesResponse)));
+                (GetDocxImagesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxImagesResponse)));
         }
 
         /// <summary>
@@ -1765,7 +1765,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/docx/get-sections";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -1778,19 +1778,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
             }
             else
             {
@@ -1798,13 +1798,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -1818,7 +1818,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<GetDocxSectionsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetDocxSectionsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxSectionsResponse)));
+                (GetDocxSectionsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxSectionsResponse)));
         }
 
         /// <summary>
@@ -1849,7 +1849,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/docx/get-sections";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -1862,19 +1862,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
             }
             else
             {
@@ -1882,13 +1882,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -1902,7 +1902,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<GetDocxSectionsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetDocxSectionsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxSectionsResponse)));
+                (GetDocxSectionsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxSectionsResponse)));
         }
 
         /// <summary>
@@ -1932,7 +1932,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/docx/get-styles";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -1945,19 +1945,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
             }
             else
             {
@@ -1965,13 +1965,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -1985,7 +1985,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<GetDocxStylesResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetDocxStylesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxStylesResponse)));
+                (GetDocxStylesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxStylesResponse)));
         }
 
         /// <summary>
@@ -2016,7 +2016,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/docx/get-styles";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -2029,19 +2029,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
             }
             else
             {
@@ -2049,13 +2049,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -2069,7 +2069,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<GetDocxStylesResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetDocxStylesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxStylesResponse)));
+                (GetDocxStylesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxStylesResponse)));
         }
 
         /// <summary>
@@ -2099,7 +2099,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/docx/get-tables";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -2112,19 +2112,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
             }
             else
             {
@@ -2132,13 +2132,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -2152,7 +2152,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<GetDocxTablesResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetDocxTablesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxTablesResponse)));
+                (GetDocxTablesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxTablesResponse)));
         }
 
         /// <summary>
@@ -2183,7 +2183,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/docx/get-tables";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -2196,19 +2196,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
             }
             else
             {
@@ -2216,13 +2216,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -2236,7 +2236,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<GetDocxTablesResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetDocxTablesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxTablesResponse)));
+                (GetDocxTablesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxTablesResponse)));
         }
 
         /// <summary>
@@ -2266,7 +2266,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/docx/insert-image";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -2279,19 +2279,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
             }
             else
             {
@@ -2299,13 +2299,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -2319,7 +2319,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<DocxInsertImageResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DocxInsertImageResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocxInsertImageResponse)));
+                (DocxInsertImageResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocxInsertImageResponse)));
         }
 
         /// <summary>
@@ -2350,7 +2350,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/docx/insert-image";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -2363,19 +2363,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
             }
             else
             {
@@ -2383,13 +2383,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -2403,7 +2403,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<DocxInsertImageResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DocxInsertImageResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocxInsertImageResponse)));
+                (DocxInsertImageResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocxInsertImageResponse)));
         }
 
         /// <summary>
@@ -2433,7 +2433,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/docx/insert-paragraph";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -2446,19 +2446,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
             }
             else
             {
@@ -2466,13 +2466,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -2486,7 +2486,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<InsertDocxInsertParagraphResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InsertDocxInsertParagraphResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InsertDocxInsertParagraphResponse)));
+                (InsertDocxInsertParagraphResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InsertDocxInsertParagraphResponse)));
         }
 
         /// <summary>
@@ -2517,7 +2517,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/docx/insert-paragraph";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -2530,19 +2530,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
             }
             else
             {
@@ -2550,13 +2550,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -2570,7 +2570,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<InsertDocxInsertParagraphResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InsertDocxInsertParagraphResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InsertDocxInsertParagraphResponse)));
+                (InsertDocxInsertParagraphResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InsertDocxInsertParagraphResponse)));
         }
 
         /// <summary>
@@ -2600,7 +2600,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/docx/insert-table";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -2613,19 +2613,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
             }
             else
             {
@@ -2633,13 +2633,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -2653,7 +2653,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<InsertDocxTablesResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InsertDocxTablesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InsertDocxTablesResponse)));
+                (InsertDocxTablesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InsertDocxTablesResponse)));
         }
 
         /// <summary>
@@ -2684,7 +2684,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/docx/insert-table";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -2697,19 +2697,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
             }
             else
             {
@@ -2717,13 +2717,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -2737,7 +2737,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<InsertDocxTablesResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InsertDocxTablesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InsertDocxTablesResponse)));
+                (InsertDocxTablesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InsertDocxTablesResponse)));
         }
 
         /// <summary>
@@ -2767,7 +2767,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/docx/remove-headers-and-footers";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -2780,19 +2780,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
             }
             else
             {
@@ -2800,13 +2800,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -2820,7 +2820,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<RemoveDocxHeadersAndFootersResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RemoveDocxHeadersAndFootersResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RemoveDocxHeadersAndFootersResponse)));
+                (RemoveDocxHeadersAndFootersResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RemoveDocxHeadersAndFootersResponse)));
         }
 
         /// <summary>
@@ -2851,7 +2851,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/docx/remove-headers-and-footers";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -2864,19 +2864,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
             }
             else
             {
@@ -2884,13 +2884,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -2904,7 +2904,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<RemoveDocxHeadersAndFootersResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RemoveDocxHeadersAndFootersResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RemoveDocxHeadersAndFootersResponse)));
+                (RemoveDocxHeadersAndFootersResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RemoveDocxHeadersAndFootersResponse)));
         }
 
         /// <summary>
@@ -2934,7 +2934,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/docx/remove-object";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -2947,19 +2947,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
             }
             else
             {
@@ -2967,13 +2967,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -2987,7 +2987,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<DocxRemoveObjectResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DocxRemoveObjectResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocxRemoveObjectResponse)));
+                (DocxRemoveObjectResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocxRemoveObjectResponse)));
         }
 
         /// <summary>
@@ -3018,7 +3018,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/docx/remove-object";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -3031,19 +3031,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
             }
             else
             {
@@ -3051,13 +3051,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -3071,7 +3071,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<DocxRemoveObjectResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DocxRemoveObjectResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocxRemoveObjectResponse)));
+                (DocxRemoveObjectResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocxRemoveObjectResponse)));
         }
 
         /// <summary>
@@ -3101,7 +3101,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/docx/replace-all";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -3114,19 +3114,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
             }
             else
             {
@@ -3134,13 +3134,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -3154,7 +3154,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (byte[]) Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
@@ -3185,7 +3185,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/docx/replace-all";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -3198,19 +3198,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
             }
             else
             {
@@ -3218,13 +3218,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -3238,7 +3238,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (byte[]) Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
@@ -3268,7 +3268,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/docx/set-footer";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -3281,19 +3281,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
             }
             else
             {
@@ -3301,13 +3301,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -3321,7 +3321,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<DocxSetFooterResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DocxSetFooterResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocxSetFooterResponse)));
+                (DocxSetFooterResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocxSetFooterResponse)));
         }
 
         /// <summary>
@@ -3352,7 +3352,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/docx/set-footer";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -3365,19 +3365,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
             }
             else
             {
@@ -3385,13 +3385,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -3405,7 +3405,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<DocxSetFooterResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DocxSetFooterResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocxSetFooterResponse)));
+                (DocxSetFooterResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocxSetFooterResponse)));
         }
 
         /// <summary>
@@ -3435,7 +3435,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/docx/set-header";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -3448,19 +3448,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
             }
             else
             {
@@ -3468,13 +3468,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -3488,7 +3488,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<DocxSetHeaderResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DocxSetHeaderResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocxSetHeaderResponse)));
+                (DocxSetHeaderResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocxSetHeaderResponse)));
         }
 
         /// <summary>
@@ -3519,7 +3519,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/docx/set-header";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -3532,19 +3532,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
             }
             else
             {
@@ -3552,13 +3552,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -3572,7 +3572,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<DocxSetHeaderResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DocxSetHeaderResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocxSetHeaderResponse)));
+                (DocxSetHeaderResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocxSetHeaderResponse)));
         }
 
         /// <summary>
@@ -3602,7 +3602,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/finish-editing";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -3615,19 +3615,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
             }
             else
             {
@@ -3635,13 +3635,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -3655,7 +3655,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (byte[]) Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
@@ -3686,7 +3686,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/finish-editing";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -3699,19 +3699,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
             }
             else
             {
@@ -3719,13 +3719,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -3739,7 +3739,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (byte[]) Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
@@ -3769,7 +3769,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/pptx/replace-all";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -3782,19 +3782,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
             }
             else
             {
@@ -3802,13 +3802,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -3822,7 +3822,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (byte[]) Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
@@ -3853,7 +3853,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/pptx/replace-all";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -3866,19 +3866,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
             }
             else
             {
@@ -3886,13 +3886,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -3906,7 +3906,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (byte[]) Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
@@ -3936,7 +3936,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/xlsx/get-columns";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -3949,19 +3949,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (input != null && input.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(input); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
             }
             else
             {
@@ -3969,13 +3969,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -3989,7 +3989,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<GetXlsxColumnsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetXlsxColumnsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetXlsxColumnsResponse)));
+                (GetXlsxColumnsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetXlsxColumnsResponse)));
         }
 
         /// <summary>
@@ -4020,7 +4020,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/xlsx/get-columns";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -4033,19 +4033,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (input != null && input.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(input); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
             }
             else
             {
@@ -4053,13 +4053,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -4073,7 +4073,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<GetXlsxColumnsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetXlsxColumnsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetXlsxColumnsResponse)));
+                (GetXlsxColumnsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetXlsxColumnsResponse)));
         }
 
         /// <summary>
@@ -4103,7 +4103,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/xlsx/get-images";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -4116,19 +4116,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (input != null && input.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(input); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
             }
             else
             {
@@ -4136,13 +4136,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -4156,7 +4156,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<GetXlsxImagesResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetXlsxImagesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetXlsxImagesResponse)));
+                (GetXlsxImagesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetXlsxImagesResponse)));
         }
 
         /// <summary>
@@ -4187,7 +4187,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/xlsx/get-images";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -4200,19 +4200,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (input != null && input.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(input); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
             }
             else
             {
@@ -4220,13 +4220,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -4240,7 +4240,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<GetXlsxImagesResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetXlsxImagesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetXlsxImagesResponse)));
+                (GetXlsxImagesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetXlsxImagesResponse)));
         }
 
         /// <summary>
@@ -4270,7 +4270,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/xlsx/get-rows-and-cells";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -4283,19 +4283,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (input != null && input.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(input); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
             }
             else
             {
@@ -4303,13 +4303,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -4323,7 +4323,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<GetXlsxRowsAndCellsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetXlsxRowsAndCellsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetXlsxRowsAndCellsResponse)));
+                (GetXlsxRowsAndCellsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetXlsxRowsAndCellsResponse)));
         }
 
         /// <summary>
@@ -4354,7 +4354,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/xlsx/get-rows-and-cells";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -4367,19 +4367,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (input != null && input.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(input); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
             }
             else
             {
@@ -4387,13 +4387,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -4407,7 +4407,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<GetXlsxRowsAndCellsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetXlsxRowsAndCellsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetXlsxRowsAndCellsResponse)));
+                (GetXlsxRowsAndCellsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetXlsxRowsAndCellsResponse)));
         }
 
         /// <summary>
@@ -4437,7 +4437,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/xlsx/get-styles";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -4450,19 +4450,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (input != null && input.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(input); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
             }
             else
             {
@@ -4470,13 +4470,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -4490,7 +4490,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<GetXlsxStylesResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetXlsxStylesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetXlsxStylesResponse)));
+                (GetXlsxStylesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetXlsxStylesResponse)));
         }
 
         /// <summary>
@@ -4521,7 +4521,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/xlsx/get-styles";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -4534,19 +4534,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (input != null && input.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(input); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
             }
             else
             {
@@ -4554,13 +4554,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -4574,7 +4574,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<GetXlsxStylesResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetXlsxStylesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetXlsxStylesResponse)));
+                (GetXlsxStylesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetXlsxStylesResponse)));
         }
 
         /// <summary>
@@ -4604,7 +4604,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/xlsx/get-worksheets";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -4617,19 +4617,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (input != null && input.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(input); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
             }
             else
             {
@@ -4637,13 +4637,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -4657,7 +4657,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<GetXlsxWorksheetsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetXlsxWorksheetsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetXlsxWorksheetsResponse)));
+                (GetXlsxWorksheetsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetXlsxWorksheetsResponse)));
         }
 
         /// <summary>
@@ -4688,7 +4688,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/xlsx/get-worksheets";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -4701,19 +4701,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (input != null && input.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(input); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
             }
             else
             {
@@ -4721,13 +4721,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -4741,7 +4741,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<GetXlsxWorksheetsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GetXlsxWorksheetsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetXlsxWorksheetsResponse)));
+                (GetXlsxWorksheetsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetXlsxWorksheetsResponse)));
         }
 
         /// <summary>
@@ -4771,7 +4771,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/xlsx/insert-worksheet";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -4784,19 +4784,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (input != null && input.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(input); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
             }
             else
             {
@@ -4804,13 +4804,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -4824,7 +4824,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<InsertXlsxWorksheetResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InsertXlsxWorksheetResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InsertXlsxWorksheetResponse)));
+                (InsertXlsxWorksheetResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InsertXlsxWorksheetResponse)));
         }
 
         /// <summary>
@@ -4855,7 +4855,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             var localVarPath = "/convert/edit/xlsx/insert-worksheet";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -4868,19 +4868,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/octet-stream"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (input != null && input.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(input); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
             }
             else
             {
@@ -4888,13 +4888,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             }
 
             // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
             {
-                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -4908,7 +4908,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             return new ApiResponse<InsertXlsxWorksheetResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InsertXlsxWorksheetResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InsertXlsxWorksheetResponse)));
+                (InsertXlsxWorksheetResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InsertXlsxWorksheetResponse)));
         }
 
     }

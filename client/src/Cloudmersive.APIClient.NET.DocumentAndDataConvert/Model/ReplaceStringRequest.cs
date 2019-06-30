@@ -33,18 +33,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ReplaceStringRequest" /> class.
         /// </summary>
-        /// <param name="InputFileBytes">Optional: Bytes of the input file to operate on.</param>
-        /// <param name="InputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public)..</param>
-        /// <param name="MatchString">String to search for and match against, to be replaced.</param>
-        /// <param name="ReplaceString">String to replace the matched values with.</param>
-        /// <param name="MatchCase">True if the case should be matched, false for case insensitive match.</param>
-        public ReplaceStringRequest(byte[] InputFileBytes = default(byte[]), string InputFileUrl = default(string), string MatchString = default(string), string ReplaceString = default(string), bool? MatchCase = default(bool?))
+        /// <param name="inputFileBytes">Optional: Bytes of the input file to operate on.</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public)..</param>
+        /// <param name="matchString">String to search for and match against, to be replaced.</param>
+        /// <param name="replaceString">String to replace the matched values with.</param>
+        /// <param name="matchCase">True if the case should be matched, false for case insensitive match.</param>
+        public ReplaceStringRequest(byte[] inputFileBytes = default(byte[]), string inputFileUrl = default(string), string matchString = default(string), string replaceString = default(string), bool? matchCase = default(bool?))
         {
-            this.InputFileBytes = InputFileBytes;
-            this.InputFileUrl = InputFileUrl;
-            this.MatchString = MatchString;
-            this.ReplaceString = ReplaceString;
-            this.MatchCase = MatchCase;
+            this.InputFileBytes = inputFileBytes;
+            this.InputFileUrl = inputFileUrl;
+            this.MatchString = matchString;
+            this.ReplaceString = replaceString;
+            this.MatchCase = matchCase;
         }
         
         /// <summary>
@@ -103,7 +103,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

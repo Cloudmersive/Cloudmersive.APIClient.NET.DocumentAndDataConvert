@@ -33,12 +33,12 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GetXlsxColumnsResponse" /> class.
         /// </summary>
-        /// <param name="Successful">True if successful, false otherwise.</param>
-        /// <param name="Columns">Spreadsheet Columns in the DOCX document.</param>
-        public GetXlsxColumnsResponse(bool? Successful = default(bool?), List<XlsxSpreadsheetColumn> Columns = default(List<XlsxSpreadsheetColumn>))
+        /// <param name="successful">True if successful, false otherwise.</param>
+        /// <param name="columns">Spreadsheet Columns in the DOCX document.</param>
+        public GetXlsxColumnsResponse(bool? successful = default(bool?), List<XlsxSpreadsheetColumn> columns = default(List<XlsxSpreadsheetColumn>))
         {
-            this.Successful = Successful;
-            this.Columns = Columns;
+            this.Successful = successful;
+            this.Columns = columns;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

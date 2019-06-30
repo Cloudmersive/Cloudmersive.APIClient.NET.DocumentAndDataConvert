@@ -33,14 +33,14 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DocxText" /> class.
         /// </summary>
-        /// <param name="TextIndex">Index of the text content in the run; 0-based.</param>
-        /// <param name="Path">The Path of the location of this object; leave blank for new tables.</param>
-        /// <param name="TextContent">Text string containing the text content of this text content item.</param>
-        public DocxText(int? TextIndex = default(int?), string Path = default(string), string TextContent = default(string))
+        /// <param name="textIndex">Index of the text content in the run; 0-based.</param>
+        /// <param name="path">The Path of the location of this object; leave blank for new tables.</param>
+        /// <param name="textContent">Text string containing the text content of this text content item.</param>
+        public DocxText(int? textIndex = default(int?), string path = default(string), string textContent = default(string))
         {
-            this.TextIndex = TextIndex;
-            this.Path = Path;
-            this.TextContent = TextContent;
+            this.TextIndex = textIndex;
+            this.Path = path;
+            this.TextContent = textContent;
         }
         
         /// <summary>
@@ -83,7 +83,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

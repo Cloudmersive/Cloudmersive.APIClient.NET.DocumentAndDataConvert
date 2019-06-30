@@ -33,18 +33,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="XlsxImage" /> class.
         /// </summary>
-        /// <param name="Path">The Path of the location of this object; leave blank for new rows.</param>
-        /// <param name="ImageDataEmbedId">Read-only; internal ID for the image contents.</param>
-        /// <param name="ImageDataContentType">Read-only; image data MIME content-type.</param>
-        /// <param name="ImageInternalFileName">Read-only; internal file name/path for the image.</param>
-        /// <param name="ImageContentsURL">URL to the image contents; file is stored in an in-memory cache and will be deleted.  Call Finish-Editing to get the contents..</param>
-        public XlsxImage(string Path = default(string), string ImageDataEmbedId = default(string), string ImageDataContentType = default(string), string ImageInternalFileName = default(string), string ImageContentsURL = default(string))
+        /// <param name="path">The Path of the location of this object; leave blank for new rows.</param>
+        /// <param name="imageDataEmbedId">Read-only; internal ID for the image contents.</param>
+        /// <param name="imageDataContentType">Read-only; image data MIME content-type.</param>
+        /// <param name="imageInternalFileName">Read-only; internal file name/path for the image.</param>
+        /// <param name="imageContentsURL">URL to the image contents; file is stored in an in-memory cache and will be deleted.  Call Finish-Editing to get the contents..</param>
+        public XlsxImage(string path = default(string), string imageDataEmbedId = default(string), string imageDataContentType = default(string), string imageInternalFileName = default(string), string imageContentsURL = default(string))
         {
-            this.Path = Path;
-            this.ImageDataEmbedId = ImageDataEmbedId;
-            this.ImageDataContentType = ImageDataContentType;
-            this.ImageInternalFileName = ImageInternalFileName;
-            this.ImageContentsURL = ImageContentsURL;
+            this.Path = path;
+            this.ImageDataEmbedId = imageDataEmbedId;
+            this.ImageDataContentType = imageDataContentType;
+            this.ImageInternalFileName = imageInternalFileName;
+            this.ImageContentsURL = imageContentsURL;
         }
         
         /// <summary>
@@ -103,7 +103,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

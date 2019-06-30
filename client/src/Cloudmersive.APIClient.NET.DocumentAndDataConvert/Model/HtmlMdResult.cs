@@ -33,12 +33,12 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="HtmlMdResult" /> class.
         /// </summary>
-        /// <param name="Successful">True if operation was successful, false otherwise.</param>
-        /// <param name="Html">Resulting HTML from the conversion.</param>
-        public HtmlMdResult(bool? Successful = default(bool?), string Html = default(string))
+        /// <param name="successful">True if operation was successful, false otherwise.</param>
+        /// <param name="html">Resulting HTML from the conversion.</param>
+        public HtmlMdResult(bool? successful = default(bool?), string html = default(string))
         {
-            this.Successful = Successful;
-            this.Html = Html;
+            this.Successful = successful;
+            this.Html = html;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
