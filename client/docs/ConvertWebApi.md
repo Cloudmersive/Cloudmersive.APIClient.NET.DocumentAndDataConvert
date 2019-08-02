@@ -79,7 +79,7 @@ Name | Type | Description  | Notes
 
 <a name="convertwebhtmltopdf"></a>
 # **ConvertWebHtmlToPdf**
-> Object ConvertWebHtmlToPdf (HtmlToPdfRequest input)
+> byte[] ConvertWebHtmlToPdf (HtmlToPdfRequest input)
 
 Convert HTML string to PDF
 
@@ -110,7 +110,7 @@ namespace Example
             try
             {
                 // Convert HTML string to PDF
-                Object result = apiInstance.ConvertWebHtmlToPdf(input);
+                byte[] result = apiInstance.ConvertWebHtmlToPdf(input);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -130,7 +130,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**byte[]**
 
 ### Authorization
 

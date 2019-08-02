@@ -53,8 +53,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">HTML to PDF request parameters</param>
-        /// <returns>Object</returns>
-        Object ConvertWebHtmlToPdf (HtmlToPdfRequest input);
+        /// <returns>byte[]</returns>
+        byte[] ConvertWebHtmlToPdf (HtmlToPdfRequest input);
 
         /// <summary>
         /// Convert HTML string to PDF
@@ -64,8 +64,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">HTML to PDF request parameters</param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> ConvertWebHtmlToPdfWithHttpInfo (HtmlToPdfRequest input);
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> ConvertWebHtmlToPdfWithHttpInfo (HtmlToPdfRequest input);
         /// <summary>
         /// Convert Markdown to HTML
         /// </summary>
@@ -160,8 +160,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">HTML to PDF request parameters</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> ConvertWebHtmlToPdfAsync (HtmlToPdfRequest input);
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> ConvertWebHtmlToPdfAsync (HtmlToPdfRequest input);
 
         /// <summary>
         /// Convert HTML string to PDF
@@ -171,8 +171,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">HTML to PDF request parameters</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ConvertWebHtmlToPdfAsyncWithHttpInfo (HtmlToPdfRequest input);
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertWebHtmlToPdfAsyncWithHttpInfo (HtmlToPdfRequest input);
         /// <summary>
         /// Convert Markdown to HTML
         /// </summary>
@@ -508,10 +508,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">HTML to PDF request parameters</param>
-        /// <returns>Object</returns>
-        public Object ConvertWebHtmlToPdf (HtmlToPdfRequest input)
+        /// <returns>byte[]</returns>
+        public byte[] ConvertWebHtmlToPdf (HtmlToPdfRequest input)
         {
-             ApiResponse<Object> localVarResponse = ConvertWebHtmlToPdfWithHttpInfo(input);
+             ApiResponse<byte[]> localVarResponse = ConvertWebHtmlToPdfWithHttpInfo(input);
              return localVarResponse.Data;
         }
 
@@ -520,8 +520,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">HTML to PDF request parameters</param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > ConvertWebHtmlToPdfWithHttpInfo (HtmlToPdfRequest input)
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > ConvertWebHtmlToPdfWithHttpInfo (HtmlToPdfRequest input)
         {
             // verify the required parameter 'input' is set
             if (input == null)
@@ -584,9 +584,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
@@ -594,10 +594,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">HTML to PDF request parameters</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> ConvertWebHtmlToPdfAsync (HtmlToPdfRequest input)
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> ConvertWebHtmlToPdfAsync (HtmlToPdfRequest input)
         {
-             ApiResponse<Object> localVarResponse = await ConvertWebHtmlToPdfAsyncWithHttpInfo(input);
+             ApiResponse<byte[]> localVarResponse = await ConvertWebHtmlToPdfAsyncWithHttpInfo(input);
              return localVarResponse.Data;
 
         }
@@ -607,8 +607,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">HTML to PDF request parameters</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ConvertWebHtmlToPdfAsyncWithHttpInfo (HtmlToPdfRequest input)
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertWebHtmlToPdfAsyncWithHttpInfo (HtmlToPdfRequest input)
         {
             // verify the required parameter 'input' is set
             if (input == null)
@@ -671,9 +671,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>

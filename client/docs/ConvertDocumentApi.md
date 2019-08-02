@@ -682,7 +682,7 @@ Name | Type | Description  | Notes
 
 <a name="convertdocumentxlstopdf"></a>
 # **ConvertDocumentXlsToPdf**
-> Object ConvertDocumentXlsToPdf (System.IO.Stream inputFile)
+> byte[] ConvertDocumentXlsToPdf (System.IO.Stream inputFile)
 
 Excel XLS (97-03) to PDF
 
@@ -713,7 +713,7 @@ namespace Example
             try
             {
                 // Excel XLS (97-03) to PDF
-                Object result = apiInstance.ConvertDocumentXlsToPdf(inputFile);
+                byte[] result = apiInstance.ConvertDocumentXlsToPdf(inputFile);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -733,7 +733,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**byte[]**
 
 ### Authorization
 

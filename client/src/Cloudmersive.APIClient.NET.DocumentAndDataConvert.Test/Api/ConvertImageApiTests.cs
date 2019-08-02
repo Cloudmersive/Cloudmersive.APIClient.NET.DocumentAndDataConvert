@@ -103,6 +103,20 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
+        /// <summary>
+        /// Test ConvertImageMultipageImageFormatConvert
+        /// </summary>
+        [Test]
+        public void ConvertImageMultipageImageFormatConvertTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string format1 = null;
+            //string format2 = null;
+            //System.IO.Stream inputFile = null;
+            //var response = instance.ConvertImageMultipageImageFormatConvert(format1, format2, inputFile);
+            //Assert.IsInstanceOf<MultipageImageFormatConversionResult> (response, "response is MultipageImageFormatConversionResult");
+        }
+        
     }
 
 }
