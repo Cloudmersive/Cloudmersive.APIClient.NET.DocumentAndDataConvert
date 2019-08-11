@@ -89,6 +89,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test ConvertDocumentAutodetectToPngArray
+        /// </summary>
+        [Test]
+        public void ConvertDocumentAutodetectToPngArrayTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.ConvertDocumentAutodetectToPngArray(inputFile);
+            //Assert.IsInstanceOf<AutodetectToPngResult> (response, "response is AutodetectToPngResult");
+        }
+        
+        /// <summary>
         /// Test ConvertDocumentCsvToXlsx
         /// </summary>
         [Test]
