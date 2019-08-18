@@ -149,6 +149,30 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test ConvertDocumentHtmlToPdf
+        /// </summary>
+        [Test]
+        public void ConvertDocumentHtmlToPdfTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.ConvertDocumentHtmlToPdf(inputFile);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
+        /// Test ConvertDocumentHtmlToPng
+        /// </summary>
+        [Test]
+        public void ConvertDocumentHtmlToPngTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.ConvertDocumentHtmlToPng(inputFile);
+            //Assert.IsInstanceOf<PdfToPngResult> (response, "response is PdfToPngResult");
+        }
+        
+        /// <summary>
         /// Test ConvertDocumentPdfToDocx
         /// </summary>
         [Test]
