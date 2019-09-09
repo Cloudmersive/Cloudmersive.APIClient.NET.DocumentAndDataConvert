@@ -33,9 +33,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MultipageImageFormatConversionResult" /> class.
         /// </summary>
-        /// <param name="successful">successful.</param>
-        /// <param name="pageCount">pageCount.</param>
-        /// <param name="pages">pages.</param>
+        /// <param name="successful">True if successful, false otherwise.</param>
+        /// <param name="pageCount">The number of pages in the converted output.</param>
+        /// <param name="pages">Converted page results.</param>
         public MultipageImageFormatConversionResult(bool? successful = default(bool?), int? pageCount = default(int?), List<PageConversionResult> pages = default(List<PageConversionResult>))
         {
             this.Successful = successful;
@@ -44,20 +44,23 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         }
         
         /// <summary>
-        /// Gets or Sets Successful
+        /// True if successful, false otherwise
         /// </summary>
+        /// <value>True if successful, false otherwise</value>
         [DataMember(Name="Successful", EmitDefaultValue=false)]
         public bool? Successful { get; set; }
 
         /// <summary>
-        /// Gets or Sets PageCount
+        /// The number of pages in the converted output
         /// </summary>
+        /// <value>The number of pages in the converted output</value>
         [DataMember(Name="PageCount", EmitDefaultValue=false)]
         public int? PageCount { get; set; }
 
         /// <summary>
-        /// Gets or Sets Pages
+        /// Converted page results
         /// </summary>
+        /// <value>Converted page results</value>
         [DataMember(Name="Pages", EmitDefaultValue=false)]
         public List<PageConversionResult> Pages { get; set; }
 

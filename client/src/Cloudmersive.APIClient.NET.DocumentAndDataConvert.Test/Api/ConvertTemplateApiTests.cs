@@ -65,6 +65,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
 
         
         /// <summary>
+        /// Test ConvertTemplateApplyDocxTemplate
+        /// </summary>
+        [Test]
+        public void ConvertTemplateApplyDocxTemplateTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //Object templateDefinition = null;
+            //var response = instance.ConvertTemplateApplyDocxTemplate(inputFile, templateDefinition);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
         /// Test ConvertTemplateApplyHtmlTemplate
         /// </summary>
         [Test]

@@ -33,8 +33,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PageConversionResult" /> class.
         /// </summary>
-        /// <param name="filename">filename.</param>
-        /// <param name="fileBytes">fileBytes.</param>
+        /// <param name="filename">File name of the image in the converted file format.</param>
+        /// <param name="fileBytes">File bytes (contents) of the image in converted file format.</param>
         public PageConversionResult(string filename = default(string), byte[] fileBytes = default(byte[]))
         {
             this.Filename = filename;
@@ -42,14 +42,16 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         }
         
         /// <summary>
-        /// Gets or Sets Filename
+        /// File name of the image in the converted file format
         /// </summary>
+        /// <value>File name of the image in the converted file format</value>
         [DataMember(Name="Filename", EmitDefaultValue=false)]
         public string Filename { get; set; }
 
         /// <summary>
-        /// Gets or Sets FileBytes
+        /// File bytes (contents) of the image in converted file format
         /// </summary>
+        /// <value>File bytes (contents) of the image in converted file format</value>
         [DataMember(Name="FileBytes", EmitDefaultValue=false)]
         public byte[] FileBytes { get; set; }
 
