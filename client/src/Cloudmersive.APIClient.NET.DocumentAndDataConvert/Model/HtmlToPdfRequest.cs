@@ -33,8 +33,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="HtmlToPdfRequest" /> class.
         /// </summary>
-        /// <param name="html">html.</param>
-        /// <param name="extraLoadingWait">extraLoadingWait.</param>
+        /// <param name="html">HTML to render to PDF.</param>
+        /// <param name="extraLoadingWait">Optional: Additional number of milliseconds to wait once the web page has finished loading before taking the screenshot.  Can be helpful for highly asynchronous websites..</param>
         public HtmlToPdfRequest(string html = default(string), int? extraLoadingWait = default(int?))
         {
             this.Html = html;
@@ -42,14 +42,16 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         }
         
         /// <summary>
-        /// Gets or Sets Html
+        /// HTML to render to PDF
         /// </summary>
+        /// <value>HTML to render to PDF</value>
         [DataMember(Name="Html", EmitDefaultValue=false)]
         public string Html { get; set; }
 
         /// <summary>
-        /// Gets or Sets ExtraLoadingWait
+        /// Optional: Additional number of milliseconds to wait once the web page has finished loading before taking the screenshot.  Can be helpful for highly asynchronous websites.
         /// </summary>
+        /// <value>Optional: Additional number of milliseconds to wait once the web page has finished loading before taking the screenshot.  Can be helpful for highly asynchronous websites.</value>
         [DataMember(Name="ExtraLoadingWait", EmitDefaultValue=false)]
         public int? ExtraLoadingWait { get; set; }
 

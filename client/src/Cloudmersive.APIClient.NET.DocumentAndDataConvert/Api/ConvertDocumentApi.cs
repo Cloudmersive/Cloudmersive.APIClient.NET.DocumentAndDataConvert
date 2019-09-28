@@ -88,6 +88,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of AutodetectToPngResult</returns>
         ApiResponse<AutodetectToPngResult> ConvertDocumentAutodetectToPngArrayWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
+        /// Convert Document to Text
+        /// </summary>
+        /// <remarks>
+        /// Automatically detect file type and convert it to Text.  Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT) and PDF files.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>TextConversionResult</returns>
+        TextConversionResult ConvertDocumentAutodetectToTxt (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Convert Document to Text
+        /// </summary>
+        /// <remarks>
+        /// Automatically detect file type and convert it to Text.  Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT) and PDF files.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of TextConversionResult</returns>
+        ApiResponse<TextConversionResult> ConvertDocumentAutodetectToTxtWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
         /// CSV to Excel XLSX
         /// </summary>
         /// <remarks>
@@ -171,6 +192,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> ConvertDocumentDocxToPdfWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// Word DOCX to Text
+        /// </summary>
+        /// <remarks>
+        /// Convert Office Word Documents (docx) to text
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>TextConversionResult</returns>
+        TextConversionResult ConvertDocumentDocxToTxt (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Word DOCX to Text
+        /// </summary>
+        /// <remarks>
+        /// Convert Office Word Documents (docx) to text
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of TextConversionResult</returns>
+        ApiResponse<TextConversionResult> ConvertDocumentDocxToTxtWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
         /// HTML to PDF
         /// </summary>
@@ -277,6 +319,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> ConvertDocumentPdfToPptxWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
+        /// PDF to Text
+        /// </summary>
+        /// <remarks>
+        /// PDF document to text
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>TextConversionResult</returns>
+        TextConversionResult ConvertDocumentPdfToTxt (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// PDF to Text
+        /// </summary>
+        /// <remarks>
+        /// PDF document to text
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of TextConversionResult</returns>
+        ApiResponse<TextConversionResult> ConvertDocumentPdfToTxtWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
         /// PowerPoint PPT (97-03) to PDF
         /// </summary>
         /// <remarks>
@@ -339,6 +402,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> ConvertDocumentPptxToPdfWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// PowerPoint PPTX to Text
+        /// </summary>
+        /// <remarks>
+        /// Convert Office PowerPoint Documents (pptx) to standard Text
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>TextConversionResult</returns>
+        TextConversionResult ConvertDocumentPptxToTxt (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// PowerPoint PPTX to Text
+        /// </summary>
+        /// <remarks>
+        /// Convert Office PowerPoint Documents (pptx) to standard Text
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of TextConversionResult</returns>
+        ApiResponse<TextConversionResult> ConvertDocumentPptxToTxtWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
         /// Excel XLS (97-03) to PDF
         /// </summary>
@@ -423,6 +507,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> ConvertDocumentXlsxToPdfWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// Excel XLSX to Text
+        /// </summary>
+        /// <remarks>
+        /// Convert Office Excel Workbooks (xlsx) to standard Text.  Converts all worksheets in the workbook to Text.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>TextConversionResult</returns>
+        TextConversionResult ConvertDocumentXlsxToTxt (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Excel XLSX to Text
+        /// </summary>
+        /// <remarks>
+        /// Convert Office Excel Workbooks (xlsx) to standard Text.  Converts all worksheets in the workbook to Text.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of TextConversionResult</returns>
+        ApiResponse<TextConversionResult> ConvertDocumentXlsxToTxtWithHttpInfo (System.IO.Stream inputFile);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -488,6 +593,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>Task of ApiResponse (AutodetectToPngResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<AutodetectToPngResult>> ConvertDocumentAutodetectToPngArrayAsyncWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// Convert Document to Text
+        /// </summary>
+        /// <remarks>
+        /// Automatically detect file type and convert it to Text.  Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT) and PDF files.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of TextConversionResult</returns>
+        System.Threading.Tasks.Task<TextConversionResult> ConvertDocumentAutodetectToTxtAsync (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Convert Document to Text
+        /// </summary>
+        /// <remarks>
+        /// Automatically detect file type and convert it to Text.  Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT) and PDF files.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (TextConversionResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TextConversionResult>> ConvertDocumentAutodetectToTxtAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
         /// CSV to Excel XLSX
         /// </summary>
@@ -572,6 +698,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentDocxToPdfAsyncWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// Word DOCX to Text
+        /// </summary>
+        /// <remarks>
+        /// Convert Office Word Documents (docx) to text
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of TextConversionResult</returns>
+        System.Threading.Tasks.Task<TextConversionResult> ConvertDocumentDocxToTxtAsync (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Word DOCX to Text
+        /// </summary>
+        /// <remarks>
+        /// Convert Office Word Documents (docx) to text
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (TextConversionResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TextConversionResult>> ConvertDocumentDocxToTxtAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
         /// HTML to PDF
         /// </summary>
@@ -678,6 +825,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentPdfToPptxAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
+        /// PDF to Text
+        /// </summary>
+        /// <remarks>
+        /// PDF document to text
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of TextConversionResult</returns>
+        System.Threading.Tasks.Task<TextConversionResult> ConvertDocumentPdfToTxtAsync (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// PDF to Text
+        /// </summary>
+        /// <remarks>
+        /// PDF document to text
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (TextConversionResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TextConversionResult>> ConvertDocumentPdfToTxtAsyncWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
         /// PowerPoint PPT (97-03) to PDF
         /// </summary>
         /// <remarks>
@@ -740,6 +908,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentPptxToPdfAsyncWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// PowerPoint PPTX to Text
+        /// </summary>
+        /// <remarks>
+        /// Convert Office PowerPoint Documents (pptx) to standard Text
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of TextConversionResult</returns>
+        System.Threading.Tasks.Task<TextConversionResult> ConvertDocumentPptxToTxtAsync (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// PowerPoint PPTX to Text
+        /// </summary>
+        /// <remarks>
+        /// Convert Office PowerPoint Documents (pptx) to standard Text
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (TextConversionResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TextConversionResult>> ConvertDocumentPptxToTxtAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
         /// Excel XLS (97-03) to PDF
         /// </summary>
@@ -824,6 +1013,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentXlsxToPdfAsyncWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// Excel XLSX to Text
+        /// </summary>
+        /// <remarks>
+        /// Convert Office Excel Workbooks (xlsx) to standard Text.  Converts all worksheets in the workbook to Text.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of TextConversionResult</returns>
+        System.Threading.Tasks.Task<TextConversionResult> ConvertDocumentXlsxToTxtAsync (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Excel XLSX to Text
+        /// </summary>
+        /// <remarks>
+        /// Convert Office Excel Workbooks (xlsx) to standard Text.  Converts all worksheets in the workbook to Text.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (TextConversionResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TextConversionResult>> ConvertDocumentXlsxToTxtAsyncWithHttpInfo (System.IO.Stream inputFile);
         #endregion Asynchronous Operations
     }
 
@@ -1357,6 +1567,151 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<AutodetectToPngResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (AutodetectToPngResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AutodetectToPngResult)));
+        }
+
+        /// <summary>
+        /// Convert Document to Text Automatically detect file type and convert it to Text.  Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT) and PDF files.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>TextConversionResult</returns>
+        public TextConversionResult ConvertDocumentAutodetectToTxt (System.IO.Stream inputFile)
+        {
+             ApiResponse<TextConversionResult> localVarResponse = ConvertDocumentAutodetectToTxtWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Convert Document to Text Automatically detect file type and convert it to Text.  Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT) and PDF files.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of TextConversionResult</returns>
+        public ApiResponse< TextConversionResult > ConvertDocumentAutodetectToTxtWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentAutodetectToTxt");
+
+            var localVarPath = "/convert/autodetect/to/txt";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentAutodetectToTxt", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<TextConversionResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TextConversionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TextConversionResult)));
+        }
+
+        /// <summary>
+        /// Convert Document to Text Automatically detect file type and convert it to Text.  Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT) and PDF files.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of TextConversionResult</returns>
+        public async System.Threading.Tasks.Task<TextConversionResult> ConvertDocumentAutodetectToTxtAsync (System.IO.Stream inputFile)
+        {
+             ApiResponse<TextConversionResult> localVarResponse = await ConvertDocumentAutodetectToTxtAsyncWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Convert Document to Text Automatically detect file type and convert it to Text.  Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT) and PDF files.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (TextConversionResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TextConversionResult>> ConvertDocumentAutodetectToTxtAsyncWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentAutodetectToTxt");
+
+            var localVarPath = "/convert/autodetect/to/txt";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentAutodetectToTxt", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<TextConversionResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TextConversionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TextConversionResult)));
         }
 
         /// <summary>
@@ -1937,6 +2292,151 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Word DOCX to Text Convert Office Word Documents (docx) to text
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>TextConversionResult</returns>
+        public TextConversionResult ConvertDocumentDocxToTxt (System.IO.Stream inputFile)
+        {
+             ApiResponse<TextConversionResult> localVarResponse = ConvertDocumentDocxToTxtWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Word DOCX to Text Convert Office Word Documents (docx) to text
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of TextConversionResult</returns>
+        public ApiResponse< TextConversionResult > ConvertDocumentDocxToTxtWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentDocxToTxt");
+
+            var localVarPath = "/convert/docx/to/txt";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentDocxToTxt", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<TextConversionResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TextConversionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TextConversionResult)));
+        }
+
+        /// <summary>
+        /// Word DOCX to Text Convert Office Word Documents (docx) to text
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of TextConversionResult</returns>
+        public async System.Threading.Tasks.Task<TextConversionResult> ConvertDocumentDocxToTxtAsync (System.IO.Stream inputFile)
+        {
+             ApiResponse<TextConversionResult> localVarResponse = await ConvertDocumentDocxToTxtAsyncWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Word DOCX to Text Convert Office Word Documents (docx) to text
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (TextConversionResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TextConversionResult>> ConvertDocumentDocxToTxtAsyncWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentDocxToTxt");
+
+            var localVarPath = "/convert/docx/to/txt";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentDocxToTxt", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<TextConversionResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TextConversionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TextConversionResult)));
         }
 
         /// <summary>
@@ -2665,6 +3165,151 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
+        /// PDF to Text PDF document to text
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>TextConversionResult</returns>
+        public TextConversionResult ConvertDocumentPdfToTxt (System.IO.Stream inputFile)
+        {
+             ApiResponse<TextConversionResult> localVarResponse = ConvertDocumentPdfToTxtWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// PDF to Text PDF document to text
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of TextConversionResult</returns>
+        public ApiResponse< TextConversionResult > ConvertDocumentPdfToTxtWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentPdfToTxt");
+
+            var localVarPath = "/convert/pdf/to/txt";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentPdfToTxt", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<TextConversionResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TextConversionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TextConversionResult)));
+        }
+
+        /// <summary>
+        /// PDF to Text PDF document to text
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of TextConversionResult</returns>
+        public async System.Threading.Tasks.Task<TextConversionResult> ConvertDocumentPdfToTxtAsync (System.IO.Stream inputFile)
+        {
+             ApiResponse<TextConversionResult> localVarResponse = await ConvertDocumentPdfToTxtAsyncWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// PDF to Text PDF document to text
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (TextConversionResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TextConversionResult>> ConvertDocumentPdfToTxtAsyncWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentPdfToTxt");
+
+            var localVarPath = "/convert/pdf/to/txt";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentPdfToTxt", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<TextConversionResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TextConversionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TextConversionResult)));
+        }
+
+        /// <summary>
         /// PowerPoint PPT (97-03) to PDF Convert Office PowerPoint (97-2003) Documents (ppt) to standard PDF
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3097,6 +3742,151 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// PowerPoint PPTX to Text Convert Office PowerPoint Documents (pptx) to standard Text
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>TextConversionResult</returns>
+        public TextConversionResult ConvertDocumentPptxToTxt (System.IO.Stream inputFile)
+        {
+             ApiResponse<TextConversionResult> localVarResponse = ConvertDocumentPptxToTxtWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// PowerPoint PPTX to Text Convert Office PowerPoint Documents (pptx) to standard Text
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of TextConversionResult</returns>
+        public ApiResponse< TextConversionResult > ConvertDocumentPptxToTxtWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentPptxToTxt");
+
+            var localVarPath = "/convert/pptx/to/txt";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentPptxToTxt", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<TextConversionResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TextConversionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TextConversionResult)));
+        }
+
+        /// <summary>
+        /// PowerPoint PPTX to Text Convert Office PowerPoint Documents (pptx) to standard Text
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of TextConversionResult</returns>
+        public async System.Threading.Tasks.Task<TextConversionResult> ConvertDocumentPptxToTxtAsync (System.IO.Stream inputFile)
+        {
+             ApiResponse<TextConversionResult> localVarResponse = await ConvertDocumentPptxToTxtAsyncWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// PowerPoint PPTX to Text Convert Office PowerPoint Documents (pptx) to standard Text
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (TextConversionResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TextConversionResult>> ConvertDocumentPptxToTxtAsyncWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentPptxToTxt");
+
+            var localVarPath = "/convert/pptx/to/txt";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentPptxToTxt", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<TextConversionResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TextConversionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TextConversionResult)));
         }
 
         /// <summary>
@@ -3677,6 +4467,151 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Excel XLSX to Text Convert Office Excel Workbooks (xlsx) to standard Text.  Converts all worksheets in the workbook to Text.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>TextConversionResult</returns>
+        public TextConversionResult ConvertDocumentXlsxToTxt (System.IO.Stream inputFile)
+        {
+             ApiResponse<TextConversionResult> localVarResponse = ConvertDocumentXlsxToTxtWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Excel XLSX to Text Convert Office Excel Workbooks (xlsx) to standard Text.  Converts all worksheets in the workbook to Text.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of TextConversionResult</returns>
+        public ApiResponse< TextConversionResult > ConvertDocumentXlsxToTxtWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentXlsxToTxt");
+
+            var localVarPath = "/convert/xlsx/to/txt";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentXlsxToTxt", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<TextConversionResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TextConversionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TextConversionResult)));
+        }
+
+        /// <summary>
+        /// Excel XLSX to Text Convert Office Excel Workbooks (xlsx) to standard Text.  Converts all worksheets in the workbook to Text.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of TextConversionResult</returns>
+        public async System.Threading.Tasks.Task<TextConversionResult> ConvertDocumentXlsxToTxtAsync (System.IO.Stream inputFile)
+        {
+             ApiResponse<TextConversionResult> localVarResponse = await ConvertDocumentXlsxToTxtAsyncWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Excel XLSX to Text Convert Office Excel Workbooks (xlsx) to standard Text.  Converts all worksheets in the workbook to Text.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (TextConversionResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TextConversionResult>> ConvertDocumentXlsxToTxtAsyncWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentXlsxToTxt");
+
+            var localVarPath = "/convert/xlsx/to/txt";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentXlsxToTxt", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<TextConversionResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TextConversionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TextConversionResult)));
         }
 
     }

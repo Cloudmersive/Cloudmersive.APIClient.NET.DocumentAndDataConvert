@@ -25,26 +25,35 @@ using SwaggerDateConverter = Cloudmersive.APIClient.NET.DocumentAndDataConvert.C
 namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
 {
     /// <summary>
-    /// Details of the HTML to Office request
+    /// Text conversion result from converting a document to Plain Text (TXT) format
     /// </summary>
     [DataContract]
-    public partial class HtmlToOfficeRequest :  IEquatable<HtmlToOfficeRequest>, IValidatableObject
+    public partial class TextConversionResult :  IEquatable<TextConversionResult>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="HtmlToOfficeRequest" /> class.
+        /// Initializes a new instance of the <see cref="TextConversionResult" /> class.
         /// </summary>
-        /// <param name="html">HTML to render to Office format.</param>
-        public HtmlToOfficeRequest(string html = default(string))
+        /// <param name="successful">True if the operation was successful, false otherwise.</param>
+        /// <param name="textResult">Plain Text (TXT) format conversion result of the input document.  The text result is returned as a string..</param>
+        public TextConversionResult(bool? successful = default(bool?), string textResult = default(string))
         {
-            this.Html = html;
+            this.Successful = successful;
+            this.TextResult = textResult;
         }
         
         /// <summary>
-        /// HTML to render to Office format
+        /// True if the operation was successful, false otherwise
         /// </summary>
-        /// <value>HTML to render to Office format</value>
-        [DataMember(Name="Html", EmitDefaultValue=false)]
-        public string Html { get; set; }
+        /// <value>True if the operation was successful, false otherwise</value>
+        [DataMember(Name="Successful", EmitDefaultValue=false)]
+        public bool? Successful { get; set; }
+
+        /// <summary>
+        /// Plain Text (TXT) format conversion result of the input document.  The text result is returned as a string.
+        /// </summary>
+        /// <value>Plain Text (TXT) format conversion result of the input document.  The text result is returned as a string.</value>
+        [DataMember(Name="TextResult", EmitDefaultValue=false)]
+        public string TextResult { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -53,8 +62,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class HtmlToOfficeRequest {\n");
-            sb.Append("  Html: ").Append(Html).Append("\n");
+            sb.Append("class TextConversionResult {\n");
+            sb.Append("  Successful: ").Append(Successful).Append("\n");
+            sb.Append("  TextResult: ").Append(TextResult).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -75,24 +85,29 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as HtmlToOfficeRequest);
+            return this.Equals(input as TextConversionResult);
         }
 
         /// <summary>
-        /// Returns true if HtmlToOfficeRequest instances are equal
+        /// Returns true if TextConversionResult instances are equal
         /// </summary>
-        /// <param name="input">Instance of HtmlToOfficeRequest to be compared</param>
+        /// <param name="input">Instance of TextConversionResult to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(HtmlToOfficeRequest input)
+        public bool Equals(TextConversionResult input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.Html == input.Html ||
-                    (this.Html != null &&
-                    this.Html.Equals(input.Html))
+                    this.Successful == input.Successful ||
+                    (this.Successful != null &&
+                    this.Successful.Equals(input.Successful))
+                ) && 
+                (
+                    this.TextResult == input.TextResult ||
+                    (this.TextResult != null &&
+                    this.TextResult.Equals(input.TextResult))
                 );
         }
 
@@ -105,8 +120,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Html != null)
-                    hashCode = hashCode * 59 + this.Html.GetHashCode();
+                if (this.Successful != null)
+                    hashCode = hashCode * 59 + this.Successful.GetHashCode();
+                if (this.TextResult != null)
+                    hashCode = hashCode * 59 + this.TextResult.GetHashCode();
                 return hashCode;
             }
         }

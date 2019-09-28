@@ -101,6 +101,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test ConvertDocumentAutodetectToTxt
+        /// </summary>
+        [Test]
+        public void ConvertDocumentAutodetectToTxtTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.ConvertDocumentAutodetectToTxt(inputFile);
+            //Assert.IsInstanceOf<TextConversionResult> (response, "response is TextConversionResult");
+        }
+        
+        /// <summary>
         /// Test ConvertDocumentCsvToXlsx
         /// </summary>
         [Test]
@@ -146,6 +158,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //System.IO.Stream inputFile = null;
             //var response = instance.ConvertDocumentDocxToPdf(inputFile);
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
+        /// Test ConvertDocumentDocxToTxt
+        /// </summary>
+        [Test]
+        public void ConvertDocumentDocxToTxtTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.ConvertDocumentDocxToTxt(inputFile);
+            //Assert.IsInstanceOf<TextConversionResult> (response, "response is TextConversionResult");
         }
         
         /// <summary>
@@ -209,6 +233,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test ConvertDocumentPdfToTxt
+        /// </summary>
+        [Test]
+        public void ConvertDocumentPdfToTxtTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.ConvertDocumentPdfToTxt(inputFile);
+            //Assert.IsInstanceOf<TextConversionResult> (response, "response is TextConversionResult");
+        }
+        
+        /// <summary>
         /// Test ConvertDocumentPptToPdf
         /// </summary>
         [Test]
@@ -242,6 +278,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //System.IO.Stream inputFile = null;
             //var response = instance.ConvertDocumentPptxToPdf(inputFile);
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
+        /// Test ConvertDocumentPptxToTxt
+        /// </summary>
+        [Test]
+        public void ConvertDocumentPptxToTxtTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.ConvertDocumentPptxToTxt(inputFile);
+            //Assert.IsInstanceOf<TextConversionResult> (response, "response is TextConversionResult");
         }
         
         /// <summary>
@@ -290,6 +338,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //System.IO.Stream inputFile = null;
             //var response = instance.ConvertDocumentXlsxToPdf(inputFile);
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
+        /// Test ConvertDocumentXlsxToTxt
+        /// </summary>
+        [Test]
+        public void ConvertDocumentXlsxToTxtTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.ConvertDocumentXlsxToTxt(inputFile);
+            //Assert.IsInstanceOf<TextConversionResult> (response, "response is TextConversionResult");
         }
         
     }

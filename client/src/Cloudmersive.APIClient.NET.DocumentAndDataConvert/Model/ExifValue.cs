@@ -33,9 +33,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ExifValue" /> class.
         /// </summary>
-        /// <param name="tag">tag.</param>
-        /// <param name="dataType">dataType.</param>
-        /// <param name="dataValue">dataValue.</param>
+        /// <param name="tag">Tag name for the EXIF value.</param>
+        /// <param name="dataType">Date type of the EXIF value.</param>
+        /// <param name="dataValue">Value, formatted as a string of the EXIF value.</param>
         public ExifValue(string tag = default(string), string dataType = default(string), string dataValue = default(string))
         {
             this.Tag = tag;
@@ -44,20 +44,23 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         }
         
         /// <summary>
-        /// Gets or Sets Tag
+        /// Tag name for the EXIF value
         /// </summary>
+        /// <value>Tag name for the EXIF value</value>
         [DataMember(Name="Tag", EmitDefaultValue=false)]
         public string Tag { get; set; }
 
         /// <summary>
-        /// Gets or Sets DataType
+        /// Date type of the EXIF value
         /// </summary>
+        /// <value>Date type of the EXIF value</value>
         [DataMember(Name="DataType", EmitDefaultValue=false)]
         public string DataType { get; set; }
 
         /// <summary>
-        /// Gets or Sets DataValue
+        /// Value, formatted as a string of the EXIF value
         /// </summary>
+        /// <value>Value, formatted as a string of the EXIF value</value>
         [DataMember(Name="DataValue", EmitDefaultValue=false)]
         public string DataValue { get; set; }
 
