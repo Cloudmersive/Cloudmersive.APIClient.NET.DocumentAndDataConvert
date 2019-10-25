@@ -233,6 +233,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test EditDocumentDocxSetFooterAddPageNumber
+        /// </summary>
+        [Test]
+        public void EditDocumentDocxSetFooterAddPageNumberTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //DocxSetFooterAddPageNumberRequest reqConfig = null;
+            //var response = instance.EditDocumentDocxSetFooterAddPageNumber(reqConfig);
+            //Assert.IsInstanceOf<DocxSetFooterResponse> (response, "response is DocxSetFooterResponse");
+        }
+        
+        /// <summary>
         /// Test EditDocumentDocxSetHeader
         /// </summary>
         [Test]
