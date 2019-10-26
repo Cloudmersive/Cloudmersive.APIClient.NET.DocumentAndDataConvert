@@ -90,6 +90,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test MergeDocumentPng
+        /// </summary>
+        [Test]
+        public void MergeDocumentPngTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile1 = null;
+            //System.IO.Stream inputFile2 = null;
+            //var response = instance.MergeDocumentPng(inputFile1, inputFile2);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
         /// Test MergeDocumentPptx
         /// </summary>
         [Test]

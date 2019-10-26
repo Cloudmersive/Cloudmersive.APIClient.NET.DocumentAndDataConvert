@@ -336,7 +336,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //System.IO.Stream inputFile = null;
-            //var response = instance.ConvertDocumentXlsxToCsv(inputFile);
+            //string outputEncoding = null;
+            //var response = instance.ConvertDocumentXlsxToCsv(inputFile, outputEncoding);
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         

@@ -1485,7 +1485,7 @@ Name | Type | Description  | Notes
 
 <a name="convertdocumentxlsxtocsv"></a>
 # **ConvertDocumentXlsxToCsv**
-> byte[] ConvertDocumentXlsxToCsv (System.IO.Stream inputFile)
+> byte[] ConvertDocumentXlsxToCsv (System.IO.Stream inputFile, string outputEncoding = null)
 
 Excel XLSX to CSV
 
@@ -1512,11 +1512,12 @@ namespace Example
 
             var apiInstance = new ConvertDocumentApi();
             var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
+            var outputEncoding = outputEncoding_example;  // string | Optional, set the output text encoding for the result; possible values are UTF-8 and UTF-32.  Default is UTF-32. (optional) 
 
             try
             {
                 // Excel XLSX to CSV
-                byte[] result = apiInstance.ConvertDocumentXlsxToCsv(inputFile);
+                byte[] result = apiInstance.ConvertDocumentXlsxToCsv(inputFile, outputEncoding);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1533,6 +1534,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
+ **outputEncoding** | **string**| Optional, set the output text encoding for the result; possible values are UTF-8 and UTF-32.  Default is UTF-32. | [optional] 
 
 ### Return type
 

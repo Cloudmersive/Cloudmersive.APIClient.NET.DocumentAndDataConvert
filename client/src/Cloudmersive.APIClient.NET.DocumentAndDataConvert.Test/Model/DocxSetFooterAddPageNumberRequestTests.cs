@@ -67,14 +67,6 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
 
 
         /// <summary>
-        /// Test the property 'PrependText'
-        /// </summary>
-        [Test]
-        public void PrependTextTest()
-        {
-            // TODO unit test for the property 'PrependText'
-        }
-        /// <summary>
         /// Test the property 'InputFileBytes'
         /// </summary>
         [Test]
@@ -89,6 +81,14 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         public void InputFileUrlTest()
         {
             // TODO unit test for the property 'InputFileUrl'
+        }
+        /// <summary>
+        /// Test the property 'PrependText'
+        /// </summary>
+        [Test]
+        public void PrependTextTest()
+        {
+            // TODO unit test for the property 'PrependText'
         }
 
     }

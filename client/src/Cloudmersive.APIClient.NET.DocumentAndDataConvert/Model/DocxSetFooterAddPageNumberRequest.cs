@@ -33,22 +33,16 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DocxSetFooterAddPageNumberRequest" /> class.
         /// </summary>
-        /// <param name="prependText">prependText.</param>
         /// <param name="inputFileBytes">Optional: Bytes of the input file to operate on.</param>
         /// <param name="inputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public)..</param>
-        public DocxSetFooterAddPageNumberRequest(string prependText = default(string), byte[] inputFileBytes = default(byte[]), string inputFileUrl = default(string))
+        /// <param name="prependText">Optional: extra text to add before the page number, for example if you want to show \&quot;Page 1\&quot; then you can set PrependText to \&quot;Page\&quot;.</param>
+        public DocxSetFooterAddPageNumberRequest(byte[] inputFileBytes = default(byte[]), string inputFileUrl = default(string), string prependText = default(string))
         {
-            this.PrependText = prependText;
             this.InputFileBytes = inputFileBytes;
             this.InputFileUrl = inputFileUrl;
+            this.PrependText = prependText;
         }
         
-        /// <summary>
-        /// Gets or Sets PrependText
-        /// </summary>
-        [DataMember(Name="PrependText", EmitDefaultValue=false)]
-        public string PrependText { get; set; }
-
         /// <summary>
         /// Optional: Bytes of the input file to operate on
         /// </summary>
@@ -64,6 +58,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         public string InputFileUrl { get; set; }
 
         /// <summary>
+        /// Optional: extra text to add before the page number, for example if you want to show \&quot;Page 1\&quot; then you can set PrependText to \&quot;Page\&quot;
+        /// </summary>
+        /// <value>Optional: extra text to add before the page number, for example if you want to show \&quot;Page 1\&quot; then you can set PrependText to \&quot;Page\&quot;</value>
+        [DataMember(Name="PrependText", EmitDefaultValue=false)]
+        public string PrependText { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -71,9 +72,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DocxSetFooterAddPageNumberRequest {\n");
-            sb.Append("  PrependText: ").Append(PrependText).Append("\n");
             sb.Append("  InputFileBytes: ").Append(InputFileBytes).Append("\n");
             sb.Append("  InputFileUrl: ").Append(InputFileUrl).Append("\n");
+            sb.Append("  PrependText: ").Append(PrependText).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,11 +110,6 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
 
             return 
                 (
-                    this.PrependText == input.PrependText ||
-                    (this.PrependText != null &&
-                    this.PrependText.Equals(input.PrependText))
-                ) && 
-                (
                     this.InputFileBytes == input.InputFileBytes ||
                     (this.InputFileBytes != null &&
                     this.InputFileBytes.Equals(input.InputFileBytes))
@@ -122,6 +118,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                     this.InputFileUrl == input.InputFileUrl ||
                     (this.InputFileUrl != null &&
                     this.InputFileUrl.Equals(input.InputFileUrl))
+                ) && 
+                (
+                    this.PrependText == input.PrependText ||
+                    (this.PrependText != null &&
+                    this.PrependText.Equals(input.PrependText))
                 );
         }
 
@@ -134,12 +135,12 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.PrependText != null)
-                    hashCode = hashCode * 59 + this.PrependText.GetHashCode();
                 if (this.InputFileBytes != null)
                     hashCode = hashCode * 59 + this.InputFileBytes.GetHashCode();
                 if (this.InputFileUrl != null)
                     hashCode = hashCode * 59 + this.InputFileUrl.GetHashCode();
+                if (this.PrependText != null)
+                    hashCode = hashCode * 59 + this.PrependText.GetHashCode();
                 return hashCode;
             }
         }

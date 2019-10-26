@@ -91,6 +91,30 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             // TODO unit test for the property 'DetectedMimeType'
         }
         /// <summary>
+        /// Test the property 'PageCount'
+        /// </summary>
+        [Test]
+        public void PageCountTest()
+        {
+            // TODO unit test for the property 'PageCount'
+        }
+        /// <summary>
+        /// Test the property 'Author'
+        /// </summary>
+        [Test]
+        public void AuthorTest()
+        {
+            // TODO unit test for the property 'Author'
+        }
+        /// <summary>
+        /// Test the property 'DateModified'
+        /// </summary>
+        [Test]
+        public void DateModifiedTest()
+        {
+            // TODO unit test for the property 'DateModified'
+        }
+        /// <summary>
         /// Test the property 'AlternateFileTypeCandidates'
         /// </summary>
         [Test]

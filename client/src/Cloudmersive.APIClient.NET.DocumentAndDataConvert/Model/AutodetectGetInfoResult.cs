@@ -36,12 +36,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <param name="successful">True if the operation was successful, false otherwise.</param>
         /// <param name="detectedFileExtension">Detected file extension of the file format, with a leading period.</param>
         /// <param name="detectedMimeType">MIME type of this file extension.</param>
+        /// <param name="pageCount">Number of pages in a page-based document; for presentations, this is the number of slides and for a spreadsheet this is the number of worksheets.  Contains 0 when the page count cannot be determined, or if the concept of page count does not apply (e.g. for an image).</param>
+        /// <param name="author">User name of the creator/author of the document, if available, null if not available.</param>
+        /// <param name="dateModified">The timestamp that the document was last modified, if available, null if not available.</param>
         /// <param name="alternateFileTypeCandidates">Alternate file type options and their probability.</param>
-        public AutodetectGetInfoResult(bool? successful = default(bool?), string detectedFileExtension = default(string), string detectedMimeType = default(string), List<AlternateFileFormatCandidate> alternateFileTypeCandidates = default(List<AlternateFileFormatCandidate>))
+        public AutodetectGetInfoResult(bool? successful = default(bool?), string detectedFileExtension = default(string), string detectedMimeType = default(string), long? pageCount = default(long?), string author = default(string), DateTime? dateModified = default(DateTime?), List<AlternateFileFormatCandidate> alternateFileTypeCandidates = default(List<AlternateFileFormatCandidate>))
         {
             this.Successful = successful;
             this.DetectedFileExtension = detectedFileExtension;
             this.DetectedMimeType = detectedMimeType;
+            this.PageCount = pageCount;
+            this.Author = author;
+            this.DateModified = dateModified;
             this.AlternateFileTypeCandidates = alternateFileTypeCandidates;
         }
         
@@ -67,6 +73,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         public string DetectedMimeType { get; set; }
 
         /// <summary>
+        /// Number of pages in a page-based document; for presentations, this is the number of slides and for a spreadsheet this is the number of worksheets.  Contains 0 when the page count cannot be determined, or if the concept of page count does not apply (e.g. for an image)
+        /// </summary>
+        /// <value>Number of pages in a page-based document; for presentations, this is the number of slides and for a spreadsheet this is the number of worksheets.  Contains 0 when the page count cannot be determined, or if the concept of page count does not apply (e.g. for an image)</value>
+        [DataMember(Name="PageCount", EmitDefaultValue=false)]
+        public long? PageCount { get; set; }
+
+        /// <summary>
+        /// User name of the creator/author of the document, if available, null if not available
+        /// </summary>
+        /// <value>User name of the creator/author of the document, if available, null if not available</value>
+        [DataMember(Name="Author", EmitDefaultValue=false)]
+        public string Author { get; set; }
+
+        /// <summary>
+        /// The timestamp that the document was last modified, if available, null if not available
+        /// </summary>
+        /// <value>The timestamp that the document was last modified, if available, null if not available</value>
+        [DataMember(Name="DateModified", EmitDefaultValue=false)]
+        public DateTime? DateModified { get; set; }
+
+        /// <summary>
         /// Alternate file type options and their probability
         /// </summary>
         /// <value>Alternate file type options and their probability</value>
@@ -84,6 +111,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
             sb.Append("  Successful: ").Append(Successful).Append("\n");
             sb.Append("  DetectedFileExtension: ").Append(DetectedFileExtension).Append("\n");
             sb.Append("  DetectedMimeType: ").Append(DetectedMimeType).Append("\n");
+            sb.Append("  PageCount: ").Append(PageCount).Append("\n");
+            sb.Append("  Author: ").Append(Author).Append("\n");
+            sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  AlternateFileTypeCandidates: ").Append(AlternateFileTypeCandidates).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -135,6 +165,21 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                     this.DetectedMimeType.Equals(input.DetectedMimeType))
                 ) && 
                 (
+                    this.PageCount == input.PageCount ||
+                    (this.PageCount != null &&
+                    this.PageCount.Equals(input.PageCount))
+                ) && 
+                (
+                    this.Author == input.Author ||
+                    (this.Author != null &&
+                    this.Author.Equals(input.Author))
+                ) && 
+                (
+                    this.DateModified == input.DateModified ||
+                    (this.DateModified != null &&
+                    this.DateModified.Equals(input.DateModified))
+                ) && 
+                (
                     this.AlternateFileTypeCandidates == input.AlternateFileTypeCandidates ||
                     this.AlternateFileTypeCandidates != null &&
                     this.AlternateFileTypeCandidates.SequenceEqual(input.AlternateFileTypeCandidates)
@@ -156,6 +201,12 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                     hashCode = hashCode * 59 + this.DetectedFileExtension.GetHashCode();
                 if (this.DetectedMimeType != null)
                     hashCode = hashCode * 59 + this.DetectedMimeType.GetHashCode();
+                if (this.PageCount != null)
+                    hashCode = hashCode * 59 + this.PageCount.GetHashCode();
+                if (this.Author != null)
+                    hashCode = hashCode * 59 + this.Author.GetHashCode();
+                if (this.DateModified != null)
+                    hashCode = hashCode * 59 + this.DateModified.GetHashCode();
                 if (this.AlternateFileTypeCandidates != null)
                     hashCode = hashCode * 59 + this.AlternateFileTypeCandidates.GetHashCode();
                 return hashCode;

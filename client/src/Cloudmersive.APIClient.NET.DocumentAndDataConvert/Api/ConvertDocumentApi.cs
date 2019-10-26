@@ -494,8 +494,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="outputEncoding">Optional, set the output text encoding for the result; possible values are UTF-8 and UTF-32.  Default is UTF-32. (optional)</param>
         /// <returns>byte[]</returns>
-        byte[] ConvertDocumentXlsxToCsv (System.IO.Stream inputFile);
+        byte[] ConvertDocumentXlsxToCsv (System.IO.Stream inputFile, string outputEncoding = null);
 
         /// <summary>
         /// Excel XLSX to CSV
@@ -505,8 +506,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="outputEncoding">Optional, set the output text encoding for the result; possible values are UTF-8 and UTF-32.  Default is UTF-32. (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
-        ApiResponse<byte[]> ConvertDocumentXlsxToCsvWithHttpInfo (System.IO.Stream inputFile);
+        ApiResponse<byte[]> ConvertDocumentXlsxToCsvWithHttpInfo (System.IO.Stream inputFile, string outputEncoding = null);
         /// <summary>
         /// Excel XLSX to PDF
         /// </summary>
@@ -1021,8 +1023,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="outputEncoding">Optional, set the output text encoding for the result; possible values are UTF-8 and UTF-32.  Default is UTF-32. (optional)</param>
         /// <returns>Task of byte[]</returns>
-        System.Threading.Tasks.Task<byte[]> ConvertDocumentXlsxToCsvAsync (System.IO.Stream inputFile);
+        System.Threading.Tasks.Task<byte[]> ConvertDocumentXlsxToCsvAsync (System.IO.Stream inputFile, string outputEncoding = null);
 
         /// <summary>
         /// Excel XLSX to CSV
@@ -1032,8 +1035,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="outputEncoding">Optional, set the output text encoding for the result; possible values are UTF-8 and UTF-32.  Default is UTF-32. (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentXlsxToCsvAsyncWithHttpInfo (System.IO.Stream inputFile);
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentXlsxToCsvAsyncWithHttpInfo (System.IO.Stream inputFile, string outputEncoding = null);
         /// <summary>
         /// Excel XLSX to PDF
         /// </summary>
@@ -4377,10 +4381,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="outputEncoding">Optional, set the output text encoding for the result; possible values are UTF-8 and UTF-32.  Default is UTF-32. (optional)</param>
         /// <returns>byte[]</returns>
-        public byte[] ConvertDocumentXlsxToCsv (System.IO.Stream inputFile)
+        public byte[] ConvertDocumentXlsxToCsv (System.IO.Stream inputFile, string outputEncoding = null)
         {
-             ApiResponse<byte[]> localVarResponse = ConvertDocumentXlsxToCsvWithHttpInfo(inputFile);
+             ApiResponse<byte[]> localVarResponse = ConvertDocumentXlsxToCsvWithHttpInfo(inputFile, outputEncoding);
              return localVarResponse.Data;
         }
 
@@ -4389,8 +4394,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="outputEncoding">Optional, set the output text encoding for the result; possible values are UTF-8 and UTF-32.  Default is UTF-32. (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
-        public ApiResponse< byte[] > ConvertDocumentXlsxToCsvWithHttpInfo (System.IO.Stream inputFile)
+        public ApiResponse< byte[] > ConvertDocumentXlsxToCsvWithHttpInfo (System.IO.Stream inputFile, string outputEncoding = null)
         {
             // verify the required parameter 'inputFile' is set
             if (inputFile == null)
@@ -4418,6 +4424,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (outputEncoding != null) localVarHeaderParams.Add("outputEncoding", this.Configuration.ApiClient.ParameterToString(outputEncoding)); // header parameter
             if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
 
             // authentication (Apikey) required
@@ -4449,10 +4456,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="outputEncoding">Optional, set the output text encoding for the result; possible values are UTF-8 and UTF-32.  Default is UTF-32. (optional)</param>
         /// <returns>Task of byte[]</returns>
-        public async System.Threading.Tasks.Task<byte[]> ConvertDocumentXlsxToCsvAsync (System.IO.Stream inputFile)
+        public async System.Threading.Tasks.Task<byte[]> ConvertDocumentXlsxToCsvAsync (System.IO.Stream inputFile, string outputEncoding = null)
         {
-             ApiResponse<byte[]> localVarResponse = await ConvertDocumentXlsxToCsvAsyncWithHttpInfo(inputFile);
+             ApiResponse<byte[]> localVarResponse = await ConvertDocumentXlsxToCsvAsyncWithHttpInfo(inputFile, outputEncoding);
              return localVarResponse.Data;
 
         }
@@ -4462,8 +4470,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="outputEncoding">Optional, set the output text encoding for the result; possible values are UTF-8 and UTF-32.  Default is UTF-32. (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentXlsxToCsvAsyncWithHttpInfo (System.IO.Stream inputFile)
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentXlsxToCsvAsyncWithHttpInfo (System.IO.Stream inputFile, string outputEncoding = null)
         {
             // verify the required parameter 'inputFile' is set
             if (inputFile == null)
@@ -4491,6 +4500,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (outputEncoding != null) localVarHeaderParams.Add("outputEncoding", this.Configuration.ApiClient.ParameterToString(outputEncoding)); // header parameter
             if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
 
             // authentication (Apikey) required
