@@ -221,6 +221,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test ConvertDocumentPdfToPngSingle
+        /// </summary>
+        [Test]
+        public void ConvertDocumentPdfToPngSingleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.ConvertDocumentPdfToPngSingle(inputFile);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
         /// Test ConvertDocumentPdfToPptx
         /// </summary>
         [Test]
