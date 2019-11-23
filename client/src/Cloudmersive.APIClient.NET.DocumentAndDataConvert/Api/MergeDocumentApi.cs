@@ -24,10 +24,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Merge Multple Word DOCX Together
+        /// Merge Two Word DOCX Together
         /// </summary>
         /// <remarks>
-        /// Combine multiple Office Word Documents (docx) into one single Office Word document
+        /// Combine two Office Word Documents (docx) into one single Office Word document
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
@@ -36,6 +36,17 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         byte[] MergeDocumentDocx (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
 
         /// <summary>
+        /// Merge Two Word DOCX Together
+        /// </summary>
+        /// <remarks>
+        /// Combine two Office Word Documents (docx) into one single Office Word document
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> MergeDocumentDocxWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+        /// <summary>
         /// Merge Multple Word DOCX Together
         /// </summary>
         /// <remarks>
@@ -43,9 +54,60 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
+        /// <returns>byte[]</returns>
+        byte[] MergeDocumentDocxMulti (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
+
+        /// <summary>
+        /// Merge Multple Word DOCX Together
+        /// </summary>
+        /// <remarks>
+        /// Combine multiple Office Word Documents (docx) into one single Office Word document
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> MergeDocumentDocxMultiWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
+        /// <summary>
+        /// Merge Two PDF Files Together
+        /// </summary>
+        /// <remarks>
+        /// Combine two PDF files (pdf) into a single PDF document, preserving the order of the input documents in the combined document
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <returns>byte[]</returns>
+        byte[] MergeDocumentPdf (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+
+        /// <summary>
+        /// Merge Two PDF Files Together
+        /// </summary>
+        /// <remarks>
+        /// Combine two PDF files (pdf) into a single PDF document, preserving the order of the input documents in the combined document
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
         /// <returns>ApiResponse of byte[]</returns>
-        ApiResponse<byte[]> MergeDocumentDocxWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+        ApiResponse<byte[]> MergeDocumentPdfWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
         /// <summary>
         /// Merge Multple PDF Files Together
         /// </summary>
@@ -54,9 +116,17 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
-        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
         /// <returns>byte[]</returns>
-        byte[] MergeDocumentPdf (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+        byte[] MergeDocumentPdfMulti (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
 
         /// <summary>
         /// Merge Multple PDF Files Together
@@ -66,9 +136,17 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
-        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
-        ApiResponse<byte[]> MergeDocumentPdfWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+        ApiResponse<byte[]> MergeDocumentPdfMultiWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
         /// <summary>
         /// Merge Multple PNG Files Together
         /// </summary>
@@ -93,10 +171,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> MergeDocumentPngWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
         /// <summary>
-        /// Merge Multple PowerPoint PPTX Together
+        /// Merge Two PowerPoint PPTX Together
         /// </summary>
         /// <remarks>
-        /// Combine multiple Office PowerPoint presentations (pptx) into one single Office PowerPoint presentation
+        /// Combine two Office PowerPoint presentations (pptx) into one single Office PowerPoint presentation
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
@@ -105,10 +183,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         byte[] MergeDocumentPptx (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
 
         /// <summary>
-        /// Merge Multple PowerPoint PPTX Together
+        /// Merge Two PowerPoint PPTX Together
         /// </summary>
         /// <remarks>
-        /// Combine multiple Office PowerPoint presentations (pptx) into one single Office PowerPoint presentation
+        /// Combine two Office PowerPoint presentations (pptx) into one single Office PowerPoint presentation
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
@@ -116,10 +194,49 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> MergeDocumentPptxWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
         /// <summary>
-        /// Merge Multple Excel XLSX Together
+        /// Merge Multple PowerPoint PPTX Together
         /// </summary>
         /// <remarks>
-        /// Combine multiple Office Excel spreadsheets (xlsx) into a single Office Excel spreadsheet
+        /// Combine multiple Office PowerPoint presentations (pptx) into one single Office PowerPoint presentation
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
+        /// <returns>byte[]</returns>
+        byte[] MergeDocumentPptxMulti (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
+
+        /// <summary>
+        /// Merge Multple PowerPoint PPTX Together
+        /// </summary>
+        /// <remarks>
+        /// Combine multiple Office PowerPoint presentations (pptx) into one single Office PowerPoint presentation
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> MergeDocumentPptxMultiWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
+        /// <summary>
+        /// Merge Two Excel XLSX Together
+        /// </summary>
+        /// <remarks>
+        /// Combine two Office Excel spreadsheets (xlsx) into a single Office Excel spreadsheet
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
@@ -128,6 +245,17 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         byte[] MergeDocumentXlsx (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
 
         /// <summary>
+        /// Merge Two Excel XLSX Together
+        /// </summary>
+        /// <remarks>
+        /// Combine two Office Excel spreadsheets (xlsx) into a single Office Excel spreadsheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> MergeDocumentXlsxWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+        /// <summary>
         /// Merge Multple Excel XLSX Together
         /// </summary>
         /// <remarks>
@@ -135,16 +263,44 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
-        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
+        /// <returns>byte[]</returns>
+        byte[] MergeDocumentXlsxMulti (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
+
+        /// <summary>
+        /// Merge Multple Excel XLSX Together
+        /// </summary>
+        /// <remarks>
+        /// Combine multiple Office Excel spreadsheets (xlsx) into a single Office Excel spreadsheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
-        ApiResponse<byte[]> MergeDocumentXlsxWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+        ApiResponse<byte[]> MergeDocumentXlsxMultiWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Merge Multple Word DOCX Together
+        /// Merge Two Word DOCX Together
         /// </summary>
         /// <remarks>
-        /// Combine multiple Office Word Documents (docx) into one single Office Word document
+        /// Combine two Office Word Documents (docx) into one single Office Word document
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
@@ -153,6 +309,17 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<byte[]> MergeDocumentDocxAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
 
         /// <summary>
+        /// Merge Two Word DOCX Together
+        /// </summary>
+        /// <remarks>
+        /// Combine two Office Word Documents (docx) into one single Office Word document
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> MergeDocumentDocxAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+        /// <summary>
         /// Merge Multple Word DOCX Together
         /// </summary>
         /// <remarks>
@@ -160,9 +327,60 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> MergeDocumentDocxMultiAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
+
+        /// <summary>
+        /// Merge Multple Word DOCX Together
+        /// </summary>
+        /// <remarks>
+        /// Combine multiple Office Word Documents (docx) into one single Office Word document
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> MergeDocumentDocxMultiAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
+        /// <summary>
+        /// Merge Two PDF Files Together
+        /// </summary>
+        /// <remarks>
+        /// Combine two PDF files (pdf) into a single PDF document, preserving the order of the input documents in the combined document
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> MergeDocumentPdfAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+
+        /// <summary>
+        /// Merge Two PDF Files Together
+        /// </summary>
+        /// <remarks>
+        /// Combine two PDF files (pdf) into a single PDF document, preserving the order of the input documents in the combined document
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        System.Threading.Tasks.Task<ApiResponse<byte[]>> MergeDocumentDocxAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> MergeDocumentPdfAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
         /// <summary>
         /// Merge Multple PDF Files Together
         /// </summary>
@@ -171,9 +389,17 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
-        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
         /// <returns>Task of byte[]</returns>
-        System.Threading.Tasks.Task<byte[]> MergeDocumentPdfAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+        System.Threading.Tasks.Task<byte[]> MergeDocumentPdfMultiAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
 
         /// <summary>
         /// Merge Multple PDF Files Together
@@ -183,9 +409,17 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
-        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        System.Threading.Tasks.Task<ApiResponse<byte[]>> MergeDocumentPdfAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> MergeDocumentPdfMultiAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
         /// <summary>
         /// Merge Multple PNG Files Together
         /// </summary>
@@ -210,10 +444,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> MergeDocumentPngAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
         /// <summary>
-        /// Merge Multple PowerPoint PPTX Together
+        /// Merge Two PowerPoint PPTX Together
         /// </summary>
         /// <remarks>
-        /// Combine multiple Office PowerPoint presentations (pptx) into one single Office PowerPoint presentation
+        /// Combine two Office PowerPoint presentations (pptx) into one single Office PowerPoint presentation
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
@@ -222,6 +456,17 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<byte[]> MergeDocumentPptxAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
 
         /// <summary>
+        /// Merge Two PowerPoint PPTX Together
+        /// </summary>
+        /// <remarks>
+        /// Combine two Office PowerPoint presentations (pptx) into one single Office PowerPoint presentation
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> MergeDocumentPptxAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+        /// <summary>
         /// Merge Multple PowerPoint PPTX Together
         /// </summary>
         /// <remarks>
@@ -229,9 +474,60 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> MergeDocumentPptxMultiAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
+
+        /// <summary>
+        /// Merge Multple PowerPoint PPTX Together
+        /// </summary>
+        /// <remarks>
+        /// Combine multiple Office PowerPoint presentations (pptx) into one single Office PowerPoint presentation
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> MergeDocumentPptxMultiAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
+        /// <summary>
+        /// Merge Two Excel XLSX Together
+        /// </summary>
+        /// <remarks>
+        /// Combine two Office Excel spreadsheets (xlsx) into a single Office Excel spreadsheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> MergeDocumentXlsxAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+
+        /// <summary>
+        /// Merge Two Excel XLSX Together
+        /// </summary>
+        /// <remarks>
+        /// Combine two Office Excel spreadsheets (xlsx) into a single Office Excel spreadsheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        System.Threading.Tasks.Task<ApiResponse<byte[]>> MergeDocumentPptxAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> MergeDocumentXlsxAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
         /// <summary>
         /// Merge Multple Excel XLSX Together
         /// </summary>
@@ -240,9 +536,17 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
-        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
         /// <returns>Task of byte[]</returns>
-        System.Threading.Tasks.Task<byte[]> MergeDocumentXlsxAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+        System.Threading.Tasks.Task<byte[]> MergeDocumentXlsxMultiAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
 
         /// <summary>
         /// Merge Multple Excel XLSX Together
@@ -252,9 +556,17 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
-        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        System.Threading.Tasks.Task<ApiResponse<byte[]>> MergeDocumentXlsxAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> MergeDocumentXlsxMultiAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
         #endregion Asynchronous Operations
     }
 
@@ -356,7 +668,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Merge Multple Word DOCX Together Combine multiple Office Word Documents (docx) into one single Office Word document
+        /// Merge Two Word DOCX Together Combine two Office Word Documents (docx) into one single Office Word document
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
@@ -369,7 +681,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Merge Multple Word DOCX Together Combine multiple Office Word Documents (docx) into one single Office Word document
+        /// Merge Two Word DOCX Together Combine two Office Word Documents (docx) into one single Office Word document
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
@@ -434,7 +746,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Merge Multple Word DOCX Together Combine multiple Office Word Documents (docx) into one single Office Word document
+        /// Merge Two Word DOCX Together Combine two Office Word Documents (docx) into one single Office Word document
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
@@ -448,7 +760,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Merge Multple Word DOCX Together Combine multiple Office Word Documents (docx) into one single Office Word document
+        /// Merge Two Word DOCX Together Combine two Office Word Documents (docx) into one single Office Word document
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
@@ -513,7 +825,212 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Merge Multple PDF Files Together Combine multiple PDF files (pdf) into a single PDF document, preserving the order of the input documents in the combined document
+        /// Merge Multple Word DOCX Together Combine multiple Office Word Documents (docx) into one single Office Word document
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
+        /// <returns>byte[]</returns>
+        public byte[] MergeDocumentDocxMulti (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null)
+        {
+             ApiResponse<byte[]> localVarResponse = MergeDocumentDocxMultiWithHttpInfo(inputFile1, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Merge Multple Word DOCX Together Combine multiple Office Word Documents (docx) into one single Office Word document
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > MergeDocumentDocxMultiWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null)
+        {
+            // verify the required parameter 'inputFile1' is set
+            if (inputFile1 == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile1' when calling MergeDocumentApi->MergeDocumentDocxMulti");
+            // verify the required parameter 'inputFile2' is set
+            if (inputFile2 == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile2' when calling MergeDocumentApi->MergeDocumentDocxMulti");
+
+            var localVarPath = "/convert/merge/docx/multi";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile1 != null) localVarFileParams.Add("inputFile1", this.Configuration.ApiClient.ParameterToFile("inputFile1", inputFile1));
+            if (inputFile2 != null) localVarFileParams.Add("inputFile2", this.Configuration.ApiClient.ParameterToFile("inputFile2", inputFile2));
+            if (inputFile3 != null) localVarFileParams.Add("inputFile3", this.Configuration.ApiClient.ParameterToFile("inputFile3", inputFile3));
+            if (inputFile4 != null) localVarFileParams.Add("inputFile4", this.Configuration.ApiClient.ParameterToFile("inputFile4", inputFile4));
+            if (inputFile5 != null) localVarFileParams.Add("inputFile5", this.Configuration.ApiClient.ParameterToFile("inputFile5", inputFile5));
+            if (inputFile6 != null) localVarFileParams.Add("inputFile6", this.Configuration.ApiClient.ParameterToFile("inputFile6", inputFile6));
+            if (inputFile7 != null) localVarFileParams.Add("inputFile7", this.Configuration.ApiClient.ParameterToFile("inputFile7", inputFile7));
+            if (inputFile8 != null) localVarFileParams.Add("inputFile8", this.Configuration.ApiClient.ParameterToFile("inputFile8", inputFile8));
+            if (inputFile9 != null) localVarFileParams.Add("inputFile9", this.Configuration.ApiClient.ParameterToFile("inputFile9", inputFile9));
+            if (inputFile10 != null) localVarFileParams.Add("inputFile10", this.Configuration.ApiClient.ParameterToFile("inputFile10", inputFile10));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MergeDocumentDocxMulti", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Merge Multple Word DOCX Together Combine multiple Office Word Documents (docx) into one single Office Word document
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> MergeDocumentDocxMultiAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null)
+        {
+             ApiResponse<byte[]> localVarResponse = await MergeDocumentDocxMultiAsyncWithHttpInfo(inputFile1, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Merge Multple Word DOCX Together Combine multiple Office Word Documents (docx) into one single Office Word document
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> MergeDocumentDocxMultiAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null)
+        {
+            // verify the required parameter 'inputFile1' is set
+            if (inputFile1 == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile1' when calling MergeDocumentApi->MergeDocumentDocxMulti");
+            // verify the required parameter 'inputFile2' is set
+            if (inputFile2 == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile2' when calling MergeDocumentApi->MergeDocumentDocxMulti");
+
+            var localVarPath = "/convert/merge/docx/multi";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile1 != null) localVarFileParams.Add("inputFile1", this.Configuration.ApiClient.ParameterToFile("inputFile1", inputFile1));
+            if (inputFile2 != null) localVarFileParams.Add("inputFile2", this.Configuration.ApiClient.ParameterToFile("inputFile2", inputFile2));
+            if (inputFile3 != null) localVarFileParams.Add("inputFile3", this.Configuration.ApiClient.ParameterToFile("inputFile3", inputFile3));
+            if (inputFile4 != null) localVarFileParams.Add("inputFile4", this.Configuration.ApiClient.ParameterToFile("inputFile4", inputFile4));
+            if (inputFile5 != null) localVarFileParams.Add("inputFile5", this.Configuration.ApiClient.ParameterToFile("inputFile5", inputFile5));
+            if (inputFile6 != null) localVarFileParams.Add("inputFile6", this.Configuration.ApiClient.ParameterToFile("inputFile6", inputFile6));
+            if (inputFile7 != null) localVarFileParams.Add("inputFile7", this.Configuration.ApiClient.ParameterToFile("inputFile7", inputFile7));
+            if (inputFile8 != null) localVarFileParams.Add("inputFile8", this.Configuration.ApiClient.ParameterToFile("inputFile8", inputFile8));
+            if (inputFile9 != null) localVarFileParams.Add("inputFile9", this.Configuration.ApiClient.ParameterToFile("inputFile9", inputFile9));
+            if (inputFile10 != null) localVarFileParams.Add("inputFile10", this.Configuration.ApiClient.ParameterToFile("inputFile10", inputFile10));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MergeDocumentDocxMulti", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Merge Two PDF Files Together Combine two PDF files (pdf) into a single PDF document, preserving the order of the input documents in the combined document
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
@@ -526,7 +1043,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Merge Multple PDF Files Together Combine multiple PDF files (pdf) into a single PDF document, preserving the order of the input documents in the combined document
+        /// Merge Two PDF Files Together Combine two PDF files (pdf) into a single PDF document, preserving the order of the input documents in the combined document
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
@@ -591,7 +1108,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Merge Multple PDF Files Together Combine multiple PDF files (pdf) into a single PDF document, preserving the order of the input documents in the combined document
+        /// Merge Two PDF Files Together Combine two PDF files (pdf) into a single PDF document, preserving the order of the input documents in the combined document
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
@@ -605,7 +1122,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Merge Multple PDF Files Together Combine multiple PDF files (pdf) into a single PDF document, preserving the order of the input documents in the combined document
+        /// Merge Two PDF Files Together Combine two PDF files (pdf) into a single PDF document, preserving the order of the input documents in the combined document
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
@@ -661,6 +1178,211 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("MergeDocumentPdf", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Merge Multple PDF Files Together Combine multiple PDF files (pdf) into a single PDF document, preserving the order of the input documents in the combined document
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
+        /// <returns>byte[]</returns>
+        public byte[] MergeDocumentPdfMulti (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null)
+        {
+             ApiResponse<byte[]> localVarResponse = MergeDocumentPdfMultiWithHttpInfo(inputFile1, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Merge Multple PDF Files Together Combine multiple PDF files (pdf) into a single PDF document, preserving the order of the input documents in the combined document
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > MergeDocumentPdfMultiWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null)
+        {
+            // verify the required parameter 'inputFile1' is set
+            if (inputFile1 == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile1' when calling MergeDocumentApi->MergeDocumentPdfMulti");
+            // verify the required parameter 'inputFile2' is set
+            if (inputFile2 == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile2' when calling MergeDocumentApi->MergeDocumentPdfMulti");
+
+            var localVarPath = "/convert/merge/pdf/multi";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile1 != null) localVarFileParams.Add("inputFile1", this.Configuration.ApiClient.ParameterToFile("inputFile1", inputFile1));
+            if (inputFile2 != null) localVarFileParams.Add("inputFile2", this.Configuration.ApiClient.ParameterToFile("inputFile2", inputFile2));
+            if (inputFile3 != null) localVarFileParams.Add("inputFile3", this.Configuration.ApiClient.ParameterToFile("inputFile3", inputFile3));
+            if (inputFile4 != null) localVarFileParams.Add("inputFile4", this.Configuration.ApiClient.ParameterToFile("inputFile4", inputFile4));
+            if (inputFile5 != null) localVarFileParams.Add("inputFile5", this.Configuration.ApiClient.ParameterToFile("inputFile5", inputFile5));
+            if (inputFile6 != null) localVarFileParams.Add("inputFile6", this.Configuration.ApiClient.ParameterToFile("inputFile6", inputFile6));
+            if (inputFile7 != null) localVarFileParams.Add("inputFile7", this.Configuration.ApiClient.ParameterToFile("inputFile7", inputFile7));
+            if (inputFile8 != null) localVarFileParams.Add("inputFile8", this.Configuration.ApiClient.ParameterToFile("inputFile8", inputFile8));
+            if (inputFile9 != null) localVarFileParams.Add("inputFile9", this.Configuration.ApiClient.ParameterToFile("inputFile9", inputFile9));
+            if (inputFile10 != null) localVarFileParams.Add("inputFile10", this.Configuration.ApiClient.ParameterToFile("inputFile10", inputFile10));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MergeDocumentPdfMulti", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Merge Multple PDF Files Together Combine multiple PDF files (pdf) into a single PDF document, preserving the order of the input documents in the combined document
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> MergeDocumentPdfMultiAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null)
+        {
+             ApiResponse<byte[]> localVarResponse = await MergeDocumentPdfMultiAsyncWithHttpInfo(inputFile1, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Merge Multple PDF Files Together Combine multiple PDF files (pdf) into a single PDF document, preserving the order of the input documents in the combined document
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> MergeDocumentPdfMultiAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null)
+        {
+            // verify the required parameter 'inputFile1' is set
+            if (inputFile1 == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile1' when calling MergeDocumentApi->MergeDocumentPdfMulti");
+            // verify the required parameter 'inputFile2' is set
+            if (inputFile2 == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile2' when calling MergeDocumentApi->MergeDocumentPdfMulti");
+
+            var localVarPath = "/convert/merge/pdf/multi";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile1 != null) localVarFileParams.Add("inputFile1", this.Configuration.ApiClient.ParameterToFile("inputFile1", inputFile1));
+            if (inputFile2 != null) localVarFileParams.Add("inputFile2", this.Configuration.ApiClient.ParameterToFile("inputFile2", inputFile2));
+            if (inputFile3 != null) localVarFileParams.Add("inputFile3", this.Configuration.ApiClient.ParameterToFile("inputFile3", inputFile3));
+            if (inputFile4 != null) localVarFileParams.Add("inputFile4", this.Configuration.ApiClient.ParameterToFile("inputFile4", inputFile4));
+            if (inputFile5 != null) localVarFileParams.Add("inputFile5", this.Configuration.ApiClient.ParameterToFile("inputFile5", inputFile5));
+            if (inputFile6 != null) localVarFileParams.Add("inputFile6", this.Configuration.ApiClient.ParameterToFile("inputFile6", inputFile6));
+            if (inputFile7 != null) localVarFileParams.Add("inputFile7", this.Configuration.ApiClient.ParameterToFile("inputFile7", inputFile7));
+            if (inputFile8 != null) localVarFileParams.Add("inputFile8", this.Configuration.ApiClient.ParameterToFile("inputFile8", inputFile8));
+            if (inputFile9 != null) localVarFileParams.Add("inputFile9", this.Configuration.ApiClient.ParameterToFile("inputFile9", inputFile9));
+            if (inputFile10 != null) localVarFileParams.Add("inputFile10", this.Configuration.ApiClient.ParameterToFile("inputFile10", inputFile10));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MergeDocumentPdfMulti", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -827,7 +1549,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Merge Multple PowerPoint PPTX Together Combine multiple Office PowerPoint presentations (pptx) into one single Office PowerPoint presentation
+        /// Merge Two PowerPoint PPTX Together Combine two Office PowerPoint presentations (pptx) into one single Office PowerPoint presentation
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
@@ -840,7 +1562,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Merge Multple PowerPoint PPTX Together Combine multiple Office PowerPoint presentations (pptx) into one single Office PowerPoint presentation
+        /// Merge Two PowerPoint PPTX Together Combine two Office PowerPoint presentations (pptx) into one single Office PowerPoint presentation
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
@@ -905,7 +1627,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Merge Multple PowerPoint PPTX Together Combine multiple Office PowerPoint presentations (pptx) into one single Office PowerPoint presentation
+        /// Merge Two PowerPoint PPTX Together Combine two Office PowerPoint presentations (pptx) into one single Office PowerPoint presentation
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
@@ -919,7 +1641,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Merge Multple PowerPoint PPTX Together Combine multiple Office PowerPoint presentations (pptx) into one single Office PowerPoint presentation
+        /// Merge Two PowerPoint PPTX Together Combine two Office PowerPoint presentations (pptx) into one single Office PowerPoint presentation
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
@@ -984,7 +1706,212 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Merge Multple Excel XLSX Together Combine multiple Office Excel spreadsheets (xlsx) into a single Office Excel spreadsheet
+        /// Merge Multple PowerPoint PPTX Together Combine multiple Office PowerPoint presentations (pptx) into one single Office PowerPoint presentation
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
+        /// <returns>byte[]</returns>
+        public byte[] MergeDocumentPptxMulti (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null)
+        {
+             ApiResponse<byte[]> localVarResponse = MergeDocumentPptxMultiWithHttpInfo(inputFile1, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Merge Multple PowerPoint PPTX Together Combine multiple Office PowerPoint presentations (pptx) into one single Office PowerPoint presentation
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > MergeDocumentPptxMultiWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null)
+        {
+            // verify the required parameter 'inputFile1' is set
+            if (inputFile1 == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile1' when calling MergeDocumentApi->MergeDocumentPptxMulti");
+            // verify the required parameter 'inputFile2' is set
+            if (inputFile2 == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile2' when calling MergeDocumentApi->MergeDocumentPptxMulti");
+
+            var localVarPath = "/convert/merge/pptx/multi";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile1 != null) localVarFileParams.Add("inputFile1", this.Configuration.ApiClient.ParameterToFile("inputFile1", inputFile1));
+            if (inputFile2 != null) localVarFileParams.Add("inputFile2", this.Configuration.ApiClient.ParameterToFile("inputFile2", inputFile2));
+            if (inputFile3 != null) localVarFileParams.Add("inputFile3", this.Configuration.ApiClient.ParameterToFile("inputFile3", inputFile3));
+            if (inputFile4 != null) localVarFileParams.Add("inputFile4", this.Configuration.ApiClient.ParameterToFile("inputFile4", inputFile4));
+            if (inputFile5 != null) localVarFileParams.Add("inputFile5", this.Configuration.ApiClient.ParameterToFile("inputFile5", inputFile5));
+            if (inputFile6 != null) localVarFileParams.Add("inputFile6", this.Configuration.ApiClient.ParameterToFile("inputFile6", inputFile6));
+            if (inputFile7 != null) localVarFileParams.Add("inputFile7", this.Configuration.ApiClient.ParameterToFile("inputFile7", inputFile7));
+            if (inputFile8 != null) localVarFileParams.Add("inputFile8", this.Configuration.ApiClient.ParameterToFile("inputFile8", inputFile8));
+            if (inputFile9 != null) localVarFileParams.Add("inputFile9", this.Configuration.ApiClient.ParameterToFile("inputFile9", inputFile9));
+            if (inputFile10 != null) localVarFileParams.Add("inputFile10", this.Configuration.ApiClient.ParameterToFile("inputFile10", inputFile10));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MergeDocumentPptxMulti", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Merge Multple PowerPoint PPTX Together Combine multiple Office PowerPoint presentations (pptx) into one single Office PowerPoint presentation
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> MergeDocumentPptxMultiAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null)
+        {
+             ApiResponse<byte[]> localVarResponse = await MergeDocumentPptxMultiAsyncWithHttpInfo(inputFile1, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Merge Multple PowerPoint PPTX Together Combine multiple Office PowerPoint presentations (pptx) into one single Office PowerPoint presentation
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> MergeDocumentPptxMultiAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null)
+        {
+            // verify the required parameter 'inputFile1' is set
+            if (inputFile1 == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile1' when calling MergeDocumentApi->MergeDocumentPptxMulti");
+            // verify the required parameter 'inputFile2' is set
+            if (inputFile2 == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile2' when calling MergeDocumentApi->MergeDocumentPptxMulti");
+
+            var localVarPath = "/convert/merge/pptx/multi";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile1 != null) localVarFileParams.Add("inputFile1", this.Configuration.ApiClient.ParameterToFile("inputFile1", inputFile1));
+            if (inputFile2 != null) localVarFileParams.Add("inputFile2", this.Configuration.ApiClient.ParameterToFile("inputFile2", inputFile2));
+            if (inputFile3 != null) localVarFileParams.Add("inputFile3", this.Configuration.ApiClient.ParameterToFile("inputFile3", inputFile3));
+            if (inputFile4 != null) localVarFileParams.Add("inputFile4", this.Configuration.ApiClient.ParameterToFile("inputFile4", inputFile4));
+            if (inputFile5 != null) localVarFileParams.Add("inputFile5", this.Configuration.ApiClient.ParameterToFile("inputFile5", inputFile5));
+            if (inputFile6 != null) localVarFileParams.Add("inputFile6", this.Configuration.ApiClient.ParameterToFile("inputFile6", inputFile6));
+            if (inputFile7 != null) localVarFileParams.Add("inputFile7", this.Configuration.ApiClient.ParameterToFile("inputFile7", inputFile7));
+            if (inputFile8 != null) localVarFileParams.Add("inputFile8", this.Configuration.ApiClient.ParameterToFile("inputFile8", inputFile8));
+            if (inputFile9 != null) localVarFileParams.Add("inputFile9", this.Configuration.ApiClient.ParameterToFile("inputFile9", inputFile9));
+            if (inputFile10 != null) localVarFileParams.Add("inputFile10", this.Configuration.ApiClient.ParameterToFile("inputFile10", inputFile10));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MergeDocumentPptxMulti", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Merge Two Excel XLSX Together Combine two Office Excel spreadsheets (xlsx) into a single Office Excel spreadsheet
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
@@ -997,7 +1924,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Merge Multple Excel XLSX Together Combine multiple Office Excel spreadsheets (xlsx) into a single Office Excel spreadsheet
+        /// Merge Two Excel XLSX Together Combine two Office Excel spreadsheets (xlsx) into a single Office Excel spreadsheet
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
@@ -1062,7 +1989,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Merge Multple Excel XLSX Together Combine multiple Office Excel spreadsheets (xlsx) into a single Office Excel spreadsheet
+        /// Merge Two Excel XLSX Together Combine two Office Excel spreadsheets (xlsx) into a single Office Excel spreadsheet
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
@@ -1076,7 +2003,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Merge Multple Excel XLSX Together Combine multiple Office Excel spreadsheets (xlsx) into a single Office Excel spreadsheet
+        /// Merge Two Excel XLSX Together Combine two Office Excel spreadsheets (xlsx) into a single Office Excel spreadsheet
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
@@ -1132,6 +2059,211 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("MergeDocumentXlsx", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Merge Multple Excel XLSX Together Combine multiple Office Excel spreadsheets (xlsx) into a single Office Excel spreadsheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
+        /// <returns>byte[]</returns>
+        public byte[] MergeDocumentXlsxMulti (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null)
+        {
+             ApiResponse<byte[]> localVarResponse = MergeDocumentXlsxMultiWithHttpInfo(inputFile1, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Merge Multple Excel XLSX Together Combine multiple Office Excel spreadsheets (xlsx) into a single Office Excel spreadsheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > MergeDocumentXlsxMultiWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null)
+        {
+            // verify the required parameter 'inputFile1' is set
+            if (inputFile1 == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile1' when calling MergeDocumentApi->MergeDocumentXlsxMulti");
+            // verify the required parameter 'inputFile2' is set
+            if (inputFile2 == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile2' when calling MergeDocumentApi->MergeDocumentXlsxMulti");
+
+            var localVarPath = "/convert/merge/xlsx/multi";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile1 != null) localVarFileParams.Add("inputFile1", this.Configuration.ApiClient.ParameterToFile("inputFile1", inputFile1));
+            if (inputFile2 != null) localVarFileParams.Add("inputFile2", this.Configuration.ApiClient.ParameterToFile("inputFile2", inputFile2));
+            if (inputFile3 != null) localVarFileParams.Add("inputFile3", this.Configuration.ApiClient.ParameterToFile("inputFile3", inputFile3));
+            if (inputFile4 != null) localVarFileParams.Add("inputFile4", this.Configuration.ApiClient.ParameterToFile("inputFile4", inputFile4));
+            if (inputFile5 != null) localVarFileParams.Add("inputFile5", this.Configuration.ApiClient.ParameterToFile("inputFile5", inputFile5));
+            if (inputFile6 != null) localVarFileParams.Add("inputFile6", this.Configuration.ApiClient.ParameterToFile("inputFile6", inputFile6));
+            if (inputFile7 != null) localVarFileParams.Add("inputFile7", this.Configuration.ApiClient.ParameterToFile("inputFile7", inputFile7));
+            if (inputFile8 != null) localVarFileParams.Add("inputFile8", this.Configuration.ApiClient.ParameterToFile("inputFile8", inputFile8));
+            if (inputFile9 != null) localVarFileParams.Add("inputFile9", this.Configuration.ApiClient.ParameterToFile("inputFile9", inputFile9));
+            if (inputFile10 != null) localVarFileParams.Add("inputFile10", this.Configuration.ApiClient.ParameterToFile("inputFile10", inputFile10));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MergeDocumentXlsxMulti", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Merge Multple Excel XLSX Together Combine multiple Office Excel spreadsheets (xlsx) into a single Office Excel spreadsheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> MergeDocumentXlsxMultiAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null)
+        {
+             ApiResponse<byte[]> localVarResponse = await MergeDocumentXlsxMultiAsyncWithHttpInfo(inputFile1, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Merge Multple Excel XLSX Together Combine multiple Office Excel spreadsheets (xlsx) into a single Office Excel spreadsheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> MergeDocumentXlsxMultiAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null)
+        {
+            // verify the required parameter 'inputFile1' is set
+            if (inputFile1 == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile1' when calling MergeDocumentApi->MergeDocumentXlsxMulti");
+            // verify the required parameter 'inputFile2' is set
+            if (inputFile2 == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile2' when calling MergeDocumentApi->MergeDocumentXlsxMulti");
+
+            var localVarPath = "/convert/merge/xlsx/multi";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile1 != null) localVarFileParams.Add("inputFile1", this.Configuration.ApiClient.ParameterToFile("inputFile1", inputFile1));
+            if (inputFile2 != null) localVarFileParams.Add("inputFile2", this.Configuration.ApiClient.ParameterToFile("inputFile2", inputFile2));
+            if (inputFile3 != null) localVarFileParams.Add("inputFile3", this.Configuration.ApiClient.ParameterToFile("inputFile3", inputFile3));
+            if (inputFile4 != null) localVarFileParams.Add("inputFile4", this.Configuration.ApiClient.ParameterToFile("inputFile4", inputFile4));
+            if (inputFile5 != null) localVarFileParams.Add("inputFile5", this.Configuration.ApiClient.ParameterToFile("inputFile5", inputFile5));
+            if (inputFile6 != null) localVarFileParams.Add("inputFile6", this.Configuration.ApiClient.ParameterToFile("inputFile6", inputFile6));
+            if (inputFile7 != null) localVarFileParams.Add("inputFile7", this.Configuration.ApiClient.ParameterToFile("inputFile7", inputFile7));
+            if (inputFile8 != null) localVarFileParams.Add("inputFile8", this.Configuration.ApiClient.ParameterToFile("inputFile8", inputFile8));
+            if (inputFile9 != null) localVarFileParams.Add("inputFile9", this.Configuration.ApiClient.ParameterToFile("inputFile9", inputFile9));
+            if (inputFile10 != null) localVarFileParams.Add("inputFile10", this.Configuration.ApiClient.ParameterToFile("inputFile10", inputFile10));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MergeDocumentXlsxMulti", localVarResponse);
                 if (exception != null) throw exception;
             }
 

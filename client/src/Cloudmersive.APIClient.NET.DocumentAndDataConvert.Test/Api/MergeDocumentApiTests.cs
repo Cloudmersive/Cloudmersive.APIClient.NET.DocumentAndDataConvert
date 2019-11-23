@@ -77,6 +77,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test MergeDocumentDocxMulti
+        /// </summary>
+        [Test]
+        public void MergeDocumentDocxMultiTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile1 = null;
+            //System.IO.Stream inputFile2 = null;
+            //System.IO.Stream inputFile3 = null;
+            //System.IO.Stream inputFile4 = null;
+            //System.IO.Stream inputFile5 = null;
+            //System.IO.Stream inputFile6 = null;
+            //System.IO.Stream inputFile7 = null;
+            //System.IO.Stream inputFile8 = null;
+            //System.IO.Stream inputFile9 = null;
+            //System.IO.Stream inputFile10 = null;
+            //var response = instance.MergeDocumentDocxMulti(inputFile1, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
         /// Test MergeDocumentPdf
         /// </summary>
         [Test]
@@ -86,6 +107,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //System.IO.Stream inputFile1 = null;
             //System.IO.Stream inputFile2 = null;
             //var response = instance.MergeDocumentPdf(inputFile1, inputFile2);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
+        /// Test MergeDocumentPdfMulti
+        /// </summary>
+        [Test]
+        public void MergeDocumentPdfMultiTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile1 = null;
+            //System.IO.Stream inputFile2 = null;
+            //System.IO.Stream inputFile3 = null;
+            //System.IO.Stream inputFile4 = null;
+            //System.IO.Stream inputFile5 = null;
+            //System.IO.Stream inputFile6 = null;
+            //System.IO.Stream inputFile7 = null;
+            //System.IO.Stream inputFile8 = null;
+            //System.IO.Stream inputFile9 = null;
+            //System.IO.Stream inputFile10 = null;
+            //var response = instance.MergeDocumentPdfMulti(inputFile1, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
@@ -116,6 +158,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test MergeDocumentPptxMulti
+        /// </summary>
+        [Test]
+        public void MergeDocumentPptxMultiTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile1 = null;
+            //System.IO.Stream inputFile2 = null;
+            //System.IO.Stream inputFile3 = null;
+            //System.IO.Stream inputFile4 = null;
+            //System.IO.Stream inputFile5 = null;
+            //System.IO.Stream inputFile6 = null;
+            //System.IO.Stream inputFile7 = null;
+            //System.IO.Stream inputFile8 = null;
+            //System.IO.Stream inputFile9 = null;
+            //System.IO.Stream inputFile10 = null;
+            //var response = instance.MergeDocumentPptxMulti(inputFile1, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
         /// Test MergeDocumentXlsx
         /// </summary>
         [Test]
@@ -125,6 +188,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //System.IO.Stream inputFile1 = null;
             //System.IO.Stream inputFile2 = null;
             //var response = instance.MergeDocumentXlsx(inputFile1, inputFile2);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
+        /// Test MergeDocumentXlsxMulti
+        /// </summary>
+        [Test]
+        public void MergeDocumentXlsxMultiTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile1 = null;
+            //System.IO.Stream inputFile2 = null;
+            //System.IO.Stream inputFile3 = null;
+            //System.IO.Stream inputFile4 = null;
+            //System.IO.Stream inputFile5 = null;
+            //System.IO.Stream inputFile6 = null;
+            //System.IO.Stream inputFile7 = null;
+            //System.IO.Stream inputFile8 = null;
+            //System.IO.Stream inputFile9 = null;
+            //System.IO.Stream inputFile10 = null;
+            //var response = instance.MergeDocumentXlsxMulti(inputFile1, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
