@@ -25,6 +25,29 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Split a PDF file into separate PDF files, one per page
+        /// </summary>
+        /// <remarks>
+        /// Split an input PDF file into separate pages, comprised of one PDF file per page.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="returnDocumentContents">Set to true to directly return all of the document contents in the DocumentContents field; set to false to return contents as temporary URLs (more efficient for large operations).  Default is false. (optional)</param>
+        /// <returns>SplitPdfResult</returns>
+        SplitPdfResult SplitDocumentPdfByPage (System.IO.Stream inputFile, bool? returnDocumentContents = null);
+
+        /// <summary>
+        /// Split a PDF file into separate PDF files, one per page
+        /// </summary>
+        /// <remarks>
+        /// Split an input PDF file into separate pages, comprised of one PDF file per page.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="returnDocumentContents">Set to true to directly return all of the document contents in the DocumentContents field; set to false to return contents as temporary URLs (more efficient for large operations).  Default is false. (optional)</param>
+        /// <returns>ApiResponse of SplitPdfResult</returns>
+        ApiResponse<SplitPdfResult> SplitDocumentPdfByPageWithHttpInfo (System.IO.Stream inputFile, bool? returnDocumentContents = null);
+        /// <summary>
         /// Split a single Excel XLSX into Separate Worksheets
         /// </summary>
         /// <remarks>
@@ -47,6 +70,29 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         ApiResponse<SplitXlsxWorksheetResult> SplitDocumentXlsxWithHttpInfo (System.IO.Stream inputFile);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// Split a PDF file into separate PDF files, one per page
+        /// </summary>
+        /// <remarks>
+        /// Split an input PDF file into separate pages, comprised of one PDF file per page.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="returnDocumentContents">Set to true to directly return all of the document contents in the DocumentContents field; set to false to return contents as temporary URLs (more efficient for large operations).  Default is false. (optional)</param>
+        /// <returns>Task of SplitPdfResult</returns>
+        System.Threading.Tasks.Task<SplitPdfResult> SplitDocumentPdfByPageAsync (System.IO.Stream inputFile, bool? returnDocumentContents = null);
+
+        /// <summary>
+        /// Split a PDF file into separate PDF files, one per page
+        /// </summary>
+        /// <remarks>
+        /// Split an input PDF file into separate pages, comprised of one PDF file per page.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="returnDocumentContents">Set to true to directly return all of the document contents in the DocumentContents field; set to false to return contents as temporary URLs (more efficient for large operations).  Default is false. (optional)</param>
+        /// <returns>Task of ApiResponse (SplitPdfResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SplitPdfResult>> SplitDocumentPdfByPageAsyncWithHttpInfo (System.IO.Stream inputFile, bool? returnDocumentContents = null);
         /// <summary>
         /// Split a single Excel XLSX into Separate Worksheets
         /// </summary>
@@ -169,6 +215,163 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
+        /// Split a PDF file into separate PDF files, one per page Split an input PDF file into separate pages, comprised of one PDF file per page.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="returnDocumentContents">Set to true to directly return all of the document contents in the DocumentContents field; set to false to return contents as temporary URLs (more efficient for large operations).  Default is false. (optional)</param>
+        /// <returns>SplitPdfResult</returns>
+        public SplitPdfResult SplitDocumentPdfByPage (System.IO.Stream inputFile, bool? returnDocumentContents = null)
+        {
+             ApiResponse<SplitPdfResult> localVarResponse = SplitDocumentPdfByPageWithHttpInfo(inputFile, returnDocumentContents);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Split a PDF file into separate PDF files, one per page Split an input PDF file into separate pages, comprised of one PDF file per page.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="returnDocumentContents">Set to true to directly return all of the document contents in the DocumentContents field; set to false to return contents as temporary URLs (more efficient for large operations).  Default is false. (optional)</param>
+        /// <returns>ApiResponse of SplitPdfResult</returns>
+        public ApiResponse< SplitPdfResult > SplitDocumentPdfByPageWithHttpInfo (System.IO.Stream inputFile, bool? returnDocumentContents = null)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling SplitDocumentApi->SplitDocumentPdfByPage");
+
+            var localVarPath = "/convert/split/pdf";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (returnDocumentContents != null) localVarHeaderParams.Add("returnDocumentContents", this.Configuration.ApiClient.ParameterToString(returnDocumentContents)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SplitDocumentPdfByPage", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SplitPdfResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SplitPdfResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SplitPdfResult)));
+        }
+
+        /// <summary>
+        /// Split a PDF file into separate PDF files, one per page Split an input PDF file into separate pages, comprised of one PDF file per page.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="returnDocumentContents">Set to true to directly return all of the document contents in the DocumentContents field; set to false to return contents as temporary URLs (more efficient for large operations).  Default is false. (optional)</param>
+        /// <returns>Task of SplitPdfResult</returns>
+        public async System.Threading.Tasks.Task<SplitPdfResult> SplitDocumentPdfByPageAsync (System.IO.Stream inputFile, bool? returnDocumentContents = null)
+        {
+             ApiResponse<SplitPdfResult> localVarResponse = await SplitDocumentPdfByPageAsyncWithHttpInfo(inputFile, returnDocumentContents);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Split a PDF file into separate PDF files, one per page Split an input PDF file into separate pages, comprised of one PDF file per page.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="returnDocumentContents">Set to true to directly return all of the document contents in the DocumentContents field; set to false to return contents as temporary URLs (more efficient for large operations).  Default is false. (optional)</param>
+        /// <returns>Task of ApiResponse (SplitPdfResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SplitPdfResult>> SplitDocumentPdfByPageAsyncWithHttpInfo (System.IO.Stream inputFile, bool? returnDocumentContents = null)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling SplitDocumentApi->SplitDocumentPdfByPage");
+
+            var localVarPath = "/convert/split/pdf";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (returnDocumentContents != null) localVarHeaderParams.Add("returnDocumentContents", this.Configuration.ApiClient.ParameterToString(returnDocumentContents)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SplitDocumentPdfByPage", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SplitPdfResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SplitPdfResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SplitPdfResult)));
+        }
+
+        /// <summary>
         /// Split a single Excel XLSX into Separate Worksheets Split an Excel XLSX Spreadsheet, comprised of multiple Worksheets (or Tabs) into separate Excel XLSX spreadsheet files, with each containing exactly one Worksheet.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
@@ -208,7 +411,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/octet-stream"
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -281,7 +487,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/octet-stream"
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
