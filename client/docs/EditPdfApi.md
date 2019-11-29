@@ -4,6 +4,7 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**EditPdfDecrypt**](EditPdfApi.md#editpdfdecrypt) | **POST** /convert/edit/pdf/decrypt | Decrypt and password-protect a PDF
 [**EditPdfDeletePages**](EditPdfApi.md#editpdfdeletepages) | **POST** /convert/edit/pdf/pages/delete | Remove / delete pages from a PDF document
 [**EditPdfEncrypt**](EditPdfApi.md#editpdfencrypt) | **POST** /convert/edit/pdf/encrypt | Encrypt and password-protect a PDF
 [**EditPdfGetFormFields**](EditPdfApi.md#editpdfgetformfields) | **POST** /convert/edit/pdf/form/get-fields | Gets PDF Form fields and values
@@ -15,6 +16,74 @@ Method | HTTP request | Description
 [**EditPdfSetPermissions**](EditPdfApi.md#editpdfsetpermissions) | **POST** /convert/edit/pdf/encrypt/set-permissions | Encrypt, password-protect and set restricted permissions on a PDF
 [**EditPdfWatermarkText**](EditPdfApi.md#editpdfwatermarktext) | **POST** /convert/edit/pdf/watermark/text | Add a text watermark to a PDF
 
+
+<a name="editpdfdecrypt"></a>
+# **EditPdfDecrypt**
+> byte[] EditPdfDecrypt (string password, System.IO.Stream inputFile)
+
+Decrypt and password-protect a PDF
+
+Decrypt a PDF document with a password.  Decrypted PDF will no longer require a password to open.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class EditPdfDecryptExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new EditPdfApi();
+            var password = password_example;  // string | Valid password for the PDF file
+            var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
+
+            try
+            {
+                // Decrypt and password-protect a PDF
+                byte[] result = apiInstance.EditPdfDecrypt(password, inputFile);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling EditPdfApi.EditPdfDecrypt: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **password** | **string**| Valid password for the PDF file | 
+ **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
+
+### Return type
+
+**byte[]**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/octet-stream
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="editpdfdeletepages"></a>
 # **EditPdfDeletePages**
@@ -88,7 +157,7 @@ Name | Type | Description  | Notes
 
 <a name="editpdfencrypt"></a>
 # **EditPdfEncrypt**
-> byte[] EditPdfEncrypt (System.IO.Stream inputFile, string userPassword = null, string ownerPassword = null)
+> byte[] EditPdfEncrypt (System.IO.Stream inputFile, string userPassword = null, string ownerPassword = null, string encryptionKeyLength = null)
 
 Encrypt and password-protect a PDF
 
@@ -117,11 +186,12 @@ namespace Example
             var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
             var userPassword = userPassword_example;  // string | Password of a user (reader) of the PDF file (optional) 
             var ownerPassword = ownerPassword_example;  // string | Password of a owner (creator/editor) of the PDF file (optional) 
+            var encryptionKeyLength = encryptionKeyLength_example;  // string | Possible values are \"128\" (128-bit RC4 encryption) and \"256\" (256-bit AES encryption).  Default is 256. (optional) 
 
             try
             {
                 // Encrypt and password-protect a PDF
-                byte[] result = apiInstance.EditPdfEncrypt(inputFile, userPassword, ownerPassword);
+                byte[] result = apiInstance.EditPdfEncrypt(inputFile, userPassword, ownerPassword, encryptionKeyLength);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -140,6 +210,7 @@ Name | Type | Description  | Notes
  **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
  **userPassword** | **string**| Password of a user (reader) of the PDF file | [optional] 
  **ownerPassword** | **string**| Password of a owner (creator/editor) of the PDF file | [optional] 
+ **encryptionKeyLength** | **string**| Possible values are \&quot;128\&quot; (128-bit RC4 encryption) and \&quot;256\&quot; (256-bit AES encryption).  Default is 256. | [optional] 
 
 ### Return type
 
@@ -562,7 +633,7 @@ Name | Type | Description  | Notes
 
 <a name="editpdfsetpermissions"></a>
 # **EditPdfSetPermissions**
-> byte[] EditPdfSetPermissions (string ownerPassword, System.IO.Stream inputFile, string userPassword = null, bool? allowPrinting = null, bool? allowDocumentAssembly = null, bool? allowContentExtraction = null, bool? allowFormFilling = null, bool? allowEditing = null, bool? allowAnnotations = null, bool? allowDegradedPrinting = null)
+> byte[] EditPdfSetPermissions (string ownerPassword, string userPassword, System.IO.Stream inputFile, string encryptionKeyLength = null, bool? allowPrinting = null, bool? allowDocumentAssembly = null, bool? allowContentExtraction = null, bool? allowFormFilling = null, bool? allowEditing = null, bool? allowAnnotations = null, bool? allowDegradedPrinting = null)
 
 Encrypt, password-protect and set restricted permissions on a PDF
 
@@ -589,8 +660,9 @@ namespace Example
 
             var apiInstance = new EditPdfApi();
             var ownerPassword = ownerPassword_example;  // string | Password of a owner (creator/editor) of the PDF file (required)
+            var userPassword = userPassword_example;  // string | Password of a user (reader) of the PDF file (optional)
             var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
-            var userPassword = userPassword_example;  // string | Password of a user (reader) of the PDF file (optional) (optional) 
+            var encryptionKeyLength = encryptionKeyLength_example;  // string | Possible values are \"128\" (128-bit RC4 encryption) and \"256\" (256-bit AES encryption).  Default is 256. (optional) 
             var allowPrinting = true;  // bool? | Set to false to disable printing through DRM.  Default is true. (optional) 
             var allowDocumentAssembly = true;  // bool? | Set to false to disable document assembly through DRM.  Default is true. (optional) 
             var allowContentExtraction = true;  // bool? | Set to false to disable copying/extracting content out of the PDF through DRM.  Default is true. (optional) 
@@ -602,7 +674,7 @@ namespace Example
             try
             {
                 // Encrypt, password-protect and set restricted permissions on a PDF
-                byte[] result = apiInstance.EditPdfSetPermissions(ownerPassword, inputFile, userPassword, allowPrinting, allowDocumentAssembly, allowContentExtraction, allowFormFilling, allowEditing, allowAnnotations, allowDegradedPrinting);
+                byte[] result = apiInstance.EditPdfSetPermissions(ownerPassword, userPassword, inputFile, encryptionKeyLength, allowPrinting, allowDocumentAssembly, allowContentExtraction, allowFormFilling, allowEditing, allowAnnotations, allowDegradedPrinting);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -619,8 +691,9 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ownerPassword** | **string**| Password of a owner (creator/editor) of the PDF file (required) | 
+ **userPassword** | **string**| Password of a user (reader) of the PDF file (optional) | 
  **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
- **userPassword** | **string**| Password of a user (reader) of the PDF file (optional) | [optional] 
+ **encryptionKeyLength** | **string**| Possible values are \&quot;128\&quot; (128-bit RC4 encryption) and \&quot;256\&quot; (256-bit AES encryption).  Default is 256. | [optional] 
  **allowPrinting** | **bool?**| Set to false to disable printing through DRM.  Default is true. | [optional] 
  **allowDocumentAssembly** | **bool?**| Set to false to disable document assembly through DRM.  Default is true. | [optional] 
  **allowContentExtraction** | **bool?**| Set to false to disable copying/extracting content out of the PDF through DRM.  Default is true. | [optional] 

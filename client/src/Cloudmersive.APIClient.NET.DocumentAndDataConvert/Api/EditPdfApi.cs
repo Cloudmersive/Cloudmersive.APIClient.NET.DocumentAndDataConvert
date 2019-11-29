@@ -25,6 +25,29 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Decrypt and password-protect a PDF
+        /// </summary>
+        /// <remarks>
+        /// Decrypt a PDF document with a password.  Decrypted PDF will no longer require a password to open.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="password">Valid password for the PDF file</param>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>byte[]</returns>
+        byte[] EditPdfDecrypt (string password, System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Decrypt and password-protect a PDF
+        /// </summary>
+        /// <remarks>
+        /// Decrypt a PDF document with a password.  Decrypted PDF will no longer require a password to open.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="password">Valid password for the PDF file</param>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> EditPdfDecryptWithHttpInfo (string password, System.IO.Stream inputFile);
+        /// <summary>
         /// Remove / delete pages from a PDF document
         /// </summary>
         /// <remarks>
@@ -59,8 +82,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <param name="userPassword">Password of a user (reader) of the PDF file (optional)</param>
         /// <param name="ownerPassword">Password of a owner (creator/editor) of the PDF file (optional)</param>
+        /// <param name="encryptionKeyLength">Possible values are \&quot;128\&quot; (128-bit RC4 encryption) and \&quot;256\&quot; (256-bit AES encryption).  Default is 256. (optional)</param>
         /// <returns>byte[]</returns>
-        byte[] EditPdfEncrypt (System.IO.Stream inputFile, string userPassword = null, string ownerPassword = null);
+        byte[] EditPdfEncrypt (System.IO.Stream inputFile, string userPassword = null, string ownerPassword = null, string encryptionKeyLength = null);
 
         /// <summary>
         /// Encrypt and password-protect a PDF
@@ -72,8 +96,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <param name="userPassword">Password of a user (reader) of the PDF file (optional)</param>
         /// <param name="ownerPassword">Password of a owner (creator/editor) of the PDF file (optional)</param>
+        /// <param name="encryptionKeyLength">Possible values are \&quot;128\&quot; (128-bit RC4 encryption) and \&quot;256\&quot; (256-bit AES encryption).  Default is 256. (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
-        ApiResponse<byte[]> EditPdfEncryptWithHttpInfo (System.IO.Stream inputFile, string userPassword = null, string ownerPassword = null);
+        ApiResponse<byte[]> EditPdfEncryptWithHttpInfo (System.IO.Stream inputFile, string userPassword = null, string ownerPassword = null, string encryptionKeyLength = null);
         /// <summary>
         /// Gets PDF Form fields and values
         /// </summary>
@@ -216,8 +241,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ownerPassword">Password of a owner (creator/editor) of the PDF file (required)</param>
+        /// <param name="userPassword">Password of a user (reader) of the PDF file (optional)</param>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <param name="userPassword">Password of a user (reader) of the PDF file (optional) (optional)</param>
+        /// <param name="encryptionKeyLength">Possible values are \&quot;128\&quot; (128-bit RC4 encryption) and \&quot;256\&quot; (256-bit AES encryption).  Default is 256. (optional)</param>
         /// <param name="allowPrinting">Set to false to disable printing through DRM.  Default is true. (optional)</param>
         /// <param name="allowDocumentAssembly">Set to false to disable document assembly through DRM.  Default is true. (optional)</param>
         /// <param name="allowContentExtraction">Set to false to disable copying/extracting content out of the PDF through DRM.  Default is true. (optional)</param>
@@ -226,7 +252,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="allowAnnotations">Set to false to disable annotations and editing of annotations in the PDF through DRM.  Default is true. (optional)</param>
         /// <param name="allowDegradedPrinting">Set to false to disable degraded printing of the PDF through DRM.  Default is true. (optional)</param>
         /// <returns>byte[]</returns>
-        byte[] EditPdfSetPermissions (string ownerPassword, System.IO.Stream inputFile, string userPassword = null, bool? allowPrinting = null, bool? allowDocumentAssembly = null, bool? allowContentExtraction = null, bool? allowFormFilling = null, bool? allowEditing = null, bool? allowAnnotations = null, bool? allowDegradedPrinting = null);
+        byte[] EditPdfSetPermissions (string ownerPassword, string userPassword, System.IO.Stream inputFile, string encryptionKeyLength = null, bool? allowPrinting = null, bool? allowDocumentAssembly = null, bool? allowContentExtraction = null, bool? allowFormFilling = null, bool? allowEditing = null, bool? allowAnnotations = null, bool? allowDegradedPrinting = null);
 
         /// <summary>
         /// Encrypt, password-protect and set restricted permissions on a PDF
@@ -236,8 +262,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ownerPassword">Password of a owner (creator/editor) of the PDF file (required)</param>
+        /// <param name="userPassword">Password of a user (reader) of the PDF file (optional)</param>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <param name="userPassword">Password of a user (reader) of the PDF file (optional) (optional)</param>
+        /// <param name="encryptionKeyLength">Possible values are \&quot;128\&quot; (128-bit RC4 encryption) and \&quot;256\&quot; (256-bit AES encryption).  Default is 256. (optional)</param>
         /// <param name="allowPrinting">Set to false to disable printing through DRM.  Default is true. (optional)</param>
         /// <param name="allowDocumentAssembly">Set to false to disable document assembly through DRM.  Default is true. (optional)</param>
         /// <param name="allowContentExtraction">Set to false to disable copying/extracting content out of the PDF through DRM.  Default is true. (optional)</param>
@@ -246,7 +273,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="allowAnnotations">Set to false to disable annotations and editing of annotations in the PDF through DRM.  Default is true. (optional)</param>
         /// <param name="allowDegradedPrinting">Set to false to disable degraded printing of the PDF through DRM.  Default is true. (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
-        ApiResponse<byte[]> EditPdfSetPermissionsWithHttpInfo (string ownerPassword, System.IO.Stream inputFile, string userPassword = null, bool? allowPrinting = null, bool? allowDocumentAssembly = null, bool? allowContentExtraction = null, bool? allowFormFilling = null, bool? allowEditing = null, bool? allowAnnotations = null, bool? allowDegradedPrinting = null);
+        ApiResponse<byte[]> EditPdfSetPermissionsWithHttpInfo (string ownerPassword, string userPassword, System.IO.Stream inputFile, string encryptionKeyLength = null, bool? allowPrinting = null, bool? allowDocumentAssembly = null, bool? allowContentExtraction = null, bool? allowFormFilling = null, bool? allowEditing = null, bool? allowAnnotations = null, bool? allowDegradedPrinting = null);
         /// <summary>
         /// Add a text watermark to a PDF
         /// </summary>
@@ -280,6 +307,29 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         ApiResponse<byte[]> EditPdfWatermarkTextWithHttpInfo (string watermarkText, System.IO.Stream inputFile, string fontName = null, decimal? fontSize = null, string fontColor = null, decimal? fontTransparency = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// Decrypt and password-protect a PDF
+        /// </summary>
+        /// <remarks>
+        /// Decrypt a PDF document with a password.  Decrypted PDF will no longer require a password to open.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="password">Valid password for the PDF file</param>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> EditPdfDecryptAsync (string password, System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Decrypt and password-protect a PDF
+        /// </summary>
+        /// <remarks>
+        /// Decrypt a PDF document with a password.  Decrypted PDF will no longer require a password to open.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="password">Valid password for the PDF file</param>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfDecryptAsyncWithHttpInfo (string password, System.IO.Stream inputFile);
         /// <summary>
         /// Remove / delete pages from a PDF document
         /// </summary>
@@ -315,8 +365,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <param name="userPassword">Password of a user (reader) of the PDF file (optional)</param>
         /// <param name="ownerPassword">Password of a owner (creator/editor) of the PDF file (optional)</param>
+        /// <param name="encryptionKeyLength">Possible values are \&quot;128\&quot; (128-bit RC4 encryption) and \&quot;256\&quot; (256-bit AES encryption).  Default is 256. (optional)</param>
         /// <returns>Task of byte[]</returns>
-        System.Threading.Tasks.Task<byte[]> EditPdfEncryptAsync (System.IO.Stream inputFile, string userPassword = null, string ownerPassword = null);
+        System.Threading.Tasks.Task<byte[]> EditPdfEncryptAsync (System.IO.Stream inputFile, string userPassword = null, string ownerPassword = null, string encryptionKeyLength = null);
 
         /// <summary>
         /// Encrypt and password-protect a PDF
@@ -328,8 +379,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <param name="userPassword">Password of a user (reader) of the PDF file (optional)</param>
         /// <param name="ownerPassword">Password of a owner (creator/editor) of the PDF file (optional)</param>
+        /// <param name="encryptionKeyLength">Possible values are \&quot;128\&quot; (128-bit RC4 encryption) and \&quot;256\&quot; (256-bit AES encryption).  Default is 256. (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfEncryptAsyncWithHttpInfo (System.IO.Stream inputFile, string userPassword = null, string ownerPassword = null);
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfEncryptAsyncWithHttpInfo (System.IO.Stream inputFile, string userPassword = null, string ownerPassword = null, string encryptionKeyLength = null);
         /// <summary>
         /// Gets PDF Form fields and values
         /// </summary>
@@ -472,8 +524,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ownerPassword">Password of a owner (creator/editor) of the PDF file (required)</param>
+        /// <param name="userPassword">Password of a user (reader) of the PDF file (optional)</param>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <param name="userPassword">Password of a user (reader) of the PDF file (optional) (optional)</param>
+        /// <param name="encryptionKeyLength">Possible values are \&quot;128\&quot; (128-bit RC4 encryption) and \&quot;256\&quot; (256-bit AES encryption).  Default is 256. (optional)</param>
         /// <param name="allowPrinting">Set to false to disable printing through DRM.  Default is true. (optional)</param>
         /// <param name="allowDocumentAssembly">Set to false to disable document assembly through DRM.  Default is true. (optional)</param>
         /// <param name="allowContentExtraction">Set to false to disable copying/extracting content out of the PDF through DRM.  Default is true. (optional)</param>
@@ -482,7 +535,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="allowAnnotations">Set to false to disable annotations and editing of annotations in the PDF through DRM.  Default is true. (optional)</param>
         /// <param name="allowDegradedPrinting">Set to false to disable degraded printing of the PDF through DRM.  Default is true. (optional)</param>
         /// <returns>Task of byte[]</returns>
-        System.Threading.Tasks.Task<byte[]> EditPdfSetPermissionsAsync (string ownerPassword, System.IO.Stream inputFile, string userPassword = null, bool? allowPrinting = null, bool? allowDocumentAssembly = null, bool? allowContentExtraction = null, bool? allowFormFilling = null, bool? allowEditing = null, bool? allowAnnotations = null, bool? allowDegradedPrinting = null);
+        System.Threading.Tasks.Task<byte[]> EditPdfSetPermissionsAsync (string ownerPassword, string userPassword, System.IO.Stream inputFile, string encryptionKeyLength = null, bool? allowPrinting = null, bool? allowDocumentAssembly = null, bool? allowContentExtraction = null, bool? allowFormFilling = null, bool? allowEditing = null, bool? allowAnnotations = null, bool? allowDegradedPrinting = null);
 
         /// <summary>
         /// Encrypt, password-protect and set restricted permissions on a PDF
@@ -492,8 +545,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ownerPassword">Password of a owner (creator/editor) of the PDF file (required)</param>
+        /// <param name="userPassword">Password of a user (reader) of the PDF file (optional)</param>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <param name="userPassword">Password of a user (reader) of the PDF file (optional) (optional)</param>
+        /// <param name="encryptionKeyLength">Possible values are \&quot;128\&quot; (128-bit RC4 encryption) and \&quot;256\&quot; (256-bit AES encryption).  Default is 256. (optional)</param>
         /// <param name="allowPrinting">Set to false to disable printing through DRM.  Default is true. (optional)</param>
         /// <param name="allowDocumentAssembly">Set to false to disable document assembly through DRM.  Default is true. (optional)</param>
         /// <param name="allowContentExtraction">Set to false to disable copying/extracting content out of the PDF through DRM.  Default is true. (optional)</param>
@@ -502,7 +556,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="allowAnnotations">Set to false to disable annotations and editing of annotations in the PDF through DRM.  Default is true. (optional)</param>
         /// <param name="allowDegradedPrinting">Set to false to disable degraded printing of the PDF through DRM.  Default is true. (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfSetPermissionsAsyncWithHttpInfo (string ownerPassword, System.IO.Stream inputFile, string userPassword = null, bool? allowPrinting = null, bool? allowDocumentAssembly = null, bool? allowContentExtraction = null, bool? allowFormFilling = null, bool? allowEditing = null, bool? allowAnnotations = null, bool? allowDegradedPrinting = null);
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfSetPermissionsAsyncWithHttpInfo (string ownerPassword, string userPassword, System.IO.Stream inputFile, string encryptionKeyLength = null, bool? allowPrinting = null, bool? allowDocumentAssembly = null, bool? allowContentExtraction = null, bool? allowFormFilling = null, bool? allowEditing = null, bool? allowAnnotations = null, bool? allowDegradedPrinting = null);
         /// <summary>
         /// Add a text watermark to a PDF
         /// </summary>
@@ -632,6 +686,163 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// Decrypt and password-protect a PDF Decrypt a PDF document with a password.  Decrypted PDF will no longer require a password to open.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="password">Valid password for the PDF file</param>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>byte[]</returns>
+        public byte[] EditPdfDecrypt (string password, System.IO.Stream inputFile)
+        {
+             ApiResponse<byte[]> localVarResponse = EditPdfDecryptWithHttpInfo(password, inputFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Decrypt and password-protect a PDF Decrypt a PDF document with a password.  Decrypted PDF will no longer require a password to open.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="password">Valid password for the PDF file</param>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > EditPdfDecryptWithHttpInfo (string password, System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'password' is set
+            if (password == null)
+                throw new ApiException(400, "Missing required parameter 'password' when calling EditPdfApi->EditPdfDecrypt");
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditPdfApi->EditPdfDecrypt");
+
+            var localVarPath = "/convert/edit/pdf/decrypt";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (password != null) localVarHeaderParams.Add("password", this.Configuration.ApiClient.ParameterToString(password)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditPdfDecrypt", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Decrypt and password-protect a PDF Decrypt a PDF document with a password.  Decrypted PDF will no longer require a password to open.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="password">Valid password for the PDF file</param>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> EditPdfDecryptAsync (string password, System.IO.Stream inputFile)
+        {
+             ApiResponse<byte[]> localVarResponse = await EditPdfDecryptAsyncWithHttpInfo(password, inputFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Decrypt and password-protect a PDF Decrypt a PDF document with a password.  Decrypted PDF will no longer require a password to open.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="password">Valid password for the PDF file</param>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfDecryptAsyncWithHttpInfo (string password, System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'password' is set
+            if (password == null)
+                throw new ApiException(400, "Missing required parameter 'password' when calling EditPdfApi->EditPdfDecrypt");
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditPdfApi->EditPdfDecrypt");
+
+            var localVarPath = "/convert/edit/pdf/decrypt";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (password != null) localVarHeaderParams.Add("password", this.Configuration.ApiClient.ParameterToString(password)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditPdfDecrypt", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
@@ -810,10 +1021,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <param name="userPassword">Password of a user (reader) of the PDF file (optional)</param>
         /// <param name="ownerPassword">Password of a owner (creator/editor) of the PDF file (optional)</param>
+        /// <param name="encryptionKeyLength">Possible values are \&quot;128\&quot; (128-bit RC4 encryption) and \&quot;256\&quot; (256-bit AES encryption).  Default is 256. (optional)</param>
         /// <returns>byte[]</returns>
-        public byte[] EditPdfEncrypt (System.IO.Stream inputFile, string userPassword = null, string ownerPassword = null)
+        public byte[] EditPdfEncrypt (System.IO.Stream inputFile, string userPassword = null, string ownerPassword = null, string encryptionKeyLength = null)
         {
-             ApiResponse<byte[]> localVarResponse = EditPdfEncryptWithHttpInfo(inputFile, userPassword, ownerPassword);
+             ApiResponse<byte[]> localVarResponse = EditPdfEncryptWithHttpInfo(inputFile, userPassword, ownerPassword, encryptionKeyLength);
              return localVarResponse.Data;
         }
 
@@ -824,8 +1036,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <param name="userPassword">Password of a user (reader) of the PDF file (optional)</param>
         /// <param name="ownerPassword">Password of a owner (creator/editor) of the PDF file (optional)</param>
+        /// <param name="encryptionKeyLength">Possible values are \&quot;128\&quot; (128-bit RC4 encryption) and \&quot;256\&quot; (256-bit AES encryption).  Default is 256. (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
-        public ApiResponse< byte[] > EditPdfEncryptWithHttpInfo (System.IO.Stream inputFile, string userPassword = null, string ownerPassword = null)
+        public ApiResponse< byte[] > EditPdfEncryptWithHttpInfo (System.IO.Stream inputFile, string userPassword = null, string ownerPassword = null, string encryptionKeyLength = null)
         {
             // verify the required parameter 'inputFile' is set
             if (inputFile == null)
@@ -855,6 +1068,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             if (userPassword != null) localVarHeaderParams.Add("userPassword", this.Configuration.ApiClient.ParameterToString(userPassword)); // header parameter
             if (ownerPassword != null) localVarHeaderParams.Add("ownerPassword", this.Configuration.ApiClient.ParameterToString(ownerPassword)); // header parameter
+            if (encryptionKeyLength != null) localVarHeaderParams.Add("encryptionKeyLength", this.Configuration.ApiClient.ParameterToString(encryptionKeyLength)); // header parameter
             if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
 
             // authentication (Apikey) required
@@ -888,10 +1102,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <param name="userPassword">Password of a user (reader) of the PDF file (optional)</param>
         /// <param name="ownerPassword">Password of a owner (creator/editor) of the PDF file (optional)</param>
+        /// <param name="encryptionKeyLength">Possible values are \&quot;128\&quot; (128-bit RC4 encryption) and \&quot;256\&quot; (256-bit AES encryption).  Default is 256. (optional)</param>
         /// <returns>Task of byte[]</returns>
-        public async System.Threading.Tasks.Task<byte[]> EditPdfEncryptAsync (System.IO.Stream inputFile, string userPassword = null, string ownerPassword = null)
+        public async System.Threading.Tasks.Task<byte[]> EditPdfEncryptAsync (System.IO.Stream inputFile, string userPassword = null, string ownerPassword = null, string encryptionKeyLength = null)
         {
-             ApiResponse<byte[]> localVarResponse = await EditPdfEncryptAsyncWithHttpInfo(inputFile, userPassword, ownerPassword);
+             ApiResponse<byte[]> localVarResponse = await EditPdfEncryptAsyncWithHttpInfo(inputFile, userPassword, ownerPassword, encryptionKeyLength);
              return localVarResponse.Data;
 
         }
@@ -903,8 +1118,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <param name="userPassword">Password of a user (reader) of the PDF file (optional)</param>
         /// <param name="ownerPassword">Password of a owner (creator/editor) of the PDF file (optional)</param>
+        /// <param name="encryptionKeyLength">Possible values are \&quot;128\&quot; (128-bit RC4 encryption) and \&quot;256\&quot; (256-bit AES encryption).  Default is 256. (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfEncryptAsyncWithHttpInfo (System.IO.Stream inputFile, string userPassword = null, string ownerPassword = null)
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfEncryptAsyncWithHttpInfo (System.IO.Stream inputFile, string userPassword = null, string ownerPassword = null, string encryptionKeyLength = null)
         {
             // verify the required parameter 'inputFile' is set
             if (inputFile == null)
@@ -934,6 +1150,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             if (userPassword != null) localVarHeaderParams.Add("userPassword", this.Configuration.ApiClient.ParameterToString(userPassword)); // header parameter
             if (ownerPassword != null) localVarHeaderParams.Add("ownerPassword", this.Configuration.ApiClient.ParameterToString(ownerPassword)); // header parameter
+            if (encryptionKeyLength != null) localVarHeaderParams.Add("encryptionKeyLength", this.Configuration.ApiClient.ParameterToString(encryptionKeyLength)); // header parameter
             if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
 
             // authentication (Apikey) required
@@ -1933,8 +2150,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ownerPassword">Password of a owner (creator/editor) of the PDF file (required)</param>
+        /// <param name="userPassword">Password of a user (reader) of the PDF file (optional)</param>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <param name="userPassword">Password of a user (reader) of the PDF file (optional) (optional)</param>
+        /// <param name="encryptionKeyLength">Possible values are \&quot;128\&quot; (128-bit RC4 encryption) and \&quot;256\&quot; (256-bit AES encryption).  Default is 256. (optional)</param>
         /// <param name="allowPrinting">Set to false to disable printing through DRM.  Default is true. (optional)</param>
         /// <param name="allowDocumentAssembly">Set to false to disable document assembly through DRM.  Default is true. (optional)</param>
         /// <param name="allowContentExtraction">Set to false to disable copying/extracting content out of the PDF through DRM.  Default is true. (optional)</param>
@@ -1943,9 +2161,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="allowAnnotations">Set to false to disable annotations and editing of annotations in the PDF through DRM.  Default is true. (optional)</param>
         /// <param name="allowDegradedPrinting">Set to false to disable degraded printing of the PDF through DRM.  Default is true. (optional)</param>
         /// <returns>byte[]</returns>
-        public byte[] EditPdfSetPermissions (string ownerPassword, System.IO.Stream inputFile, string userPassword = null, bool? allowPrinting = null, bool? allowDocumentAssembly = null, bool? allowContentExtraction = null, bool? allowFormFilling = null, bool? allowEditing = null, bool? allowAnnotations = null, bool? allowDegradedPrinting = null)
+        public byte[] EditPdfSetPermissions (string ownerPassword, string userPassword, System.IO.Stream inputFile, string encryptionKeyLength = null, bool? allowPrinting = null, bool? allowDocumentAssembly = null, bool? allowContentExtraction = null, bool? allowFormFilling = null, bool? allowEditing = null, bool? allowAnnotations = null, bool? allowDegradedPrinting = null)
         {
-             ApiResponse<byte[]> localVarResponse = EditPdfSetPermissionsWithHttpInfo(ownerPassword, inputFile, userPassword, allowPrinting, allowDocumentAssembly, allowContentExtraction, allowFormFilling, allowEditing, allowAnnotations, allowDegradedPrinting);
+             ApiResponse<byte[]> localVarResponse = EditPdfSetPermissionsWithHttpInfo(ownerPassword, userPassword, inputFile, encryptionKeyLength, allowPrinting, allowDocumentAssembly, allowContentExtraction, allowFormFilling, allowEditing, allowAnnotations, allowDegradedPrinting);
              return localVarResponse.Data;
         }
 
@@ -1954,8 +2172,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ownerPassword">Password of a owner (creator/editor) of the PDF file (required)</param>
+        /// <param name="userPassword">Password of a user (reader) of the PDF file (optional)</param>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <param name="userPassword">Password of a user (reader) of the PDF file (optional) (optional)</param>
+        /// <param name="encryptionKeyLength">Possible values are \&quot;128\&quot; (128-bit RC4 encryption) and \&quot;256\&quot; (256-bit AES encryption).  Default is 256. (optional)</param>
         /// <param name="allowPrinting">Set to false to disable printing through DRM.  Default is true. (optional)</param>
         /// <param name="allowDocumentAssembly">Set to false to disable document assembly through DRM.  Default is true. (optional)</param>
         /// <param name="allowContentExtraction">Set to false to disable copying/extracting content out of the PDF through DRM.  Default is true. (optional)</param>
@@ -1964,11 +2183,14 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="allowAnnotations">Set to false to disable annotations and editing of annotations in the PDF through DRM.  Default is true. (optional)</param>
         /// <param name="allowDegradedPrinting">Set to false to disable degraded printing of the PDF through DRM.  Default is true. (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
-        public ApiResponse< byte[] > EditPdfSetPermissionsWithHttpInfo (string ownerPassword, System.IO.Stream inputFile, string userPassword = null, bool? allowPrinting = null, bool? allowDocumentAssembly = null, bool? allowContentExtraction = null, bool? allowFormFilling = null, bool? allowEditing = null, bool? allowAnnotations = null, bool? allowDegradedPrinting = null)
+        public ApiResponse< byte[] > EditPdfSetPermissionsWithHttpInfo (string ownerPassword, string userPassword, System.IO.Stream inputFile, string encryptionKeyLength = null, bool? allowPrinting = null, bool? allowDocumentAssembly = null, bool? allowContentExtraction = null, bool? allowFormFilling = null, bool? allowEditing = null, bool? allowAnnotations = null, bool? allowDegradedPrinting = null)
         {
             // verify the required parameter 'ownerPassword' is set
             if (ownerPassword == null)
                 throw new ApiException(400, "Missing required parameter 'ownerPassword' when calling EditPdfApi->EditPdfSetPermissions");
+            // verify the required parameter 'userPassword' is set
+            if (userPassword == null)
+                throw new ApiException(400, "Missing required parameter 'userPassword' when calling EditPdfApi->EditPdfSetPermissions");
             // verify the required parameter 'inputFile' is set
             if (inputFile == null)
                 throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditPdfApi->EditPdfSetPermissions");
@@ -1997,6 +2219,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             if (ownerPassword != null) localVarHeaderParams.Add("ownerPassword", this.Configuration.ApiClient.ParameterToString(ownerPassword)); // header parameter
             if (userPassword != null) localVarHeaderParams.Add("userPassword", this.Configuration.ApiClient.ParameterToString(userPassword)); // header parameter
+            if (encryptionKeyLength != null) localVarHeaderParams.Add("encryptionKeyLength", this.Configuration.ApiClient.ParameterToString(encryptionKeyLength)); // header parameter
             if (allowPrinting != null) localVarHeaderParams.Add("allowPrinting", this.Configuration.ApiClient.ParameterToString(allowPrinting)); // header parameter
             if (allowDocumentAssembly != null) localVarHeaderParams.Add("allowDocumentAssembly", this.Configuration.ApiClient.ParameterToString(allowDocumentAssembly)); // header parameter
             if (allowContentExtraction != null) localVarHeaderParams.Add("allowContentExtraction", this.Configuration.ApiClient.ParameterToString(allowContentExtraction)); // header parameter
@@ -2035,8 +2258,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ownerPassword">Password of a owner (creator/editor) of the PDF file (required)</param>
+        /// <param name="userPassword">Password of a user (reader) of the PDF file (optional)</param>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <param name="userPassword">Password of a user (reader) of the PDF file (optional) (optional)</param>
+        /// <param name="encryptionKeyLength">Possible values are \&quot;128\&quot; (128-bit RC4 encryption) and \&quot;256\&quot; (256-bit AES encryption).  Default is 256. (optional)</param>
         /// <param name="allowPrinting">Set to false to disable printing through DRM.  Default is true. (optional)</param>
         /// <param name="allowDocumentAssembly">Set to false to disable document assembly through DRM.  Default is true. (optional)</param>
         /// <param name="allowContentExtraction">Set to false to disable copying/extracting content out of the PDF through DRM.  Default is true. (optional)</param>
@@ -2045,9 +2269,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="allowAnnotations">Set to false to disable annotations and editing of annotations in the PDF through DRM.  Default is true. (optional)</param>
         /// <param name="allowDegradedPrinting">Set to false to disable degraded printing of the PDF through DRM.  Default is true. (optional)</param>
         /// <returns>Task of byte[]</returns>
-        public async System.Threading.Tasks.Task<byte[]> EditPdfSetPermissionsAsync (string ownerPassword, System.IO.Stream inputFile, string userPassword = null, bool? allowPrinting = null, bool? allowDocumentAssembly = null, bool? allowContentExtraction = null, bool? allowFormFilling = null, bool? allowEditing = null, bool? allowAnnotations = null, bool? allowDegradedPrinting = null)
+        public async System.Threading.Tasks.Task<byte[]> EditPdfSetPermissionsAsync (string ownerPassword, string userPassword, System.IO.Stream inputFile, string encryptionKeyLength = null, bool? allowPrinting = null, bool? allowDocumentAssembly = null, bool? allowContentExtraction = null, bool? allowFormFilling = null, bool? allowEditing = null, bool? allowAnnotations = null, bool? allowDegradedPrinting = null)
         {
-             ApiResponse<byte[]> localVarResponse = await EditPdfSetPermissionsAsyncWithHttpInfo(ownerPassword, inputFile, userPassword, allowPrinting, allowDocumentAssembly, allowContentExtraction, allowFormFilling, allowEditing, allowAnnotations, allowDegradedPrinting);
+             ApiResponse<byte[]> localVarResponse = await EditPdfSetPermissionsAsyncWithHttpInfo(ownerPassword, userPassword, inputFile, encryptionKeyLength, allowPrinting, allowDocumentAssembly, allowContentExtraction, allowFormFilling, allowEditing, allowAnnotations, allowDegradedPrinting);
              return localVarResponse.Data;
 
         }
@@ -2057,8 +2281,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ownerPassword">Password of a owner (creator/editor) of the PDF file (required)</param>
+        /// <param name="userPassword">Password of a user (reader) of the PDF file (optional)</param>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <param name="userPassword">Password of a user (reader) of the PDF file (optional) (optional)</param>
+        /// <param name="encryptionKeyLength">Possible values are \&quot;128\&quot; (128-bit RC4 encryption) and \&quot;256\&quot; (256-bit AES encryption).  Default is 256. (optional)</param>
         /// <param name="allowPrinting">Set to false to disable printing through DRM.  Default is true. (optional)</param>
         /// <param name="allowDocumentAssembly">Set to false to disable document assembly through DRM.  Default is true. (optional)</param>
         /// <param name="allowContentExtraction">Set to false to disable copying/extracting content out of the PDF through DRM.  Default is true. (optional)</param>
@@ -2067,11 +2292,14 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="allowAnnotations">Set to false to disable annotations and editing of annotations in the PDF through DRM.  Default is true. (optional)</param>
         /// <param name="allowDegradedPrinting">Set to false to disable degraded printing of the PDF through DRM.  Default is true. (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfSetPermissionsAsyncWithHttpInfo (string ownerPassword, System.IO.Stream inputFile, string userPassword = null, bool? allowPrinting = null, bool? allowDocumentAssembly = null, bool? allowContentExtraction = null, bool? allowFormFilling = null, bool? allowEditing = null, bool? allowAnnotations = null, bool? allowDegradedPrinting = null)
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfSetPermissionsAsyncWithHttpInfo (string ownerPassword, string userPassword, System.IO.Stream inputFile, string encryptionKeyLength = null, bool? allowPrinting = null, bool? allowDocumentAssembly = null, bool? allowContentExtraction = null, bool? allowFormFilling = null, bool? allowEditing = null, bool? allowAnnotations = null, bool? allowDegradedPrinting = null)
         {
             // verify the required parameter 'ownerPassword' is set
             if (ownerPassword == null)
                 throw new ApiException(400, "Missing required parameter 'ownerPassword' when calling EditPdfApi->EditPdfSetPermissions");
+            // verify the required parameter 'userPassword' is set
+            if (userPassword == null)
+                throw new ApiException(400, "Missing required parameter 'userPassword' when calling EditPdfApi->EditPdfSetPermissions");
             // verify the required parameter 'inputFile' is set
             if (inputFile == null)
                 throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditPdfApi->EditPdfSetPermissions");
@@ -2100,6 +2328,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             if (ownerPassword != null) localVarHeaderParams.Add("ownerPassword", this.Configuration.ApiClient.ParameterToString(ownerPassword)); // header parameter
             if (userPassword != null) localVarHeaderParams.Add("userPassword", this.Configuration.ApiClient.ParameterToString(userPassword)); // header parameter
+            if (encryptionKeyLength != null) localVarHeaderParams.Add("encryptionKeyLength", this.Configuration.ApiClient.ParameterToString(encryptionKeyLength)); // header parameter
             if (allowPrinting != null) localVarHeaderParams.Add("allowPrinting", this.Configuration.ApiClient.ParameterToString(allowPrinting)); // header parameter
             if (allowDocumentAssembly != null) localVarHeaderParams.Add("allowDocumentAssembly", this.Configuration.ApiClient.ParameterToString(allowDocumentAssembly)); // header parameter
             if (allowContentExtraction != null) localVarHeaderParams.Add("allowContentExtraction", this.Configuration.ApiClient.ParameterToString(allowContentExtraction)); // header parameter

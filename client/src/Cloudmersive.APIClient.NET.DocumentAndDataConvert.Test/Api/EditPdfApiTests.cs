@@ -65,6 +65,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
 
         
         /// <summary>
+        /// Test EditPdfDecrypt
+        /// </summary>
+        [Test]
+        public void EditPdfDecryptTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string password = null;
+            //System.IO.Stream inputFile = null;
+            //var response = instance.EditPdfDecrypt(password, inputFile);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
         /// Test EditPdfDeletePages
         /// </summary>
         [Test]
@@ -88,7 +101,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //System.IO.Stream inputFile = null;
             //string userPassword = null;
             //string ownerPassword = null;
-            //var response = instance.EditPdfEncrypt(inputFile, userPassword, ownerPassword);
+            //string encryptionKeyLength = null;
+            //var response = instance.EditPdfEncrypt(inputFile, userPassword, ownerPassword, encryptionKeyLength);
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
@@ -176,8 +190,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string ownerPassword = null;
-            //System.IO.Stream inputFile = null;
             //string userPassword = null;
+            //System.IO.Stream inputFile = null;
+            //string encryptionKeyLength = null;
             //bool? allowPrinting = null;
             //bool? allowDocumentAssembly = null;
             //bool? allowContentExtraction = null;
@@ -185,7 +200,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //bool? allowEditing = null;
             //bool? allowAnnotations = null;
             //bool? allowDegradedPrinting = null;
-            //var response = instance.EditPdfSetPermissions(ownerPassword, inputFile, userPassword, allowPrinting, allowDocumentAssembly, allowContentExtraction, allowFormFilling, allowEditing, allowAnnotations, allowDegradedPrinting);
+            //var response = instance.EditPdfSetPermissions(ownerPassword, userPassword, inputFile, encryptionKeyLength, allowPrinting, allowDocumentAssembly, allowContentExtraction, allowFormFilling, allowEditing, allowAnnotations, allowDegradedPrinting);
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
