@@ -109,7 +109,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of TextConversionResult</returns>
         ApiResponse<TextConversionResult> ConvertDocumentAutodetectToTxtWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// CSV to Excel XLSX
+        /// Convert CSV to Excel XLSX Spreadsheet
         /// </summary>
         /// <remarks>
         /// Convert CSV file to Office Excel XLSX Workbooks file format.
@@ -120,7 +120,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         byte[] ConvertDocumentCsvToXlsx (System.IO.Stream inputFile);
 
         /// <summary>
-        /// CSV to Excel XLSX
+        /// Convert CSV to Excel XLSX Spreadsheet
         /// </summary>
         /// <remarks>
         /// Convert CSV file to Office Excel XLSX Workbooks file format.
@@ -130,7 +130,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> ConvertDocumentCsvToXlsxWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// Word DOC (97-03) to DOCX
+        /// Convert Word DOC (97-03) Document to DOCX
         /// </summary>
         /// <remarks>
         /// Convert/upgrade Office Word (97-2003 Format) Documents (doc) to the modern DOCX format
@@ -141,7 +141,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         byte[] ConvertDocumentDocToDocx (System.IO.Stream inputFile);
 
         /// <summary>
-        /// Word DOC (97-03) to DOCX
+        /// Convert Word DOC (97-03) Document to DOCX
         /// </summary>
         /// <remarks>
         /// Convert/upgrade Office Word (97-2003 Format) Documents (doc) to the modern DOCX format
@@ -151,7 +151,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> ConvertDocumentDocToDocxWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// Word DOC (97-03) to PDF
+        /// Convert Word DOC (97-03) Document to PDF
         /// </summary>
         /// <remarks>
         /// Convert Office Word (97-2003 Format) Documents (doc) to standard PDF
@@ -162,7 +162,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         byte[] ConvertDocumentDocToPdf (System.IO.Stream inputFile);
 
         /// <summary>
-        /// Word DOC (97-03) to PDF
+        /// Convert Word DOC (97-03) Document to PDF
         /// </summary>
         /// <remarks>
         /// Convert Office Word (97-2003 Format) Documents (doc) to standard PDF
@@ -172,7 +172,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> ConvertDocumentDocToPdfWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// Word DOCX to PDF
+        /// Convert Word DOCX Document to PDF
         /// </summary>
         /// <remarks>
         /// Convert Office Word Documents (docx) to standard PDF
@@ -183,7 +183,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         byte[] ConvertDocumentDocxToPdf (System.IO.Stream inputFile);
 
         /// <summary>
-        /// Word DOCX to PDF
+        /// Convert Word DOCX Document to PDF
         /// </summary>
         /// <remarks>
         /// Convert Office Word Documents (docx) to standard PDF
@@ -193,7 +193,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> ConvertDocumentDocxToPdfWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// Word DOCX to Text
+        /// Convert Word DOCX Document to Text
         /// </summary>
         /// <remarks>
         /// Convert Office Word Documents (docx) to text
@@ -204,7 +204,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         TextConversionResult ConvertDocumentDocxToTxt (System.IO.Stream inputFile);
 
         /// <summary>
-        /// Word DOCX to Text
+        /// Convert Word DOCX Document to Text
         /// </summary>
         /// <remarks>
         /// Convert Office Word Documents (docx) to text
@@ -214,7 +214,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of TextConversionResult</returns>
         ApiResponse<TextConversionResult> ConvertDocumentDocxToTxtWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// HTML to PDF
+        /// Convert HTML to PDF Document
         /// </summary>
         /// <remarks>
         /// Convert standard HTML, with full support for CSS, JavaScript, Images, and other complex behavior to PDF.  To use external files such as images, use an absolute URL to the file.
@@ -225,7 +225,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         byte[] ConvertDocumentHtmlToPdf (System.IO.Stream inputFile);
 
         /// <summary>
-        /// HTML to PDF
+        /// Convert HTML to PDF Document
         /// </summary>
         /// <remarks>
         /// Convert standard HTML, with full support for CSS, JavaScript, Images, and other complex behavior to PDF.  To use external files such as images, use an absolute URL to the file.
@@ -235,7 +235,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> ConvertDocumentHtmlToPdfWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// HTML to PNG array
+        /// Convert HTML to PNG image array
         /// </summary>
         /// <remarks>
         /// Convert standard HTML, with full support for CSS, JavaScript, Images, and other complex behavior to an array of PNG images, one for each page.  To use external files in your HTML such as images, use an absolute URL to the file.
@@ -246,7 +246,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         PdfToPngResult ConvertDocumentHtmlToPng (System.IO.Stream inputFile);
 
         /// <summary>
-        /// HTML to PNG array
+        /// Convert HTML to PNG image array
         /// </summary>
         /// <remarks>
         /// Convert standard HTML, with full support for CSS, JavaScript, Images, and other complex behavior to an array of PNG images, one for each page.  To use external files in your HTML such as images, use an absolute URL to the file.
@@ -256,7 +256,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of PdfToPngResult</returns>
         ApiResponse<PdfToPngResult> ConvertDocumentHtmlToPngWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// PDF to Word DOCX
+        /// Convert PDF to Word DOCX Document
         /// </summary>
         /// <remarks>
         /// Convert standard PDF to Office Word Documents (docx).    Converts a PDF at high fidelity into Word format, where it can be easily edited and processed.
@@ -267,7 +267,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         byte[] ConvertDocumentPdfToDocx (System.IO.Stream inputFile);
 
         /// <summary>
-        /// PDF to Word DOCX
+        /// Convert PDF to Word DOCX Document
         /// </summary>
         /// <remarks>
         /// Convert standard PDF to Office Word Documents (docx).    Converts a PDF at high fidelity into Word format, where it can be easily edited and processed.
@@ -277,7 +277,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> ConvertDocumentPdfToDocxWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// PDF to PNG Array
+        /// Convert PDF to PNG Image Array
         /// </summary>
         /// <remarks>
         /// Convert PDF document to PNG array, one image per page.
@@ -288,7 +288,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         PdfToPngResult ConvertDocumentPdfToPngArray (System.IO.Stream inputFile);
 
         /// <summary>
-        /// PDF to PNG Array
+        /// Convert PDF to PNG Image Array
         /// </summary>
         /// <remarks>
         /// Convert PDF document to PNG array, one image per page.
@@ -298,7 +298,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of PdfToPngResult</returns>
         ApiResponse<PdfToPngResult> ConvertDocumentPdfToPngArrayWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// PDF to Single PNG image
+        /// Convert PDF to Single PNG image
         /// </summary>
         /// <remarks>
         /// Convert PDF document to a single tall PNG image, by stacking/concatenating the images vertically into a single \&quot;tall\&quot; image
@@ -309,7 +309,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         byte[] ConvertDocumentPdfToPngSingle (System.IO.Stream inputFile);
 
         /// <summary>
-        /// PDF to Single PNG image
+        /// Convert PDF to Single PNG image
         /// </summary>
         /// <remarks>
         /// Convert PDF document to a single tall PNG image, by stacking/concatenating the images vertically into a single \&quot;tall\&quot; image
@@ -319,7 +319,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> ConvertDocumentPdfToPngSingleWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// PDF to PowerPoint PPTX
+        /// Convert PDF to PowerPoint PPTX Presentation
         /// </summary>
         /// <remarks>
         /// Convert standard PDF to Office PowerPoint Presentation (pptx).  Converts a PDF file at high fidelity into PowerPoint format, where it can be easily edited and processed.
@@ -330,7 +330,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         byte[] ConvertDocumentPdfToPptx (System.IO.Stream inputFile);
 
         /// <summary>
-        /// PDF to PowerPoint PPTX
+        /// Convert PDF to PowerPoint PPTX Presentation
         /// </summary>
         /// <remarks>
         /// Convert standard PDF to Office PowerPoint Presentation (pptx).  Converts a PDF file at high fidelity into PowerPoint format, where it can be easily edited and processed.
@@ -340,7 +340,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> ConvertDocumentPdfToPptxWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// PDF to Text
+        /// Convert PDF Document to Text
         /// </summary>
         /// <remarks>
         /// PDF document to text
@@ -351,7 +351,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         TextConversionResult ConvertDocumentPdfToTxt (System.IO.Stream inputFile);
 
         /// <summary>
-        /// PDF to Text
+        /// Convert PDF Document to Text
         /// </summary>
         /// <remarks>
         /// PDF document to text
@@ -361,7 +361,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of TextConversionResult</returns>
         ApiResponse<TextConversionResult> ConvertDocumentPdfToTxtWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// PNG Array to PDF
+        /// Convert PNG Array to PDF
         /// </summary>
         /// <remarks>
         /// Convert an array of PNG images, one image per page, into a newly-created PDF.  Supports images of different sizes as input.
@@ -381,7 +381,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         byte[] ConvertDocumentPngArrayToPdf (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
 
         /// <summary>
-        /// PNG Array to PDF
+        /// Convert PNG Array to PDF
         /// </summary>
         /// <remarks>
         /// Convert an array of PNG images, one image per page, into a newly-created PDF.  Supports images of different sizes as input.
@@ -400,7 +400,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> ConvertDocumentPngArrayToPdfWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
         /// <summary>
-        /// PowerPoint PPT (97-03) to PDF
+        /// Convert PowerPoint PPT (97-03) Presentation to PDF
         /// </summary>
         /// <remarks>
         /// Convert Office PowerPoint (97-2003) Documents (ppt) to standard PDF
@@ -411,7 +411,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         byte[] ConvertDocumentPptToPdf (System.IO.Stream inputFile);
 
         /// <summary>
-        /// PowerPoint PPT (97-03) to PDF
+        /// Convert PowerPoint PPT (97-03) Presentation to PDF
         /// </summary>
         /// <remarks>
         /// Convert Office PowerPoint (97-2003) Documents (ppt) to standard PDF
@@ -421,7 +421,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> ConvertDocumentPptToPdfWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// PowerPoint PPT (97-03) to PPTX
+        /// Convert PowerPoint PPT (97-03) Presentation to PPTX
         /// </summary>
         /// <remarks>
         /// Convert/upgrade Office PowerPoint (97-2003) Documents (ppt) to modern PPTX
@@ -432,7 +432,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         byte[] ConvertDocumentPptToPptx (System.IO.Stream inputFile);
 
         /// <summary>
-        /// PowerPoint PPT (97-03) to PPTX
+        /// Convert PowerPoint PPT (97-03) Presentation to PPTX
         /// </summary>
         /// <remarks>
         /// Convert/upgrade Office PowerPoint (97-2003) Documents (ppt) to modern PPTX
@@ -442,7 +442,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> ConvertDocumentPptToPptxWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// PowerPoint PPTX to PDF
+        /// Convert PowerPoint PPTX Presentation to PDF
         /// </summary>
         /// <remarks>
         /// Convert Office PowerPoint Documents (pptx) to standard PDF
@@ -453,7 +453,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         byte[] ConvertDocumentPptxToPdf (System.IO.Stream inputFile);
 
         /// <summary>
-        /// PowerPoint PPTX to PDF
+        /// Convert PowerPoint PPTX Presentation to PDF
         /// </summary>
         /// <remarks>
         /// Convert Office PowerPoint Documents (pptx) to standard PDF
@@ -463,7 +463,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> ConvertDocumentPptxToPdfWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// PowerPoint PPTX to Text
+        /// Convert PowerPoint PPTX Presentation to Text
         /// </summary>
         /// <remarks>
         /// Convert Office PowerPoint Documents (pptx) to standard Text
@@ -474,7 +474,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         TextConversionResult ConvertDocumentPptxToTxt (System.IO.Stream inputFile);
 
         /// <summary>
-        /// PowerPoint PPTX to Text
+        /// Convert PowerPoint PPTX Presentation to Text
         /// </summary>
         /// <remarks>
         /// Convert Office PowerPoint Documents (pptx) to standard Text
@@ -484,7 +484,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of TextConversionResult</returns>
         ApiResponse<TextConversionResult> ConvertDocumentPptxToTxtWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// Excel XLS (97-03) to CSV
+        /// Convert Excel XLS (97-03) Spreadsheet to CSV
         /// </summary>
         /// <remarks>
         /// Convert/upgrade Office Excel (97-2003) Workbooks (xls) to standard CSV format.
@@ -495,7 +495,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         byte[] ConvertDocumentXlsToCsv (System.IO.Stream inputFile);
 
         /// <summary>
-        /// Excel XLS (97-03) to CSV
+        /// Convert Excel XLS (97-03) Spreadsheet to CSV
         /// </summary>
         /// <remarks>
         /// Convert/upgrade Office Excel (97-2003) Workbooks (xls) to standard CSV format.
@@ -505,7 +505,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> ConvertDocumentXlsToCsvWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// Excel XLS (97-03) to PDF
+        /// Convert Excel XLS (97-03) Spreadsheet to PDF
         /// </summary>
         /// <remarks>
         /// Convert Office Excel (97-2003) Workbooks (xls) to standard PDF.  Converts all worksheets in the workbook to PDF.
@@ -516,7 +516,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         byte[] ConvertDocumentXlsToPdf (System.IO.Stream inputFile);
 
         /// <summary>
-        /// Excel XLS (97-03) to PDF
+        /// Convert Excel XLS (97-03) Spreadsheet to PDF
         /// </summary>
         /// <remarks>
         /// Convert Office Excel (97-2003) Workbooks (xls) to standard PDF.  Converts all worksheets in the workbook to PDF.
@@ -526,7 +526,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> ConvertDocumentXlsToPdfWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// Excel XLS (97-03) to XLSX
+        /// Convert Excel XLS (97-03) Spreadsheet to XLSX
         /// </summary>
         /// <remarks>
         /// Convert/upgrade Office Excel (97-2003) Workbooks (xls) to modern XLSX format.
@@ -537,7 +537,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         byte[] ConvertDocumentXlsToXlsx (System.IO.Stream inputFile);
 
         /// <summary>
-        /// Excel XLS (97-03) to XLSX
+        /// Convert Excel XLS (97-03) Spreadsheet to XLSX
         /// </summary>
         /// <remarks>
         /// Convert/upgrade Office Excel (97-2003) Workbooks (xls) to modern XLSX format.
@@ -547,7 +547,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> ConvertDocumentXlsToXlsxWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// Excel XLSX to CSV
+        /// Convert Excel XLSX Spreadsheet to CSV
         /// </summary>
         /// <remarks>
         /// Convert Office Excel Workbooks (XLSX) to standard Comma-Separated Values (CSV) format.  Supports both XLSX and XLSB file Excel formats.
@@ -559,7 +559,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         byte[] ConvertDocumentXlsxToCsv (System.IO.Stream inputFile, string outputEncoding = null);
 
         /// <summary>
-        /// Excel XLSX to CSV
+        /// Convert Excel XLSX Spreadsheet to CSV
         /// </summary>
         /// <remarks>
         /// Convert Office Excel Workbooks (XLSX) to standard Comma-Separated Values (CSV) format.  Supports both XLSX and XLSB file Excel formats.
@@ -570,7 +570,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> ConvertDocumentXlsxToCsvWithHttpInfo (System.IO.Stream inputFile, string outputEncoding = null);
         /// <summary>
-        /// Excel XLSX to PDF
+        /// Convert Excel XLSX Spreadsheet to PDF
         /// </summary>
         /// <remarks>
         /// Convert Office Excel Workbooks (XLSX) to standard PDF.  Converts all worksheets in the workbook to PDF.  Supports both XLSX and XLSB Excel file formats.
@@ -581,7 +581,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         byte[] ConvertDocumentXlsxToPdf (System.IO.Stream inputFile);
 
         /// <summary>
-        /// Excel XLSX to PDF
+        /// Convert Excel XLSX Spreadsheet to PDF
         /// </summary>
         /// <remarks>
         /// Convert Office Excel Workbooks (XLSX) to standard PDF.  Converts all worksheets in the workbook to PDF.  Supports both XLSX and XLSB Excel file formats.
@@ -591,7 +591,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> ConvertDocumentXlsxToPdfWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// Excel XLSX to Text
+        /// Convert Excel XLSX Spreadsheet to Text
         /// </summary>
         /// <remarks>
         /// Convert Office Excel Workbooks (XLSX) to standard Text.  Converts all worksheets in the workbook to Text.  Supports both XLSX and XLSB file formats.
@@ -602,7 +602,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         TextConversionResult ConvertDocumentXlsxToTxt (System.IO.Stream inputFile);
 
         /// <summary>
-        /// Excel XLSX to Text
+        /// Convert Excel XLSX Spreadsheet to Text
         /// </summary>
         /// <remarks>
         /// Convert Office Excel Workbooks (XLSX) to standard Text.  Converts all worksheets in the workbook to Text.  Supports both XLSX and XLSB file formats.
@@ -698,7 +698,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (TextConversionResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<TextConversionResult>> ConvertDocumentAutodetectToTxtAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// CSV to Excel XLSX
+        /// Convert CSV to Excel XLSX Spreadsheet
         /// </summary>
         /// <remarks>
         /// Convert CSV file to Office Excel XLSX Workbooks file format.
@@ -709,7 +709,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<byte[]> ConvertDocumentCsvToXlsxAsync (System.IO.Stream inputFile);
 
         /// <summary>
-        /// CSV to Excel XLSX
+        /// Convert CSV to Excel XLSX Spreadsheet
         /// </summary>
         /// <remarks>
         /// Convert CSV file to Office Excel XLSX Workbooks file format.
@@ -719,7 +719,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentCsvToXlsxAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// Word DOC (97-03) to DOCX
+        /// Convert Word DOC (97-03) Document to DOCX
         /// </summary>
         /// <remarks>
         /// Convert/upgrade Office Word (97-2003 Format) Documents (doc) to the modern DOCX format
@@ -730,7 +730,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<byte[]> ConvertDocumentDocToDocxAsync (System.IO.Stream inputFile);
 
         /// <summary>
-        /// Word DOC (97-03) to DOCX
+        /// Convert Word DOC (97-03) Document to DOCX
         /// </summary>
         /// <remarks>
         /// Convert/upgrade Office Word (97-2003 Format) Documents (doc) to the modern DOCX format
@@ -740,7 +740,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentDocToDocxAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// Word DOC (97-03) to PDF
+        /// Convert Word DOC (97-03) Document to PDF
         /// </summary>
         /// <remarks>
         /// Convert Office Word (97-2003 Format) Documents (doc) to standard PDF
@@ -751,7 +751,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<byte[]> ConvertDocumentDocToPdfAsync (System.IO.Stream inputFile);
 
         /// <summary>
-        /// Word DOC (97-03) to PDF
+        /// Convert Word DOC (97-03) Document to PDF
         /// </summary>
         /// <remarks>
         /// Convert Office Word (97-2003 Format) Documents (doc) to standard PDF
@@ -761,7 +761,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentDocToPdfAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// Word DOCX to PDF
+        /// Convert Word DOCX Document to PDF
         /// </summary>
         /// <remarks>
         /// Convert Office Word Documents (docx) to standard PDF
@@ -772,7 +772,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<byte[]> ConvertDocumentDocxToPdfAsync (System.IO.Stream inputFile);
 
         /// <summary>
-        /// Word DOCX to PDF
+        /// Convert Word DOCX Document to PDF
         /// </summary>
         /// <remarks>
         /// Convert Office Word Documents (docx) to standard PDF
@@ -782,7 +782,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentDocxToPdfAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// Word DOCX to Text
+        /// Convert Word DOCX Document to Text
         /// </summary>
         /// <remarks>
         /// Convert Office Word Documents (docx) to text
@@ -793,7 +793,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<TextConversionResult> ConvertDocumentDocxToTxtAsync (System.IO.Stream inputFile);
 
         /// <summary>
-        /// Word DOCX to Text
+        /// Convert Word DOCX Document to Text
         /// </summary>
         /// <remarks>
         /// Convert Office Word Documents (docx) to text
@@ -803,7 +803,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (TextConversionResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<TextConversionResult>> ConvertDocumentDocxToTxtAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// HTML to PDF
+        /// Convert HTML to PDF Document
         /// </summary>
         /// <remarks>
         /// Convert standard HTML, with full support for CSS, JavaScript, Images, and other complex behavior to PDF.  To use external files such as images, use an absolute URL to the file.
@@ -814,7 +814,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<byte[]> ConvertDocumentHtmlToPdfAsync (System.IO.Stream inputFile);
 
         /// <summary>
-        /// HTML to PDF
+        /// Convert HTML to PDF Document
         /// </summary>
         /// <remarks>
         /// Convert standard HTML, with full support for CSS, JavaScript, Images, and other complex behavior to PDF.  To use external files such as images, use an absolute URL to the file.
@@ -824,7 +824,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentHtmlToPdfAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// HTML to PNG array
+        /// Convert HTML to PNG image array
         /// </summary>
         /// <remarks>
         /// Convert standard HTML, with full support for CSS, JavaScript, Images, and other complex behavior to an array of PNG images, one for each page.  To use external files in your HTML such as images, use an absolute URL to the file.
@@ -835,7 +835,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<PdfToPngResult> ConvertDocumentHtmlToPngAsync (System.IO.Stream inputFile);
 
         /// <summary>
-        /// HTML to PNG array
+        /// Convert HTML to PNG image array
         /// </summary>
         /// <remarks>
         /// Convert standard HTML, with full support for CSS, JavaScript, Images, and other complex behavior to an array of PNG images, one for each page.  To use external files in your HTML such as images, use an absolute URL to the file.
@@ -845,7 +845,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (PdfToPngResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<PdfToPngResult>> ConvertDocumentHtmlToPngAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// PDF to Word DOCX
+        /// Convert PDF to Word DOCX Document
         /// </summary>
         /// <remarks>
         /// Convert standard PDF to Office Word Documents (docx).    Converts a PDF at high fidelity into Word format, where it can be easily edited and processed.
@@ -856,7 +856,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<byte[]> ConvertDocumentPdfToDocxAsync (System.IO.Stream inputFile);
 
         /// <summary>
-        /// PDF to Word DOCX
+        /// Convert PDF to Word DOCX Document
         /// </summary>
         /// <remarks>
         /// Convert standard PDF to Office Word Documents (docx).    Converts a PDF at high fidelity into Word format, where it can be easily edited and processed.
@@ -866,7 +866,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentPdfToDocxAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// PDF to PNG Array
+        /// Convert PDF to PNG Image Array
         /// </summary>
         /// <remarks>
         /// Convert PDF document to PNG array, one image per page.
@@ -877,7 +877,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<PdfToPngResult> ConvertDocumentPdfToPngArrayAsync (System.IO.Stream inputFile);
 
         /// <summary>
-        /// PDF to PNG Array
+        /// Convert PDF to PNG Image Array
         /// </summary>
         /// <remarks>
         /// Convert PDF document to PNG array, one image per page.
@@ -887,7 +887,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (PdfToPngResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<PdfToPngResult>> ConvertDocumentPdfToPngArrayAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// PDF to Single PNG image
+        /// Convert PDF to Single PNG image
         /// </summary>
         /// <remarks>
         /// Convert PDF document to a single tall PNG image, by stacking/concatenating the images vertically into a single \&quot;tall\&quot; image
@@ -898,7 +898,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<byte[]> ConvertDocumentPdfToPngSingleAsync (System.IO.Stream inputFile);
 
         /// <summary>
-        /// PDF to Single PNG image
+        /// Convert PDF to Single PNG image
         /// </summary>
         /// <remarks>
         /// Convert PDF document to a single tall PNG image, by stacking/concatenating the images vertically into a single \&quot;tall\&quot; image
@@ -908,7 +908,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentPdfToPngSingleAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// PDF to PowerPoint PPTX
+        /// Convert PDF to PowerPoint PPTX Presentation
         /// </summary>
         /// <remarks>
         /// Convert standard PDF to Office PowerPoint Presentation (pptx).  Converts a PDF file at high fidelity into PowerPoint format, where it can be easily edited and processed.
@@ -919,7 +919,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<byte[]> ConvertDocumentPdfToPptxAsync (System.IO.Stream inputFile);
 
         /// <summary>
-        /// PDF to PowerPoint PPTX
+        /// Convert PDF to PowerPoint PPTX Presentation
         /// </summary>
         /// <remarks>
         /// Convert standard PDF to Office PowerPoint Presentation (pptx).  Converts a PDF file at high fidelity into PowerPoint format, where it can be easily edited and processed.
@@ -929,7 +929,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentPdfToPptxAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// PDF to Text
+        /// Convert PDF Document to Text
         /// </summary>
         /// <remarks>
         /// PDF document to text
@@ -940,7 +940,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<TextConversionResult> ConvertDocumentPdfToTxtAsync (System.IO.Stream inputFile);
 
         /// <summary>
-        /// PDF to Text
+        /// Convert PDF Document to Text
         /// </summary>
         /// <remarks>
         /// PDF document to text
@@ -950,7 +950,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (TextConversionResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<TextConversionResult>> ConvertDocumentPdfToTxtAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// PNG Array to PDF
+        /// Convert PNG Array to PDF
         /// </summary>
         /// <remarks>
         /// Convert an array of PNG images, one image per page, into a newly-created PDF.  Supports images of different sizes as input.
@@ -970,7 +970,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<byte[]> ConvertDocumentPngArrayToPdfAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
 
         /// <summary>
-        /// PNG Array to PDF
+        /// Convert PNG Array to PDF
         /// </summary>
         /// <remarks>
         /// Convert an array of PNG images, one image per page, into a newly-created PDF.  Supports images of different sizes as input.
@@ -989,7 +989,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentPngArrayToPdfAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
         /// <summary>
-        /// PowerPoint PPT (97-03) to PDF
+        /// Convert PowerPoint PPT (97-03) Presentation to PDF
         /// </summary>
         /// <remarks>
         /// Convert Office PowerPoint (97-2003) Documents (ppt) to standard PDF
@@ -1000,7 +1000,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<byte[]> ConvertDocumentPptToPdfAsync (System.IO.Stream inputFile);
 
         /// <summary>
-        /// PowerPoint PPT (97-03) to PDF
+        /// Convert PowerPoint PPT (97-03) Presentation to PDF
         /// </summary>
         /// <remarks>
         /// Convert Office PowerPoint (97-2003) Documents (ppt) to standard PDF
@@ -1010,7 +1010,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentPptToPdfAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// PowerPoint PPT (97-03) to PPTX
+        /// Convert PowerPoint PPT (97-03) Presentation to PPTX
         /// </summary>
         /// <remarks>
         /// Convert/upgrade Office PowerPoint (97-2003) Documents (ppt) to modern PPTX
@@ -1021,7 +1021,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<byte[]> ConvertDocumentPptToPptxAsync (System.IO.Stream inputFile);
 
         /// <summary>
-        /// PowerPoint PPT (97-03) to PPTX
+        /// Convert PowerPoint PPT (97-03) Presentation to PPTX
         /// </summary>
         /// <remarks>
         /// Convert/upgrade Office PowerPoint (97-2003) Documents (ppt) to modern PPTX
@@ -1031,7 +1031,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentPptToPptxAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// PowerPoint PPTX to PDF
+        /// Convert PowerPoint PPTX Presentation to PDF
         /// </summary>
         /// <remarks>
         /// Convert Office PowerPoint Documents (pptx) to standard PDF
@@ -1042,7 +1042,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<byte[]> ConvertDocumentPptxToPdfAsync (System.IO.Stream inputFile);
 
         /// <summary>
-        /// PowerPoint PPTX to PDF
+        /// Convert PowerPoint PPTX Presentation to PDF
         /// </summary>
         /// <remarks>
         /// Convert Office PowerPoint Documents (pptx) to standard PDF
@@ -1052,7 +1052,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentPptxToPdfAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// PowerPoint PPTX to Text
+        /// Convert PowerPoint PPTX Presentation to Text
         /// </summary>
         /// <remarks>
         /// Convert Office PowerPoint Documents (pptx) to standard Text
@@ -1063,7 +1063,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<TextConversionResult> ConvertDocumentPptxToTxtAsync (System.IO.Stream inputFile);
 
         /// <summary>
-        /// PowerPoint PPTX to Text
+        /// Convert PowerPoint PPTX Presentation to Text
         /// </summary>
         /// <remarks>
         /// Convert Office PowerPoint Documents (pptx) to standard Text
@@ -1073,7 +1073,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (TextConversionResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<TextConversionResult>> ConvertDocumentPptxToTxtAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// Excel XLS (97-03) to CSV
+        /// Convert Excel XLS (97-03) Spreadsheet to CSV
         /// </summary>
         /// <remarks>
         /// Convert/upgrade Office Excel (97-2003) Workbooks (xls) to standard CSV format.
@@ -1084,7 +1084,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<byte[]> ConvertDocumentXlsToCsvAsync (System.IO.Stream inputFile);
 
         /// <summary>
-        /// Excel XLS (97-03) to CSV
+        /// Convert Excel XLS (97-03) Spreadsheet to CSV
         /// </summary>
         /// <remarks>
         /// Convert/upgrade Office Excel (97-2003) Workbooks (xls) to standard CSV format.
@@ -1094,7 +1094,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentXlsToCsvAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// Excel XLS (97-03) to PDF
+        /// Convert Excel XLS (97-03) Spreadsheet to PDF
         /// </summary>
         /// <remarks>
         /// Convert Office Excel (97-2003) Workbooks (xls) to standard PDF.  Converts all worksheets in the workbook to PDF.
@@ -1105,7 +1105,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<byte[]> ConvertDocumentXlsToPdfAsync (System.IO.Stream inputFile);
 
         /// <summary>
-        /// Excel XLS (97-03) to PDF
+        /// Convert Excel XLS (97-03) Spreadsheet to PDF
         /// </summary>
         /// <remarks>
         /// Convert Office Excel (97-2003) Workbooks (xls) to standard PDF.  Converts all worksheets in the workbook to PDF.
@@ -1115,7 +1115,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentXlsToPdfAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// Excel XLS (97-03) to XLSX
+        /// Convert Excel XLS (97-03) Spreadsheet to XLSX
         /// </summary>
         /// <remarks>
         /// Convert/upgrade Office Excel (97-2003) Workbooks (xls) to modern XLSX format.
@@ -1126,7 +1126,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<byte[]> ConvertDocumentXlsToXlsxAsync (System.IO.Stream inputFile);
 
         /// <summary>
-        /// Excel XLS (97-03) to XLSX
+        /// Convert Excel XLS (97-03) Spreadsheet to XLSX
         /// </summary>
         /// <remarks>
         /// Convert/upgrade Office Excel (97-2003) Workbooks (xls) to modern XLSX format.
@@ -1136,7 +1136,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentXlsToXlsxAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// Excel XLSX to CSV
+        /// Convert Excel XLSX Spreadsheet to CSV
         /// </summary>
         /// <remarks>
         /// Convert Office Excel Workbooks (XLSX) to standard Comma-Separated Values (CSV) format.  Supports both XLSX and XLSB file Excel formats.
@@ -1148,7 +1148,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<byte[]> ConvertDocumentXlsxToCsvAsync (System.IO.Stream inputFile, string outputEncoding = null);
 
         /// <summary>
-        /// Excel XLSX to CSV
+        /// Convert Excel XLSX Spreadsheet to CSV
         /// </summary>
         /// <remarks>
         /// Convert Office Excel Workbooks (XLSX) to standard Comma-Separated Values (CSV) format.  Supports both XLSX and XLSB file Excel formats.
@@ -1159,7 +1159,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentXlsxToCsvAsyncWithHttpInfo (System.IO.Stream inputFile, string outputEncoding = null);
         /// <summary>
-        /// Excel XLSX to PDF
+        /// Convert Excel XLSX Spreadsheet to PDF
         /// </summary>
         /// <remarks>
         /// Convert Office Excel Workbooks (XLSX) to standard PDF.  Converts all worksheets in the workbook to PDF.  Supports both XLSX and XLSB Excel file formats.
@@ -1170,7 +1170,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<byte[]> ConvertDocumentXlsxToPdfAsync (System.IO.Stream inputFile);
 
         /// <summary>
-        /// Excel XLSX to PDF
+        /// Convert Excel XLSX Spreadsheet to PDF
         /// </summary>
         /// <remarks>
         /// Convert Office Excel Workbooks (XLSX) to standard PDF.  Converts all worksheets in the workbook to PDF.  Supports both XLSX and XLSB Excel file formats.
@@ -1180,7 +1180,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentXlsxToPdfAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// Excel XLSX to Text
+        /// Convert Excel XLSX Spreadsheet to Text
         /// </summary>
         /// <remarks>
         /// Convert Office Excel Workbooks (XLSX) to standard Text.  Converts all worksheets in the workbook to Text.  Supports both XLSX and XLSB file formats.
@@ -1191,7 +1191,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<TextConversionResult> ConvertDocumentXlsxToTxtAsync (System.IO.Stream inputFile);
 
         /// <summary>
-        /// Excel XLSX to Text
+        /// Convert Excel XLSX Spreadsheet to Text
         /// </summary>
         /// <remarks>
         /// Convert Office Excel Workbooks (XLSX) to standard Text.  Converts all worksheets in the workbook to Text.  Supports both XLSX and XLSB file formats.
@@ -1636,7 +1636,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/octet-stream"
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1709,7 +1712,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/octet-stream"
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1887,7 +1893,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// CSV to Excel XLSX Convert CSV file to Office Excel XLSX Workbooks file format.
+        /// Convert CSV to Excel XLSX Spreadsheet Convert CSV file to Office Excel XLSX Workbooks file format.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -1899,7 +1905,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// CSV to Excel XLSX Convert CSV file to Office Excel XLSX Workbooks file format.
+        /// Convert CSV to Excel XLSX Spreadsheet Convert CSV file to Office Excel XLSX Workbooks file format.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -1959,7 +1965,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// CSV to Excel XLSX Convert CSV file to Office Excel XLSX Workbooks file format.
+        /// Convert CSV to Excel XLSX Spreadsheet Convert CSV file to Office Excel XLSX Workbooks file format.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -1972,7 +1978,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// CSV to Excel XLSX Convert CSV file to Office Excel XLSX Workbooks file format.
+        /// Convert CSV to Excel XLSX Spreadsheet Convert CSV file to Office Excel XLSX Workbooks file format.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -2032,7 +2038,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Word DOC (97-03) to DOCX Convert/upgrade Office Word (97-2003 Format) Documents (doc) to the modern DOCX format
+        /// Convert Word DOC (97-03) Document to DOCX Convert/upgrade Office Word (97-2003 Format) Documents (doc) to the modern DOCX format
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -2044,7 +2050,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Word DOC (97-03) to DOCX Convert/upgrade Office Word (97-2003 Format) Documents (doc) to the modern DOCX format
+        /// Convert Word DOC (97-03) Document to DOCX Convert/upgrade Office Word (97-2003 Format) Documents (doc) to the modern DOCX format
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -2104,7 +2110,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Word DOC (97-03) to DOCX Convert/upgrade Office Word (97-2003 Format) Documents (doc) to the modern DOCX format
+        /// Convert Word DOC (97-03) Document to DOCX Convert/upgrade Office Word (97-2003 Format) Documents (doc) to the modern DOCX format
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -2117,7 +2123,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Word DOC (97-03) to DOCX Convert/upgrade Office Word (97-2003 Format) Documents (doc) to the modern DOCX format
+        /// Convert Word DOC (97-03) Document to DOCX Convert/upgrade Office Word (97-2003 Format) Documents (doc) to the modern DOCX format
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -2177,7 +2183,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Word DOC (97-03) to PDF Convert Office Word (97-2003 Format) Documents (doc) to standard PDF
+        /// Convert Word DOC (97-03) Document to PDF Convert Office Word (97-2003 Format) Documents (doc) to standard PDF
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -2189,7 +2195,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Word DOC (97-03) to PDF Convert Office Word (97-2003 Format) Documents (doc) to standard PDF
+        /// Convert Word DOC (97-03) Document to PDF Convert Office Word (97-2003 Format) Documents (doc) to standard PDF
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -2249,7 +2255,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Word DOC (97-03) to PDF Convert Office Word (97-2003 Format) Documents (doc) to standard PDF
+        /// Convert Word DOC (97-03) Document to PDF Convert Office Word (97-2003 Format) Documents (doc) to standard PDF
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -2262,7 +2268,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Word DOC (97-03) to PDF Convert Office Word (97-2003 Format) Documents (doc) to standard PDF
+        /// Convert Word DOC (97-03) Document to PDF Convert Office Word (97-2003 Format) Documents (doc) to standard PDF
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -2322,7 +2328,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Word DOCX to PDF Convert Office Word Documents (docx) to standard PDF
+        /// Convert Word DOCX Document to PDF Convert Office Word Documents (docx) to standard PDF
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -2334,7 +2340,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Word DOCX to PDF Convert Office Word Documents (docx) to standard PDF
+        /// Convert Word DOCX Document to PDF Convert Office Word Documents (docx) to standard PDF
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -2394,7 +2400,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Word DOCX to PDF Convert Office Word Documents (docx) to standard PDF
+        /// Convert Word DOCX Document to PDF Convert Office Word Documents (docx) to standard PDF
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -2407,7 +2413,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Word DOCX to PDF Convert Office Word Documents (docx) to standard PDF
+        /// Convert Word DOCX Document to PDF Convert Office Word Documents (docx) to standard PDF
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -2467,7 +2473,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Word DOCX to Text Convert Office Word Documents (docx) to text
+        /// Convert Word DOCX Document to Text Convert Office Word Documents (docx) to text
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -2479,7 +2485,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Word DOCX to Text Convert Office Word Documents (docx) to text
+        /// Convert Word DOCX Document to Text Convert Office Word Documents (docx) to text
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -2539,7 +2545,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Word DOCX to Text Convert Office Word Documents (docx) to text
+        /// Convert Word DOCX Document to Text Convert Office Word Documents (docx) to text
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -2552,7 +2558,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Word DOCX to Text Convert Office Word Documents (docx) to text
+        /// Convert Word DOCX Document to Text Convert Office Word Documents (docx) to text
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -2612,7 +2618,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// HTML to PDF Convert standard HTML, with full support for CSS, JavaScript, Images, and other complex behavior to PDF.  To use external files such as images, use an absolute URL to the file.
+        /// Convert HTML to PDF Document Convert standard HTML, with full support for CSS, JavaScript, Images, and other complex behavior to PDF.  To use external files such as images, use an absolute URL to the file.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -2624,7 +2630,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// HTML to PDF Convert standard HTML, with full support for CSS, JavaScript, Images, and other complex behavior to PDF.  To use external files such as images, use an absolute URL to the file.
+        /// Convert HTML to PDF Document Convert standard HTML, with full support for CSS, JavaScript, Images, and other complex behavior to PDF.  To use external files such as images, use an absolute URL to the file.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -2684,7 +2690,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// HTML to PDF Convert standard HTML, with full support for CSS, JavaScript, Images, and other complex behavior to PDF.  To use external files such as images, use an absolute URL to the file.
+        /// Convert HTML to PDF Document Convert standard HTML, with full support for CSS, JavaScript, Images, and other complex behavior to PDF.  To use external files such as images, use an absolute URL to the file.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -2697,7 +2703,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// HTML to PDF Convert standard HTML, with full support for CSS, JavaScript, Images, and other complex behavior to PDF.  To use external files such as images, use an absolute URL to the file.
+        /// Convert HTML to PDF Document Convert standard HTML, with full support for CSS, JavaScript, Images, and other complex behavior to PDF.  To use external files such as images, use an absolute URL to the file.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -2757,7 +2763,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// HTML to PNG array Convert standard HTML, with full support for CSS, JavaScript, Images, and other complex behavior to an array of PNG images, one for each page.  To use external files in your HTML such as images, use an absolute URL to the file.
+        /// Convert HTML to PNG image array Convert standard HTML, with full support for CSS, JavaScript, Images, and other complex behavior to an array of PNG images, one for each page.  To use external files in your HTML such as images, use an absolute URL to the file.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -2769,7 +2775,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// HTML to PNG array Convert standard HTML, with full support for CSS, JavaScript, Images, and other complex behavior to an array of PNG images, one for each page.  To use external files in your HTML such as images, use an absolute URL to the file.
+        /// Convert HTML to PNG image array Convert standard HTML, with full support for CSS, JavaScript, Images, and other complex behavior to an array of PNG images, one for each page.  To use external files in your HTML such as images, use an absolute URL to the file.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -2796,7 +2802,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/octet-stream"
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2829,7 +2838,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// HTML to PNG array Convert standard HTML, with full support for CSS, JavaScript, Images, and other complex behavior to an array of PNG images, one for each page.  To use external files in your HTML such as images, use an absolute URL to the file.
+        /// Convert HTML to PNG image array Convert standard HTML, with full support for CSS, JavaScript, Images, and other complex behavior to an array of PNG images, one for each page.  To use external files in your HTML such as images, use an absolute URL to the file.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -2842,7 +2851,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// HTML to PNG array Convert standard HTML, with full support for CSS, JavaScript, Images, and other complex behavior to an array of PNG images, one for each page.  To use external files in your HTML such as images, use an absolute URL to the file.
+        /// Convert HTML to PNG image array Convert standard HTML, with full support for CSS, JavaScript, Images, and other complex behavior to an array of PNG images, one for each page.  To use external files in your HTML such as images, use an absolute URL to the file.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -2869,7 +2878,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/octet-stream"
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2902,7 +2914,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PDF to Word DOCX Convert standard PDF to Office Word Documents (docx).    Converts a PDF at high fidelity into Word format, where it can be easily edited and processed.
+        /// Convert PDF to Word DOCX Document Convert standard PDF to Office Word Documents (docx).    Converts a PDF at high fidelity into Word format, where it can be easily edited and processed.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -2914,7 +2926,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PDF to Word DOCX Convert standard PDF to Office Word Documents (docx).    Converts a PDF at high fidelity into Word format, where it can be easily edited and processed.
+        /// Convert PDF to Word DOCX Document Convert standard PDF to Office Word Documents (docx).    Converts a PDF at high fidelity into Word format, where it can be easily edited and processed.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -2974,7 +2986,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PDF to Word DOCX Convert standard PDF to Office Word Documents (docx).    Converts a PDF at high fidelity into Word format, where it can be easily edited and processed.
+        /// Convert PDF to Word DOCX Document Convert standard PDF to Office Word Documents (docx).    Converts a PDF at high fidelity into Word format, where it can be easily edited and processed.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -2987,7 +2999,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PDF to Word DOCX Convert standard PDF to Office Word Documents (docx).    Converts a PDF at high fidelity into Word format, where it can be easily edited and processed.
+        /// Convert PDF to Word DOCX Document Convert standard PDF to Office Word Documents (docx).    Converts a PDF at high fidelity into Word format, where it can be easily edited and processed.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -3047,7 +3059,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PDF to PNG Array Convert PDF document to PNG array, one image per page.
+        /// Convert PDF to PNG Image Array Convert PDF document to PNG array, one image per page.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -3059,7 +3071,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PDF to PNG Array Convert PDF document to PNG array, one image per page.
+        /// Convert PDF to PNG Image Array Convert PDF document to PNG array, one image per page.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -3086,7 +3098,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/octet-stream"
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3119,7 +3134,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PDF to PNG Array Convert PDF document to PNG array, one image per page.
+        /// Convert PDF to PNG Image Array Convert PDF document to PNG array, one image per page.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -3132,7 +3147,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PDF to PNG Array Convert PDF document to PNG array, one image per page.
+        /// Convert PDF to PNG Image Array Convert PDF document to PNG array, one image per page.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -3159,7 +3174,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/octet-stream"
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3192,7 +3210,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PDF to Single PNG image Convert PDF document to a single tall PNG image, by stacking/concatenating the images vertically into a single \&quot;tall\&quot; image
+        /// Convert PDF to Single PNG image Convert PDF document to a single tall PNG image, by stacking/concatenating the images vertically into a single \&quot;tall\&quot; image
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -3204,7 +3222,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PDF to Single PNG image Convert PDF document to a single tall PNG image, by stacking/concatenating the images vertically into a single \&quot;tall\&quot; image
+        /// Convert PDF to Single PNG image Convert PDF document to a single tall PNG image, by stacking/concatenating the images vertically into a single \&quot;tall\&quot; image
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -3264,7 +3282,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PDF to Single PNG image Convert PDF document to a single tall PNG image, by stacking/concatenating the images vertically into a single \&quot;tall\&quot; image
+        /// Convert PDF to Single PNG image Convert PDF document to a single tall PNG image, by stacking/concatenating the images vertically into a single \&quot;tall\&quot; image
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -3277,7 +3295,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PDF to Single PNG image Convert PDF document to a single tall PNG image, by stacking/concatenating the images vertically into a single \&quot;tall\&quot; image
+        /// Convert PDF to Single PNG image Convert PDF document to a single tall PNG image, by stacking/concatenating the images vertically into a single \&quot;tall\&quot; image
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -3337,7 +3355,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PDF to PowerPoint PPTX Convert standard PDF to Office PowerPoint Presentation (pptx).  Converts a PDF file at high fidelity into PowerPoint format, where it can be easily edited and processed.
+        /// Convert PDF to PowerPoint PPTX Presentation Convert standard PDF to Office PowerPoint Presentation (pptx).  Converts a PDF file at high fidelity into PowerPoint format, where it can be easily edited and processed.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -3349,7 +3367,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PDF to PowerPoint PPTX Convert standard PDF to Office PowerPoint Presentation (pptx).  Converts a PDF file at high fidelity into PowerPoint format, where it can be easily edited and processed.
+        /// Convert PDF to PowerPoint PPTX Presentation Convert standard PDF to Office PowerPoint Presentation (pptx).  Converts a PDF file at high fidelity into PowerPoint format, where it can be easily edited and processed.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -3409,7 +3427,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PDF to PowerPoint PPTX Convert standard PDF to Office PowerPoint Presentation (pptx).  Converts a PDF file at high fidelity into PowerPoint format, where it can be easily edited and processed.
+        /// Convert PDF to PowerPoint PPTX Presentation Convert standard PDF to Office PowerPoint Presentation (pptx).  Converts a PDF file at high fidelity into PowerPoint format, where it can be easily edited and processed.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -3422,7 +3440,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PDF to PowerPoint PPTX Convert standard PDF to Office PowerPoint Presentation (pptx).  Converts a PDF file at high fidelity into PowerPoint format, where it can be easily edited and processed.
+        /// Convert PDF to PowerPoint PPTX Presentation Convert standard PDF to Office PowerPoint Presentation (pptx).  Converts a PDF file at high fidelity into PowerPoint format, where it can be easily edited and processed.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -3482,7 +3500,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PDF to Text PDF document to text
+        /// Convert PDF Document to Text PDF document to text
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -3494,7 +3512,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PDF to Text PDF document to text
+        /// Convert PDF Document to Text PDF document to text
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -3521,7 +3539,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/octet-stream"
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3554,7 +3575,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PDF to Text PDF document to text
+        /// Convert PDF Document to Text PDF document to text
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -3567,7 +3588,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PDF to Text PDF document to text
+        /// Convert PDF Document to Text PDF document to text
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -3594,7 +3615,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/octet-stream"
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3627,7 +3651,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PNG Array to PDF Convert an array of PNG images, one image per page, into a newly-created PDF.  Supports images of different sizes as input.
+        /// Convert PNG Array to PDF Convert an array of PNG images, one image per page, into a newly-created PDF.  Supports images of different sizes as input.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
@@ -3648,7 +3672,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PNG Array to PDF Convert an array of PNG images, one image per page, into a newly-created PDF.  Supports images of different sizes as input.
+        /// Convert PNG Array to PDF Convert an array of PNG images, one image per page, into a newly-created PDF.  Supports images of different sizes as input.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
@@ -3729,7 +3753,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PNG Array to PDF Convert an array of PNG images, one image per page, into a newly-created PDF.  Supports images of different sizes as input.
+        /// Convert PNG Array to PDF Convert an array of PNG images, one image per page, into a newly-created PDF.  Supports images of different sizes as input.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
@@ -3751,7 +3775,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PNG Array to PDF Convert an array of PNG images, one image per page, into a newly-created PDF.  Supports images of different sizes as input.
+        /// Convert PNG Array to PDF Convert an array of PNG images, one image per page, into a newly-created PDF.  Supports images of different sizes as input.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
@@ -3832,7 +3856,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PowerPoint PPT (97-03) to PDF Convert Office PowerPoint (97-2003) Documents (ppt) to standard PDF
+        /// Convert PowerPoint PPT (97-03) Presentation to PDF Convert Office PowerPoint (97-2003) Documents (ppt) to standard PDF
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -3844,7 +3868,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PowerPoint PPT (97-03) to PDF Convert Office PowerPoint (97-2003) Documents (ppt) to standard PDF
+        /// Convert PowerPoint PPT (97-03) Presentation to PDF Convert Office PowerPoint (97-2003) Documents (ppt) to standard PDF
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -3904,7 +3928,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PowerPoint PPT (97-03) to PDF Convert Office PowerPoint (97-2003) Documents (ppt) to standard PDF
+        /// Convert PowerPoint PPT (97-03) Presentation to PDF Convert Office PowerPoint (97-2003) Documents (ppt) to standard PDF
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -3917,7 +3941,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PowerPoint PPT (97-03) to PDF Convert Office PowerPoint (97-2003) Documents (ppt) to standard PDF
+        /// Convert PowerPoint PPT (97-03) Presentation to PDF Convert Office PowerPoint (97-2003) Documents (ppt) to standard PDF
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -3977,7 +4001,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PowerPoint PPT (97-03) to PPTX Convert/upgrade Office PowerPoint (97-2003) Documents (ppt) to modern PPTX
+        /// Convert PowerPoint PPT (97-03) Presentation to PPTX Convert/upgrade Office PowerPoint (97-2003) Documents (ppt) to modern PPTX
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -3989,7 +4013,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PowerPoint PPT (97-03) to PPTX Convert/upgrade Office PowerPoint (97-2003) Documents (ppt) to modern PPTX
+        /// Convert PowerPoint PPT (97-03) Presentation to PPTX Convert/upgrade Office PowerPoint (97-2003) Documents (ppt) to modern PPTX
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -4049,7 +4073,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PowerPoint PPT (97-03) to PPTX Convert/upgrade Office PowerPoint (97-2003) Documents (ppt) to modern PPTX
+        /// Convert PowerPoint PPT (97-03) Presentation to PPTX Convert/upgrade Office PowerPoint (97-2003) Documents (ppt) to modern PPTX
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -4062,7 +4086,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PowerPoint PPT (97-03) to PPTX Convert/upgrade Office PowerPoint (97-2003) Documents (ppt) to modern PPTX
+        /// Convert PowerPoint PPT (97-03) Presentation to PPTX Convert/upgrade Office PowerPoint (97-2003) Documents (ppt) to modern PPTX
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -4122,7 +4146,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PowerPoint PPTX to PDF Convert Office PowerPoint Documents (pptx) to standard PDF
+        /// Convert PowerPoint PPTX Presentation to PDF Convert Office PowerPoint Documents (pptx) to standard PDF
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -4134,7 +4158,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PowerPoint PPTX to PDF Convert Office PowerPoint Documents (pptx) to standard PDF
+        /// Convert PowerPoint PPTX Presentation to PDF Convert Office PowerPoint Documents (pptx) to standard PDF
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -4194,7 +4218,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PowerPoint PPTX to PDF Convert Office PowerPoint Documents (pptx) to standard PDF
+        /// Convert PowerPoint PPTX Presentation to PDF Convert Office PowerPoint Documents (pptx) to standard PDF
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -4207,7 +4231,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PowerPoint PPTX to PDF Convert Office PowerPoint Documents (pptx) to standard PDF
+        /// Convert PowerPoint PPTX Presentation to PDF Convert Office PowerPoint Documents (pptx) to standard PDF
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -4267,7 +4291,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PowerPoint PPTX to Text Convert Office PowerPoint Documents (pptx) to standard Text
+        /// Convert PowerPoint PPTX Presentation to Text Convert Office PowerPoint Documents (pptx) to standard Text
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -4279,7 +4303,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PowerPoint PPTX to Text Convert Office PowerPoint Documents (pptx) to standard Text
+        /// Convert PowerPoint PPTX Presentation to Text Convert Office PowerPoint Documents (pptx) to standard Text
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -4339,7 +4363,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PowerPoint PPTX to Text Convert Office PowerPoint Documents (pptx) to standard Text
+        /// Convert PowerPoint PPTX Presentation to Text Convert Office PowerPoint Documents (pptx) to standard Text
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -4352,7 +4376,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// PowerPoint PPTX to Text Convert Office PowerPoint Documents (pptx) to standard Text
+        /// Convert PowerPoint PPTX Presentation to Text Convert Office PowerPoint Documents (pptx) to standard Text
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -4412,7 +4436,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Excel XLS (97-03) to CSV Convert/upgrade Office Excel (97-2003) Workbooks (xls) to standard CSV format.
+        /// Convert Excel XLS (97-03) Spreadsheet to CSV Convert/upgrade Office Excel (97-2003) Workbooks (xls) to standard CSV format.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -4424,7 +4448,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Excel XLS (97-03) to CSV Convert/upgrade Office Excel (97-2003) Workbooks (xls) to standard CSV format.
+        /// Convert Excel XLS (97-03) Spreadsheet to CSV Convert/upgrade Office Excel (97-2003) Workbooks (xls) to standard CSV format.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -4484,7 +4508,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Excel XLS (97-03) to CSV Convert/upgrade Office Excel (97-2003) Workbooks (xls) to standard CSV format.
+        /// Convert Excel XLS (97-03) Spreadsheet to CSV Convert/upgrade Office Excel (97-2003) Workbooks (xls) to standard CSV format.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -4497,7 +4521,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Excel XLS (97-03) to CSV Convert/upgrade Office Excel (97-2003) Workbooks (xls) to standard CSV format.
+        /// Convert Excel XLS (97-03) Spreadsheet to CSV Convert/upgrade Office Excel (97-2003) Workbooks (xls) to standard CSV format.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -4557,7 +4581,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Excel XLS (97-03) to PDF Convert Office Excel (97-2003) Workbooks (xls) to standard PDF.  Converts all worksheets in the workbook to PDF.
+        /// Convert Excel XLS (97-03) Spreadsheet to PDF Convert Office Excel (97-2003) Workbooks (xls) to standard PDF.  Converts all worksheets in the workbook to PDF.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -4569,7 +4593,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Excel XLS (97-03) to PDF Convert Office Excel (97-2003) Workbooks (xls) to standard PDF.  Converts all worksheets in the workbook to PDF.
+        /// Convert Excel XLS (97-03) Spreadsheet to PDF Convert Office Excel (97-2003) Workbooks (xls) to standard PDF.  Converts all worksheets in the workbook to PDF.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -4629,7 +4653,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Excel XLS (97-03) to PDF Convert Office Excel (97-2003) Workbooks (xls) to standard PDF.  Converts all worksheets in the workbook to PDF.
+        /// Convert Excel XLS (97-03) Spreadsheet to PDF Convert Office Excel (97-2003) Workbooks (xls) to standard PDF.  Converts all worksheets in the workbook to PDF.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -4642,7 +4666,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Excel XLS (97-03) to PDF Convert Office Excel (97-2003) Workbooks (xls) to standard PDF.  Converts all worksheets in the workbook to PDF.
+        /// Convert Excel XLS (97-03) Spreadsheet to PDF Convert Office Excel (97-2003) Workbooks (xls) to standard PDF.  Converts all worksheets in the workbook to PDF.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -4702,7 +4726,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Excel XLS (97-03) to XLSX Convert/upgrade Office Excel (97-2003) Workbooks (xls) to modern XLSX format.
+        /// Convert Excel XLS (97-03) Spreadsheet to XLSX Convert/upgrade Office Excel (97-2003) Workbooks (xls) to modern XLSX format.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -4714,7 +4738,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Excel XLS (97-03) to XLSX Convert/upgrade Office Excel (97-2003) Workbooks (xls) to modern XLSX format.
+        /// Convert Excel XLS (97-03) Spreadsheet to XLSX Convert/upgrade Office Excel (97-2003) Workbooks (xls) to modern XLSX format.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -4774,7 +4798,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Excel XLS (97-03) to XLSX Convert/upgrade Office Excel (97-2003) Workbooks (xls) to modern XLSX format.
+        /// Convert Excel XLS (97-03) Spreadsheet to XLSX Convert/upgrade Office Excel (97-2003) Workbooks (xls) to modern XLSX format.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -4787,7 +4811,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Excel XLS (97-03) to XLSX Convert/upgrade Office Excel (97-2003) Workbooks (xls) to modern XLSX format.
+        /// Convert Excel XLS (97-03) Spreadsheet to XLSX Convert/upgrade Office Excel (97-2003) Workbooks (xls) to modern XLSX format.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -4847,7 +4871,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Excel XLSX to CSV Convert Office Excel Workbooks (XLSX) to standard Comma-Separated Values (CSV) format.  Supports both XLSX and XLSB file Excel formats.
+        /// Convert Excel XLSX Spreadsheet to CSV Convert Office Excel Workbooks (XLSX) to standard Comma-Separated Values (CSV) format.  Supports both XLSX and XLSB file Excel formats.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -4860,7 +4884,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Excel XLSX to CSV Convert Office Excel Workbooks (XLSX) to standard Comma-Separated Values (CSV) format.  Supports both XLSX and XLSB file Excel formats.
+        /// Convert Excel XLSX Spreadsheet to CSV Convert Office Excel Workbooks (XLSX) to standard Comma-Separated Values (CSV) format.  Supports both XLSX and XLSB file Excel formats.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -4922,7 +4946,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Excel XLSX to CSV Convert Office Excel Workbooks (XLSX) to standard Comma-Separated Values (CSV) format.  Supports both XLSX and XLSB file Excel formats.
+        /// Convert Excel XLSX Spreadsheet to CSV Convert Office Excel Workbooks (XLSX) to standard Comma-Separated Values (CSV) format.  Supports both XLSX and XLSB file Excel formats.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -4936,7 +4960,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Excel XLSX to CSV Convert Office Excel Workbooks (XLSX) to standard Comma-Separated Values (CSV) format.  Supports both XLSX and XLSB file Excel formats.
+        /// Convert Excel XLSX Spreadsheet to CSV Convert Office Excel Workbooks (XLSX) to standard Comma-Separated Values (CSV) format.  Supports both XLSX and XLSB file Excel formats.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -4998,7 +5022,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Excel XLSX to PDF Convert Office Excel Workbooks (XLSX) to standard PDF.  Converts all worksheets in the workbook to PDF.  Supports both XLSX and XLSB Excel file formats.
+        /// Convert Excel XLSX Spreadsheet to PDF Convert Office Excel Workbooks (XLSX) to standard PDF.  Converts all worksheets in the workbook to PDF.  Supports both XLSX and XLSB Excel file formats.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -5010,7 +5034,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Excel XLSX to PDF Convert Office Excel Workbooks (XLSX) to standard PDF.  Converts all worksheets in the workbook to PDF.  Supports both XLSX and XLSB Excel file formats.
+        /// Convert Excel XLSX Spreadsheet to PDF Convert Office Excel Workbooks (XLSX) to standard PDF.  Converts all worksheets in the workbook to PDF.  Supports both XLSX and XLSB Excel file formats.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -5070,7 +5094,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Excel XLSX to PDF Convert Office Excel Workbooks (XLSX) to standard PDF.  Converts all worksheets in the workbook to PDF.  Supports both XLSX and XLSB Excel file formats.
+        /// Convert Excel XLSX Spreadsheet to PDF Convert Office Excel Workbooks (XLSX) to standard PDF.  Converts all worksheets in the workbook to PDF.  Supports both XLSX and XLSB Excel file formats.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -5083,7 +5107,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Excel XLSX to PDF Convert Office Excel Workbooks (XLSX) to standard PDF.  Converts all worksheets in the workbook to PDF.  Supports both XLSX and XLSB Excel file formats.
+        /// Convert Excel XLSX Spreadsheet to PDF Convert Office Excel Workbooks (XLSX) to standard PDF.  Converts all worksheets in the workbook to PDF.  Supports both XLSX and XLSB Excel file formats.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -5143,7 +5167,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Excel XLSX to Text Convert Office Excel Workbooks (XLSX) to standard Text.  Converts all worksheets in the workbook to Text.  Supports both XLSX and XLSB file formats.
+        /// Convert Excel XLSX Spreadsheet to Text Convert Office Excel Workbooks (XLSX) to standard Text.  Converts all worksheets in the workbook to Text.  Supports both XLSX and XLSB file formats.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -5155,7 +5179,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Excel XLSX to Text Convert Office Excel Workbooks (XLSX) to standard Text.  Converts all worksheets in the workbook to Text.  Supports both XLSX and XLSB file formats.
+        /// Convert Excel XLSX Spreadsheet to Text Convert Office Excel Workbooks (XLSX) to standard Text.  Converts all worksheets in the workbook to Text.  Supports both XLSX and XLSB file formats.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -5215,7 +5239,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Excel XLSX to Text Convert Office Excel Workbooks (XLSX) to standard Text.  Converts all worksheets in the workbook to Text.  Supports both XLSX and XLSB file formats.
+        /// Convert Excel XLSX Spreadsheet to Text Convert Office Excel Workbooks (XLSX) to standard Text.  Converts all worksheets in the workbook to Text.  Supports both XLSX and XLSB file formats.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -5228,7 +5252,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Excel XLSX to Text Convert Office Excel Workbooks (XLSX) to standard Text.  Converts all worksheets in the workbook to Text.  Supports both XLSX and XLSB file formats.
+        /// Convert Excel XLSX Spreadsheet to Text Convert Office Excel Workbooks (XLSX) to standard Text.  Converts all worksheets in the workbook to Text.  Supports both XLSX and XLSB file formats.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>

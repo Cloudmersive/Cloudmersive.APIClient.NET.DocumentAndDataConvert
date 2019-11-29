@@ -5,29 +5,29 @@ All URIs are relative to *https://api.cloudmersive.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**EditDocumentBeginEditing**](EditDocumentApi.md#editdocumentbeginediting) | **POST** /convert/edit/begin-editing | Begin editing a document
-[**EditDocumentDocxBody**](EditDocumentApi.md#editdocumentdocxbody) | **POST** /convert/edit/docx/get-body | Get body from a DOCX
-[**EditDocumentDocxGetHeadersAndFooters**](EditDocumentApi.md#editdocumentdocxgetheadersandfooters) | **POST** /convert/edit/docx/get-headers-and-footers | Get content of a footer from a DOCX
-[**EditDocumentDocxGetImages**](EditDocumentApi.md#editdocumentdocxgetimages) | **POST** /convert/edit/docx/get-images | Get images from a DOCX
-[**EditDocumentDocxGetSections**](EditDocumentApi.md#editdocumentdocxgetsections) | **POST** /convert/edit/docx/get-sections | Get sections from a DOCX
-[**EditDocumentDocxGetStyles**](EditDocumentApi.md#editdocumentdocxgetstyles) | **POST** /convert/edit/docx/get-styles | Get styles from a DOCX
-[**EditDocumentDocxGetTables**](EditDocumentApi.md#editdocumentdocxgettables) | **POST** /convert/edit/docx/get-tables | Get tables in DOCX
-[**EditDocumentDocxInsertImage**](EditDocumentApi.md#editdocumentdocxinsertimage) | **POST** /convert/edit/docx/insert-image | Insert image into a DOCX
-[**EditDocumentDocxInsertParagraph**](EditDocumentApi.md#editdocumentdocxinsertparagraph) | **POST** /convert/edit/docx/insert-paragraph | Insert a new paragraph into a DOCX
-[**EditDocumentDocxInsertTable**](EditDocumentApi.md#editdocumentdocxinserttable) | **POST** /convert/edit/docx/insert-table | Insert a new table into a DOCX
-[**EditDocumentDocxRemoveHeadersAndFooters**](EditDocumentApi.md#editdocumentdocxremoveheadersandfooters) | **POST** /convert/edit/docx/remove-headers-and-footers | Remove headers and footers from DOCX
-[**EditDocumentDocxRemoveObject**](EditDocumentApi.md#editdocumentdocxremoveobject) | **POST** /convert/edit/docx/remove-object | Delete any object in a DOCX
-[**EditDocumentDocxReplace**](EditDocumentApi.md#editdocumentdocxreplace) | **POST** /convert/edit/docx/replace-all | Replace string in DOCX
-[**EditDocumentDocxSetFooter**](EditDocumentApi.md#editdocumentdocxsetfooter) | **POST** /convert/edit/docx/set-footer | Set the footer in a DOCX
-[**EditDocumentDocxSetFooterAddPageNumber**](EditDocumentApi.md#editdocumentdocxsetfooteraddpagenumber) | **POST** /convert/edit/docx/set-footer/add-page-number | Add page number to footer in a DOCX
-[**EditDocumentDocxSetHeader**](EditDocumentApi.md#editdocumentdocxsetheader) | **POST** /convert/edit/docx/set-header | Set the header in a DOCX
+[**EditDocumentDocxBody**](EditDocumentApi.md#editdocumentdocxbody) | **POST** /convert/edit/docx/get-body | Get body from a Word DOCX document
+[**EditDocumentDocxGetHeadersAndFooters**](EditDocumentApi.md#editdocumentdocxgetheadersandfooters) | **POST** /convert/edit/docx/get-headers-and-footers | Get content of a footer from a Word DOCX document
+[**EditDocumentDocxGetImages**](EditDocumentApi.md#editdocumentdocxgetimages) | **POST** /convert/edit/docx/get-images | Get images from a Word DOCX document
+[**EditDocumentDocxGetSections**](EditDocumentApi.md#editdocumentdocxgetsections) | **POST** /convert/edit/docx/get-sections | Get sections from a Word DOCX document
+[**EditDocumentDocxGetStyles**](EditDocumentApi.md#editdocumentdocxgetstyles) | **POST** /convert/edit/docx/get-styles | Get styles from a Word DOCX document
+[**EditDocumentDocxGetTables**](EditDocumentApi.md#editdocumentdocxgettables) | **POST** /convert/edit/docx/get-tables | Get tables in Word DOCX document
+[**EditDocumentDocxInsertImage**](EditDocumentApi.md#editdocumentdocxinsertimage) | **POST** /convert/edit/docx/insert-image | Insert image into a Word DOCX document
+[**EditDocumentDocxInsertParagraph**](EditDocumentApi.md#editdocumentdocxinsertparagraph) | **POST** /convert/edit/docx/insert-paragraph | Insert a new paragraph into a Word DOCX document
+[**EditDocumentDocxInsertTable**](EditDocumentApi.md#editdocumentdocxinserttable) | **POST** /convert/edit/docx/insert-table | Insert a new table into a Word DOCX document
+[**EditDocumentDocxRemoveHeadersAndFooters**](EditDocumentApi.md#editdocumentdocxremoveheadersandfooters) | **POST** /convert/edit/docx/remove-headers-and-footers | Remove headers and footers from Word DOCX document
+[**EditDocumentDocxRemoveObject**](EditDocumentApi.md#editdocumentdocxremoveobject) | **POST** /convert/edit/docx/remove-object | Delete any object in a Word DOCX document
+[**EditDocumentDocxReplace**](EditDocumentApi.md#editdocumentdocxreplace) | **POST** /convert/edit/docx/replace-all | Replace string in Word DOCX document
+[**EditDocumentDocxSetFooter**](EditDocumentApi.md#editdocumentdocxsetfooter) | **POST** /convert/edit/docx/set-footer | Set the footer in a Word DOCX document
+[**EditDocumentDocxSetFooterAddPageNumber**](EditDocumentApi.md#editdocumentdocxsetfooteraddpagenumber) | **POST** /convert/edit/docx/set-footer/add-page-number | Add page number to footer in a Word DOCX document
+[**EditDocumentDocxSetHeader**](EditDocumentApi.md#editdocumentdocxsetheader) | **POST** /convert/edit/docx/set-header | Set the header in a Word DOCX document
 [**EditDocumentFinishEditing**](EditDocumentApi.md#editdocumentfinishediting) | **POST** /convert/edit/finish-editing | Download result from document editing
-[**EditDocumentPptxReplace**](EditDocumentApi.md#editdocumentpptxreplace) | **POST** /convert/edit/pptx/replace-all | Replace string in PPTX
-[**EditDocumentXlsxGetColumns**](EditDocumentApi.md#editdocumentxlsxgetcolumns) | **POST** /convert/edit/xlsx/get-columns | Get rows and cells from a XLSX worksheet
-[**EditDocumentXlsxGetImages**](EditDocumentApi.md#editdocumentxlsxgetimages) | **POST** /convert/edit/xlsx/get-images | Get images from a XLSX worksheet
-[**EditDocumentXlsxGetRowsAndCells**](EditDocumentApi.md#editdocumentxlsxgetrowsandcells) | **POST** /convert/edit/xlsx/get-rows-and-cells | Get rows and cells from a XLSX worksheet
-[**EditDocumentXlsxGetStyles**](EditDocumentApi.md#editdocumentxlsxgetstyles) | **POST** /convert/edit/xlsx/get-styles | Get styles from a XLSX worksheet
-[**EditDocumentXlsxGetWorksheets**](EditDocumentApi.md#editdocumentxlsxgetworksheets) | **POST** /convert/edit/xlsx/get-worksheets | Get worksheets from a XLSX
-[**EditDocumentXlsxInsertWorksheet**](EditDocumentApi.md#editdocumentxlsxinsertworksheet) | **POST** /convert/edit/xlsx/insert-worksheet | Insert a new worksheet into an XLSX spreadsheet
+[**EditDocumentPptxReplace**](EditDocumentApi.md#editdocumentpptxreplace) | **POST** /convert/edit/pptx/replace-all | Replace string in PowerPoint PPTX presentation
+[**EditDocumentXlsxGetColumns**](EditDocumentApi.md#editdocumentxlsxgetcolumns) | **POST** /convert/edit/xlsx/get-columns | Get rows and cells from a Excel XLSX spreadsheet, worksheet
+[**EditDocumentXlsxGetImages**](EditDocumentApi.md#editdocumentxlsxgetimages) | **POST** /convert/edit/xlsx/get-images | Get images from a Excel XLSX spreadsheet, worksheet
+[**EditDocumentXlsxGetRowsAndCells**](EditDocumentApi.md#editdocumentxlsxgetrowsandcells) | **POST** /convert/edit/xlsx/get-rows-and-cells | Get rows and cells from a Word XLSX spreadsheet, worksheet
+[**EditDocumentXlsxGetStyles**](EditDocumentApi.md#editdocumentxlsxgetstyles) | **POST** /convert/edit/xlsx/get-styles | Get styles from a Excel XLSX spreadsheet, worksheet
+[**EditDocumentXlsxGetWorksheets**](EditDocumentApi.md#editdocumentxlsxgetworksheets) | **POST** /convert/edit/xlsx/get-worksheets | Get worksheets from a Excel XLSX spreadsheet
+[**EditDocumentXlsxInsertWorksheet**](EditDocumentApi.md#editdocumentxlsxinsertworksheet) | **POST** /convert/edit/xlsx/insert-worksheet | Insert a new worksheet into an Excel XLSX spreadsheet
 
 
 <a name="editdocumentbeginediting"></a>
@@ -100,7 +100,7 @@ Name | Type | Description  | Notes
 # **EditDocumentDocxBody**
 > GetDocxBodyResponse EditDocumentDocxBody (GetDocxBodyRequest reqConfig)
 
-Get body from a DOCX
+Get body from a Word DOCX document
 
 Returns the body defined in the Word Document (DOCX) format file; this is the main content part of a DOCX document
 
@@ -124,11 +124,11 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new EditDocumentApi();
-            var reqConfig = new GetDocxBodyRequest(); // GetDocxBodyRequest | 
+            var reqConfig = new GetDocxBodyRequest(); // GetDocxBodyRequest | Document input request
 
             try
             {
-                // Get body from a DOCX
+                // Get body from a Word DOCX document
                 GetDocxBodyResponse result = apiInstance.EditDocumentDocxBody(reqConfig);
                 Debug.WriteLine(result);
             }
@@ -145,7 +145,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reqConfig** | [**GetDocxBodyRequest**](GetDocxBodyRequest.md)|  | 
+ **reqConfig** | [**GetDocxBodyRequest**](GetDocxBodyRequest.md)| Document input request | 
 
 ### Return type
 
@@ -166,7 +166,7 @@ Name | Type | Description  | Notes
 # **EditDocumentDocxGetHeadersAndFooters**
 > GetDocxHeadersAndFootersResponse EditDocumentDocxGetHeadersAndFooters (GetDocxHeadersAndFootersRequest reqConfig)
 
-Get content of a footer from a DOCX
+Get content of a footer from a Word DOCX document
 
 Returns the footer content from a Word Document (DOCX) format file
 
@@ -190,11 +190,11 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new EditDocumentApi();
-            var reqConfig = new GetDocxHeadersAndFootersRequest(); // GetDocxHeadersAndFootersRequest | 
+            var reqConfig = new GetDocxHeadersAndFootersRequest(); // GetDocxHeadersAndFootersRequest | Document input request
 
             try
             {
-                // Get content of a footer from a DOCX
+                // Get content of a footer from a Word DOCX document
                 GetDocxHeadersAndFootersResponse result = apiInstance.EditDocumentDocxGetHeadersAndFooters(reqConfig);
                 Debug.WriteLine(result);
             }
@@ -211,7 +211,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reqConfig** | [**GetDocxHeadersAndFootersRequest**](GetDocxHeadersAndFootersRequest.md)|  | 
+ **reqConfig** | [**GetDocxHeadersAndFootersRequest**](GetDocxHeadersAndFootersRequest.md)| Document input request | 
 
 ### Return type
 
@@ -232,7 +232,7 @@ Name | Type | Description  | Notes
 # **EditDocumentDocxGetImages**
 > GetDocxImagesResponse EditDocumentDocxGetImages (GetDocxImagesRequest reqConfig)
 
-Get images from a DOCX
+Get images from a Word DOCX document
 
 Returns the images defined in the Word Document (DOCX) format file
 
@@ -256,11 +256,11 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new EditDocumentApi();
-            var reqConfig = new GetDocxImagesRequest(); // GetDocxImagesRequest | 
+            var reqConfig = new GetDocxImagesRequest(); // GetDocxImagesRequest | Document input request
 
             try
             {
-                // Get images from a DOCX
+                // Get images from a Word DOCX document
                 GetDocxImagesResponse result = apiInstance.EditDocumentDocxGetImages(reqConfig);
                 Debug.WriteLine(result);
             }
@@ -277,7 +277,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reqConfig** | [**GetDocxImagesRequest**](GetDocxImagesRequest.md)|  | 
+ **reqConfig** | [**GetDocxImagesRequest**](GetDocxImagesRequest.md)| Document input request | 
 
 ### Return type
 
@@ -298,7 +298,7 @@ Name | Type | Description  | Notes
 # **EditDocumentDocxGetSections**
 > GetDocxSectionsResponse EditDocumentDocxGetSections (GetDocxSectionsRequest reqConfig)
 
-Get sections from a DOCX
+Get sections from a Word DOCX document
 
 Returns the sections defined in the Word Document (DOCX) format file
 
@@ -322,11 +322,11 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new EditDocumentApi();
-            var reqConfig = new GetDocxSectionsRequest(); // GetDocxSectionsRequest | 
+            var reqConfig = new GetDocxSectionsRequest(); // GetDocxSectionsRequest | Document input request
 
             try
             {
-                // Get sections from a DOCX
+                // Get sections from a Word DOCX document
                 GetDocxSectionsResponse result = apiInstance.EditDocumentDocxGetSections(reqConfig);
                 Debug.WriteLine(result);
             }
@@ -343,7 +343,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reqConfig** | [**GetDocxSectionsRequest**](GetDocxSectionsRequest.md)|  | 
+ **reqConfig** | [**GetDocxSectionsRequest**](GetDocxSectionsRequest.md)| Document input request | 
 
 ### Return type
 
@@ -364,7 +364,7 @@ Name | Type | Description  | Notes
 # **EditDocumentDocxGetStyles**
 > GetDocxStylesResponse EditDocumentDocxGetStyles (GetDocxStylesRequest reqConfig)
 
-Get styles from a DOCX
+Get styles from a Word DOCX document
 
 Returns the styles defined in the Word Document (DOCX) format file
 
@@ -388,11 +388,11 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new EditDocumentApi();
-            var reqConfig = new GetDocxStylesRequest(); // GetDocxStylesRequest | 
+            var reqConfig = new GetDocxStylesRequest(); // GetDocxStylesRequest | Document input request
 
             try
             {
-                // Get styles from a DOCX
+                // Get styles from a Word DOCX document
                 GetDocxStylesResponse result = apiInstance.EditDocumentDocxGetStyles(reqConfig);
                 Debug.WriteLine(result);
             }
@@ -409,7 +409,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reqConfig** | [**GetDocxStylesRequest**](GetDocxStylesRequest.md)|  | 
+ **reqConfig** | [**GetDocxStylesRequest**](GetDocxStylesRequest.md)| Document input request | 
 
 ### Return type
 
@@ -430,7 +430,7 @@ Name | Type | Description  | Notes
 # **EditDocumentDocxGetTables**
 > GetDocxTablesResponse EditDocumentDocxGetTables (GetDocxTablesRequest reqConfig)
 
-Get tables in DOCX
+Get tables in Word DOCX document
 
 Returns all the table objects in an Office Word Document (docx)
 
@@ -454,11 +454,11 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new EditDocumentApi();
-            var reqConfig = new GetDocxTablesRequest(); // GetDocxTablesRequest | 
+            var reqConfig = new GetDocxTablesRequest(); // GetDocxTablesRequest | Document input request
 
             try
             {
-                // Get tables in DOCX
+                // Get tables in Word DOCX document
                 GetDocxTablesResponse result = apiInstance.EditDocumentDocxGetTables(reqConfig);
                 Debug.WriteLine(result);
             }
@@ -475,7 +475,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reqConfig** | [**GetDocxTablesRequest**](GetDocxTablesRequest.md)|  | 
+ **reqConfig** | [**GetDocxTablesRequest**](GetDocxTablesRequest.md)| Document input request | 
 
 ### Return type
 
@@ -496,9 +496,9 @@ Name | Type | Description  | Notes
 # **EditDocumentDocxInsertImage**
 > DocxInsertImageResponse EditDocumentDocxInsertImage (DocxInsertImageRequest reqConfig)
 
-Insert image into a DOCX
+Insert image into a Word DOCX document
 
-Set the footer in a Word Document (DOCX)
+Set the footer in a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
 
 ### Example
 ```csharp
@@ -520,11 +520,11 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new EditDocumentApi();
-            var reqConfig = new DocxInsertImageRequest(); // DocxInsertImageRequest | 
+            var reqConfig = new DocxInsertImageRequest(); // DocxInsertImageRequest | Document input request
 
             try
             {
-                // Insert image into a DOCX
+                // Insert image into a Word DOCX document
                 DocxInsertImageResponse result = apiInstance.EditDocumentDocxInsertImage(reqConfig);
                 Debug.WriteLine(result);
             }
@@ -541,7 +541,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reqConfig** | [**DocxInsertImageRequest**](DocxInsertImageRequest.md)|  | 
+ **reqConfig** | [**DocxInsertImageRequest**](DocxInsertImageRequest.md)| Document input request | 
 
 ### Return type
 
@@ -562,9 +562,9 @@ Name | Type | Description  | Notes
 # **EditDocumentDocxInsertParagraph**
 > InsertDocxInsertParagraphResponse EditDocumentDocxInsertParagraph (InsertDocxInsertParagraphRequest reqConfig)
 
-Insert a new paragraph into a DOCX
+Insert a new paragraph into a Word DOCX document
 
-Adds a new paragraph into a DOCX and returns the result.  You can insert at the beginning/end of a document, or before/after an existing object using its Path (location within the document).
+Adds a new paragraph into a DOCX and returns the result.  You can insert at the beginning/end of a document, or before/after an existing object using its Path (location within the document).  Call Finish Editing on the output URL to complete the operation.
 
 ### Example
 ```csharp
@@ -586,11 +586,11 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new EditDocumentApi();
-            var reqConfig = new InsertDocxInsertParagraphRequest(); // InsertDocxInsertParagraphRequest | 
+            var reqConfig = new InsertDocxInsertParagraphRequest(); // InsertDocxInsertParagraphRequest | Document input request
 
             try
             {
-                // Insert a new paragraph into a DOCX
+                // Insert a new paragraph into a Word DOCX document
                 InsertDocxInsertParagraphResponse result = apiInstance.EditDocumentDocxInsertParagraph(reqConfig);
                 Debug.WriteLine(result);
             }
@@ -607,7 +607,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reqConfig** | [**InsertDocxInsertParagraphRequest**](InsertDocxInsertParagraphRequest.md)|  | 
+ **reqConfig** | [**InsertDocxInsertParagraphRequest**](InsertDocxInsertParagraphRequest.md)| Document input request | 
 
 ### Return type
 
@@ -628,9 +628,9 @@ Name | Type | Description  | Notes
 # **EditDocumentDocxInsertTable**
 > InsertDocxTablesResponse EditDocumentDocxInsertTable (InsertDocxTablesRequest reqConfig)
 
-Insert a new table into a DOCX
+Insert a new table into a Word DOCX document
 
-Adds a new table into a DOCX and returns the result
+Adds a new table into a DOCX and returns the result.  Call Finish Editing on the output URL to complete the operation.
 
 ### Example
 ```csharp
@@ -652,11 +652,11 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new EditDocumentApi();
-            var reqConfig = new InsertDocxTablesRequest(); // InsertDocxTablesRequest | 
+            var reqConfig = new InsertDocxTablesRequest(); // InsertDocxTablesRequest | Document input request
 
             try
             {
-                // Insert a new table into a DOCX
+                // Insert a new table into a Word DOCX document
                 InsertDocxTablesResponse result = apiInstance.EditDocumentDocxInsertTable(reqConfig);
                 Debug.WriteLine(result);
             }
@@ -673,7 +673,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reqConfig** | [**InsertDocxTablesRequest**](InsertDocxTablesRequest.md)|  | 
+ **reqConfig** | [**InsertDocxTablesRequest**](InsertDocxTablesRequest.md)| Document input request | 
 
 ### Return type
 
@@ -694,9 +694,9 @@ Name | Type | Description  | Notes
 # **EditDocumentDocxRemoveHeadersAndFooters**
 > RemoveDocxHeadersAndFootersResponse EditDocumentDocxRemoveHeadersAndFooters (RemoveDocxHeadersAndFootersRequest reqConfig)
 
-Remove headers and footers from DOCX
+Remove headers and footers from Word DOCX document
 
-Remove all headers, or footers, or both from a Word Document (DOCX)
+Remove all headers, or footers, or both from a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
 
 ### Example
 ```csharp
@@ -718,11 +718,11 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new EditDocumentApi();
-            var reqConfig = new RemoveDocxHeadersAndFootersRequest(); // RemoveDocxHeadersAndFootersRequest | 
+            var reqConfig = new RemoveDocxHeadersAndFootersRequest(); // RemoveDocxHeadersAndFootersRequest | Document input request
 
             try
             {
-                // Remove headers and footers from DOCX
+                // Remove headers and footers from Word DOCX document
                 RemoveDocxHeadersAndFootersResponse result = apiInstance.EditDocumentDocxRemoveHeadersAndFooters(reqConfig);
                 Debug.WriteLine(result);
             }
@@ -739,7 +739,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reqConfig** | [**RemoveDocxHeadersAndFootersRequest**](RemoveDocxHeadersAndFootersRequest.md)|  | 
+ **reqConfig** | [**RemoveDocxHeadersAndFootersRequest**](RemoveDocxHeadersAndFootersRequest.md)| Document input request | 
 
 ### Return type
 
@@ -760,9 +760,9 @@ Name | Type | Description  | Notes
 # **EditDocumentDocxRemoveObject**
 > DocxRemoveObjectResponse EditDocumentDocxRemoveObject (DocxRemoveObjectRequest reqConfig)
 
-Delete any object in a DOCX
+Delete any object in a Word DOCX document
 
-Delete any object, such as a paragraph, table, image, etc. from a Word Document (DOCX).  Pass in the Path of the object you would like to delete.  You can call other functions such as Get-Tables, Get-Images, Get-Body, etc. to get the paths of the objects in the document.
+Delete any object, such as a paragraph, table, image, etc. from a Word Document (DOCX).  Pass in the Path of the object you would like to delete.  You can call other functions such as Get-Tables, Get-Images, Get-Body, etc. to get the paths of the objects in the document.  Call Finish Editing on the output URL to complete the operation.
 
 ### Example
 ```csharp
@@ -784,11 +784,11 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new EditDocumentApi();
-            var reqConfig = new DocxRemoveObjectRequest(); // DocxRemoveObjectRequest | 
+            var reqConfig = new DocxRemoveObjectRequest(); // DocxRemoveObjectRequest | Document input request
 
             try
             {
-                // Delete any object in a DOCX
+                // Delete any object in a Word DOCX document
                 DocxRemoveObjectResponse result = apiInstance.EditDocumentDocxRemoveObject(reqConfig);
                 Debug.WriteLine(result);
             }
@@ -805,7 +805,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reqConfig** | [**DocxRemoveObjectRequest**](DocxRemoveObjectRequest.md)|  | 
+ **reqConfig** | [**DocxRemoveObjectRequest**](DocxRemoveObjectRequest.md)| Document input request | 
 
 ### Return type
 
@@ -826,7 +826,7 @@ Name | Type | Description  | Notes
 # **EditDocumentDocxReplace**
 > byte[] EditDocumentDocxReplace (ReplaceStringRequest reqConfig)
 
-Replace string in DOCX
+Replace string in Word DOCX document
 
 Replace all instances of a string in an Office Word Document (docx)
 
@@ -850,11 +850,11 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new EditDocumentApi();
-            var reqConfig = new ReplaceStringRequest(); // ReplaceStringRequest | 
+            var reqConfig = new ReplaceStringRequest(); // ReplaceStringRequest | Document string replacement configuration input
 
             try
             {
-                // Replace string in DOCX
+                // Replace string in Word DOCX document
                 byte[] result = apiInstance.EditDocumentDocxReplace(reqConfig);
                 Debug.WriteLine(result);
             }
@@ -871,7 +871,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reqConfig** | [**ReplaceStringRequest**](ReplaceStringRequest.md)|  | 
+ **reqConfig** | [**ReplaceStringRequest**](ReplaceStringRequest.md)| Document string replacement configuration input | 
 
 ### Return type
 
@@ -892,9 +892,9 @@ Name | Type | Description  | Notes
 # **EditDocumentDocxSetFooter**
 > DocxSetFooterResponse EditDocumentDocxSetFooter (DocxSetFooterRequest reqConfig)
 
-Set the footer in a DOCX
+Set the footer in a Word DOCX document
 
-Set the footer in a Word Document (DOCX)
+Set the footer in a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
 
 ### Example
 ```csharp
@@ -916,11 +916,11 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new EditDocumentApi();
-            var reqConfig = new DocxSetFooterRequest(); // DocxSetFooterRequest | 
+            var reqConfig = new DocxSetFooterRequest(); // DocxSetFooterRequest | Document input request
 
             try
             {
-                // Set the footer in a DOCX
+                // Set the footer in a Word DOCX document
                 DocxSetFooterResponse result = apiInstance.EditDocumentDocxSetFooter(reqConfig);
                 Debug.WriteLine(result);
             }
@@ -937,7 +937,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reqConfig** | [**DocxSetFooterRequest**](DocxSetFooterRequest.md)|  | 
+ **reqConfig** | [**DocxSetFooterRequest**](DocxSetFooterRequest.md)| Document input request | 
 
 ### Return type
 
@@ -958,9 +958,9 @@ Name | Type | Description  | Notes
 # **EditDocumentDocxSetFooterAddPageNumber**
 > DocxSetFooterResponse EditDocumentDocxSetFooterAddPageNumber (DocxSetFooterAddPageNumberRequest reqConfig)
 
-Add page number to footer in a DOCX
+Add page number to footer in a Word DOCX document
 
-Set the footer in a Word Document (DOCX) to contain a page number
+Set the footer in a Word Document (DOCX) to contain a page number.  Call Finish Editing on the output URL to complete the operation.
 
 ### Example
 ```csharp
@@ -982,11 +982,11 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new EditDocumentApi();
-            var reqConfig = new DocxSetFooterAddPageNumberRequest(); // DocxSetFooterAddPageNumberRequest | 
+            var reqConfig = new DocxSetFooterAddPageNumberRequest(); // DocxSetFooterAddPageNumberRequest | Document input request
 
             try
             {
-                // Add page number to footer in a DOCX
+                // Add page number to footer in a Word DOCX document
                 DocxSetFooterResponse result = apiInstance.EditDocumentDocxSetFooterAddPageNumber(reqConfig);
                 Debug.WriteLine(result);
             }
@@ -1003,7 +1003,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reqConfig** | [**DocxSetFooterAddPageNumberRequest**](DocxSetFooterAddPageNumberRequest.md)|  | 
+ **reqConfig** | [**DocxSetFooterAddPageNumberRequest**](DocxSetFooterAddPageNumberRequest.md)| Document input request | 
 
 ### Return type
 
@@ -1024,9 +1024,9 @@ Name | Type | Description  | Notes
 # **EditDocumentDocxSetHeader**
 > DocxSetHeaderResponse EditDocumentDocxSetHeader (DocxSetHeaderRequest reqConfig)
 
-Set the header in a DOCX
+Set the header in a Word DOCX document
 
-Set the header in a Word Document (DOCX)
+Set the header in a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
 
 ### Example
 ```csharp
@@ -1048,11 +1048,11 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new EditDocumentApi();
-            var reqConfig = new DocxSetHeaderRequest(); // DocxSetHeaderRequest | 
+            var reqConfig = new DocxSetHeaderRequest(); // DocxSetHeaderRequest | Document input request
 
             try
             {
-                // Set the header in a DOCX
+                // Set the header in a Word DOCX document
                 DocxSetHeaderResponse result = apiInstance.EditDocumentDocxSetHeader(reqConfig);
                 Debug.WriteLine(result);
             }
@@ -1069,7 +1069,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reqConfig** | [**DocxSetHeaderRequest**](DocxSetHeaderRequest.md)|  | 
+ **reqConfig** | [**DocxSetHeaderRequest**](DocxSetHeaderRequest.md)| Document input request | 
 
 ### Return type
 
@@ -1114,7 +1114,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new EditDocumentApi();
-            var reqConfig = new FinishEditingRequest(); // FinishEditingRequest | 
+            var reqConfig = new FinishEditingRequest(); // FinishEditingRequest | Cloudmersive Document URL to complete editing on
 
             try
             {
@@ -1135,7 +1135,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reqConfig** | [**FinishEditingRequest**](FinishEditingRequest.md)|  | 
+ **reqConfig** | [**FinishEditingRequest**](FinishEditingRequest.md)| Cloudmersive Document URL to complete editing on | 
 
 ### Return type
 
@@ -1156,7 +1156,7 @@ Name | Type | Description  | Notes
 # **EditDocumentPptxReplace**
 > byte[] EditDocumentPptxReplace (ReplaceStringRequest reqConfig)
 
-Replace string in PPTX
+Replace string in PowerPoint PPTX presentation
 
 Replace all instances of a string in an Office PowerPoint Document (pptx)
 
@@ -1180,11 +1180,11 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new EditDocumentApi();
-            var reqConfig = new ReplaceStringRequest(); // ReplaceStringRequest | 
+            var reqConfig = new ReplaceStringRequest(); // ReplaceStringRequest | Replacement document configuration input
 
             try
             {
-                // Replace string in PPTX
+                // Replace string in PowerPoint PPTX presentation
                 byte[] result = apiInstance.EditDocumentPptxReplace(reqConfig);
                 Debug.WriteLine(result);
             }
@@ -1201,7 +1201,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reqConfig** | [**ReplaceStringRequest**](ReplaceStringRequest.md)|  | 
+ **reqConfig** | [**ReplaceStringRequest**](ReplaceStringRequest.md)| Replacement document configuration input | 
 
 ### Return type
 
@@ -1222,7 +1222,7 @@ Name | Type | Description  | Notes
 # **EditDocumentXlsxGetColumns**
 > GetXlsxColumnsResponse EditDocumentXlsxGetColumns (GetXlsxColumnsRequest input)
 
-Get rows and cells from a XLSX worksheet
+Get rows and cells from a Excel XLSX spreadsheet, worksheet
 
 Returns the rows and cells defined in the Excel Spreadsheet worksheet
 
@@ -1246,11 +1246,11 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new EditDocumentApi();
-            var input = new GetXlsxColumnsRequest(); // GetXlsxColumnsRequest | 
+            var input = new GetXlsxColumnsRequest(); // GetXlsxColumnsRequest | Document input request
 
             try
             {
-                // Get rows and cells from a XLSX worksheet
+                // Get rows and cells from a Excel XLSX spreadsheet, worksheet
                 GetXlsxColumnsResponse result = apiInstance.EditDocumentXlsxGetColumns(input);
                 Debug.WriteLine(result);
             }
@@ -1267,7 +1267,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **input** | [**GetXlsxColumnsRequest**](GetXlsxColumnsRequest.md)|  | 
+ **input** | [**GetXlsxColumnsRequest**](GetXlsxColumnsRequest.md)| Document input request | 
 
 ### Return type
 
@@ -1288,7 +1288,7 @@ Name | Type | Description  | Notes
 # **EditDocumentXlsxGetImages**
 > GetXlsxImagesResponse EditDocumentXlsxGetImages (GetXlsxImagesRequest input)
 
-Get images from a XLSX worksheet
+Get images from a Excel XLSX spreadsheet, worksheet
 
 Returns the images defined in the Excel Spreadsheet worksheet
 
@@ -1312,11 +1312,11 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new EditDocumentApi();
-            var input = new GetXlsxImagesRequest(); // GetXlsxImagesRequest | 
+            var input = new GetXlsxImagesRequest(); // GetXlsxImagesRequest | Document input request
 
             try
             {
-                // Get images from a XLSX worksheet
+                // Get images from a Excel XLSX spreadsheet, worksheet
                 GetXlsxImagesResponse result = apiInstance.EditDocumentXlsxGetImages(input);
                 Debug.WriteLine(result);
             }
@@ -1333,7 +1333,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **input** | [**GetXlsxImagesRequest**](GetXlsxImagesRequest.md)|  | 
+ **input** | [**GetXlsxImagesRequest**](GetXlsxImagesRequest.md)| Document input request | 
 
 ### Return type
 
@@ -1354,7 +1354,7 @@ Name | Type | Description  | Notes
 # **EditDocumentXlsxGetRowsAndCells**
 > GetXlsxRowsAndCellsResponse EditDocumentXlsxGetRowsAndCells (GetXlsxRowsAndCellsRequest input)
 
-Get rows and cells from a XLSX worksheet
+Get rows and cells from a Word XLSX spreadsheet, worksheet
 
 Returns the rows and cells defined in the Excel Spreadsheet worksheet
 
@@ -1378,11 +1378,11 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new EditDocumentApi();
-            var input = new GetXlsxRowsAndCellsRequest(); // GetXlsxRowsAndCellsRequest | 
+            var input = new GetXlsxRowsAndCellsRequest(); // GetXlsxRowsAndCellsRequest | Document input request
 
             try
             {
-                // Get rows and cells from a XLSX worksheet
+                // Get rows and cells from a Word XLSX spreadsheet, worksheet
                 GetXlsxRowsAndCellsResponse result = apiInstance.EditDocumentXlsxGetRowsAndCells(input);
                 Debug.WriteLine(result);
             }
@@ -1399,7 +1399,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **input** | [**GetXlsxRowsAndCellsRequest**](GetXlsxRowsAndCellsRequest.md)|  | 
+ **input** | [**GetXlsxRowsAndCellsRequest**](GetXlsxRowsAndCellsRequest.md)| Document input request | 
 
 ### Return type
 
@@ -1420,7 +1420,7 @@ Name | Type | Description  | Notes
 # **EditDocumentXlsxGetStyles**
 > GetXlsxStylesResponse EditDocumentXlsxGetStyles (GetXlsxStylesRequest input)
 
-Get styles from a XLSX worksheet
+Get styles from a Excel XLSX spreadsheet, worksheet
 
 Returns the style defined in the Excel Spreadsheet
 
@@ -1444,11 +1444,11 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new EditDocumentApi();
-            var input = new GetXlsxStylesRequest(); // GetXlsxStylesRequest | 
+            var input = new GetXlsxStylesRequest(); // GetXlsxStylesRequest | Document input request
 
             try
             {
-                // Get styles from a XLSX worksheet
+                // Get styles from a Excel XLSX spreadsheet, worksheet
                 GetXlsxStylesResponse result = apiInstance.EditDocumentXlsxGetStyles(input);
                 Debug.WriteLine(result);
             }
@@ -1465,7 +1465,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **input** | [**GetXlsxStylesRequest**](GetXlsxStylesRequest.md)|  | 
+ **input** | [**GetXlsxStylesRequest**](GetXlsxStylesRequest.md)| Document input request | 
 
 ### Return type
 
@@ -1486,7 +1486,7 @@ Name | Type | Description  | Notes
 # **EditDocumentXlsxGetWorksheets**
 > GetXlsxWorksheetsResponse EditDocumentXlsxGetWorksheets (GetXlsxWorksheetsRequest input)
 
-Get worksheets from a XLSX
+Get worksheets from a Excel XLSX spreadsheet
 
 Returns the worksheets (tabs) defined in the Excel Spreadsheet (XLSX) format file
 
@@ -1510,11 +1510,11 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new EditDocumentApi();
-            var input = new GetXlsxWorksheetsRequest(); // GetXlsxWorksheetsRequest | 
+            var input = new GetXlsxWorksheetsRequest(); // GetXlsxWorksheetsRequest | Document input request
 
             try
             {
-                // Get worksheets from a XLSX
+                // Get worksheets from a Excel XLSX spreadsheet
                 GetXlsxWorksheetsResponse result = apiInstance.EditDocumentXlsxGetWorksheets(input);
                 Debug.WriteLine(result);
             }
@@ -1531,7 +1531,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **input** | [**GetXlsxWorksheetsRequest**](GetXlsxWorksheetsRequest.md)|  | 
+ **input** | [**GetXlsxWorksheetsRequest**](GetXlsxWorksheetsRequest.md)| Document input request | 
 
 ### Return type
 
@@ -1552,7 +1552,7 @@ Name | Type | Description  | Notes
 # **EditDocumentXlsxInsertWorksheet**
 > InsertXlsxWorksheetResponse EditDocumentXlsxInsertWorksheet (InsertXlsxWorksheetRequest input)
 
-Insert a new worksheet into an XLSX spreadsheet
+Insert a new worksheet into an Excel XLSX spreadsheet
 
 Inserts a new worksheet into an Excel Spreadsheet
 
@@ -1576,11 +1576,11 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new EditDocumentApi();
-            var input = new InsertXlsxWorksheetRequest(); // InsertXlsxWorksheetRequest | 
+            var input = new InsertXlsxWorksheetRequest(); // InsertXlsxWorksheetRequest | Document input request
 
             try
             {
-                // Insert a new worksheet into an XLSX spreadsheet
+                // Insert a new worksheet into an Excel XLSX spreadsheet
                 InsertXlsxWorksheetResponse result = apiInstance.EditDocumentXlsxInsertWorksheet(input);
                 Debug.WriteLine(result);
             }
@@ -1597,7 +1597,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **input** | [**InsertXlsxWorksheetRequest**](InsertXlsxWorksheetRequest.md)|  | 
+ **input** | [**InsertXlsxWorksheetRequest**](InsertXlsxWorksheetRequest.md)| Document input request | 
 
 ### Return type
 

@@ -25,6 +25,31 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Remove / delete pages from a PDF document
+        /// </summary>
+        /// <remarks>
+        /// Remove one or more pages from a PDF document
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="pageStart">Page number (1 based) to start deleting pages from (inclusive).</param>
+        /// <param name="pageEnd">Page number (1 based) to stop deleting pages from (inclusive).</param>
+        /// <returns>byte[]</returns>
+        byte[] EditPdfDeletePages (System.IO.Stream inputFile, int? pageStart, int? pageEnd);
+
+        /// <summary>
+        /// Remove / delete pages from a PDF document
+        /// </summary>
+        /// <remarks>
+        /// Remove one or more pages from a PDF document
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="pageStart">Page number (1 based) to start deleting pages from (inclusive).</param>
+        /// <param name="pageEnd">Page number (1 based) to stop deleting pages from (inclusive).</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> EditPdfDeletePagesWithHttpInfo (System.IO.Stream inputFile, int? pageStart, int? pageEnd);
+        /// <summary>
         /// Encrypt and password-protect a PDF
         /// </summary>
         /// <remarks>
@@ -92,6 +117,35 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of PdfMetadata</returns>
         ApiResponse<PdfMetadata> EditPdfGetMetadataWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
+        /// Insert / copy pages from one PDF document into another
+        /// </summary>
+        /// <remarks>
+        /// Copy one or more pages from one PDF document (source document) and insert them into a second PDF document (destination document).
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceFile">Source PDF file to copy pages from.</param>
+        /// <param name="destinationFile">Destination PDF file to copy pages into.</param>
+        /// <param name="pageStartSource">Page number (1 based) to start copying pages from (inclusive) in the Source file.</param>
+        /// <param name="pageEndSource">Page number (1 based) to stop copying pages pages from (inclusive) in the Source file.</param>
+        /// <param name="pageInsertBeforeDesitnation">Page number (1 based) to insert the pages before in the Destination file.</param>
+        /// <returns>byte[]</returns>
+        byte[] EditPdfInsertPages (System.IO.Stream sourceFile, System.IO.Stream destinationFile, int? pageStartSource, int? pageEndSource, int? pageInsertBeforeDesitnation);
+
+        /// <summary>
+        /// Insert / copy pages from one PDF document into another
+        /// </summary>
+        /// <remarks>
+        /// Copy one or more pages from one PDF document (source document) and insert them into a second PDF document (destination document).
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceFile">Source PDF file to copy pages from.</param>
+        /// <param name="destinationFile">Destination PDF file to copy pages into.</param>
+        /// <param name="pageStartSource">Page number (1 based) to start copying pages from (inclusive) in the Source file.</param>
+        /// <param name="pageEndSource">Page number (1 based) to stop copying pages pages from (inclusive) in the Source file.</param>
+        /// <param name="pageInsertBeforeDesitnation">Page number (1 based) to insert the pages before in the Destination file.</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> EditPdfInsertPagesWithHttpInfo (System.IO.Stream sourceFile, System.IO.Stream destinationFile, int? pageStartSource, int? pageEndSource, int? pageInsertBeforeDesitnation);
+        /// <summary>
         /// Rasterize a PDF to an image-based PDF
         /// </summary>
         /// <remarks>
@@ -141,8 +195,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>Object</returns>
-        Object EditPdfSetMetadata (SetPdfMetadataRequest request);
+        /// <returns>byte[]</returns>
+        byte[] EditPdfSetMetadata (SetPdfMetadataRequest request);
 
         /// <summary>
         /// Sets PDF document metadata
@@ -152,8 +206,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> EditPdfSetMetadataWithHttpInfo (SetPdfMetadataRequest request);
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> EditPdfSetMetadataWithHttpInfo (SetPdfMetadataRequest request);
         /// <summary>
         /// Encrypt, password-protect and set restricted permissions on a PDF
         /// </summary>
@@ -227,6 +281,31 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
+        /// Remove / delete pages from a PDF document
+        /// </summary>
+        /// <remarks>
+        /// Remove one or more pages from a PDF document
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="pageStart">Page number (1 based) to start deleting pages from (inclusive).</param>
+        /// <param name="pageEnd">Page number (1 based) to stop deleting pages from (inclusive).</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> EditPdfDeletePagesAsync (System.IO.Stream inputFile, int? pageStart, int? pageEnd);
+
+        /// <summary>
+        /// Remove / delete pages from a PDF document
+        /// </summary>
+        /// <remarks>
+        /// Remove one or more pages from a PDF document
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="pageStart">Page number (1 based) to start deleting pages from (inclusive).</param>
+        /// <param name="pageEnd">Page number (1 based) to stop deleting pages from (inclusive).</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfDeletePagesAsyncWithHttpInfo (System.IO.Stream inputFile, int? pageStart, int? pageEnd);
+        /// <summary>
         /// Encrypt and password-protect a PDF
         /// </summary>
         /// <remarks>
@@ -294,6 +373,35 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (PdfMetadata)</returns>
         System.Threading.Tasks.Task<ApiResponse<PdfMetadata>> EditPdfGetMetadataAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
+        /// Insert / copy pages from one PDF document into another
+        /// </summary>
+        /// <remarks>
+        /// Copy one or more pages from one PDF document (source document) and insert them into a second PDF document (destination document).
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceFile">Source PDF file to copy pages from.</param>
+        /// <param name="destinationFile">Destination PDF file to copy pages into.</param>
+        /// <param name="pageStartSource">Page number (1 based) to start copying pages from (inclusive) in the Source file.</param>
+        /// <param name="pageEndSource">Page number (1 based) to stop copying pages pages from (inclusive) in the Source file.</param>
+        /// <param name="pageInsertBeforeDesitnation">Page number (1 based) to insert the pages before in the Destination file.</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> EditPdfInsertPagesAsync (System.IO.Stream sourceFile, System.IO.Stream destinationFile, int? pageStartSource, int? pageEndSource, int? pageInsertBeforeDesitnation);
+
+        /// <summary>
+        /// Insert / copy pages from one PDF document into another
+        /// </summary>
+        /// <remarks>
+        /// Copy one or more pages from one PDF document (source document) and insert them into a second PDF document (destination document).
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceFile">Source PDF file to copy pages from.</param>
+        /// <param name="destinationFile">Destination PDF file to copy pages into.</param>
+        /// <param name="pageStartSource">Page number (1 based) to start copying pages from (inclusive) in the Source file.</param>
+        /// <param name="pageEndSource">Page number (1 based) to stop copying pages pages from (inclusive) in the Source file.</param>
+        /// <param name="pageInsertBeforeDesitnation">Page number (1 based) to insert the pages before in the Destination file.</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfInsertPagesAsyncWithHttpInfo (System.IO.Stream sourceFile, System.IO.Stream destinationFile, int? pageStartSource, int? pageEndSource, int? pageInsertBeforeDesitnation);
+        /// <summary>
         /// Rasterize a PDF to an image-based PDF
         /// </summary>
         /// <remarks>
@@ -343,8 +451,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> EditPdfSetMetadataAsync (SetPdfMetadataRequest request);
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> EditPdfSetMetadataAsync (SetPdfMetadataRequest request);
 
         /// <summary>
         /// Sets PDF document metadata
@@ -354,8 +462,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> EditPdfSetMetadataAsyncWithHttpInfo (SetPdfMetadataRequest request);
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfSetMetadataAsyncWithHttpInfo (SetPdfMetadataRequest request);
         /// <summary>
         /// Encrypt, password-protect and set restricted permissions on a PDF
         /// </summary>
@@ -524,6 +632,175 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// Remove / delete pages from a PDF document Remove one or more pages from a PDF document
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="pageStart">Page number (1 based) to start deleting pages from (inclusive).</param>
+        /// <param name="pageEnd">Page number (1 based) to stop deleting pages from (inclusive).</param>
+        /// <returns>byte[]</returns>
+        public byte[] EditPdfDeletePages (System.IO.Stream inputFile, int? pageStart, int? pageEnd)
+        {
+             ApiResponse<byte[]> localVarResponse = EditPdfDeletePagesWithHttpInfo(inputFile, pageStart, pageEnd);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Remove / delete pages from a PDF document Remove one or more pages from a PDF document
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="pageStart">Page number (1 based) to start deleting pages from (inclusive).</param>
+        /// <param name="pageEnd">Page number (1 based) to stop deleting pages from (inclusive).</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > EditPdfDeletePagesWithHttpInfo (System.IO.Stream inputFile, int? pageStart, int? pageEnd)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditPdfApi->EditPdfDeletePages");
+            // verify the required parameter 'pageStart' is set
+            if (pageStart == null)
+                throw new ApiException(400, "Missing required parameter 'pageStart' when calling EditPdfApi->EditPdfDeletePages");
+            // verify the required parameter 'pageEnd' is set
+            if (pageEnd == null)
+                throw new ApiException(400, "Missing required parameter 'pageEnd' when calling EditPdfApi->EditPdfDeletePages");
+
+            var localVarPath = "/convert/edit/pdf/pages/delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pageStart != null) localVarHeaderParams.Add("pageStart", this.Configuration.ApiClient.ParameterToString(pageStart)); // header parameter
+            if (pageEnd != null) localVarHeaderParams.Add("pageEnd", this.Configuration.ApiClient.ParameterToString(pageEnd)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditPdfDeletePages", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Remove / delete pages from a PDF document Remove one or more pages from a PDF document
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="pageStart">Page number (1 based) to start deleting pages from (inclusive).</param>
+        /// <param name="pageEnd">Page number (1 based) to stop deleting pages from (inclusive).</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> EditPdfDeletePagesAsync (System.IO.Stream inputFile, int? pageStart, int? pageEnd)
+        {
+             ApiResponse<byte[]> localVarResponse = await EditPdfDeletePagesAsyncWithHttpInfo(inputFile, pageStart, pageEnd);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Remove / delete pages from a PDF document Remove one or more pages from a PDF document
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="pageStart">Page number (1 based) to start deleting pages from (inclusive).</param>
+        /// <param name="pageEnd">Page number (1 based) to stop deleting pages from (inclusive).</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfDeletePagesAsyncWithHttpInfo (System.IO.Stream inputFile, int? pageStart, int? pageEnd)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditPdfApi->EditPdfDeletePages");
+            // verify the required parameter 'pageStart' is set
+            if (pageStart == null)
+                throw new ApiException(400, "Missing required parameter 'pageStart' when calling EditPdfApi->EditPdfDeletePages");
+            // verify the required parameter 'pageEnd' is set
+            if (pageEnd == null)
+                throw new ApiException(400, "Missing required parameter 'pageEnd' when calling EditPdfApi->EditPdfDeletePages");
+
+            var localVarPath = "/convert/edit/pdf/pages/delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pageStart != null) localVarHeaderParams.Add("pageStart", this.Configuration.ApiClient.ParameterToString(pageStart)); // header parameter
+            if (pageEnd != null) localVarHeaderParams.Add("pageEnd", this.Configuration.ApiClient.ParameterToString(pageEnd)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditPdfDeletePages", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
@@ -980,6 +1257,199 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
+        /// Insert / copy pages from one PDF document into another Copy one or more pages from one PDF document (source document) and insert them into a second PDF document (destination document).
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceFile">Source PDF file to copy pages from.</param>
+        /// <param name="destinationFile">Destination PDF file to copy pages into.</param>
+        /// <param name="pageStartSource">Page number (1 based) to start copying pages from (inclusive) in the Source file.</param>
+        /// <param name="pageEndSource">Page number (1 based) to stop copying pages pages from (inclusive) in the Source file.</param>
+        /// <param name="pageInsertBeforeDesitnation">Page number (1 based) to insert the pages before in the Destination file.</param>
+        /// <returns>byte[]</returns>
+        public byte[] EditPdfInsertPages (System.IO.Stream sourceFile, System.IO.Stream destinationFile, int? pageStartSource, int? pageEndSource, int? pageInsertBeforeDesitnation)
+        {
+             ApiResponse<byte[]> localVarResponse = EditPdfInsertPagesWithHttpInfo(sourceFile, destinationFile, pageStartSource, pageEndSource, pageInsertBeforeDesitnation);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Insert / copy pages from one PDF document into another Copy one or more pages from one PDF document (source document) and insert them into a second PDF document (destination document).
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceFile">Source PDF file to copy pages from.</param>
+        /// <param name="destinationFile">Destination PDF file to copy pages into.</param>
+        /// <param name="pageStartSource">Page number (1 based) to start copying pages from (inclusive) in the Source file.</param>
+        /// <param name="pageEndSource">Page number (1 based) to stop copying pages pages from (inclusive) in the Source file.</param>
+        /// <param name="pageInsertBeforeDesitnation">Page number (1 based) to insert the pages before in the Destination file.</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > EditPdfInsertPagesWithHttpInfo (System.IO.Stream sourceFile, System.IO.Stream destinationFile, int? pageStartSource, int? pageEndSource, int? pageInsertBeforeDesitnation)
+        {
+            // verify the required parameter 'sourceFile' is set
+            if (sourceFile == null)
+                throw new ApiException(400, "Missing required parameter 'sourceFile' when calling EditPdfApi->EditPdfInsertPages");
+            // verify the required parameter 'destinationFile' is set
+            if (destinationFile == null)
+                throw new ApiException(400, "Missing required parameter 'destinationFile' when calling EditPdfApi->EditPdfInsertPages");
+            // verify the required parameter 'pageStartSource' is set
+            if (pageStartSource == null)
+                throw new ApiException(400, "Missing required parameter 'pageStartSource' when calling EditPdfApi->EditPdfInsertPages");
+            // verify the required parameter 'pageEndSource' is set
+            if (pageEndSource == null)
+                throw new ApiException(400, "Missing required parameter 'pageEndSource' when calling EditPdfApi->EditPdfInsertPages");
+            // verify the required parameter 'pageInsertBeforeDesitnation' is set
+            if (pageInsertBeforeDesitnation == null)
+                throw new ApiException(400, "Missing required parameter 'pageInsertBeforeDesitnation' when calling EditPdfApi->EditPdfInsertPages");
+
+            var localVarPath = "/convert/edit/pdf/pages/insert";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pageStartSource != null) localVarHeaderParams.Add("pageStartSource", this.Configuration.ApiClient.ParameterToString(pageStartSource)); // header parameter
+            if (pageEndSource != null) localVarHeaderParams.Add("pageEndSource", this.Configuration.ApiClient.ParameterToString(pageEndSource)); // header parameter
+            if (pageInsertBeforeDesitnation != null) localVarHeaderParams.Add("pageInsertBeforeDesitnation", this.Configuration.ApiClient.ParameterToString(pageInsertBeforeDesitnation)); // header parameter
+            if (sourceFile != null) localVarFileParams.Add("sourceFile", this.Configuration.ApiClient.ParameterToFile("sourceFile", sourceFile));
+            if (destinationFile != null) localVarFileParams.Add("destinationFile", this.Configuration.ApiClient.ParameterToFile("destinationFile", destinationFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditPdfInsertPages", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Insert / copy pages from one PDF document into another Copy one or more pages from one PDF document (source document) and insert them into a second PDF document (destination document).
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceFile">Source PDF file to copy pages from.</param>
+        /// <param name="destinationFile">Destination PDF file to copy pages into.</param>
+        /// <param name="pageStartSource">Page number (1 based) to start copying pages from (inclusive) in the Source file.</param>
+        /// <param name="pageEndSource">Page number (1 based) to stop copying pages pages from (inclusive) in the Source file.</param>
+        /// <param name="pageInsertBeforeDesitnation">Page number (1 based) to insert the pages before in the Destination file.</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> EditPdfInsertPagesAsync (System.IO.Stream sourceFile, System.IO.Stream destinationFile, int? pageStartSource, int? pageEndSource, int? pageInsertBeforeDesitnation)
+        {
+             ApiResponse<byte[]> localVarResponse = await EditPdfInsertPagesAsyncWithHttpInfo(sourceFile, destinationFile, pageStartSource, pageEndSource, pageInsertBeforeDesitnation);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Insert / copy pages from one PDF document into another Copy one or more pages from one PDF document (source document) and insert them into a second PDF document (destination document).
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceFile">Source PDF file to copy pages from.</param>
+        /// <param name="destinationFile">Destination PDF file to copy pages into.</param>
+        /// <param name="pageStartSource">Page number (1 based) to start copying pages from (inclusive) in the Source file.</param>
+        /// <param name="pageEndSource">Page number (1 based) to stop copying pages pages from (inclusive) in the Source file.</param>
+        /// <param name="pageInsertBeforeDesitnation">Page number (1 based) to insert the pages before in the Destination file.</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfInsertPagesAsyncWithHttpInfo (System.IO.Stream sourceFile, System.IO.Stream destinationFile, int? pageStartSource, int? pageEndSource, int? pageInsertBeforeDesitnation)
+        {
+            // verify the required parameter 'sourceFile' is set
+            if (sourceFile == null)
+                throw new ApiException(400, "Missing required parameter 'sourceFile' when calling EditPdfApi->EditPdfInsertPages");
+            // verify the required parameter 'destinationFile' is set
+            if (destinationFile == null)
+                throw new ApiException(400, "Missing required parameter 'destinationFile' when calling EditPdfApi->EditPdfInsertPages");
+            // verify the required parameter 'pageStartSource' is set
+            if (pageStartSource == null)
+                throw new ApiException(400, "Missing required parameter 'pageStartSource' when calling EditPdfApi->EditPdfInsertPages");
+            // verify the required parameter 'pageEndSource' is set
+            if (pageEndSource == null)
+                throw new ApiException(400, "Missing required parameter 'pageEndSource' when calling EditPdfApi->EditPdfInsertPages");
+            // verify the required parameter 'pageInsertBeforeDesitnation' is set
+            if (pageInsertBeforeDesitnation == null)
+                throw new ApiException(400, "Missing required parameter 'pageInsertBeforeDesitnation' when calling EditPdfApi->EditPdfInsertPages");
+
+            var localVarPath = "/convert/edit/pdf/pages/insert";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pageStartSource != null) localVarHeaderParams.Add("pageStartSource", this.Configuration.ApiClient.ParameterToString(pageStartSource)); // header parameter
+            if (pageEndSource != null) localVarHeaderParams.Add("pageEndSource", this.Configuration.ApiClient.ParameterToString(pageEndSource)); // header parameter
+            if (pageInsertBeforeDesitnation != null) localVarHeaderParams.Add("pageInsertBeforeDesitnation", this.Configuration.ApiClient.ParameterToString(pageInsertBeforeDesitnation)); // header parameter
+            if (sourceFile != null) localVarFileParams.Add("sourceFile", this.Configuration.ApiClient.ParameterToFile("sourceFile", sourceFile));
+            if (destinationFile != null) localVarFileParams.Add("destinationFile", this.Configuration.ApiClient.ParameterToFile("destinationFile", destinationFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditPdfInsertPages", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
         /// Rasterize a PDF to an image-based PDF Rasterize a PDF into an image-based PDF.  The output is a PDF where each page is comprised of a high-resolution image, with all text, figures and other components removed.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1296,10 +1766,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>Object</returns>
-        public Object EditPdfSetMetadata (SetPdfMetadataRequest request)
+        /// <returns>byte[]</returns>
+        public byte[] EditPdfSetMetadata (SetPdfMetadataRequest request)
         {
-             ApiResponse<Object> localVarResponse = EditPdfSetMetadataWithHttpInfo(request);
+             ApiResponse<byte[]> localVarResponse = EditPdfSetMetadataWithHttpInfo(request);
              return localVarResponse.Data;
         }
 
@@ -1308,8 +1778,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > EditPdfSetMetadataWithHttpInfo (SetPdfMetadataRequest request)
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > EditPdfSetMetadataWithHttpInfo (SetPdfMetadataRequest request)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -1369,9 +1839,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
@@ -1379,10 +1849,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> EditPdfSetMetadataAsync (SetPdfMetadataRequest request)
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> EditPdfSetMetadataAsync (SetPdfMetadataRequest request)
         {
-             ApiResponse<Object> localVarResponse = await EditPdfSetMetadataAsyncWithHttpInfo(request);
+             ApiResponse<byte[]> localVarResponse = await EditPdfSetMetadataAsyncWithHttpInfo(request);
              return localVarResponse.Data;
 
         }
@@ -1392,8 +1862,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> EditPdfSetMetadataAsyncWithHttpInfo (SetPdfMetadataRequest request)
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfSetMetadataAsyncWithHttpInfo (SetPdfMetadataRequest request)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -1453,9 +1923,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>

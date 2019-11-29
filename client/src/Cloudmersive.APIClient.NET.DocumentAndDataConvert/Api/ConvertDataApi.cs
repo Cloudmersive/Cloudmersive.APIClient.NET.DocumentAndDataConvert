@@ -24,7 +24,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// CSV to JSON conversion
+        /// Convert CSV to JSON conversion
         /// </summary>
         /// <remarks>
         /// Convert a CSV file to a JSON object array
@@ -35,7 +35,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         Object ConvertDataCsvToJson (System.IO.Stream inputFile);
 
         /// <summary>
-        /// CSV to JSON conversion
+        /// Convert CSV to JSON conversion
         /// </summary>
         /// <remarks>
         /// Convert a CSV file to a JSON object array
@@ -45,7 +45,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> ConvertDataCsvToJsonWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// Excel (97-2003) XLS to JSON conversion
+        /// Convert Excel (97-2003) XLS to JSON conversion
         /// </summary>
         /// <remarks>
         /// Convert an Excel (97-2003) XLS file to a JSON object array
@@ -56,7 +56,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         Object ConvertDataXlsToJson (System.IO.Stream inputFile);
 
         /// <summary>
-        /// Excel (97-2003) XLS to JSON conversion
+        /// Convert Excel (97-2003) XLS to JSON conversion
         /// </summary>
         /// <remarks>
         /// Convert an Excel (97-2003) XLS file to a JSON object array
@@ -66,7 +66,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> ConvertDataXlsToJsonWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// Excel XLSX to JSON conversion
+        /// Convert Excel XLSX to JSON conversion
         /// </summary>
         /// <remarks>
         /// Convert an Excel XLSX file to a JSON object array
@@ -77,7 +77,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         Object ConvertDataXlsxToJson (System.IO.Stream inputFile);
 
         /// <summary>
-        /// Excel XLSX to JSON conversion
+        /// Convert Excel XLSX to JSON conversion
         /// </summary>
         /// <remarks>
         /// Convert an Excel XLSX file to a JSON object array
@@ -87,7 +87,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> ConvertDataXlsxToJsonWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// XML to JSON conversion
+        /// Convert XML to JSON conversion
         /// </summary>
         /// <remarks>
         /// Convert an XML string or file into JSON
@@ -98,7 +98,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         Object ConvertDataXmlToJson (System.IO.Stream inputFile);
 
         /// <summary>
-        /// XML to JSON conversion
+        /// Convert XML to JSON conversion
         /// </summary>
         /// <remarks>
         /// Convert an XML string or file into JSON
@@ -110,7 +110,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// CSV to JSON conversion
+        /// Convert CSV to JSON conversion
         /// </summary>
         /// <remarks>
         /// Convert a CSV file to a JSON object array
@@ -121,7 +121,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<Object> ConvertDataCsvToJsonAsync (System.IO.Stream inputFile);
 
         /// <summary>
-        /// CSV to JSON conversion
+        /// Convert CSV to JSON conversion
         /// </summary>
         /// <remarks>
         /// Convert a CSV file to a JSON object array
@@ -131,7 +131,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ConvertDataCsvToJsonAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// Excel (97-2003) XLS to JSON conversion
+        /// Convert Excel (97-2003) XLS to JSON conversion
         /// </summary>
         /// <remarks>
         /// Convert an Excel (97-2003) XLS file to a JSON object array
@@ -142,7 +142,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<Object> ConvertDataXlsToJsonAsync (System.IO.Stream inputFile);
 
         /// <summary>
-        /// Excel (97-2003) XLS to JSON conversion
+        /// Convert Excel (97-2003) XLS to JSON conversion
         /// </summary>
         /// <remarks>
         /// Convert an Excel (97-2003) XLS file to a JSON object array
@@ -152,7 +152,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ConvertDataXlsToJsonAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// Excel XLSX to JSON conversion
+        /// Convert Excel XLSX to JSON conversion
         /// </summary>
         /// <remarks>
         /// Convert an Excel XLSX file to a JSON object array
@@ -163,7 +163,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<Object> ConvertDataXlsxToJsonAsync (System.IO.Stream inputFile);
 
         /// <summary>
-        /// Excel XLSX to JSON conversion
+        /// Convert Excel XLSX to JSON conversion
         /// </summary>
         /// <remarks>
         /// Convert an Excel XLSX file to a JSON object array
@@ -173,7 +173,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ConvertDataXlsxToJsonAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// XML to JSON conversion
+        /// Convert XML to JSON conversion
         /// </summary>
         /// <remarks>
         /// Convert an XML string or file into JSON
@@ -184,7 +184,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<Object> ConvertDataXmlToJsonAsync (System.IO.Stream inputFile);
 
         /// <summary>
-        /// XML to JSON conversion
+        /// Convert XML to JSON conversion
         /// </summary>
         /// <remarks>
         /// Convert an XML string or file into JSON
@@ -294,7 +294,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// CSV to JSON conversion Convert a CSV file to a JSON object array
+        /// Convert CSV to JSON conversion Convert a CSV file to a JSON object array
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -306,7 +306,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// CSV to JSON conversion Convert a CSV file to a JSON object array
+        /// Convert CSV to JSON conversion Convert a CSV file to a JSON object array
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -369,7 +369,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// CSV to JSON conversion Convert a CSV file to a JSON object array
+        /// Convert CSV to JSON conversion Convert a CSV file to a JSON object array
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -382,7 +382,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// CSV to JSON conversion Convert a CSV file to a JSON object array
+        /// Convert CSV to JSON conversion Convert a CSV file to a JSON object array
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -445,7 +445,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Excel (97-2003) XLS to JSON conversion Convert an Excel (97-2003) XLS file to a JSON object array
+        /// Convert Excel (97-2003) XLS to JSON conversion Convert an Excel (97-2003) XLS file to a JSON object array
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -457,7 +457,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Excel (97-2003) XLS to JSON conversion Convert an Excel (97-2003) XLS file to a JSON object array
+        /// Convert Excel (97-2003) XLS to JSON conversion Convert an Excel (97-2003) XLS file to a JSON object array
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -520,7 +520,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Excel (97-2003) XLS to JSON conversion Convert an Excel (97-2003) XLS file to a JSON object array
+        /// Convert Excel (97-2003) XLS to JSON conversion Convert an Excel (97-2003) XLS file to a JSON object array
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -533,7 +533,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Excel (97-2003) XLS to JSON conversion Convert an Excel (97-2003) XLS file to a JSON object array
+        /// Convert Excel (97-2003) XLS to JSON conversion Convert an Excel (97-2003) XLS file to a JSON object array
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -596,7 +596,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Excel XLSX to JSON conversion Convert an Excel XLSX file to a JSON object array
+        /// Convert Excel XLSX to JSON conversion Convert an Excel XLSX file to a JSON object array
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -608,7 +608,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Excel XLSX to JSON conversion Convert an Excel XLSX file to a JSON object array
+        /// Convert Excel XLSX to JSON conversion Convert an Excel XLSX file to a JSON object array
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -671,7 +671,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Excel XLSX to JSON conversion Convert an Excel XLSX file to a JSON object array
+        /// Convert Excel XLSX to JSON conversion Convert an Excel XLSX file to a JSON object array
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -684,7 +684,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Excel XLSX to JSON conversion Convert an Excel XLSX file to a JSON object array
+        /// Convert Excel XLSX to JSON conversion Convert an Excel XLSX file to a JSON object array
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -747,7 +747,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// XML to JSON conversion Convert an XML string or file into JSON
+        /// Convert XML to JSON conversion Convert an XML string or file into JSON
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -759,7 +759,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// XML to JSON conversion Convert an XML string or file into JSON
+        /// Convert XML to JSON conversion Convert an XML string or file into JSON
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -822,7 +822,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// XML to JSON conversion Convert an XML string or file into JSON
+        /// Convert XML to JSON conversion Convert an XML string or file into JSON
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -835,7 +835,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// XML to JSON conversion Convert an XML string or file into JSON
+        /// Convert XML to JSON conversion Convert an XML string or file into JSON
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>

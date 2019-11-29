@@ -4,8 +4,9 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ConvertWebHtmlToDocx**](ConvertWebApi.md#convertwebhtmltodocx) | **POST** /convert/html/to/docx | HTML to DOCX
+[**ConvertWebHtmlToDocx**](ConvertWebApi.md#convertwebhtmltodocx) | **POST** /convert/html/to/docx | Convert HTML to DOCX
 [**ConvertWebHtmlToPdf**](ConvertWebApi.md#convertwebhtmltopdf) | **POST** /convert/web/html/to/pdf | Convert HTML string to PDF
+[**ConvertWebHtmlToPng**](ConvertWebApi.md#convertwebhtmltopng) | **POST** /convert/web/html/to/png | Convert HTML string to PNG
 [**ConvertWebMdToHtml**](ConvertWebApi.md#convertwebmdtohtml) | **POST** /convert/web/md/to/html | Convert Markdown to HTML
 [**ConvertWebUrlToPdf**](ConvertWebApi.md#convertweburltopdf) | **POST** /convert/web/url/to/pdf | Convert a URL to PDF
 [**ConvertWebUrlToScreenshot**](ConvertWebApi.md#convertweburltoscreenshot) | **POST** /convert/web/url/to/screenshot | Take screenshot of URL
@@ -15,7 +16,7 @@ Method | HTTP request | Description
 # **ConvertWebHtmlToDocx**
 > byte[] ConvertWebHtmlToDocx (HtmlToOfficeRequest inputRequest)
 
-HTML to DOCX
+Convert HTML to DOCX
 
 Convert HTML to Office Word Document (DOCX) format
 
@@ -39,11 +40,11 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new ConvertWebApi();
-            var inputRequest = new HtmlToOfficeRequest(); // HtmlToOfficeRequest | 
+            var inputRequest = new HtmlToOfficeRequest(); // HtmlToOfficeRequest | HTL input to convert to DOCX
 
             try
             {
-                // HTML to DOCX
+                // Convert HTML to DOCX
                 byte[] result = apiInstance.ConvertWebHtmlToDocx(inputRequest);
                 Debug.WriteLine(result);
             }
@@ -60,7 +61,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **inputRequest** | [**HtmlToOfficeRequest**](HtmlToOfficeRequest.md)|  | 
+ **inputRequest** | [**HtmlToOfficeRequest**](HtmlToOfficeRequest.md)| HTL input to convert to DOCX | 
 
 ### Return type
 
@@ -139,7 +140,73 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
+ - **Accept**: application/octet-stream
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="convertwebhtmltopng"></a>
+# **ConvertWebHtmlToPng**
+> Object ConvertWebHtmlToPng (HtmlToPngRequest input)
+
+Convert HTML string to PNG
+
+Fully renders a website and returns a PNG (screenshot) of the HTML.  Javascript, HTML5, CSS and other advanced features are all supported.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class ConvertWebHtmlToPngExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new ConvertWebApi();
+            var input = new HtmlToPngRequest(); // HtmlToPngRequest | HTML to PNG request parameters
+
+            try
+            {
+                // Convert HTML string to PNG
+                Object result = apiInstance.ConvertWebHtmlToPng(input);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConvertWebApi.ConvertWebHtmlToPng: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **input** | [**HtmlToPngRequest**](HtmlToPngRequest.md)| HTML to PNG request parameters | 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/octet-stream
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -271,7 +338,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
+ - **Accept**: application/octet-stream
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -337,7 +404,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
+ - **Accept**: application/octet-stream
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

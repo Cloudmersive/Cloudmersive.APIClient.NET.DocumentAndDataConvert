@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**ConvertImageGetImageInfo**](ConvertImageApi.md#convertimagegetimageinfo) | **POST** /convert/image/get-info | Get information about an image
 [**ConvertImageImageFormatConvert**](ConvertImageApi.md#convertimageimageformatconvert) | **POST** /convert/image/{format1}/to/{format2} | Image format conversion
 [**ConvertImageImageSetDPI**](ConvertImageApi.md#convertimageimagesetdpi) | **POST** /convert/image/set-dpi/{dpi} | Change image DPI
-[**ConvertImageMultipageImageFormatConvert**](ConvertImageApi.md#convertimagemultipageimageformatconvert) | **POST** /convert/image-multipage/{format1}/to/{format2} | Multi-page format conversion
+[**ConvertImageMultipageImageFormatConvert**](ConvertImageApi.md#convertimagemultipageimageformatconvert) | **POST** /convert/image-multipage/{format1}/to/{format2} | Multi-page image format conversion
 
 
 <a name="convertimagegetimageinfo"></a>
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 # **ConvertImageMultipageImageFormatConvert**
 > MultipageImageFormatConversionResult ConvertImageMultipageImageFormatConvert (string format1, string format2, System.IO.Stream inputFile)
 
-Multi-page format conversion
+Multi-page image format conversion
 
 Convert between over 100 file formats, including support for Multiple-Page formats (e.g. PDFs, TIFFs, etc. with multiple pages).
 
@@ -248,7 +248,7 @@ namespace Example
 
             try
             {
-                // Multi-page format conversion
+                // Multi-page image format conversion
                 MultipageImageFormatConversionResult result = apiInstance.ConvertImageMultipageImageFormatConvert(format1, format2, inputFile);
                 Debug.WriteLine(result);
             }

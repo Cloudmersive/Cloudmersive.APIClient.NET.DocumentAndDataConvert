@@ -4,15 +4,87 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**EditPdfDeletePages**](EditPdfApi.md#editpdfdeletepages) | **POST** /convert/edit/pdf/pages/delete | Remove / delete pages from a PDF document
 [**EditPdfEncrypt**](EditPdfApi.md#editpdfencrypt) | **POST** /convert/edit/pdf/encrypt | Encrypt and password-protect a PDF
 [**EditPdfGetFormFields**](EditPdfApi.md#editpdfgetformfields) | **POST** /convert/edit/pdf/form/get-fields | Gets PDF Form fields and values
 [**EditPdfGetMetadata**](EditPdfApi.md#editpdfgetmetadata) | **POST** /convert/edit/pdf/get-metadata | Get PDF document metadata
+[**EditPdfInsertPages**](EditPdfApi.md#editpdfinsertpages) | **POST** /convert/edit/pdf/pages/insert | Insert / copy pages from one PDF document into another
 [**EditPdfRasterize**](EditPdfApi.md#editpdfrasterize) | **POST** /convert/edit/pdf/rasterize | Rasterize a PDF to an image-based PDF
 [**EditPdfSetFormFields**](EditPdfApi.md#editpdfsetformfields) | **POST** /convert/edit/pdf/form/set-fields | Sets ands fills PDF Form field values
 [**EditPdfSetMetadata**](EditPdfApi.md#editpdfsetmetadata) | **POST** /convert/edit/pdf/set-metadata | Sets PDF document metadata
 [**EditPdfSetPermissions**](EditPdfApi.md#editpdfsetpermissions) | **POST** /convert/edit/pdf/encrypt/set-permissions | Encrypt, password-protect and set restricted permissions on a PDF
 [**EditPdfWatermarkText**](EditPdfApi.md#editpdfwatermarktext) | **POST** /convert/edit/pdf/watermark/text | Add a text watermark to a PDF
 
+
+<a name="editpdfdeletepages"></a>
+# **EditPdfDeletePages**
+> byte[] EditPdfDeletePages (System.IO.Stream inputFile, int? pageStart, int? pageEnd)
+
+Remove / delete pages from a PDF document
+
+Remove one or more pages from a PDF document
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class EditPdfDeletePagesExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new EditPdfApi();
+            var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
+            var pageStart = 56;  // int? | Page number (1 based) to start deleting pages from (inclusive).
+            var pageEnd = 56;  // int? | Page number (1 based) to stop deleting pages from (inclusive).
+
+            try
+            {
+                // Remove / delete pages from a PDF document
+                byte[] result = apiInstance.EditPdfDeletePages(inputFile, pageStart, pageEnd);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling EditPdfApi.EditPdfDeletePages: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
+ **pageStart** | **int?**| Page number (1 based) to start deleting pages from (inclusive). | 
+ **pageEnd** | **int?**| Page number (1 based) to stop deleting pages from (inclusive). | 
+
+### Return type
+
+**byte[]**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/octet-stream
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="editpdfencrypt"></a>
 # **EditPdfEncrypt**
@@ -216,6 +288,80 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="editpdfinsertpages"></a>
+# **EditPdfInsertPages**
+> byte[] EditPdfInsertPages (System.IO.Stream sourceFile, System.IO.Stream destinationFile, int? pageStartSource, int? pageEndSource, int? pageInsertBeforeDesitnation)
+
+Insert / copy pages from one PDF document into another
+
+Copy one or more pages from one PDF document (source document) and insert them into a second PDF document (destination document).
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class EditPdfInsertPagesExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new EditPdfApi();
+            var sourceFile = new System.IO.Stream(); // System.IO.Stream | Source PDF file to copy pages from.
+            var destinationFile = new System.IO.Stream(); // System.IO.Stream | Destination PDF file to copy pages into.
+            var pageStartSource = 56;  // int? | Page number (1 based) to start copying pages from (inclusive) in the Source file.
+            var pageEndSource = 56;  // int? | Page number (1 based) to stop copying pages pages from (inclusive) in the Source file.
+            var pageInsertBeforeDesitnation = 56;  // int? | Page number (1 based) to insert the pages before in the Destination file.
+
+            try
+            {
+                // Insert / copy pages from one PDF document into another
+                byte[] result = apiInstance.EditPdfInsertPages(sourceFile, destinationFile, pageStartSource, pageEndSource, pageInsertBeforeDesitnation);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling EditPdfApi.EditPdfInsertPages: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sourceFile** | **System.IO.Stream**| Source PDF file to copy pages from. | 
+ **destinationFile** | **System.IO.Stream**| Destination PDF file to copy pages into. | 
+ **pageStartSource** | **int?**| Page number (1 based) to start copying pages from (inclusive) in the Source file. | 
+ **pageEndSource** | **int?**| Page number (1 based) to stop copying pages pages from (inclusive) in the Source file. | 
+ **pageInsertBeforeDesitnation** | **int?**| Page number (1 based) to insert the pages before in the Destination file. | 
+
+### Return type
+
+**byte[]**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/octet-stream
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="editpdfrasterize"></a>
 # **EditPdfRasterize**
 > byte[] EditPdfRasterize (System.IO.Stream inputFile)
@@ -350,7 +496,7 @@ Name | Type | Description  | Notes
 
 <a name="editpdfsetmetadata"></a>
 # **EditPdfSetMetadata**
-> Object EditPdfSetMetadata (SetPdfMetadataRequest request)
+> byte[] EditPdfSetMetadata (SetPdfMetadataRequest request)
 
 Sets PDF document metadata
 
@@ -381,7 +527,7 @@ namespace Example
             try
             {
                 // Sets PDF document metadata
-                Object result = apiInstance.EditPdfSetMetadata(request);
+                byte[] result = apiInstance.EditPdfSetMetadata(request);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -401,7 +547,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**byte[]**
 
 ### Authorization
 

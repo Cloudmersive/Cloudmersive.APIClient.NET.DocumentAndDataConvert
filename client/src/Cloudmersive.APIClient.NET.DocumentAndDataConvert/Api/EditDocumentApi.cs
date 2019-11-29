@@ -46,318 +46,318 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> EditDocumentBeginEditingWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// Get body from a DOCX
+        /// Get body from a Word DOCX document
         /// </summary>
         /// <remarks>
         /// Returns the body defined in the Word Document (DOCX) format file; this is the main content part of a DOCX document
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>GetDocxBodyResponse</returns>
         GetDocxBodyResponse EditDocumentDocxBody (GetDocxBodyRequest reqConfig);
 
         /// <summary>
-        /// Get body from a DOCX
+        /// Get body from a Word DOCX document
         /// </summary>
         /// <remarks>
         /// Returns the body defined in the Word Document (DOCX) format file; this is the main content part of a DOCX document
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>ApiResponse of GetDocxBodyResponse</returns>
         ApiResponse<GetDocxBodyResponse> EditDocumentDocxBodyWithHttpInfo (GetDocxBodyRequest reqConfig);
         /// <summary>
-        /// Get content of a footer from a DOCX
+        /// Get content of a footer from a Word DOCX document
         /// </summary>
         /// <remarks>
         /// Returns the footer content from a Word Document (DOCX) format file
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>GetDocxHeadersAndFootersResponse</returns>
         GetDocxHeadersAndFootersResponse EditDocumentDocxGetHeadersAndFooters (GetDocxHeadersAndFootersRequest reqConfig);
 
         /// <summary>
-        /// Get content of a footer from a DOCX
+        /// Get content of a footer from a Word DOCX document
         /// </summary>
         /// <remarks>
         /// Returns the footer content from a Word Document (DOCX) format file
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>ApiResponse of GetDocxHeadersAndFootersResponse</returns>
         ApiResponse<GetDocxHeadersAndFootersResponse> EditDocumentDocxGetHeadersAndFootersWithHttpInfo (GetDocxHeadersAndFootersRequest reqConfig);
         /// <summary>
-        /// Get images from a DOCX
+        /// Get images from a Word DOCX document
         /// </summary>
         /// <remarks>
         /// Returns the images defined in the Word Document (DOCX) format file
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>GetDocxImagesResponse</returns>
         GetDocxImagesResponse EditDocumentDocxGetImages (GetDocxImagesRequest reqConfig);
 
         /// <summary>
-        /// Get images from a DOCX
+        /// Get images from a Word DOCX document
         /// </summary>
         /// <remarks>
         /// Returns the images defined in the Word Document (DOCX) format file
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>ApiResponse of GetDocxImagesResponse</returns>
         ApiResponse<GetDocxImagesResponse> EditDocumentDocxGetImagesWithHttpInfo (GetDocxImagesRequest reqConfig);
         /// <summary>
-        /// Get sections from a DOCX
+        /// Get sections from a Word DOCX document
         /// </summary>
         /// <remarks>
         /// Returns the sections defined in the Word Document (DOCX) format file
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>GetDocxSectionsResponse</returns>
         GetDocxSectionsResponse EditDocumentDocxGetSections (GetDocxSectionsRequest reqConfig);
 
         /// <summary>
-        /// Get sections from a DOCX
+        /// Get sections from a Word DOCX document
         /// </summary>
         /// <remarks>
         /// Returns the sections defined in the Word Document (DOCX) format file
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>ApiResponse of GetDocxSectionsResponse</returns>
         ApiResponse<GetDocxSectionsResponse> EditDocumentDocxGetSectionsWithHttpInfo (GetDocxSectionsRequest reqConfig);
         /// <summary>
-        /// Get styles from a DOCX
+        /// Get styles from a Word DOCX document
         /// </summary>
         /// <remarks>
         /// Returns the styles defined in the Word Document (DOCX) format file
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>GetDocxStylesResponse</returns>
         GetDocxStylesResponse EditDocumentDocxGetStyles (GetDocxStylesRequest reqConfig);
 
         /// <summary>
-        /// Get styles from a DOCX
+        /// Get styles from a Word DOCX document
         /// </summary>
         /// <remarks>
         /// Returns the styles defined in the Word Document (DOCX) format file
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>ApiResponse of GetDocxStylesResponse</returns>
         ApiResponse<GetDocxStylesResponse> EditDocumentDocxGetStylesWithHttpInfo (GetDocxStylesRequest reqConfig);
         /// <summary>
-        /// Get tables in DOCX
+        /// Get tables in Word DOCX document
         /// </summary>
         /// <remarks>
         /// Returns all the table objects in an Office Word Document (docx)
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>GetDocxTablesResponse</returns>
         GetDocxTablesResponse EditDocumentDocxGetTables (GetDocxTablesRequest reqConfig);
 
         /// <summary>
-        /// Get tables in DOCX
+        /// Get tables in Word DOCX document
         /// </summary>
         /// <remarks>
         /// Returns all the table objects in an Office Word Document (docx)
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>ApiResponse of GetDocxTablesResponse</returns>
         ApiResponse<GetDocxTablesResponse> EditDocumentDocxGetTablesWithHttpInfo (GetDocxTablesRequest reqConfig);
         /// <summary>
-        /// Insert image into a DOCX
+        /// Insert image into a Word DOCX document
         /// </summary>
         /// <remarks>
-        /// Set the footer in a Word Document (DOCX)
+        /// Set the footer in a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>DocxInsertImageResponse</returns>
         DocxInsertImageResponse EditDocumentDocxInsertImage (DocxInsertImageRequest reqConfig);
 
         /// <summary>
-        /// Insert image into a DOCX
+        /// Insert image into a Word DOCX document
         /// </summary>
         /// <remarks>
-        /// Set the footer in a Word Document (DOCX)
+        /// Set the footer in a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>ApiResponse of DocxInsertImageResponse</returns>
         ApiResponse<DocxInsertImageResponse> EditDocumentDocxInsertImageWithHttpInfo (DocxInsertImageRequest reqConfig);
         /// <summary>
-        /// Insert a new paragraph into a DOCX
+        /// Insert a new paragraph into a Word DOCX document
         /// </summary>
         /// <remarks>
-        /// Adds a new paragraph into a DOCX and returns the result.  You can insert at the beginning/end of a document, or before/after an existing object using its Path (location within the document).
+        /// Adds a new paragraph into a DOCX and returns the result.  You can insert at the beginning/end of a document, or before/after an existing object using its Path (location within the document).  Call Finish Editing on the output URL to complete the operation.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>InsertDocxInsertParagraphResponse</returns>
         InsertDocxInsertParagraphResponse EditDocumentDocxInsertParagraph (InsertDocxInsertParagraphRequest reqConfig);
 
         /// <summary>
-        /// Insert a new paragraph into a DOCX
+        /// Insert a new paragraph into a Word DOCX document
         /// </summary>
         /// <remarks>
-        /// Adds a new paragraph into a DOCX and returns the result.  You can insert at the beginning/end of a document, or before/after an existing object using its Path (location within the document).
+        /// Adds a new paragraph into a DOCX and returns the result.  You can insert at the beginning/end of a document, or before/after an existing object using its Path (location within the document).  Call Finish Editing on the output URL to complete the operation.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>ApiResponse of InsertDocxInsertParagraphResponse</returns>
         ApiResponse<InsertDocxInsertParagraphResponse> EditDocumentDocxInsertParagraphWithHttpInfo (InsertDocxInsertParagraphRequest reqConfig);
         /// <summary>
-        /// Insert a new table into a DOCX
+        /// Insert a new table into a Word DOCX document
         /// </summary>
         /// <remarks>
-        /// Adds a new table into a DOCX and returns the result
+        /// Adds a new table into a DOCX and returns the result.  Call Finish Editing on the output URL to complete the operation.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>InsertDocxTablesResponse</returns>
         InsertDocxTablesResponse EditDocumentDocxInsertTable (InsertDocxTablesRequest reqConfig);
 
         /// <summary>
-        /// Insert a new table into a DOCX
+        /// Insert a new table into a Word DOCX document
         /// </summary>
         /// <remarks>
-        /// Adds a new table into a DOCX and returns the result
+        /// Adds a new table into a DOCX and returns the result.  Call Finish Editing on the output URL to complete the operation.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>ApiResponse of InsertDocxTablesResponse</returns>
         ApiResponse<InsertDocxTablesResponse> EditDocumentDocxInsertTableWithHttpInfo (InsertDocxTablesRequest reqConfig);
         /// <summary>
-        /// Remove headers and footers from DOCX
+        /// Remove headers and footers from Word DOCX document
         /// </summary>
         /// <remarks>
-        /// Remove all headers, or footers, or both from a Word Document (DOCX)
+        /// Remove all headers, or footers, or both from a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>RemoveDocxHeadersAndFootersResponse</returns>
         RemoveDocxHeadersAndFootersResponse EditDocumentDocxRemoveHeadersAndFooters (RemoveDocxHeadersAndFootersRequest reqConfig);
 
         /// <summary>
-        /// Remove headers and footers from DOCX
+        /// Remove headers and footers from Word DOCX document
         /// </summary>
         /// <remarks>
-        /// Remove all headers, or footers, or both from a Word Document (DOCX)
+        /// Remove all headers, or footers, or both from a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>ApiResponse of RemoveDocxHeadersAndFootersResponse</returns>
         ApiResponse<RemoveDocxHeadersAndFootersResponse> EditDocumentDocxRemoveHeadersAndFootersWithHttpInfo (RemoveDocxHeadersAndFootersRequest reqConfig);
         /// <summary>
-        /// Delete any object in a DOCX
+        /// Delete any object in a Word DOCX document
         /// </summary>
         /// <remarks>
-        /// Delete any object, such as a paragraph, table, image, etc. from a Word Document (DOCX).  Pass in the Path of the object you would like to delete.  You can call other functions such as Get-Tables, Get-Images, Get-Body, etc. to get the paths of the objects in the document.
+        /// Delete any object, such as a paragraph, table, image, etc. from a Word Document (DOCX).  Pass in the Path of the object you would like to delete.  You can call other functions such as Get-Tables, Get-Images, Get-Body, etc. to get the paths of the objects in the document.  Call Finish Editing on the output URL to complete the operation.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>DocxRemoveObjectResponse</returns>
         DocxRemoveObjectResponse EditDocumentDocxRemoveObject (DocxRemoveObjectRequest reqConfig);
 
         /// <summary>
-        /// Delete any object in a DOCX
+        /// Delete any object in a Word DOCX document
         /// </summary>
         /// <remarks>
-        /// Delete any object, such as a paragraph, table, image, etc. from a Word Document (DOCX).  Pass in the Path of the object you would like to delete.  You can call other functions such as Get-Tables, Get-Images, Get-Body, etc. to get the paths of the objects in the document.
+        /// Delete any object, such as a paragraph, table, image, etc. from a Word Document (DOCX).  Pass in the Path of the object you would like to delete.  You can call other functions such as Get-Tables, Get-Images, Get-Body, etc. to get the paths of the objects in the document.  Call Finish Editing on the output URL to complete the operation.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>ApiResponse of DocxRemoveObjectResponse</returns>
         ApiResponse<DocxRemoveObjectResponse> EditDocumentDocxRemoveObjectWithHttpInfo (DocxRemoveObjectRequest reqConfig);
         /// <summary>
-        /// Replace string in DOCX
+        /// Replace string in Word DOCX document
         /// </summary>
         /// <remarks>
         /// Replace all instances of a string in an Office Word Document (docx)
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document string replacement configuration input</param>
         /// <returns>byte[]</returns>
         byte[] EditDocumentDocxReplace (ReplaceStringRequest reqConfig);
 
         /// <summary>
-        /// Replace string in DOCX
+        /// Replace string in Word DOCX document
         /// </summary>
         /// <remarks>
         /// Replace all instances of a string in an Office Word Document (docx)
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document string replacement configuration input</param>
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> EditDocumentDocxReplaceWithHttpInfo (ReplaceStringRequest reqConfig);
         /// <summary>
-        /// Set the footer in a DOCX
+        /// Set the footer in a Word DOCX document
         /// </summary>
         /// <remarks>
-        /// Set the footer in a Word Document (DOCX)
+        /// Set the footer in a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>DocxSetFooterResponse</returns>
         DocxSetFooterResponse EditDocumentDocxSetFooter (DocxSetFooterRequest reqConfig);
 
         /// <summary>
-        /// Set the footer in a DOCX
+        /// Set the footer in a Word DOCX document
         /// </summary>
         /// <remarks>
-        /// Set the footer in a Word Document (DOCX)
+        /// Set the footer in a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>ApiResponse of DocxSetFooterResponse</returns>
         ApiResponse<DocxSetFooterResponse> EditDocumentDocxSetFooterWithHttpInfo (DocxSetFooterRequest reqConfig);
         /// <summary>
-        /// Add page number to footer in a DOCX
+        /// Add page number to footer in a Word DOCX document
         /// </summary>
         /// <remarks>
-        /// Set the footer in a Word Document (DOCX) to contain a page number
+        /// Set the footer in a Word Document (DOCX) to contain a page number.  Call Finish Editing on the output URL to complete the operation.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>DocxSetFooterResponse</returns>
         DocxSetFooterResponse EditDocumentDocxSetFooterAddPageNumber (DocxSetFooterAddPageNumberRequest reqConfig);
 
         /// <summary>
-        /// Add page number to footer in a DOCX
+        /// Add page number to footer in a Word DOCX document
         /// </summary>
         /// <remarks>
-        /// Set the footer in a Word Document (DOCX) to contain a page number
+        /// Set the footer in a Word Document (DOCX) to contain a page number.  Call Finish Editing on the output URL to complete the operation.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>ApiResponse of DocxSetFooterResponse</returns>
         ApiResponse<DocxSetFooterResponse> EditDocumentDocxSetFooterAddPageNumberWithHttpInfo (DocxSetFooterAddPageNumberRequest reqConfig);
         /// <summary>
-        /// Set the header in a DOCX
+        /// Set the header in a Word DOCX document
         /// </summary>
         /// <remarks>
-        /// Set the header in a Word Document (DOCX)
+        /// Set the header in a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>DocxSetHeaderResponse</returns>
         DocxSetHeaderResponse EditDocumentDocxSetHeader (DocxSetHeaderRequest reqConfig);
 
         /// <summary>
-        /// Set the header in a DOCX
+        /// Set the header in a Word DOCX document
         /// </summary>
         /// <remarks>
-        /// Set the header in a Word Document (DOCX)
+        /// Set the header in a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>ApiResponse of DocxSetHeaderResponse</returns>
         ApiResponse<DocxSetHeaderResponse> EditDocumentDocxSetHeaderWithHttpInfo (DocxSetHeaderRequest reqConfig);
         /// <summary>
@@ -367,7 +367,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Once done editing a document, download the result.  Begin editing a document by calling begin-editing, then perform operations, then call finish-editing to get the result.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Cloudmersive Document URL to complete editing on</param>
         /// <returns>byte[]</returns>
         byte[] EditDocumentFinishEditing (FinishEditingRequest reqConfig);
 
@@ -378,154 +378,154 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Once done editing a document, download the result.  Begin editing a document by calling begin-editing, then perform operations, then call finish-editing to get the result.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Cloudmersive Document URL to complete editing on</param>
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> EditDocumentFinishEditingWithHttpInfo (FinishEditingRequest reqConfig);
         /// <summary>
-        /// Replace string in PPTX
+        /// Replace string in PowerPoint PPTX presentation
         /// </summary>
         /// <remarks>
         /// Replace all instances of a string in an Office PowerPoint Document (pptx)
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Replacement document configuration input</param>
         /// <returns>byte[]</returns>
         byte[] EditDocumentPptxReplace (ReplaceStringRequest reqConfig);
 
         /// <summary>
-        /// Replace string in PPTX
+        /// Replace string in PowerPoint PPTX presentation
         /// </summary>
         /// <remarks>
         /// Replace all instances of a string in an Office PowerPoint Document (pptx)
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Replacement document configuration input</param>
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> EditDocumentPptxReplaceWithHttpInfo (ReplaceStringRequest reqConfig);
         /// <summary>
-        /// Get rows and cells from a XLSX worksheet
+        /// Get rows and cells from a Excel XLSX spreadsheet, worksheet
         /// </summary>
         /// <remarks>
         /// Returns the rows and cells defined in the Excel Spreadsheet worksheet
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>GetXlsxColumnsResponse</returns>
         GetXlsxColumnsResponse EditDocumentXlsxGetColumns (GetXlsxColumnsRequest input);
 
         /// <summary>
-        /// Get rows and cells from a XLSX worksheet
+        /// Get rows and cells from a Excel XLSX spreadsheet, worksheet
         /// </summary>
         /// <remarks>
         /// Returns the rows and cells defined in the Excel Spreadsheet worksheet
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>ApiResponse of GetXlsxColumnsResponse</returns>
         ApiResponse<GetXlsxColumnsResponse> EditDocumentXlsxGetColumnsWithHttpInfo (GetXlsxColumnsRequest input);
         /// <summary>
-        /// Get images from a XLSX worksheet
+        /// Get images from a Excel XLSX spreadsheet, worksheet
         /// </summary>
         /// <remarks>
         /// Returns the images defined in the Excel Spreadsheet worksheet
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>GetXlsxImagesResponse</returns>
         GetXlsxImagesResponse EditDocumentXlsxGetImages (GetXlsxImagesRequest input);
 
         /// <summary>
-        /// Get images from a XLSX worksheet
+        /// Get images from a Excel XLSX spreadsheet, worksheet
         /// </summary>
         /// <remarks>
         /// Returns the images defined in the Excel Spreadsheet worksheet
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>ApiResponse of GetXlsxImagesResponse</returns>
         ApiResponse<GetXlsxImagesResponse> EditDocumentXlsxGetImagesWithHttpInfo (GetXlsxImagesRequest input);
         /// <summary>
-        /// Get rows and cells from a XLSX worksheet
+        /// Get rows and cells from a Word XLSX spreadsheet, worksheet
         /// </summary>
         /// <remarks>
         /// Returns the rows and cells defined in the Excel Spreadsheet worksheet
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>GetXlsxRowsAndCellsResponse</returns>
         GetXlsxRowsAndCellsResponse EditDocumentXlsxGetRowsAndCells (GetXlsxRowsAndCellsRequest input);
 
         /// <summary>
-        /// Get rows and cells from a XLSX worksheet
+        /// Get rows and cells from a Word XLSX spreadsheet, worksheet
         /// </summary>
         /// <remarks>
         /// Returns the rows and cells defined in the Excel Spreadsheet worksheet
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>ApiResponse of GetXlsxRowsAndCellsResponse</returns>
         ApiResponse<GetXlsxRowsAndCellsResponse> EditDocumentXlsxGetRowsAndCellsWithHttpInfo (GetXlsxRowsAndCellsRequest input);
         /// <summary>
-        /// Get styles from a XLSX worksheet
+        /// Get styles from a Excel XLSX spreadsheet, worksheet
         /// </summary>
         /// <remarks>
         /// Returns the style defined in the Excel Spreadsheet
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>GetXlsxStylesResponse</returns>
         GetXlsxStylesResponse EditDocumentXlsxGetStyles (GetXlsxStylesRequest input);
 
         /// <summary>
-        /// Get styles from a XLSX worksheet
+        /// Get styles from a Excel XLSX spreadsheet, worksheet
         /// </summary>
         /// <remarks>
         /// Returns the style defined in the Excel Spreadsheet
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>ApiResponse of GetXlsxStylesResponse</returns>
         ApiResponse<GetXlsxStylesResponse> EditDocumentXlsxGetStylesWithHttpInfo (GetXlsxStylesRequest input);
         /// <summary>
-        /// Get worksheets from a XLSX
+        /// Get worksheets from a Excel XLSX spreadsheet
         /// </summary>
         /// <remarks>
         /// Returns the worksheets (tabs) defined in the Excel Spreadsheet (XLSX) format file
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>GetXlsxWorksheetsResponse</returns>
         GetXlsxWorksheetsResponse EditDocumentXlsxGetWorksheets (GetXlsxWorksheetsRequest input);
 
         /// <summary>
-        /// Get worksheets from a XLSX
+        /// Get worksheets from a Excel XLSX spreadsheet
         /// </summary>
         /// <remarks>
         /// Returns the worksheets (tabs) defined in the Excel Spreadsheet (XLSX) format file
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>ApiResponse of GetXlsxWorksheetsResponse</returns>
         ApiResponse<GetXlsxWorksheetsResponse> EditDocumentXlsxGetWorksheetsWithHttpInfo (GetXlsxWorksheetsRequest input);
         /// <summary>
-        /// Insert a new worksheet into an XLSX spreadsheet
+        /// Insert a new worksheet into an Excel XLSX spreadsheet
         /// </summary>
         /// <remarks>
         /// Inserts a new worksheet into an Excel Spreadsheet
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>InsertXlsxWorksheetResponse</returns>
         InsertXlsxWorksheetResponse EditDocumentXlsxInsertWorksheet (InsertXlsxWorksheetRequest input);
 
         /// <summary>
-        /// Insert a new worksheet into an XLSX spreadsheet
+        /// Insert a new worksheet into an Excel XLSX spreadsheet
         /// </summary>
         /// <remarks>
         /// Inserts a new worksheet into an Excel Spreadsheet
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>ApiResponse of InsertXlsxWorksheetResponse</returns>
         ApiResponse<InsertXlsxWorksheetResponse> EditDocumentXlsxInsertWorksheetWithHttpInfo (InsertXlsxWorksheetRequest input);
         #endregion Synchronous Operations
@@ -552,318 +552,318 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> EditDocumentBeginEditingAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// Get body from a DOCX
+        /// Get body from a Word DOCX document
         /// </summary>
         /// <remarks>
         /// Returns the body defined in the Word Document (DOCX) format file; this is the main content part of a DOCX document
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of GetDocxBodyResponse</returns>
         System.Threading.Tasks.Task<GetDocxBodyResponse> EditDocumentDocxBodyAsync (GetDocxBodyRequest reqConfig);
 
         /// <summary>
-        /// Get body from a DOCX
+        /// Get body from a Word DOCX document
         /// </summary>
         /// <remarks>
         /// Returns the body defined in the Word Document (DOCX) format file; this is the main content part of a DOCX document
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of ApiResponse (GetDocxBodyResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetDocxBodyResponse>> EditDocumentDocxBodyAsyncWithHttpInfo (GetDocxBodyRequest reqConfig);
         /// <summary>
-        /// Get content of a footer from a DOCX
+        /// Get content of a footer from a Word DOCX document
         /// </summary>
         /// <remarks>
         /// Returns the footer content from a Word Document (DOCX) format file
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of GetDocxHeadersAndFootersResponse</returns>
         System.Threading.Tasks.Task<GetDocxHeadersAndFootersResponse> EditDocumentDocxGetHeadersAndFootersAsync (GetDocxHeadersAndFootersRequest reqConfig);
 
         /// <summary>
-        /// Get content of a footer from a DOCX
+        /// Get content of a footer from a Word DOCX document
         /// </summary>
         /// <remarks>
         /// Returns the footer content from a Word Document (DOCX) format file
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of ApiResponse (GetDocxHeadersAndFootersResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetDocxHeadersAndFootersResponse>> EditDocumentDocxGetHeadersAndFootersAsyncWithHttpInfo (GetDocxHeadersAndFootersRequest reqConfig);
         /// <summary>
-        /// Get images from a DOCX
+        /// Get images from a Word DOCX document
         /// </summary>
         /// <remarks>
         /// Returns the images defined in the Word Document (DOCX) format file
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of GetDocxImagesResponse</returns>
         System.Threading.Tasks.Task<GetDocxImagesResponse> EditDocumentDocxGetImagesAsync (GetDocxImagesRequest reqConfig);
 
         /// <summary>
-        /// Get images from a DOCX
+        /// Get images from a Word DOCX document
         /// </summary>
         /// <remarks>
         /// Returns the images defined in the Word Document (DOCX) format file
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of ApiResponse (GetDocxImagesResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetDocxImagesResponse>> EditDocumentDocxGetImagesAsyncWithHttpInfo (GetDocxImagesRequest reqConfig);
         /// <summary>
-        /// Get sections from a DOCX
+        /// Get sections from a Word DOCX document
         /// </summary>
         /// <remarks>
         /// Returns the sections defined in the Word Document (DOCX) format file
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of GetDocxSectionsResponse</returns>
         System.Threading.Tasks.Task<GetDocxSectionsResponse> EditDocumentDocxGetSectionsAsync (GetDocxSectionsRequest reqConfig);
 
         /// <summary>
-        /// Get sections from a DOCX
+        /// Get sections from a Word DOCX document
         /// </summary>
         /// <remarks>
         /// Returns the sections defined in the Word Document (DOCX) format file
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of ApiResponse (GetDocxSectionsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetDocxSectionsResponse>> EditDocumentDocxGetSectionsAsyncWithHttpInfo (GetDocxSectionsRequest reqConfig);
         /// <summary>
-        /// Get styles from a DOCX
+        /// Get styles from a Word DOCX document
         /// </summary>
         /// <remarks>
         /// Returns the styles defined in the Word Document (DOCX) format file
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of GetDocxStylesResponse</returns>
         System.Threading.Tasks.Task<GetDocxStylesResponse> EditDocumentDocxGetStylesAsync (GetDocxStylesRequest reqConfig);
 
         /// <summary>
-        /// Get styles from a DOCX
+        /// Get styles from a Word DOCX document
         /// </summary>
         /// <remarks>
         /// Returns the styles defined in the Word Document (DOCX) format file
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of ApiResponse (GetDocxStylesResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetDocxStylesResponse>> EditDocumentDocxGetStylesAsyncWithHttpInfo (GetDocxStylesRequest reqConfig);
         /// <summary>
-        /// Get tables in DOCX
+        /// Get tables in Word DOCX document
         /// </summary>
         /// <remarks>
         /// Returns all the table objects in an Office Word Document (docx)
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of GetDocxTablesResponse</returns>
         System.Threading.Tasks.Task<GetDocxTablesResponse> EditDocumentDocxGetTablesAsync (GetDocxTablesRequest reqConfig);
 
         /// <summary>
-        /// Get tables in DOCX
+        /// Get tables in Word DOCX document
         /// </summary>
         /// <remarks>
         /// Returns all the table objects in an Office Word Document (docx)
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of ApiResponse (GetDocxTablesResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetDocxTablesResponse>> EditDocumentDocxGetTablesAsyncWithHttpInfo (GetDocxTablesRequest reqConfig);
         /// <summary>
-        /// Insert image into a DOCX
+        /// Insert image into a Word DOCX document
         /// </summary>
         /// <remarks>
-        /// Set the footer in a Word Document (DOCX)
+        /// Set the footer in a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of DocxInsertImageResponse</returns>
         System.Threading.Tasks.Task<DocxInsertImageResponse> EditDocumentDocxInsertImageAsync (DocxInsertImageRequest reqConfig);
 
         /// <summary>
-        /// Insert image into a DOCX
+        /// Insert image into a Word DOCX document
         /// </summary>
         /// <remarks>
-        /// Set the footer in a Word Document (DOCX)
+        /// Set the footer in a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of ApiResponse (DocxInsertImageResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<DocxInsertImageResponse>> EditDocumentDocxInsertImageAsyncWithHttpInfo (DocxInsertImageRequest reqConfig);
         /// <summary>
-        /// Insert a new paragraph into a DOCX
+        /// Insert a new paragraph into a Word DOCX document
         /// </summary>
         /// <remarks>
-        /// Adds a new paragraph into a DOCX and returns the result.  You can insert at the beginning/end of a document, or before/after an existing object using its Path (location within the document).
+        /// Adds a new paragraph into a DOCX and returns the result.  You can insert at the beginning/end of a document, or before/after an existing object using its Path (location within the document).  Call Finish Editing on the output URL to complete the operation.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of InsertDocxInsertParagraphResponse</returns>
         System.Threading.Tasks.Task<InsertDocxInsertParagraphResponse> EditDocumentDocxInsertParagraphAsync (InsertDocxInsertParagraphRequest reqConfig);
 
         /// <summary>
-        /// Insert a new paragraph into a DOCX
+        /// Insert a new paragraph into a Word DOCX document
         /// </summary>
         /// <remarks>
-        /// Adds a new paragraph into a DOCX and returns the result.  You can insert at the beginning/end of a document, or before/after an existing object using its Path (location within the document).
+        /// Adds a new paragraph into a DOCX and returns the result.  You can insert at the beginning/end of a document, or before/after an existing object using its Path (location within the document).  Call Finish Editing on the output URL to complete the operation.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of ApiResponse (InsertDocxInsertParagraphResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<InsertDocxInsertParagraphResponse>> EditDocumentDocxInsertParagraphAsyncWithHttpInfo (InsertDocxInsertParagraphRequest reqConfig);
         /// <summary>
-        /// Insert a new table into a DOCX
+        /// Insert a new table into a Word DOCX document
         /// </summary>
         /// <remarks>
-        /// Adds a new table into a DOCX and returns the result
+        /// Adds a new table into a DOCX and returns the result.  Call Finish Editing on the output URL to complete the operation.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of InsertDocxTablesResponse</returns>
         System.Threading.Tasks.Task<InsertDocxTablesResponse> EditDocumentDocxInsertTableAsync (InsertDocxTablesRequest reqConfig);
 
         /// <summary>
-        /// Insert a new table into a DOCX
+        /// Insert a new table into a Word DOCX document
         /// </summary>
         /// <remarks>
-        /// Adds a new table into a DOCX and returns the result
+        /// Adds a new table into a DOCX and returns the result.  Call Finish Editing on the output URL to complete the operation.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of ApiResponse (InsertDocxTablesResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<InsertDocxTablesResponse>> EditDocumentDocxInsertTableAsyncWithHttpInfo (InsertDocxTablesRequest reqConfig);
         /// <summary>
-        /// Remove headers and footers from DOCX
+        /// Remove headers and footers from Word DOCX document
         /// </summary>
         /// <remarks>
-        /// Remove all headers, or footers, or both from a Word Document (DOCX)
+        /// Remove all headers, or footers, or both from a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of RemoveDocxHeadersAndFootersResponse</returns>
         System.Threading.Tasks.Task<RemoveDocxHeadersAndFootersResponse> EditDocumentDocxRemoveHeadersAndFootersAsync (RemoveDocxHeadersAndFootersRequest reqConfig);
 
         /// <summary>
-        /// Remove headers and footers from DOCX
+        /// Remove headers and footers from Word DOCX document
         /// </summary>
         /// <remarks>
-        /// Remove all headers, or footers, or both from a Word Document (DOCX)
+        /// Remove all headers, or footers, or both from a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of ApiResponse (RemoveDocxHeadersAndFootersResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<RemoveDocxHeadersAndFootersResponse>> EditDocumentDocxRemoveHeadersAndFootersAsyncWithHttpInfo (RemoveDocxHeadersAndFootersRequest reqConfig);
         /// <summary>
-        /// Delete any object in a DOCX
+        /// Delete any object in a Word DOCX document
         /// </summary>
         /// <remarks>
-        /// Delete any object, such as a paragraph, table, image, etc. from a Word Document (DOCX).  Pass in the Path of the object you would like to delete.  You can call other functions such as Get-Tables, Get-Images, Get-Body, etc. to get the paths of the objects in the document.
+        /// Delete any object, such as a paragraph, table, image, etc. from a Word Document (DOCX).  Pass in the Path of the object you would like to delete.  You can call other functions such as Get-Tables, Get-Images, Get-Body, etc. to get the paths of the objects in the document.  Call Finish Editing on the output URL to complete the operation.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of DocxRemoveObjectResponse</returns>
         System.Threading.Tasks.Task<DocxRemoveObjectResponse> EditDocumentDocxRemoveObjectAsync (DocxRemoveObjectRequest reqConfig);
 
         /// <summary>
-        /// Delete any object in a DOCX
+        /// Delete any object in a Word DOCX document
         /// </summary>
         /// <remarks>
-        /// Delete any object, such as a paragraph, table, image, etc. from a Word Document (DOCX).  Pass in the Path of the object you would like to delete.  You can call other functions such as Get-Tables, Get-Images, Get-Body, etc. to get the paths of the objects in the document.
+        /// Delete any object, such as a paragraph, table, image, etc. from a Word Document (DOCX).  Pass in the Path of the object you would like to delete.  You can call other functions such as Get-Tables, Get-Images, Get-Body, etc. to get the paths of the objects in the document.  Call Finish Editing on the output URL to complete the operation.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of ApiResponse (DocxRemoveObjectResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<DocxRemoveObjectResponse>> EditDocumentDocxRemoveObjectAsyncWithHttpInfo (DocxRemoveObjectRequest reqConfig);
         /// <summary>
-        /// Replace string in DOCX
+        /// Replace string in Word DOCX document
         /// </summary>
         /// <remarks>
         /// Replace all instances of a string in an Office Word Document (docx)
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document string replacement configuration input</param>
         /// <returns>Task of byte[]</returns>
         System.Threading.Tasks.Task<byte[]> EditDocumentDocxReplaceAsync (ReplaceStringRequest reqConfig);
 
         /// <summary>
-        /// Replace string in DOCX
+        /// Replace string in Word DOCX document
         /// </summary>
         /// <remarks>
         /// Replace all instances of a string in an Office Word Document (docx)
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document string replacement configuration input</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDocumentDocxReplaceAsyncWithHttpInfo (ReplaceStringRequest reqConfig);
         /// <summary>
-        /// Set the footer in a DOCX
+        /// Set the footer in a Word DOCX document
         /// </summary>
         /// <remarks>
-        /// Set the footer in a Word Document (DOCX)
+        /// Set the footer in a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of DocxSetFooterResponse</returns>
         System.Threading.Tasks.Task<DocxSetFooterResponse> EditDocumentDocxSetFooterAsync (DocxSetFooterRequest reqConfig);
 
         /// <summary>
-        /// Set the footer in a DOCX
+        /// Set the footer in a Word DOCX document
         /// </summary>
         /// <remarks>
-        /// Set the footer in a Word Document (DOCX)
+        /// Set the footer in a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of ApiResponse (DocxSetFooterResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<DocxSetFooterResponse>> EditDocumentDocxSetFooterAsyncWithHttpInfo (DocxSetFooterRequest reqConfig);
         /// <summary>
-        /// Add page number to footer in a DOCX
+        /// Add page number to footer in a Word DOCX document
         /// </summary>
         /// <remarks>
-        /// Set the footer in a Word Document (DOCX) to contain a page number
+        /// Set the footer in a Word Document (DOCX) to contain a page number.  Call Finish Editing on the output URL to complete the operation.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of DocxSetFooterResponse</returns>
         System.Threading.Tasks.Task<DocxSetFooterResponse> EditDocumentDocxSetFooterAddPageNumberAsync (DocxSetFooterAddPageNumberRequest reqConfig);
 
         /// <summary>
-        /// Add page number to footer in a DOCX
+        /// Add page number to footer in a Word DOCX document
         /// </summary>
         /// <remarks>
-        /// Set the footer in a Word Document (DOCX) to contain a page number
+        /// Set the footer in a Word Document (DOCX) to contain a page number.  Call Finish Editing on the output URL to complete the operation.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of ApiResponse (DocxSetFooterResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<DocxSetFooterResponse>> EditDocumentDocxSetFooterAddPageNumberAsyncWithHttpInfo (DocxSetFooterAddPageNumberRequest reqConfig);
         /// <summary>
-        /// Set the header in a DOCX
+        /// Set the header in a Word DOCX document
         /// </summary>
         /// <remarks>
-        /// Set the header in a Word Document (DOCX)
+        /// Set the header in a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of DocxSetHeaderResponse</returns>
         System.Threading.Tasks.Task<DocxSetHeaderResponse> EditDocumentDocxSetHeaderAsync (DocxSetHeaderRequest reqConfig);
 
         /// <summary>
-        /// Set the header in a DOCX
+        /// Set the header in a Word DOCX document
         /// </summary>
         /// <remarks>
-        /// Set the header in a Word Document (DOCX)
+        /// Set the header in a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of ApiResponse (DocxSetHeaderResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<DocxSetHeaderResponse>> EditDocumentDocxSetHeaderAsyncWithHttpInfo (DocxSetHeaderRequest reqConfig);
         /// <summary>
@@ -873,7 +873,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Once done editing a document, download the result.  Begin editing a document by calling begin-editing, then perform operations, then call finish-editing to get the result.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Cloudmersive Document URL to complete editing on</param>
         /// <returns>Task of byte[]</returns>
         System.Threading.Tasks.Task<byte[]> EditDocumentFinishEditingAsync (FinishEditingRequest reqConfig);
 
@@ -884,154 +884,154 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Once done editing a document, download the result.  Begin editing a document by calling begin-editing, then perform operations, then call finish-editing to get the result.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Cloudmersive Document URL to complete editing on</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDocumentFinishEditingAsyncWithHttpInfo (FinishEditingRequest reqConfig);
         /// <summary>
-        /// Replace string in PPTX
+        /// Replace string in PowerPoint PPTX presentation
         /// </summary>
         /// <remarks>
         /// Replace all instances of a string in an Office PowerPoint Document (pptx)
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Replacement document configuration input</param>
         /// <returns>Task of byte[]</returns>
         System.Threading.Tasks.Task<byte[]> EditDocumentPptxReplaceAsync (ReplaceStringRequest reqConfig);
 
         /// <summary>
-        /// Replace string in PPTX
+        /// Replace string in PowerPoint PPTX presentation
         /// </summary>
         /// <remarks>
         /// Replace all instances of a string in an Office PowerPoint Document (pptx)
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Replacement document configuration input</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDocumentPptxReplaceAsyncWithHttpInfo (ReplaceStringRequest reqConfig);
         /// <summary>
-        /// Get rows and cells from a XLSX worksheet
+        /// Get rows and cells from a Excel XLSX spreadsheet, worksheet
         /// </summary>
         /// <remarks>
         /// Returns the rows and cells defined in the Excel Spreadsheet worksheet
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>Task of GetXlsxColumnsResponse</returns>
         System.Threading.Tasks.Task<GetXlsxColumnsResponse> EditDocumentXlsxGetColumnsAsync (GetXlsxColumnsRequest input);
 
         /// <summary>
-        /// Get rows and cells from a XLSX worksheet
+        /// Get rows and cells from a Excel XLSX spreadsheet, worksheet
         /// </summary>
         /// <remarks>
         /// Returns the rows and cells defined in the Excel Spreadsheet worksheet
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>Task of ApiResponse (GetXlsxColumnsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetXlsxColumnsResponse>> EditDocumentXlsxGetColumnsAsyncWithHttpInfo (GetXlsxColumnsRequest input);
         /// <summary>
-        /// Get images from a XLSX worksheet
+        /// Get images from a Excel XLSX spreadsheet, worksheet
         /// </summary>
         /// <remarks>
         /// Returns the images defined in the Excel Spreadsheet worksheet
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>Task of GetXlsxImagesResponse</returns>
         System.Threading.Tasks.Task<GetXlsxImagesResponse> EditDocumentXlsxGetImagesAsync (GetXlsxImagesRequest input);
 
         /// <summary>
-        /// Get images from a XLSX worksheet
+        /// Get images from a Excel XLSX spreadsheet, worksheet
         /// </summary>
         /// <remarks>
         /// Returns the images defined in the Excel Spreadsheet worksheet
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>Task of ApiResponse (GetXlsxImagesResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetXlsxImagesResponse>> EditDocumentXlsxGetImagesAsyncWithHttpInfo (GetXlsxImagesRequest input);
         /// <summary>
-        /// Get rows and cells from a XLSX worksheet
+        /// Get rows and cells from a Word XLSX spreadsheet, worksheet
         /// </summary>
         /// <remarks>
         /// Returns the rows and cells defined in the Excel Spreadsheet worksheet
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>Task of GetXlsxRowsAndCellsResponse</returns>
         System.Threading.Tasks.Task<GetXlsxRowsAndCellsResponse> EditDocumentXlsxGetRowsAndCellsAsync (GetXlsxRowsAndCellsRequest input);
 
         /// <summary>
-        /// Get rows and cells from a XLSX worksheet
+        /// Get rows and cells from a Word XLSX spreadsheet, worksheet
         /// </summary>
         /// <remarks>
         /// Returns the rows and cells defined in the Excel Spreadsheet worksheet
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>Task of ApiResponse (GetXlsxRowsAndCellsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetXlsxRowsAndCellsResponse>> EditDocumentXlsxGetRowsAndCellsAsyncWithHttpInfo (GetXlsxRowsAndCellsRequest input);
         /// <summary>
-        /// Get styles from a XLSX worksheet
+        /// Get styles from a Excel XLSX spreadsheet, worksheet
         /// </summary>
         /// <remarks>
         /// Returns the style defined in the Excel Spreadsheet
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>Task of GetXlsxStylesResponse</returns>
         System.Threading.Tasks.Task<GetXlsxStylesResponse> EditDocumentXlsxGetStylesAsync (GetXlsxStylesRequest input);
 
         /// <summary>
-        /// Get styles from a XLSX worksheet
+        /// Get styles from a Excel XLSX spreadsheet, worksheet
         /// </summary>
         /// <remarks>
         /// Returns the style defined in the Excel Spreadsheet
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>Task of ApiResponse (GetXlsxStylesResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetXlsxStylesResponse>> EditDocumentXlsxGetStylesAsyncWithHttpInfo (GetXlsxStylesRequest input);
         /// <summary>
-        /// Get worksheets from a XLSX
+        /// Get worksheets from a Excel XLSX spreadsheet
         /// </summary>
         /// <remarks>
         /// Returns the worksheets (tabs) defined in the Excel Spreadsheet (XLSX) format file
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>Task of GetXlsxWorksheetsResponse</returns>
         System.Threading.Tasks.Task<GetXlsxWorksheetsResponse> EditDocumentXlsxGetWorksheetsAsync (GetXlsxWorksheetsRequest input);
 
         /// <summary>
-        /// Get worksheets from a XLSX
+        /// Get worksheets from a Excel XLSX spreadsheet
         /// </summary>
         /// <remarks>
         /// Returns the worksheets (tabs) defined in the Excel Spreadsheet (XLSX) format file
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>Task of ApiResponse (GetXlsxWorksheetsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetXlsxWorksheetsResponse>> EditDocumentXlsxGetWorksheetsAsyncWithHttpInfo (GetXlsxWorksheetsRequest input);
         /// <summary>
-        /// Insert a new worksheet into an XLSX spreadsheet
+        /// Insert a new worksheet into an Excel XLSX spreadsheet
         /// </summary>
         /// <remarks>
         /// Inserts a new worksheet into an Excel Spreadsheet
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>Task of InsertXlsxWorksheetResponse</returns>
         System.Threading.Tasks.Task<InsertXlsxWorksheetResponse> EditDocumentXlsxInsertWorksheetAsync (InsertXlsxWorksheetRequest input);
 
         /// <summary>
-        /// Insert a new worksheet into an XLSX spreadsheet
+        /// Insert a new worksheet into an Excel XLSX spreadsheet
         /// </summary>
         /// <remarks>
         /// Inserts a new worksheet into an Excel Spreadsheet
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>Task of ApiResponse (InsertXlsxWorksheetResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<InsertXlsxWorksheetResponse>> EditDocumentXlsxInsertWorksheetAsyncWithHttpInfo (InsertXlsxWorksheetRequest input);
         #endregion Asynchronous Operations
@@ -1286,10 +1286,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get body from a DOCX Returns the body defined in the Word Document (DOCX) format file; this is the main content part of a DOCX document
+        /// Get body from a Word DOCX document Returns the body defined in the Word Document (DOCX) format file; this is the main content part of a DOCX document
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>GetDocxBodyResponse</returns>
         public GetDocxBodyResponse EditDocumentDocxBody (GetDocxBodyRequest reqConfig)
         {
@@ -1298,10 +1298,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get body from a DOCX Returns the body defined in the Word Document (DOCX) format file; this is the main content part of a DOCX document
+        /// Get body from a Word DOCX document Returns the body defined in the Word Document (DOCX) format file; this is the main content part of a DOCX document
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>ApiResponse of GetDocxBodyResponse</returns>
         public ApiResponse< GetDocxBodyResponse > EditDocumentDocxBodyWithHttpInfo (GetDocxBodyRequest reqConfig)
         {
@@ -1372,10 +1372,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get body from a DOCX Returns the body defined in the Word Document (DOCX) format file; this is the main content part of a DOCX document
+        /// Get body from a Word DOCX document Returns the body defined in the Word Document (DOCX) format file; this is the main content part of a DOCX document
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of GetDocxBodyResponse</returns>
         public async System.Threading.Tasks.Task<GetDocxBodyResponse> EditDocumentDocxBodyAsync (GetDocxBodyRequest reqConfig)
         {
@@ -1385,10 +1385,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get body from a DOCX Returns the body defined in the Word Document (DOCX) format file; this is the main content part of a DOCX document
+        /// Get body from a Word DOCX document Returns the body defined in the Word Document (DOCX) format file; this is the main content part of a DOCX document
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of ApiResponse (GetDocxBodyResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GetDocxBodyResponse>> EditDocumentDocxBodyAsyncWithHttpInfo (GetDocxBodyRequest reqConfig)
         {
@@ -1459,10 +1459,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get content of a footer from a DOCX Returns the footer content from a Word Document (DOCX) format file
+        /// Get content of a footer from a Word DOCX document Returns the footer content from a Word Document (DOCX) format file
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>GetDocxHeadersAndFootersResponse</returns>
         public GetDocxHeadersAndFootersResponse EditDocumentDocxGetHeadersAndFooters (GetDocxHeadersAndFootersRequest reqConfig)
         {
@@ -1471,10 +1471,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get content of a footer from a DOCX Returns the footer content from a Word Document (DOCX) format file
+        /// Get content of a footer from a Word DOCX document Returns the footer content from a Word Document (DOCX) format file
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>ApiResponse of GetDocxHeadersAndFootersResponse</returns>
         public ApiResponse< GetDocxHeadersAndFootersResponse > EditDocumentDocxGetHeadersAndFootersWithHttpInfo (GetDocxHeadersAndFootersRequest reqConfig)
         {
@@ -1545,10 +1545,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get content of a footer from a DOCX Returns the footer content from a Word Document (DOCX) format file
+        /// Get content of a footer from a Word DOCX document Returns the footer content from a Word Document (DOCX) format file
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of GetDocxHeadersAndFootersResponse</returns>
         public async System.Threading.Tasks.Task<GetDocxHeadersAndFootersResponse> EditDocumentDocxGetHeadersAndFootersAsync (GetDocxHeadersAndFootersRequest reqConfig)
         {
@@ -1558,10 +1558,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get content of a footer from a DOCX Returns the footer content from a Word Document (DOCX) format file
+        /// Get content of a footer from a Word DOCX document Returns the footer content from a Word Document (DOCX) format file
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of ApiResponse (GetDocxHeadersAndFootersResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GetDocxHeadersAndFootersResponse>> EditDocumentDocxGetHeadersAndFootersAsyncWithHttpInfo (GetDocxHeadersAndFootersRequest reqConfig)
         {
@@ -1632,10 +1632,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get images from a DOCX Returns the images defined in the Word Document (DOCX) format file
+        /// Get images from a Word DOCX document Returns the images defined in the Word Document (DOCX) format file
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>GetDocxImagesResponse</returns>
         public GetDocxImagesResponse EditDocumentDocxGetImages (GetDocxImagesRequest reqConfig)
         {
@@ -1644,10 +1644,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get images from a DOCX Returns the images defined in the Word Document (DOCX) format file
+        /// Get images from a Word DOCX document Returns the images defined in the Word Document (DOCX) format file
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>ApiResponse of GetDocxImagesResponse</returns>
         public ApiResponse< GetDocxImagesResponse > EditDocumentDocxGetImagesWithHttpInfo (GetDocxImagesRequest reqConfig)
         {
@@ -1718,10 +1718,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get images from a DOCX Returns the images defined in the Word Document (DOCX) format file
+        /// Get images from a Word DOCX document Returns the images defined in the Word Document (DOCX) format file
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of GetDocxImagesResponse</returns>
         public async System.Threading.Tasks.Task<GetDocxImagesResponse> EditDocumentDocxGetImagesAsync (GetDocxImagesRequest reqConfig)
         {
@@ -1731,10 +1731,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get images from a DOCX Returns the images defined in the Word Document (DOCX) format file
+        /// Get images from a Word DOCX document Returns the images defined in the Word Document (DOCX) format file
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of ApiResponse (GetDocxImagesResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GetDocxImagesResponse>> EditDocumentDocxGetImagesAsyncWithHttpInfo (GetDocxImagesRequest reqConfig)
         {
@@ -1805,10 +1805,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get sections from a DOCX Returns the sections defined in the Word Document (DOCX) format file
+        /// Get sections from a Word DOCX document Returns the sections defined in the Word Document (DOCX) format file
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>GetDocxSectionsResponse</returns>
         public GetDocxSectionsResponse EditDocumentDocxGetSections (GetDocxSectionsRequest reqConfig)
         {
@@ -1817,10 +1817,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get sections from a DOCX Returns the sections defined in the Word Document (DOCX) format file
+        /// Get sections from a Word DOCX document Returns the sections defined in the Word Document (DOCX) format file
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>ApiResponse of GetDocxSectionsResponse</returns>
         public ApiResponse< GetDocxSectionsResponse > EditDocumentDocxGetSectionsWithHttpInfo (GetDocxSectionsRequest reqConfig)
         {
@@ -1891,10 +1891,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get sections from a DOCX Returns the sections defined in the Word Document (DOCX) format file
+        /// Get sections from a Word DOCX document Returns the sections defined in the Word Document (DOCX) format file
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of GetDocxSectionsResponse</returns>
         public async System.Threading.Tasks.Task<GetDocxSectionsResponse> EditDocumentDocxGetSectionsAsync (GetDocxSectionsRequest reqConfig)
         {
@@ -1904,10 +1904,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get sections from a DOCX Returns the sections defined in the Word Document (DOCX) format file
+        /// Get sections from a Word DOCX document Returns the sections defined in the Word Document (DOCX) format file
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of ApiResponse (GetDocxSectionsResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GetDocxSectionsResponse>> EditDocumentDocxGetSectionsAsyncWithHttpInfo (GetDocxSectionsRequest reqConfig)
         {
@@ -1978,10 +1978,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get styles from a DOCX Returns the styles defined in the Word Document (DOCX) format file
+        /// Get styles from a Word DOCX document Returns the styles defined in the Word Document (DOCX) format file
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>GetDocxStylesResponse</returns>
         public GetDocxStylesResponse EditDocumentDocxGetStyles (GetDocxStylesRequest reqConfig)
         {
@@ -1990,10 +1990,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get styles from a DOCX Returns the styles defined in the Word Document (DOCX) format file
+        /// Get styles from a Word DOCX document Returns the styles defined in the Word Document (DOCX) format file
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>ApiResponse of GetDocxStylesResponse</returns>
         public ApiResponse< GetDocxStylesResponse > EditDocumentDocxGetStylesWithHttpInfo (GetDocxStylesRequest reqConfig)
         {
@@ -2064,10 +2064,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get styles from a DOCX Returns the styles defined in the Word Document (DOCX) format file
+        /// Get styles from a Word DOCX document Returns the styles defined in the Word Document (DOCX) format file
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of GetDocxStylesResponse</returns>
         public async System.Threading.Tasks.Task<GetDocxStylesResponse> EditDocumentDocxGetStylesAsync (GetDocxStylesRequest reqConfig)
         {
@@ -2077,10 +2077,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get styles from a DOCX Returns the styles defined in the Word Document (DOCX) format file
+        /// Get styles from a Word DOCX document Returns the styles defined in the Word Document (DOCX) format file
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of ApiResponse (GetDocxStylesResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GetDocxStylesResponse>> EditDocumentDocxGetStylesAsyncWithHttpInfo (GetDocxStylesRequest reqConfig)
         {
@@ -2151,10 +2151,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get tables in DOCX Returns all the table objects in an Office Word Document (docx)
+        /// Get tables in Word DOCX document Returns all the table objects in an Office Word Document (docx)
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>GetDocxTablesResponse</returns>
         public GetDocxTablesResponse EditDocumentDocxGetTables (GetDocxTablesRequest reqConfig)
         {
@@ -2163,10 +2163,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get tables in DOCX Returns all the table objects in an Office Word Document (docx)
+        /// Get tables in Word DOCX document Returns all the table objects in an Office Word Document (docx)
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>ApiResponse of GetDocxTablesResponse</returns>
         public ApiResponse< GetDocxTablesResponse > EditDocumentDocxGetTablesWithHttpInfo (GetDocxTablesRequest reqConfig)
         {
@@ -2237,10 +2237,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get tables in DOCX Returns all the table objects in an Office Word Document (docx)
+        /// Get tables in Word DOCX document Returns all the table objects in an Office Word Document (docx)
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of GetDocxTablesResponse</returns>
         public async System.Threading.Tasks.Task<GetDocxTablesResponse> EditDocumentDocxGetTablesAsync (GetDocxTablesRequest reqConfig)
         {
@@ -2250,10 +2250,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get tables in DOCX Returns all the table objects in an Office Word Document (docx)
+        /// Get tables in Word DOCX document Returns all the table objects in an Office Word Document (docx)
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of ApiResponse (GetDocxTablesResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GetDocxTablesResponse>> EditDocumentDocxGetTablesAsyncWithHttpInfo (GetDocxTablesRequest reqConfig)
         {
@@ -2324,10 +2324,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Insert image into a DOCX Set the footer in a Word Document (DOCX)
+        /// Insert image into a Word DOCX document Set the footer in a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>DocxInsertImageResponse</returns>
         public DocxInsertImageResponse EditDocumentDocxInsertImage (DocxInsertImageRequest reqConfig)
         {
@@ -2336,10 +2336,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Insert image into a DOCX Set the footer in a Word Document (DOCX)
+        /// Insert image into a Word DOCX document Set the footer in a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>ApiResponse of DocxInsertImageResponse</returns>
         public ApiResponse< DocxInsertImageResponse > EditDocumentDocxInsertImageWithHttpInfo (DocxInsertImageRequest reqConfig)
         {
@@ -2410,10 +2410,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Insert image into a DOCX Set the footer in a Word Document (DOCX)
+        /// Insert image into a Word DOCX document Set the footer in a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of DocxInsertImageResponse</returns>
         public async System.Threading.Tasks.Task<DocxInsertImageResponse> EditDocumentDocxInsertImageAsync (DocxInsertImageRequest reqConfig)
         {
@@ -2423,10 +2423,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Insert image into a DOCX Set the footer in a Word Document (DOCX)
+        /// Insert image into a Word DOCX document Set the footer in a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of ApiResponse (DocxInsertImageResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<DocxInsertImageResponse>> EditDocumentDocxInsertImageAsyncWithHttpInfo (DocxInsertImageRequest reqConfig)
         {
@@ -2497,10 +2497,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Insert a new paragraph into a DOCX Adds a new paragraph into a DOCX and returns the result.  You can insert at the beginning/end of a document, or before/after an existing object using its Path (location within the document).
+        /// Insert a new paragraph into a Word DOCX document Adds a new paragraph into a DOCX and returns the result.  You can insert at the beginning/end of a document, or before/after an existing object using its Path (location within the document).  Call Finish Editing on the output URL to complete the operation.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>InsertDocxInsertParagraphResponse</returns>
         public InsertDocxInsertParagraphResponse EditDocumentDocxInsertParagraph (InsertDocxInsertParagraphRequest reqConfig)
         {
@@ -2509,10 +2509,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Insert a new paragraph into a DOCX Adds a new paragraph into a DOCX and returns the result.  You can insert at the beginning/end of a document, or before/after an existing object using its Path (location within the document).
+        /// Insert a new paragraph into a Word DOCX document Adds a new paragraph into a DOCX and returns the result.  You can insert at the beginning/end of a document, or before/after an existing object using its Path (location within the document).  Call Finish Editing on the output URL to complete the operation.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>ApiResponse of InsertDocxInsertParagraphResponse</returns>
         public ApiResponse< InsertDocxInsertParagraphResponse > EditDocumentDocxInsertParagraphWithHttpInfo (InsertDocxInsertParagraphRequest reqConfig)
         {
@@ -2583,10 +2583,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Insert a new paragraph into a DOCX Adds a new paragraph into a DOCX and returns the result.  You can insert at the beginning/end of a document, or before/after an existing object using its Path (location within the document).
+        /// Insert a new paragraph into a Word DOCX document Adds a new paragraph into a DOCX and returns the result.  You can insert at the beginning/end of a document, or before/after an existing object using its Path (location within the document).  Call Finish Editing on the output URL to complete the operation.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of InsertDocxInsertParagraphResponse</returns>
         public async System.Threading.Tasks.Task<InsertDocxInsertParagraphResponse> EditDocumentDocxInsertParagraphAsync (InsertDocxInsertParagraphRequest reqConfig)
         {
@@ -2596,10 +2596,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Insert a new paragraph into a DOCX Adds a new paragraph into a DOCX and returns the result.  You can insert at the beginning/end of a document, or before/after an existing object using its Path (location within the document).
+        /// Insert a new paragraph into a Word DOCX document Adds a new paragraph into a DOCX and returns the result.  You can insert at the beginning/end of a document, or before/after an existing object using its Path (location within the document).  Call Finish Editing on the output URL to complete the operation.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of ApiResponse (InsertDocxInsertParagraphResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<InsertDocxInsertParagraphResponse>> EditDocumentDocxInsertParagraphAsyncWithHttpInfo (InsertDocxInsertParagraphRequest reqConfig)
         {
@@ -2670,10 +2670,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Insert a new table into a DOCX Adds a new table into a DOCX and returns the result
+        /// Insert a new table into a Word DOCX document Adds a new table into a DOCX and returns the result.  Call Finish Editing on the output URL to complete the operation.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>InsertDocxTablesResponse</returns>
         public InsertDocxTablesResponse EditDocumentDocxInsertTable (InsertDocxTablesRequest reqConfig)
         {
@@ -2682,10 +2682,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Insert a new table into a DOCX Adds a new table into a DOCX and returns the result
+        /// Insert a new table into a Word DOCX document Adds a new table into a DOCX and returns the result.  Call Finish Editing on the output URL to complete the operation.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>ApiResponse of InsertDocxTablesResponse</returns>
         public ApiResponse< InsertDocxTablesResponse > EditDocumentDocxInsertTableWithHttpInfo (InsertDocxTablesRequest reqConfig)
         {
@@ -2756,10 +2756,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Insert a new table into a DOCX Adds a new table into a DOCX and returns the result
+        /// Insert a new table into a Word DOCX document Adds a new table into a DOCX and returns the result.  Call Finish Editing on the output URL to complete the operation.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of InsertDocxTablesResponse</returns>
         public async System.Threading.Tasks.Task<InsertDocxTablesResponse> EditDocumentDocxInsertTableAsync (InsertDocxTablesRequest reqConfig)
         {
@@ -2769,10 +2769,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Insert a new table into a DOCX Adds a new table into a DOCX and returns the result
+        /// Insert a new table into a Word DOCX document Adds a new table into a DOCX and returns the result.  Call Finish Editing on the output URL to complete the operation.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of ApiResponse (InsertDocxTablesResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<InsertDocxTablesResponse>> EditDocumentDocxInsertTableAsyncWithHttpInfo (InsertDocxTablesRequest reqConfig)
         {
@@ -2843,10 +2843,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Remove headers and footers from DOCX Remove all headers, or footers, or both from a Word Document (DOCX)
+        /// Remove headers and footers from Word DOCX document Remove all headers, or footers, or both from a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>RemoveDocxHeadersAndFootersResponse</returns>
         public RemoveDocxHeadersAndFootersResponse EditDocumentDocxRemoveHeadersAndFooters (RemoveDocxHeadersAndFootersRequest reqConfig)
         {
@@ -2855,10 +2855,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Remove headers and footers from DOCX Remove all headers, or footers, or both from a Word Document (DOCX)
+        /// Remove headers and footers from Word DOCX document Remove all headers, or footers, or both from a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>ApiResponse of RemoveDocxHeadersAndFootersResponse</returns>
         public ApiResponse< RemoveDocxHeadersAndFootersResponse > EditDocumentDocxRemoveHeadersAndFootersWithHttpInfo (RemoveDocxHeadersAndFootersRequest reqConfig)
         {
@@ -2929,10 +2929,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Remove headers and footers from DOCX Remove all headers, or footers, or both from a Word Document (DOCX)
+        /// Remove headers and footers from Word DOCX document Remove all headers, or footers, or both from a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of RemoveDocxHeadersAndFootersResponse</returns>
         public async System.Threading.Tasks.Task<RemoveDocxHeadersAndFootersResponse> EditDocumentDocxRemoveHeadersAndFootersAsync (RemoveDocxHeadersAndFootersRequest reqConfig)
         {
@@ -2942,10 +2942,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Remove headers and footers from DOCX Remove all headers, or footers, or both from a Word Document (DOCX)
+        /// Remove headers and footers from Word DOCX document Remove all headers, or footers, or both from a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of ApiResponse (RemoveDocxHeadersAndFootersResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RemoveDocxHeadersAndFootersResponse>> EditDocumentDocxRemoveHeadersAndFootersAsyncWithHttpInfo (RemoveDocxHeadersAndFootersRequest reqConfig)
         {
@@ -3016,10 +3016,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Delete any object in a DOCX Delete any object, such as a paragraph, table, image, etc. from a Word Document (DOCX).  Pass in the Path of the object you would like to delete.  You can call other functions such as Get-Tables, Get-Images, Get-Body, etc. to get the paths of the objects in the document.
+        /// Delete any object in a Word DOCX document Delete any object, such as a paragraph, table, image, etc. from a Word Document (DOCX).  Pass in the Path of the object you would like to delete.  You can call other functions such as Get-Tables, Get-Images, Get-Body, etc. to get the paths of the objects in the document.  Call Finish Editing on the output URL to complete the operation.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>DocxRemoveObjectResponse</returns>
         public DocxRemoveObjectResponse EditDocumentDocxRemoveObject (DocxRemoveObjectRequest reqConfig)
         {
@@ -3028,10 +3028,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Delete any object in a DOCX Delete any object, such as a paragraph, table, image, etc. from a Word Document (DOCX).  Pass in the Path of the object you would like to delete.  You can call other functions such as Get-Tables, Get-Images, Get-Body, etc. to get the paths of the objects in the document.
+        /// Delete any object in a Word DOCX document Delete any object, such as a paragraph, table, image, etc. from a Word Document (DOCX).  Pass in the Path of the object you would like to delete.  You can call other functions such as Get-Tables, Get-Images, Get-Body, etc. to get the paths of the objects in the document.  Call Finish Editing on the output URL to complete the operation.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>ApiResponse of DocxRemoveObjectResponse</returns>
         public ApiResponse< DocxRemoveObjectResponse > EditDocumentDocxRemoveObjectWithHttpInfo (DocxRemoveObjectRequest reqConfig)
         {
@@ -3102,10 +3102,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Delete any object in a DOCX Delete any object, such as a paragraph, table, image, etc. from a Word Document (DOCX).  Pass in the Path of the object you would like to delete.  You can call other functions such as Get-Tables, Get-Images, Get-Body, etc. to get the paths of the objects in the document.
+        /// Delete any object in a Word DOCX document Delete any object, such as a paragraph, table, image, etc. from a Word Document (DOCX).  Pass in the Path of the object you would like to delete.  You can call other functions such as Get-Tables, Get-Images, Get-Body, etc. to get the paths of the objects in the document.  Call Finish Editing on the output URL to complete the operation.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of DocxRemoveObjectResponse</returns>
         public async System.Threading.Tasks.Task<DocxRemoveObjectResponse> EditDocumentDocxRemoveObjectAsync (DocxRemoveObjectRequest reqConfig)
         {
@@ -3115,10 +3115,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Delete any object in a DOCX Delete any object, such as a paragraph, table, image, etc. from a Word Document (DOCX).  Pass in the Path of the object you would like to delete.  You can call other functions such as Get-Tables, Get-Images, Get-Body, etc. to get the paths of the objects in the document.
+        /// Delete any object in a Word DOCX document Delete any object, such as a paragraph, table, image, etc. from a Word Document (DOCX).  Pass in the Path of the object you would like to delete.  You can call other functions such as Get-Tables, Get-Images, Get-Body, etc. to get the paths of the objects in the document.  Call Finish Editing on the output URL to complete the operation.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of ApiResponse (DocxRemoveObjectResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<DocxRemoveObjectResponse>> EditDocumentDocxRemoveObjectAsyncWithHttpInfo (DocxRemoveObjectRequest reqConfig)
         {
@@ -3189,10 +3189,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Replace string in DOCX Replace all instances of a string in an Office Word Document (docx)
+        /// Replace string in Word DOCX document Replace all instances of a string in an Office Word Document (docx)
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document string replacement configuration input</param>
         /// <returns>byte[]</returns>
         public byte[] EditDocumentDocxReplace (ReplaceStringRequest reqConfig)
         {
@@ -3201,10 +3201,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Replace string in DOCX Replace all instances of a string in an Office Word Document (docx)
+        /// Replace string in Word DOCX document Replace all instances of a string in an Office Word Document (docx)
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document string replacement configuration input</param>
         /// <returns>ApiResponse of byte[]</returns>
         public ApiResponse< byte[] > EditDocumentDocxReplaceWithHttpInfo (ReplaceStringRequest reqConfig)
         {
@@ -3272,10 +3272,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Replace string in DOCX Replace all instances of a string in an Office Word Document (docx)
+        /// Replace string in Word DOCX document Replace all instances of a string in an Office Word Document (docx)
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document string replacement configuration input</param>
         /// <returns>Task of byte[]</returns>
         public async System.Threading.Tasks.Task<byte[]> EditDocumentDocxReplaceAsync (ReplaceStringRequest reqConfig)
         {
@@ -3285,10 +3285,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Replace string in DOCX Replace all instances of a string in an Office Word Document (docx)
+        /// Replace string in Word DOCX document Replace all instances of a string in an Office Word Document (docx)
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document string replacement configuration input</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDocumentDocxReplaceAsyncWithHttpInfo (ReplaceStringRequest reqConfig)
         {
@@ -3356,10 +3356,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Set the footer in a DOCX Set the footer in a Word Document (DOCX)
+        /// Set the footer in a Word DOCX document Set the footer in a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>DocxSetFooterResponse</returns>
         public DocxSetFooterResponse EditDocumentDocxSetFooter (DocxSetFooterRequest reqConfig)
         {
@@ -3368,10 +3368,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Set the footer in a DOCX Set the footer in a Word Document (DOCX)
+        /// Set the footer in a Word DOCX document Set the footer in a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>ApiResponse of DocxSetFooterResponse</returns>
         public ApiResponse< DocxSetFooterResponse > EditDocumentDocxSetFooterWithHttpInfo (DocxSetFooterRequest reqConfig)
         {
@@ -3442,10 +3442,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Set the footer in a DOCX Set the footer in a Word Document (DOCX)
+        /// Set the footer in a Word DOCX document Set the footer in a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of DocxSetFooterResponse</returns>
         public async System.Threading.Tasks.Task<DocxSetFooterResponse> EditDocumentDocxSetFooterAsync (DocxSetFooterRequest reqConfig)
         {
@@ -3455,10 +3455,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Set the footer in a DOCX Set the footer in a Word Document (DOCX)
+        /// Set the footer in a Word DOCX document Set the footer in a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of ApiResponse (DocxSetFooterResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<DocxSetFooterResponse>> EditDocumentDocxSetFooterAsyncWithHttpInfo (DocxSetFooterRequest reqConfig)
         {
@@ -3529,10 +3529,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Add page number to footer in a DOCX Set the footer in a Word Document (DOCX) to contain a page number
+        /// Add page number to footer in a Word DOCX document Set the footer in a Word Document (DOCX) to contain a page number.  Call Finish Editing on the output URL to complete the operation.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>DocxSetFooterResponse</returns>
         public DocxSetFooterResponse EditDocumentDocxSetFooterAddPageNumber (DocxSetFooterAddPageNumberRequest reqConfig)
         {
@@ -3541,10 +3541,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Add page number to footer in a DOCX Set the footer in a Word Document (DOCX) to contain a page number
+        /// Add page number to footer in a Word DOCX document Set the footer in a Word Document (DOCX) to contain a page number.  Call Finish Editing on the output URL to complete the operation.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>ApiResponse of DocxSetFooterResponse</returns>
         public ApiResponse< DocxSetFooterResponse > EditDocumentDocxSetFooterAddPageNumberWithHttpInfo (DocxSetFooterAddPageNumberRequest reqConfig)
         {
@@ -3615,10 +3615,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Add page number to footer in a DOCX Set the footer in a Word Document (DOCX) to contain a page number
+        /// Add page number to footer in a Word DOCX document Set the footer in a Word Document (DOCX) to contain a page number.  Call Finish Editing on the output URL to complete the operation.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of DocxSetFooterResponse</returns>
         public async System.Threading.Tasks.Task<DocxSetFooterResponse> EditDocumentDocxSetFooterAddPageNumberAsync (DocxSetFooterAddPageNumberRequest reqConfig)
         {
@@ -3628,10 +3628,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Add page number to footer in a DOCX Set the footer in a Word Document (DOCX) to contain a page number
+        /// Add page number to footer in a Word DOCX document Set the footer in a Word Document (DOCX) to contain a page number.  Call Finish Editing on the output URL to complete the operation.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of ApiResponse (DocxSetFooterResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<DocxSetFooterResponse>> EditDocumentDocxSetFooterAddPageNumberAsyncWithHttpInfo (DocxSetFooterAddPageNumberRequest reqConfig)
         {
@@ -3702,10 +3702,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Set the header in a DOCX Set the header in a Word Document (DOCX)
+        /// Set the header in a Word DOCX document Set the header in a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>DocxSetHeaderResponse</returns>
         public DocxSetHeaderResponse EditDocumentDocxSetHeader (DocxSetHeaderRequest reqConfig)
         {
@@ -3714,10 +3714,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Set the header in a DOCX Set the header in a Word Document (DOCX)
+        /// Set the header in a Word DOCX document Set the header in a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>ApiResponse of DocxSetHeaderResponse</returns>
         public ApiResponse< DocxSetHeaderResponse > EditDocumentDocxSetHeaderWithHttpInfo (DocxSetHeaderRequest reqConfig)
         {
@@ -3788,10 +3788,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Set the header in a DOCX Set the header in a Word Document (DOCX)
+        /// Set the header in a Word DOCX document Set the header in a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of DocxSetHeaderResponse</returns>
         public async System.Threading.Tasks.Task<DocxSetHeaderResponse> EditDocumentDocxSetHeaderAsync (DocxSetHeaderRequest reqConfig)
         {
@@ -3801,10 +3801,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Set the header in a DOCX Set the header in a Word Document (DOCX)
+        /// Set the header in a Word DOCX document Set the header in a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of ApiResponse (DocxSetHeaderResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<DocxSetHeaderResponse>> EditDocumentDocxSetHeaderAsyncWithHttpInfo (DocxSetHeaderRequest reqConfig)
         {
@@ -3878,7 +3878,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Download result from document editing Once done editing a document, download the result.  Begin editing a document by calling begin-editing, then perform operations, then call finish-editing to get the result.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Cloudmersive Document URL to complete editing on</param>
         /// <returns>byte[]</returns>
         public byte[] EditDocumentFinishEditing (FinishEditingRequest reqConfig)
         {
@@ -3890,7 +3890,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Download result from document editing Once done editing a document, download the result.  Begin editing a document by calling begin-editing, then perform operations, then call finish-editing to get the result.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Cloudmersive Document URL to complete editing on</param>
         /// <returns>ApiResponse of byte[]</returns>
         public ApiResponse< byte[] > EditDocumentFinishEditingWithHttpInfo (FinishEditingRequest reqConfig)
         {
@@ -3961,7 +3961,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Download result from document editing Once done editing a document, download the result.  Begin editing a document by calling begin-editing, then perform operations, then call finish-editing to get the result.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Cloudmersive Document URL to complete editing on</param>
         /// <returns>Task of byte[]</returns>
         public async System.Threading.Tasks.Task<byte[]> EditDocumentFinishEditingAsync (FinishEditingRequest reqConfig)
         {
@@ -3974,7 +3974,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Download result from document editing Once done editing a document, download the result.  Begin editing a document by calling begin-editing, then perform operations, then call finish-editing to get the result.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Cloudmersive Document URL to complete editing on</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDocumentFinishEditingAsyncWithHttpInfo (FinishEditingRequest reqConfig)
         {
@@ -4042,10 +4042,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Replace string in PPTX Replace all instances of a string in an Office PowerPoint Document (pptx)
+        /// Replace string in PowerPoint PPTX presentation Replace all instances of a string in an Office PowerPoint Document (pptx)
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Replacement document configuration input</param>
         /// <returns>byte[]</returns>
         public byte[] EditDocumentPptxReplace (ReplaceStringRequest reqConfig)
         {
@@ -4054,10 +4054,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Replace string in PPTX Replace all instances of a string in an Office PowerPoint Document (pptx)
+        /// Replace string in PowerPoint PPTX presentation Replace all instances of a string in an Office PowerPoint Document (pptx)
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Replacement document configuration input</param>
         /// <returns>ApiResponse of byte[]</returns>
         public ApiResponse< byte[] > EditDocumentPptxReplaceWithHttpInfo (ReplaceStringRequest reqConfig)
         {
@@ -4125,10 +4125,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Replace string in PPTX Replace all instances of a string in an Office PowerPoint Document (pptx)
+        /// Replace string in PowerPoint PPTX presentation Replace all instances of a string in an Office PowerPoint Document (pptx)
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Replacement document configuration input</param>
         /// <returns>Task of byte[]</returns>
         public async System.Threading.Tasks.Task<byte[]> EditDocumentPptxReplaceAsync (ReplaceStringRequest reqConfig)
         {
@@ -4138,10 +4138,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Replace string in PPTX Replace all instances of a string in an Office PowerPoint Document (pptx)
+        /// Replace string in PowerPoint PPTX presentation Replace all instances of a string in an Office PowerPoint Document (pptx)
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="reqConfig"></param>
+        /// <param name="reqConfig">Replacement document configuration input</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDocumentPptxReplaceAsyncWithHttpInfo (ReplaceStringRequest reqConfig)
         {
@@ -4209,10 +4209,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get rows and cells from a XLSX worksheet Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// Get rows and cells from a Excel XLSX spreadsheet, worksheet Returns the rows and cells defined in the Excel Spreadsheet worksheet
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>GetXlsxColumnsResponse</returns>
         public GetXlsxColumnsResponse EditDocumentXlsxGetColumns (GetXlsxColumnsRequest input)
         {
@@ -4221,10 +4221,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get rows and cells from a XLSX worksheet Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// Get rows and cells from a Excel XLSX spreadsheet, worksheet Returns the rows and cells defined in the Excel Spreadsheet worksheet
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>ApiResponse of GetXlsxColumnsResponse</returns>
         public ApiResponse< GetXlsxColumnsResponse > EditDocumentXlsxGetColumnsWithHttpInfo (GetXlsxColumnsRequest input)
         {
@@ -4295,10 +4295,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get rows and cells from a XLSX worksheet Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// Get rows and cells from a Excel XLSX spreadsheet, worksheet Returns the rows and cells defined in the Excel Spreadsheet worksheet
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>Task of GetXlsxColumnsResponse</returns>
         public async System.Threading.Tasks.Task<GetXlsxColumnsResponse> EditDocumentXlsxGetColumnsAsync (GetXlsxColumnsRequest input)
         {
@@ -4308,10 +4308,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get rows and cells from a XLSX worksheet Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// Get rows and cells from a Excel XLSX spreadsheet, worksheet Returns the rows and cells defined in the Excel Spreadsheet worksheet
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>Task of ApiResponse (GetXlsxColumnsResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GetXlsxColumnsResponse>> EditDocumentXlsxGetColumnsAsyncWithHttpInfo (GetXlsxColumnsRequest input)
         {
@@ -4382,10 +4382,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get images from a XLSX worksheet Returns the images defined in the Excel Spreadsheet worksheet
+        /// Get images from a Excel XLSX spreadsheet, worksheet Returns the images defined in the Excel Spreadsheet worksheet
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>GetXlsxImagesResponse</returns>
         public GetXlsxImagesResponse EditDocumentXlsxGetImages (GetXlsxImagesRequest input)
         {
@@ -4394,10 +4394,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get images from a XLSX worksheet Returns the images defined in the Excel Spreadsheet worksheet
+        /// Get images from a Excel XLSX spreadsheet, worksheet Returns the images defined in the Excel Spreadsheet worksheet
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>ApiResponse of GetXlsxImagesResponse</returns>
         public ApiResponse< GetXlsxImagesResponse > EditDocumentXlsxGetImagesWithHttpInfo (GetXlsxImagesRequest input)
         {
@@ -4468,10 +4468,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get images from a XLSX worksheet Returns the images defined in the Excel Spreadsheet worksheet
+        /// Get images from a Excel XLSX spreadsheet, worksheet Returns the images defined in the Excel Spreadsheet worksheet
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>Task of GetXlsxImagesResponse</returns>
         public async System.Threading.Tasks.Task<GetXlsxImagesResponse> EditDocumentXlsxGetImagesAsync (GetXlsxImagesRequest input)
         {
@@ -4481,10 +4481,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get images from a XLSX worksheet Returns the images defined in the Excel Spreadsheet worksheet
+        /// Get images from a Excel XLSX spreadsheet, worksheet Returns the images defined in the Excel Spreadsheet worksheet
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>Task of ApiResponse (GetXlsxImagesResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GetXlsxImagesResponse>> EditDocumentXlsxGetImagesAsyncWithHttpInfo (GetXlsxImagesRequest input)
         {
@@ -4555,10 +4555,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get rows and cells from a XLSX worksheet Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// Get rows and cells from a Word XLSX spreadsheet, worksheet Returns the rows and cells defined in the Excel Spreadsheet worksheet
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>GetXlsxRowsAndCellsResponse</returns>
         public GetXlsxRowsAndCellsResponse EditDocumentXlsxGetRowsAndCells (GetXlsxRowsAndCellsRequest input)
         {
@@ -4567,10 +4567,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get rows and cells from a XLSX worksheet Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// Get rows and cells from a Word XLSX spreadsheet, worksheet Returns the rows and cells defined in the Excel Spreadsheet worksheet
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>ApiResponse of GetXlsxRowsAndCellsResponse</returns>
         public ApiResponse< GetXlsxRowsAndCellsResponse > EditDocumentXlsxGetRowsAndCellsWithHttpInfo (GetXlsxRowsAndCellsRequest input)
         {
@@ -4641,10 +4641,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get rows and cells from a XLSX worksheet Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// Get rows and cells from a Word XLSX spreadsheet, worksheet Returns the rows and cells defined in the Excel Spreadsheet worksheet
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>Task of GetXlsxRowsAndCellsResponse</returns>
         public async System.Threading.Tasks.Task<GetXlsxRowsAndCellsResponse> EditDocumentXlsxGetRowsAndCellsAsync (GetXlsxRowsAndCellsRequest input)
         {
@@ -4654,10 +4654,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get rows and cells from a XLSX worksheet Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// Get rows and cells from a Word XLSX spreadsheet, worksheet Returns the rows and cells defined in the Excel Spreadsheet worksheet
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>Task of ApiResponse (GetXlsxRowsAndCellsResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GetXlsxRowsAndCellsResponse>> EditDocumentXlsxGetRowsAndCellsAsyncWithHttpInfo (GetXlsxRowsAndCellsRequest input)
         {
@@ -4728,10 +4728,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get styles from a XLSX worksheet Returns the style defined in the Excel Spreadsheet
+        /// Get styles from a Excel XLSX spreadsheet, worksheet Returns the style defined in the Excel Spreadsheet
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>GetXlsxStylesResponse</returns>
         public GetXlsxStylesResponse EditDocumentXlsxGetStyles (GetXlsxStylesRequest input)
         {
@@ -4740,10 +4740,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get styles from a XLSX worksheet Returns the style defined in the Excel Spreadsheet
+        /// Get styles from a Excel XLSX spreadsheet, worksheet Returns the style defined in the Excel Spreadsheet
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>ApiResponse of GetXlsxStylesResponse</returns>
         public ApiResponse< GetXlsxStylesResponse > EditDocumentXlsxGetStylesWithHttpInfo (GetXlsxStylesRequest input)
         {
@@ -4814,10 +4814,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get styles from a XLSX worksheet Returns the style defined in the Excel Spreadsheet
+        /// Get styles from a Excel XLSX spreadsheet, worksheet Returns the style defined in the Excel Spreadsheet
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>Task of GetXlsxStylesResponse</returns>
         public async System.Threading.Tasks.Task<GetXlsxStylesResponse> EditDocumentXlsxGetStylesAsync (GetXlsxStylesRequest input)
         {
@@ -4827,10 +4827,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get styles from a XLSX worksheet Returns the style defined in the Excel Spreadsheet
+        /// Get styles from a Excel XLSX spreadsheet, worksheet Returns the style defined in the Excel Spreadsheet
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>Task of ApiResponse (GetXlsxStylesResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GetXlsxStylesResponse>> EditDocumentXlsxGetStylesAsyncWithHttpInfo (GetXlsxStylesRequest input)
         {
@@ -4901,10 +4901,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get worksheets from a XLSX Returns the worksheets (tabs) defined in the Excel Spreadsheet (XLSX) format file
+        /// Get worksheets from a Excel XLSX spreadsheet Returns the worksheets (tabs) defined in the Excel Spreadsheet (XLSX) format file
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>GetXlsxWorksheetsResponse</returns>
         public GetXlsxWorksheetsResponse EditDocumentXlsxGetWorksheets (GetXlsxWorksheetsRequest input)
         {
@@ -4913,10 +4913,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get worksheets from a XLSX Returns the worksheets (tabs) defined in the Excel Spreadsheet (XLSX) format file
+        /// Get worksheets from a Excel XLSX spreadsheet Returns the worksheets (tabs) defined in the Excel Spreadsheet (XLSX) format file
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>ApiResponse of GetXlsxWorksheetsResponse</returns>
         public ApiResponse< GetXlsxWorksheetsResponse > EditDocumentXlsxGetWorksheetsWithHttpInfo (GetXlsxWorksheetsRequest input)
         {
@@ -4987,10 +4987,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get worksheets from a XLSX Returns the worksheets (tabs) defined in the Excel Spreadsheet (XLSX) format file
+        /// Get worksheets from a Excel XLSX spreadsheet Returns the worksheets (tabs) defined in the Excel Spreadsheet (XLSX) format file
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>Task of GetXlsxWorksheetsResponse</returns>
         public async System.Threading.Tasks.Task<GetXlsxWorksheetsResponse> EditDocumentXlsxGetWorksheetsAsync (GetXlsxWorksheetsRequest input)
         {
@@ -5000,10 +5000,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get worksheets from a XLSX Returns the worksheets (tabs) defined in the Excel Spreadsheet (XLSX) format file
+        /// Get worksheets from a Excel XLSX spreadsheet Returns the worksheets (tabs) defined in the Excel Spreadsheet (XLSX) format file
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>Task of ApiResponse (GetXlsxWorksheetsResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GetXlsxWorksheetsResponse>> EditDocumentXlsxGetWorksheetsAsyncWithHttpInfo (GetXlsxWorksheetsRequest input)
         {
@@ -5074,10 +5074,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Insert a new worksheet into an XLSX spreadsheet Inserts a new worksheet into an Excel Spreadsheet
+        /// Insert a new worksheet into an Excel XLSX spreadsheet Inserts a new worksheet into an Excel Spreadsheet
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>InsertXlsxWorksheetResponse</returns>
         public InsertXlsxWorksheetResponse EditDocumentXlsxInsertWorksheet (InsertXlsxWorksheetRequest input)
         {
@@ -5086,10 +5086,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Insert a new worksheet into an XLSX spreadsheet Inserts a new worksheet into an Excel Spreadsheet
+        /// Insert a new worksheet into an Excel XLSX spreadsheet Inserts a new worksheet into an Excel Spreadsheet
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>ApiResponse of InsertXlsxWorksheetResponse</returns>
         public ApiResponse< InsertXlsxWorksheetResponse > EditDocumentXlsxInsertWorksheetWithHttpInfo (InsertXlsxWorksheetRequest input)
         {
@@ -5160,10 +5160,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Insert a new worksheet into an XLSX spreadsheet Inserts a new worksheet into an Excel Spreadsheet
+        /// Insert a new worksheet into an Excel XLSX spreadsheet Inserts a new worksheet into an Excel Spreadsheet
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>Task of InsertXlsxWorksheetResponse</returns>
         public async System.Threading.Tasks.Task<InsertXlsxWorksheetResponse> EditDocumentXlsxInsertWorksheetAsync (InsertXlsxWorksheetRequest input)
         {
@@ -5173,10 +5173,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Insert a new worksheet into an XLSX spreadsheet Inserts a new worksheet into an Excel Spreadsheet
+        /// Insert a new worksheet into an Excel XLSX spreadsheet Inserts a new worksheet into an Excel Spreadsheet
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="input"></param>
+        /// <param name="input">Document input request</param>
         /// <returns>Task of ApiResponse (InsertXlsxWorksheetResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<InsertXlsxWorksheetResponse>> EditDocumentXlsxInsertWorksheetAsyncWithHttpInfo (InsertXlsxWorksheetRequest input)
         {

@@ -65,6 +65,20 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
 
         
         /// <summary>
+        /// Test EditPdfDeletePages
+        /// </summary>
+        [Test]
+        public void EditPdfDeletePagesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //int? pageStart = null;
+            //int? pageEnd = null;
+            //var response = instance.EditPdfDeletePages(inputFile, pageStart, pageEnd);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
         /// Test EditPdfEncrypt
         /// </summary>
         [Test]
@@ -103,6 +117,22 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test EditPdfInsertPages
+        /// </summary>
+        [Test]
+        public void EditPdfInsertPagesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream sourceFile = null;
+            //System.IO.Stream destinationFile = null;
+            //int? pageStartSource = null;
+            //int? pageEndSource = null;
+            //int? pageInsertBeforeDesitnation = null;
+            //var response = instance.EditPdfInsertPages(sourceFile, destinationFile, pageStartSource, pageEndSource, pageInsertBeforeDesitnation);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
         /// Test EditPdfRasterize
         /// </summary>
         [Test]
@@ -135,7 +165,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             // TODO uncomment below to test the method and replace null with proper value
             //SetPdfMetadataRequest request = null;
             //var response = instance.EditPdfSetMetadata(request);
-            //Assert.IsInstanceOf<Object> (response, "response is Object");
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
         /// <summary>

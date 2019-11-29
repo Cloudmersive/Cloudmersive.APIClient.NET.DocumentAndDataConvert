@@ -4,17 +4,17 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ConvertDataCsvToJson**](ConvertDataApi.md#convertdatacsvtojson) | **POST** /convert/csv/to/json | CSV to JSON conversion
-[**ConvertDataXlsToJson**](ConvertDataApi.md#convertdataxlstojson) | **POST** /convert/xls/to/json | Excel (97-2003) XLS to JSON conversion
-[**ConvertDataXlsxToJson**](ConvertDataApi.md#convertdataxlsxtojson) | **POST** /convert/xlsx/to/json | Excel XLSX to JSON conversion
-[**ConvertDataXmlToJson**](ConvertDataApi.md#convertdataxmltojson) | **POST** /convert/xml/to/json | XML to JSON conversion
+[**ConvertDataCsvToJson**](ConvertDataApi.md#convertdatacsvtojson) | **POST** /convert/csv/to/json | Convert CSV to JSON conversion
+[**ConvertDataXlsToJson**](ConvertDataApi.md#convertdataxlstojson) | **POST** /convert/xls/to/json | Convert Excel (97-2003) XLS to JSON conversion
+[**ConvertDataXlsxToJson**](ConvertDataApi.md#convertdataxlsxtojson) | **POST** /convert/xlsx/to/json | Convert Excel XLSX to JSON conversion
+[**ConvertDataXmlToJson**](ConvertDataApi.md#convertdataxmltojson) | **POST** /convert/xml/to/json | Convert XML to JSON conversion
 
 
 <a name="convertdatacsvtojson"></a>
 # **ConvertDataCsvToJson**
 > Object ConvertDataCsvToJson (System.IO.Stream inputFile)
 
-CSV to JSON conversion
+Convert CSV to JSON conversion
 
 Convert a CSV file to a JSON object array
 
@@ -42,7 +42,7 @@ namespace Example
 
             try
             {
-                // CSV to JSON conversion
+                // Convert CSV to JSON conversion
                 Object result = apiInstance.ConvertDataCsvToJson(inputFile);
                 Debug.WriteLine(result);
             }
@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
 # **ConvertDataXlsToJson**
 > Object ConvertDataXlsToJson (System.IO.Stream inputFile)
 
-Excel (97-2003) XLS to JSON conversion
+Convert Excel (97-2003) XLS to JSON conversion
 
 Convert an Excel (97-2003) XLS file to a JSON object array
 
@@ -108,7 +108,7 @@ namespace Example
 
             try
             {
-                // Excel (97-2003) XLS to JSON conversion
+                // Convert Excel (97-2003) XLS to JSON conversion
                 Object result = apiInstance.ConvertDataXlsToJson(inputFile);
                 Debug.WriteLine(result);
             }
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 # **ConvertDataXlsxToJson**
 > Object ConvertDataXlsxToJson (System.IO.Stream inputFile)
 
-Excel XLSX to JSON conversion
+Convert Excel XLSX to JSON conversion
 
 Convert an Excel XLSX file to a JSON object array
 
@@ -174,7 +174,7 @@ namespace Example
 
             try
             {
-                // Excel XLSX to JSON conversion
+                // Convert Excel XLSX to JSON conversion
                 Object result = apiInstance.ConvertDataXlsxToJson(inputFile);
                 Debug.WriteLine(result);
             }
@@ -212,7 +212,7 @@ Name | Type | Description  | Notes
 # **ConvertDataXmlToJson**
 > Object ConvertDataXmlToJson (System.IO.Stream inputFile)
 
-XML to JSON conversion
+Convert XML to JSON conversion
 
 Convert an XML string or file into JSON
 
@@ -240,7 +240,7 @@ namespace Example
 
             try
             {
-                // XML to JSON conversion
+                // Convert XML to JSON conversion
                 Object result = apiInstance.ConvertDataXmlToJson(inputFile);
                 Debug.WriteLine(result);
             }
