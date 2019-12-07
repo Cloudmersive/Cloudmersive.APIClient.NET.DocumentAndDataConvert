@@ -4,7 +4,7 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ConvertWebHtmlToDocx**](ConvertWebApi.md#convertwebhtmltodocx) | **POST** /convert/html/to/docx | Convert HTML to DOCX
+[**ConvertWebHtmlToDocx**](ConvertWebApi.md#convertwebhtmltodocx) | **POST** /convert/html/to/docx | Convert HTML to Word DOCX Document
 [**ConvertWebHtmlToPdf**](ConvertWebApi.md#convertwebhtmltopdf) | **POST** /convert/web/html/to/pdf | Convert HTML string to PDF
 [**ConvertWebHtmlToPng**](ConvertWebApi.md#convertwebhtmltopng) | **POST** /convert/web/html/to/png | Convert HTML string to PNG
 [**ConvertWebMdToHtml**](ConvertWebApi.md#convertwebmdtohtml) | **POST** /convert/web/md/to/html | Convert Markdown to HTML
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 # **ConvertWebHtmlToDocx**
 > byte[] ConvertWebHtmlToDocx (HtmlToOfficeRequest inputRequest)
 
-Convert HTML to DOCX
+Convert HTML to Word DOCX Document
 
 Convert HTML to Office Word Document (DOCX) format
 
@@ -44,7 +44,7 @@ namespace Example
 
             try
             {
-                // Convert HTML to DOCX
+                // Convert HTML to Word DOCX Document
                 byte[] result = apiInstance.ConvertWebHtmlToDocx(inputRequest);
                 Debug.WriteLine(result);
             }

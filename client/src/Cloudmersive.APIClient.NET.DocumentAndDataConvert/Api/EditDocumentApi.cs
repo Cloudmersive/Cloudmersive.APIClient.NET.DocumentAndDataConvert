@@ -67,6 +67,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of GetDocxBodyResponse</returns>
         ApiResponse<GetDocxBodyResponse> EditDocumentDocxBodyWithHttpInfo (GetDocxBodyRequest reqConfig);
         /// <summary>
+        /// Delete, remove pages from a Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Returns the pages and contents of each page defined in the Word Document (DOCX) format file
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>byte[]</returns>
+        byte[] EditDocumentDocxDeletePages (RemoveDocxPagesRequest reqConfig);
+
+        /// <summary>
+        /// Delete, remove pages from a Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Returns the pages and contents of each page defined in the Word Document (DOCX) format file
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> EditDocumentDocxDeletePagesWithHttpInfo (RemoveDocxPagesRequest reqConfig);
+        /// <summary>
         /// Get content of a footer from a Word DOCX document
         /// </summary>
         /// <remarks>
@@ -234,6 +255,48 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="reqConfig">Document input request</param>
         /// <returns>ApiResponse of InsertDocxTablesResponse</returns>
         ApiResponse<InsertDocxTablesResponse> EditDocumentDocxInsertTableWithHttpInfo (InsertDocxTablesRequest reqConfig);
+        /// <summary>
+        /// Insert a new row into an existing table in a Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Adds a new table row into a DOCX Document and returns the result.  Call Finish Editing on the output URL to complete the operation.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>InsertDocxTableRowResponse</returns>
+        InsertDocxTableRowResponse EditDocumentDocxInsertTableRow (InsertDocxTableRowRequest reqConfig);
+
+        /// <summary>
+        /// Insert a new row into an existing table in a Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Adds a new table row into a DOCX Document and returns the result.  Call Finish Editing on the output URL to complete the operation.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>ApiResponse of InsertDocxTableRowResponse</returns>
+        ApiResponse<InsertDocxTableRowResponse> EditDocumentDocxInsertTableRowWithHttpInfo (InsertDocxTableRowRequest reqConfig);
+        /// <summary>
+        /// Get pages and content from a Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Returns the pages and contents of each page defined in the Word Document (DOCX) format file
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>GetDocxPagesResponse</returns>
+        GetDocxPagesResponse EditDocumentDocxPages (GetDocxPagesRequest reqConfig);
+
+        /// <summary>
+        /// Get pages and content from a Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Returns the pages and contents of each page defined in the Word Document (DOCX) format file
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>ApiResponse of GetDocxPagesResponse</returns>
+        ApiResponse<GetDocxPagesResponse> EditDocumentDocxPagesWithHttpInfo (GetDocxPagesRequest reqConfig);
         /// <summary>
         /// Remove headers and footers from Word DOCX document
         /// </summary>
@@ -573,6 +636,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (GetDocxBodyResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetDocxBodyResponse>> EditDocumentDocxBodyAsyncWithHttpInfo (GetDocxBodyRequest reqConfig);
         /// <summary>
+        /// Delete, remove pages from a Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Returns the pages and contents of each page defined in the Word Document (DOCX) format file
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> EditDocumentDocxDeletePagesAsync (RemoveDocxPagesRequest reqConfig);
+
+        /// <summary>
+        /// Delete, remove pages from a Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Returns the pages and contents of each page defined in the Word Document (DOCX) format file
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDocumentDocxDeletePagesAsyncWithHttpInfo (RemoveDocxPagesRequest reqConfig);
+        /// <summary>
         /// Get content of a footer from a Word DOCX document
         /// </summary>
         /// <remarks>
@@ -740,6 +824,48 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of ApiResponse (InsertDocxTablesResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<InsertDocxTablesResponse>> EditDocumentDocxInsertTableAsyncWithHttpInfo (InsertDocxTablesRequest reqConfig);
+        /// <summary>
+        /// Insert a new row into an existing table in a Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Adds a new table row into a DOCX Document and returns the result.  Call Finish Editing on the output URL to complete the operation.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>Task of InsertDocxTableRowResponse</returns>
+        System.Threading.Tasks.Task<InsertDocxTableRowResponse> EditDocumentDocxInsertTableRowAsync (InsertDocxTableRowRequest reqConfig);
+
+        /// <summary>
+        /// Insert a new row into an existing table in a Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Adds a new table row into a DOCX Document and returns the result.  Call Finish Editing on the output URL to complete the operation.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>Task of ApiResponse (InsertDocxTableRowResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InsertDocxTableRowResponse>> EditDocumentDocxInsertTableRowAsyncWithHttpInfo (InsertDocxTableRowRequest reqConfig);
+        /// <summary>
+        /// Get pages and content from a Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Returns the pages and contents of each page defined in the Word Document (DOCX) format file
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>Task of GetDocxPagesResponse</returns>
+        System.Threading.Tasks.Task<GetDocxPagesResponse> EditDocumentDocxPagesAsync (GetDocxPagesRequest reqConfig);
+
+        /// <summary>
+        /// Get pages and content from a Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Returns the pages and contents of each page defined in the Word Document (DOCX) format file
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>Task of ApiResponse (GetDocxPagesResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetDocxPagesResponse>> EditDocumentDocxPagesAsyncWithHttpInfo (GetDocxPagesRequest reqConfig);
         /// <summary>
         /// Remove headers and footers from Word DOCX document
         /// </summary>
@@ -1456,6 +1582,173 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<GetDocxBodyResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (GetDocxBodyResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxBodyResponse)));
+        }
+
+        /// <summary>
+        /// Delete, remove pages from a Word DOCX document Returns the pages and contents of each page defined in the Word Document (DOCX) format file
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>byte[]</returns>
+        public byte[] EditDocumentDocxDeletePages (RemoveDocxPagesRequest reqConfig)
+        {
+             ApiResponse<byte[]> localVarResponse = EditDocumentDocxDeletePagesWithHttpInfo(reqConfig);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Delete, remove pages from a Word DOCX document Returns the pages and contents of each page defined in the Word Document (DOCX) format file
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > EditDocumentDocxDeletePagesWithHttpInfo (RemoveDocxPagesRequest reqConfig)
+        {
+            // verify the required parameter 'reqConfig' is set
+            if (reqConfig == null)
+                throw new ApiException(400, "Missing required parameter 'reqConfig' when calling EditDocumentApi->EditDocumentDocxDeletePages");
+
+            var localVarPath = "/convert/edit/docx/delete-pages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reqConfig; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentDocxDeletePages", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Delete, remove pages from a Word DOCX document Returns the pages and contents of each page defined in the Word Document (DOCX) format file
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> EditDocumentDocxDeletePagesAsync (RemoveDocxPagesRequest reqConfig)
+        {
+             ApiResponse<byte[]> localVarResponse = await EditDocumentDocxDeletePagesAsyncWithHttpInfo(reqConfig);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Delete, remove pages from a Word DOCX document Returns the pages and contents of each page defined in the Word Document (DOCX) format file
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDocumentDocxDeletePagesAsyncWithHttpInfo (RemoveDocxPagesRequest reqConfig)
+        {
+            // verify the required parameter 'reqConfig' is set
+            if (reqConfig == null)
+                throw new ApiException(400, "Missing required parameter 'reqConfig' when calling EditDocumentApi->EditDocumentDocxDeletePages");
+
+            var localVarPath = "/convert/edit/docx/delete-pages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reqConfig; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentDocxDeletePages", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
@@ -2840,6 +3133,352 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<InsertDocxTablesResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (InsertDocxTablesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InsertDocxTablesResponse)));
+        }
+
+        /// <summary>
+        /// Insert a new row into an existing table in a Word DOCX document Adds a new table row into a DOCX Document and returns the result.  Call Finish Editing on the output URL to complete the operation.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>InsertDocxTableRowResponse</returns>
+        public InsertDocxTableRowResponse EditDocumentDocxInsertTableRow (InsertDocxTableRowRequest reqConfig)
+        {
+             ApiResponse<InsertDocxTableRowResponse> localVarResponse = EditDocumentDocxInsertTableRowWithHttpInfo(reqConfig);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Insert a new row into an existing table in a Word DOCX document Adds a new table row into a DOCX Document and returns the result.  Call Finish Editing on the output URL to complete the operation.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>ApiResponse of InsertDocxTableRowResponse</returns>
+        public ApiResponse< InsertDocxTableRowResponse > EditDocumentDocxInsertTableRowWithHttpInfo (InsertDocxTableRowRequest reqConfig)
+        {
+            // verify the required parameter 'reqConfig' is set
+            if (reqConfig == null)
+                throw new ApiException(400, "Missing required parameter 'reqConfig' when calling EditDocumentApi->EditDocumentDocxInsertTableRow");
+
+            var localVarPath = "/convert/edit/docx/insert-table-row";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reqConfig; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentDocxInsertTableRow", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<InsertDocxTableRowResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (InsertDocxTableRowResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InsertDocxTableRowResponse)));
+        }
+
+        /// <summary>
+        /// Insert a new row into an existing table in a Word DOCX document Adds a new table row into a DOCX Document and returns the result.  Call Finish Editing on the output URL to complete the operation.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>Task of InsertDocxTableRowResponse</returns>
+        public async System.Threading.Tasks.Task<InsertDocxTableRowResponse> EditDocumentDocxInsertTableRowAsync (InsertDocxTableRowRequest reqConfig)
+        {
+             ApiResponse<InsertDocxTableRowResponse> localVarResponse = await EditDocumentDocxInsertTableRowAsyncWithHttpInfo(reqConfig);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Insert a new row into an existing table in a Word DOCX document Adds a new table row into a DOCX Document and returns the result.  Call Finish Editing on the output URL to complete the operation.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>Task of ApiResponse (InsertDocxTableRowResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<InsertDocxTableRowResponse>> EditDocumentDocxInsertTableRowAsyncWithHttpInfo (InsertDocxTableRowRequest reqConfig)
+        {
+            // verify the required parameter 'reqConfig' is set
+            if (reqConfig == null)
+                throw new ApiException(400, "Missing required parameter 'reqConfig' when calling EditDocumentApi->EditDocumentDocxInsertTableRow");
+
+            var localVarPath = "/convert/edit/docx/insert-table-row";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reqConfig; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentDocxInsertTableRow", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<InsertDocxTableRowResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (InsertDocxTableRowResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InsertDocxTableRowResponse)));
+        }
+
+        /// <summary>
+        /// Get pages and content from a Word DOCX document Returns the pages and contents of each page defined in the Word Document (DOCX) format file
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>GetDocxPagesResponse</returns>
+        public GetDocxPagesResponse EditDocumentDocxPages (GetDocxPagesRequest reqConfig)
+        {
+             ApiResponse<GetDocxPagesResponse> localVarResponse = EditDocumentDocxPagesWithHttpInfo(reqConfig);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get pages and content from a Word DOCX document Returns the pages and contents of each page defined in the Word Document (DOCX) format file
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>ApiResponse of GetDocxPagesResponse</returns>
+        public ApiResponse< GetDocxPagesResponse > EditDocumentDocxPagesWithHttpInfo (GetDocxPagesRequest reqConfig)
+        {
+            // verify the required parameter 'reqConfig' is set
+            if (reqConfig == null)
+                throw new ApiException(400, "Missing required parameter 'reqConfig' when calling EditDocumentApi->EditDocumentDocxPages");
+
+            var localVarPath = "/convert/edit/docx/get-pages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reqConfig; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentDocxPages", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetDocxPagesResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetDocxPagesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxPagesResponse)));
+        }
+
+        /// <summary>
+        /// Get pages and content from a Word DOCX document Returns the pages and contents of each page defined in the Word Document (DOCX) format file
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>Task of GetDocxPagesResponse</returns>
+        public async System.Threading.Tasks.Task<GetDocxPagesResponse> EditDocumentDocxPagesAsync (GetDocxPagesRequest reqConfig)
+        {
+             ApiResponse<GetDocxPagesResponse> localVarResponse = await EditDocumentDocxPagesAsyncWithHttpInfo(reqConfig);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get pages and content from a Word DOCX document Returns the pages and contents of each page defined in the Word Document (DOCX) format file
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>Task of ApiResponse (GetDocxPagesResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetDocxPagesResponse>> EditDocumentDocxPagesAsyncWithHttpInfo (GetDocxPagesRequest reqConfig)
+        {
+            // verify the required parameter 'reqConfig' is set
+            if (reqConfig == null)
+                throw new ApiException(400, "Missing required parameter 'reqConfig' when calling EditDocumentApi->EditDocumentDocxPages");
+
+            var localVarPath = "/convert/edit/docx/get-pages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reqConfig; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentDocxPages", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetDocxPagesResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetDocxPagesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxPagesResponse)));
         }
 
         /// <summary>

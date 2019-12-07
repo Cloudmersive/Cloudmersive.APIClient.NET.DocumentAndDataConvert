@@ -142,6 +142,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of PdfMetadata</returns>
         ApiResponse<PdfMetadata> EditPdfGetMetadataWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
+        /// Get text in a PDF document by page
+        /// </summary>
+        /// <remarks>
+        /// Gets the text in a PDF by page
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>PdfTextByPageResult</returns>
+        PdfTextByPageResult EditPdfGetPdfTextByPages (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Get text in a PDF document by page
+        /// </summary>
+        /// <remarks>
+        /// Gets the text in a PDF by page
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of PdfTextByPageResult</returns>
+        ApiResponse<PdfTextByPageResult> EditPdfGetPdfTextByPagesWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
         /// Insert / copy pages from one PDF document into another
         /// </summary>
         /// <remarks>
@@ -424,6 +445,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>Task of ApiResponse (PdfMetadata)</returns>
         System.Threading.Tasks.Task<ApiResponse<PdfMetadata>> EditPdfGetMetadataAsyncWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// Get text in a PDF document by page
+        /// </summary>
+        /// <remarks>
+        /// Gets the text in a PDF by page
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of PdfTextByPageResult</returns>
+        System.Threading.Tasks.Task<PdfTextByPageResult> EditPdfGetPdfTextByPagesAsync (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Get text in a PDF document by page
+        /// </summary>
+        /// <remarks>
+        /// Gets the text in a PDF by page
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (PdfTextByPageResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PdfTextByPageResult>> EditPdfGetPdfTextByPagesAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
         /// Insert / copy pages from one PDF document into another
         /// </summary>
@@ -1471,6 +1513,157 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<PdfMetadata>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PdfMetadata) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PdfMetadata)));
+        }
+
+        /// <summary>
+        /// Get text in a PDF document by page Gets the text in a PDF by page
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>PdfTextByPageResult</returns>
+        public PdfTextByPageResult EditPdfGetPdfTextByPages (System.IO.Stream inputFile)
+        {
+             ApiResponse<PdfTextByPageResult> localVarResponse = EditPdfGetPdfTextByPagesWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get text in a PDF document by page Gets the text in a PDF by page
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of PdfTextByPageResult</returns>
+        public ApiResponse< PdfTextByPageResult > EditPdfGetPdfTextByPagesWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditPdfApi->EditPdfGetPdfTextByPages");
+
+            var localVarPath = "/convert/edit/pdf/pages/get-text";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditPdfGetPdfTextByPages", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<PdfTextByPageResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PdfTextByPageResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PdfTextByPageResult)));
+        }
+
+        /// <summary>
+        /// Get text in a PDF document by page Gets the text in a PDF by page
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of PdfTextByPageResult</returns>
+        public async System.Threading.Tasks.Task<PdfTextByPageResult> EditPdfGetPdfTextByPagesAsync (System.IO.Stream inputFile)
+        {
+             ApiResponse<PdfTextByPageResult> localVarResponse = await EditPdfGetPdfTextByPagesAsyncWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get text in a PDF document by page Gets the text in a PDF by page
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (PdfTextByPageResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PdfTextByPageResult>> EditPdfGetPdfTextByPagesAsyncWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditPdfApi->EditPdfGetPdfTextByPages");
+
+            var localVarPath = "/convert/edit/pdf/pages/get-text";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditPdfGetPdfTextByPages", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<PdfTextByPageResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PdfTextByPageResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PdfTextByPageResult)));
         }
 
         /// <summary>

@@ -89,6 +89,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test EditDocumentDocxDeletePages
+        /// </summary>
+        [Test]
+        public void EditDocumentDocxDeletePagesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //RemoveDocxPagesRequest reqConfig = null;
+            //var response = instance.EditDocumentDocxDeletePages(reqConfig);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
         /// Test EditDocumentDocxGetHeadersAndFooters
         /// </summary>
         [Test]
@@ -182,6 +194,30 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //InsertDocxTablesRequest reqConfig = null;
             //var response = instance.EditDocumentDocxInsertTable(reqConfig);
             //Assert.IsInstanceOf<InsertDocxTablesResponse> (response, "response is InsertDocxTablesResponse");
+        }
+        
+        /// <summary>
+        /// Test EditDocumentDocxInsertTableRow
+        /// </summary>
+        [Test]
+        public void EditDocumentDocxInsertTableRowTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //InsertDocxTableRowRequest reqConfig = null;
+            //var response = instance.EditDocumentDocxInsertTableRow(reqConfig);
+            //Assert.IsInstanceOf<InsertDocxTableRowResponse> (response, "response is InsertDocxTableRowResponse");
+        }
+        
+        /// <summary>
+        /// Test EditDocumentDocxPages
+        /// </summary>
+        [Test]
+        public void EditDocumentDocxPagesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //GetDocxPagesRequest reqConfig = null;
+            //var response = instance.EditDocumentDocxPages(reqConfig);
+            //Assert.IsInstanceOf<GetDocxPagesResponse> (response, "response is GetDocxPagesResponse");
         }
         
         /// <summary>
