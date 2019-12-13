@@ -149,6 +149,30 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test EditDocumentDocxGetTableByIndex
+        /// </summary>
+        [Test]
+        public void EditDocumentDocxGetTableByIndexTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //GetDocxTableByIndexRequest reqConfig = null;
+            //var response = instance.EditDocumentDocxGetTableByIndex(reqConfig);
+            //Assert.IsInstanceOf<GetDocxTableByIndexResponse> (response, "response is GetDocxTableByIndexResponse");
+        }
+        
+        /// <summary>
+        /// Test EditDocumentDocxGetTableRow
+        /// </summary>
+        [Test]
+        public void EditDocumentDocxGetTableRowTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //GetDocxTableRowRequest reqConfig = null;
+            //var response = instance.EditDocumentDocxGetTableRow(reqConfig);
+            //Assert.IsInstanceOf<GetDocxTableRowResponse> (response, "response is GetDocxTableRowResponse");
+        }
+        
+        /// <summary>
         /// Test EditDocumentDocxGetTables
         /// </summary>
         [Test]

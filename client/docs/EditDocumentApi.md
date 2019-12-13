@@ -11,7 +11,9 @@ Method | HTTP request | Description
 [**EditDocumentDocxGetImages**](EditDocumentApi.md#editdocumentdocxgetimages) | **POST** /convert/edit/docx/get-images | Get images from a Word DOCX document
 [**EditDocumentDocxGetSections**](EditDocumentApi.md#editdocumentdocxgetsections) | **POST** /convert/edit/docx/get-sections | Get sections from a Word DOCX document
 [**EditDocumentDocxGetStyles**](EditDocumentApi.md#editdocumentdocxgetstyles) | **POST** /convert/edit/docx/get-styles | Get styles from a Word DOCX document
-[**EditDocumentDocxGetTables**](EditDocumentApi.md#editdocumentdocxgettables) | **POST** /convert/edit/docx/get-tables | Get tables in Word DOCX document
+[**EditDocumentDocxGetTableByIndex**](EditDocumentApi.md#editdocumentdocxgettablebyindex) | **POST** /convert/edit/docx/get-table/by-index | Get a specific table by index in a Word DOCX document
+[**EditDocumentDocxGetTableRow**](EditDocumentApi.md#editdocumentdocxgettablerow) | **POST** /convert/edit/docx/get-table-row | Gets the contents of an existing table row in an existing table in a Word DOCX document
+[**EditDocumentDocxGetTables**](EditDocumentApi.md#editdocumentdocxgettables) | **POST** /convert/edit/docx/get-tables | Get all tables in Word DOCX document
 [**EditDocumentDocxInsertImage**](EditDocumentApi.md#editdocumentdocxinsertimage) | **POST** /convert/edit/docx/insert-image | Insert image into a Word DOCX document
 [**EditDocumentDocxInsertParagraph**](EditDocumentApi.md#editdocumentdocxinsertparagraph) | **POST** /convert/edit/docx/insert-paragraph | Insert a new paragraph into a Word DOCX document
 [**EditDocumentDocxInsertTable**](EditDocumentApi.md#editdocumentdocxinserttable) | **POST** /convert/edit/docx/insert-table | Insert a new table into a Word DOCX document
@@ -495,11 +497,143 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="editdocumentdocxgettablebyindex"></a>
+# **EditDocumentDocxGetTableByIndex**
+> GetDocxTableByIndexResponse EditDocumentDocxGetTableByIndex (GetDocxTableByIndexRequest reqConfig)
+
+Get a specific table by index in a Word DOCX document
+
+Returns the specific table object by its 0-based index in an Office Word Document (DOCX)
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class EditDocumentDocxGetTableByIndexExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new EditDocumentApi();
+            var reqConfig = new GetDocxTableByIndexRequest(); // GetDocxTableByIndexRequest | Document input request
+
+            try
+            {
+                // Get a specific table by index in a Word DOCX document
+                GetDocxTableByIndexResponse result = apiInstance.EditDocumentDocxGetTableByIndex(reqConfig);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling EditDocumentApi.EditDocumentDocxGetTableByIndex: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **reqConfig** | [**GetDocxTableByIndexRequest**](GetDocxTableByIndexRequest.md)| Document input request | 
+
+### Return type
+
+[**GetDocxTableByIndexResponse**](GetDocxTableByIndexResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="editdocumentdocxgettablerow"></a>
+# **EditDocumentDocxGetTableRow**
+> GetDocxTableRowResponse EditDocumentDocxGetTableRow (GetDocxTableRowRequest reqConfig)
+
+Gets the contents of an existing table row in an existing table in a Word DOCX document
+
+Gets the contents of an existing table row in a Word DOCX Document and returns the result.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class EditDocumentDocxGetTableRowExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new EditDocumentApi();
+            var reqConfig = new GetDocxTableRowRequest(); // GetDocxTableRowRequest | Document input request
+
+            try
+            {
+                // Gets the contents of an existing table row in an existing table in a Word DOCX document
+                GetDocxTableRowResponse result = apiInstance.EditDocumentDocxGetTableRow(reqConfig);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling EditDocumentApi.EditDocumentDocxGetTableRow: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **reqConfig** | [**GetDocxTableRowRequest**](GetDocxTableRowRequest.md)| Document input request | 
+
+### Return type
+
+[**GetDocxTableRowResponse**](GetDocxTableRowResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="editdocumentdocxgettables"></a>
 # **EditDocumentDocxGetTables**
 > GetDocxTablesResponse EditDocumentDocxGetTables (GetDocxTablesRequest reqConfig)
 
-Get tables in Word DOCX document
+Get all tables in Word DOCX document
 
 Returns all the table objects in an Office Word Document (docx)
 
@@ -527,7 +661,7 @@ namespace Example
 
             try
             {
-                // Get tables in Word DOCX document
+                // Get all tables in Word DOCX document
                 GetDocxTablesResponse result = apiInstance.EditDocumentDocxGetTables(reqConfig);
                 Debug.WriteLine(result);
             }

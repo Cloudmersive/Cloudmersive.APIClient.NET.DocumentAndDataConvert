@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 This C# SDK is for the [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api):
 
 - API version: v1
-- SDK version: 2.2.0
+- SDK version: 3.0.1
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -153,7 +153,9 @@ Class | Method | HTTP request | Description
 *EditDocumentApi* | [**EditDocumentDocxGetImages**](docs/EditDocumentApi.md#editdocumentdocxgetimages) | **POST** /convert/edit/docx/get-images | Get images from a Word DOCX document
 *EditDocumentApi* | [**EditDocumentDocxGetSections**](docs/EditDocumentApi.md#editdocumentdocxgetsections) | **POST** /convert/edit/docx/get-sections | Get sections from a Word DOCX document
 *EditDocumentApi* | [**EditDocumentDocxGetStyles**](docs/EditDocumentApi.md#editdocumentdocxgetstyles) | **POST** /convert/edit/docx/get-styles | Get styles from a Word DOCX document
-*EditDocumentApi* | [**EditDocumentDocxGetTables**](docs/EditDocumentApi.md#editdocumentdocxgettables) | **POST** /convert/edit/docx/get-tables | Get tables in Word DOCX document
+*EditDocumentApi* | [**EditDocumentDocxGetTableByIndex**](docs/EditDocumentApi.md#editdocumentdocxgettablebyindex) | **POST** /convert/edit/docx/get-table/by-index | Get a specific table by index in a Word DOCX document
+*EditDocumentApi* | [**EditDocumentDocxGetTableRow**](docs/EditDocumentApi.md#editdocumentdocxgettablerow) | **POST** /convert/edit/docx/get-table-row | Gets the contents of an existing table row in an existing table in a Word DOCX document
+*EditDocumentApi* | [**EditDocumentDocxGetTables**](docs/EditDocumentApi.md#editdocumentdocxgettables) | **POST** /convert/edit/docx/get-tables | Get all tables in Word DOCX document
 *EditDocumentApi* | [**EditDocumentDocxInsertImage**](docs/EditDocumentApi.md#editdocumentdocxinsertimage) | **POST** /convert/edit/docx/insert-image | Insert image into a Word DOCX document
 *EditDocumentApi* | [**EditDocumentDocxInsertParagraph**](docs/EditDocumentApi.md#editdocumentdocxinsertparagraph) | **POST** /convert/edit/docx/insert-paragraph | Insert a new paragraph into a Word DOCX document
 *EditDocumentApi* | [**EditDocumentDocxInsertTable**](docs/EditDocumentApi.md#editdocumentdocxinserttable) | **POST** /convert/edit/docx/insert-table | Insert a new table into a Word DOCX document
@@ -256,6 +258,10 @@ Class | Method | HTTP request | Description
  - [Model.GetDocxSectionsResponse](docs/GetDocxSectionsResponse.md)
  - [Model.GetDocxStylesRequest](docs/GetDocxStylesRequest.md)
  - [Model.GetDocxStylesResponse](docs/GetDocxStylesResponse.md)
+ - [Model.GetDocxTableByIndexRequest](docs/GetDocxTableByIndexRequest.md)
+ - [Model.GetDocxTableByIndexResponse](docs/GetDocxTableByIndexResponse.md)
+ - [Model.GetDocxTableRowRequest](docs/GetDocxTableRowRequest.md)
+ - [Model.GetDocxTableRowResponse](docs/GetDocxTableRowResponse.md)
  - [Model.GetDocxTablesRequest](docs/GetDocxTablesRequest.md)
  - [Model.GetDocxTablesResponse](docs/GetDocxTablesResponse.md)
  - [Model.GetImageInfoResult](docs/GetImageInfoResult.md)
