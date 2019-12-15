@@ -25,35 +25,26 @@ using SwaggerDateConverter = Cloudmersive.APIClient.NET.DocumentAndDataConvert.C
 namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
 {
     /// <summary>
-    /// Result of running a Get-Worksheets command
+    /// Input to a Create Blank Spreadsheet request
     /// </summary>
     [DataContract]
-    public partial class GetXlsxWorksheetsResponse :  IEquatable<GetXlsxWorksheetsResponse>, IValidatableObject
+    public partial class CreateBlankSpreadsheetRequest :  IEquatable<CreateBlankSpreadsheetRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="GetXlsxWorksheetsResponse" /> class.
+        /// Initializes a new instance of the <see cref="CreateBlankSpreadsheetRequest" /> class.
         /// </summary>
-        /// <param name="successful">True if successful, false otherwise.</param>
-        /// <param name="worksheets">Worksheets in the Excel XLSX spreadsheet.</param>
-        public GetXlsxWorksheetsResponse(bool? successful = default(bool?), List<XlsxWorksheet> worksheets = default(List<XlsxWorksheet>))
+        /// <param name="worksheetName">The blank Spreadsheet will have a default Worksheet in it; supply a name, or if left empty, will default to Worksheet1.</param>
+        public CreateBlankSpreadsheetRequest(string worksheetName = default(string))
         {
-            this.Successful = successful;
-            this.Worksheets = worksheets;
+            this.WorksheetName = worksheetName;
         }
         
         /// <summary>
-        /// True if successful, false otherwise
+        /// The blank Spreadsheet will have a default Worksheet in it; supply a name, or if left empty, will default to Worksheet1
         /// </summary>
-        /// <value>True if successful, false otherwise</value>
-        [DataMember(Name="Successful", EmitDefaultValue=false)]
-        public bool? Successful { get; set; }
-
-        /// <summary>
-        /// Worksheets in the Excel XLSX spreadsheet
-        /// </summary>
-        /// <value>Worksheets in the Excel XLSX spreadsheet</value>
-        [DataMember(Name="Worksheets", EmitDefaultValue=false)]
-        public List<XlsxWorksheet> Worksheets { get; set; }
+        /// <value>The blank Spreadsheet will have a default Worksheet in it; supply a name, or if left empty, will default to Worksheet1</value>
+        [DataMember(Name="WorksheetName", EmitDefaultValue=false)]
+        public string WorksheetName { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -62,9 +53,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class GetXlsxWorksheetsResponse {\n");
-            sb.Append("  Successful: ").Append(Successful).Append("\n");
-            sb.Append("  Worksheets: ").Append(Worksheets).Append("\n");
+            sb.Append("class CreateBlankSpreadsheetRequest {\n");
+            sb.Append("  WorksheetName: ").Append(WorksheetName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -85,29 +75,24 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as GetXlsxWorksheetsResponse);
+            return this.Equals(input as CreateBlankSpreadsheetRequest);
         }
 
         /// <summary>
-        /// Returns true if GetXlsxWorksheetsResponse instances are equal
+        /// Returns true if CreateBlankSpreadsheetRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of GetXlsxWorksheetsResponse to be compared</param>
+        /// <param name="input">Instance of CreateBlankSpreadsheetRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(GetXlsxWorksheetsResponse input)
+        public bool Equals(CreateBlankSpreadsheetRequest input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.Successful == input.Successful ||
-                    (this.Successful != null &&
-                    this.Successful.Equals(input.Successful))
-                ) && 
-                (
-                    this.Worksheets == input.Worksheets ||
-                    this.Worksheets != null &&
-                    this.Worksheets.SequenceEqual(input.Worksheets)
+                    this.WorksheetName == input.WorksheetName ||
+                    (this.WorksheetName != null &&
+                    this.WorksheetName.Equals(input.WorksheetName))
                 );
         }
 
@@ -120,10 +105,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Successful != null)
-                    hashCode = hashCode * 59 + this.Successful.GetHashCode();
-                if (this.Worksheets != null)
-                    hashCode = hashCode * 59 + this.Worksheets.GetHashCode();
+                if (this.WorksheetName != null)
+                    hashCode = hashCode * 59 + this.WorksheetName.GetHashCode();
                 return hashCode;
             }
         }

@@ -89,6 +89,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test EditDocumentDocxCreateBlankDocument
+        /// </summary>
+        [Test]
+        public void EditDocumentDocxCreateBlankDocumentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //CreateBlankDocxRequest input = null;
+            //var response = instance.EditDocumentDocxCreateBlankDocument(input);
+            //Assert.IsInstanceOf<CreateBlankDocxResponse> (response, "response is CreateBlankDocxResponse");
+        }
+        
+        /// <summary>
         /// Test EditDocumentDocxDeletePages
         /// </summary>
         [Test]
@@ -329,6 +341,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test EditDocumentDocxUpdateTableCell
+        /// </summary>
+        [Test]
+        public void EditDocumentDocxUpdateTableCellTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //UpdateDocxTableCellRequest reqConfig = null;
+            //var response = instance.EditDocumentDocxUpdateTableCell(reqConfig);
+            //Assert.IsInstanceOf<UpdateDocxTableCellResponse> (response, "response is UpdateDocxTableCellResponse");
+        }
+        
+        /// <summary>
         /// Test EditDocumentDocxUpdateTableRow
         /// </summary>
         [Test]
@@ -362,6 +386,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //ReplaceStringRequest reqConfig = null;
             //var response = instance.EditDocumentPptxReplace(reqConfig);
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
+        /// Test EditDocumentXlsxCreateBlankSpreadsheet
+        /// </summary>
+        [Test]
+        public void EditDocumentXlsxCreateBlankSpreadsheetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //CreateBlankSpreadsheetRequest input = null;
+            //var response = instance.EditDocumentXlsxCreateBlankSpreadsheet(input);
+            //Assert.IsInstanceOf<CreateBlankSpreadsheetResponse> (response, "response is CreateBlankSpreadsheetResponse");
         }
         
         /// <summary>
