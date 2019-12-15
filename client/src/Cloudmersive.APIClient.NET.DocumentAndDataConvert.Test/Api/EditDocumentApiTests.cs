@@ -101,6 +101,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test EditDocumentDocxDeleteTableRow
+        /// </summary>
+        [Test]
+        public void EditDocumentDocxDeleteTableRowTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //DeleteDocxTableRowRequest reqConfig = null;
+            //var response = instance.EditDocumentDocxDeleteTableRow(reqConfig);
+            //Assert.IsInstanceOf<DeleteDocxTableRowResponse> (response, "response is DeleteDocxTableRowResponse");
+        }
+        
+        /// <summary>
         /// Test EditDocumentDocxGetHeadersAndFooters
         /// </summary>
         [Test]
@@ -314,6 +326,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //DocxSetHeaderRequest reqConfig = null;
             //var response = instance.EditDocumentDocxSetHeader(reqConfig);
             //Assert.IsInstanceOf<DocxSetHeaderResponse> (response, "response is DocxSetHeaderResponse");
+        }
+        
+        /// <summary>
+        /// Test EditDocumentDocxUpdateTableRow
+        /// </summary>
+        [Test]
+        public void EditDocumentDocxUpdateTableRowTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //UpdateDocxTableRowRequest reqConfig = null;
+            //var response = instance.EditDocumentDocxUpdateTableRow(reqConfig);
+            //Assert.IsInstanceOf<UpdateDocxTableRowResponse> (response, "response is UpdateDocxTableRowResponse");
         }
         
         /// <summary>

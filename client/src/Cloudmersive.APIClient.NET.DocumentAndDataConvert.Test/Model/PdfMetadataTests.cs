@@ -130,6 +130,14 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         {
             // TODO unit test for the property 'DateCreated'
         }
+        /// <summary>
+        /// Test the property 'PageCount'
+        /// </summary>
+        [Test]
+        public void PageCountTest()
+        {
+            // TODO unit test for the property 'PageCount'
+        }
 
     }
 
