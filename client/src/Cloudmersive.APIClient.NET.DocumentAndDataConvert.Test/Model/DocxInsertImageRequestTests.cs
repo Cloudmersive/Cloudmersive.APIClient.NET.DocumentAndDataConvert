@@ -122,6 +122,22 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         {
             // TODO unit test for the property 'InsertPath'
         }
+        /// <summary>
+        /// Test the property 'WidthInEMUs'
+        /// </summary>
+        [Test]
+        public void WidthInEMUsTest()
+        {
+            // TODO unit test for the property 'WidthInEMUs'
+        }
+        /// <summary>
+        /// Test the property 'HeightInEMUs'
+        /// </summary>
+        [Test]
+        public void HeightInEMUsTest()
+        {
+            // TODO unit test for the property 'HeightInEMUs'
+        }
 
     }
 

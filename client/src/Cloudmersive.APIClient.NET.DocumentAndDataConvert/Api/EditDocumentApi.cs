@@ -613,6 +613,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of CreateBlankSpreadsheetResponse</returns>
         ApiResponse<CreateBlankSpreadsheetResponse> EditDocumentXlsxCreateBlankSpreadsheetWithHttpInfo (CreateBlankSpreadsheetRequest input);
         /// <summary>
+        /// Get cell from an Excel XLSX spreadsheet, worksheet by index
+        /// </summary>
+        /// <remarks>
+        /// Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Document input request</param>
+        /// <returns>GetXlsxCellResponse</returns>
+        GetXlsxCellResponse EditDocumentXlsxGetCellByIndex (GetXlsxCellRequest input);
+
+        /// <summary>
+        /// Get cell from an Excel XLSX spreadsheet, worksheet by index
+        /// </summary>
+        /// <remarks>
+        /// Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Document input request</param>
+        /// <returns>ApiResponse of GetXlsxCellResponse</returns>
+        ApiResponse<GetXlsxCellResponse> EditDocumentXlsxGetCellByIndexWithHttpInfo (GetXlsxCellRequest input);
+        /// <summary>
         /// Get rows and cells from a Excel XLSX spreadsheet, worksheet
         /// </summary>
         /// <remarks>
@@ -655,7 +676,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of GetXlsxImagesResponse</returns>
         ApiResponse<GetXlsxImagesResponse> EditDocumentXlsxGetImagesWithHttpInfo (GetXlsxImagesRequest input);
         /// <summary>
-        /// Get rows and cells from a Word XLSX spreadsheet, worksheet
+        /// Get rows and cells from a Excel XLSX spreadsheet, worksheet
         /// </summary>
         /// <remarks>
         /// Returns the rows and cells defined in the Excel Spreadsheet worksheet
@@ -666,7 +687,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         GetXlsxRowsAndCellsResponse EditDocumentXlsxGetRowsAndCells (GetXlsxRowsAndCellsRequest input);
 
         /// <summary>
-        /// Get rows and cells from a Word XLSX spreadsheet, worksheet
+        /// Get rows and cells from a Excel XLSX spreadsheet, worksheet
         /// </summary>
         /// <remarks>
         /// Returns the rows and cells defined in the Excel Spreadsheet worksheet
@@ -1329,6 +1350,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (CreateBlankSpreadsheetResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<CreateBlankSpreadsheetResponse>> EditDocumentXlsxCreateBlankSpreadsheetAsyncWithHttpInfo (CreateBlankSpreadsheetRequest input);
         /// <summary>
+        /// Get cell from an Excel XLSX spreadsheet, worksheet by index
+        /// </summary>
+        /// <remarks>
+        /// Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Document input request</param>
+        /// <returns>Task of GetXlsxCellResponse</returns>
+        System.Threading.Tasks.Task<GetXlsxCellResponse> EditDocumentXlsxGetCellByIndexAsync (GetXlsxCellRequest input);
+
+        /// <summary>
+        /// Get cell from an Excel XLSX spreadsheet, worksheet by index
+        /// </summary>
+        /// <remarks>
+        /// Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Document input request</param>
+        /// <returns>Task of ApiResponse (GetXlsxCellResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetXlsxCellResponse>> EditDocumentXlsxGetCellByIndexAsyncWithHttpInfo (GetXlsxCellRequest input);
+        /// <summary>
         /// Get rows and cells from a Excel XLSX spreadsheet, worksheet
         /// </summary>
         /// <remarks>
@@ -1371,7 +1413,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (GetXlsxImagesResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetXlsxImagesResponse>> EditDocumentXlsxGetImagesAsyncWithHttpInfo (GetXlsxImagesRequest input);
         /// <summary>
-        /// Get rows and cells from a Word XLSX spreadsheet, worksheet
+        /// Get rows and cells from a Excel XLSX spreadsheet, worksheet
         /// </summary>
         /// <remarks>
         /// Returns the rows and cells defined in the Excel Spreadsheet worksheet
@@ -1382,7 +1424,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<GetXlsxRowsAndCellsResponse> EditDocumentXlsxGetRowsAndCellsAsync (GetXlsxRowsAndCellsRequest input);
 
         /// <summary>
-        /// Get rows and cells from a Word XLSX spreadsheet, worksheet
+        /// Get rows and cells from a Excel XLSX spreadsheet, worksheet
         /// </summary>
         /// <remarks>
         /// Returns the rows and cells defined in the Excel Spreadsheet worksheet
@@ -6353,6 +6395,179 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
+        /// Get cell from an Excel XLSX spreadsheet, worksheet by index Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Document input request</param>
+        /// <returns>GetXlsxCellResponse</returns>
+        public GetXlsxCellResponse EditDocumentXlsxGetCellByIndex (GetXlsxCellRequest input)
+        {
+             ApiResponse<GetXlsxCellResponse> localVarResponse = EditDocumentXlsxGetCellByIndexWithHttpInfo(input);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get cell from an Excel XLSX spreadsheet, worksheet by index Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Document input request</param>
+        /// <returns>ApiResponse of GetXlsxCellResponse</returns>
+        public ApiResponse< GetXlsxCellResponse > EditDocumentXlsxGetCellByIndexWithHttpInfo (GetXlsxCellRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling EditDocumentApi->EditDocumentXlsxGetCellByIndex");
+
+            var localVarPath = "/convert/edit/xlsx/get-cell/by-index";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentXlsxGetCellByIndex", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetXlsxCellResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetXlsxCellResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetXlsxCellResponse)));
+        }
+
+        /// <summary>
+        /// Get cell from an Excel XLSX spreadsheet, worksheet by index Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Document input request</param>
+        /// <returns>Task of GetXlsxCellResponse</returns>
+        public async System.Threading.Tasks.Task<GetXlsxCellResponse> EditDocumentXlsxGetCellByIndexAsync (GetXlsxCellRequest input)
+        {
+             ApiResponse<GetXlsxCellResponse> localVarResponse = await EditDocumentXlsxGetCellByIndexAsyncWithHttpInfo(input);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get cell from an Excel XLSX spreadsheet, worksheet by index Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Document input request</param>
+        /// <returns>Task of ApiResponse (GetXlsxCellResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetXlsxCellResponse>> EditDocumentXlsxGetCellByIndexAsyncWithHttpInfo (GetXlsxCellRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling EditDocumentApi->EditDocumentXlsxGetCellByIndex");
+
+            var localVarPath = "/convert/edit/xlsx/get-cell/by-index";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentXlsxGetCellByIndex", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetXlsxCellResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetXlsxCellResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetXlsxCellResponse)));
+        }
+
+        /// <summary>
         /// Get rows and cells from a Excel XLSX spreadsheet, worksheet Returns the rows and cells defined in the Excel Spreadsheet worksheet
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6699,7 +6914,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get rows and cells from a Word XLSX spreadsheet, worksheet Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// Get rows and cells from a Excel XLSX spreadsheet, worksheet Returns the rows and cells defined in the Excel Spreadsheet worksheet
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Document input request</param>
@@ -6711,7 +6926,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get rows and cells from a Word XLSX spreadsheet, worksheet Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// Get rows and cells from a Excel XLSX spreadsheet, worksheet Returns the rows and cells defined in the Excel Spreadsheet worksheet
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Document input request</param>
@@ -6785,7 +7000,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get rows and cells from a Word XLSX spreadsheet, worksheet Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// Get rows and cells from a Excel XLSX spreadsheet, worksheet Returns the rows and cells defined in the Excel Spreadsheet worksheet
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Document input request</param>
@@ -6798,7 +7013,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get rows and cells from a Word XLSX spreadsheet, worksheet Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// Get rows and cells from a Excel XLSX spreadsheet, worksheet Returns the rows and cells defined in the Excel Spreadsheet worksheet
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Document input request</param>

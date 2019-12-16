@@ -401,6 +401,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test EditDocumentXlsxGetCellByIndex
+        /// </summary>
+        [Test]
+        public void EditDocumentXlsxGetCellByIndexTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //GetXlsxCellRequest input = null;
+            //var response = instance.EditDocumentXlsxGetCellByIndex(input);
+            //Assert.IsInstanceOf<GetXlsxCellResponse> (response, "response is GetXlsxCellResponse");
+        }
+        
+        /// <summary>
         /// Test EditDocumentXlsxGetColumns
         /// </summary>
         [Test]
