@@ -67,7 +67,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> ConvertWebHtmlToPdfWithHttpInfo (HtmlToPdfRequest input);
         /// <summary>
-        /// Convert HTML string to PNG
+        /// Convert HTML string to PNG screenshot
         /// </summary>
         /// <remarks>
         /// Fully renders a website and returns a PNG (screenshot) of the HTML.  Javascript, HTML5, CSS and other advanced features are all supported.
@@ -78,7 +78,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         Object ConvertWebHtmlToPng (HtmlToPngRequest input);
 
         /// <summary>
-        /// Convert HTML string to PNG
+        /// Convert HTML string to PNG screenshot
         /// </summary>
         /// <remarks>
         /// Fully renders a website and returns a PNG (screenshot) of the HTML.  Javascript, HTML5, CSS and other advanced features are all supported.
@@ -87,6 +87,48 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="input">HTML to PNG request parameters</param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> ConvertWebHtmlToPngWithHttpInfo (HtmlToPngRequest input);
+        /// <summary>
+        /// Convert website URL page to text (txt)
+        /// </summary>
+        /// <remarks>
+        /// Converts a website URL page into text (txt); extracts text from HTML
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">HTML to Text request parameters</param>
+        /// <returns>UrlToTextResponse</returns>
+        UrlToTextResponse ConvertWebHtmlToTxt (UrlToTextRequest input);
+
+        /// <summary>
+        /// Convert website URL page to text (txt)
+        /// </summary>
+        /// <remarks>
+        /// Converts a website URL page into text (txt); extracts text from HTML
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">HTML to Text request parameters</param>
+        /// <returns>ApiResponse of UrlToTextResponse</returns>
+        ApiResponse<UrlToTextResponse> ConvertWebHtmlToTxtWithHttpInfo (UrlToTextRequest input);
+        /// <summary>
+        /// Convert HTML string to text (txt)
+        /// </summary>
+        /// <remarks>
+        /// Converts an HTML string input into text (txt); extracts text from HTML
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">HTML to Text request parameters</param>
+        /// <returns>HtmlToTextResponse</returns>
+        HtmlToTextResponse ConvertWebHtmlToTxt_0 (HtmlToTextRequest input);
+
+        /// <summary>
+        /// Convert HTML string to text (txt)
+        /// </summary>
+        /// <remarks>
+        /// Converts an HTML string input into text (txt); extracts text from HTML
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">HTML to Text request parameters</param>
+        /// <returns>ApiResponse of HtmlToTextResponse</returns>
+        ApiResponse<HtmlToTextResponse> ConvertWebHtmlToTxt_0WithHttpInfo (HtmlToTextRequest input);
         /// <summary>
         /// Convert Markdown to HTML
         /// </summary>
@@ -195,7 +237,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertWebHtmlToPdfAsyncWithHttpInfo (HtmlToPdfRequest input);
         /// <summary>
-        /// Convert HTML string to PNG
+        /// Convert HTML string to PNG screenshot
         /// </summary>
         /// <remarks>
         /// Fully renders a website and returns a PNG (screenshot) of the HTML.  Javascript, HTML5, CSS and other advanced features are all supported.
@@ -206,7 +248,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<Object> ConvertWebHtmlToPngAsync (HtmlToPngRequest input);
 
         /// <summary>
-        /// Convert HTML string to PNG
+        /// Convert HTML string to PNG screenshot
         /// </summary>
         /// <remarks>
         /// Fully renders a website and returns a PNG (screenshot) of the HTML.  Javascript, HTML5, CSS and other advanced features are all supported.
@@ -215,6 +257,48 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="input">HTML to PNG request parameters</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ConvertWebHtmlToPngAsyncWithHttpInfo (HtmlToPngRequest input);
+        /// <summary>
+        /// Convert website URL page to text (txt)
+        /// </summary>
+        /// <remarks>
+        /// Converts a website URL page into text (txt); extracts text from HTML
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">HTML to Text request parameters</param>
+        /// <returns>Task of UrlToTextResponse</returns>
+        System.Threading.Tasks.Task<UrlToTextResponse> ConvertWebHtmlToTxtAsync (UrlToTextRequest input);
+
+        /// <summary>
+        /// Convert website URL page to text (txt)
+        /// </summary>
+        /// <remarks>
+        /// Converts a website URL page into text (txt); extracts text from HTML
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">HTML to Text request parameters</param>
+        /// <returns>Task of ApiResponse (UrlToTextResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UrlToTextResponse>> ConvertWebHtmlToTxtAsyncWithHttpInfo (UrlToTextRequest input);
+        /// <summary>
+        /// Convert HTML string to text (txt)
+        /// </summary>
+        /// <remarks>
+        /// Converts an HTML string input into text (txt); extracts text from HTML
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">HTML to Text request parameters</param>
+        /// <returns>Task of HtmlToTextResponse</returns>
+        System.Threading.Tasks.Task<HtmlToTextResponse> ConvertWebHtmlToTxt_0Async (HtmlToTextRequest input);
+
+        /// <summary>
+        /// Convert HTML string to text (txt)
+        /// </summary>
+        /// <remarks>
+        /// Converts an HTML string input into text (txt); extracts text from HTML
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">HTML to Text request parameters</param>
+        /// <returns>Task of ApiResponse (HtmlToTextResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<HtmlToTextResponse>> ConvertWebHtmlToTxt_0AsyncWithHttpInfo (HtmlToTextRequest input);
         /// <summary>
         /// Convert Markdown to HTML
         /// </summary>
@@ -713,7 +797,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Convert HTML string to PNG Fully renders a website and returns a PNG (screenshot) of the HTML.  Javascript, HTML5, CSS and other advanced features are all supported.
+        /// Convert HTML string to PNG screenshot Fully renders a website and returns a PNG (screenshot) of the HTML.  Javascript, HTML5, CSS and other advanced features are all supported.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">HTML to PNG request parameters</param>
@@ -725,7 +809,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Convert HTML string to PNG Fully renders a website and returns a PNG (screenshot) of the HTML.  Javascript, HTML5, CSS and other advanced features are all supported.
+        /// Convert HTML string to PNG screenshot Fully renders a website and returns a PNG (screenshot) of the HTML.  Javascript, HTML5, CSS and other advanced features are all supported.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">HTML to PNG request parameters</param>
@@ -796,7 +880,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Convert HTML string to PNG Fully renders a website and returns a PNG (screenshot) of the HTML.  Javascript, HTML5, CSS and other advanced features are all supported.
+        /// Convert HTML string to PNG screenshot Fully renders a website and returns a PNG (screenshot) of the HTML.  Javascript, HTML5, CSS and other advanced features are all supported.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">HTML to PNG request parameters</param>
@@ -809,7 +893,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Convert HTML string to PNG Fully renders a website and returns a PNG (screenshot) of the HTML.  Javascript, HTML5, CSS and other advanced features are all supported.
+        /// Convert HTML string to PNG screenshot Fully renders a website and returns a PNG (screenshot) of the HTML.  Javascript, HTML5, CSS and other advanced features are all supported.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">HTML to PNG request parameters</param>
@@ -877,6 +961,340 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Convert website URL page to text (txt) Converts a website URL page into text (txt); extracts text from HTML
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">HTML to Text request parameters</param>
+        /// <returns>UrlToTextResponse</returns>
+        public UrlToTextResponse ConvertWebHtmlToTxt (UrlToTextRequest input)
+        {
+             ApiResponse<UrlToTextResponse> localVarResponse = ConvertWebHtmlToTxtWithHttpInfo(input);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Convert website URL page to text (txt) Converts a website URL page into text (txt); extracts text from HTML
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">HTML to Text request parameters</param>
+        /// <returns>ApiResponse of UrlToTextResponse</returns>
+        public ApiResponse< UrlToTextResponse > ConvertWebHtmlToTxtWithHttpInfo (UrlToTextRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling ConvertWebApi->ConvertWebHtmlToTxt");
+
+            var localVarPath = "/convert/web/url/to/txt";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertWebHtmlToTxt", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<UrlToTextResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (UrlToTextResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UrlToTextResponse)));
+        }
+
+        /// <summary>
+        /// Convert website URL page to text (txt) Converts a website URL page into text (txt); extracts text from HTML
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">HTML to Text request parameters</param>
+        /// <returns>Task of UrlToTextResponse</returns>
+        public async System.Threading.Tasks.Task<UrlToTextResponse> ConvertWebHtmlToTxtAsync (UrlToTextRequest input)
+        {
+             ApiResponse<UrlToTextResponse> localVarResponse = await ConvertWebHtmlToTxtAsyncWithHttpInfo(input);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Convert website URL page to text (txt) Converts a website URL page into text (txt); extracts text from HTML
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">HTML to Text request parameters</param>
+        /// <returns>Task of ApiResponse (UrlToTextResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UrlToTextResponse>> ConvertWebHtmlToTxtAsyncWithHttpInfo (UrlToTextRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling ConvertWebApi->ConvertWebHtmlToTxt");
+
+            var localVarPath = "/convert/web/url/to/txt";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertWebHtmlToTxt", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<UrlToTextResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (UrlToTextResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UrlToTextResponse)));
+        }
+
+        /// <summary>
+        /// Convert HTML string to text (txt) Converts an HTML string input into text (txt); extracts text from HTML
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">HTML to Text request parameters</param>
+        /// <returns>HtmlToTextResponse</returns>
+        public HtmlToTextResponse ConvertWebHtmlToTxt_0 (HtmlToTextRequest input)
+        {
+             ApiResponse<HtmlToTextResponse> localVarResponse = ConvertWebHtmlToTxt_0WithHttpInfo(input);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Convert HTML string to text (txt) Converts an HTML string input into text (txt); extracts text from HTML
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">HTML to Text request parameters</param>
+        /// <returns>ApiResponse of HtmlToTextResponse</returns>
+        public ApiResponse< HtmlToTextResponse > ConvertWebHtmlToTxt_0WithHttpInfo (HtmlToTextRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling ConvertWebApi->ConvertWebHtmlToTxt_0");
+
+            var localVarPath = "/convert/web/html/to/txt";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertWebHtmlToTxt_0", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<HtmlToTextResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (HtmlToTextResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(HtmlToTextResponse)));
+        }
+
+        /// <summary>
+        /// Convert HTML string to text (txt) Converts an HTML string input into text (txt); extracts text from HTML
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">HTML to Text request parameters</param>
+        /// <returns>Task of HtmlToTextResponse</returns>
+        public async System.Threading.Tasks.Task<HtmlToTextResponse> ConvertWebHtmlToTxt_0Async (HtmlToTextRequest input)
+        {
+             ApiResponse<HtmlToTextResponse> localVarResponse = await ConvertWebHtmlToTxt_0AsyncWithHttpInfo(input);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Convert HTML string to text (txt) Converts an HTML string input into text (txt); extracts text from HTML
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">HTML to Text request parameters</param>
+        /// <returns>Task of ApiResponse (HtmlToTextResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<HtmlToTextResponse>> ConvertWebHtmlToTxt_0AsyncWithHttpInfo (HtmlToTextRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling ConvertWebApi->ConvertWebHtmlToTxt_0");
+
+            var localVarPath = "/convert/web/html/to/txt";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertWebHtmlToTxt_0", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<HtmlToTextResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (HtmlToTextResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(HtmlToTextResponse)));
         }
 
         /// <summary>

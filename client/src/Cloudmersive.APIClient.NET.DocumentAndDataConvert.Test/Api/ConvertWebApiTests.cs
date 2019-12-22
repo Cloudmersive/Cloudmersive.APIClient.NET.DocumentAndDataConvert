@@ -101,6 +101,30 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test ConvertWebHtmlToTxt
+        /// </summary>
+        [Test]
+        public void ConvertWebHtmlToTxtTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //UrlToTextRequest input = null;
+            //var response = instance.ConvertWebHtmlToTxt(input);
+            //Assert.IsInstanceOf<UrlToTextResponse> (response, "response is UrlToTextResponse");
+        }
+        
+        /// <summary>
+        /// Test ConvertWebHtmlToTxt_0
+        /// </summary>
+        [Test]
+        public void ConvertWebHtmlToTxt_0Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //HtmlToTextRequest input = null;
+            //var response = instance.ConvertWebHtmlToTxt_0(input);
+            //Assert.IsInstanceOf<HtmlToTextResponse> (response, "response is HtmlToTextResponse");
+        }
+        
+        /// <summary>
         /// Test ConvertWebMdToHtml
         /// </summary>
         [Test]

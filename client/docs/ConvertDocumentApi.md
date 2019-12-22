@@ -7,31 +7,32 @@ Method | HTTP request | Description
 [**ConvertDocumentAutodetectGetInfo**](ConvertDocumentApi.md#convertdocumentautodetectgetinfo) | **POST** /convert/autodetect/get-info | Get document type information
 [**ConvertDocumentAutodetectToPdf**](ConvertDocumentApi.md#convertdocumentautodetecttopdf) | **POST** /convert/autodetect/to/pdf | Convert Document to PDF
 [**ConvertDocumentAutodetectToPngArray**](ConvertDocumentApi.md#convertdocumentautodetecttopngarray) | **POST** /convert/autodetect/to/png | Convert Document to PNG array
-[**ConvertDocumentAutodetectToTxt**](ConvertDocumentApi.md#convertdocumentautodetecttotxt) | **POST** /convert/autodetect/to/txt | Convert Document to Text
+[**ConvertDocumentAutodetectToTxt**](ConvertDocumentApi.md#convertdocumentautodetecttotxt) | **POST** /convert/autodetect/to/txt | Convert Document to Text (txt)
 [**ConvertDocumentCsvToXlsx**](ConvertDocumentApi.md#convertdocumentcsvtoxlsx) | **POST** /convert/csv/to/xlsx | Convert CSV to Excel XLSX Spreadsheet
 [**ConvertDocumentDocToDocx**](ConvertDocumentApi.md#convertdocumentdoctodocx) | **POST** /convert/doc/to/docx | Convert Word DOC (97-03) Document to DOCX
 [**ConvertDocumentDocToPdf**](ConvertDocumentApi.md#convertdocumentdoctopdf) | **POST** /convert/doc/to/pdf | Convert Word DOC (97-03) Document to PDF
 [**ConvertDocumentDocxToPdf**](ConvertDocumentApi.md#convertdocumentdocxtopdf) | **POST** /convert/docx/to/pdf | Convert Word DOCX Document to PDF
-[**ConvertDocumentDocxToTxt**](ConvertDocumentApi.md#convertdocumentdocxtotxt) | **POST** /convert/docx/to/txt | Convert Word DOCX Document to Text
-[**ConvertDocumentHtmlToPdf**](ConvertDocumentApi.md#convertdocumenthtmltopdf) | **POST** /convert/html/to/pdf | Convert HTML to PDF Document
-[**ConvertDocumentHtmlToPng**](ConvertDocumentApi.md#convertdocumenthtmltopng) | **POST** /convert/html/to/png | Convert HTML to PNG image array
+[**ConvertDocumentDocxToTxt**](ConvertDocumentApi.md#convertdocumentdocxtotxt) | **POST** /convert/docx/to/txt | Convert Word DOCX Document to Text (txt)
+[**ConvertDocumentHtmlToPdf**](ConvertDocumentApi.md#convertdocumenthtmltopdf) | **POST** /convert/html/to/pdf | Convert HTML document file to PDF Document
+[**ConvertDocumentHtmlToPng**](ConvertDocumentApi.md#convertdocumenthtmltopng) | **POST** /convert/html/to/png | Convert HTML document file to PNG image array
+[**ConvertDocumentHtmlToTxt**](ConvertDocumentApi.md#convertdocumenthtmltotxt) | **POST** /convert/html/to/txt | HTML Document file to Text (txt)
 [**ConvertDocumentPdfToDocx**](ConvertDocumentApi.md#convertdocumentpdftodocx) | **POST** /convert/pdf/to/docx | Convert PDF to Word DOCX Document
 [**ConvertDocumentPdfToDocxRasterize**](ConvertDocumentApi.md#convertdocumentpdftodocxrasterize) | **POST** /convert/pdf/to/docx/rasterize | Convert PDF to Word DOCX Document based on rasterized version of the PDF
 [**ConvertDocumentPdfToPngArray**](ConvertDocumentApi.md#convertdocumentpdftopngarray) | **POST** /convert/pdf/to/png | Convert PDF to PNG Image Array
 [**ConvertDocumentPdfToPngSingle**](ConvertDocumentApi.md#convertdocumentpdftopngsingle) | **POST** /convert/pdf/to/png/merge-single | Convert PDF to Single PNG image
 [**ConvertDocumentPdfToPptx**](ConvertDocumentApi.md#convertdocumentpdftopptx) | **POST** /convert/pdf/to/pptx | Convert PDF to PowerPoint PPTX Presentation
-[**ConvertDocumentPdfToTxt**](ConvertDocumentApi.md#convertdocumentpdftotxt) | **POST** /convert/pdf/to/txt | Convert PDF Document to Text
+[**ConvertDocumentPdfToTxt**](ConvertDocumentApi.md#convertdocumentpdftotxt) | **POST** /convert/pdf/to/txt | Convert PDF Document to Text (txt)
 [**ConvertDocumentPngArrayToPdf**](ConvertDocumentApi.md#convertdocumentpngarraytopdf) | **POST** /convert/png/to/pdf | Convert PNG Array to PDF
 [**ConvertDocumentPptToPdf**](ConvertDocumentApi.md#convertdocumentppttopdf) | **POST** /convert/ppt/to/pdf | Convert PowerPoint PPT (97-03) Presentation to PDF
 [**ConvertDocumentPptToPptx**](ConvertDocumentApi.md#convertdocumentppttopptx) | **POST** /convert/ppt/to/pptx | Convert PowerPoint PPT (97-03) Presentation to PPTX
 [**ConvertDocumentPptxToPdf**](ConvertDocumentApi.md#convertdocumentpptxtopdf) | **POST** /convert/pptx/to/pdf | Convert PowerPoint PPTX Presentation to PDF
-[**ConvertDocumentPptxToTxt**](ConvertDocumentApi.md#convertdocumentpptxtotxt) | **POST** /convert/pptx/to/txt | Convert PowerPoint PPTX Presentation to Text
+[**ConvertDocumentPptxToTxt**](ConvertDocumentApi.md#convertdocumentpptxtotxt) | **POST** /convert/pptx/to/txt | Convert PowerPoint PPTX Presentation to Text (txt)
 [**ConvertDocumentXlsToCsv**](ConvertDocumentApi.md#convertdocumentxlstocsv) | **POST** /convert/xls/to/csv | Convert Excel XLS (97-03) Spreadsheet to CSV
 [**ConvertDocumentXlsToPdf**](ConvertDocumentApi.md#convertdocumentxlstopdf) | **POST** /convert/xls/to/pdf | Convert Excel XLS (97-03) Spreadsheet to PDF
 [**ConvertDocumentXlsToXlsx**](ConvertDocumentApi.md#convertdocumentxlstoxlsx) | **POST** /convert/xls/to/xlsx | Convert Excel XLS (97-03) Spreadsheet to XLSX
 [**ConvertDocumentXlsxToCsv**](ConvertDocumentApi.md#convertdocumentxlsxtocsv) | **POST** /convert/xlsx/to/csv | Convert Excel XLSX Spreadsheet to CSV
 [**ConvertDocumentXlsxToPdf**](ConvertDocumentApi.md#convertdocumentxlsxtopdf) | **POST** /convert/xlsx/to/pdf | Convert Excel XLSX Spreadsheet to PDF
-[**ConvertDocumentXlsxToTxt**](ConvertDocumentApi.md#convertdocumentxlsxtotxt) | **POST** /convert/xlsx/to/txt | Convert Excel XLSX Spreadsheet to Text
+[**ConvertDocumentXlsxToTxt**](ConvertDocumentApi.md#convertdocumentxlsxtotxt) | **POST** /convert/xlsx/to/txt | Convert Excel XLSX Spreadsheet to Text (txt)
 
 
 <a name="convertdocumentautodetectgetinfo"></a>
@@ -236,7 +237,7 @@ Name | Type | Description  | Notes
 # **ConvertDocumentAutodetectToTxt**
 > TextConversionResult ConvertDocumentAutodetectToTxt (System.IO.Stream inputFile)
 
-Convert Document to Text
+Convert Document to Text (txt)
 
 Automatically detect file type and convert it to Text.  Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT) and PDF files.
 
@@ -264,7 +265,7 @@ namespace Example
 
             try
             {
-                // Convert Document to Text
+                // Convert Document to Text (txt)
                 TextConversionResult result = apiInstance.ConvertDocumentAutodetectToTxt(inputFile);
                 Debug.WriteLine(result);
             }
@@ -566,7 +567,7 @@ Name | Type | Description  | Notes
 # **ConvertDocumentDocxToTxt**
 > TextConversionResult ConvertDocumentDocxToTxt (System.IO.Stream inputFile)
 
-Convert Word DOCX Document to Text
+Convert Word DOCX Document to Text (txt)
 
 Convert Office Word Documents (docx) to text
 
@@ -594,7 +595,7 @@ namespace Example
 
             try
             {
-                // Convert Word DOCX Document to Text
+                // Convert Word DOCX Document to Text (txt)
                 TextConversionResult result = apiInstance.ConvertDocumentDocxToTxt(inputFile);
                 Debug.WriteLine(result);
             }
@@ -632,7 +633,7 @@ Name | Type | Description  | Notes
 # **ConvertDocumentHtmlToPdf**
 > byte[] ConvertDocumentHtmlToPdf (System.IO.Stream inputFile)
 
-Convert HTML to PDF Document
+Convert HTML document file to PDF Document
 
 Convert standard HTML, with full support for CSS, JavaScript, Images, and other complex behavior to PDF.  To use external files such as images, use an absolute URL to the file.
 
@@ -660,7 +661,7 @@ namespace Example
 
             try
             {
-                // Convert HTML to PDF Document
+                // Convert HTML document file to PDF Document
                 byte[] result = apiInstance.ConvertDocumentHtmlToPdf(inputFile);
                 Debug.WriteLine(result);
             }
@@ -698,7 +699,7 @@ Name | Type | Description  | Notes
 # **ConvertDocumentHtmlToPng**
 > PdfToPngResult ConvertDocumentHtmlToPng (System.IO.Stream inputFile)
 
-Convert HTML to PNG image array
+Convert HTML document file to PNG image array
 
 Convert standard HTML, with full support for CSS, JavaScript, Images, and other complex behavior to an array of PNG images, one for each page.  To use external files in your HTML such as images, use an absolute URL to the file.
 
@@ -726,7 +727,7 @@ namespace Example
 
             try
             {
-                // Convert HTML to PNG image array
+                // Convert HTML document file to PNG image array
                 PdfToPngResult result = apiInstance.ConvertDocumentHtmlToPng(inputFile);
                 Debug.WriteLine(result);
             }
@@ -748,6 +749,72 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**PdfToPngResult**](PdfToPngResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="convertdocumenthtmltotxt"></a>
+# **ConvertDocumentHtmlToTxt**
+> TextConversionResult ConvertDocumentHtmlToTxt (System.IO.Stream inputFile)
+
+HTML Document file to Text (txt)
+
+HTML document to text
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class ConvertDocumentHtmlToTxtExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new ConvertDocumentApi();
+            var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
+
+            try
+            {
+                // HTML Document file to Text (txt)
+                TextConversionResult result = apiInstance.ConvertDocumentHtmlToTxt(inputFile);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConvertDocumentApi.ConvertDocumentHtmlToTxt: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
+
+### Return type
+
+[**TextConversionResult**](TextConversionResult.md)
 
 ### Authorization
 
@@ -1094,7 +1161,7 @@ Name | Type | Description  | Notes
 # **ConvertDocumentPdfToTxt**
 > TextConversionResult ConvertDocumentPdfToTxt (System.IO.Stream inputFile)
 
-Convert PDF Document to Text
+Convert PDF Document to Text (txt)
 
 PDF document to text
 
@@ -1122,7 +1189,7 @@ namespace Example
 
             try
             {
-                // Convert PDF Document to Text
+                // Convert PDF Document to Text (txt)
                 TextConversionResult result = apiInstance.ConvertDocumentPdfToTxt(inputFile);
                 Debug.WriteLine(result);
             }
@@ -1442,7 +1509,7 @@ Name | Type | Description  | Notes
 # **ConvertDocumentPptxToTxt**
 > TextConversionResult ConvertDocumentPptxToTxt (System.IO.Stream inputFile)
 
-Convert PowerPoint PPTX Presentation to Text
+Convert PowerPoint PPTX Presentation to Text (txt)
 
 Convert Office PowerPoint Documents (pptx) to standard Text
 
@@ -1470,7 +1537,7 @@ namespace Example
 
             try
             {
-                // Convert PowerPoint PPTX Presentation to Text
+                // Convert PowerPoint PPTX Presentation to Text (txt)
                 TextConversionResult result = apiInstance.ConvertDocumentPptxToTxt(inputFile);
                 Debug.WriteLine(result);
             }
@@ -1840,7 +1907,7 @@ Name | Type | Description  | Notes
 # **ConvertDocumentXlsxToTxt**
 > TextConversionResult ConvertDocumentXlsxToTxt (System.IO.Stream inputFile)
 
-Convert Excel XLSX Spreadsheet to Text
+Convert Excel XLSX Spreadsheet to Text (txt)
 
 Convert Office Excel Workbooks (XLSX) to standard Text.  Converts all worksheets in the workbook to Text.  Supports both XLSX and XLSB file formats.
 
@@ -1868,7 +1935,7 @@ namespace Example
 
             try
             {
-                // Convert Excel XLSX Spreadsheet to Text
+                // Convert Excel XLSX Spreadsheet to Text (txt)
                 TextConversionResult result = apiInstance.ConvertDocumentXlsxToTxt(inputFile);
                 Debug.WriteLine(result);
             }

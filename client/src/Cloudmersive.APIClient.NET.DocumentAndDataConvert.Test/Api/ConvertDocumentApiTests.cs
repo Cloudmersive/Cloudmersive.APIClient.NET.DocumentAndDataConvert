@@ -197,6 +197,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test ConvertDocumentHtmlToTxt
+        /// </summary>
+        [Test]
+        public void ConvertDocumentHtmlToTxtTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.ConvertDocumentHtmlToTxt(inputFile);
+            //Assert.IsInstanceOf<TextConversionResult> (response, "response is TextConversionResult");
+        }
+        
+        /// <summary>
         /// Test ConvertDocumentPdfToDocx
         /// </summary>
         [Test]
