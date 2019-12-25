@@ -14,6 +14,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
 using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
 
 namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 {
@@ -52,8 +53,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jsonObject"></param>
-        /// <returns>Object</returns>
-        Object ConvertDataJsonToXml (Object jsonObject);
+        /// <returns>byte[]</returns>
+        byte[] ConvertDataJsonToXml (Object jsonObject);
 
         /// <summary>
         /// Convert JSON to XML conversion
@@ -63,8 +64,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jsonObject"></param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> ConvertDataJsonToXmlWithHttpInfo (Object jsonObject);
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> ConvertDataJsonToXmlWithHttpInfo (Object jsonObject);
         /// <summary>
         /// Convert Excel (97-2003) XLS to JSON conversion
         /// </summary>
@@ -108,6 +109,177 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> ConvertDataXlsxToJsonWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
+        /// Adds an attribute to all XML nodes matching XPath expression
+        /// </summary>
+        /// <remarks>
+        /// Return the reuslts of editing an XML document by adding an attribute to all of the nodes that match an input XPath expression.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="xmlAttributeName">Name of the XML attribute to add</param>
+        /// <param name="xmlAttributeValue">Value of the XML attribute to add</param>
+        /// <returns>XmlAddAttributeWithXPathResult</returns>
+        XmlAddAttributeWithXPathResult ConvertDataXmlEditAddAttributeWithXPath (System.IO.Stream inputFile, string xPathExpression, string xmlAttributeName, string xmlAttributeValue);
+
+        /// <summary>
+        /// Adds an attribute to all XML nodes matching XPath expression
+        /// </summary>
+        /// <remarks>
+        /// Return the reuslts of editing an XML document by adding an attribute to all of the nodes that match an input XPath expression.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="xmlAttributeName">Name of the XML attribute to add</param>
+        /// <param name="xmlAttributeValue">Value of the XML attribute to add</param>
+        /// <returns>ApiResponse of XmlAddAttributeWithXPathResult</returns>
+        ApiResponse<XmlAddAttributeWithXPathResult> ConvertDataXmlEditAddAttributeWithXPathWithHttpInfo (System.IO.Stream inputFile, string xPathExpression, string xmlAttributeName, string xmlAttributeValue);
+        /// <summary>
+        /// Adds an XML node as a child to XML nodes matching XPath expression
+        /// </summary>
+        /// <remarks>
+        /// Return the reuslts of editing an XML document by adding an XML node as a child to all of the nodes that match an input XPath expression.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="xmlNodeToAdd">XML Node to add as a child</param>
+        /// <returns>XmlAddChildWithXPathResult</returns>
+        XmlAddChildWithXPathResult ConvertDataXmlEditAddChildWithXPath (System.IO.Stream inputFile, string xPathExpression, string xmlNodeToAdd);
+
+        /// <summary>
+        /// Adds an XML node as a child to XML nodes matching XPath expression
+        /// </summary>
+        /// <remarks>
+        /// Return the reuslts of editing an XML document by adding an XML node as a child to all of the nodes that match an input XPath expression.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="xmlNodeToAdd">XML Node to add as a child</param>
+        /// <returns>ApiResponse of XmlAddChildWithXPathResult</returns>
+        ApiResponse<XmlAddChildWithXPathResult> ConvertDataXmlEditAddChildWithXPathWithHttpInfo (System.IO.Stream inputFile, string xPathExpression, string xmlNodeToAdd);
+        /// <summary>
+        /// Removes, deletes all children of nodes matching XPath expression, but does not remove the nodes
+        /// </summary>
+        /// <remarks>
+        /// Return the reuslts of editing an XML document by removing all child nodes of the nodes that match an input XPath expression.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <returns>XmlRemoveAllChildrenWithXPathResult</returns>
+        XmlRemoveAllChildrenWithXPathResult ConvertDataXmlEditRemoveAllChildNodesWithXPath (System.IO.Stream inputFile, string xPathExpression);
+
+        /// <summary>
+        /// Removes, deletes all children of nodes matching XPath expression, but does not remove the nodes
+        /// </summary>
+        /// <remarks>
+        /// Return the reuslts of editing an XML document by removing all child nodes of the nodes that match an input XPath expression.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <returns>ApiResponse of XmlRemoveAllChildrenWithXPathResult</returns>
+        ApiResponse<XmlRemoveAllChildrenWithXPathResult> ConvertDataXmlEditRemoveAllChildNodesWithXPathWithHttpInfo (System.IO.Stream inputFile, string xPathExpression);
+        /// <summary>
+        /// Replaces XML nodes matching XPath expression with new node
+        /// </summary>
+        /// <remarks>
+        /// Return the reuslts of editing an XML document by replacing all of the nodes that match an input XPath expression with a new XML node expression.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="xmlNodeReplacement">XML Node replacement content</param>
+        /// <returns>XmlReplaceWithXPathResult</returns>
+        XmlReplaceWithXPathResult ConvertDataXmlEditReplaceWithXPath (System.IO.Stream inputFile, string xPathExpression, string xmlNodeReplacement);
+
+        /// <summary>
+        /// Replaces XML nodes matching XPath expression with new node
+        /// </summary>
+        /// <remarks>
+        /// Return the reuslts of editing an XML document by replacing all of the nodes that match an input XPath expression with a new XML node expression.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="xmlNodeReplacement">XML Node replacement content</param>
+        /// <returns>ApiResponse of XmlReplaceWithXPathResult</returns>
+        ApiResponse<XmlReplaceWithXPathResult> ConvertDataXmlEditReplaceWithXPathWithHttpInfo (System.IO.Stream inputFile, string xPathExpression, string xmlNodeReplacement);
+        /// <summary>
+        /// Sets the value contents of XML nodes matching XPath expression
+        /// </summary>
+        /// <remarks>
+        /// Return the reuslts of editing an XML document by setting the contents of all of the nodes that match an input XPath expression.  Supports elements and attributes.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="xmlValue">XML Value to set into the matching XML nodes</param>
+        /// <returns>XmlSetValueWithXPathResult</returns>
+        XmlSetValueWithXPathResult ConvertDataXmlEditSetValueWithXPath (System.IO.Stream inputFile, string xPathExpression, string xmlValue);
+
+        /// <summary>
+        /// Sets the value contents of XML nodes matching XPath expression
+        /// </summary>
+        /// <remarks>
+        /// Return the reuslts of editing an XML document by setting the contents of all of the nodes that match an input XPath expression.  Supports elements and attributes.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="xmlValue">XML Value to set into the matching XML nodes</param>
+        /// <returns>ApiResponse of XmlSetValueWithXPathResult</returns>
+        ApiResponse<XmlSetValueWithXPathResult> ConvertDataXmlEditSetValueWithXPathWithHttpInfo (System.IO.Stream inputFile, string xPathExpression, string xmlValue);
+        /// <summary>
+        /// Filter, select XML nodes using XPath expression, get results
+        /// </summary>
+        /// <remarks>
+        /// Return the reuslts of filtering, selecting an XML document with an XPath expression
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>XmlFIlterWithXPathResult</returns>
+        XmlFIlterWithXPathResult ConvertDataXmlFilterWithXPath (string xPathExpression, System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Filter, select XML nodes using XPath expression, get results
+        /// </summary>
+        /// <remarks>
+        /// Return the reuslts of filtering, selecting an XML document with an XPath expression
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of XmlFIlterWithXPathResult</returns>
+        ApiResponse<XmlFIlterWithXPathResult> ConvertDataXmlFilterWithXPathWithHttpInfo (string xPathExpression, System.IO.Stream inputFile);
+        /// <summary>
+        /// Remove, delete XML nodes and items matching XPath expression
+        /// </summary>
+        /// <remarks>
+        /// Return the reuslts of editing an XML document by removing all of the nodes that match an input XPath expression
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>XmlRemoveWithXPathResult</returns>
+        XmlRemoveWithXPathResult ConvertDataXmlRemoveWithXPath (string xPathExpression, System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Remove, delete XML nodes and items matching XPath expression
+        /// </summary>
+        /// <remarks>
+        /// Return the reuslts of editing an XML document by removing all of the nodes that match an input XPath expression
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of XmlRemoveWithXPathResult</returns>
+        ApiResponse<XmlRemoveWithXPathResult> ConvertDataXmlRemoveWithXPathWithHttpInfo (string xPathExpression, System.IO.Stream inputFile);
+        /// <summary>
         /// Convert XML to JSON conversion
         /// </summary>
         /// <remarks>
@@ -128,6 +300,29 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> ConvertDataXmlToJsonWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// Transform XML document file with XSLT into a new XML document
+        /// </summary>
+        /// <remarks>
+        /// Convert an XML string or file into JSON
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="transformFile">Input XSLT file to use to transform the input XML file.</param>
+        /// <returns>byte[]</returns>
+        byte[] ConvertDataXmlTransformWithXsltToXml (System.IO.Stream inputFile, System.IO.Stream transformFile);
+
+        /// <summary>
+        /// Transform XML document file with XSLT into a new XML document
+        /// </summary>
+        /// <remarks>
+        /// Convert an XML string or file into JSON
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="transformFile">Input XSLT file to use to transform the input XML file.</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> ConvertDataXmlTransformWithXsltToXmlWithHttpInfo (System.IO.Stream inputFile, System.IO.Stream transformFile);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -159,8 +354,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jsonObject"></param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> ConvertDataJsonToXmlAsync (Object jsonObject);
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> ConvertDataJsonToXmlAsync (Object jsonObject);
 
         /// <summary>
         /// Convert JSON to XML conversion
@@ -170,8 +365,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jsonObject"></param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ConvertDataJsonToXmlAsyncWithHttpInfo (Object jsonObject);
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDataJsonToXmlAsyncWithHttpInfo (Object jsonObject);
         /// <summary>
         /// Convert Excel (97-2003) XLS to JSON conversion
         /// </summary>
@@ -215,6 +410,177 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ConvertDataXlsxToJsonAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
+        /// Adds an attribute to all XML nodes matching XPath expression
+        /// </summary>
+        /// <remarks>
+        /// Return the reuslts of editing an XML document by adding an attribute to all of the nodes that match an input XPath expression.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="xmlAttributeName">Name of the XML attribute to add</param>
+        /// <param name="xmlAttributeValue">Value of the XML attribute to add</param>
+        /// <returns>Task of XmlAddAttributeWithXPathResult</returns>
+        System.Threading.Tasks.Task<XmlAddAttributeWithXPathResult> ConvertDataXmlEditAddAttributeWithXPathAsync (System.IO.Stream inputFile, string xPathExpression, string xmlAttributeName, string xmlAttributeValue);
+
+        /// <summary>
+        /// Adds an attribute to all XML nodes matching XPath expression
+        /// </summary>
+        /// <remarks>
+        /// Return the reuslts of editing an XML document by adding an attribute to all of the nodes that match an input XPath expression.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="xmlAttributeName">Name of the XML attribute to add</param>
+        /// <param name="xmlAttributeValue">Value of the XML attribute to add</param>
+        /// <returns>Task of ApiResponse (XmlAddAttributeWithXPathResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<XmlAddAttributeWithXPathResult>> ConvertDataXmlEditAddAttributeWithXPathAsyncWithHttpInfo (System.IO.Stream inputFile, string xPathExpression, string xmlAttributeName, string xmlAttributeValue);
+        /// <summary>
+        /// Adds an XML node as a child to XML nodes matching XPath expression
+        /// </summary>
+        /// <remarks>
+        /// Return the reuslts of editing an XML document by adding an XML node as a child to all of the nodes that match an input XPath expression.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="xmlNodeToAdd">XML Node to add as a child</param>
+        /// <returns>Task of XmlAddChildWithXPathResult</returns>
+        System.Threading.Tasks.Task<XmlAddChildWithXPathResult> ConvertDataXmlEditAddChildWithXPathAsync (System.IO.Stream inputFile, string xPathExpression, string xmlNodeToAdd);
+
+        /// <summary>
+        /// Adds an XML node as a child to XML nodes matching XPath expression
+        /// </summary>
+        /// <remarks>
+        /// Return the reuslts of editing an XML document by adding an XML node as a child to all of the nodes that match an input XPath expression.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="xmlNodeToAdd">XML Node to add as a child</param>
+        /// <returns>Task of ApiResponse (XmlAddChildWithXPathResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<XmlAddChildWithXPathResult>> ConvertDataXmlEditAddChildWithXPathAsyncWithHttpInfo (System.IO.Stream inputFile, string xPathExpression, string xmlNodeToAdd);
+        /// <summary>
+        /// Removes, deletes all children of nodes matching XPath expression, but does not remove the nodes
+        /// </summary>
+        /// <remarks>
+        /// Return the reuslts of editing an XML document by removing all child nodes of the nodes that match an input XPath expression.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <returns>Task of XmlRemoveAllChildrenWithXPathResult</returns>
+        System.Threading.Tasks.Task<XmlRemoveAllChildrenWithXPathResult> ConvertDataXmlEditRemoveAllChildNodesWithXPathAsync (System.IO.Stream inputFile, string xPathExpression);
+
+        /// <summary>
+        /// Removes, deletes all children of nodes matching XPath expression, but does not remove the nodes
+        /// </summary>
+        /// <remarks>
+        /// Return the reuslts of editing an XML document by removing all child nodes of the nodes that match an input XPath expression.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <returns>Task of ApiResponse (XmlRemoveAllChildrenWithXPathResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<XmlRemoveAllChildrenWithXPathResult>> ConvertDataXmlEditRemoveAllChildNodesWithXPathAsyncWithHttpInfo (System.IO.Stream inputFile, string xPathExpression);
+        /// <summary>
+        /// Replaces XML nodes matching XPath expression with new node
+        /// </summary>
+        /// <remarks>
+        /// Return the reuslts of editing an XML document by replacing all of the nodes that match an input XPath expression with a new XML node expression.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="xmlNodeReplacement">XML Node replacement content</param>
+        /// <returns>Task of XmlReplaceWithXPathResult</returns>
+        System.Threading.Tasks.Task<XmlReplaceWithXPathResult> ConvertDataXmlEditReplaceWithXPathAsync (System.IO.Stream inputFile, string xPathExpression, string xmlNodeReplacement);
+
+        /// <summary>
+        /// Replaces XML nodes matching XPath expression with new node
+        /// </summary>
+        /// <remarks>
+        /// Return the reuslts of editing an XML document by replacing all of the nodes that match an input XPath expression with a new XML node expression.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="xmlNodeReplacement">XML Node replacement content</param>
+        /// <returns>Task of ApiResponse (XmlReplaceWithXPathResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<XmlReplaceWithXPathResult>> ConvertDataXmlEditReplaceWithXPathAsyncWithHttpInfo (System.IO.Stream inputFile, string xPathExpression, string xmlNodeReplacement);
+        /// <summary>
+        /// Sets the value contents of XML nodes matching XPath expression
+        /// </summary>
+        /// <remarks>
+        /// Return the reuslts of editing an XML document by setting the contents of all of the nodes that match an input XPath expression.  Supports elements and attributes.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="xmlValue">XML Value to set into the matching XML nodes</param>
+        /// <returns>Task of XmlSetValueWithXPathResult</returns>
+        System.Threading.Tasks.Task<XmlSetValueWithXPathResult> ConvertDataXmlEditSetValueWithXPathAsync (System.IO.Stream inputFile, string xPathExpression, string xmlValue);
+
+        /// <summary>
+        /// Sets the value contents of XML nodes matching XPath expression
+        /// </summary>
+        /// <remarks>
+        /// Return the reuslts of editing an XML document by setting the contents of all of the nodes that match an input XPath expression.  Supports elements and attributes.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="xmlValue">XML Value to set into the matching XML nodes</param>
+        /// <returns>Task of ApiResponse (XmlSetValueWithXPathResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<XmlSetValueWithXPathResult>> ConvertDataXmlEditSetValueWithXPathAsyncWithHttpInfo (System.IO.Stream inputFile, string xPathExpression, string xmlValue);
+        /// <summary>
+        /// Filter, select XML nodes using XPath expression, get results
+        /// </summary>
+        /// <remarks>
+        /// Return the reuslts of filtering, selecting an XML document with an XPath expression
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of XmlFIlterWithXPathResult</returns>
+        System.Threading.Tasks.Task<XmlFIlterWithXPathResult> ConvertDataXmlFilterWithXPathAsync (string xPathExpression, System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Filter, select XML nodes using XPath expression, get results
+        /// </summary>
+        /// <remarks>
+        /// Return the reuslts of filtering, selecting an XML document with an XPath expression
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (XmlFIlterWithXPathResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<XmlFIlterWithXPathResult>> ConvertDataXmlFilterWithXPathAsyncWithHttpInfo (string xPathExpression, System.IO.Stream inputFile);
+        /// <summary>
+        /// Remove, delete XML nodes and items matching XPath expression
+        /// </summary>
+        /// <remarks>
+        /// Return the reuslts of editing an XML document by removing all of the nodes that match an input XPath expression
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of XmlRemoveWithXPathResult</returns>
+        System.Threading.Tasks.Task<XmlRemoveWithXPathResult> ConvertDataXmlRemoveWithXPathAsync (string xPathExpression, System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Remove, delete XML nodes and items matching XPath expression
+        /// </summary>
+        /// <remarks>
+        /// Return the reuslts of editing an XML document by removing all of the nodes that match an input XPath expression
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (XmlRemoveWithXPathResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<XmlRemoveWithXPathResult>> ConvertDataXmlRemoveWithXPathAsyncWithHttpInfo (string xPathExpression, System.IO.Stream inputFile);
+        /// <summary>
         /// Convert XML to JSON conversion
         /// </summary>
         /// <remarks>
@@ -235,6 +601,29 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ConvertDataXmlToJsonAsyncWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// Transform XML document file with XSLT into a new XML document
+        /// </summary>
+        /// <remarks>
+        /// Convert an XML string or file into JSON
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="transformFile">Input XSLT file to use to transform the input XML file.</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> ConvertDataXmlTransformWithXsltToXmlAsync (System.IO.Stream inputFile, System.IO.Stream transformFile);
+
+        /// <summary>
+        /// Transform XML document file with XSLT into a new XML document
+        /// </summary>
+        /// <remarks>
+        /// Convert an XML string or file into JSON
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="transformFile">Input XSLT file to use to transform the input XML file.</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDataXmlTransformWithXsltToXmlAsyncWithHttpInfo (System.IO.Stream inputFile, System.IO.Stream transformFile);
         #endregion Asynchronous Operations
     }
 
@@ -485,10 +874,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jsonObject"></param>
-        /// <returns>Object</returns>
-        public Object ConvertDataJsonToXml (Object jsonObject)
+        /// <returns>byte[]</returns>
+        public byte[] ConvertDataJsonToXml (Object jsonObject)
         {
-             ApiResponse<Object> localVarResponse = ConvertDataJsonToXmlWithHttpInfo(jsonObject);
+             ApiResponse<byte[]> localVarResponse = ConvertDataJsonToXmlWithHttpInfo(jsonObject);
              return localVarResponse.Data;
         }
 
@@ -497,8 +886,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jsonObject"></param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > ConvertDataJsonToXmlWithHttpInfo (Object jsonObject)
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > ConvertDataJsonToXmlWithHttpInfo (Object jsonObject)
         {
             // verify the required parameter 'jsonObject' is set
             if (jsonObject == null)
@@ -558,9 +947,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
@@ -568,10 +957,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jsonObject"></param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> ConvertDataJsonToXmlAsync (Object jsonObject)
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> ConvertDataJsonToXmlAsync (Object jsonObject)
         {
-             ApiResponse<Object> localVarResponse = await ConvertDataJsonToXmlAsyncWithHttpInfo(jsonObject);
+             ApiResponse<byte[]> localVarResponse = await ConvertDataJsonToXmlAsyncWithHttpInfo(jsonObject);
              return localVarResponse.Data;
 
         }
@@ -581,8 +970,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jsonObject"></param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ConvertDataJsonToXmlAsyncWithHttpInfo (Object jsonObject)
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDataJsonToXmlAsyncWithHttpInfo (Object jsonObject)
         {
             // verify the required parameter 'jsonObject' is set
             if (jsonObject == null)
@@ -642,9 +1031,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
@@ -938,6 +1327,1197 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
+        /// Adds an attribute to all XML nodes matching XPath expression Return the reuslts of editing an XML document by adding an attribute to all of the nodes that match an input XPath expression.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="xmlAttributeName">Name of the XML attribute to add</param>
+        /// <param name="xmlAttributeValue">Value of the XML attribute to add</param>
+        /// <returns>XmlAddAttributeWithXPathResult</returns>
+        public XmlAddAttributeWithXPathResult ConvertDataXmlEditAddAttributeWithXPath (System.IO.Stream inputFile, string xPathExpression, string xmlAttributeName, string xmlAttributeValue)
+        {
+             ApiResponse<XmlAddAttributeWithXPathResult> localVarResponse = ConvertDataXmlEditAddAttributeWithXPathWithHttpInfo(inputFile, xPathExpression, xmlAttributeName, xmlAttributeValue);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Adds an attribute to all XML nodes matching XPath expression Return the reuslts of editing an XML document by adding an attribute to all of the nodes that match an input XPath expression.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="xmlAttributeName">Name of the XML attribute to add</param>
+        /// <param name="xmlAttributeValue">Value of the XML attribute to add</param>
+        /// <returns>ApiResponse of XmlAddAttributeWithXPathResult</returns>
+        public ApiResponse< XmlAddAttributeWithXPathResult > ConvertDataXmlEditAddAttributeWithXPathWithHttpInfo (System.IO.Stream inputFile, string xPathExpression, string xmlAttributeName, string xmlAttributeValue)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDataApi->ConvertDataXmlEditAddAttributeWithXPath");
+            // verify the required parameter 'xPathExpression' is set
+            if (xPathExpression == null)
+                throw new ApiException(400, "Missing required parameter 'xPathExpression' when calling ConvertDataApi->ConvertDataXmlEditAddAttributeWithXPath");
+            // verify the required parameter 'xmlAttributeName' is set
+            if (xmlAttributeName == null)
+                throw new ApiException(400, "Missing required parameter 'xmlAttributeName' when calling ConvertDataApi->ConvertDataXmlEditAddAttributeWithXPath");
+            // verify the required parameter 'xmlAttributeValue' is set
+            if (xmlAttributeValue == null)
+                throw new ApiException(400, "Missing required parameter 'xmlAttributeValue' when calling ConvertDataApi->ConvertDataXmlEditAddAttributeWithXPath");
+
+            var localVarPath = "/convert/xml/edit/xpath/add-attribute";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (xPathExpression != null) localVarHeaderParams.Add("XPathExpression", this.Configuration.ApiClient.ParameterToString(xPathExpression)); // header parameter
+            if (xmlAttributeName != null) localVarHeaderParams.Add("XmlAttributeName", this.Configuration.ApiClient.ParameterToString(xmlAttributeName)); // header parameter
+            if (xmlAttributeValue != null) localVarHeaderParams.Add("XmlAttributeValue", this.Configuration.ApiClient.ParameterToString(xmlAttributeValue)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDataXmlEditAddAttributeWithXPath", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<XmlAddAttributeWithXPathResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (XmlAddAttributeWithXPathResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(XmlAddAttributeWithXPathResult)));
+        }
+
+        /// <summary>
+        /// Adds an attribute to all XML nodes matching XPath expression Return the reuslts of editing an XML document by adding an attribute to all of the nodes that match an input XPath expression.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="xmlAttributeName">Name of the XML attribute to add</param>
+        /// <param name="xmlAttributeValue">Value of the XML attribute to add</param>
+        /// <returns>Task of XmlAddAttributeWithXPathResult</returns>
+        public async System.Threading.Tasks.Task<XmlAddAttributeWithXPathResult> ConvertDataXmlEditAddAttributeWithXPathAsync (System.IO.Stream inputFile, string xPathExpression, string xmlAttributeName, string xmlAttributeValue)
+        {
+             ApiResponse<XmlAddAttributeWithXPathResult> localVarResponse = await ConvertDataXmlEditAddAttributeWithXPathAsyncWithHttpInfo(inputFile, xPathExpression, xmlAttributeName, xmlAttributeValue);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Adds an attribute to all XML nodes matching XPath expression Return the reuslts of editing an XML document by adding an attribute to all of the nodes that match an input XPath expression.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="xmlAttributeName">Name of the XML attribute to add</param>
+        /// <param name="xmlAttributeValue">Value of the XML attribute to add</param>
+        /// <returns>Task of ApiResponse (XmlAddAttributeWithXPathResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<XmlAddAttributeWithXPathResult>> ConvertDataXmlEditAddAttributeWithXPathAsyncWithHttpInfo (System.IO.Stream inputFile, string xPathExpression, string xmlAttributeName, string xmlAttributeValue)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDataApi->ConvertDataXmlEditAddAttributeWithXPath");
+            // verify the required parameter 'xPathExpression' is set
+            if (xPathExpression == null)
+                throw new ApiException(400, "Missing required parameter 'xPathExpression' when calling ConvertDataApi->ConvertDataXmlEditAddAttributeWithXPath");
+            // verify the required parameter 'xmlAttributeName' is set
+            if (xmlAttributeName == null)
+                throw new ApiException(400, "Missing required parameter 'xmlAttributeName' when calling ConvertDataApi->ConvertDataXmlEditAddAttributeWithXPath");
+            // verify the required parameter 'xmlAttributeValue' is set
+            if (xmlAttributeValue == null)
+                throw new ApiException(400, "Missing required parameter 'xmlAttributeValue' when calling ConvertDataApi->ConvertDataXmlEditAddAttributeWithXPath");
+
+            var localVarPath = "/convert/xml/edit/xpath/add-attribute";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (xPathExpression != null) localVarHeaderParams.Add("XPathExpression", this.Configuration.ApiClient.ParameterToString(xPathExpression)); // header parameter
+            if (xmlAttributeName != null) localVarHeaderParams.Add("XmlAttributeName", this.Configuration.ApiClient.ParameterToString(xmlAttributeName)); // header parameter
+            if (xmlAttributeValue != null) localVarHeaderParams.Add("XmlAttributeValue", this.Configuration.ApiClient.ParameterToString(xmlAttributeValue)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDataXmlEditAddAttributeWithXPath", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<XmlAddAttributeWithXPathResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (XmlAddAttributeWithXPathResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(XmlAddAttributeWithXPathResult)));
+        }
+
+        /// <summary>
+        /// Adds an XML node as a child to XML nodes matching XPath expression Return the reuslts of editing an XML document by adding an XML node as a child to all of the nodes that match an input XPath expression.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="xmlNodeToAdd">XML Node to add as a child</param>
+        /// <returns>XmlAddChildWithXPathResult</returns>
+        public XmlAddChildWithXPathResult ConvertDataXmlEditAddChildWithXPath (System.IO.Stream inputFile, string xPathExpression, string xmlNodeToAdd)
+        {
+             ApiResponse<XmlAddChildWithXPathResult> localVarResponse = ConvertDataXmlEditAddChildWithXPathWithHttpInfo(inputFile, xPathExpression, xmlNodeToAdd);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Adds an XML node as a child to XML nodes matching XPath expression Return the reuslts of editing an XML document by adding an XML node as a child to all of the nodes that match an input XPath expression.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="xmlNodeToAdd">XML Node to add as a child</param>
+        /// <returns>ApiResponse of XmlAddChildWithXPathResult</returns>
+        public ApiResponse< XmlAddChildWithXPathResult > ConvertDataXmlEditAddChildWithXPathWithHttpInfo (System.IO.Stream inputFile, string xPathExpression, string xmlNodeToAdd)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDataApi->ConvertDataXmlEditAddChildWithXPath");
+            // verify the required parameter 'xPathExpression' is set
+            if (xPathExpression == null)
+                throw new ApiException(400, "Missing required parameter 'xPathExpression' when calling ConvertDataApi->ConvertDataXmlEditAddChildWithXPath");
+            // verify the required parameter 'xmlNodeToAdd' is set
+            if (xmlNodeToAdd == null)
+                throw new ApiException(400, "Missing required parameter 'xmlNodeToAdd' when calling ConvertDataApi->ConvertDataXmlEditAddChildWithXPath");
+
+            var localVarPath = "/convert/xml/edit/xpath/add-child";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (xPathExpression != null) localVarHeaderParams.Add("XPathExpression", this.Configuration.ApiClient.ParameterToString(xPathExpression)); // header parameter
+            if (xmlNodeToAdd != null) localVarHeaderParams.Add("XmlNodeToAdd", this.Configuration.ApiClient.ParameterToString(xmlNodeToAdd)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDataXmlEditAddChildWithXPath", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<XmlAddChildWithXPathResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (XmlAddChildWithXPathResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(XmlAddChildWithXPathResult)));
+        }
+
+        /// <summary>
+        /// Adds an XML node as a child to XML nodes matching XPath expression Return the reuslts of editing an XML document by adding an XML node as a child to all of the nodes that match an input XPath expression.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="xmlNodeToAdd">XML Node to add as a child</param>
+        /// <returns>Task of XmlAddChildWithXPathResult</returns>
+        public async System.Threading.Tasks.Task<XmlAddChildWithXPathResult> ConvertDataXmlEditAddChildWithXPathAsync (System.IO.Stream inputFile, string xPathExpression, string xmlNodeToAdd)
+        {
+             ApiResponse<XmlAddChildWithXPathResult> localVarResponse = await ConvertDataXmlEditAddChildWithXPathAsyncWithHttpInfo(inputFile, xPathExpression, xmlNodeToAdd);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Adds an XML node as a child to XML nodes matching XPath expression Return the reuslts of editing an XML document by adding an XML node as a child to all of the nodes that match an input XPath expression.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="xmlNodeToAdd">XML Node to add as a child</param>
+        /// <returns>Task of ApiResponse (XmlAddChildWithXPathResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<XmlAddChildWithXPathResult>> ConvertDataXmlEditAddChildWithXPathAsyncWithHttpInfo (System.IO.Stream inputFile, string xPathExpression, string xmlNodeToAdd)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDataApi->ConvertDataXmlEditAddChildWithXPath");
+            // verify the required parameter 'xPathExpression' is set
+            if (xPathExpression == null)
+                throw new ApiException(400, "Missing required parameter 'xPathExpression' when calling ConvertDataApi->ConvertDataXmlEditAddChildWithXPath");
+            // verify the required parameter 'xmlNodeToAdd' is set
+            if (xmlNodeToAdd == null)
+                throw new ApiException(400, "Missing required parameter 'xmlNodeToAdd' when calling ConvertDataApi->ConvertDataXmlEditAddChildWithXPath");
+
+            var localVarPath = "/convert/xml/edit/xpath/add-child";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (xPathExpression != null) localVarHeaderParams.Add("XPathExpression", this.Configuration.ApiClient.ParameterToString(xPathExpression)); // header parameter
+            if (xmlNodeToAdd != null) localVarHeaderParams.Add("XmlNodeToAdd", this.Configuration.ApiClient.ParameterToString(xmlNodeToAdd)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDataXmlEditAddChildWithXPath", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<XmlAddChildWithXPathResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (XmlAddChildWithXPathResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(XmlAddChildWithXPathResult)));
+        }
+
+        /// <summary>
+        /// Removes, deletes all children of nodes matching XPath expression, but does not remove the nodes Return the reuslts of editing an XML document by removing all child nodes of the nodes that match an input XPath expression.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <returns>XmlRemoveAllChildrenWithXPathResult</returns>
+        public XmlRemoveAllChildrenWithXPathResult ConvertDataXmlEditRemoveAllChildNodesWithXPath (System.IO.Stream inputFile, string xPathExpression)
+        {
+             ApiResponse<XmlRemoveAllChildrenWithXPathResult> localVarResponse = ConvertDataXmlEditRemoveAllChildNodesWithXPathWithHttpInfo(inputFile, xPathExpression);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Removes, deletes all children of nodes matching XPath expression, but does not remove the nodes Return the reuslts of editing an XML document by removing all child nodes of the nodes that match an input XPath expression.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <returns>ApiResponse of XmlRemoveAllChildrenWithXPathResult</returns>
+        public ApiResponse< XmlRemoveAllChildrenWithXPathResult > ConvertDataXmlEditRemoveAllChildNodesWithXPathWithHttpInfo (System.IO.Stream inputFile, string xPathExpression)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDataApi->ConvertDataXmlEditRemoveAllChildNodesWithXPath");
+            // verify the required parameter 'xPathExpression' is set
+            if (xPathExpression == null)
+                throw new ApiException(400, "Missing required parameter 'xPathExpression' when calling ConvertDataApi->ConvertDataXmlEditRemoveAllChildNodesWithXPath");
+
+            var localVarPath = "/convert/xml/edit/xpath/remove-all-children";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (xPathExpression != null) localVarHeaderParams.Add("XPathExpression", this.Configuration.ApiClient.ParameterToString(xPathExpression)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDataXmlEditRemoveAllChildNodesWithXPath", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<XmlRemoveAllChildrenWithXPathResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (XmlRemoveAllChildrenWithXPathResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(XmlRemoveAllChildrenWithXPathResult)));
+        }
+
+        /// <summary>
+        /// Removes, deletes all children of nodes matching XPath expression, but does not remove the nodes Return the reuslts of editing an XML document by removing all child nodes of the nodes that match an input XPath expression.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <returns>Task of XmlRemoveAllChildrenWithXPathResult</returns>
+        public async System.Threading.Tasks.Task<XmlRemoveAllChildrenWithXPathResult> ConvertDataXmlEditRemoveAllChildNodesWithXPathAsync (System.IO.Stream inputFile, string xPathExpression)
+        {
+             ApiResponse<XmlRemoveAllChildrenWithXPathResult> localVarResponse = await ConvertDataXmlEditRemoveAllChildNodesWithXPathAsyncWithHttpInfo(inputFile, xPathExpression);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Removes, deletes all children of nodes matching XPath expression, but does not remove the nodes Return the reuslts of editing an XML document by removing all child nodes of the nodes that match an input XPath expression.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <returns>Task of ApiResponse (XmlRemoveAllChildrenWithXPathResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<XmlRemoveAllChildrenWithXPathResult>> ConvertDataXmlEditRemoveAllChildNodesWithXPathAsyncWithHttpInfo (System.IO.Stream inputFile, string xPathExpression)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDataApi->ConvertDataXmlEditRemoveAllChildNodesWithXPath");
+            // verify the required parameter 'xPathExpression' is set
+            if (xPathExpression == null)
+                throw new ApiException(400, "Missing required parameter 'xPathExpression' when calling ConvertDataApi->ConvertDataXmlEditRemoveAllChildNodesWithXPath");
+
+            var localVarPath = "/convert/xml/edit/xpath/remove-all-children";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (xPathExpression != null) localVarHeaderParams.Add("XPathExpression", this.Configuration.ApiClient.ParameterToString(xPathExpression)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDataXmlEditRemoveAllChildNodesWithXPath", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<XmlRemoveAllChildrenWithXPathResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (XmlRemoveAllChildrenWithXPathResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(XmlRemoveAllChildrenWithXPathResult)));
+        }
+
+        /// <summary>
+        /// Replaces XML nodes matching XPath expression with new node Return the reuslts of editing an XML document by replacing all of the nodes that match an input XPath expression with a new XML node expression.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="xmlNodeReplacement">XML Node replacement content</param>
+        /// <returns>XmlReplaceWithXPathResult</returns>
+        public XmlReplaceWithXPathResult ConvertDataXmlEditReplaceWithXPath (System.IO.Stream inputFile, string xPathExpression, string xmlNodeReplacement)
+        {
+             ApiResponse<XmlReplaceWithXPathResult> localVarResponse = ConvertDataXmlEditReplaceWithXPathWithHttpInfo(inputFile, xPathExpression, xmlNodeReplacement);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Replaces XML nodes matching XPath expression with new node Return the reuslts of editing an XML document by replacing all of the nodes that match an input XPath expression with a new XML node expression.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="xmlNodeReplacement">XML Node replacement content</param>
+        /// <returns>ApiResponse of XmlReplaceWithXPathResult</returns>
+        public ApiResponse< XmlReplaceWithXPathResult > ConvertDataXmlEditReplaceWithXPathWithHttpInfo (System.IO.Stream inputFile, string xPathExpression, string xmlNodeReplacement)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDataApi->ConvertDataXmlEditReplaceWithXPath");
+            // verify the required parameter 'xPathExpression' is set
+            if (xPathExpression == null)
+                throw new ApiException(400, "Missing required parameter 'xPathExpression' when calling ConvertDataApi->ConvertDataXmlEditReplaceWithXPath");
+            // verify the required parameter 'xmlNodeReplacement' is set
+            if (xmlNodeReplacement == null)
+                throw new ApiException(400, "Missing required parameter 'xmlNodeReplacement' when calling ConvertDataApi->ConvertDataXmlEditReplaceWithXPath");
+
+            var localVarPath = "/convert/xml/edit/xpath/replace";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (xPathExpression != null) localVarHeaderParams.Add("XPathExpression", this.Configuration.ApiClient.ParameterToString(xPathExpression)); // header parameter
+            if (xmlNodeReplacement != null) localVarHeaderParams.Add("XmlNodeReplacement", this.Configuration.ApiClient.ParameterToString(xmlNodeReplacement)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDataXmlEditReplaceWithXPath", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<XmlReplaceWithXPathResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (XmlReplaceWithXPathResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(XmlReplaceWithXPathResult)));
+        }
+
+        /// <summary>
+        /// Replaces XML nodes matching XPath expression with new node Return the reuslts of editing an XML document by replacing all of the nodes that match an input XPath expression with a new XML node expression.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="xmlNodeReplacement">XML Node replacement content</param>
+        /// <returns>Task of XmlReplaceWithXPathResult</returns>
+        public async System.Threading.Tasks.Task<XmlReplaceWithXPathResult> ConvertDataXmlEditReplaceWithXPathAsync (System.IO.Stream inputFile, string xPathExpression, string xmlNodeReplacement)
+        {
+             ApiResponse<XmlReplaceWithXPathResult> localVarResponse = await ConvertDataXmlEditReplaceWithXPathAsyncWithHttpInfo(inputFile, xPathExpression, xmlNodeReplacement);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Replaces XML nodes matching XPath expression with new node Return the reuslts of editing an XML document by replacing all of the nodes that match an input XPath expression with a new XML node expression.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="xmlNodeReplacement">XML Node replacement content</param>
+        /// <returns>Task of ApiResponse (XmlReplaceWithXPathResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<XmlReplaceWithXPathResult>> ConvertDataXmlEditReplaceWithXPathAsyncWithHttpInfo (System.IO.Stream inputFile, string xPathExpression, string xmlNodeReplacement)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDataApi->ConvertDataXmlEditReplaceWithXPath");
+            // verify the required parameter 'xPathExpression' is set
+            if (xPathExpression == null)
+                throw new ApiException(400, "Missing required parameter 'xPathExpression' when calling ConvertDataApi->ConvertDataXmlEditReplaceWithXPath");
+            // verify the required parameter 'xmlNodeReplacement' is set
+            if (xmlNodeReplacement == null)
+                throw new ApiException(400, "Missing required parameter 'xmlNodeReplacement' when calling ConvertDataApi->ConvertDataXmlEditReplaceWithXPath");
+
+            var localVarPath = "/convert/xml/edit/xpath/replace";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (xPathExpression != null) localVarHeaderParams.Add("XPathExpression", this.Configuration.ApiClient.ParameterToString(xPathExpression)); // header parameter
+            if (xmlNodeReplacement != null) localVarHeaderParams.Add("XmlNodeReplacement", this.Configuration.ApiClient.ParameterToString(xmlNodeReplacement)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDataXmlEditReplaceWithXPath", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<XmlReplaceWithXPathResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (XmlReplaceWithXPathResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(XmlReplaceWithXPathResult)));
+        }
+
+        /// <summary>
+        /// Sets the value contents of XML nodes matching XPath expression Return the reuslts of editing an XML document by setting the contents of all of the nodes that match an input XPath expression.  Supports elements and attributes.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="xmlValue">XML Value to set into the matching XML nodes</param>
+        /// <returns>XmlSetValueWithXPathResult</returns>
+        public XmlSetValueWithXPathResult ConvertDataXmlEditSetValueWithXPath (System.IO.Stream inputFile, string xPathExpression, string xmlValue)
+        {
+             ApiResponse<XmlSetValueWithXPathResult> localVarResponse = ConvertDataXmlEditSetValueWithXPathWithHttpInfo(inputFile, xPathExpression, xmlValue);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Sets the value contents of XML nodes matching XPath expression Return the reuslts of editing an XML document by setting the contents of all of the nodes that match an input XPath expression.  Supports elements and attributes.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="xmlValue">XML Value to set into the matching XML nodes</param>
+        /// <returns>ApiResponse of XmlSetValueWithXPathResult</returns>
+        public ApiResponse< XmlSetValueWithXPathResult > ConvertDataXmlEditSetValueWithXPathWithHttpInfo (System.IO.Stream inputFile, string xPathExpression, string xmlValue)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDataApi->ConvertDataXmlEditSetValueWithXPath");
+            // verify the required parameter 'xPathExpression' is set
+            if (xPathExpression == null)
+                throw new ApiException(400, "Missing required parameter 'xPathExpression' when calling ConvertDataApi->ConvertDataXmlEditSetValueWithXPath");
+            // verify the required parameter 'xmlValue' is set
+            if (xmlValue == null)
+                throw new ApiException(400, "Missing required parameter 'xmlValue' when calling ConvertDataApi->ConvertDataXmlEditSetValueWithXPath");
+
+            var localVarPath = "/convert/xml/edit/xpath/set-value";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (xPathExpression != null) localVarHeaderParams.Add("XPathExpression", this.Configuration.ApiClient.ParameterToString(xPathExpression)); // header parameter
+            if (xmlValue != null) localVarHeaderParams.Add("XmlValue", this.Configuration.ApiClient.ParameterToString(xmlValue)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDataXmlEditSetValueWithXPath", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<XmlSetValueWithXPathResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (XmlSetValueWithXPathResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(XmlSetValueWithXPathResult)));
+        }
+
+        /// <summary>
+        /// Sets the value contents of XML nodes matching XPath expression Return the reuslts of editing an XML document by setting the contents of all of the nodes that match an input XPath expression.  Supports elements and attributes.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="xmlValue">XML Value to set into the matching XML nodes</param>
+        /// <returns>Task of XmlSetValueWithXPathResult</returns>
+        public async System.Threading.Tasks.Task<XmlSetValueWithXPathResult> ConvertDataXmlEditSetValueWithXPathAsync (System.IO.Stream inputFile, string xPathExpression, string xmlValue)
+        {
+             ApiResponse<XmlSetValueWithXPathResult> localVarResponse = await ConvertDataXmlEditSetValueWithXPathAsyncWithHttpInfo(inputFile, xPathExpression, xmlValue);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Sets the value contents of XML nodes matching XPath expression Return the reuslts of editing an XML document by setting the contents of all of the nodes that match an input XPath expression.  Supports elements and attributes.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="xmlValue">XML Value to set into the matching XML nodes</param>
+        /// <returns>Task of ApiResponse (XmlSetValueWithXPathResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<XmlSetValueWithXPathResult>> ConvertDataXmlEditSetValueWithXPathAsyncWithHttpInfo (System.IO.Stream inputFile, string xPathExpression, string xmlValue)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDataApi->ConvertDataXmlEditSetValueWithXPath");
+            // verify the required parameter 'xPathExpression' is set
+            if (xPathExpression == null)
+                throw new ApiException(400, "Missing required parameter 'xPathExpression' when calling ConvertDataApi->ConvertDataXmlEditSetValueWithXPath");
+            // verify the required parameter 'xmlValue' is set
+            if (xmlValue == null)
+                throw new ApiException(400, "Missing required parameter 'xmlValue' when calling ConvertDataApi->ConvertDataXmlEditSetValueWithXPath");
+
+            var localVarPath = "/convert/xml/edit/xpath/set-value";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (xPathExpression != null) localVarHeaderParams.Add("XPathExpression", this.Configuration.ApiClient.ParameterToString(xPathExpression)); // header parameter
+            if (xmlValue != null) localVarHeaderParams.Add("XmlValue", this.Configuration.ApiClient.ParameterToString(xmlValue)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDataXmlEditSetValueWithXPath", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<XmlSetValueWithXPathResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (XmlSetValueWithXPathResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(XmlSetValueWithXPathResult)));
+        }
+
+        /// <summary>
+        /// Filter, select XML nodes using XPath expression, get results Return the reuslts of filtering, selecting an XML document with an XPath expression
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>XmlFIlterWithXPathResult</returns>
+        public XmlFIlterWithXPathResult ConvertDataXmlFilterWithXPath (string xPathExpression, System.IO.Stream inputFile)
+        {
+             ApiResponse<XmlFIlterWithXPathResult> localVarResponse = ConvertDataXmlFilterWithXPathWithHttpInfo(xPathExpression, inputFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Filter, select XML nodes using XPath expression, get results Return the reuslts of filtering, selecting an XML document with an XPath expression
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of XmlFIlterWithXPathResult</returns>
+        public ApiResponse< XmlFIlterWithXPathResult > ConvertDataXmlFilterWithXPathWithHttpInfo (string xPathExpression, System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'xPathExpression' is set
+            if (xPathExpression == null)
+                throw new ApiException(400, "Missing required parameter 'xPathExpression' when calling ConvertDataApi->ConvertDataXmlFilterWithXPath");
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDataApi->ConvertDataXmlFilterWithXPath");
+
+            var localVarPath = "/convert/xml/select/xpath";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (xPathExpression != null) localVarHeaderParams.Add("XPathExpression", this.Configuration.ApiClient.ParameterToString(xPathExpression)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDataXmlFilterWithXPath", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<XmlFIlterWithXPathResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (XmlFIlterWithXPathResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(XmlFIlterWithXPathResult)));
+        }
+
+        /// <summary>
+        /// Filter, select XML nodes using XPath expression, get results Return the reuslts of filtering, selecting an XML document with an XPath expression
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of XmlFIlterWithXPathResult</returns>
+        public async System.Threading.Tasks.Task<XmlFIlterWithXPathResult> ConvertDataXmlFilterWithXPathAsync (string xPathExpression, System.IO.Stream inputFile)
+        {
+             ApiResponse<XmlFIlterWithXPathResult> localVarResponse = await ConvertDataXmlFilterWithXPathAsyncWithHttpInfo(xPathExpression, inputFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Filter, select XML nodes using XPath expression, get results Return the reuslts of filtering, selecting an XML document with an XPath expression
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (XmlFIlterWithXPathResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<XmlFIlterWithXPathResult>> ConvertDataXmlFilterWithXPathAsyncWithHttpInfo (string xPathExpression, System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'xPathExpression' is set
+            if (xPathExpression == null)
+                throw new ApiException(400, "Missing required parameter 'xPathExpression' when calling ConvertDataApi->ConvertDataXmlFilterWithXPath");
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDataApi->ConvertDataXmlFilterWithXPath");
+
+            var localVarPath = "/convert/xml/select/xpath";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (xPathExpression != null) localVarHeaderParams.Add("XPathExpression", this.Configuration.ApiClient.ParameterToString(xPathExpression)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDataXmlFilterWithXPath", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<XmlFIlterWithXPathResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (XmlFIlterWithXPathResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(XmlFIlterWithXPathResult)));
+        }
+
+        /// <summary>
+        /// Remove, delete XML nodes and items matching XPath expression Return the reuslts of editing an XML document by removing all of the nodes that match an input XPath expression
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>XmlRemoveWithXPathResult</returns>
+        public XmlRemoveWithXPathResult ConvertDataXmlRemoveWithXPath (string xPathExpression, System.IO.Stream inputFile)
+        {
+             ApiResponse<XmlRemoveWithXPathResult> localVarResponse = ConvertDataXmlRemoveWithXPathWithHttpInfo(xPathExpression, inputFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Remove, delete XML nodes and items matching XPath expression Return the reuslts of editing an XML document by removing all of the nodes that match an input XPath expression
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of XmlRemoveWithXPathResult</returns>
+        public ApiResponse< XmlRemoveWithXPathResult > ConvertDataXmlRemoveWithXPathWithHttpInfo (string xPathExpression, System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'xPathExpression' is set
+            if (xPathExpression == null)
+                throw new ApiException(400, "Missing required parameter 'xPathExpression' when calling ConvertDataApi->ConvertDataXmlRemoveWithXPath");
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDataApi->ConvertDataXmlRemoveWithXPath");
+
+            var localVarPath = "/convert/xml/edit/xpath/remove";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (xPathExpression != null) localVarHeaderParams.Add("XPathExpression", this.Configuration.ApiClient.ParameterToString(xPathExpression)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDataXmlRemoveWithXPath", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<XmlRemoveWithXPathResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (XmlRemoveWithXPathResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(XmlRemoveWithXPathResult)));
+        }
+
+        /// <summary>
+        /// Remove, delete XML nodes and items matching XPath expression Return the reuslts of editing an XML document by removing all of the nodes that match an input XPath expression
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of XmlRemoveWithXPathResult</returns>
+        public async System.Threading.Tasks.Task<XmlRemoveWithXPathResult> ConvertDataXmlRemoveWithXPathAsync (string xPathExpression, System.IO.Stream inputFile)
+        {
+             ApiResponse<XmlRemoveWithXPathResult> localVarResponse = await ConvertDataXmlRemoveWithXPathAsyncWithHttpInfo(xPathExpression, inputFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Remove, delete XML nodes and items matching XPath expression Return the reuslts of editing an XML document by removing all of the nodes that match an input XPath expression
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="xPathExpression">Valid XML XPath query expression</param>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (XmlRemoveWithXPathResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<XmlRemoveWithXPathResult>> ConvertDataXmlRemoveWithXPathAsyncWithHttpInfo (string xPathExpression, System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'xPathExpression' is set
+            if (xPathExpression == null)
+                throw new ApiException(400, "Missing required parameter 'xPathExpression' when calling ConvertDataApi->ConvertDataXmlRemoveWithXPath");
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDataApi->ConvertDataXmlRemoveWithXPath");
+
+            var localVarPath = "/convert/xml/edit/xpath/remove";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (xPathExpression != null) localVarHeaderParams.Add("XPathExpression", this.Configuration.ApiClient.ParameterToString(xPathExpression)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDataXmlRemoveWithXPath", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<XmlRemoveWithXPathResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (XmlRemoveWithXPathResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(XmlRemoveWithXPathResult)));
+        }
+
+        /// <summary>
         /// Convert XML to JSON conversion Convert an XML string or file into JSON
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1080,6 +2660,161 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Transform XML document file with XSLT into a new XML document Convert an XML string or file into JSON
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="transformFile">Input XSLT file to use to transform the input XML file.</param>
+        /// <returns>byte[]</returns>
+        public byte[] ConvertDataXmlTransformWithXsltToXml (System.IO.Stream inputFile, System.IO.Stream transformFile)
+        {
+             ApiResponse<byte[]> localVarResponse = ConvertDataXmlTransformWithXsltToXmlWithHttpInfo(inputFile, transformFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Transform XML document file with XSLT into a new XML document Convert an XML string or file into JSON
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="transformFile">Input XSLT file to use to transform the input XML file.</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > ConvertDataXmlTransformWithXsltToXmlWithHttpInfo (System.IO.Stream inputFile, System.IO.Stream transformFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDataApi->ConvertDataXmlTransformWithXsltToXml");
+            // verify the required parameter 'transformFile' is set
+            if (transformFile == null)
+                throw new ApiException(400, "Missing required parameter 'transformFile' when calling ConvertDataApi->ConvertDataXmlTransformWithXsltToXml");
+
+            var localVarPath = "/convert/xml/transform/xslt/to/xml";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+            if (transformFile != null) localVarFileParams.Add("transformFile", this.Configuration.ApiClient.ParameterToFile("transformFile", transformFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDataXmlTransformWithXsltToXml", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Transform XML document file with XSLT into a new XML document Convert an XML string or file into JSON
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="transformFile">Input XSLT file to use to transform the input XML file.</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> ConvertDataXmlTransformWithXsltToXmlAsync (System.IO.Stream inputFile, System.IO.Stream transformFile)
+        {
+             ApiResponse<byte[]> localVarResponse = await ConvertDataXmlTransformWithXsltToXmlAsyncWithHttpInfo(inputFile, transformFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Transform XML document file with XSLT into a new XML document Convert an XML string or file into JSON
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="transformFile">Input XSLT file to use to transform the input XML file.</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDataXmlTransformWithXsltToXmlAsyncWithHttpInfo (System.IO.Stream inputFile, System.IO.Stream transformFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDataApi->ConvertDataXmlTransformWithXsltToXml");
+            // verify the required parameter 'transformFile' is set
+            if (transformFile == null)
+                throw new ApiException(400, "Missing required parameter 'transformFile' when calling ConvertDataApi->ConvertDataXmlTransformWithXsltToXml");
+
+            var localVarPath = "/convert/xml/transform/xslt/to/xml";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+            if (transformFile != null) localVarFileParams.Add("transformFile", this.Configuration.ApiClient.ParameterToFile("transformFile", transformFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDataXmlTransformWithXsltToXml", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
     }

@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 This C# SDK is for the [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api):
 
 - API version: v1
-- SDK version: 3.0.5
+- SDK version: 3.0.6
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -107,7 +107,15 @@ Class | Method | HTTP request | Description
 *ConvertDataApi* | [**ConvertDataJsonToXml**](docs/ConvertDataApi.md#convertdatajsontoxml) | **POST** /convert/json/to/xml | Convert JSON to XML conversion
 *ConvertDataApi* | [**ConvertDataXlsToJson**](docs/ConvertDataApi.md#convertdataxlstojson) | **POST** /convert/xls/to/json | Convert Excel (97-2003) XLS to JSON conversion
 *ConvertDataApi* | [**ConvertDataXlsxToJson**](docs/ConvertDataApi.md#convertdataxlsxtojson) | **POST** /convert/xlsx/to/json | Convert Excel XLSX to JSON conversion
+*ConvertDataApi* | [**ConvertDataXmlEditAddAttributeWithXPath**](docs/ConvertDataApi.md#convertdataxmleditaddattributewithxpath) | **POST** /convert/xml/edit/xpath/add-attribute | Adds an attribute to all XML nodes matching XPath expression
+*ConvertDataApi* | [**ConvertDataXmlEditAddChildWithXPath**](docs/ConvertDataApi.md#convertdataxmleditaddchildwithxpath) | **POST** /convert/xml/edit/xpath/add-child | Adds an XML node as a child to XML nodes matching XPath expression
+*ConvertDataApi* | [**ConvertDataXmlEditRemoveAllChildNodesWithXPath**](docs/ConvertDataApi.md#convertdataxmleditremoveallchildnodeswithxpath) | **POST** /convert/xml/edit/xpath/remove-all-children | Removes, deletes all children of nodes matching XPath expression, but does not remove the nodes
+*ConvertDataApi* | [**ConvertDataXmlEditReplaceWithXPath**](docs/ConvertDataApi.md#convertdataxmleditreplacewithxpath) | **POST** /convert/xml/edit/xpath/replace | Replaces XML nodes matching XPath expression with new node
+*ConvertDataApi* | [**ConvertDataXmlEditSetValueWithXPath**](docs/ConvertDataApi.md#convertdataxmleditsetvaluewithxpath) | **POST** /convert/xml/edit/xpath/set-value | Sets the value contents of XML nodes matching XPath expression
+*ConvertDataApi* | [**ConvertDataXmlFilterWithXPath**](docs/ConvertDataApi.md#convertdataxmlfilterwithxpath) | **POST** /convert/xml/select/xpath | Filter, select XML nodes using XPath expression, get results
+*ConvertDataApi* | [**ConvertDataXmlRemoveWithXPath**](docs/ConvertDataApi.md#convertdataxmlremovewithxpath) | **POST** /convert/xml/edit/xpath/remove | Remove, delete XML nodes and items matching XPath expression
 *ConvertDataApi* | [**ConvertDataXmlToJson**](docs/ConvertDataApi.md#convertdataxmltojson) | **POST** /convert/xml/to/json | Convert XML to JSON conversion
+*ConvertDataApi* | [**ConvertDataXmlTransformWithXsltToXml**](docs/ConvertDataApi.md#convertdataxmltransformwithxslttoxml) | **POST** /convert/xml/transform/xslt/to/xml | Transform XML document file with XSLT into a new XML document
 *ConvertDocumentApi* | [**ConvertDocumentAutodetectGetInfo**](docs/ConvertDocumentApi.md#convertdocumentautodetectgetinfo) | **POST** /convert/autodetect/get-info | Get document type information
 *ConvertDocumentApi* | [**ConvertDocumentAutodetectToPdf**](docs/ConvertDocumentApi.md#convertdocumentautodetecttopdf) | **POST** /convert/autodetect/to/pdf | Convert Document to PDF
 *ConvertDocumentApi* | [**ConvertDocumentAutodetectToPngArray**](docs/ConvertDocumentApi.md#convertdocumentautodetecttopngarray) | **POST** /convert/autodetect/to/png | Convert Document to PNG array
@@ -344,6 +352,13 @@ Class | Method | HTTP request | Description
  - [Model.XlsxSpreadsheetColumn](docs/XlsxSpreadsheetColumn.md)
  - [Model.XlsxSpreadsheetRow](docs/XlsxSpreadsheetRow.md)
  - [Model.XlsxWorksheet](docs/XlsxWorksheet.md)
+ - [Model.XmlAddAttributeWithXPathResult](docs/XmlAddAttributeWithXPathResult.md)
+ - [Model.XmlAddChildWithXPathResult](docs/XmlAddChildWithXPathResult.md)
+ - [Model.XmlFIlterWithXPathResult](docs/XmlFIlterWithXPathResult.md)
+ - [Model.XmlRemoveAllChildrenWithXPathResult](docs/XmlRemoveAllChildrenWithXPathResult.md)
+ - [Model.XmlRemoveWithXPathResult](docs/XmlRemoveWithXPathResult.md)
+ - [Model.XmlReplaceWithXPathResult](docs/XmlReplaceWithXPathResult.md)
+ - [Model.XmlSetValueWithXPathResult](docs/XmlSetValueWithXPathResult.md)
 
 
 <a name="documentation-for-authorization"></a>

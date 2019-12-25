@@ -19,6 +19,7 @@ using NUnit.Framework;
 
 using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
 using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
 
 namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
 {
@@ -84,7 +85,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             // TODO uncomment below to test the method and replace null with proper value
             //Object jsonObject = null;
             //var response = instance.ConvertDataJsonToXml(jsonObject);
-            //Assert.IsInstanceOf<Object> (response, "response is Object");
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
         /// <summary>
@@ -112,6 +113,102 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test ConvertDataXmlEditAddAttributeWithXPath
+        /// </summary>
+        [Test]
+        public void ConvertDataXmlEditAddAttributeWithXPathTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //string xPathExpression = null;
+            //string xmlAttributeName = null;
+            //string xmlAttributeValue = null;
+            //var response = instance.ConvertDataXmlEditAddAttributeWithXPath(inputFile, xPathExpression, xmlAttributeName, xmlAttributeValue);
+            //Assert.IsInstanceOf<XmlAddAttributeWithXPathResult> (response, "response is XmlAddAttributeWithXPathResult");
+        }
+        
+        /// <summary>
+        /// Test ConvertDataXmlEditAddChildWithXPath
+        /// </summary>
+        [Test]
+        public void ConvertDataXmlEditAddChildWithXPathTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //string xPathExpression = null;
+            //string xmlNodeToAdd = null;
+            //var response = instance.ConvertDataXmlEditAddChildWithXPath(inputFile, xPathExpression, xmlNodeToAdd);
+            //Assert.IsInstanceOf<XmlAddChildWithXPathResult> (response, "response is XmlAddChildWithXPathResult");
+        }
+        
+        /// <summary>
+        /// Test ConvertDataXmlEditRemoveAllChildNodesWithXPath
+        /// </summary>
+        [Test]
+        public void ConvertDataXmlEditRemoveAllChildNodesWithXPathTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //string xPathExpression = null;
+            //var response = instance.ConvertDataXmlEditRemoveAllChildNodesWithXPath(inputFile, xPathExpression);
+            //Assert.IsInstanceOf<XmlRemoveAllChildrenWithXPathResult> (response, "response is XmlRemoveAllChildrenWithXPathResult");
+        }
+        
+        /// <summary>
+        /// Test ConvertDataXmlEditReplaceWithXPath
+        /// </summary>
+        [Test]
+        public void ConvertDataXmlEditReplaceWithXPathTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //string xPathExpression = null;
+            //string xmlNodeReplacement = null;
+            //var response = instance.ConvertDataXmlEditReplaceWithXPath(inputFile, xPathExpression, xmlNodeReplacement);
+            //Assert.IsInstanceOf<XmlReplaceWithXPathResult> (response, "response is XmlReplaceWithXPathResult");
+        }
+        
+        /// <summary>
+        /// Test ConvertDataXmlEditSetValueWithXPath
+        /// </summary>
+        [Test]
+        public void ConvertDataXmlEditSetValueWithXPathTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //string xPathExpression = null;
+            //string xmlValue = null;
+            //var response = instance.ConvertDataXmlEditSetValueWithXPath(inputFile, xPathExpression, xmlValue);
+            //Assert.IsInstanceOf<XmlSetValueWithXPathResult> (response, "response is XmlSetValueWithXPathResult");
+        }
+        
+        /// <summary>
+        /// Test ConvertDataXmlFilterWithXPath
+        /// </summary>
+        [Test]
+        public void ConvertDataXmlFilterWithXPathTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string xPathExpression = null;
+            //System.IO.Stream inputFile = null;
+            //var response = instance.ConvertDataXmlFilterWithXPath(xPathExpression, inputFile);
+            //Assert.IsInstanceOf<XmlFIlterWithXPathResult> (response, "response is XmlFIlterWithXPathResult");
+        }
+        
+        /// <summary>
+        /// Test ConvertDataXmlRemoveWithXPath
+        /// </summary>
+        [Test]
+        public void ConvertDataXmlRemoveWithXPathTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string xPathExpression = null;
+            //System.IO.Stream inputFile = null;
+            //var response = instance.ConvertDataXmlRemoveWithXPath(xPathExpression, inputFile);
+            //Assert.IsInstanceOf<XmlRemoveWithXPathResult> (response, "response is XmlRemoveWithXPathResult");
+        }
+        
+        /// <summary>
         /// Test ConvertDataXmlToJson
         /// </summary>
         [Test]
@@ -121,6 +218,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //System.IO.Stream inputFile = null;
             //var response = instance.ConvertDataXmlToJson(inputFile);
             //Assert.IsInstanceOf<Object> (response, "response is Object");
+        }
+        
+        /// <summary>
+        /// Test ConvertDataXmlTransformWithXsltToXml
+        /// </summary>
+        [Test]
+        public void ConvertDataXmlTransformWithXsltToXmlTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //System.IO.Stream transformFile = null;
+            //var response = instance.ConvertDataXmlTransformWithXsltToXml(inputFile, transformFile);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
     }
