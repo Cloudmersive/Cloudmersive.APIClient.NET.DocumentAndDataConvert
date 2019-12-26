@@ -192,7 +192,42 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //string xPathExpression = null;
             //System.IO.Stream inputFile = null;
             //var response = instance.ConvertDataXmlFilterWithXPath(xPathExpression, inputFile);
-            //Assert.IsInstanceOf<XmlFIlterWithXPathResult> (response, "response is XmlFIlterWithXPathResult");
+            //Assert.IsInstanceOf<XmlFilterWithXPathResult> (response, "response is XmlFilterWithXPathResult");
+        }
+        
+        /// <summary>
+        /// Test ConvertDataXmlQueryWithXQuery
+        /// </summary>
+        [Test]
+        public void ConvertDataXmlQueryWithXQueryTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //string xQuery = null;
+            //var response = instance.ConvertDataXmlQueryWithXQuery(inputFile, xQuery);
+            //Assert.IsInstanceOf<XmlQueryWithXQueryResult> (response, "response is XmlQueryWithXQueryResult");
+        }
+        
+        /// <summary>
+        /// Test ConvertDataXmlQueryWithXQueryMulti
+        /// </summary>
+        [Test]
+        public void ConvertDataXmlQueryWithXQueryMultiTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile1 = null;
+            //string xQuery = null;
+            //System.IO.Stream inputFile2 = null;
+            //System.IO.Stream inputFile3 = null;
+            //System.IO.Stream inputFile4 = null;
+            //System.IO.Stream inputFile5 = null;
+            //System.IO.Stream inputFile6 = null;
+            //System.IO.Stream inputFile7 = null;
+            //System.IO.Stream inputFile8 = null;
+            //System.IO.Stream inputFile9 = null;
+            //System.IO.Stream inputFile10 = null;
+            //var response = instance.ConvertDataXmlQueryWithXQueryMulti(inputFile1, xQuery, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
+            //Assert.IsInstanceOf<XmlQueryWithXQueryMultiResult> (response, "response is XmlQueryWithXQueryMultiResult");
         }
         
         /// <summary>

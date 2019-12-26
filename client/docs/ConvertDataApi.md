@@ -14,6 +14,8 @@ Method | HTTP request | Description
 [**ConvertDataXmlEditReplaceWithXPath**](ConvertDataApi.md#convertdataxmleditreplacewithxpath) | **POST** /convert/xml/edit/xpath/replace | Replaces XML nodes matching XPath expression with new node
 [**ConvertDataXmlEditSetValueWithXPath**](ConvertDataApi.md#convertdataxmleditsetvaluewithxpath) | **POST** /convert/xml/edit/xpath/set-value | Sets the value contents of XML nodes matching XPath expression
 [**ConvertDataXmlFilterWithXPath**](ConvertDataApi.md#convertdataxmlfilterwithxpath) | **POST** /convert/xml/select/xpath | Filter, select XML nodes using XPath expression, get results
+[**ConvertDataXmlQueryWithXQuery**](ConvertDataApi.md#convertdataxmlquerywithxquery) | **POST** /convert/xml/query/xquery | Query an XML file using XQuery query, get results
+[**ConvertDataXmlQueryWithXQueryMulti**](ConvertDataApi.md#convertdataxmlquerywithxquerymulti) | **POST** /convert/xml/query/xquery/multi | Query multiple XML files using XQuery query, get results
 [**ConvertDataXmlRemoveWithXPath**](ConvertDataApi.md#convertdataxmlremovewithxpath) | **POST** /convert/xml/edit/xpath/remove | Remove, delete XML nodes and items matching XPath expression
 [**ConvertDataXmlToJson**](ConvertDataApi.md#convertdataxmltojson) | **POST** /convert/xml/to/json | Convert XML to JSON conversion
 [**ConvertDataXmlTransformWithXsltToXml**](ConvertDataApi.md#convertdataxmltransformwithxslttoxml) | **POST** /convert/xml/transform/xslt/to/xml | Transform XML document file with XSLT into a new XML document
@@ -635,7 +637,7 @@ Name | Type | Description  | Notes
 
 <a name="convertdataxmlfilterwithxpath"></a>
 # **ConvertDataXmlFilterWithXPath**
-> XmlFIlterWithXPathResult ConvertDataXmlFilterWithXPath (string xPathExpression, System.IO.Stream inputFile)
+> XmlFilterWithXPathResult ConvertDataXmlFilterWithXPath (string xPathExpression, System.IO.Stream inputFile)
 
 Filter, select XML nodes using XPath expression, get results
 
@@ -667,7 +669,7 @@ namespace Example
             try
             {
                 // Filter, select XML nodes using XPath expression, get results
-                XmlFIlterWithXPathResult result = apiInstance.ConvertDataXmlFilterWithXPath(xPathExpression, inputFile);
+                XmlFilterWithXPathResult result = apiInstance.ConvertDataXmlFilterWithXPath(xPathExpression, inputFile);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -688,7 +690,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**XmlFIlterWithXPathResult**](XmlFIlterWithXPathResult.md)
+[**XmlFilterWithXPathResult**](XmlFilterWithXPathResult.md)
 
 ### Authorization
 
@@ -697,6 +699,160 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="convertdataxmlquerywithxquery"></a>
+# **ConvertDataXmlQueryWithXQuery**
+> XmlQueryWithXQueryResult ConvertDataXmlQueryWithXQuery (System.IO.Stream inputFile, string xQuery)
+
+Query an XML file using XQuery query, get results
+
+Return the reuslts of querying a single XML document with an XQuery expression.  Supports XQuery 3.1 and earlier.  This API is optimized for a single XML document as input.  Provided XML document is automatically loaded as the default context; to access elements in the document, simply refer to them without a document reference, such as bookstore/book
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class ConvertDataXmlQueryWithXQueryExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new ConvertDataApi();
+            var inputFile = new System.IO.Stream(); // System.IO.Stream | Input XML file to perform the operation on.
+            var xQuery = xQuery_example;  // string | Valid XML XQuery 3.1 or earlier query expression; multi-line expressions are supported
+
+            try
+            {
+                // Query an XML file using XQuery query, get results
+                XmlQueryWithXQueryResult result = apiInstance.ConvertDataXmlQueryWithXQuery(inputFile, xQuery);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConvertDataApi.ConvertDataXmlQueryWithXQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **System.IO.Stream**| Input XML file to perform the operation on. | 
+ **xQuery** | **string**| Valid XML XQuery 3.1 or earlier query expression; multi-line expressions are supported | 
+
+### Return type
+
+[**XmlQueryWithXQueryResult**](XmlQueryWithXQueryResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="convertdataxmlquerywithxquerymulti"></a>
+# **ConvertDataXmlQueryWithXQueryMulti**
+> XmlQueryWithXQueryMultiResult ConvertDataXmlQueryWithXQueryMulti (System.IO.Stream inputFile1, string xQuery, System.IO.Stream inputFile2 = null, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null)
+
+Query multiple XML files using XQuery query, get results
+
+Return the reuslts of querying an XML document with an XQuery expression.  Supports XQuery 3.1 and earlier.  This API is optimized for multiple XML documents as input.  You can refer to the contents of a given document by name, for example doc(\"books.xml\") or doc(\"restaurants.xml\") if you included two input files named books.xml and restaurants.xml.  If input files contain no file name, they will default to file names input1.xml, input2.xml and so on.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class ConvertDataXmlQueryWithXQueryMultiExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new ConvertDataApi();
+            var inputFile1 = new System.IO.Stream(); // System.IO.Stream | First input XML file to perform the operation on.
+            var xQuery = xQuery_example;  // string | Valid XML XQuery 3.1 or earlier query expression; multi-line expressions are supported
+            var inputFile2 = new System.IO.Stream(); // System.IO.Stream | Second input XML file to perform the operation on. (optional) 
+            var inputFile3 = new System.IO.Stream(); // System.IO.Stream | Third input XML file to perform the operation on. (optional) 
+            var inputFile4 = new System.IO.Stream(); // System.IO.Stream | Fourth input XML file to perform the operation on. (optional) 
+            var inputFile5 = new System.IO.Stream(); // System.IO.Stream | Fifth input XML file to perform the operation on. (optional) 
+            var inputFile6 = new System.IO.Stream(); // System.IO.Stream | Sixth input XML file to perform the operation on. (optional) 
+            var inputFile7 = new System.IO.Stream(); // System.IO.Stream | Seventh input XML file to perform the operation on. (optional) 
+            var inputFile8 = new System.IO.Stream(); // System.IO.Stream | Eighth input XML file to perform the operation on. (optional) 
+            var inputFile9 = new System.IO.Stream(); // System.IO.Stream | Ninth input XML file to perform the operation on. (optional) 
+            var inputFile10 = new System.IO.Stream(); // System.IO.Stream | Tenth input XML file to perform the operation on. (optional) 
+
+            try
+            {
+                // Query multiple XML files using XQuery query, get results
+                XmlQueryWithXQueryMultiResult result = apiInstance.ConvertDataXmlQueryWithXQueryMulti(inputFile1, xQuery, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConvertDataApi.ConvertDataXmlQueryWithXQueryMulti: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile1** | **System.IO.Stream**| First input XML file to perform the operation on. | 
+ **xQuery** | **string**| Valid XML XQuery 3.1 or earlier query expression; multi-line expressions are supported | 
+ **inputFile2** | **System.IO.Stream**| Second input XML file to perform the operation on. | [optional] 
+ **inputFile3** | **System.IO.Stream**| Third input XML file to perform the operation on. | [optional] 
+ **inputFile4** | **System.IO.Stream**| Fourth input XML file to perform the operation on. | [optional] 
+ **inputFile5** | **System.IO.Stream**| Fifth input XML file to perform the operation on. | [optional] 
+ **inputFile6** | **System.IO.Stream**| Sixth input XML file to perform the operation on. | [optional] 
+ **inputFile7** | **System.IO.Stream**| Seventh input XML file to perform the operation on. | [optional] 
+ **inputFile8** | **System.IO.Stream**| Eighth input XML file to perform the operation on. | [optional] 
+ **inputFile9** | **System.IO.Stream**| Ninth input XML file to perform the operation on. | [optional] 
+ **inputFile10** | **System.IO.Stream**| Tenth input XML file to perform the operation on. | [optional] 
+
+### Return type
+
+[**XmlQueryWithXQueryMultiResult**](XmlQueryWithXQueryMultiResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

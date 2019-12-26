@@ -1,11 +1,11 @@
-# Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model.XmlFilterWithXPathResult
+# Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model.XmlQueryWithXQueryMultiResult
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Successful** | **bool?** | True if the operation was successful, false otherwise | [optional] 
-**XmlNodes** | **List&lt;string&gt;** | Matching selected XML nodes as strings | [optional] 
-**ResultCount** | **int?** | Count of the matching results | [optional] 
+**ResultingXml** | **string** | Resulting XML result output | [optional] 
+**ErrorMessage** | **string** | If an error occurs, additional details on the error | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -242,8 +242,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xPathExpression">Valid XML XPath query expression</param>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <returns>XmlFIlterWithXPathResult</returns>
-        XmlFIlterWithXPathResult ConvertDataXmlFilterWithXPath (string xPathExpression, System.IO.Stream inputFile);
+        /// <returns>XmlFilterWithXPathResult</returns>
+        XmlFilterWithXPathResult ConvertDataXmlFilterWithXPath (string xPathExpression, System.IO.Stream inputFile);
 
         /// <summary>
         /// Filter, select XML nodes using XPath expression, get results
@@ -254,8 +254,72 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xPathExpression">Valid XML XPath query expression</param>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <returns>ApiResponse of XmlFIlterWithXPathResult</returns>
-        ApiResponse<XmlFIlterWithXPathResult> ConvertDataXmlFilterWithXPathWithHttpInfo (string xPathExpression, System.IO.Stream inputFile);
+        /// <returns>ApiResponse of XmlFilterWithXPathResult</returns>
+        ApiResponse<XmlFilterWithXPathResult> ConvertDataXmlFilterWithXPathWithHttpInfo (string xPathExpression, System.IO.Stream inputFile);
+        /// <summary>
+        /// Query an XML file using XQuery query, get results
+        /// </summary>
+        /// <remarks>
+        /// Return the reuslts of querying a single XML document with an XQuery expression.  Supports XQuery 3.1 and earlier.  This API is optimized for a single XML document as input.  Provided XML document is automatically loaded as the default context; to access elements in the document, simply refer to them without a document reference, such as bookstore/book
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xQuery">Valid XML XQuery 3.1 or earlier query expression; multi-line expressions are supported</param>
+        /// <returns>XmlQueryWithXQueryResult</returns>
+        XmlQueryWithXQueryResult ConvertDataXmlQueryWithXQuery (System.IO.Stream inputFile, string xQuery);
+
+        /// <summary>
+        /// Query an XML file using XQuery query, get results
+        /// </summary>
+        /// <remarks>
+        /// Return the reuslts of querying a single XML document with an XQuery expression.  Supports XQuery 3.1 and earlier.  This API is optimized for a single XML document as input.  Provided XML document is automatically loaded as the default context; to access elements in the document, simply refer to them without a document reference, such as bookstore/book
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xQuery">Valid XML XQuery 3.1 or earlier query expression; multi-line expressions are supported</param>
+        /// <returns>ApiResponse of XmlQueryWithXQueryResult</returns>
+        ApiResponse<XmlQueryWithXQueryResult> ConvertDataXmlQueryWithXQueryWithHttpInfo (System.IO.Stream inputFile, string xQuery);
+        /// <summary>
+        /// Query multiple XML files using XQuery query, get results
+        /// </summary>
+        /// <remarks>
+        /// Return the reuslts of querying an XML document with an XQuery expression.  Supports XQuery 3.1 and earlier.  This API is optimized for multiple XML documents as input.  You can refer to the contents of a given document by name, for example doc(\&quot;books.xml\&quot;) or doc(\&quot;restaurants.xml\&quot;) if you included two input files named books.xml and restaurants.xml.  If input files contain no file name, they will default to file names input1.xml, input2.xml and so on.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input XML file to perform the operation on.</param>
+        /// <param name="xQuery">Valid XML XQuery 3.1 or earlier query expression; multi-line expressions are supported</param>
+        /// <param name="inputFile2">Second input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile3">Third input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input XML file to perform the operation on. (optional)</param>
+        /// <returns>XmlQueryWithXQueryMultiResult</returns>
+        XmlQueryWithXQueryMultiResult ConvertDataXmlQueryWithXQueryMulti (System.IO.Stream inputFile1, string xQuery, System.IO.Stream inputFile2 = null, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
+
+        /// <summary>
+        /// Query multiple XML files using XQuery query, get results
+        /// </summary>
+        /// <remarks>
+        /// Return the reuslts of querying an XML document with an XQuery expression.  Supports XQuery 3.1 and earlier.  This API is optimized for multiple XML documents as input.  You can refer to the contents of a given document by name, for example doc(\&quot;books.xml\&quot;) or doc(\&quot;restaurants.xml\&quot;) if you included two input files named books.xml and restaurants.xml.  If input files contain no file name, they will default to file names input1.xml, input2.xml and so on.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input XML file to perform the operation on.</param>
+        /// <param name="xQuery">Valid XML XQuery 3.1 or earlier query expression; multi-line expressions are supported</param>
+        /// <param name="inputFile2">Second input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile3">Third input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input XML file to perform the operation on. (optional)</param>
+        /// <returns>ApiResponse of XmlQueryWithXQueryMultiResult</returns>
+        ApiResponse<XmlQueryWithXQueryMultiResult> ConvertDataXmlQueryWithXQueryMultiWithHttpInfo (System.IO.Stream inputFile1, string xQuery, System.IO.Stream inputFile2 = null, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
         /// <summary>
         /// Remove, delete XML nodes and items matching XPath expression
         /// </summary>
@@ -543,8 +607,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xPathExpression">Valid XML XPath query expression</param>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <returns>Task of XmlFIlterWithXPathResult</returns>
-        System.Threading.Tasks.Task<XmlFIlterWithXPathResult> ConvertDataXmlFilterWithXPathAsync (string xPathExpression, System.IO.Stream inputFile);
+        /// <returns>Task of XmlFilterWithXPathResult</returns>
+        System.Threading.Tasks.Task<XmlFilterWithXPathResult> ConvertDataXmlFilterWithXPathAsync (string xPathExpression, System.IO.Stream inputFile);
 
         /// <summary>
         /// Filter, select XML nodes using XPath expression, get results
@@ -555,8 +619,72 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xPathExpression">Valid XML XPath query expression</param>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <returns>Task of ApiResponse (XmlFIlterWithXPathResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<XmlFIlterWithXPathResult>> ConvertDataXmlFilterWithXPathAsyncWithHttpInfo (string xPathExpression, System.IO.Stream inputFile);
+        /// <returns>Task of ApiResponse (XmlFilterWithXPathResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<XmlFilterWithXPathResult>> ConvertDataXmlFilterWithXPathAsyncWithHttpInfo (string xPathExpression, System.IO.Stream inputFile);
+        /// <summary>
+        /// Query an XML file using XQuery query, get results
+        /// </summary>
+        /// <remarks>
+        /// Return the reuslts of querying a single XML document with an XQuery expression.  Supports XQuery 3.1 and earlier.  This API is optimized for a single XML document as input.  Provided XML document is automatically loaded as the default context; to access elements in the document, simply refer to them without a document reference, such as bookstore/book
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xQuery">Valid XML XQuery 3.1 or earlier query expression; multi-line expressions are supported</param>
+        /// <returns>Task of XmlQueryWithXQueryResult</returns>
+        System.Threading.Tasks.Task<XmlQueryWithXQueryResult> ConvertDataXmlQueryWithXQueryAsync (System.IO.Stream inputFile, string xQuery);
+
+        /// <summary>
+        /// Query an XML file using XQuery query, get results
+        /// </summary>
+        /// <remarks>
+        /// Return the reuslts of querying a single XML document with an XQuery expression.  Supports XQuery 3.1 and earlier.  This API is optimized for a single XML document as input.  Provided XML document is automatically loaded as the default context; to access elements in the document, simply refer to them without a document reference, such as bookstore/book
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xQuery">Valid XML XQuery 3.1 or earlier query expression; multi-line expressions are supported</param>
+        /// <returns>Task of ApiResponse (XmlQueryWithXQueryResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<XmlQueryWithXQueryResult>> ConvertDataXmlQueryWithXQueryAsyncWithHttpInfo (System.IO.Stream inputFile, string xQuery);
+        /// <summary>
+        /// Query multiple XML files using XQuery query, get results
+        /// </summary>
+        /// <remarks>
+        /// Return the reuslts of querying an XML document with an XQuery expression.  Supports XQuery 3.1 and earlier.  This API is optimized for multiple XML documents as input.  You can refer to the contents of a given document by name, for example doc(\&quot;books.xml\&quot;) or doc(\&quot;restaurants.xml\&quot;) if you included two input files named books.xml and restaurants.xml.  If input files contain no file name, they will default to file names input1.xml, input2.xml and so on.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input XML file to perform the operation on.</param>
+        /// <param name="xQuery">Valid XML XQuery 3.1 or earlier query expression; multi-line expressions are supported</param>
+        /// <param name="inputFile2">Second input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile3">Third input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input XML file to perform the operation on. (optional)</param>
+        /// <returns>Task of XmlQueryWithXQueryMultiResult</returns>
+        System.Threading.Tasks.Task<XmlQueryWithXQueryMultiResult> ConvertDataXmlQueryWithXQueryMultiAsync (System.IO.Stream inputFile1, string xQuery, System.IO.Stream inputFile2 = null, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
+
+        /// <summary>
+        /// Query multiple XML files using XQuery query, get results
+        /// </summary>
+        /// <remarks>
+        /// Return the reuslts of querying an XML document with an XQuery expression.  Supports XQuery 3.1 and earlier.  This API is optimized for multiple XML documents as input.  You can refer to the contents of a given document by name, for example doc(\&quot;books.xml\&quot;) or doc(\&quot;restaurants.xml\&quot;) if you included two input files named books.xml and restaurants.xml.  If input files contain no file name, they will default to file names input1.xml, input2.xml and so on.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input XML file to perform the operation on.</param>
+        /// <param name="xQuery">Valid XML XQuery 3.1 or earlier query expression; multi-line expressions are supported</param>
+        /// <param name="inputFile2">Second input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile3">Third input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input XML file to perform the operation on. (optional)</param>
+        /// <returns>Task of ApiResponse (XmlQueryWithXQueryMultiResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<XmlQueryWithXQueryMultiResult>> ConvertDataXmlQueryWithXQueryMultiAsyncWithHttpInfo (System.IO.Stream inputFile1, string xQuery, System.IO.Stream inputFile2 = null, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
         /// <summary>
         /// Remove, delete XML nodes and items matching XPath expression
         /// </summary>
@@ -2197,10 +2325,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xPathExpression">Valid XML XPath query expression</param>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <returns>XmlFIlterWithXPathResult</returns>
-        public XmlFIlterWithXPathResult ConvertDataXmlFilterWithXPath (string xPathExpression, System.IO.Stream inputFile)
+        /// <returns>XmlFilterWithXPathResult</returns>
+        public XmlFilterWithXPathResult ConvertDataXmlFilterWithXPath (string xPathExpression, System.IO.Stream inputFile)
         {
-             ApiResponse<XmlFIlterWithXPathResult> localVarResponse = ConvertDataXmlFilterWithXPathWithHttpInfo(xPathExpression, inputFile);
+             ApiResponse<XmlFilterWithXPathResult> localVarResponse = ConvertDataXmlFilterWithXPathWithHttpInfo(xPathExpression, inputFile);
              return localVarResponse.Data;
         }
 
@@ -2210,8 +2338,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xPathExpression">Valid XML XPath query expression</param>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <returns>ApiResponse of XmlFIlterWithXPathResult</returns>
-        public ApiResponse< XmlFIlterWithXPathResult > ConvertDataXmlFilterWithXPathWithHttpInfo (string xPathExpression, System.IO.Stream inputFile)
+        /// <returns>ApiResponse of XmlFilterWithXPathResult</returns>
+        public ApiResponse< XmlFilterWithXPathResult > ConvertDataXmlFilterWithXPathWithHttpInfo (string xPathExpression, System.IO.Stream inputFile)
         {
             // verify the required parameter 'xPathExpression' is set
             if (xPathExpression == null)
@@ -2267,9 +2395,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<XmlFIlterWithXPathResult>(localVarStatusCode,
+            return new ApiResponse<XmlFilterWithXPathResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (XmlFIlterWithXPathResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(XmlFIlterWithXPathResult)));
+                (XmlFilterWithXPathResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(XmlFilterWithXPathResult)));
         }
 
         /// <summary>
@@ -2278,10 +2406,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xPathExpression">Valid XML XPath query expression</param>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <returns>Task of XmlFIlterWithXPathResult</returns>
-        public async System.Threading.Tasks.Task<XmlFIlterWithXPathResult> ConvertDataXmlFilterWithXPathAsync (string xPathExpression, System.IO.Stream inputFile)
+        /// <returns>Task of XmlFilterWithXPathResult</returns>
+        public async System.Threading.Tasks.Task<XmlFilterWithXPathResult> ConvertDataXmlFilterWithXPathAsync (string xPathExpression, System.IO.Stream inputFile)
         {
-             ApiResponse<XmlFIlterWithXPathResult> localVarResponse = await ConvertDataXmlFilterWithXPathAsyncWithHttpInfo(xPathExpression, inputFile);
+             ApiResponse<XmlFilterWithXPathResult> localVarResponse = await ConvertDataXmlFilterWithXPathAsyncWithHttpInfo(xPathExpression, inputFile);
              return localVarResponse.Data;
 
         }
@@ -2292,8 +2420,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xPathExpression">Valid XML XPath query expression</param>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <returns>Task of ApiResponse (XmlFIlterWithXPathResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<XmlFIlterWithXPathResult>> ConvertDataXmlFilterWithXPathAsyncWithHttpInfo (string xPathExpression, System.IO.Stream inputFile)
+        /// <returns>Task of ApiResponse (XmlFilterWithXPathResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<XmlFilterWithXPathResult>> ConvertDataXmlFilterWithXPathAsyncWithHttpInfo (string xPathExpression, System.IO.Stream inputFile)
         {
             // verify the required parameter 'xPathExpression' is set
             if (xPathExpression == null)
@@ -2349,9 +2477,385 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<XmlFIlterWithXPathResult>(localVarStatusCode,
+            return new ApiResponse<XmlFilterWithXPathResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (XmlFIlterWithXPathResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(XmlFIlterWithXPathResult)));
+                (XmlFilterWithXPathResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(XmlFilterWithXPathResult)));
+        }
+
+        /// <summary>
+        /// Query an XML file using XQuery query, get results Return the reuslts of querying a single XML document with an XQuery expression.  Supports XQuery 3.1 and earlier.  This API is optimized for a single XML document as input.  Provided XML document is automatically loaded as the default context; to access elements in the document, simply refer to them without a document reference, such as bookstore/book
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xQuery">Valid XML XQuery 3.1 or earlier query expression; multi-line expressions are supported</param>
+        /// <returns>XmlQueryWithXQueryResult</returns>
+        public XmlQueryWithXQueryResult ConvertDataXmlQueryWithXQuery (System.IO.Stream inputFile, string xQuery)
+        {
+             ApiResponse<XmlQueryWithXQueryResult> localVarResponse = ConvertDataXmlQueryWithXQueryWithHttpInfo(inputFile, xQuery);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Query an XML file using XQuery query, get results Return the reuslts of querying a single XML document with an XQuery expression.  Supports XQuery 3.1 and earlier.  This API is optimized for a single XML document as input.  Provided XML document is automatically loaded as the default context; to access elements in the document, simply refer to them without a document reference, such as bookstore/book
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xQuery">Valid XML XQuery 3.1 or earlier query expression; multi-line expressions are supported</param>
+        /// <returns>ApiResponse of XmlQueryWithXQueryResult</returns>
+        public ApiResponse< XmlQueryWithXQueryResult > ConvertDataXmlQueryWithXQueryWithHttpInfo (System.IO.Stream inputFile, string xQuery)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDataApi->ConvertDataXmlQueryWithXQuery");
+            // verify the required parameter 'xQuery' is set
+            if (xQuery == null)
+                throw new ApiException(400, "Missing required parameter 'xQuery' when calling ConvertDataApi->ConvertDataXmlQueryWithXQuery");
+
+            var localVarPath = "/convert/xml/query/xquery";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (xQuery != null) localVarHeaderParams.Add("XQuery", this.Configuration.ApiClient.ParameterToString(xQuery)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDataXmlQueryWithXQuery", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<XmlQueryWithXQueryResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (XmlQueryWithXQueryResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(XmlQueryWithXQueryResult)));
+        }
+
+        /// <summary>
+        /// Query an XML file using XQuery query, get results Return the reuslts of querying a single XML document with an XQuery expression.  Supports XQuery 3.1 and earlier.  This API is optimized for a single XML document as input.  Provided XML document is automatically loaded as the default context; to access elements in the document, simply refer to them without a document reference, such as bookstore/book
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xQuery">Valid XML XQuery 3.1 or earlier query expression; multi-line expressions are supported</param>
+        /// <returns>Task of XmlQueryWithXQueryResult</returns>
+        public async System.Threading.Tasks.Task<XmlQueryWithXQueryResult> ConvertDataXmlQueryWithXQueryAsync (System.IO.Stream inputFile, string xQuery)
+        {
+             ApiResponse<XmlQueryWithXQueryResult> localVarResponse = await ConvertDataXmlQueryWithXQueryAsyncWithHttpInfo(inputFile, xQuery);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Query an XML file using XQuery query, get results Return the reuslts of querying a single XML document with an XQuery expression.  Supports XQuery 3.1 and earlier.  This API is optimized for a single XML document as input.  Provided XML document is automatically loaded as the default context; to access elements in the document, simply refer to them without a document reference, such as bookstore/book
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input XML file to perform the operation on.</param>
+        /// <param name="xQuery">Valid XML XQuery 3.1 or earlier query expression; multi-line expressions are supported</param>
+        /// <returns>Task of ApiResponse (XmlQueryWithXQueryResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<XmlQueryWithXQueryResult>> ConvertDataXmlQueryWithXQueryAsyncWithHttpInfo (System.IO.Stream inputFile, string xQuery)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDataApi->ConvertDataXmlQueryWithXQuery");
+            // verify the required parameter 'xQuery' is set
+            if (xQuery == null)
+                throw new ApiException(400, "Missing required parameter 'xQuery' when calling ConvertDataApi->ConvertDataXmlQueryWithXQuery");
+
+            var localVarPath = "/convert/xml/query/xquery";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (xQuery != null) localVarHeaderParams.Add("XQuery", this.Configuration.ApiClient.ParameterToString(xQuery)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDataXmlQueryWithXQuery", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<XmlQueryWithXQueryResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (XmlQueryWithXQueryResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(XmlQueryWithXQueryResult)));
+        }
+
+        /// <summary>
+        /// Query multiple XML files using XQuery query, get results Return the reuslts of querying an XML document with an XQuery expression.  Supports XQuery 3.1 and earlier.  This API is optimized for multiple XML documents as input.  You can refer to the contents of a given document by name, for example doc(\&quot;books.xml\&quot;) or doc(\&quot;restaurants.xml\&quot;) if you included two input files named books.xml and restaurants.xml.  If input files contain no file name, they will default to file names input1.xml, input2.xml and so on.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input XML file to perform the operation on.</param>
+        /// <param name="xQuery">Valid XML XQuery 3.1 or earlier query expression; multi-line expressions are supported</param>
+        /// <param name="inputFile2">Second input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile3">Third input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input XML file to perform the operation on. (optional)</param>
+        /// <returns>XmlQueryWithXQueryMultiResult</returns>
+        public XmlQueryWithXQueryMultiResult ConvertDataXmlQueryWithXQueryMulti (System.IO.Stream inputFile1, string xQuery, System.IO.Stream inputFile2 = null, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null)
+        {
+             ApiResponse<XmlQueryWithXQueryMultiResult> localVarResponse = ConvertDataXmlQueryWithXQueryMultiWithHttpInfo(inputFile1, xQuery, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Query multiple XML files using XQuery query, get results Return the reuslts of querying an XML document with an XQuery expression.  Supports XQuery 3.1 and earlier.  This API is optimized for multiple XML documents as input.  You can refer to the contents of a given document by name, for example doc(\&quot;books.xml\&quot;) or doc(\&quot;restaurants.xml\&quot;) if you included two input files named books.xml and restaurants.xml.  If input files contain no file name, they will default to file names input1.xml, input2.xml and so on.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input XML file to perform the operation on.</param>
+        /// <param name="xQuery">Valid XML XQuery 3.1 or earlier query expression; multi-line expressions are supported</param>
+        /// <param name="inputFile2">Second input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile3">Third input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input XML file to perform the operation on. (optional)</param>
+        /// <returns>ApiResponse of XmlQueryWithXQueryMultiResult</returns>
+        public ApiResponse< XmlQueryWithXQueryMultiResult > ConvertDataXmlQueryWithXQueryMultiWithHttpInfo (System.IO.Stream inputFile1, string xQuery, System.IO.Stream inputFile2 = null, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null)
+        {
+            // verify the required parameter 'inputFile1' is set
+            if (inputFile1 == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile1' when calling ConvertDataApi->ConvertDataXmlQueryWithXQueryMulti");
+            // verify the required parameter 'xQuery' is set
+            if (xQuery == null)
+                throw new ApiException(400, "Missing required parameter 'xQuery' when calling ConvertDataApi->ConvertDataXmlQueryWithXQueryMulti");
+
+            var localVarPath = "/convert/xml/query/xquery/multi";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (xQuery != null) localVarHeaderParams.Add("XQuery", this.Configuration.ApiClient.ParameterToString(xQuery)); // header parameter
+            if (inputFile1 != null) localVarFileParams.Add("inputFile1", this.Configuration.ApiClient.ParameterToFile("inputFile1", inputFile1));
+            if (inputFile2 != null) localVarFileParams.Add("inputFile2", this.Configuration.ApiClient.ParameterToFile("inputFile2", inputFile2));
+            if (inputFile3 != null) localVarFileParams.Add("inputFile3", this.Configuration.ApiClient.ParameterToFile("inputFile3", inputFile3));
+            if (inputFile4 != null) localVarFileParams.Add("inputFile4", this.Configuration.ApiClient.ParameterToFile("inputFile4", inputFile4));
+            if (inputFile5 != null) localVarFileParams.Add("inputFile5", this.Configuration.ApiClient.ParameterToFile("inputFile5", inputFile5));
+            if (inputFile6 != null) localVarFileParams.Add("inputFile6", this.Configuration.ApiClient.ParameterToFile("inputFile6", inputFile6));
+            if (inputFile7 != null) localVarFileParams.Add("inputFile7", this.Configuration.ApiClient.ParameterToFile("inputFile7", inputFile7));
+            if (inputFile8 != null) localVarFileParams.Add("inputFile8", this.Configuration.ApiClient.ParameterToFile("inputFile8", inputFile8));
+            if (inputFile9 != null) localVarFileParams.Add("inputFile9", this.Configuration.ApiClient.ParameterToFile("inputFile9", inputFile9));
+            if (inputFile10 != null) localVarFileParams.Add("inputFile10", this.Configuration.ApiClient.ParameterToFile("inputFile10", inputFile10));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDataXmlQueryWithXQueryMulti", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<XmlQueryWithXQueryMultiResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (XmlQueryWithXQueryMultiResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(XmlQueryWithXQueryMultiResult)));
+        }
+
+        /// <summary>
+        /// Query multiple XML files using XQuery query, get results Return the reuslts of querying an XML document with an XQuery expression.  Supports XQuery 3.1 and earlier.  This API is optimized for multiple XML documents as input.  You can refer to the contents of a given document by name, for example doc(\&quot;books.xml\&quot;) or doc(\&quot;restaurants.xml\&quot;) if you included two input files named books.xml and restaurants.xml.  If input files contain no file name, they will default to file names input1.xml, input2.xml and so on.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input XML file to perform the operation on.</param>
+        /// <param name="xQuery">Valid XML XQuery 3.1 or earlier query expression; multi-line expressions are supported</param>
+        /// <param name="inputFile2">Second input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile3">Third input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input XML file to perform the operation on. (optional)</param>
+        /// <returns>Task of XmlQueryWithXQueryMultiResult</returns>
+        public async System.Threading.Tasks.Task<XmlQueryWithXQueryMultiResult> ConvertDataXmlQueryWithXQueryMultiAsync (System.IO.Stream inputFile1, string xQuery, System.IO.Stream inputFile2 = null, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null)
+        {
+             ApiResponse<XmlQueryWithXQueryMultiResult> localVarResponse = await ConvertDataXmlQueryWithXQueryMultiAsyncWithHttpInfo(inputFile1, xQuery, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Query multiple XML files using XQuery query, get results Return the reuslts of querying an XML document with an XQuery expression.  Supports XQuery 3.1 and earlier.  This API is optimized for multiple XML documents as input.  You can refer to the contents of a given document by name, for example doc(\&quot;books.xml\&quot;) or doc(\&quot;restaurants.xml\&quot;) if you included two input files named books.xml and restaurants.xml.  If input files contain no file name, they will default to file names input1.xml, input2.xml and so on.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input XML file to perform the operation on.</param>
+        /// <param name="xQuery">Valid XML XQuery 3.1 or earlier query expression; multi-line expressions are supported</param>
+        /// <param name="inputFile2">Second input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile3">Third input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input XML file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input XML file to perform the operation on. (optional)</param>
+        /// <returns>Task of ApiResponse (XmlQueryWithXQueryMultiResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<XmlQueryWithXQueryMultiResult>> ConvertDataXmlQueryWithXQueryMultiAsyncWithHttpInfo (System.IO.Stream inputFile1, string xQuery, System.IO.Stream inputFile2 = null, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null)
+        {
+            // verify the required parameter 'inputFile1' is set
+            if (inputFile1 == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile1' when calling ConvertDataApi->ConvertDataXmlQueryWithXQueryMulti");
+            // verify the required parameter 'xQuery' is set
+            if (xQuery == null)
+                throw new ApiException(400, "Missing required parameter 'xQuery' when calling ConvertDataApi->ConvertDataXmlQueryWithXQueryMulti");
+
+            var localVarPath = "/convert/xml/query/xquery/multi";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (xQuery != null) localVarHeaderParams.Add("XQuery", this.Configuration.ApiClient.ParameterToString(xQuery)); // header parameter
+            if (inputFile1 != null) localVarFileParams.Add("inputFile1", this.Configuration.ApiClient.ParameterToFile("inputFile1", inputFile1));
+            if (inputFile2 != null) localVarFileParams.Add("inputFile2", this.Configuration.ApiClient.ParameterToFile("inputFile2", inputFile2));
+            if (inputFile3 != null) localVarFileParams.Add("inputFile3", this.Configuration.ApiClient.ParameterToFile("inputFile3", inputFile3));
+            if (inputFile4 != null) localVarFileParams.Add("inputFile4", this.Configuration.ApiClient.ParameterToFile("inputFile4", inputFile4));
+            if (inputFile5 != null) localVarFileParams.Add("inputFile5", this.Configuration.ApiClient.ParameterToFile("inputFile5", inputFile5));
+            if (inputFile6 != null) localVarFileParams.Add("inputFile6", this.Configuration.ApiClient.ParameterToFile("inputFile6", inputFile6));
+            if (inputFile7 != null) localVarFileParams.Add("inputFile7", this.Configuration.ApiClient.ParameterToFile("inputFile7", inputFile7));
+            if (inputFile8 != null) localVarFileParams.Add("inputFile8", this.Configuration.ApiClient.ParameterToFile("inputFile8", inputFile8));
+            if (inputFile9 != null) localVarFileParams.Add("inputFile9", this.Configuration.ApiClient.ParameterToFile("inputFile9", inputFile9));
+            if (inputFile10 != null) localVarFileParams.Add("inputFile10", this.Configuration.ApiClient.ParameterToFile("inputFile10", inputFile10));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDataXmlQueryWithXQueryMulti", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<XmlQueryWithXQueryMultiResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (XmlQueryWithXQueryMultiResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(XmlQueryWithXQueryMultiResult)));
         }
 
         /// <summary>

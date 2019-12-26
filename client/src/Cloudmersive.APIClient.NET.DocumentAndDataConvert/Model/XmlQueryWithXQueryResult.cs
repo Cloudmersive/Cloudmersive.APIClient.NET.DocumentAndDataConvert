@@ -25,22 +25,22 @@ using SwaggerDateConverter = Cloudmersive.APIClient.NET.DocumentAndDataConvert.C
 namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
 {
     /// <summary>
-    /// Result of performing a filter operation on XML input using XPath
+    /// Result of performing an XQuery operation on an XML document.
     /// </summary>
     [DataContract]
-    public partial class XmlFilterWithXPathResult :  IEquatable<XmlFilterWithXPathResult>, IValidatableObject
+    public partial class XmlQueryWithXQueryResult :  IEquatable<XmlQueryWithXQueryResult>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="XmlFilterWithXPathResult" /> class.
+        /// Initializes a new instance of the <see cref="XmlQueryWithXQueryResult" /> class.
         /// </summary>
         /// <param name="successful">True if the operation was successful, false otherwise.</param>
-        /// <param name="xmlNodes">Matching selected XML nodes as strings.</param>
-        /// <param name="resultCount">Count of the matching results.</param>
-        public XmlFilterWithXPathResult(bool? successful = default(bool?), List<string> xmlNodes = default(List<string>), int? resultCount = default(int?))
+        /// <param name="resultingXml">Resulting XML result output.</param>
+        /// <param name="errorMessage">If an error occurs, additional details on the error.</param>
+        public XmlQueryWithXQueryResult(bool? successful = default(bool?), string resultingXml = default(string), string errorMessage = default(string))
         {
             this.Successful = successful;
-            this.XmlNodes = xmlNodes;
-            this.ResultCount = resultCount;
+            this.ResultingXml = resultingXml;
+            this.ErrorMessage = errorMessage;
         }
         
         /// <summary>
@@ -51,18 +51,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         public bool? Successful { get; set; }
 
         /// <summary>
-        /// Matching selected XML nodes as strings
+        /// Resulting XML result output
         /// </summary>
-        /// <value>Matching selected XML nodes as strings</value>
-        [DataMember(Name="XmlNodes", EmitDefaultValue=false)]
-        public List<string> XmlNodes { get; set; }
+        /// <value>Resulting XML result output</value>
+        [DataMember(Name="ResultingXml", EmitDefaultValue=false)]
+        public string ResultingXml { get; set; }
 
         /// <summary>
-        /// Count of the matching results
+        /// If an error occurs, additional details on the error
         /// </summary>
-        /// <value>Count of the matching results</value>
-        [DataMember(Name="ResultCount", EmitDefaultValue=false)]
-        public int? ResultCount { get; set; }
+        /// <value>If an error occurs, additional details on the error</value>
+        [DataMember(Name="ErrorMessage", EmitDefaultValue=false)]
+        public string ErrorMessage { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -71,10 +71,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class XmlFilterWithXPathResult {\n");
+            sb.Append("class XmlQueryWithXQueryResult {\n");
             sb.Append("  Successful: ").Append(Successful).Append("\n");
-            sb.Append("  XmlNodes: ").Append(XmlNodes).Append("\n");
-            sb.Append("  ResultCount: ").Append(ResultCount).Append("\n");
+            sb.Append("  ResultingXml: ").Append(ResultingXml).Append("\n");
+            sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -95,15 +95,15 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as XmlFilterWithXPathResult);
+            return this.Equals(input as XmlQueryWithXQueryResult);
         }
 
         /// <summary>
-        /// Returns true if XmlFilterWithXPathResult instances are equal
+        /// Returns true if XmlQueryWithXQueryResult instances are equal
         /// </summary>
-        /// <param name="input">Instance of XmlFilterWithXPathResult to be compared</param>
+        /// <param name="input">Instance of XmlQueryWithXQueryResult to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(XmlFilterWithXPathResult input)
+        public bool Equals(XmlQueryWithXQueryResult input)
         {
             if (input == null)
                 return false;
@@ -115,14 +115,14 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                     this.Successful.Equals(input.Successful))
                 ) && 
                 (
-                    this.XmlNodes == input.XmlNodes ||
-                    this.XmlNodes != null &&
-                    this.XmlNodes.SequenceEqual(input.XmlNodes)
+                    this.ResultingXml == input.ResultingXml ||
+                    (this.ResultingXml != null &&
+                    this.ResultingXml.Equals(input.ResultingXml))
                 ) && 
                 (
-                    this.ResultCount == input.ResultCount ||
-                    (this.ResultCount != null &&
-                    this.ResultCount.Equals(input.ResultCount))
+                    this.ErrorMessage == input.ErrorMessage ||
+                    (this.ErrorMessage != null &&
+                    this.ErrorMessage.Equals(input.ErrorMessage))
                 );
         }
 
@@ -137,10 +137,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                 int hashCode = 41;
                 if (this.Successful != null)
                     hashCode = hashCode * 59 + this.Successful.GetHashCode();
-                if (this.XmlNodes != null)
-                    hashCode = hashCode * 59 + this.XmlNodes.GetHashCode();
-                if (this.ResultCount != null)
-                    hashCode = hashCode * 59 + this.ResultCount.GetHashCode();
+                if (this.ResultingXml != null)
+                    hashCode = hashCode * 59 + this.ResultingXml.GetHashCode();
+                if (this.ErrorMessage != null)
+                    hashCode = hashCode * 59 + this.ErrorMessage.GetHashCode();
                 return hashCode;
             }
         }
