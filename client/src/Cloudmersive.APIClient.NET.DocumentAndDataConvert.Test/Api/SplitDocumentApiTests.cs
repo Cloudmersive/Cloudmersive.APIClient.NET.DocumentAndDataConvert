@@ -78,6 +78,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test SplitDocumentPptx
+        /// </summary>
+        [Test]
+        public void SplitDocumentPptxTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //bool? returnDocumentContents = null;
+            //var response = instance.SplitDocumentPptx(inputFile, returnDocumentContents);
+            //Assert.IsInstanceOf<SplitPptxPresentationResult> (response, "response is SplitPptxPresentationResult");
+        }
+        
+        /// <summary>
         /// Test SplitDocumentXlsx
         /// </summary>
         [Test]
@@ -85,7 +98,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //System.IO.Stream inputFile = null;
-            //var response = instance.SplitDocumentXlsx(inputFile);
+            //bool? returnDocumentContents = null;
+            //var response = instance.SplitDocumentXlsx(inputFile, returnDocumentContents);
             //Assert.IsInstanceOf<SplitXlsxWorksheetResult> (response, "response is SplitXlsxWorksheetResult");
         }
         

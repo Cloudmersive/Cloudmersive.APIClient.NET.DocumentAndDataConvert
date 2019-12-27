@@ -25,20 +25,20 @@ using SwaggerDateConverter = Cloudmersive.APIClient.NET.DocumentAndDataConvert.C
 namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
 {
     /// <summary>
-    /// Request to set PDF metadata
+    /// Request to add annotations to a PDF
     /// </summary>
     [DataContract]
-    public partial class SetPdfMetadataRequest :  IEquatable<SetPdfMetadataRequest>, IValidatableObject
+    public partial class AddPdfAnnotationRequest :  IEquatable<AddPdfAnnotationRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SetPdfMetadataRequest" /> class.
+        /// Initializes a new instance of the <see cref="AddPdfAnnotationRequest" /> class.
         /// </summary>
         /// <param name="inputFileBytes">Input file contents bytes for the file to modify.</param>
-        /// <param name="metadataToSet">PDF metadata to set on the file.</param>
-        public SetPdfMetadataRequest(byte[] inputFileBytes = default(byte[]), PdfMetadata metadataToSet = default(PdfMetadata))
+        /// <param name="annotationsToAdd">Annotations to add to the PDF file.</param>
+        public AddPdfAnnotationRequest(byte[] inputFileBytes = default(byte[]), List<PdfAnnotation> annotationsToAdd = default(List<PdfAnnotation>))
         {
             this.InputFileBytes = inputFileBytes;
-            this.MetadataToSet = metadataToSet;
+            this.AnnotationsToAdd = annotationsToAdd;
         }
         
         /// <summary>
@@ -49,11 +49,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         public byte[] InputFileBytes { get; set; }
 
         /// <summary>
-        /// PDF metadata to set on the file
+        /// Annotations to add to the PDF file
         /// </summary>
-        /// <value>PDF metadata to set on the file</value>
-        [DataMember(Name="MetadataToSet", EmitDefaultValue=false)]
-        public PdfMetadata MetadataToSet { get; set; }
+        /// <value>Annotations to add to the PDF file</value>
+        [DataMember(Name="AnnotationsToAdd", EmitDefaultValue=false)]
+        public List<PdfAnnotation> AnnotationsToAdd { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -62,9 +62,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class SetPdfMetadataRequest {\n");
+            sb.Append("class AddPdfAnnotationRequest {\n");
             sb.Append("  InputFileBytes: ").Append(InputFileBytes).Append("\n");
-            sb.Append("  MetadataToSet: ").Append(MetadataToSet).Append("\n");
+            sb.Append("  AnnotationsToAdd: ").Append(AnnotationsToAdd).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -85,15 +85,15 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as SetPdfMetadataRequest);
+            return this.Equals(input as AddPdfAnnotationRequest);
         }
 
         /// <summary>
-        /// Returns true if SetPdfMetadataRequest instances are equal
+        /// Returns true if AddPdfAnnotationRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of SetPdfMetadataRequest to be compared</param>
+        /// <param name="input">Instance of AddPdfAnnotationRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SetPdfMetadataRequest input)
+        public bool Equals(AddPdfAnnotationRequest input)
         {
             if (input == null)
                 return false;
@@ -105,9 +105,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                     this.InputFileBytes.Equals(input.InputFileBytes))
                 ) && 
                 (
-                    this.MetadataToSet == input.MetadataToSet ||
-                    (this.MetadataToSet != null &&
-                    this.MetadataToSet.Equals(input.MetadataToSet))
+                    this.AnnotationsToAdd == input.AnnotationsToAdd ||
+                    this.AnnotationsToAdd != null &&
+                    this.AnnotationsToAdd.SequenceEqual(input.AnnotationsToAdd)
                 );
         }
 
@@ -122,8 +122,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                 int hashCode = 41;
                 if (this.InputFileBytes != null)
                     hashCode = hashCode * 59 + this.InputFileBytes.GetHashCode();
-                if (this.MetadataToSet != null)
-                    hashCode = hashCode * 59 + this.MetadataToSet.GetHashCode();
+                if (this.AnnotationsToAdd != null)
+                    hashCode = hashCode * 59 + this.AnnotationsToAdd.GetHashCode();
                 return hashCode;
             }
         }

@@ -5,6 +5,7 @@ All URIs are relative to *https://api.cloudmersive.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**SplitDocumentPdfByPage**](SplitDocumentApi.md#splitdocumentpdfbypage) | **POST** /convert/split/pdf | Split a PDF file into separate PDF files, one per page
+[**SplitDocumentPptx**](SplitDocumentApi.md#splitdocumentpptx) | **POST** /convert/split/pptx | Split a single PowerPoint Presentation PPTX into Separate Slides
 [**SplitDocumentXlsx**](SplitDocumentApi.md#splitdocumentxlsx) | **POST** /convert/split/xlsx | Split a single Excel XLSX into Separate Worksheets
 
 
@@ -76,9 +77,77 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="splitdocumentpptx"></a>
+# **SplitDocumentPptx**
+> SplitPptxPresentationResult SplitDocumentPptx (System.IO.Stream inputFile, bool? returnDocumentContents = null)
+
+Split a single PowerPoint Presentation PPTX into Separate Slides
+
+Split an PowerPoint PPTX Presentation, comprised of multiple slides into separate PowerPoint PPTX presentation files, with each containing exactly one slide.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class SplitDocumentPptxExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new SplitDocumentApi();
+            var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
+            var returnDocumentContents = true;  // bool? | Set to true to return the contents of each Worksheet directly, set to false to only return URLs to each resulting worksheet.  Default is true. (optional) 
+
+            try
+            {
+                // Split a single PowerPoint Presentation PPTX into Separate Slides
+                SplitPptxPresentationResult result = apiInstance.SplitDocumentPptx(inputFile, returnDocumentContents);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SplitDocumentApi.SplitDocumentPptx: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
+ **returnDocumentContents** | **bool?**| Set to true to return the contents of each Worksheet directly, set to false to only return URLs to each resulting worksheet.  Default is true. | [optional] 
+
+### Return type
+
+[**SplitPptxPresentationResult**](SplitPptxPresentationResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="splitdocumentxlsx"></a>
 # **SplitDocumentXlsx**
-> SplitXlsxWorksheetResult SplitDocumentXlsx (System.IO.Stream inputFile)
+> SplitXlsxWorksheetResult SplitDocumentXlsx (System.IO.Stream inputFile, bool? returnDocumentContents = null)
 
 Split a single Excel XLSX into Separate Worksheets
 
@@ -105,11 +174,12 @@ namespace Example
 
             var apiInstance = new SplitDocumentApi();
             var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
+            var returnDocumentContents = true;  // bool? | Set to true to return the contents of each Worksheet directly, set to false to only return URLs to each resulting worksheet.  Default is true. (optional) 
 
             try
             {
                 // Split a single Excel XLSX into Separate Worksheets
-                SplitXlsxWorksheetResult result = apiInstance.SplitDocumentXlsx(inputFile);
+                SplitXlsxWorksheetResult result = apiInstance.SplitDocumentXlsx(inputFile, returnDocumentContents);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -126,6 +196,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
+ **returnDocumentContents** | **bool?**| Set to true to return the contents of each Worksheet directly, set to false to only return URLs to each resulting worksheet.  Default is true. | [optional] 
 
 ### Return type
 

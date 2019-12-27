@@ -91,7 +91,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Delete, remove pages from a Word DOCX document
         /// </summary>
         /// <remarks>
-        /// Returns the pages and contents of each page defined in the Word Document (DOCX) format file
+        /// Returns the edited Word Document in the Word Document (DOCX) format file with the specified pages removed
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reqConfig">Document input request</param>
@@ -102,7 +102,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Delete, remove pages from a Word DOCX document
         /// </summary>
         /// <remarks>
-        /// Returns the pages and contents of each page defined in the Word Document (DOCX) format file
+        /// Returns the edited Word Document in the Word Document (DOCX) format file with the specified pages removed
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reqConfig">Document input request</param>
@@ -571,6 +571,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> EditDocumentFinishEditingWithHttpInfo (FinishEditingRequest reqConfig);
         /// <summary>
+        /// Delete, remove slides from a PowerPoint PPTX presentation document
+        /// </summary>
+        /// <remarks>
+        /// Edits the input PowerPoint PPTX presentation document to remove the specified slides
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Presentation input request</param>
+        /// <returns>byte[]</returns>
+        byte[] EditDocumentPptxDeleteSlides (RemovePptxSlidesRequest reqConfig);
+
+        /// <summary>
+        /// Delete, remove slides from a PowerPoint PPTX presentation document
+        /// </summary>
+        /// <remarks>
+        /// Edits the input PowerPoint PPTX presentation document to remove the specified slides
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Presentation input request</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> EditDocumentPptxDeleteSlidesWithHttpInfo (RemovePptxSlidesRequest reqConfig);
+        /// <summary>
         /// Replace string in PowerPoint PPTX presentation
         /// </summary>
         /// <remarks>
@@ -828,7 +849,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Delete, remove pages from a Word DOCX document
         /// </summary>
         /// <remarks>
-        /// Returns the pages and contents of each page defined in the Word Document (DOCX) format file
+        /// Returns the edited Word Document in the Word Document (DOCX) format file with the specified pages removed
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reqConfig">Document input request</param>
@@ -839,7 +860,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Delete, remove pages from a Word DOCX document
         /// </summary>
         /// <remarks>
-        /// Returns the pages and contents of each page defined in the Word Document (DOCX) format file
+        /// Returns the edited Word Document in the Word Document (DOCX) format file with the specified pages removed
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reqConfig">Document input request</param>
@@ -1307,6 +1328,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="reqConfig">Cloudmersive Document URL to complete editing on</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDocumentFinishEditingAsyncWithHttpInfo (FinishEditingRequest reqConfig);
+        /// <summary>
+        /// Delete, remove slides from a PowerPoint PPTX presentation document
+        /// </summary>
+        /// <remarks>
+        /// Edits the input PowerPoint PPTX presentation document to remove the specified slides
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Presentation input request</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> EditDocumentPptxDeleteSlidesAsync (RemovePptxSlidesRequest reqConfig);
+
+        /// <summary>
+        /// Delete, remove slides from a PowerPoint PPTX presentation document
+        /// </summary>
+        /// <remarks>
+        /// Edits the input PowerPoint PPTX presentation document to remove the specified slides
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Presentation input request</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDocumentPptxDeleteSlidesAsyncWithHttpInfo (RemovePptxSlidesRequest reqConfig);
         /// <summary>
         /// Replace string in PowerPoint PPTX presentation
         /// </summary>
@@ -2094,7 +2136,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Delete, remove pages from a Word DOCX document Returns the pages and contents of each page defined in the Word Document (DOCX) format file
+        /// Delete, remove pages from a Word DOCX document Returns the edited Word Document in the Word Document (DOCX) format file with the specified pages removed
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reqConfig">Document input request</param>
@@ -2106,7 +2148,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Delete, remove pages from a Word DOCX document Returns the pages and contents of each page defined in the Word Document (DOCX) format file
+        /// Delete, remove pages from a Word DOCX document Returns the edited Word Document in the Word Document (DOCX) format file with the specified pages removed
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reqConfig">Document input request</param>
@@ -2177,7 +2219,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Delete, remove pages from a Word DOCX document Returns the pages and contents of each page defined in the Word Document (DOCX) format file
+        /// Delete, remove pages from a Word DOCX document Returns the edited Word Document in the Word Document (DOCX) format file with the specified pages removed
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reqConfig">Document input request</param>
@@ -2190,7 +2232,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Delete, remove pages from a Word DOCX document Returns the pages and contents of each page defined in the Word Document (DOCX) format file
+        /// Delete, remove pages from a Word DOCX document Returns the edited Word Document in the Word Document (DOCX) format file with the specified pages removed
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reqConfig">Document input request</param>
@@ -6046,6 +6088,173 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("EditDocumentFinishEditing", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Delete, remove slides from a PowerPoint PPTX presentation document Edits the input PowerPoint PPTX presentation document to remove the specified slides
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Presentation input request</param>
+        /// <returns>byte[]</returns>
+        public byte[] EditDocumentPptxDeleteSlides (RemovePptxSlidesRequest reqConfig)
+        {
+             ApiResponse<byte[]> localVarResponse = EditDocumentPptxDeleteSlidesWithHttpInfo(reqConfig);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Delete, remove slides from a PowerPoint PPTX presentation document Edits the input PowerPoint PPTX presentation document to remove the specified slides
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Presentation input request</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > EditDocumentPptxDeleteSlidesWithHttpInfo (RemovePptxSlidesRequest reqConfig)
+        {
+            // verify the required parameter 'reqConfig' is set
+            if (reqConfig == null)
+                throw new ApiException(400, "Missing required parameter 'reqConfig' when calling EditDocumentApi->EditDocumentPptxDeleteSlides");
+
+            var localVarPath = "/convert/edit/pptx/delete-slides";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reqConfig; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentPptxDeleteSlides", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Delete, remove slides from a PowerPoint PPTX presentation document Edits the input PowerPoint PPTX presentation document to remove the specified slides
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Presentation input request</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> EditDocumentPptxDeleteSlidesAsync (RemovePptxSlidesRequest reqConfig)
+        {
+             ApiResponse<byte[]> localVarResponse = await EditDocumentPptxDeleteSlidesAsyncWithHttpInfo(reqConfig);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Delete, remove slides from a PowerPoint PPTX presentation document Edits the input PowerPoint PPTX presentation document to remove the specified slides
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Presentation input request</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDocumentPptxDeleteSlidesAsyncWithHttpInfo (RemovePptxSlidesRequest reqConfig)
+        {
+            // verify the required parameter 'reqConfig' is set
+            if (reqConfig == null)
+                throw new ApiException(400, "Missing required parameter 'reqConfig' when calling EditDocumentApi->EditDocumentPptxDeleteSlides");
+
+            var localVarPath = "/convert/edit/pptx/delete-slides";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reqConfig; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentPptxDeleteSlides", localVarResponse);
                 if (exception != null) throw exception;
             }
 

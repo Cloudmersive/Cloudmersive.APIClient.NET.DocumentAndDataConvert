@@ -65,6 +65,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
 
         
         /// <summary>
+        /// Test EditPdfAddAnnotations
+        /// </summary>
+        [Test]
+        public void EditPdfAddAnnotationsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //AddPdfAnnotationRequest request = null;
+            //var response = instance.EditPdfAddAnnotations(request);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
         /// Test EditPdfDecrypt
         /// </summary>
         [Test]
@@ -104,6 +116,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //string encryptionKeyLength = null;
             //var response = instance.EditPdfEncrypt(inputFile, userPassword, ownerPassword, encryptionKeyLength);
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
+        /// Test EditPdfGetAnnotations
+        /// </summary>
+        [Test]
+        public void EditPdfGetAnnotationsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.EditPdfGetAnnotations(inputFile);
+            //Assert.IsInstanceOf<GetPdfAnnotationsResult> (response, "response is GetPdfAnnotationsResult");
         }
         
         /// <summary>
@@ -167,6 +191,59 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             // TODO uncomment below to test the method and replace null with proper value
             //System.IO.Stream inputFile = null;
             //var response = instance.EditPdfRasterize(inputFile);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
+        /// Test EditPdfRemoveAllAnnotations
+        /// </summary>
+        [Test]
+        public void EditPdfRemoveAllAnnotationsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.EditPdfRemoveAllAnnotations(inputFile);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
+        /// Test EditPdfRemoveAnnotationItem
+        /// </summary>
+        [Test]
+        public void EditPdfRemoveAnnotationItemTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //int? annotationIndex = null;
+            //var response = instance.EditPdfRemoveAnnotationItem(inputFile, annotationIndex);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
+        /// Test EditPdfRotateAllPages
+        /// </summary>
+        [Test]
+        public void EditPdfRotateAllPagesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //int? rotationAngle = null;
+            //var response = instance.EditPdfRotateAllPages(inputFile, rotationAngle);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
+        /// Test EditPdfRotatePageRange
+        /// </summary>
+        [Test]
+        public void EditPdfRotatePageRangeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //int? rotationAngle = null;
+            //int? pageStart = null;
+            //int? pageEnd = null;
+            //var response = instance.EditPdfRotatePageRange(inputFile, rotationAngle, pageStart, pageEnd);
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         

@@ -377,6 +377,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test EditDocumentPptxDeleteSlides
+        /// </summary>
+        [Test]
+        public void EditDocumentPptxDeleteSlidesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //RemovePptxSlidesRequest reqConfig = null;
+            //var response = instance.EditDocumentPptxDeleteSlides(reqConfig);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
         /// Test EditDocumentPptxReplace
         /// </summary>
         [Test]

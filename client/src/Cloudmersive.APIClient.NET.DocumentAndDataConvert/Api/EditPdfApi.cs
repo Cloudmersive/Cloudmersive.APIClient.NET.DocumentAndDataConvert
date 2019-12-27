@@ -25,6 +25,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Add one or more PDF annotations, comments in the PDF document
+        /// </summary>
+        /// <remarks>
+        /// Adds one or more annotations, comments to a PDF document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>byte[]</returns>
+        byte[] EditPdfAddAnnotations (AddPdfAnnotationRequest request);
+
+        /// <summary>
+        /// Add one or more PDF annotations, comments in the PDF document
+        /// </summary>
+        /// <remarks>
+        /// Adds one or more annotations, comments to a PDF document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> EditPdfAddAnnotationsWithHttpInfo (AddPdfAnnotationRequest request);
+        /// <summary>
         /// Decrypt and password-protect a PDF
         /// </summary>
         /// <remarks>
@@ -99,6 +120,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="encryptionKeyLength">Possible values are \&quot;128\&quot; (128-bit RC4 encryption) and \&quot;256\&quot; (256-bit AES encryption).  Default is 256. (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> EditPdfEncryptWithHttpInfo (System.IO.Stream inputFile, string userPassword = null, string ownerPassword = null, string encryptionKeyLength = null);
+        /// <summary>
+        /// Get PDF annotations, including comments in the document
+        /// </summary>
+        /// <remarks>
+        /// Enumerates the annotations, including comments and notes, in a PDF document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>GetPdfAnnotationsResult</returns>
+        GetPdfAnnotationsResult EditPdfGetAnnotations (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Get PDF annotations, including comments in the document
+        /// </summary>
+        /// <remarks>
+        /// Enumerates the annotations, including comments and notes, in a PDF document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of GetPdfAnnotationsResult</returns>
+        ApiResponse<GetPdfAnnotationsResult> EditPdfGetAnnotationsWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
         /// Gets PDF Form fields and values
         /// </summary>
@@ -212,6 +254,100 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> EditPdfRasterizeWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// Remove all PDF annotations, including comments in the document
+        /// </summary>
+        /// <remarks>
+        /// Removes all of the annotations, including comments and notes, in a PDF document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>byte[]</returns>
+        byte[] EditPdfRemoveAllAnnotations (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Remove all PDF annotations, including comments in the document
+        /// </summary>
+        /// <remarks>
+        /// Removes all of the annotations, including comments and notes, in a PDF document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> EditPdfRemoveAllAnnotationsWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// Remove a specific PDF annotation, comment in the document
+        /// </summary>
+        /// <remarks>
+        /// Removes a specific annotation in a PDF document, using the AnnotationIndex.  To enumerate AnnotationIndex for all of the annotations in the PDF document, use the /edit/pdf/annotations/list API.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="annotationIndex">The 0-based index of the annotation in the document</param>
+        /// <returns>byte[]</returns>
+        byte[] EditPdfRemoveAnnotationItem (System.IO.Stream inputFile, int? annotationIndex);
+
+        /// <summary>
+        /// Remove a specific PDF annotation, comment in the document
+        /// </summary>
+        /// <remarks>
+        /// Removes a specific annotation in a PDF document, using the AnnotationIndex.  To enumerate AnnotationIndex for all of the annotations in the PDF document, use the /edit/pdf/annotations/list API.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="annotationIndex">The 0-based index of the annotation in the document</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> EditPdfRemoveAnnotationItemWithHttpInfo (System.IO.Stream inputFile, int? annotationIndex);
+        /// <summary>
+        /// Rotate all pages in a PDF document
+        /// </summary>
+        /// <remarks>
+        /// Rotate all of the pages in a PDF document by a multiple of 90 degrees
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="rotationAngle">The angle to rotate the page in degrees, must be a multiple of 90 degrees, e.g. 90, 180, 270, or -90, -180, -270, etc.</param>
+        /// <returns>byte[]</returns>
+        byte[] EditPdfRotateAllPages (System.IO.Stream inputFile, int? rotationAngle);
+
+        /// <summary>
+        /// Rotate all pages in a PDF document
+        /// </summary>
+        /// <remarks>
+        /// Rotate all of the pages in a PDF document by a multiple of 90 degrees
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="rotationAngle">The angle to rotate the page in degrees, must be a multiple of 90 degrees, e.g. 90, 180, 270, or -90, -180, -270, etc.</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> EditPdfRotateAllPagesWithHttpInfo (System.IO.Stream inputFile, int? rotationAngle);
+        /// <summary>
+        /// Rotate a range, subset of pages in a PDF document
+        /// </summary>
+        /// <remarks>
+        /// Rotate a range of specific pages in a PDF document by a multiple of 90 degrees
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="rotationAngle">The angle to rotate the page in degrees, must be a multiple of 90 degrees, e.g. 90, 180, 270, or -90, -180, -270, etc.</param>
+        /// <param name="pageStart">Page number (1 based) to start rotating pages from (inclusive).</param>
+        /// <param name="pageEnd">Page number (1 based) to stop rotating pages from (inclusive).</param>
+        /// <returns>byte[]</returns>
+        byte[] EditPdfRotatePageRange (System.IO.Stream inputFile, int? rotationAngle, int? pageStart, int? pageEnd);
+
+        /// <summary>
+        /// Rotate a range, subset of pages in a PDF document
+        /// </summary>
+        /// <remarks>
+        /// Rotate a range of specific pages in a PDF document by a multiple of 90 degrees
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="rotationAngle">The angle to rotate the page in degrees, must be a multiple of 90 degrees, e.g. 90, 180, 270, or -90, -180, -270, etc.</param>
+        /// <param name="pageStart">Page number (1 based) to start rotating pages from (inclusive).</param>
+        /// <param name="pageEnd">Page number (1 based) to stop rotating pages from (inclusive).</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> EditPdfRotatePageRangeWithHttpInfo (System.IO.Stream inputFile, int? rotationAngle, int? pageStart, int? pageEnd);
         /// <summary>
         /// Sets ands fills PDF Form field values
         /// </summary>
@@ -329,6 +465,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
+        /// Add one or more PDF annotations, comments in the PDF document
+        /// </summary>
+        /// <remarks>
+        /// Adds one or more annotations, comments to a PDF document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> EditPdfAddAnnotationsAsync (AddPdfAnnotationRequest request);
+
+        /// <summary>
+        /// Add one or more PDF annotations, comments in the PDF document
+        /// </summary>
+        /// <remarks>
+        /// Adds one or more annotations, comments to a PDF document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfAddAnnotationsAsyncWithHttpInfo (AddPdfAnnotationRequest request);
+        /// <summary>
         /// Decrypt and password-protect a PDF
         /// </summary>
         /// <remarks>
@@ -403,6 +560,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="encryptionKeyLength">Possible values are \&quot;128\&quot; (128-bit RC4 encryption) and \&quot;256\&quot; (256-bit AES encryption).  Default is 256. (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfEncryptAsyncWithHttpInfo (System.IO.Stream inputFile, string userPassword = null, string ownerPassword = null, string encryptionKeyLength = null);
+        /// <summary>
+        /// Get PDF annotations, including comments in the document
+        /// </summary>
+        /// <remarks>
+        /// Enumerates the annotations, including comments and notes, in a PDF document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of GetPdfAnnotationsResult</returns>
+        System.Threading.Tasks.Task<GetPdfAnnotationsResult> EditPdfGetAnnotationsAsync (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Get PDF annotations, including comments in the document
+        /// </summary>
+        /// <remarks>
+        /// Enumerates the annotations, including comments and notes, in a PDF document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (GetPdfAnnotationsResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetPdfAnnotationsResult>> EditPdfGetAnnotationsAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
         /// Gets PDF Form fields and values
         /// </summary>
@@ -516,6 +694,100 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfRasterizeAsyncWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// Remove all PDF annotations, including comments in the document
+        /// </summary>
+        /// <remarks>
+        /// Removes all of the annotations, including comments and notes, in a PDF document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> EditPdfRemoveAllAnnotationsAsync (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Remove all PDF annotations, including comments in the document
+        /// </summary>
+        /// <remarks>
+        /// Removes all of the annotations, including comments and notes, in a PDF document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfRemoveAllAnnotationsAsyncWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// Remove a specific PDF annotation, comment in the document
+        /// </summary>
+        /// <remarks>
+        /// Removes a specific annotation in a PDF document, using the AnnotationIndex.  To enumerate AnnotationIndex for all of the annotations in the PDF document, use the /edit/pdf/annotations/list API.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="annotationIndex">The 0-based index of the annotation in the document</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> EditPdfRemoveAnnotationItemAsync (System.IO.Stream inputFile, int? annotationIndex);
+
+        /// <summary>
+        /// Remove a specific PDF annotation, comment in the document
+        /// </summary>
+        /// <remarks>
+        /// Removes a specific annotation in a PDF document, using the AnnotationIndex.  To enumerate AnnotationIndex for all of the annotations in the PDF document, use the /edit/pdf/annotations/list API.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="annotationIndex">The 0-based index of the annotation in the document</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfRemoveAnnotationItemAsyncWithHttpInfo (System.IO.Stream inputFile, int? annotationIndex);
+        /// <summary>
+        /// Rotate all pages in a PDF document
+        /// </summary>
+        /// <remarks>
+        /// Rotate all of the pages in a PDF document by a multiple of 90 degrees
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="rotationAngle">The angle to rotate the page in degrees, must be a multiple of 90 degrees, e.g. 90, 180, 270, or -90, -180, -270, etc.</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> EditPdfRotateAllPagesAsync (System.IO.Stream inputFile, int? rotationAngle);
+
+        /// <summary>
+        /// Rotate all pages in a PDF document
+        /// </summary>
+        /// <remarks>
+        /// Rotate all of the pages in a PDF document by a multiple of 90 degrees
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="rotationAngle">The angle to rotate the page in degrees, must be a multiple of 90 degrees, e.g. 90, 180, 270, or -90, -180, -270, etc.</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfRotateAllPagesAsyncWithHttpInfo (System.IO.Stream inputFile, int? rotationAngle);
+        /// <summary>
+        /// Rotate a range, subset of pages in a PDF document
+        /// </summary>
+        /// <remarks>
+        /// Rotate a range of specific pages in a PDF document by a multiple of 90 degrees
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="rotationAngle">The angle to rotate the page in degrees, must be a multiple of 90 degrees, e.g. 90, 180, 270, or -90, -180, -270, etc.</param>
+        /// <param name="pageStart">Page number (1 based) to start rotating pages from (inclusive).</param>
+        /// <param name="pageEnd">Page number (1 based) to stop rotating pages from (inclusive).</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> EditPdfRotatePageRangeAsync (System.IO.Stream inputFile, int? rotationAngle, int? pageStart, int? pageEnd);
+
+        /// <summary>
+        /// Rotate a range, subset of pages in a PDF document
+        /// </summary>
+        /// <remarks>
+        /// Rotate a range of specific pages in a PDF document by a multiple of 90 degrees
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="rotationAngle">The angle to rotate the page in degrees, must be a multiple of 90 degrees, e.g. 90, 180, 270, or -90, -180, -270, etc.</param>
+        /// <param name="pageStart">Page number (1 based) to start rotating pages from (inclusive).</param>
+        /// <param name="pageEnd">Page number (1 based) to stop rotating pages from (inclusive).</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfRotatePageRangeAsyncWithHttpInfo (System.IO.Stream inputFile, int? rotationAngle, int? pageStart, int? pageEnd);
         /// <summary>
         /// Sets ands fills PDF Form field values
         /// </summary>
@@ -728,6 +1000,173 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// Add one or more PDF annotations, comments in the PDF document Adds one or more annotations, comments to a PDF document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>byte[]</returns>
+        public byte[] EditPdfAddAnnotations (AddPdfAnnotationRequest request)
+        {
+             ApiResponse<byte[]> localVarResponse = EditPdfAddAnnotationsWithHttpInfo(request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Add one or more PDF annotations, comments in the PDF document Adds one or more annotations, comments to a PDF document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > EditPdfAddAnnotationsWithHttpInfo (AddPdfAnnotationRequest request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling EditPdfApi->EditPdfAddAnnotations");
+
+            var localVarPath = "/convert/edit/pdf/annotations/add-item";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditPdfAddAnnotations", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Add one or more PDF annotations, comments in the PDF document Adds one or more annotations, comments to a PDF document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> EditPdfAddAnnotationsAsync (AddPdfAnnotationRequest request)
+        {
+             ApiResponse<byte[]> localVarResponse = await EditPdfAddAnnotationsAsyncWithHttpInfo(request);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Add one or more PDF annotations, comments in the PDF document Adds one or more annotations, comments to a PDF document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfAddAnnotationsAsyncWithHttpInfo (AddPdfAnnotationRequest request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling EditPdfApi->EditPdfAddAnnotations");
+
+            var localVarPath = "/convert/edit/pdf/annotations/add-item";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditPdfAddAnnotations", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
@@ -1217,6 +1656,151 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Get PDF annotations, including comments in the document Enumerates the annotations, including comments and notes, in a PDF document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>GetPdfAnnotationsResult</returns>
+        public GetPdfAnnotationsResult EditPdfGetAnnotations (System.IO.Stream inputFile)
+        {
+             ApiResponse<GetPdfAnnotationsResult> localVarResponse = EditPdfGetAnnotationsWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get PDF annotations, including comments in the document Enumerates the annotations, including comments and notes, in a PDF document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of GetPdfAnnotationsResult</returns>
+        public ApiResponse< GetPdfAnnotationsResult > EditPdfGetAnnotationsWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditPdfApi->EditPdfGetAnnotations");
+
+            var localVarPath = "/convert/edit/pdf/annotations/list";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditPdfGetAnnotations", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetPdfAnnotationsResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetPdfAnnotationsResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetPdfAnnotationsResult)));
+        }
+
+        /// <summary>
+        /// Get PDF annotations, including comments in the document Enumerates the annotations, including comments and notes, in a PDF document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of GetPdfAnnotationsResult</returns>
+        public async System.Threading.Tasks.Task<GetPdfAnnotationsResult> EditPdfGetAnnotationsAsync (System.IO.Stream inputFile)
+        {
+             ApiResponse<GetPdfAnnotationsResult> localVarResponse = await EditPdfGetAnnotationsAsyncWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get PDF annotations, including comments in the document Enumerates the annotations, including comments and notes, in a PDF document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (GetPdfAnnotationsResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetPdfAnnotationsResult>> EditPdfGetAnnotationsAsyncWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditPdfApi->EditPdfGetAnnotations");
+
+            var localVarPath = "/convert/edit/pdf/annotations/list";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditPdfGetAnnotations", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetPdfAnnotationsResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetPdfAnnotationsResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetPdfAnnotationsResult)));
         }
 
         /// <summary>
@@ -1996,6 +2580,646 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("EditPdfRasterize", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Remove all PDF annotations, including comments in the document Removes all of the annotations, including comments and notes, in a PDF document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>byte[]</returns>
+        public byte[] EditPdfRemoveAllAnnotations (System.IO.Stream inputFile)
+        {
+             ApiResponse<byte[]> localVarResponse = EditPdfRemoveAllAnnotationsWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Remove all PDF annotations, including comments in the document Removes all of the annotations, including comments and notes, in a PDF document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > EditPdfRemoveAllAnnotationsWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditPdfApi->EditPdfRemoveAllAnnotations");
+
+            var localVarPath = "/convert/edit/pdf/annotations/remove-all";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditPdfRemoveAllAnnotations", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Remove all PDF annotations, including comments in the document Removes all of the annotations, including comments and notes, in a PDF document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> EditPdfRemoveAllAnnotationsAsync (System.IO.Stream inputFile)
+        {
+             ApiResponse<byte[]> localVarResponse = await EditPdfRemoveAllAnnotationsAsyncWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Remove all PDF annotations, including comments in the document Removes all of the annotations, including comments and notes, in a PDF document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfRemoveAllAnnotationsAsyncWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditPdfApi->EditPdfRemoveAllAnnotations");
+
+            var localVarPath = "/convert/edit/pdf/annotations/remove-all";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditPdfRemoveAllAnnotations", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Remove a specific PDF annotation, comment in the document Removes a specific annotation in a PDF document, using the AnnotationIndex.  To enumerate AnnotationIndex for all of the annotations in the PDF document, use the /edit/pdf/annotations/list API.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="annotationIndex">The 0-based index of the annotation in the document</param>
+        /// <returns>byte[]</returns>
+        public byte[] EditPdfRemoveAnnotationItem (System.IO.Stream inputFile, int? annotationIndex)
+        {
+             ApiResponse<byte[]> localVarResponse = EditPdfRemoveAnnotationItemWithHttpInfo(inputFile, annotationIndex);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Remove a specific PDF annotation, comment in the document Removes a specific annotation in a PDF document, using the AnnotationIndex.  To enumerate AnnotationIndex for all of the annotations in the PDF document, use the /edit/pdf/annotations/list API.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="annotationIndex">The 0-based index of the annotation in the document</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > EditPdfRemoveAnnotationItemWithHttpInfo (System.IO.Stream inputFile, int? annotationIndex)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditPdfApi->EditPdfRemoveAnnotationItem");
+            // verify the required parameter 'annotationIndex' is set
+            if (annotationIndex == null)
+                throw new ApiException(400, "Missing required parameter 'annotationIndex' when calling EditPdfApi->EditPdfRemoveAnnotationItem");
+
+            var localVarPath = "/convert/edit/pdf/annotations/remove-item";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (annotationIndex != null) localVarHeaderParams.Add("annotationIndex", this.Configuration.ApiClient.ParameterToString(annotationIndex)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditPdfRemoveAnnotationItem", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Remove a specific PDF annotation, comment in the document Removes a specific annotation in a PDF document, using the AnnotationIndex.  To enumerate AnnotationIndex for all of the annotations in the PDF document, use the /edit/pdf/annotations/list API.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="annotationIndex">The 0-based index of the annotation in the document</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> EditPdfRemoveAnnotationItemAsync (System.IO.Stream inputFile, int? annotationIndex)
+        {
+             ApiResponse<byte[]> localVarResponse = await EditPdfRemoveAnnotationItemAsyncWithHttpInfo(inputFile, annotationIndex);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Remove a specific PDF annotation, comment in the document Removes a specific annotation in a PDF document, using the AnnotationIndex.  To enumerate AnnotationIndex for all of the annotations in the PDF document, use the /edit/pdf/annotations/list API.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="annotationIndex">The 0-based index of the annotation in the document</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfRemoveAnnotationItemAsyncWithHttpInfo (System.IO.Stream inputFile, int? annotationIndex)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditPdfApi->EditPdfRemoveAnnotationItem");
+            // verify the required parameter 'annotationIndex' is set
+            if (annotationIndex == null)
+                throw new ApiException(400, "Missing required parameter 'annotationIndex' when calling EditPdfApi->EditPdfRemoveAnnotationItem");
+
+            var localVarPath = "/convert/edit/pdf/annotations/remove-item";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (annotationIndex != null) localVarHeaderParams.Add("annotationIndex", this.Configuration.ApiClient.ParameterToString(annotationIndex)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditPdfRemoveAnnotationItem", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Rotate all pages in a PDF document Rotate all of the pages in a PDF document by a multiple of 90 degrees
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="rotationAngle">The angle to rotate the page in degrees, must be a multiple of 90 degrees, e.g. 90, 180, 270, or -90, -180, -270, etc.</param>
+        /// <returns>byte[]</returns>
+        public byte[] EditPdfRotateAllPages (System.IO.Stream inputFile, int? rotationAngle)
+        {
+             ApiResponse<byte[]> localVarResponse = EditPdfRotateAllPagesWithHttpInfo(inputFile, rotationAngle);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Rotate all pages in a PDF document Rotate all of the pages in a PDF document by a multiple of 90 degrees
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="rotationAngle">The angle to rotate the page in degrees, must be a multiple of 90 degrees, e.g. 90, 180, 270, or -90, -180, -270, etc.</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > EditPdfRotateAllPagesWithHttpInfo (System.IO.Stream inputFile, int? rotationAngle)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditPdfApi->EditPdfRotateAllPages");
+            // verify the required parameter 'rotationAngle' is set
+            if (rotationAngle == null)
+                throw new ApiException(400, "Missing required parameter 'rotationAngle' when calling EditPdfApi->EditPdfRotateAllPages");
+
+            var localVarPath = "/convert/edit/pdf/pages/rotate/all";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (rotationAngle != null) localVarHeaderParams.Add("rotationAngle", this.Configuration.ApiClient.ParameterToString(rotationAngle)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditPdfRotateAllPages", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Rotate all pages in a PDF document Rotate all of the pages in a PDF document by a multiple of 90 degrees
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="rotationAngle">The angle to rotate the page in degrees, must be a multiple of 90 degrees, e.g. 90, 180, 270, or -90, -180, -270, etc.</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> EditPdfRotateAllPagesAsync (System.IO.Stream inputFile, int? rotationAngle)
+        {
+             ApiResponse<byte[]> localVarResponse = await EditPdfRotateAllPagesAsyncWithHttpInfo(inputFile, rotationAngle);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Rotate all pages in a PDF document Rotate all of the pages in a PDF document by a multiple of 90 degrees
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="rotationAngle">The angle to rotate the page in degrees, must be a multiple of 90 degrees, e.g. 90, 180, 270, or -90, -180, -270, etc.</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfRotateAllPagesAsyncWithHttpInfo (System.IO.Stream inputFile, int? rotationAngle)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditPdfApi->EditPdfRotateAllPages");
+            // verify the required parameter 'rotationAngle' is set
+            if (rotationAngle == null)
+                throw new ApiException(400, "Missing required parameter 'rotationAngle' when calling EditPdfApi->EditPdfRotateAllPages");
+
+            var localVarPath = "/convert/edit/pdf/pages/rotate/all";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (rotationAngle != null) localVarHeaderParams.Add("rotationAngle", this.Configuration.ApiClient.ParameterToString(rotationAngle)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditPdfRotateAllPages", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Rotate a range, subset of pages in a PDF document Rotate a range of specific pages in a PDF document by a multiple of 90 degrees
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="rotationAngle">The angle to rotate the page in degrees, must be a multiple of 90 degrees, e.g. 90, 180, 270, or -90, -180, -270, etc.</param>
+        /// <param name="pageStart">Page number (1 based) to start rotating pages from (inclusive).</param>
+        /// <param name="pageEnd">Page number (1 based) to stop rotating pages from (inclusive).</param>
+        /// <returns>byte[]</returns>
+        public byte[] EditPdfRotatePageRange (System.IO.Stream inputFile, int? rotationAngle, int? pageStart, int? pageEnd)
+        {
+             ApiResponse<byte[]> localVarResponse = EditPdfRotatePageRangeWithHttpInfo(inputFile, rotationAngle, pageStart, pageEnd);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Rotate a range, subset of pages in a PDF document Rotate a range of specific pages in a PDF document by a multiple of 90 degrees
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="rotationAngle">The angle to rotate the page in degrees, must be a multiple of 90 degrees, e.g. 90, 180, 270, or -90, -180, -270, etc.</param>
+        /// <param name="pageStart">Page number (1 based) to start rotating pages from (inclusive).</param>
+        /// <param name="pageEnd">Page number (1 based) to stop rotating pages from (inclusive).</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > EditPdfRotatePageRangeWithHttpInfo (System.IO.Stream inputFile, int? rotationAngle, int? pageStart, int? pageEnd)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditPdfApi->EditPdfRotatePageRange");
+            // verify the required parameter 'rotationAngle' is set
+            if (rotationAngle == null)
+                throw new ApiException(400, "Missing required parameter 'rotationAngle' when calling EditPdfApi->EditPdfRotatePageRange");
+            // verify the required parameter 'pageStart' is set
+            if (pageStart == null)
+                throw new ApiException(400, "Missing required parameter 'pageStart' when calling EditPdfApi->EditPdfRotatePageRange");
+            // verify the required parameter 'pageEnd' is set
+            if (pageEnd == null)
+                throw new ApiException(400, "Missing required parameter 'pageEnd' when calling EditPdfApi->EditPdfRotatePageRange");
+
+            var localVarPath = "/convert/edit/pdf/pages/rotate/page-range";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (rotationAngle != null) localVarHeaderParams.Add("rotationAngle", this.Configuration.ApiClient.ParameterToString(rotationAngle)); // header parameter
+            if (pageStart != null) localVarHeaderParams.Add("pageStart", this.Configuration.ApiClient.ParameterToString(pageStart)); // header parameter
+            if (pageEnd != null) localVarHeaderParams.Add("pageEnd", this.Configuration.ApiClient.ParameterToString(pageEnd)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditPdfRotatePageRange", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Rotate a range, subset of pages in a PDF document Rotate a range of specific pages in a PDF document by a multiple of 90 degrees
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="rotationAngle">The angle to rotate the page in degrees, must be a multiple of 90 degrees, e.g. 90, 180, 270, or -90, -180, -270, etc.</param>
+        /// <param name="pageStart">Page number (1 based) to start rotating pages from (inclusive).</param>
+        /// <param name="pageEnd">Page number (1 based) to stop rotating pages from (inclusive).</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> EditPdfRotatePageRangeAsync (System.IO.Stream inputFile, int? rotationAngle, int? pageStart, int? pageEnd)
+        {
+             ApiResponse<byte[]> localVarResponse = await EditPdfRotatePageRangeAsyncWithHttpInfo(inputFile, rotationAngle, pageStart, pageEnd);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Rotate a range, subset of pages in a PDF document Rotate a range of specific pages in a PDF document by a multiple of 90 degrees
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="rotationAngle">The angle to rotate the page in degrees, must be a multiple of 90 degrees, e.g. 90, 180, 270, or -90, -180, -270, etc.</param>
+        /// <param name="pageStart">Page number (1 based) to start rotating pages from (inclusive).</param>
+        /// <param name="pageEnd">Page number (1 based) to stop rotating pages from (inclusive).</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfRotatePageRangeAsyncWithHttpInfo (System.IO.Stream inputFile, int? rotationAngle, int? pageStart, int? pageEnd)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditPdfApi->EditPdfRotatePageRange");
+            // verify the required parameter 'rotationAngle' is set
+            if (rotationAngle == null)
+                throw new ApiException(400, "Missing required parameter 'rotationAngle' when calling EditPdfApi->EditPdfRotatePageRange");
+            // verify the required parameter 'pageStart' is set
+            if (pageStart == null)
+                throw new ApiException(400, "Missing required parameter 'pageStart' when calling EditPdfApi->EditPdfRotatePageRange");
+            // verify the required parameter 'pageEnd' is set
+            if (pageEnd == null)
+                throw new ApiException(400, "Missing required parameter 'pageEnd' when calling EditPdfApi->EditPdfRotatePageRange");
+
+            var localVarPath = "/convert/edit/pdf/pages/rotate/page-range";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (rotationAngle != null) localVarHeaderParams.Add("rotationAngle", this.Configuration.ApiClient.ParameterToString(rotationAngle)); // header parameter
+            if (pageStart != null) localVarHeaderParams.Add("pageStart", this.Configuration.ApiClient.ParameterToString(pageStart)); // header parameter
+            if (pageEnd != null) localVarHeaderParams.Add("pageEnd", this.Configuration.ApiClient.ParameterToString(pageEnd)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditPdfRotatePageRange", localVarResponse);
                 if (exception != null) throw exception;
             }
 

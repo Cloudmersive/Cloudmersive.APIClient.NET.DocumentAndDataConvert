@@ -25,35 +25,35 @@ using SwaggerDateConverter = Cloudmersive.APIClient.NET.DocumentAndDataConvert.C
 namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
 {
     /// <summary>
-    /// Request to set PDF metadata
+    /// Result of retrieving annotations from a PDF document
     /// </summary>
     [DataContract]
-    public partial class SetPdfMetadataRequest :  IEquatable<SetPdfMetadataRequest>, IValidatableObject
+    public partial class GetPdfAnnotationsResult :  IEquatable<GetPdfAnnotationsResult>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SetPdfMetadataRequest" /> class.
+        /// Initializes a new instance of the <see cref="GetPdfAnnotationsResult" /> class.
         /// </summary>
-        /// <param name="inputFileBytes">Input file contents bytes for the file to modify.</param>
-        /// <param name="metadataToSet">PDF metadata to set on the file.</param>
-        public SetPdfMetadataRequest(byte[] inputFileBytes = default(byte[]), PdfMetadata metadataToSet = default(PdfMetadata))
+        /// <param name="successful">True if successful, false otherwise.</param>
+        /// <param name="annotations">Annotations in the PDF file, ordered by placement from start to finish in the document.</param>
+        public GetPdfAnnotationsResult(bool? successful = default(bool?), List<PdfAnnotation> annotations = default(List<PdfAnnotation>))
         {
-            this.InputFileBytes = inputFileBytes;
-            this.MetadataToSet = metadataToSet;
+            this.Successful = successful;
+            this.Annotations = annotations;
         }
         
         /// <summary>
-        /// Input file contents bytes for the file to modify
+        /// True if successful, false otherwise
         /// </summary>
-        /// <value>Input file contents bytes for the file to modify</value>
-        [DataMember(Name="InputFileBytes", EmitDefaultValue=false)]
-        public byte[] InputFileBytes { get; set; }
+        /// <value>True if successful, false otherwise</value>
+        [DataMember(Name="Successful", EmitDefaultValue=false)]
+        public bool? Successful { get; set; }
 
         /// <summary>
-        /// PDF metadata to set on the file
+        /// Annotations in the PDF file, ordered by placement from start to finish in the document
         /// </summary>
-        /// <value>PDF metadata to set on the file</value>
-        [DataMember(Name="MetadataToSet", EmitDefaultValue=false)]
-        public PdfMetadata MetadataToSet { get; set; }
+        /// <value>Annotations in the PDF file, ordered by placement from start to finish in the document</value>
+        [DataMember(Name="Annotations", EmitDefaultValue=false)]
+        public List<PdfAnnotation> Annotations { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -62,9 +62,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class SetPdfMetadataRequest {\n");
-            sb.Append("  InputFileBytes: ").Append(InputFileBytes).Append("\n");
-            sb.Append("  MetadataToSet: ").Append(MetadataToSet).Append("\n");
+            sb.Append("class GetPdfAnnotationsResult {\n");
+            sb.Append("  Successful: ").Append(Successful).Append("\n");
+            sb.Append("  Annotations: ").Append(Annotations).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -85,29 +85,29 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as SetPdfMetadataRequest);
+            return this.Equals(input as GetPdfAnnotationsResult);
         }
 
         /// <summary>
-        /// Returns true if SetPdfMetadataRequest instances are equal
+        /// Returns true if GetPdfAnnotationsResult instances are equal
         /// </summary>
-        /// <param name="input">Instance of SetPdfMetadataRequest to be compared</param>
+        /// <param name="input">Instance of GetPdfAnnotationsResult to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SetPdfMetadataRequest input)
+        public bool Equals(GetPdfAnnotationsResult input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.InputFileBytes == input.InputFileBytes ||
-                    (this.InputFileBytes != null &&
-                    this.InputFileBytes.Equals(input.InputFileBytes))
+                    this.Successful == input.Successful ||
+                    (this.Successful != null &&
+                    this.Successful.Equals(input.Successful))
                 ) && 
                 (
-                    this.MetadataToSet == input.MetadataToSet ||
-                    (this.MetadataToSet != null &&
-                    this.MetadataToSet.Equals(input.MetadataToSet))
+                    this.Annotations == input.Annotations ||
+                    this.Annotations != null &&
+                    this.Annotations.SequenceEqual(input.Annotations)
                 );
         }
 
@@ -120,10 +120,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.InputFileBytes != null)
-                    hashCode = hashCode * 59 + this.InputFileBytes.GetHashCode();
-                if (this.MetadataToSet != null)
-                    hashCode = hashCode * 59 + this.MetadataToSet.GetHashCode();
+                if (this.Successful != null)
+                    hashCode = hashCode * 59 + this.Successful.GetHashCode();
+                if (this.Annotations != null)
+                    hashCode = hashCode * 59 + this.Annotations.GetHashCode();
                 return hashCode;
             }
         }

@@ -28,50 +28,41 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
     /// A single Excel XLSX file corresponding to one worksheet (tab) in the original spreadsheet
     /// </summary>
     [DataContract]
-    public partial class WorksheetResult :  IEquatable<WorksheetResult>, IValidatableObject
+    public partial class PresentationResult :  IEquatable<PresentationResult>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="WorksheetResult" /> class.
+        /// Initializes a new instance of the <see cref="PresentationResult" /> class.
         /// </summary>
-        /// <param name="worksheetNumber">Worksheet number of the converted page, starting with 1 for the left-most worksheet.</param>
-        /// <param name="worksheetName">The name of the worksheet.</param>
-        /// <param name="uRL">URL to the XLSX file of this worksheet; file is stored in an in-memory cache and will be deleted.</param>
-        /// <param name="worksheetContents">Contents of the worksheet in bytes.</param>
-        public WorksheetResult(int? worksheetNumber = default(int?), string worksheetName = default(string), string uRL = default(string), byte[] worksheetContents = default(byte[]))
+        /// <param name="slideNumber">Worksheet number of the converted page, starting with 1 for the left-most worksheet.</param>
+        /// <param name="uRL">URL to the PPTX file of this slide; file is stored in an in-memory cache and will be deleted.</param>
+        /// <param name="presentationContents">Contents of the presentation in bytes.</param>
+        public PresentationResult(int? slideNumber = default(int?), string uRL = default(string), byte[] presentationContents = default(byte[]))
         {
-            this.WorksheetNumber = worksheetNumber;
-            this.WorksheetName = worksheetName;
+            this.SlideNumber = slideNumber;
             this.URL = uRL;
-            this.WorksheetContents = worksheetContents;
+            this.PresentationContents = presentationContents;
         }
         
         /// <summary>
         /// Worksheet number of the converted page, starting with 1 for the left-most worksheet
         /// </summary>
         /// <value>Worksheet number of the converted page, starting with 1 for the left-most worksheet</value>
-        [DataMember(Name="WorksheetNumber", EmitDefaultValue=false)]
-        public int? WorksheetNumber { get; set; }
+        [DataMember(Name="SlideNumber", EmitDefaultValue=false)]
+        public int? SlideNumber { get; set; }
 
         /// <summary>
-        /// The name of the worksheet
+        /// URL to the PPTX file of this slide; file is stored in an in-memory cache and will be deleted
         /// </summary>
-        /// <value>The name of the worksheet</value>
-        [DataMember(Name="WorksheetName", EmitDefaultValue=false)]
-        public string WorksheetName { get; set; }
-
-        /// <summary>
-        /// URL to the XLSX file of this worksheet; file is stored in an in-memory cache and will be deleted
-        /// </summary>
-        /// <value>URL to the XLSX file of this worksheet; file is stored in an in-memory cache and will be deleted</value>
+        /// <value>URL to the PPTX file of this slide; file is stored in an in-memory cache and will be deleted</value>
         [DataMember(Name="URL", EmitDefaultValue=false)]
         public string URL { get; set; }
 
         /// <summary>
-        /// Contents of the worksheet in bytes
+        /// Contents of the presentation in bytes
         /// </summary>
-        /// <value>Contents of the worksheet in bytes</value>
-        [DataMember(Name="WorksheetContents", EmitDefaultValue=false)]
-        public byte[] WorksheetContents { get; set; }
+        /// <value>Contents of the presentation in bytes</value>
+        [DataMember(Name="PresentationContents", EmitDefaultValue=false)]
+        public byte[] PresentationContents { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -80,11 +71,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class WorksheetResult {\n");
-            sb.Append("  WorksheetNumber: ").Append(WorksheetNumber).Append("\n");
-            sb.Append("  WorksheetName: ").Append(WorksheetName).Append("\n");
+            sb.Append("class PresentationResult {\n");
+            sb.Append("  SlideNumber: ").Append(SlideNumber).Append("\n");
             sb.Append("  URL: ").Append(URL).Append("\n");
-            sb.Append("  WorksheetContents: ").Append(WorksheetContents).Append("\n");
+            sb.Append("  PresentationContents: ").Append(PresentationContents).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -105,29 +95,24 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as WorksheetResult);
+            return this.Equals(input as PresentationResult);
         }
 
         /// <summary>
-        /// Returns true if WorksheetResult instances are equal
+        /// Returns true if PresentationResult instances are equal
         /// </summary>
-        /// <param name="input">Instance of WorksheetResult to be compared</param>
+        /// <param name="input">Instance of PresentationResult to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(WorksheetResult input)
+        public bool Equals(PresentationResult input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.WorksheetNumber == input.WorksheetNumber ||
-                    (this.WorksheetNumber != null &&
-                    this.WorksheetNumber.Equals(input.WorksheetNumber))
-                ) && 
-                (
-                    this.WorksheetName == input.WorksheetName ||
-                    (this.WorksheetName != null &&
-                    this.WorksheetName.Equals(input.WorksheetName))
+                    this.SlideNumber == input.SlideNumber ||
+                    (this.SlideNumber != null &&
+                    this.SlideNumber.Equals(input.SlideNumber))
                 ) && 
                 (
                     this.URL == input.URL ||
@@ -135,9 +120,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                     this.URL.Equals(input.URL))
                 ) && 
                 (
-                    this.WorksheetContents == input.WorksheetContents ||
-                    (this.WorksheetContents != null &&
-                    this.WorksheetContents.Equals(input.WorksheetContents))
+                    this.PresentationContents == input.PresentationContents ||
+                    (this.PresentationContents != null &&
+                    this.PresentationContents.Equals(input.PresentationContents))
                 );
         }
 
@@ -150,14 +135,12 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.WorksheetNumber != null)
-                    hashCode = hashCode * 59 + this.WorksheetNumber.GetHashCode();
-                if (this.WorksheetName != null)
-                    hashCode = hashCode * 59 + this.WorksheetName.GetHashCode();
+                if (this.SlideNumber != null)
+                    hashCode = hashCode * 59 + this.SlideNumber.GetHashCode();
                 if (this.URL != null)
                     hashCode = hashCode * 59 + this.URL.GetHashCode();
-                if (this.WorksheetContents != null)
-                    hashCode = hashCode * 59 + this.WorksheetContents.GetHashCode();
+                if (this.PresentationContents != null)
+                    hashCode = hashCode * 59 + this.PresentationContents.GetHashCode();
                 return hashCode;
             }
         }
