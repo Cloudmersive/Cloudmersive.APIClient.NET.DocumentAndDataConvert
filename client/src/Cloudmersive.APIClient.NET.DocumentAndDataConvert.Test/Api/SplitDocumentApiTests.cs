@@ -65,6 +65,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
 
         
         /// <summary>
+        /// Test SplitDocumentDocx
+        /// </summary>
+        [Test]
+        public void SplitDocumentDocxTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //bool? returnDocumentContents = null;
+            //var response = instance.SplitDocumentDocx(inputFile, returnDocumentContents);
+            //Assert.IsInstanceOf<SplitDocxDocumentResult> (response, "response is SplitDocxDocumentResult");
+        }
+        
+        /// <summary>
         /// Test SplitDocumentPdfByPage
         /// </summary>
         [Test]

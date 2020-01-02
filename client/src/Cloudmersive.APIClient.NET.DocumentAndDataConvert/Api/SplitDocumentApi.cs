@@ -25,6 +25,29 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Split a single Word Document DOCX into Separate Documents by Page
+        /// </summary>
+        /// <remarks>
+        /// Split a Word DOCX Document, comprised of multiple pages into separate Word DOCX document files, with each containing exactly one page.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="returnDocumentContents">Set to true to return the contents of each Worksheet directly, set to false to only return URLs to each resulting document.  Default is true. (optional)</param>
+        /// <returns>SplitDocxDocumentResult</returns>
+        SplitDocxDocumentResult SplitDocumentDocx (System.IO.Stream inputFile, bool? returnDocumentContents = null);
+
+        /// <summary>
+        /// Split a single Word Document DOCX into Separate Documents by Page
+        /// </summary>
+        /// <remarks>
+        /// Split a Word DOCX Document, comprised of multiple pages into separate Word DOCX document files, with each containing exactly one page.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="returnDocumentContents">Set to true to return the contents of each Worksheet directly, set to false to only return URLs to each resulting document.  Default is true. (optional)</param>
+        /// <returns>ApiResponse of SplitDocxDocumentResult</returns>
+        ApiResponse<SplitDocxDocumentResult> SplitDocumentDocxWithHttpInfo (System.IO.Stream inputFile, bool? returnDocumentContents = null);
+        /// <summary>
         /// Split a PDF file into separate PDF files, one per page
         /// </summary>
         /// <remarks>
@@ -55,7 +78,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <param name="returnDocumentContents">Set to true to return the contents of each Worksheet directly, set to false to only return URLs to each resulting worksheet.  Default is true. (optional)</param>
+        /// <param name="returnDocumentContents">Set to true to return the contents of each presentation directly, set to false to only return URLs to each resulting presentation.  Default is true. (optional)</param>
         /// <returns>SplitPptxPresentationResult</returns>
         SplitPptxPresentationResult SplitDocumentPptx (System.IO.Stream inputFile, bool? returnDocumentContents = null);
 
@@ -67,7 +90,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <param name="returnDocumentContents">Set to true to return the contents of each Worksheet directly, set to false to only return URLs to each resulting worksheet.  Default is true. (optional)</param>
+        /// <param name="returnDocumentContents">Set to true to return the contents of each presentation directly, set to false to only return URLs to each resulting presentation.  Default is true. (optional)</param>
         /// <returns>ApiResponse of SplitPptxPresentationResult</returns>
         ApiResponse<SplitPptxPresentationResult> SplitDocumentPptxWithHttpInfo (System.IO.Stream inputFile, bool? returnDocumentContents = null);
         /// <summary>
@@ -95,6 +118,29 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         ApiResponse<SplitXlsxWorksheetResult> SplitDocumentXlsxWithHttpInfo (System.IO.Stream inputFile, bool? returnDocumentContents = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// Split a single Word Document DOCX into Separate Documents by Page
+        /// </summary>
+        /// <remarks>
+        /// Split a Word DOCX Document, comprised of multiple pages into separate Word DOCX document files, with each containing exactly one page.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="returnDocumentContents">Set to true to return the contents of each Worksheet directly, set to false to only return URLs to each resulting document.  Default is true. (optional)</param>
+        /// <returns>Task of SplitDocxDocumentResult</returns>
+        System.Threading.Tasks.Task<SplitDocxDocumentResult> SplitDocumentDocxAsync (System.IO.Stream inputFile, bool? returnDocumentContents = null);
+
+        /// <summary>
+        /// Split a single Word Document DOCX into Separate Documents by Page
+        /// </summary>
+        /// <remarks>
+        /// Split a Word DOCX Document, comprised of multiple pages into separate Word DOCX document files, with each containing exactly one page.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="returnDocumentContents">Set to true to return the contents of each Worksheet directly, set to false to only return URLs to each resulting document.  Default is true. (optional)</param>
+        /// <returns>Task of ApiResponse (SplitDocxDocumentResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SplitDocxDocumentResult>> SplitDocumentDocxAsyncWithHttpInfo (System.IO.Stream inputFile, bool? returnDocumentContents = null);
         /// <summary>
         /// Split a PDF file into separate PDF files, one per page
         /// </summary>
@@ -126,7 +172,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <param name="returnDocumentContents">Set to true to return the contents of each Worksheet directly, set to false to only return URLs to each resulting worksheet.  Default is true. (optional)</param>
+        /// <param name="returnDocumentContents">Set to true to return the contents of each presentation directly, set to false to only return URLs to each resulting presentation.  Default is true. (optional)</param>
         /// <returns>Task of SplitPptxPresentationResult</returns>
         System.Threading.Tasks.Task<SplitPptxPresentationResult> SplitDocumentPptxAsync (System.IO.Stream inputFile, bool? returnDocumentContents = null);
 
@@ -138,7 +184,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <param name="returnDocumentContents">Set to true to return the contents of each Worksheet directly, set to false to only return URLs to each resulting worksheet.  Default is true. (optional)</param>
+        /// <param name="returnDocumentContents">Set to true to return the contents of each presentation directly, set to false to only return URLs to each resulting presentation.  Default is true. (optional)</param>
         /// <returns>Task of ApiResponse (SplitPptxPresentationResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<SplitPptxPresentationResult>> SplitDocumentPptxAsyncWithHttpInfo (System.IO.Stream inputFile, bool? returnDocumentContents = null);
         /// <summary>
@@ -262,6 +308,163 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// Split a single Word Document DOCX into Separate Documents by Page Split a Word DOCX Document, comprised of multiple pages into separate Word DOCX document files, with each containing exactly one page.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="returnDocumentContents">Set to true to return the contents of each Worksheet directly, set to false to only return URLs to each resulting document.  Default is true. (optional)</param>
+        /// <returns>SplitDocxDocumentResult</returns>
+        public SplitDocxDocumentResult SplitDocumentDocx (System.IO.Stream inputFile, bool? returnDocumentContents = null)
+        {
+             ApiResponse<SplitDocxDocumentResult> localVarResponse = SplitDocumentDocxWithHttpInfo(inputFile, returnDocumentContents);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Split a single Word Document DOCX into Separate Documents by Page Split a Word DOCX Document, comprised of multiple pages into separate Word DOCX document files, with each containing exactly one page.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="returnDocumentContents">Set to true to return the contents of each Worksheet directly, set to false to only return URLs to each resulting document.  Default is true. (optional)</param>
+        /// <returns>ApiResponse of SplitDocxDocumentResult</returns>
+        public ApiResponse< SplitDocxDocumentResult > SplitDocumentDocxWithHttpInfo (System.IO.Stream inputFile, bool? returnDocumentContents = null)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling SplitDocumentApi->SplitDocumentDocx");
+
+            var localVarPath = "/convert/split/docx";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (returnDocumentContents != null) localVarHeaderParams.Add("returnDocumentContents", this.Configuration.ApiClient.ParameterToString(returnDocumentContents)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SplitDocumentDocx", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SplitDocxDocumentResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SplitDocxDocumentResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SplitDocxDocumentResult)));
+        }
+
+        /// <summary>
+        /// Split a single Word Document DOCX into Separate Documents by Page Split a Word DOCX Document, comprised of multiple pages into separate Word DOCX document files, with each containing exactly one page.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="returnDocumentContents">Set to true to return the contents of each Worksheet directly, set to false to only return URLs to each resulting document.  Default is true. (optional)</param>
+        /// <returns>Task of SplitDocxDocumentResult</returns>
+        public async System.Threading.Tasks.Task<SplitDocxDocumentResult> SplitDocumentDocxAsync (System.IO.Stream inputFile, bool? returnDocumentContents = null)
+        {
+             ApiResponse<SplitDocxDocumentResult> localVarResponse = await SplitDocumentDocxAsyncWithHttpInfo(inputFile, returnDocumentContents);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Split a single Word Document DOCX into Separate Documents by Page Split a Word DOCX Document, comprised of multiple pages into separate Word DOCX document files, with each containing exactly one page.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="returnDocumentContents">Set to true to return the contents of each Worksheet directly, set to false to only return URLs to each resulting document.  Default is true. (optional)</param>
+        /// <returns>Task of ApiResponse (SplitDocxDocumentResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SplitDocxDocumentResult>> SplitDocumentDocxAsyncWithHttpInfo (System.IO.Stream inputFile, bool? returnDocumentContents = null)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling SplitDocumentApi->SplitDocumentDocx");
+
+            var localVarPath = "/convert/split/docx";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (returnDocumentContents != null) localVarHeaderParams.Add("returnDocumentContents", this.Configuration.ApiClient.ParameterToString(returnDocumentContents)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SplitDocumentDocx", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SplitDocxDocumentResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SplitDocxDocumentResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SplitDocxDocumentResult)));
         }
 
         /// <summary>
@@ -426,7 +629,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <param name="returnDocumentContents">Set to true to return the contents of each Worksheet directly, set to false to only return URLs to each resulting worksheet.  Default is true. (optional)</param>
+        /// <param name="returnDocumentContents">Set to true to return the contents of each presentation directly, set to false to only return URLs to each resulting presentation.  Default is true. (optional)</param>
         /// <returns>SplitPptxPresentationResult</returns>
         public SplitPptxPresentationResult SplitDocumentPptx (System.IO.Stream inputFile, bool? returnDocumentContents = null)
         {
@@ -439,7 +642,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <param name="returnDocumentContents">Set to true to return the contents of each Worksheet directly, set to false to only return URLs to each resulting worksheet.  Default is true. (optional)</param>
+        /// <param name="returnDocumentContents">Set to true to return the contents of each presentation directly, set to false to only return URLs to each resulting presentation.  Default is true. (optional)</param>
         /// <returns>ApiResponse of SplitPptxPresentationResult</returns>
         public ApiResponse< SplitPptxPresentationResult > SplitDocumentPptxWithHttpInfo (System.IO.Stream inputFile, bool? returnDocumentContents = null)
         {
@@ -504,7 +707,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <param name="returnDocumentContents">Set to true to return the contents of each Worksheet directly, set to false to only return URLs to each resulting worksheet.  Default is true. (optional)</param>
+        /// <param name="returnDocumentContents">Set to true to return the contents of each presentation directly, set to false to only return URLs to each resulting presentation.  Default is true. (optional)</param>
         /// <returns>Task of SplitPptxPresentationResult</returns>
         public async System.Threading.Tasks.Task<SplitPptxPresentationResult> SplitDocumentPptxAsync (System.IO.Stream inputFile, bool? returnDocumentContents = null)
         {
@@ -518,7 +721,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <param name="returnDocumentContents">Set to true to return the contents of each Worksheet directly, set to false to only return URLs to each resulting worksheet.  Default is true. (optional)</param>
+        /// <param name="returnDocumentContents">Set to true to return the contents of each presentation directly, set to false to only return URLs to each resulting presentation.  Default is true. (optional)</param>
         /// <returns>Task of ApiResponse (SplitPptxPresentationResult)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<SplitPptxPresentationResult>> SplitDocumentPptxAsyncWithHttpInfo (System.IO.Stream inputFile, bool? returnDocumentContents = null)
         {
