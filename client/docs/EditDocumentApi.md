@@ -33,6 +33,7 @@ Method | HTTP request | Description
 [**EditDocumentPptxDeleteSlides**](EditDocumentApi.md#editdocumentpptxdeleteslides) | **POST** /convert/edit/pptx/delete-slides | Delete, remove slides from a PowerPoint PPTX presentation document
 [**EditDocumentPptxReplace**](EditDocumentApi.md#editdocumentpptxreplace) | **POST** /convert/edit/pptx/replace-all | Replace string in PowerPoint PPTX presentation
 [**EditDocumentXlsxCreateBlankSpreadsheet**](EditDocumentApi.md#editdocumentxlsxcreateblankspreadsheet) | **POST** /convert/edit/xlsx/create/blank | Create a blank Excel XLSX spreadsheet
+[**EditDocumentXlsxCreateSpreadsheetFromData**](EditDocumentApi.md#editdocumentxlsxcreatespreadsheetfromdata) | **POST** /convert/edit/xlsx/create/from/data | Create a new Excel XLSX spreadsheet from column and row data
 [**EditDocumentXlsxGetCellByIndex**](EditDocumentApi.md#editdocumentxlsxgetcellbyindex) | **POST** /convert/edit/xlsx/get-cell/by-index | Get cell from an Excel XLSX spreadsheet, worksheet by index
 [**EditDocumentXlsxGetColumns**](EditDocumentApi.md#editdocumentxlsxgetcolumns) | **POST** /convert/edit/xlsx/get-columns | Get rows and cells from a Excel XLSX spreadsheet, worksheet
 [**EditDocumentXlsxGetImages**](EditDocumentApi.md#editdocumentxlsxgetimages) | **POST** /convert/edit/xlsx/get-images | Get images from a Excel XLSX spreadsheet, worksheet
@@ -1944,6 +1945,72 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CreateBlankSpreadsheetResponse**](CreateBlankSpreadsheetResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="editdocumentxlsxcreatespreadsheetfromdata"></a>
+# **EditDocumentXlsxCreateSpreadsheetFromData**
+> CreateSpreadsheetFromDataResponse EditDocumentXlsxCreateSpreadsheetFromData (CreateSpreadsheetFromDataRequest input)
+
+Create a new Excel XLSX spreadsheet from column and row data
+
+Returns a new Excel XLSX Spreadsheet (XLSX) format file populated with column and row data specified as input
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class EditDocumentXlsxCreateSpreadsheetFromDataExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new EditDocumentApi();
+            var input = new CreateSpreadsheetFromDataRequest(); // CreateSpreadsheetFromDataRequest | Document input request
+
+            try
+            {
+                // Create a new Excel XLSX spreadsheet from column and row data
+                CreateSpreadsheetFromDataResponse result = apiInstance.EditDocumentXlsxCreateSpreadsheetFromData(input);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling EditDocumentApi.EditDocumentXlsxCreateSpreadsheetFromData: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **input** | [**CreateSpreadsheetFromDataRequest**](CreateSpreadsheetFromDataRequest.md)| Document input request | 
+
+### Return type
+
+[**CreateSpreadsheetFromDataResponse**](CreateSpreadsheetFromDataResponse.md)
 
 ### Authorization
 

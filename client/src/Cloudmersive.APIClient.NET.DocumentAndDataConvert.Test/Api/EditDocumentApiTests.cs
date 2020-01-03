@@ -413,6 +413,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test EditDocumentXlsxCreateSpreadsheetFromData
+        /// </summary>
+        [Test]
+        public void EditDocumentXlsxCreateSpreadsheetFromDataTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //CreateSpreadsheetFromDataRequest input = null;
+            //var response = instance.EditDocumentXlsxCreateSpreadsheetFromData(input);
+            //Assert.IsInstanceOf<CreateSpreadsheetFromDataResponse> (response, "response is CreateSpreadsheetFromDataResponse");
+        }
+        
+        /// <summary>
         /// Test EditDocumentXlsxGetCellByIndex
         /// </summary>
         [Test]

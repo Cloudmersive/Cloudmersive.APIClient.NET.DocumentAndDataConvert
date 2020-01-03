@@ -634,6 +634,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of CreateBlankSpreadsheetResponse</returns>
         ApiResponse<CreateBlankSpreadsheetResponse> EditDocumentXlsxCreateBlankSpreadsheetWithHttpInfo (CreateBlankSpreadsheetRequest input);
         /// <summary>
+        /// Create a new Excel XLSX spreadsheet from column and row data
+        /// </summary>
+        /// <remarks>
+        /// Returns a new Excel XLSX Spreadsheet (XLSX) format file populated with column and row data specified as input
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Document input request</param>
+        /// <returns>CreateSpreadsheetFromDataResponse</returns>
+        CreateSpreadsheetFromDataResponse EditDocumentXlsxCreateSpreadsheetFromData (CreateSpreadsheetFromDataRequest input);
+
+        /// <summary>
+        /// Create a new Excel XLSX spreadsheet from column and row data
+        /// </summary>
+        /// <remarks>
+        /// Returns a new Excel XLSX Spreadsheet (XLSX) format file populated with column and row data specified as input
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Document input request</param>
+        /// <returns>ApiResponse of CreateSpreadsheetFromDataResponse</returns>
+        ApiResponse<CreateSpreadsheetFromDataResponse> EditDocumentXlsxCreateSpreadsheetFromDataWithHttpInfo (CreateSpreadsheetFromDataRequest input);
+        /// <summary>
         /// Get cell from an Excel XLSX spreadsheet, worksheet by index
         /// </summary>
         /// <remarks>
@@ -1391,6 +1412,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="input">Document input request</param>
         /// <returns>Task of ApiResponse (CreateBlankSpreadsheetResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<CreateBlankSpreadsheetResponse>> EditDocumentXlsxCreateBlankSpreadsheetAsyncWithHttpInfo (CreateBlankSpreadsheetRequest input);
+        /// <summary>
+        /// Create a new Excel XLSX spreadsheet from column and row data
+        /// </summary>
+        /// <remarks>
+        /// Returns a new Excel XLSX Spreadsheet (XLSX) format file populated with column and row data specified as input
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Document input request</param>
+        /// <returns>Task of CreateSpreadsheetFromDataResponse</returns>
+        System.Threading.Tasks.Task<CreateSpreadsheetFromDataResponse> EditDocumentXlsxCreateSpreadsheetFromDataAsync (CreateSpreadsheetFromDataRequest input);
+
+        /// <summary>
+        /// Create a new Excel XLSX spreadsheet from column and row data
+        /// </summary>
+        /// <remarks>
+        /// Returns a new Excel XLSX Spreadsheet (XLSX) format file populated with column and row data specified as input
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Document input request</param>
+        /// <returns>Task of ApiResponse (CreateSpreadsheetFromDataResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CreateSpreadsheetFromDataResponse>> EditDocumentXlsxCreateSpreadsheetFromDataAsyncWithHttpInfo (CreateSpreadsheetFromDataRequest input);
         /// <summary>
         /// Get cell from an Excel XLSX spreadsheet, worksheet by index
         /// </summary>
@@ -6601,6 +6643,179 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<CreateBlankSpreadsheetResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CreateBlankSpreadsheetResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateBlankSpreadsheetResponse)));
+        }
+
+        /// <summary>
+        /// Create a new Excel XLSX spreadsheet from column and row data Returns a new Excel XLSX Spreadsheet (XLSX) format file populated with column and row data specified as input
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Document input request</param>
+        /// <returns>CreateSpreadsheetFromDataResponse</returns>
+        public CreateSpreadsheetFromDataResponse EditDocumentXlsxCreateSpreadsheetFromData (CreateSpreadsheetFromDataRequest input)
+        {
+             ApiResponse<CreateSpreadsheetFromDataResponse> localVarResponse = EditDocumentXlsxCreateSpreadsheetFromDataWithHttpInfo(input);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a new Excel XLSX spreadsheet from column and row data Returns a new Excel XLSX Spreadsheet (XLSX) format file populated with column and row data specified as input
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Document input request</param>
+        /// <returns>ApiResponse of CreateSpreadsheetFromDataResponse</returns>
+        public ApiResponse< CreateSpreadsheetFromDataResponse > EditDocumentXlsxCreateSpreadsheetFromDataWithHttpInfo (CreateSpreadsheetFromDataRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling EditDocumentApi->EditDocumentXlsxCreateSpreadsheetFromData");
+
+            var localVarPath = "/convert/edit/xlsx/create/from/data";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentXlsxCreateSpreadsheetFromData", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<CreateSpreadsheetFromDataResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CreateSpreadsheetFromDataResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateSpreadsheetFromDataResponse)));
+        }
+
+        /// <summary>
+        /// Create a new Excel XLSX spreadsheet from column and row data Returns a new Excel XLSX Spreadsheet (XLSX) format file populated with column and row data specified as input
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Document input request</param>
+        /// <returns>Task of CreateSpreadsheetFromDataResponse</returns>
+        public async System.Threading.Tasks.Task<CreateSpreadsheetFromDataResponse> EditDocumentXlsxCreateSpreadsheetFromDataAsync (CreateSpreadsheetFromDataRequest input)
+        {
+             ApiResponse<CreateSpreadsheetFromDataResponse> localVarResponse = await EditDocumentXlsxCreateSpreadsheetFromDataAsyncWithHttpInfo(input);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a new Excel XLSX spreadsheet from column and row data Returns a new Excel XLSX Spreadsheet (XLSX) format file populated with column and row data specified as input
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Document input request</param>
+        /// <returns>Task of ApiResponse (CreateSpreadsheetFromDataResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CreateSpreadsheetFromDataResponse>> EditDocumentXlsxCreateSpreadsheetFromDataAsyncWithHttpInfo (CreateSpreadsheetFromDataRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling EditDocumentApi->EditDocumentXlsxCreateSpreadsheetFromData");
+
+            var localVarPath = "/convert/edit/xlsx/create/from/data";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentXlsxCreateSpreadsheetFromData", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<CreateSpreadsheetFromDataResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CreateSpreadsheetFromDataResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateSpreadsheetFromDataResponse)));
         }
 
         /// <summary>
