@@ -401,6 +401,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test EditDocumentXlsxClearCellByIndex
+        /// </summary>
+        [Test]
+        public void EditDocumentXlsxClearCellByIndexTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //ClearXlsxCellRequest input = null;
+            //var response = instance.EditDocumentXlsxClearCellByIndex(input);
+            //Assert.IsInstanceOf<ClearXlsxCellResponse> (response, "response is ClearXlsxCellResponse");
+        }
+        
+        /// <summary>
         /// Test EditDocumentXlsxCreateBlankSpreadsheet
         /// </summary>
         [Test]
@@ -422,6 +434,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //CreateSpreadsheetFromDataRequest input = null;
             //var response = instance.EditDocumentXlsxCreateSpreadsheetFromData(input);
             //Assert.IsInstanceOf<CreateSpreadsheetFromDataResponse> (response, "response is CreateSpreadsheetFromDataResponse");
+        }
+        
+        /// <summary>
+        /// Test EditDocumentXlsxDeleteWorksheet
+        /// </summary>
+        [Test]
+        public void EditDocumentXlsxDeleteWorksheetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //RemoveXlsxWorksheetRequest reqConfig = null;
+            //var response = instance.EditDocumentXlsxDeleteWorksheet(reqConfig);
+            //Assert.IsInstanceOf<Object> (response, "response is Object");
         }
         
         /// <summary>
@@ -506,6 +530,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //InsertXlsxWorksheetRequest input = null;
             //var response = instance.EditDocumentXlsxInsertWorksheet(input);
             //Assert.IsInstanceOf<InsertXlsxWorksheetResponse> (response, "response is InsertXlsxWorksheetResponse");
+        }
+        
+        /// <summary>
+        /// Test EditDocumentXlsxSetCellByIndex
+        /// </summary>
+        [Test]
+        public void EditDocumentXlsxSetCellByIndexTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //SetXlsxCellRequest input = null;
+            //var response = instance.EditDocumentXlsxSetCellByIndex(input);
+            //Assert.IsInstanceOf<SetXlsxCellResponse> (response, "response is SetXlsxCellResponse");
         }
         
     }
