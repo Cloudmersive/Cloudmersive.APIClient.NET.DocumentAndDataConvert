@@ -235,7 +235,7 @@ Name | Type | Description  | Notes
 
 <a name="convertdocumentautodetecttotxt"></a>
 # **ConvertDocumentAutodetectToTxt**
-> TextConversionResult ConvertDocumentAutodetectToTxt (System.IO.Stream inputFile)
+> TextConversionResult ConvertDocumentAutodetectToTxt (System.IO.Stream inputFile, string textFormattingMode = null)
 
 Convert Document to Text (txt)
 
@@ -262,11 +262,12 @@ namespace Example
 
             var apiInstance = new ConvertDocumentApi();
             var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
+            var textFormattingMode = textFormattingMode_example;  // string | Optional; specify how whitespace should be handled when converting the document to text.  Possible values are 'preserveWhitespace' which will attempt to preserve whitespace in the document and relative positioning of text within the document, and 'minimizeWhitespace' which will not insert additional spaces into the document in most cases.  Default is 'preserveWhitespace'. (optional) 
 
             try
             {
                 // Convert Document to Text (txt)
-                TextConversionResult result = apiInstance.ConvertDocumentAutodetectToTxt(inputFile);
+                TextConversionResult result = apiInstance.ConvertDocumentAutodetectToTxt(inputFile, textFormattingMode);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -283,6 +284,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
+ **textFormattingMode** | **string**| Optional; specify how whitespace should be handled when converting the document to text.  Possible values are &#39;preserveWhitespace&#39; which will attempt to preserve whitespace in the document and relative positioning of text within the document, and &#39;minimizeWhitespace&#39; which will not insert additional spaces into the document in most cases.  Default is &#39;preserveWhitespace&#39;. | [optional] 
 
 ### Return type
 
@@ -1159,7 +1161,7 @@ Name | Type | Description  | Notes
 
 <a name="convertdocumentpdftotxt"></a>
 # **ConvertDocumentPdfToTxt**
-> TextConversionResult ConvertDocumentPdfToTxt (System.IO.Stream inputFile)
+> TextConversionResult ConvertDocumentPdfToTxt (System.IO.Stream inputFile, string textFormattingMode = null)
 
 Convert PDF Document to Text (txt)
 
@@ -1186,11 +1188,12 @@ namespace Example
 
             var apiInstance = new ConvertDocumentApi();
             var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
+            var textFormattingMode = textFormattingMode_example;  // string | Optional; specify how whitespace should be handled when converting PDF to text.  Possible values are 'preserveWhitespace' which will attempt to preserve whitespace in the document and relative positioning of text within the document, and 'minimizeWhitespace' which will not insert additional spaces into the document in most cases.  Default is 'preserveWhitespace'. (optional) 
 
             try
             {
                 // Convert PDF Document to Text (txt)
-                TextConversionResult result = apiInstance.ConvertDocumentPdfToTxt(inputFile);
+                TextConversionResult result = apiInstance.ConvertDocumentPdfToTxt(inputFile, textFormattingMode);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1207,6 +1210,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
+ **textFormattingMode** | **string**| Optional; specify how whitespace should be handled when converting PDF to text.  Possible values are &#39;preserveWhitespace&#39; which will attempt to preserve whitespace in the document and relative positioning of text within the document, and &#39;minimizeWhitespace&#39; which will not insert additional spaces into the document in most cases.  Default is &#39;preserveWhitespace&#39;. | [optional] 
 
 ### Return type
 
