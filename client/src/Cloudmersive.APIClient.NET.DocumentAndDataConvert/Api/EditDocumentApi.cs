@@ -130,6 +130,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of DeleteDocxTableRowResponse</returns>
         ApiResponse<DeleteDocxTableRowResponse> EditDocumentDocxDeleteTableRowWithHttpInfo (DeleteDocxTableRowRequest reqConfig);
         /// <summary>
+        /// Deletes a range of multiple table rows in an existing table in a Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Deletes a range of 1 or more existing table rows in a Word DOCX Document and returns the result.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>DeleteDocxTableRowRangeResponse</returns>
+        DeleteDocxTableRowRangeResponse EditDocumentDocxDeleteTableRowRange (DeleteDocxTableRowRangeRequest reqConfig);
+
+        /// <summary>
+        /// Deletes a range of multiple table rows in an existing table in a Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Deletes a range of 1 or more existing table rows in a Word DOCX Document and returns the result.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>ApiResponse of DeleteDocxTableRowRangeResponse</returns>
+        ApiResponse<DeleteDocxTableRowRangeResponse> EditDocumentDocxDeleteTableRowRangeWithHttpInfo (DeleteDocxTableRowRangeRequest reqConfig);
+        /// <summary>
         /// Get content of a footer from a Word DOCX document
         /// </summary>
         /// <remarks>
@@ -697,10 +718,31 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> EditDocumentXlsxDeleteWorksheetWithHttpInfo (RemoveXlsxWorksheetRequest reqConfig);
         /// <summary>
+        /// Get cell from an Excel XLSX spreadsheet, worksheet by cell identifier
+        /// </summary>
+        /// <remarks>
+        /// Returns the value of a specific cell based on its identifier (e.g. A1, B22, C33, etc.) in the Excel Spreadsheet worksheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Document input request</param>
+        /// <returns>GetXlsxCellByIdentifierResponse</returns>
+        GetXlsxCellByIdentifierResponse EditDocumentXlsxGetCellByIdentifier (GetXlsxCellByIdentifierRequest input);
+
+        /// <summary>
+        /// Get cell from an Excel XLSX spreadsheet, worksheet by cell identifier
+        /// </summary>
+        /// <remarks>
+        /// Returns the value of a specific cell based on its identifier (e.g. A1, B22, C33, etc.) in the Excel Spreadsheet worksheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Document input request</param>
+        /// <returns>ApiResponse of GetXlsxCellByIdentifierResponse</returns>
+        ApiResponse<GetXlsxCellByIdentifierResponse> EditDocumentXlsxGetCellByIdentifierWithHttpInfo (GetXlsxCellByIdentifierRequest input);
+        /// <summary>
         /// Get cell from an Excel XLSX spreadsheet, worksheet by index
         /// </summary>
         /// <remarks>
-        /// Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// Returns the value and definition of a specific cell in a specific row in the Excel Spreadsheet worksheet
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Document input request</param>
@@ -711,7 +753,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Get cell from an Excel XLSX spreadsheet, worksheet by index
         /// </summary>
         /// <remarks>
-        /// Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// Returns the value and definition of a specific cell in a specific row in the Excel Spreadsheet worksheet
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Document input request</param>
@@ -844,6 +886,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of InsertXlsxWorksheetResponse</returns>
         ApiResponse<InsertXlsxWorksheetResponse> EditDocumentXlsxInsertWorksheetWithHttpInfo (InsertXlsxWorksheetRequest input);
         /// <summary>
+        /// Set, update cell contents in an Excel XLSX spreadsheet, worksheet by cell identifier
+        /// </summary>
+        /// <remarks>
+        /// Sets, updates the contents of a specific cell in an Excel XLSX spreadsheet, worksheet using its cell identifier (e.g. A1, B22, C33) in the worksheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Document input request</param>
+        /// <returns>SetXlsxCellByIdentifierResponse</returns>
+        SetXlsxCellByIdentifierResponse EditDocumentXlsxSetCellByIdentifier (SetXlsxCellByIdentifierRequest input);
+
+        /// <summary>
+        /// Set, update cell contents in an Excel XLSX spreadsheet, worksheet by cell identifier
+        /// </summary>
+        /// <remarks>
+        /// Sets, updates the contents of a specific cell in an Excel XLSX spreadsheet, worksheet using its cell identifier (e.g. A1, B22, C33) in the worksheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Document input request</param>
+        /// <returns>ApiResponse of SetXlsxCellByIdentifierResponse</returns>
+        ApiResponse<SetXlsxCellByIdentifierResponse> EditDocumentXlsxSetCellByIdentifierWithHttpInfo (SetXlsxCellByIdentifierRequest input);
+        /// <summary>
         /// Set, update cell contents in an Excel XLSX spreadsheet, worksheet by index
         /// </summary>
         /// <remarks>
@@ -971,6 +1034,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of ApiResponse (DeleteDocxTableRowResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<DeleteDocxTableRowResponse>> EditDocumentDocxDeleteTableRowAsyncWithHttpInfo (DeleteDocxTableRowRequest reqConfig);
+        /// <summary>
+        /// Deletes a range of multiple table rows in an existing table in a Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Deletes a range of 1 or more existing table rows in a Word DOCX Document and returns the result.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>Task of DeleteDocxTableRowRangeResponse</returns>
+        System.Threading.Tasks.Task<DeleteDocxTableRowRangeResponse> EditDocumentDocxDeleteTableRowRangeAsync (DeleteDocxTableRowRangeRequest reqConfig);
+
+        /// <summary>
+        /// Deletes a range of multiple table rows in an existing table in a Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Deletes a range of 1 or more existing table rows in a Word DOCX Document and returns the result.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>Task of ApiResponse (DeleteDocxTableRowRangeResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DeleteDocxTableRowRangeResponse>> EditDocumentDocxDeleteTableRowRangeAsyncWithHttpInfo (DeleteDocxTableRowRangeRequest reqConfig);
         /// <summary>
         /// Get content of a footer from a Word DOCX document
         /// </summary>
@@ -1539,10 +1623,31 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> EditDocumentXlsxDeleteWorksheetAsyncWithHttpInfo (RemoveXlsxWorksheetRequest reqConfig);
         /// <summary>
+        /// Get cell from an Excel XLSX spreadsheet, worksheet by cell identifier
+        /// </summary>
+        /// <remarks>
+        /// Returns the value of a specific cell based on its identifier (e.g. A1, B22, C33, etc.) in the Excel Spreadsheet worksheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Document input request</param>
+        /// <returns>Task of GetXlsxCellByIdentifierResponse</returns>
+        System.Threading.Tasks.Task<GetXlsxCellByIdentifierResponse> EditDocumentXlsxGetCellByIdentifierAsync (GetXlsxCellByIdentifierRequest input);
+
+        /// <summary>
+        /// Get cell from an Excel XLSX spreadsheet, worksheet by cell identifier
+        /// </summary>
+        /// <remarks>
+        /// Returns the value of a specific cell based on its identifier (e.g. A1, B22, C33, etc.) in the Excel Spreadsheet worksheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Document input request</param>
+        /// <returns>Task of ApiResponse (GetXlsxCellByIdentifierResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetXlsxCellByIdentifierResponse>> EditDocumentXlsxGetCellByIdentifierAsyncWithHttpInfo (GetXlsxCellByIdentifierRequest input);
+        /// <summary>
         /// Get cell from an Excel XLSX spreadsheet, worksheet by index
         /// </summary>
         /// <remarks>
-        /// Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// Returns the value and definition of a specific cell in a specific row in the Excel Spreadsheet worksheet
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Document input request</param>
@@ -1553,7 +1658,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Get cell from an Excel XLSX spreadsheet, worksheet by index
         /// </summary>
         /// <remarks>
-        /// Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// Returns the value and definition of a specific cell in a specific row in the Excel Spreadsheet worksheet
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Document input request</param>
@@ -1685,6 +1790,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="input">Document input request</param>
         /// <returns>Task of ApiResponse (InsertXlsxWorksheetResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<InsertXlsxWorksheetResponse>> EditDocumentXlsxInsertWorksheetAsyncWithHttpInfo (InsertXlsxWorksheetRequest input);
+        /// <summary>
+        /// Set, update cell contents in an Excel XLSX spreadsheet, worksheet by cell identifier
+        /// </summary>
+        /// <remarks>
+        /// Sets, updates the contents of a specific cell in an Excel XLSX spreadsheet, worksheet using its cell identifier (e.g. A1, B22, C33) in the worksheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Document input request</param>
+        /// <returns>Task of SetXlsxCellByIdentifierResponse</returns>
+        System.Threading.Tasks.Task<SetXlsxCellByIdentifierResponse> EditDocumentXlsxSetCellByIdentifierAsync (SetXlsxCellByIdentifierRequest input);
+
+        /// <summary>
+        /// Set, update cell contents in an Excel XLSX spreadsheet, worksheet by cell identifier
+        /// </summary>
+        /// <remarks>
+        /// Sets, updates the contents of a specific cell in an Excel XLSX spreadsheet, worksheet using its cell identifier (e.g. A1, B22, C33) in the worksheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Document input request</param>
+        /// <returns>Task of ApiResponse (SetXlsxCellByIdentifierResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SetXlsxCellByIdentifierResponse>> EditDocumentXlsxSetCellByIdentifierAsyncWithHttpInfo (SetXlsxCellByIdentifierRequest input);
         /// <summary>
         /// Set, update cell contents in an Excel XLSX spreadsheet, worksheet by index
         /// </summary>
@@ -2641,6 +2767,179 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<DeleteDocxTableRowResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (DeleteDocxTableRowResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteDocxTableRowResponse)));
+        }
+
+        /// <summary>
+        /// Deletes a range of multiple table rows in an existing table in a Word DOCX document Deletes a range of 1 or more existing table rows in a Word DOCX Document and returns the result.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>DeleteDocxTableRowRangeResponse</returns>
+        public DeleteDocxTableRowRangeResponse EditDocumentDocxDeleteTableRowRange (DeleteDocxTableRowRangeRequest reqConfig)
+        {
+             ApiResponse<DeleteDocxTableRowRangeResponse> localVarResponse = EditDocumentDocxDeleteTableRowRangeWithHttpInfo(reqConfig);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Deletes a range of multiple table rows in an existing table in a Word DOCX document Deletes a range of 1 or more existing table rows in a Word DOCX Document and returns the result.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>ApiResponse of DeleteDocxTableRowRangeResponse</returns>
+        public ApiResponse< DeleteDocxTableRowRangeResponse > EditDocumentDocxDeleteTableRowRangeWithHttpInfo (DeleteDocxTableRowRangeRequest reqConfig)
+        {
+            // verify the required parameter 'reqConfig' is set
+            if (reqConfig == null)
+                throw new ApiException(400, "Missing required parameter 'reqConfig' when calling EditDocumentApi->EditDocumentDocxDeleteTableRowRange");
+
+            var localVarPath = "/convert/edit/docx/delete-table-row/range";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reqConfig; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentDocxDeleteTableRowRange", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DeleteDocxTableRowRangeResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DeleteDocxTableRowRangeResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteDocxTableRowRangeResponse)));
+        }
+
+        /// <summary>
+        /// Deletes a range of multiple table rows in an existing table in a Word DOCX document Deletes a range of 1 or more existing table rows in a Word DOCX Document and returns the result.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>Task of DeleteDocxTableRowRangeResponse</returns>
+        public async System.Threading.Tasks.Task<DeleteDocxTableRowRangeResponse> EditDocumentDocxDeleteTableRowRangeAsync (DeleteDocxTableRowRangeRequest reqConfig)
+        {
+             ApiResponse<DeleteDocxTableRowRangeResponse> localVarResponse = await EditDocumentDocxDeleteTableRowRangeAsyncWithHttpInfo(reqConfig);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Deletes a range of multiple table rows in an existing table in a Word DOCX document Deletes a range of 1 or more existing table rows in a Word DOCX Document and returns the result.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>Task of ApiResponse (DeleteDocxTableRowRangeResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DeleteDocxTableRowRangeResponse>> EditDocumentDocxDeleteTableRowRangeAsyncWithHttpInfo (DeleteDocxTableRowRangeRequest reqConfig)
+        {
+            // verify the required parameter 'reqConfig' is set
+            if (reqConfig == null)
+                throw new ApiException(400, "Missing required parameter 'reqConfig' when calling EditDocumentApi->EditDocumentDocxDeleteTableRowRange");
+
+            var localVarPath = "/convert/edit/docx/delete-table-row/range";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reqConfig; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentDocxDeleteTableRowRange", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DeleteDocxTableRowRangeResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DeleteDocxTableRowRangeResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteDocxTableRowRangeResponse)));
         }
 
         /// <summary>
@@ -7285,7 +7584,180 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get cell from an Excel XLSX spreadsheet, worksheet by index Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// Get cell from an Excel XLSX spreadsheet, worksheet by cell identifier Returns the value of a specific cell based on its identifier (e.g. A1, B22, C33, etc.) in the Excel Spreadsheet worksheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Document input request</param>
+        /// <returns>GetXlsxCellByIdentifierResponse</returns>
+        public GetXlsxCellByIdentifierResponse EditDocumentXlsxGetCellByIdentifier (GetXlsxCellByIdentifierRequest input)
+        {
+             ApiResponse<GetXlsxCellByIdentifierResponse> localVarResponse = EditDocumentXlsxGetCellByIdentifierWithHttpInfo(input);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get cell from an Excel XLSX spreadsheet, worksheet by cell identifier Returns the value of a specific cell based on its identifier (e.g. A1, B22, C33, etc.) in the Excel Spreadsheet worksheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Document input request</param>
+        /// <returns>ApiResponse of GetXlsxCellByIdentifierResponse</returns>
+        public ApiResponse< GetXlsxCellByIdentifierResponse > EditDocumentXlsxGetCellByIdentifierWithHttpInfo (GetXlsxCellByIdentifierRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling EditDocumentApi->EditDocumentXlsxGetCellByIdentifier");
+
+            var localVarPath = "/convert/edit/xlsx/get-cell/by-identifier";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentXlsxGetCellByIdentifier", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetXlsxCellByIdentifierResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetXlsxCellByIdentifierResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetXlsxCellByIdentifierResponse)));
+        }
+
+        /// <summary>
+        /// Get cell from an Excel XLSX spreadsheet, worksheet by cell identifier Returns the value of a specific cell based on its identifier (e.g. A1, B22, C33, etc.) in the Excel Spreadsheet worksheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Document input request</param>
+        /// <returns>Task of GetXlsxCellByIdentifierResponse</returns>
+        public async System.Threading.Tasks.Task<GetXlsxCellByIdentifierResponse> EditDocumentXlsxGetCellByIdentifierAsync (GetXlsxCellByIdentifierRequest input)
+        {
+             ApiResponse<GetXlsxCellByIdentifierResponse> localVarResponse = await EditDocumentXlsxGetCellByIdentifierAsyncWithHttpInfo(input);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get cell from an Excel XLSX spreadsheet, worksheet by cell identifier Returns the value of a specific cell based on its identifier (e.g. A1, B22, C33, etc.) in the Excel Spreadsheet worksheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Document input request</param>
+        /// <returns>Task of ApiResponse (GetXlsxCellByIdentifierResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetXlsxCellByIdentifierResponse>> EditDocumentXlsxGetCellByIdentifierAsyncWithHttpInfo (GetXlsxCellByIdentifierRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling EditDocumentApi->EditDocumentXlsxGetCellByIdentifier");
+
+            var localVarPath = "/convert/edit/xlsx/get-cell/by-identifier";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentXlsxGetCellByIdentifier", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetXlsxCellByIdentifierResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetXlsxCellByIdentifierResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetXlsxCellByIdentifierResponse)));
+        }
+
+        /// <summary>
+        /// Get cell from an Excel XLSX spreadsheet, worksheet by index Returns the value and definition of a specific cell in a specific row in the Excel Spreadsheet worksheet
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Document input request</param>
@@ -7297,7 +7769,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get cell from an Excel XLSX spreadsheet, worksheet by index Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// Get cell from an Excel XLSX spreadsheet, worksheet by index Returns the value and definition of a specific cell in a specific row in the Excel Spreadsheet worksheet
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Document input request</param>
@@ -7371,7 +7843,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get cell from an Excel XLSX spreadsheet, worksheet by index Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// Get cell from an Excel XLSX spreadsheet, worksheet by index Returns the value and definition of a specific cell in a specific row in the Excel Spreadsheet worksheet
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Document input request</param>
@@ -7384,7 +7856,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get cell from an Excel XLSX spreadsheet, worksheet by index Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// Get cell from an Excel XLSX spreadsheet, worksheet by index Returns the value and definition of a specific cell in a specific row in the Excel Spreadsheet worksheet
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Document input request</param>
@@ -8493,6 +8965,179 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<InsertXlsxWorksheetResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (InsertXlsxWorksheetResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InsertXlsxWorksheetResponse)));
+        }
+
+        /// <summary>
+        /// Set, update cell contents in an Excel XLSX spreadsheet, worksheet by cell identifier Sets, updates the contents of a specific cell in an Excel XLSX spreadsheet, worksheet using its cell identifier (e.g. A1, B22, C33) in the worksheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Document input request</param>
+        /// <returns>SetXlsxCellByIdentifierResponse</returns>
+        public SetXlsxCellByIdentifierResponse EditDocumentXlsxSetCellByIdentifier (SetXlsxCellByIdentifierRequest input)
+        {
+             ApiResponse<SetXlsxCellByIdentifierResponse> localVarResponse = EditDocumentXlsxSetCellByIdentifierWithHttpInfo(input);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Set, update cell contents in an Excel XLSX spreadsheet, worksheet by cell identifier Sets, updates the contents of a specific cell in an Excel XLSX spreadsheet, worksheet using its cell identifier (e.g. A1, B22, C33) in the worksheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Document input request</param>
+        /// <returns>ApiResponse of SetXlsxCellByIdentifierResponse</returns>
+        public ApiResponse< SetXlsxCellByIdentifierResponse > EditDocumentXlsxSetCellByIdentifierWithHttpInfo (SetXlsxCellByIdentifierRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling EditDocumentApi->EditDocumentXlsxSetCellByIdentifier");
+
+            var localVarPath = "/convert/edit/xlsx/set-cell/by-identifier";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentXlsxSetCellByIdentifier", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SetXlsxCellByIdentifierResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SetXlsxCellByIdentifierResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SetXlsxCellByIdentifierResponse)));
+        }
+
+        /// <summary>
+        /// Set, update cell contents in an Excel XLSX spreadsheet, worksheet by cell identifier Sets, updates the contents of a specific cell in an Excel XLSX spreadsheet, worksheet using its cell identifier (e.g. A1, B22, C33) in the worksheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Document input request</param>
+        /// <returns>Task of SetXlsxCellByIdentifierResponse</returns>
+        public async System.Threading.Tasks.Task<SetXlsxCellByIdentifierResponse> EditDocumentXlsxSetCellByIdentifierAsync (SetXlsxCellByIdentifierRequest input)
+        {
+             ApiResponse<SetXlsxCellByIdentifierResponse> localVarResponse = await EditDocumentXlsxSetCellByIdentifierAsyncWithHttpInfo(input);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Set, update cell contents in an Excel XLSX spreadsheet, worksheet by cell identifier Sets, updates the contents of a specific cell in an Excel XLSX spreadsheet, worksheet using its cell identifier (e.g. A1, B22, C33) in the worksheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Document input request</param>
+        /// <returns>Task of ApiResponse (SetXlsxCellByIdentifierResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SetXlsxCellByIdentifierResponse>> EditDocumentXlsxSetCellByIdentifierAsyncWithHttpInfo (SetXlsxCellByIdentifierRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling EditDocumentApi->EditDocumentXlsxSetCellByIdentifier");
+
+            var localVarPath = "/convert/edit/xlsx/set-cell/by-identifier";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentXlsxSetCellByIdentifier", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SetXlsxCellByIdentifierResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SetXlsxCellByIdentifierResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SetXlsxCellByIdentifierResponse)));
         }
 
         /// <summary>

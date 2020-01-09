@@ -34,7 +34,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Initializes a new instance of the <see cref="DocxTable" /> class.
         /// </summary>
         /// <param name="tableID">The ID of the table; leave blank for new tables.</param>
-        /// <param name="path">The Path of the location of this object; leave blank for new tables.</param>
+        /// <param name="path">The Path of the location of this table object; leave blank for new tables.</param>
         /// <param name="width">The Width of the table, or 0 if not specified.</param>
         /// <param name="widthType">The Width configuration type of the table.</param>
         /// <param name="tableRows">Rows in the table; this is where the contents is located.</param>
@@ -123,9 +123,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         public string TableID { get; set; }
 
         /// <summary>
-        /// The Path of the location of this object; leave blank for new tables
+        /// The Path of the location of this table object; leave blank for new tables
         /// </summary>
-        /// <value>The Path of the location of this object; leave blank for new tables</value>
+        /// <value>The Path of the location of this table object; leave blank for new tables</value>
         [DataMember(Name="Path", EmitDefaultValue=false)]
         public string Path { get; set; }
 

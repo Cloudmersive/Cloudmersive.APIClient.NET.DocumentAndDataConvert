@@ -125,6 +125,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test EditDocumentDocxDeleteTableRowRange
+        /// </summary>
+        [Test]
+        public void EditDocumentDocxDeleteTableRowRangeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //DeleteDocxTableRowRangeRequest reqConfig = null;
+            //var response = instance.EditDocumentDocxDeleteTableRowRange(reqConfig);
+            //Assert.IsInstanceOf<DeleteDocxTableRowRangeResponse> (response, "response is DeleteDocxTableRowRangeResponse");
+        }
+        
+        /// <summary>
         /// Test EditDocumentDocxGetHeadersAndFooters
         /// </summary>
         [Test]
@@ -449,6 +461,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test EditDocumentXlsxGetCellByIdentifier
+        /// </summary>
+        [Test]
+        public void EditDocumentXlsxGetCellByIdentifierTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //GetXlsxCellByIdentifierRequest input = null;
+            //var response = instance.EditDocumentXlsxGetCellByIdentifier(input);
+            //Assert.IsInstanceOf<GetXlsxCellByIdentifierResponse> (response, "response is GetXlsxCellByIdentifierResponse");
+        }
+        
+        /// <summary>
         /// Test EditDocumentXlsxGetCellByIndex
         /// </summary>
         [Test]
@@ -530,6 +554,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //InsertXlsxWorksheetRequest input = null;
             //var response = instance.EditDocumentXlsxInsertWorksheet(input);
             //Assert.IsInstanceOf<InsertXlsxWorksheetResponse> (response, "response is InsertXlsxWorksheetResponse");
+        }
+        
+        /// <summary>
+        /// Test EditDocumentXlsxSetCellByIdentifier
+        /// </summary>
+        [Test]
+        public void EditDocumentXlsxSetCellByIdentifierTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //SetXlsxCellByIdentifierRequest input = null;
+            //var response = instance.EditDocumentXlsxSetCellByIdentifier(input);
+            //Assert.IsInstanceOf<SetXlsxCellByIdentifierResponse> (response, "response is SetXlsxCellByIdentifierResponse");
         }
         
         /// <summary>
