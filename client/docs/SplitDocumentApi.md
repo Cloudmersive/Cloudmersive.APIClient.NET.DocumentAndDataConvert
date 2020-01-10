@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**SplitDocumentDocx**](SplitDocumentApi.md#splitdocumentdocx) | **POST** /convert/split/docx | Split a single Word Document DOCX into Separate Documents by Page
 [**SplitDocumentPdfByPage**](SplitDocumentApi.md#splitdocumentpdfbypage) | **POST** /convert/split/pdf | Split a PDF file into separate PDF files, one per page
 [**SplitDocumentPptx**](SplitDocumentApi.md#splitdocumentpptx) | **POST** /convert/split/pptx | Split a single PowerPoint Presentation PPTX into Separate Slides
+[**SplitDocumentTxtByLine**](SplitDocumentApi.md#splitdocumenttxtbyline) | **POST** /convert/split/txt/by-line | Split a single Text file (txt) into lines
 [**SplitDocumentXlsx**](SplitDocumentApi.md#splitdocumentxlsx) | **POST** /convert/split/xlsx | Split a single Excel XLSX into Separate Worksheets
 
 
@@ -202,6 +203,72 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SplitPptxPresentationResult**](SplitPptxPresentationResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="splitdocumenttxtbyline"></a>
+# **SplitDocumentTxtByLine**
+> SplitTextDocumentByLinesResult SplitDocumentTxtByLine (System.IO.Stream inputFile)
+
+Split a single Text file (txt) into lines
+
+Split a Text (txt) Document by line, returning each line separately in order.  Supports multiple types of newlines.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class SplitDocumentTxtByLineExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new SplitDocumentApi();
+            var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
+
+            try
+            {
+                // Split a single Text file (txt) into lines
+                SplitTextDocumentByLinesResult result = apiInstance.SplitDocumentTxtByLine(inputFile);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SplitDocumentApi.SplitDocumentTxtByLine: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
+
+### Return type
+
+[**SplitTextDocumentByLinesResult**](SplitTextDocumentByLinesResult.md)
 
 ### Authorization
 

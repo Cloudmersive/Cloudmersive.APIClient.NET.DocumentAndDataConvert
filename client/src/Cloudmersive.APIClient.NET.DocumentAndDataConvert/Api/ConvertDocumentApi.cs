@@ -174,6 +174,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> ConvertDocumentDocToPdfWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
+        /// Convert Word DOC (97-03) Document to Text (txt)
+        /// </summary>
+        /// <remarks>
+        /// Convert Office Word DOC (97-03) Document (doc) to text
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>TextConversionResult</returns>
+        TextConversionResult ConvertDocumentDocToTxt (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Convert Word DOC (97-03) Document to Text (txt)
+        /// </summary>
+        /// <remarks>
+        /// Convert Office Word DOC (97-03) Document (doc) to text
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of TextConversionResult</returns>
+        ApiResponse<TextConversionResult> ConvertDocumentDocToTxtWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
         /// Convert Word DOCX Document to PDF
         /// </summary>
         /// <remarks>
@@ -808,6 +829,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentDocToPdfAsyncWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// Convert Word DOC (97-03) Document to Text (txt)
+        /// </summary>
+        /// <remarks>
+        /// Convert Office Word DOC (97-03) Document (doc) to text
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of TextConversionResult</returns>
+        System.Threading.Tasks.Task<TextConversionResult> ConvertDocumentDocToTxtAsync (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Convert Word DOC (97-03) Document to Text (txt)
+        /// </summary>
+        /// <remarks>
+        /// Convert Office Word DOC (97-03) Document (doc) to text
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (TextConversionResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TextConversionResult>> ConvertDocumentDocToTxtAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
         /// Convert Word DOCX Document to PDF
         /// </summary>
@@ -1881,7 +1923,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/octet-stream"
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1957,7 +2002,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/octet-stream"
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2426,6 +2474,157 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
+        /// Convert Word DOC (97-03) Document to Text (txt) Convert Office Word DOC (97-03) Document (doc) to text
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>TextConversionResult</returns>
+        public TextConversionResult ConvertDocumentDocToTxt (System.IO.Stream inputFile)
+        {
+             ApiResponse<TextConversionResult> localVarResponse = ConvertDocumentDocToTxtWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Convert Word DOC (97-03) Document to Text (txt) Convert Office Word DOC (97-03) Document (doc) to text
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of TextConversionResult</returns>
+        public ApiResponse< TextConversionResult > ConvertDocumentDocToTxtWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentDocToTxt");
+
+            var localVarPath = "/convert/doc/to/txt";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentDocToTxt", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<TextConversionResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TextConversionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TextConversionResult)));
+        }
+
+        /// <summary>
+        /// Convert Word DOC (97-03) Document to Text (txt) Convert Office Word DOC (97-03) Document (doc) to text
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of TextConversionResult</returns>
+        public async System.Threading.Tasks.Task<TextConversionResult> ConvertDocumentDocToTxtAsync (System.IO.Stream inputFile)
+        {
+             ApiResponse<TextConversionResult> localVarResponse = await ConvertDocumentDocToTxtAsyncWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Convert Word DOC (97-03) Document to Text (txt) Convert Office Word DOC (97-03) Document (doc) to text
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (TextConversionResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TextConversionResult>> ConvertDocumentDocToTxtAsyncWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentDocToTxt");
+
+            var localVarPath = "/convert/doc/to/txt";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentDocToTxt", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<TextConversionResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TextConversionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TextConversionResult)));
+        }
+
+        /// <summary>
         /// Convert Word DOCX Document to PDF Convert Office Word Documents (docx) to standard PDF
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2610,7 +2809,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/octet-stream"
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2683,7 +2885,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/octet-stream"
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4730,7 +4935,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/octet-stream"
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4803,7 +5011,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/octet-stream"
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -5606,7 +5817,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/octet-stream"
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -5679,7 +5893,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/octet-stream"
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)

@@ -94,6 +94,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of SplitPptxPresentationResult</returns>
         ApiResponse<SplitPptxPresentationResult> SplitDocumentPptxWithHttpInfo (System.IO.Stream inputFile, bool? returnDocumentContents = null);
         /// <summary>
+        /// Split a single Text file (txt) into lines
+        /// </summary>
+        /// <remarks>
+        /// Split a Text (txt) Document by line, returning each line separately in order.  Supports multiple types of newlines.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>SplitTextDocumentByLinesResult</returns>
+        SplitTextDocumentByLinesResult SplitDocumentTxtByLine (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Split a single Text file (txt) into lines
+        /// </summary>
+        /// <remarks>
+        /// Split a Text (txt) Document by line, returning each line separately in order.  Supports multiple types of newlines.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of SplitTextDocumentByLinesResult</returns>
+        ApiResponse<SplitTextDocumentByLinesResult> SplitDocumentTxtByLineWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
         /// Split a single Excel XLSX into Separate Worksheets
         /// </summary>
         /// <remarks>
@@ -187,6 +208,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="returnDocumentContents">Set to true to return the contents of each presentation directly, set to false to only return URLs to each resulting presentation.  Default is true. (optional)</param>
         /// <returns>Task of ApiResponse (SplitPptxPresentationResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<SplitPptxPresentationResult>> SplitDocumentPptxAsyncWithHttpInfo (System.IO.Stream inputFile, bool? returnDocumentContents = null);
+        /// <summary>
+        /// Split a single Text file (txt) into lines
+        /// </summary>
+        /// <remarks>
+        /// Split a Text (txt) Document by line, returning each line separately in order.  Supports multiple types of newlines.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of SplitTextDocumentByLinesResult</returns>
+        System.Threading.Tasks.Task<SplitTextDocumentByLinesResult> SplitDocumentTxtByLineAsync (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Split a single Text file (txt) into lines
+        /// </summary>
+        /// <remarks>
+        /// Split a Text (txt) Document by line, returning each line separately in order.  Supports multiple types of newlines.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (SplitTextDocumentByLinesResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SplitTextDocumentByLinesResult>> SplitDocumentTxtByLineAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
         /// Split a single Excel XLSX into Separate Worksheets
         /// </summary>
@@ -779,6 +821,157 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<SplitPptxPresentationResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (SplitPptxPresentationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SplitPptxPresentationResult)));
+        }
+
+        /// <summary>
+        /// Split a single Text file (txt) into lines Split a Text (txt) Document by line, returning each line separately in order.  Supports multiple types of newlines.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>SplitTextDocumentByLinesResult</returns>
+        public SplitTextDocumentByLinesResult SplitDocumentTxtByLine (System.IO.Stream inputFile)
+        {
+             ApiResponse<SplitTextDocumentByLinesResult> localVarResponse = SplitDocumentTxtByLineWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Split a single Text file (txt) into lines Split a Text (txt) Document by line, returning each line separately in order.  Supports multiple types of newlines.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of SplitTextDocumentByLinesResult</returns>
+        public ApiResponse< SplitTextDocumentByLinesResult > SplitDocumentTxtByLineWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling SplitDocumentApi->SplitDocumentTxtByLine");
+
+            var localVarPath = "/convert/split/txt/by-line";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SplitDocumentTxtByLine", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SplitTextDocumentByLinesResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SplitTextDocumentByLinesResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SplitTextDocumentByLinesResult)));
+        }
+
+        /// <summary>
+        /// Split a single Text file (txt) into lines Split a Text (txt) Document by line, returning each line separately in order.  Supports multiple types of newlines.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of SplitTextDocumentByLinesResult</returns>
+        public async System.Threading.Tasks.Task<SplitTextDocumentByLinesResult> SplitDocumentTxtByLineAsync (System.IO.Stream inputFile)
+        {
+             ApiResponse<SplitTextDocumentByLinesResult> localVarResponse = await SplitDocumentTxtByLineAsyncWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Split a single Text file (txt) into lines Split a Text (txt) Document by line, returning each line separately in order.  Supports multiple types of newlines.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (SplitTextDocumentByLinesResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SplitTextDocumentByLinesResult>> SplitDocumentTxtByLineAsyncWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling SplitDocumentApi->SplitDocumentTxtByLine");
+
+            var localVarPath = "/convert/split/txt/by-line";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SplitDocumentTxtByLine", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SplitTextDocumentByLinesResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SplitTextDocumentByLinesResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SplitTextDocumentByLinesResult)));
         }
 
         /// <summary>

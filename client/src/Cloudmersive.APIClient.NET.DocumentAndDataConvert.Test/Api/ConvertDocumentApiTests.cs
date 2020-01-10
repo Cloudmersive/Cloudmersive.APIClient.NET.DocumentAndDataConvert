@@ -150,6 +150,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test ConvertDocumentDocToTxt
+        /// </summary>
+        [Test]
+        public void ConvertDocumentDocToTxtTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.ConvertDocumentDocToTxt(inputFile);
+            //Assert.IsInstanceOf<TextConversionResult> (response, "response is TextConversionResult");
+        }
+        
+        /// <summary>
         /// Test ConvertDocumentDocxToPdf
         /// </summary>
         [Test]

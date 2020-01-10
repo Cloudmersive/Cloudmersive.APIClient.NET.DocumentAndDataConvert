@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 This C# SDK is for the [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api):
 
 - API version: v1
-- SDK version: 3.1.3
+- SDK version: 3.1.4
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -125,6 +125,7 @@ Class | Method | HTTP request | Description
 *ConvertDocumentApi* | [**ConvertDocumentCsvToXlsx**](docs/ConvertDocumentApi.md#convertdocumentcsvtoxlsx) | **POST** /convert/csv/to/xlsx | Convert CSV to Excel XLSX Spreadsheet
 *ConvertDocumentApi* | [**ConvertDocumentDocToDocx**](docs/ConvertDocumentApi.md#convertdocumentdoctodocx) | **POST** /convert/doc/to/docx | Convert Word DOC (97-03) Document to DOCX
 *ConvertDocumentApi* | [**ConvertDocumentDocToPdf**](docs/ConvertDocumentApi.md#convertdocumentdoctopdf) | **POST** /convert/doc/to/pdf | Convert Word DOC (97-03) Document to PDF
+*ConvertDocumentApi* | [**ConvertDocumentDocToTxt**](docs/ConvertDocumentApi.md#convertdocumentdoctotxt) | **POST** /convert/doc/to/txt | Convert Word DOC (97-03) Document to Text (txt)
 *ConvertDocumentApi* | [**ConvertDocumentDocxToPdf**](docs/ConvertDocumentApi.md#convertdocumentdocxtopdf) | **POST** /convert/docx/to/pdf | Convert Word DOCX Document to PDF
 *ConvertDocumentApi* | [**ConvertDocumentDocxToTxt**](docs/ConvertDocumentApi.md#convertdocumentdocxtotxt) | **POST** /convert/docx/to/txt | Convert Word DOCX Document to Text (txt)
 *ConvertDocumentApi* | [**ConvertDocumentHtmlToPdf**](docs/ConvertDocumentApi.md#convertdocumenthtmltopdf) | **POST** /convert/html/to/pdf | Convert HTML document file to PDF Document
@@ -234,6 +235,7 @@ Class | Method | HTTP request | Description
 *SplitDocumentApi* | [**SplitDocumentDocx**](docs/SplitDocumentApi.md#splitdocumentdocx) | **POST** /convert/split/docx | Split a single Word Document DOCX into Separate Documents by Page
 *SplitDocumentApi* | [**SplitDocumentPdfByPage**](docs/SplitDocumentApi.md#splitdocumentpdfbypage) | **POST** /convert/split/pdf | Split a PDF file into separate PDF files, one per page
 *SplitDocumentApi* | [**SplitDocumentPptx**](docs/SplitDocumentApi.md#splitdocumentpptx) | **POST** /convert/split/pptx | Split a single PowerPoint Presentation PPTX into Separate Slides
+*SplitDocumentApi* | [**SplitDocumentTxtByLine**](docs/SplitDocumentApi.md#splitdocumenttxtbyline) | **POST** /convert/split/txt/by-line | Split a single Text file (txt) into lines
 *SplitDocumentApi* | [**SplitDocumentXlsx**](docs/SplitDocumentApi.md#splitdocumentxlsx) | **POST** /convert/split/xlsx | Split a single Excel XLSX into Separate Worksheets
 *ValidateDocumentApi* | [**ValidateDocumentAutodetectValidation**](docs/ValidateDocumentApi.md#validatedocumentautodetectvalidation) | **POST** /convert/validate/autodetect | Autodetect content type and validate
 *ValidateDocumentApi* | [**ValidateDocumentDocxValidation**](docs/ValidateDocumentApi.md#validatedocumentdocxvalidation) | **POST** /convert/validate/docx | Validate a Word document (DOCX)
@@ -376,8 +378,10 @@ Class | Method | HTTP request | Description
  - [Model.SplitDocxDocumentResult](docs/SplitDocxDocumentResult.md)
  - [Model.SplitPdfResult](docs/SplitPdfResult.md)
  - [Model.SplitPptxPresentationResult](docs/SplitPptxPresentationResult.md)
+ - [Model.SplitTextDocumentByLinesResult](docs/SplitTextDocumentByLinesResult.md)
  - [Model.SplitXlsxWorksheetResult](docs/SplitXlsxWorksheetResult.md)
  - [Model.TextConversionResult](docs/TextConversionResult.md)
+ - [Model.TextDocumentLine](docs/TextDocumentLine.md)
  - [Model.UpdateDocxTableCellRequest](docs/UpdateDocxTableCellRequest.md)
  - [Model.UpdateDocxTableCellResponse](docs/UpdateDocxTableCellResponse.md)
  - [Model.UpdateDocxTableRowRequest](docs/UpdateDocxTableRowRequest.md)
