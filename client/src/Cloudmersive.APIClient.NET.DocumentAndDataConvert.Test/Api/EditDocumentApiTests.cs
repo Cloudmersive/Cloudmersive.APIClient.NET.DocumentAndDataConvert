@@ -137,6 +137,30 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test EditDocumentDocxGetComments
+        /// </summary>
+        [Test]
+        public void EditDocumentDocxGetCommentsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //GetDocxGetCommentsRequest reqConfig = null;
+            //var response = instance.EditDocumentDocxGetComments(reqConfig);
+            //Assert.IsInstanceOf<GetDocxCommentsResponse> (response, "response is GetDocxCommentsResponse");
+        }
+        
+        /// <summary>
+        /// Test EditDocumentDocxGetCommentsHierarchical
+        /// </summary>
+        [Test]
+        public void EditDocumentDocxGetCommentsHierarchicalTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //GetDocxGetCommentsHierarchicalRequest reqConfig = null;
+            //var response = instance.EditDocumentDocxGetCommentsHierarchical(reqConfig);
+            //Assert.IsInstanceOf<GetDocxCommentsHierarchicalResponse> (response, "response is GetDocxCommentsHierarchicalResponse");
+        }
+        
+        /// <summary>
         /// Test EditDocumentDocxGetHeadersAndFooters
         /// </summary>
         [Test]
@@ -218,6 +242,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //GetDocxTablesRequest reqConfig = null;
             //var response = instance.EditDocumentDocxGetTables(reqConfig);
             //Assert.IsInstanceOf<GetDocxTablesResponse> (response, "response is GetDocxTablesResponse");
+        }
+        
+        /// <summary>
+        /// Test EditDocumentDocxInsertCommentOnParagraph
+        /// </summary>
+        [Test]
+        public void EditDocumentDocxInsertCommentOnParagraphTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //DocxInsertCommentOnParagraphRequest reqConfig = null;
+            //var response = instance.EditDocumentDocxInsertCommentOnParagraph(reqConfig);
+            //Assert.IsInstanceOf<InsertDocxCommentOnParagraphResponse> (response, "response is InsertDocxCommentOnParagraphResponse");
         }
         
         /// <summary>

@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 This C# SDK is for the [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api):
 
 - API version: v1
-- SDK version: 3.1.4
+- SDK version: 3.1.5
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -168,6 +168,8 @@ Class | Method | HTTP request | Description
 *EditDocumentApi* | [**EditDocumentDocxDeletePages**](docs/EditDocumentApi.md#editdocumentdocxdeletepages) | **POST** /convert/edit/docx/delete-pages | Delete, remove pages from a Word DOCX document
 *EditDocumentApi* | [**EditDocumentDocxDeleteTableRow**](docs/EditDocumentApi.md#editdocumentdocxdeletetablerow) | **POST** /convert/edit/docx/delete-table-row | Deletes a table row in an existing table in a Word DOCX document
 *EditDocumentApi* | [**EditDocumentDocxDeleteTableRowRange**](docs/EditDocumentApi.md#editdocumentdocxdeletetablerowrange) | **POST** /convert/edit/docx/delete-table-row/range | Deletes a range of multiple table rows in an existing table in a Word DOCX document
+*EditDocumentApi* | [**EditDocumentDocxGetComments**](docs/EditDocumentApi.md#editdocumentdocxgetcomments) | **POST** /convert/edit/docx/get-comments/flat-list | Get comments from a Word DOCX document as a flat list
+*EditDocumentApi* | [**EditDocumentDocxGetCommentsHierarchical**](docs/EditDocumentApi.md#editdocumentdocxgetcommentshierarchical) | **POST** /convert/edit/docx/get-comments/hierarchical | Get comments from a Word DOCX document hierarchically
 *EditDocumentApi* | [**EditDocumentDocxGetHeadersAndFooters**](docs/EditDocumentApi.md#editdocumentdocxgetheadersandfooters) | **POST** /convert/edit/docx/get-headers-and-footers | Get content of a footer from a Word DOCX document
 *EditDocumentApi* | [**EditDocumentDocxGetImages**](docs/EditDocumentApi.md#editdocumentdocxgetimages) | **POST** /convert/edit/docx/get-images | Get images from a Word DOCX document
 *EditDocumentApi* | [**EditDocumentDocxGetSections**](docs/EditDocumentApi.md#editdocumentdocxgetsections) | **POST** /convert/edit/docx/get-sections | Get sections from a Word DOCX document
@@ -175,6 +177,7 @@ Class | Method | HTTP request | Description
 *EditDocumentApi* | [**EditDocumentDocxGetTableByIndex**](docs/EditDocumentApi.md#editdocumentdocxgettablebyindex) | **POST** /convert/edit/docx/get-table/by-index | Get a specific table by index in a Word DOCX document
 *EditDocumentApi* | [**EditDocumentDocxGetTableRow**](docs/EditDocumentApi.md#editdocumentdocxgettablerow) | **POST** /convert/edit/docx/get-table-row | Gets the contents of an existing table row in an existing table in a Word DOCX document
 *EditDocumentApi* | [**EditDocumentDocxGetTables**](docs/EditDocumentApi.md#editdocumentdocxgettables) | **POST** /convert/edit/docx/get-tables | Get all tables in Word DOCX document
+*EditDocumentApi* | [**EditDocumentDocxInsertCommentOnParagraph**](docs/EditDocumentApi.md#editdocumentdocxinsertcommentonparagraph) | **POST** /convert/edit/docx/insert-comment/on/paragraph | Insert a new comment into a Word DOCX document attached to a paragraph
 *EditDocumentApi* | [**EditDocumentDocxInsertImage**](docs/EditDocumentApi.md#editdocumentdocxinsertimage) | **POST** /convert/edit/docx/insert-image | Insert image into a Word DOCX document
 *EditDocumentApi* | [**EditDocumentDocxInsertParagraph**](docs/EditDocumentApi.md#editdocumentdocxinsertparagraph) | **POST** /convert/edit/docx/insert-paragraph | Insert a new paragraph into a Word DOCX document
 *EditDocumentApi* | [**EditDocumentDocxInsertTable**](docs/EditDocumentApi.md#editdocumentdocxinserttable) | **POST** /convert/edit/docx/insert-table | Insert a new table into a Word DOCX document
@@ -273,9 +276,11 @@ Class | Method | HTTP request | Description
  - [Model.DocumentValidationResult](docs/DocumentValidationResult.md)
  - [Model.DocxBody](docs/DocxBody.md)
  - [Model.DocxCellStyle](docs/DocxCellStyle.md)
+ - [Model.DocxComment](docs/DocxComment.md)
  - [Model.DocxFooter](docs/DocxFooter.md)
  - [Model.DocxHeader](docs/DocxHeader.md)
  - [Model.DocxImage](docs/DocxImage.md)
+ - [Model.DocxInsertCommentOnParagraphRequest](docs/DocxInsertCommentOnParagraphRequest.md)
  - [Model.DocxInsertImageRequest](docs/DocxInsertImageRequest.md)
  - [Model.DocxInsertImageResponse](docs/DocxInsertImageResponse.md)
  - [Model.DocxPage](docs/DocxPage.md)
@@ -296,10 +301,15 @@ Class | Method | HTTP request | Description
  - [Model.DocxTemplateApplicationRequest](docs/DocxTemplateApplicationRequest.md)
  - [Model.DocxTemplateOperation](docs/DocxTemplateOperation.md)
  - [Model.DocxText](docs/DocxText.md)
+ - [Model.DocxTopLevelComment](docs/DocxTopLevelComment.md)
  - [Model.ExifValue](docs/ExifValue.md)
  - [Model.FinishEditingRequest](docs/FinishEditingRequest.md)
  - [Model.GetDocxBodyRequest](docs/GetDocxBodyRequest.md)
  - [Model.GetDocxBodyResponse](docs/GetDocxBodyResponse.md)
+ - [Model.GetDocxCommentsHierarchicalResponse](docs/GetDocxCommentsHierarchicalResponse.md)
+ - [Model.GetDocxCommentsResponse](docs/GetDocxCommentsResponse.md)
+ - [Model.GetDocxGetCommentsHierarchicalRequest](docs/GetDocxGetCommentsHierarchicalRequest.md)
+ - [Model.GetDocxGetCommentsRequest](docs/GetDocxGetCommentsRequest.md)
  - [Model.GetDocxHeadersAndFootersRequest](docs/GetDocxHeadersAndFootersRequest.md)
  - [Model.GetDocxHeadersAndFootersResponse](docs/GetDocxHeadersAndFootersResponse.md)
  - [Model.GetDocxImagesRequest](docs/GetDocxImagesRequest.md)
@@ -341,6 +351,7 @@ Class | Method | HTTP request | Description
  - [Model.HtmlToPngRequest](docs/HtmlToPngRequest.md)
  - [Model.HtmlToTextRequest](docs/HtmlToTextRequest.md)
  - [Model.HtmlToTextResponse](docs/HtmlToTextResponse.md)
+ - [Model.InsertDocxCommentOnParagraphResponse](docs/InsertDocxCommentOnParagraphResponse.md)
  - [Model.InsertDocxInsertParagraphRequest](docs/InsertDocxInsertParagraphRequest.md)
  - [Model.InsertDocxInsertParagraphResponse](docs/InsertDocxInsertParagraphResponse.md)
  - [Model.InsertDocxTableRowRequest](docs/InsertDocxTableRowRequest.md)

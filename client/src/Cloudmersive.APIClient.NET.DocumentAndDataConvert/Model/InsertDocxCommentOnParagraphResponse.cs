@@ -25,35 +25,35 @@ using SwaggerDateConverter = Cloudmersive.APIClient.NET.DocumentAndDataConvert.C
 namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
 {
     /// <summary>
-    /// One page in a Word Document DOCX
+    /// Result of running an Insert-Comment-on-Paragraph command
     /// </summary>
     [DataContract]
-    public partial class DocxPage :  IEquatable<DocxPage>, IValidatableObject
+    public partial class InsertDocxCommentOnParagraphResponse :  IEquatable<InsertDocxCommentOnParagraphResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="DocxPage" /> class.
+        /// Initializes a new instance of the <see cref="InsertDocxCommentOnParagraphResponse" /> class.
         /// </summary>
-        /// <param name="pageNumber">Page number of this page, 1-based.</param>
-        /// <param name="paragraphs">All paragraphs anywhere in the document; these objects are not sequentially placed but are scatted across document.</param>
-        public DocxPage(int? pageNumber = default(int?), List<DocxParagraph> paragraphs = default(List<DocxParagraph>))
+        /// <param name="successful">True if successful, false otherwise.</param>
+        /// <param name="editedDocumentURL">URL to the edited DOCX file; file is stored in an in-memory cache and will be deleted.  Call Finish-Editing to get the result document contents..</param>
+        public InsertDocxCommentOnParagraphResponse(bool? successful = default(bool?), string editedDocumentURL = default(string))
         {
-            this.PageNumber = pageNumber;
-            this.Paragraphs = paragraphs;
+            this.Successful = successful;
+            this.EditedDocumentURL = editedDocumentURL;
         }
         
         /// <summary>
-        /// Page number of this page, 1-based
+        /// True if successful, false otherwise
         /// </summary>
-        /// <value>Page number of this page, 1-based</value>
-        [DataMember(Name="PageNumber", EmitDefaultValue=false)]
-        public int? PageNumber { get; set; }
+        /// <value>True if successful, false otherwise</value>
+        [DataMember(Name="Successful", EmitDefaultValue=false)]
+        public bool? Successful { get; set; }
 
         /// <summary>
-        /// All paragraphs anywhere in the document; these objects are not sequentially placed but are scatted across document
+        /// URL to the edited DOCX file; file is stored in an in-memory cache and will be deleted.  Call Finish-Editing to get the result document contents.
         /// </summary>
-        /// <value>All paragraphs anywhere in the document; these objects are not sequentially placed but are scatted across document</value>
-        [DataMember(Name="Paragraphs", EmitDefaultValue=false)]
-        public List<DocxParagraph> Paragraphs { get; set; }
+        /// <value>URL to the edited DOCX file; file is stored in an in-memory cache and will be deleted.  Call Finish-Editing to get the result document contents.</value>
+        [DataMember(Name="EditedDocumentURL", EmitDefaultValue=false)]
+        public string EditedDocumentURL { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -62,9 +62,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class DocxPage {\n");
-            sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
-            sb.Append("  Paragraphs: ").Append(Paragraphs).Append("\n");
+            sb.Append("class InsertDocxCommentOnParagraphResponse {\n");
+            sb.Append("  Successful: ").Append(Successful).Append("\n");
+            sb.Append("  EditedDocumentURL: ").Append(EditedDocumentURL).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -85,29 +85,29 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as DocxPage);
+            return this.Equals(input as InsertDocxCommentOnParagraphResponse);
         }
 
         /// <summary>
-        /// Returns true if DocxPage instances are equal
+        /// Returns true if InsertDocxCommentOnParagraphResponse instances are equal
         /// </summary>
-        /// <param name="input">Instance of DocxPage to be compared</param>
+        /// <param name="input">Instance of InsertDocxCommentOnParagraphResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(DocxPage input)
+        public bool Equals(InsertDocxCommentOnParagraphResponse input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.PageNumber == input.PageNumber ||
-                    (this.PageNumber != null &&
-                    this.PageNumber.Equals(input.PageNumber))
+                    this.Successful == input.Successful ||
+                    (this.Successful != null &&
+                    this.Successful.Equals(input.Successful))
                 ) && 
                 (
-                    this.Paragraphs == input.Paragraphs ||
-                    this.Paragraphs != null &&
-                    this.Paragraphs.SequenceEqual(input.Paragraphs)
+                    this.EditedDocumentURL == input.EditedDocumentURL ||
+                    (this.EditedDocumentURL != null &&
+                    this.EditedDocumentURL.Equals(input.EditedDocumentURL))
                 );
         }
 
@@ -120,10 +120,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.PageNumber != null)
-                    hashCode = hashCode * 59 + this.PageNumber.GetHashCode();
-                if (this.Paragraphs != null)
-                    hashCode = hashCode * 59 + this.Paragraphs.GetHashCode();
+                if (this.Successful != null)
+                    hashCode = hashCode * 59 + this.Successful.GetHashCode();
+                if (this.EditedDocumentURL != null)
+                    hashCode = hashCode * 59 + this.EditedDocumentURL.GetHashCode();
                 return hashCode;
             }
         }

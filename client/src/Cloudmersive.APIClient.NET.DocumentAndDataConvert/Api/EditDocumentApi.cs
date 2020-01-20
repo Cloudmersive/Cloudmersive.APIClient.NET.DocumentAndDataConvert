@@ -151,6 +151,48 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of DeleteDocxTableRowRangeResponse</returns>
         ApiResponse<DeleteDocxTableRowRangeResponse> EditDocumentDocxDeleteTableRowRangeWithHttpInfo (DeleteDocxTableRowRangeRequest reqConfig);
         /// <summary>
+        /// Get comments from a Word DOCX document as a flat list
+        /// </summary>
+        /// <remarks>
+        /// Returns the comments and review annotations stored in the Word Document (DOCX) format file as a flattened list (not as a hierarchy of comments and replies).
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>GetDocxCommentsResponse</returns>
+        GetDocxCommentsResponse EditDocumentDocxGetComments (GetDocxGetCommentsRequest reqConfig);
+
+        /// <summary>
+        /// Get comments from a Word DOCX document as a flat list
+        /// </summary>
+        /// <remarks>
+        /// Returns the comments and review annotations stored in the Word Document (DOCX) format file as a flattened list (not as a hierarchy of comments and replies).
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>ApiResponse of GetDocxCommentsResponse</returns>
+        ApiResponse<GetDocxCommentsResponse> EditDocumentDocxGetCommentsWithHttpInfo (GetDocxGetCommentsRequest reqConfig);
+        /// <summary>
+        /// Get comments from a Word DOCX document hierarchically
+        /// </summary>
+        /// <remarks>
+        /// Returns the comments and review annotations stored in the Word Document (DOCX) format file hierarchically, where reply comments are nested as children under top-level comments in the results returned.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>GetDocxCommentsHierarchicalResponse</returns>
+        GetDocxCommentsHierarchicalResponse EditDocumentDocxGetCommentsHierarchical (GetDocxGetCommentsHierarchicalRequest reqConfig);
+
+        /// <summary>
+        /// Get comments from a Word DOCX document hierarchically
+        /// </summary>
+        /// <remarks>
+        /// Returns the comments and review annotations stored in the Word Document (DOCX) format file hierarchically, where reply comments are nested as children under top-level comments in the results returned.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>ApiResponse of GetDocxCommentsHierarchicalResponse</returns>
+        ApiResponse<GetDocxCommentsHierarchicalResponse> EditDocumentDocxGetCommentsHierarchicalWithHttpInfo (GetDocxGetCommentsHierarchicalRequest reqConfig);
+        /// <summary>
         /// Get content of a footer from a Word DOCX document
         /// </summary>
         /// <remarks>
@@ -297,6 +339,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="reqConfig">Document input request</param>
         /// <returns>ApiResponse of GetDocxTablesResponse</returns>
         ApiResponse<GetDocxTablesResponse> EditDocumentDocxGetTablesWithHttpInfo (GetDocxTablesRequest reqConfig);
+        /// <summary>
+        /// Insert a new comment into a Word DOCX document attached to a paragraph
+        /// </summary>
+        /// <remarks>
+        /// Adds a new comment into a Word DOCX document attached to a paragraph and returns the result.  Call Finish Editing on the output URL to complete the operation.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>InsertDocxCommentOnParagraphResponse</returns>
+        InsertDocxCommentOnParagraphResponse EditDocumentDocxInsertCommentOnParagraph (DocxInsertCommentOnParagraphRequest reqConfig);
+
+        /// <summary>
+        /// Insert a new comment into a Word DOCX document attached to a paragraph
+        /// </summary>
+        /// <remarks>
+        /// Adds a new comment into a Word DOCX document attached to a paragraph and returns the result.  Call Finish Editing on the output URL to complete the operation.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>ApiResponse of InsertDocxCommentOnParagraphResponse</returns>
+        ApiResponse<InsertDocxCommentOnParagraphResponse> EditDocumentDocxInsertCommentOnParagraphWithHttpInfo (DocxInsertCommentOnParagraphRequest reqConfig);
         /// <summary>
         /// Insert image into a Word DOCX document
         /// </summary>
@@ -1056,6 +1119,48 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (DeleteDocxTableRowRangeResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<DeleteDocxTableRowRangeResponse>> EditDocumentDocxDeleteTableRowRangeAsyncWithHttpInfo (DeleteDocxTableRowRangeRequest reqConfig);
         /// <summary>
+        /// Get comments from a Word DOCX document as a flat list
+        /// </summary>
+        /// <remarks>
+        /// Returns the comments and review annotations stored in the Word Document (DOCX) format file as a flattened list (not as a hierarchy of comments and replies).
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>Task of GetDocxCommentsResponse</returns>
+        System.Threading.Tasks.Task<GetDocxCommentsResponse> EditDocumentDocxGetCommentsAsync (GetDocxGetCommentsRequest reqConfig);
+
+        /// <summary>
+        /// Get comments from a Word DOCX document as a flat list
+        /// </summary>
+        /// <remarks>
+        /// Returns the comments and review annotations stored in the Word Document (DOCX) format file as a flattened list (not as a hierarchy of comments and replies).
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>Task of ApiResponse (GetDocxCommentsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetDocxCommentsResponse>> EditDocumentDocxGetCommentsAsyncWithHttpInfo (GetDocxGetCommentsRequest reqConfig);
+        /// <summary>
+        /// Get comments from a Word DOCX document hierarchically
+        /// </summary>
+        /// <remarks>
+        /// Returns the comments and review annotations stored in the Word Document (DOCX) format file hierarchically, where reply comments are nested as children under top-level comments in the results returned.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>Task of GetDocxCommentsHierarchicalResponse</returns>
+        System.Threading.Tasks.Task<GetDocxCommentsHierarchicalResponse> EditDocumentDocxGetCommentsHierarchicalAsync (GetDocxGetCommentsHierarchicalRequest reqConfig);
+
+        /// <summary>
+        /// Get comments from a Word DOCX document hierarchically
+        /// </summary>
+        /// <remarks>
+        /// Returns the comments and review annotations stored in the Word Document (DOCX) format file hierarchically, where reply comments are nested as children under top-level comments in the results returned.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>Task of ApiResponse (GetDocxCommentsHierarchicalResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetDocxCommentsHierarchicalResponse>> EditDocumentDocxGetCommentsHierarchicalAsyncWithHttpInfo (GetDocxGetCommentsHierarchicalRequest reqConfig);
+        /// <summary>
         /// Get content of a footer from a Word DOCX document
         /// </summary>
         /// <remarks>
@@ -1202,6 +1307,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of ApiResponse (GetDocxTablesResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetDocxTablesResponse>> EditDocumentDocxGetTablesAsyncWithHttpInfo (GetDocxTablesRequest reqConfig);
+        /// <summary>
+        /// Insert a new comment into a Word DOCX document attached to a paragraph
+        /// </summary>
+        /// <remarks>
+        /// Adds a new comment into a Word DOCX document attached to a paragraph and returns the result.  Call Finish Editing on the output URL to complete the operation.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>Task of InsertDocxCommentOnParagraphResponse</returns>
+        System.Threading.Tasks.Task<InsertDocxCommentOnParagraphResponse> EditDocumentDocxInsertCommentOnParagraphAsync (DocxInsertCommentOnParagraphRequest reqConfig);
+
+        /// <summary>
+        /// Insert a new comment into a Word DOCX document attached to a paragraph
+        /// </summary>
+        /// <remarks>
+        /// Adds a new comment into a Word DOCX document attached to a paragraph and returns the result.  Call Finish Editing on the output URL to complete the operation.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>Task of ApiResponse (InsertDocxCommentOnParagraphResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InsertDocxCommentOnParagraphResponse>> EditDocumentDocxInsertCommentOnParagraphAsyncWithHttpInfo (DocxInsertCommentOnParagraphRequest reqConfig);
         /// <summary>
         /// Insert image into a Word DOCX document
         /// </summary>
@@ -2943,6 +3069,352 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
+        /// Get comments from a Word DOCX document as a flat list Returns the comments and review annotations stored in the Word Document (DOCX) format file as a flattened list (not as a hierarchy of comments and replies).
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>GetDocxCommentsResponse</returns>
+        public GetDocxCommentsResponse EditDocumentDocxGetComments (GetDocxGetCommentsRequest reqConfig)
+        {
+             ApiResponse<GetDocxCommentsResponse> localVarResponse = EditDocumentDocxGetCommentsWithHttpInfo(reqConfig);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get comments from a Word DOCX document as a flat list Returns the comments and review annotations stored in the Word Document (DOCX) format file as a flattened list (not as a hierarchy of comments and replies).
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>ApiResponse of GetDocxCommentsResponse</returns>
+        public ApiResponse< GetDocxCommentsResponse > EditDocumentDocxGetCommentsWithHttpInfo (GetDocxGetCommentsRequest reqConfig)
+        {
+            // verify the required parameter 'reqConfig' is set
+            if (reqConfig == null)
+                throw new ApiException(400, "Missing required parameter 'reqConfig' when calling EditDocumentApi->EditDocumentDocxGetComments");
+
+            var localVarPath = "/convert/edit/docx/get-comments/flat-list";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reqConfig; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentDocxGetComments", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetDocxCommentsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetDocxCommentsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxCommentsResponse)));
+        }
+
+        /// <summary>
+        /// Get comments from a Word DOCX document as a flat list Returns the comments and review annotations stored in the Word Document (DOCX) format file as a flattened list (not as a hierarchy of comments and replies).
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>Task of GetDocxCommentsResponse</returns>
+        public async System.Threading.Tasks.Task<GetDocxCommentsResponse> EditDocumentDocxGetCommentsAsync (GetDocxGetCommentsRequest reqConfig)
+        {
+             ApiResponse<GetDocxCommentsResponse> localVarResponse = await EditDocumentDocxGetCommentsAsyncWithHttpInfo(reqConfig);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get comments from a Word DOCX document as a flat list Returns the comments and review annotations stored in the Word Document (DOCX) format file as a flattened list (not as a hierarchy of comments and replies).
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>Task of ApiResponse (GetDocxCommentsResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetDocxCommentsResponse>> EditDocumentDocxGetCommentsAsyncWithHttpInfo (GetDocxGetCommentsRequest reqConfig)
+        {
+            // verify the required parameter 'reqConfig' is set
+            if (reqConfig == null)
+                throw new ApiException(400, "Missing required parameter 'reqConfig' when calling EditDocumentApi->EditDocumentDocxGetComments");
+
+            var localVarPath = "/convert/edit/docx/get-comments/flat-list";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reqConfig; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentDocxGetComments", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetDocxCommentsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetDocxCommentsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxCommentsResponse)));
+        }
+
+        /// <summary>
+        /// Get comments from a Word DOCX document hierarchically Returns the comments and review annotations stored in the Word Document (DOCX) format file hierarchically, where reply comments are nested as children under top-level comments in the results returned.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>GetDocxCommentsHierarchicalResponse</returns>
+        public GetDocxCommentsHierarchicalResponse EditDocumentDocxGetCommentsHierarchical (GetDocxGetCommentsHierarchicalRequest reqConfig)
+        {
+             ApiResponse<GetDocxCommentsHierarchicalResponse> localVarResponse = EditDocumentDocxGetCommentsHierarchicalWithHttpInfo(reqConfig);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get comments from a Word DOCX document hierarchically Returns the comments and review annotations stored in the Word Document (DOCX) format file hierarchically, where reply comments are nested as children under top-level comments in the results returned.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>ApiResponse of GetDocxCommentsHierarchicalResponse</returns>
+        public ApiResponse< GetDocxCommentsHierarchicalResponse > EditDocumentDocxGetCommentsHierarchicalWithHttpInfo (GetDocxGetCommentsHierarchicalRequest reqConfig)
+        {
+            // verify the required parameter 'reqConfig' is set
+            if (reqConfig == null)
+                throw new ApiException(400, "Missing required parameter 'reqConfig' when calling EditDocumentApi->EditDocumentDocxGetCommentsHierarchical");
+
+            var localVarPath = "/convert/edit/docx/get-comments/hierarchical";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reqConfig; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentDocxGetCommentsHierarchical", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetDocxCommentsHierarchicalResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetDocxCommentsHierarchicalResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxCommentsHierarchicalResponse)));
+        }
+
+        /// <summary>
+        /// Get comments from a Word DOCX document hierarchically Returns the comments and review annotations stored in the Word Document (DOCX) format file hierarchically, where reply comments are nested as children under top-level comments in the results returned.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>Task of GetDocxCommentsHierarchicalResponse</returns>
+        public async System.Threading.Tasks.Task<GetDocxCommentsHierarchicalResponse> EditDocumentDocxGetCommentsHierarchicalAsync (GetDocxGetCommentsHierarchicalRequest reqConfig)
+        {
+             ApiResponse<GetDocxCommentsHierarchicalResponse> localVarResponse = await EditDocumentDocxGetCommentsHierarchicalAsyncWithHttpInfo(reqConfig);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get comments from a Word DOCX document hierarchically Returns the comments and review annotations stored in the Word Document (DOCX) format file hierarchically, where reply comments are nested as children under top-level comments in the results returned.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>Task of ApiResponse (GetDocxCommentsHierarchicalResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetDocxCommentsHierarchicalResponse>> EditDocumentDocxGetCommentsHierarchicalAsyncWithHttpInfo (GetDocxGetCommentsHierarchicalRequest reqConfig)
+        {
+            // verify the required parameter 'reqConfig' is set
+            if (reqConfig == null)
+                throw new ApiException(400, "Missing required parameter 'reqConfig' when calling EditDocumentApi->EditDocumentDocxGetCommentsHierarchical");
+
+            var localVarPath = "/convert/edit/docx/get-comments/hierarchical";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reqConfig; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentDocxGetCommentsHierarchical", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetDocxCommentsHierarchicalResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetDocxCommentsHierarchicalResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxCommentsHierarchicalResponse)));
+        }
+
+        /// <summary>
         /// Get content of a footer from a Word DOCX document Returns the footer content from a Word Document (DOCX) format file
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4151,6 +4623,179 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<GetDocxTablesResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (GetDocxTablesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxTablesResponse)));
+        }
+
+        /// <summary>
+        /// Insert a new comment into a Word DOCX document attached to a paragraph Adds a new comment into a Word DOCX document attached to a paragraph and returns the result.  Call Finish Editing on the output URL to complete the operation.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>InsertDocxCommentOnParagraphResponse</returns>
+        public InsertDocxCommentOnParagraphResponse EditDocumentDocxInsertCommentOnParagraph (DocxInsertCommentOnParagraphRequest reqConfig)
+        {
+             ApiResponse<InsertDocxCommentOnParagraphResponse> localVarResponse = EditDocumentDocxInsertCommentOnParagraphWithHttpInfo(reqConfig);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Insert a new comment into a Word DOCX document attached to a paragraph Adds a new comment into a Word DOCX document attached to a paragraph and returns the result.  Call Finish Editing on the output URL to complete the operation.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>ApiResponse of InsertDocxCommentOnParagraphResponse</returns>
+        public ApiResponse< InsertDocxCommentOnParagraphResponse > EditDocumentDocxInsertCommentOnParagraphWithHttpInfo (DocxInsertCommentOnParagraphRequest reqConfig)
+        {
+            // verify the required parameter 'reqConfig' is set
+            if (reqConfig == null)
+                throw new ApiException(400, "Missing required parameter 'reqConfig' when calling EditDocumentApi->EditDocumentDocxInsertCommentOnParagraph");
+
+            var localVarPath = "/convert/edit/docx/insert-comment/on/paragraph";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reqConfig; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentDocxInsertCommentOnParagraph", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<InsertDocxCommentOnParagraphResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (InsertDocxCommentOnParagraphResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InsertDocxCommentOnParagraphResponse)));
+        }
+
+        /// <summary>
+        /// Insert a new comment into a Word DOCX document attached to a paragraph Adds a new comment into a Word DOCX document attached to a paragraph and returns the result.  Call Finish Editing on the output URL to complete the operation.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>Task of InsertDocxCommentOnParagraphResponse</returns>
+        public async System.Threading.Tasks.Task<InsertDocxCommentOnParagraphResponse> EditDocumentDocxInsertCommentOnParagraphAsync (DocxInsertCommentOnParagraphRequest reqConfig)
+        {
+             ApiResponse<InsertDocxCommentOnParagraphResponse> localVarResponse = await EditDocumentDocxInsertCommentOnParagraphAsyncWithHttpInfo(reqConfig);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Insert a new comment into a Word DOCX document attached to a paragraph Adds a new comment into a Word DOCX document attached to a paragraph and returns the result.  Call Finish Editing on the output URL to complete the operation.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>Task of ApiResponse (InsertDocxCommentOnParagraphResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<InsertDocxCommentOnParagraphResponse>> EditDocumentDocxInsertCommentOnParagraphAsyncWithHttpInfo (DocxInsertCommentOnParagraphRequest reqConfig)
+        {
+            // verify the required parameter 'reqConfig' is set
+            if (reqConfig == null)
+                throw new ApiException(400, "Missing required parameter 'reqConfig' when calling EditDocumentApi->EditDocumentDocxInsertCommentOnParagraph");
+
+            var localVarPath = "/convert/edit/docx/insert-comment/on/paragraph";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reqConfig; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentDocxInsertCommentOnParagraph", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<InsertDocxCommentOnParagraphResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (InsertDocxCommentOnParagraphResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InsertDocxCommentOnParagraphResponse)));
         }
 
         /// <summary>
