@@ -233,6 +233,68 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> MergeDocumentPptxMultiWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
         /// <summary>
+        /// Merge Two Text (TXT) Files Together
+        /// </summary>
+        /// <remarks>
+        /// Combine two Text (.TXT) files into a single text document, preserving the order of the input documents in the combined document by stacking them vertically.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <returns>Object</returns>
+        Object MergeDocumentTxt (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+
+        /// <summary>
+        /// Merge Two Text (TXT) Files Together
+        /// </summary>
+        /// <remarks>
+        /// Combine two Text (.TXT) files into a single text document, preserving the order of the input documents in the combined document by stacking them vertically.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> MergeDocumentTxtWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+        /// <summary>
+        /// Merge Multple Text (TXT) Files Together
+        /// </summary>
+        /// <remarks>
+        /// Combine multiple Text (.TXT) files into a single text document, preserving the order of the input documents in the combined document by stacking them vertically.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
+        /// <returns>byte[]</returns>
+        byte[] MergeDocumentTxtMulti (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
+
+        /// <summary>
+        /// Merge Multple Text (TXT) Files Together
+        /// </summary>
+        /// <remarks>
+        /// Combine multiple Text (.TXT) files into a single text document, preserving the order of the input documents in the combined document by stacking them vertically.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> MergeDocumentTxtMultiWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
+        /// <summary>
         /// Merge Two Excel XLSX Together
         /// </summary>
         /// <remarks>
@@ -505,6 +567,68 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> MergeDocumentPptxMultiAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
+        /// <summary>
+        /// Merge Two Text (TXT) Files Together
+        /// </summary>
+        /// <remarks>
+        /// Combine two Text (.TXT) files into a single text document, preserving the order of the input documents in the combined document by stacking them vertically.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> MergeDocumentTxtAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+
+        /// <summary>
+        /// Merge Two Text (TXT) Files Together
+        /// </summary>
+        /// <remarks>
+        /// Combine two Text (.TXT) files into a single text document, preserving the order of the input documents in the combined document by stacking them vertically.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> MergeDocumentTxtAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+        /// <summary>
+        /// Merge Multple Text (TXT) Files Together
+        /// </summary>
+        /// <remarks>
+        /// Combine multiple Text (.TXT) files into a single text document, preserving the order of the input documents in the combined document by stacking them vertically.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> MergeDocumentTxtMultiAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
+
+        /// <summary>
+        /// Merge Multple Text (TXT) Files Together
+        /// </summary>
+        /// <remarks>
+        /// Combine multiple Text (.TXT) files into a single text document, preserving the order of the input documents in the combined document by stacking them vertically.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> MergeDocumentTxtMultiAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
         /// <summary>
         /// Merge Two Excel XLSX Together
         /// </summary>
@@ -1902,6 +2026,368 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("MergeDocumentPptxMulti", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Merge Two Text (TXT) Files Together Combine two Text (.TXT) files into a single text document, preserving the order of the input documents in the combined document by stacking them vertically.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <returns>Object</returns>
+        public Object MergeDocumentTxt (System.IO.Stream inputFile1, System.IO.Stream inputFile2)
+        {
+             ApiResponse<Object> localVarResponse = MergeDocumentTxtWithHttpInfo(inputFile1, inputFile2);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Merge Two Text (TXT) Files Together Combine two Text (.TXT) files into a single text document, preserving the order of the input documents in the combined document by stacking them vertically.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > MergeDocumentTxtWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2)
+        {
+            // verify the required parameter 'inputFile1' is set
+            if (inputFile1 == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile1' when calling MergeDocumentApi->MergeDocumentTxt");
+            // verify the required parameter 'inputFile2' is set
+            if (inputFile2 == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile2' when calling MergeDocumentApi->MergeDocumentTxt");
+
+            var localVarPath = "/convert/merge/txt";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile1 != null) localVarFileParams.Add("inputFile1", this.Configuration.ApiClient.ParameterToFile("inputFile1", inputFile1));
+            if (inputFile2 != null) localVarFileParams.Add("inputFile2", this.Configuration.ApiClient.ParameterToFile("inputFile2", inputFile2));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MergeDocumentTxt", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Merge Two Text (TXT) Files Together Combine two Text (.TXT) files into a single text document, preserving the order of the input documents in the combined document by stacking them vertically.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> MergeDocumentTxtAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2)
+        {
+             ApiResponse<Object> localVarResponse = await MergeDocumentTxtAsyncWithHttpInfo(inputFile1, inputFile2);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Merge Two Text (TXT) Files Together Combine two Text (.TXT) files into a single text document, preserving the order of the input documents in the combined document by stacking them vertically.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> MergeDocumentTxtAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2)
+        {
+            // verify the required parameter 'inputFile1' is set
+            if (inputFile1 == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile1' when calling MergeDocumentApi->MergeDocumentTxt");
+            // verify the required parameter 'inputFile2' is set
+            if (inputFile2 == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile2' when calling MergeDocumentApi->MergeDocumentTxt");
+
+            var localVarPath = "/convert/merge/txt";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile1 != null) localVarFileParams.Add("inputFile1", this.Configuration.ApiClient.ParameterToFile("inputFile1", inputFile1));
+            if (inputFile2 != null) localVarFileParams.Add("inputFile2", this.Configuration.ApiClient.ParameterToFile("inputFile2", inputFile2));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MergeDocumentTxt", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Merge Multple Text (TXT) Files Together Combine multiple Text (.TXT) files into a single text document, preserving the order of the input documents in the combined document by stacking them vertically.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
+        /// <returns>byte[]</returns>
+        public byte[] MergeDocumentTxtMulti (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null)
+        {
+             ApiResponse<byte[]> localVarResponse = MergeDocumentTxtMultiWithHttpInfo(inputFile1, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Merge Multple Text (TXT) Files Together Combine multiple Text (.TXT) files into a single text document, preserving the order of the input documents in the combined document by stacking them vertically.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > MergeDocumentTxtMultiWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null)
+        {
+            // verify the required parameter 'inputFile1' is set
+            if (inputFile1 == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile1' when calling MergeDocumentApi->MergeDocumentTxtMulti");
+            // verify the required parameter 'inputFile2' is set
+            if (inputFile2 == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile2' when calling MergeDocumentApi->MergeDocumentTxtMulti");
+
+            var localVarPath = "/convert/merge/txt/multi";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile1 != null) localVarFileParams.Add("inputFile1", this.Configuration.ApiClient.ParameterToFile("inputFile1", inputFile1));
+            if (inputFile2 != null) localVarFileParams.Add("inputFile2", this.Configuration.ApiClient.ParameterToFile("inputFile2", inputFile2));
+            if (inputFile3 != null) localVarFileParams.Add("inputFile3", this.Configuration.ApiClient.ParameterToFile("inputFile3", inputFile3));
+            if (inputFile4 != null) localVarFileParams.Add("inputFile4", this.Configuration.ApiClient.ParameterToFile("inputFile4", inputFile4));
+            if (inputFile5 != null) localVarFileParams.Add("inputFile5", this.Configuration.ApiClient.ParameterToFile("inputFile5", inputFile5));
+            if (inputFile6 != null) localVarFileParams.Add("inputFile6", this.Configuration.ApiClient.ParameterToFile("inputFile6", inputFile6));
+            if (inputFile7 != null) localVarFileParams.Add("inputFile7", this.Configuration.ApiClient.ParameterToFile("inputFile7", inputFile7));
+            if (inputFile8 != null) localVarFileParams.Add("inputFile8", this.Configuration.ApiClient.ParameterToFile("inputFile8", inputFile8));
+            if (inputFile9 != null) localVarFileParams.Add("inputFile9", this.Configuration.ApiClient.ParameterToFile("inputFile9", inputFile9));
+            if (inputFile10 != null) localVarFileParams.Add("inputFile10", this.Configuration.ApiClient.ParameterToFile("inputFile10", inputFile10));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MergeDocumentTxtMulti", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Merge Multple Text (TXT) Files Together Combine multiple Text (.TXT) files into a single text document, preserving the order of the input documents in the combined document by stacking them vertically.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> MergeDocumentTxtMultiAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null)
+        {
+             ApiResponse<byte[]> localVarResponse = await MergeDocumentTxtMultiAsyncWithHttpInfo(inputFile1, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Merge Multple Text (TXT) Files Together Combine multiple Text (.TXT) files into a single text document, preserving the order of the input documents in the combined document by stacking them vertically.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> MergeDocumentTxtMultiAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null)
+        {
+            // verify the required parameter 'inputFile1' is set
+            if (inputFile1 == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile1' when calling MergeDocumentApi->MergeDocumentTxtMulti");
+            // verify the required parameter 'inputFile2' is set
+            if (inputFile2 == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile2' when calling MergeDocumentApi->MergeDocumentTxtMulti");
+
+            var localVarPath = "/convert/merge/txt/multi";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile1 != null) localVarFileParams.Add("inputFile1", this.Configuration.ApiClient.ParameterToFile("inputFile1", inputFile1));
+            if (inputFile2 != null) localVarFileParams.Add("inputFile2", this.Configuration.ApiClient.ParameterToFile("inputFile2", inputFile2));
+            if (inputFile3 != null) localVarFileParams.Add("inputFile3", this.Configuration.ApiClient.ParameterToFile("inputFile3", inputFile3));
+            if (inputFile4 != null) localVarFileParams.Add("inputFile4", this.Configuration.ApiClient.ParameterToFile("inputFile4", inputFile4));
+            if (inputFile5 != null) localVarFileParams.Add("inputFile5", this.Configuration.ApiClient.ParameterToFile("inputFile5", inputFile5));
+            if (inputFile6 != null) localVarFileParams.Add("inputFile6", this.Configuration.ApiClient.ParameterToFile("inputFile6", inputFile6));
+            if (inputFile7 != null) localVarFileParams.Add("inputFile7", this.Configuration.ApiClient.ParameterToFile("inputFile7", inputFile7));
+            if (inputFile8 != null) localVarFileParams.Add("inputFile8", this.Configuration.ApiClient.ParameterToFile("inputFile8", inputFile8));
+            if (inputFile9 != null) localVarFileParams.Add("inputFile9", this.Configuration.ApiClient.ParameterToFile("inputFile9", inputFile9));
+            if (inputFile10 != null) localVarFileParams.Add("inputFile10", this.Configuration.ApiClient.ParameterToFile("inputFile10", inputFile10));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MergeDocumentTxtMulti", localVarResponse);
                 if (exception != null) throw exception;
             }
 

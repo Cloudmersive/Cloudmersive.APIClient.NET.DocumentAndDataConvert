@@ -181,7 +181,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //System.IO.Stream inputFile = null;
-            //var response = instance.ConvertDocumentDocxToTxt(inputFile);
+            //string textFormattingMode = null;
+            //var response = instance.ConvertDocumentDocxToTxt(inputFile, textFormattingMode);
             //Assert.IsInstanceOf<TextConversionResult> (response, "response is TextConversionResult");
         }
         

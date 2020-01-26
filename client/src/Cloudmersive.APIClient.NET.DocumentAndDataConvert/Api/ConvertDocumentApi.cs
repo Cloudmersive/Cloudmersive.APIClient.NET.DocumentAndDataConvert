@@ -223,8 +223,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="textFormattingMode">Optional; specify how whitespace should be handled when converting the document to text.  Possible values are &#39;preserveWhitespace&#39; which will attempt to preserve whitespace in the document and relative positioning of text within the document, and &#39;minimizeWhitespace&#39; which will not insert additional spaces into the document in most cases.  Default is &#39;minimizeWhitespace&#39;. (optional)</param>
         /// <returns>TextConversionResult</returns>
-        TextConversionResult ConvertDocumentDocxToTxt (System.IO.Stream inputFile);
+        TextConversionResult ConvertDocumentDocxToTxt (System.IO.Stream inputFile, string textFormattingMode = null);
 
         /// <summary>
         /// Convert Word DOCX Document to Text (txt)
@@ -234,8 +235,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="textFormattingMode">Optional; specify how whitespace should be handled when converting the document to text.  Possible values are &#39;preserveWhitespace&#39; which will attempt to preserve whitespace in the document and relative positioning of text within the document, and &#39;minimizeWhitespace&#39; which will not insert additional spaces into the document in most cases.  Default is &#39;minimizeWhitespace&#39;. (optional)</param>
         /// <returns>ApiResponse of TextConversionResult</returns>
-        ApiResponse<TextConversionResult> ConvertDocumentDocxToTxtWithHttpInfo (System.IO.Stream inputFile);
+        ApiResponse<TextConversionResult> ConvertDocumentDocxToTxtWithHttpInfo (System.IO.Stream inputFile, string textFormattingMode = null);
         /// <summary>
         /// Convert HTML document file to PDF Document
         /// </summary>
@@ -879,8 +881,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="textFormattingMode">Optional; specify how whitespace should be handled when converting the document to text.  Possible values are &#39;preserveWhitespace&#39; which will attempt to preserve whitespace in the document and relative positioning of text within the document, and &#39;minimizeWhitespace&#39; which will not insert additional spaces into the document in most cases.  Default is &#39;minimizeWhitespace&#39;. (optional)</param>
         /// <returns>Task of TextConversionResult</returns>
-        System.Threading.Tasks.Task<TextConversionResult> ConvertDocumentDocxToTxtAsync (System.IO.Stream inputFile);
+        System.Threading.Tasks.Task<TextConversionResult> ConvertDocumentDocxToTxtAsync (System.IO.Stream inputFile, string textFormattingMode = null);
 
         /// <summary>
         /// Convert Word DOCX Document to Text (txt)
@@ -890,8 +893,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="textFormattingMode">Optional; specify how whitespace should be handled when converting the document to text.  Possible values are &#39;preserveWhitespace&#39; which will attempt to preserve whitespace in the document and relative positioning of text within the document, and &#39;minimizeWhitespace&#39; which will not insert additional spaces into the document in most cases.  Default is &#39;minimizeWhitespace&#39;. (optional)</param>
         /// <returns>Task of ApiResponse (TextConversionResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TextConversionResult>> ConvertDocumentDocxToTxtAsyncWithHttpInfo (System.IO.Stream inputFile);
+        System.Threading.Tasks.Task<ApiResponse<TextConversionResult>> ConvertDocumentDocxToTxtAsyncWithHttpInfo (System.IO.Stream inputFile, string textFormattingMode = null);
         /// <summary>
         /// Convert HTML document file to PDF Document
         /// </summary>
@@ -2774,10 +2778,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="textFormattingMode">Optional; specify how whitespace should be handled when converting the document to text.  Possible values are &#39;preserveWhitespace&#39; which will attempt to preserve whitespace in the document and relative positioning of text within the document, and &#39;minimizeWhitespace&#39; which will not insert additional spaces into the document in most cases.  Default is &#39;minimizeWhitespace&#39;. (optional)</param>
         /// <returns>TextConversionResult</returns>
-        public TextConversionResult ConvertDocumentDocxToTxt (System.IO.Stream inputFile)
+        public TextConversionResult ConvertDocumentDocxToTxt (System.IO.Stream inputFile, string textFormattingMode = null)
         {
-             ApiResponse<TextConversionResult> localVarResponse = ConvertDocumentDocxToTxtWithHttpInfo(inputFile);
+             ApiResponse<TextConversionResult> localVarResponse = ConvertDocumentDocxToTxtWithHttpInfo(inputFile, textFormattingMode);
              return localVarResponse.Data;
         }
 
@@ -2786,8 +2791,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="textFormattingMode">Optional; specify how whitespace should be handled when converting the document to text.  Possible values are &#39;preserveWhitespace&#39; which will attempt to preserve whitespace in the document and relative positioning of text within the document, and &#39;minimizeWhitespace&#39; which will not insert additional spaces into the document in most cases.  Default is &#39;minimizeWhitespace&#39;. (optional)</param>
         /// <returns>ApiResponse of TextConversionResult</returns>
-        public ApiResponse< TextConversionResult > ConvertDocumentDocxToTxtWithHttpInfo (System.IO.Stream inputFile)
+        public ApiResponse< TextConversionResult > ConvertDocumentDocxToTxtWithHttpInfo (System.IO.Stream inputFile, string textFormattingMode = null)
         {
             // verify the required parameter 'inputFile' is set
             if (inputFile == null)
@@ -2818,6 +2824,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (textFormattingMode != null) localVarHeaderParams.Add("textFormattingMode", this.Configuration.ApiClient.ParameterToString(textFormattingMode)); // header parameter
             if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
 
             // authentication (Apikey) required
@@ -2849,10 +2856,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="textFormattingMode">Optional; specify how whitespace should be handled when converting the document to text.  Possible values are &#39;preserveWhitespace&#39; which will attempt to preserve whitespace in the document and relative positioning of text within the document, and &#39;minimizeWhitespace&#39; which will not insert additional spaces into the document in most cases.  Default is &#39;minimizeWhitespace&#39;. (optional)</param>
         /// <returns>Task of TextConversionResult</returns>
-        public async System.Threading.Tasks.Task<TextConversionResult> ConvertDocumentDocxToTxtAsync (System.IO.Stream inputFile)
+        public async System.Threading.Tasks.Task<TextConversionResult> ConvertDocumentDocxToTxtAsync (System.IO.Stream inputFile, string textFormattingMode = null)
         {
-             ApiResponse<TextConversionResult> localVarResponse = await ConvertDocumentDocxToTxtAsyncWithHttpInfo(inputFile);
+             ApiResponse<TextConversionResult> localVarResponse = await ConvertDocumentDocxToTxtAsyncWithHttpInfo(inputFile, textFormattingMode);
              return localVarResponse.Data;
 
         }
@@ -2862,8 +2870,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="textFormattingMode">Optional; specify how whitespace should be handled when converting the document to text.  Possible values are &#39;preserveWhitespace&#39; which will attempt to preserve whitespace in the document and relative positioning of text within the document, and &#39;minimizeWhitespace&#39; which will not insert additional spaces into the document in most cases.  Default is &#39;minimizeWhitespace&#39;. (optional)</param>
         /// <returns>Task of ApiResponse (TextConversionResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TextConversionResult>> ConvertDocumentDocxToTxtAsyncWithHttpInfo (System.IO.Stream inputFile)
+        public async System.Threading.Tasks.Task<ApiResponse<TextConversionResult>> ConvertDocumentDocxToTxtAsyncWithHttpInfo (System.IO.Stream inputFile, string textFormattingMode = null)
         {
             // verify the required parameter 'inputFile' is set
             if (inputFile == null)
@@ -2894,6 +2903,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (textFormattingMode != null) localVarHeaderParams.Add("textFormattingMode", this.Configuration.ApiClient.ParameterToString(textFormattingMode)); // header parameter
             if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
 
             // authentication (Apikey) required

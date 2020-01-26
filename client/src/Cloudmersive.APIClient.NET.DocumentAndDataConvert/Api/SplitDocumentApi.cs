@@ -115,6 +115,31 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of SplitTextDocumentByLinesResult</returns>
         ApiResponse<SplitTextDocumentByLinesResult> SplitDocumentTxtByLineWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
+        /// Split a single Text file (txt) by a string delimiter
+        /// </summary>
+        /// <remarks>
+        /// Split a Text (txt) Document by a string delimiter, returning each component of the string as an array of strings.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="splitDelimiter">Required; String to split up the input file on</param>
+        /// <param name="skipEmptyElements">Optional; If true, empty elements will be skipped in the output (optional)</param>
+        /// <returns>SplitTextDocumentByStringResult</returns>
+        SplitTextDocumentByStringResult SplitDocumentTxtByString (System.IO.Stream inputFile, string splitDelimiter, bool? skipEmptyElements = null);
+
+        /// <summary>
+        /// Split a single Text file (txt) by a string delimiter
+        /// </summary>
+        /// <remarks>
+        /// Split a Text (txt) Document by a string delimiter, returning each component of the string as an array of strings.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="splitDelimiter">Required; String to split up the input file on</param>
+        /// <param name="skipEmptyElements">Optional; If true, empty elements will be skipped in the output (optional)</param>
+        /// <returns>ApiResponse of SplitTextDocumentByStringResult</returns>
+        ApiResponse<SplitTextDocumentByStringResult> SplitDocumentTxtByStringWithHttpInfo (System.IO.Stream inputFile, string splitDelimiter, bool? skipEmptyElements = null);
+        /// <summary>
         /// Split a single Excel XLSX into Separate Worksheets
         /// </summary>
         /// <remarks>
@@ -229,6 +254,31 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>Task of ApiResponse (SplitTextDocumentByLinesResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<SplitTextDocumentByLinesResult>> SplitDocumentTxtByLineAsyncWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// Split a single Text file (txt) by a string delimiter
+        /// </summary>
+        /// <remarks>
+        /// Split a Text (txt) Document by a string delimiter, returning each component of the string as an array of strings.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="splitDelimiter">Required; String to split up the input file on</param>
+        /// <param name="skipEmptyElements">Optional; If true, empty elements will be skipped in the output (optional)</param>
+        /// <returns>Task of SplitTextDocumentByStringResult</returns>
+        System.Threading.Tasks.Task<SplitTextDocumentByStringResult> SplitDocumentTxtByStringAsync (System.IO.Stream inputFile, string splitDelimiter, bool? skipEmptyElements = null);
+
+        /// <summary>
+        /// Split a single Text file (txt) by a string delimiter
+        /// </summary>
+        /// <remarks>
+        /// Split a Text (txt) Document by a string delimiter, returning each component of the string as an array of strings.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="splitDelimiter">Required; String to split up the input file on</param>
+        /// <param name="skipEmptyElements">Optional; If true, empty elements will be skipped in the output (optional)</param>
+        /// <returns>Task of ApiResponse (SplitTextDocumentByStringResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SplitTextDocumentByStringResult>> SplitDocumentTxtByStringAsyncWithHttpInfo (System.IO.Stream inputFile, string splitDelimiter, bool? skipEmptyElements = null);
         /// <summary>
         /// Split a single Excel XLSX into Separate Worksheets
         /// </summary>
@@ -972,6 +1022,175 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<SplitTextDocumentByLinesResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (SplitTextDocumentByLinesResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SplitTextDocumentByLinesResult)));
+        }
+
+        /// <summary>
+        /// Split a single Text file (txt) by a string delimiter Split a Text (txt) Document by a string delimiter, returning each component of the string as an array of strings.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="splitDelimiter">Required; String to split up the input file on</param>
+        /// <param name="skipEmptyElements">Optional; If true, empty elements will be skipped in the output (optional)</param>
+        /// <returns>SplitTextDocumentByStringResult</returns>
+        public SplitTextDocumentByStringResult SplitDocumentTxtByString (System.IO.Stream inputFile, string splitDelimiter, bool? skipEmptyElements = null)
+        {
+             ApiResponse<SplitTextDocumentByStringResult> localVarResponse = SplitDocumentTxtByStringWithHttpInfo(inputFile, splitDelimiter, skipEmptyElements);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Split a single Text file (txt) by a string delimiter Split a Text (txt) Document by a string delimiter, returning each component of the string as an array of strings.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="splitDelimiter">Required; String to split up the input file on</param>
+        /// <param name="skipEmptyElements">Optional; If true, empty elements will be skipped in the output (optional)</param>
+        /// <returns>ApiResponse of SplitTextDocumentByStringResult</returns>
+        public ApiResponse< SplitTextDocumentByStringResult > SplitDocumentTxtByStringWithHttpInfo (System.IO.Stream inputFile, string splitDelimiter, bool? skipEmptyElements = null)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling SplitDocumentApi->SplitDocumentTxtByString");
+            // verify the required parameter 'splitDelimiter' is set
+            if (splitDelimiter == null)
+                throw new ApiException(400, "Missing required parameter 'splitDelimiter' when calling SplitDocumentApi->SplitDocumentTxtByString");
+
+            var localVarPath = "/convert/split/txt/by-string";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (splitDelimiter != null) localVarHeaderParams.Add("splitDelimiter", this.Configuration.ApiClient.ParameterToString(splitDelimiter)); // header parameter
+            if (skipEmptyElements != null) localVarHeaderParams.Add("skipEmptyElements", this.Configuration.ApiClient.ParameterToString(skipEmptyElements)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SplitDocumentTxtByString", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SplitTextDocumentByStringResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SplitTextDocumentByStringResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SplitTextDocumentByStringResult)));
+        }
+
+        /// <summary>
+        /// Split a single Text file (txt) by a string delimiter Split a Text (txt) Document by a string delimiter, returning each component of the string as an array of strings.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="splitDelimiter">Required; String to split up the input file on</param>
+        /// <param name="skipEmptyElements">Optional; If true, empty elements will be skipped in the output (optional)</param>
+        /// <returns>Task of SplitTextDocumentByStringResult</returns>
+        public async System.Threading.Tasks.Task<SplitTextDocumentByStringResult> SplitDocumentTxtByStringAsync (System.IO.Stream inputFile, string splitDelimiter, bool? skipEmptyElements = null)
+        {
+             ApiResponse<SplitTextDocumentByStringResult> localVarResponse = await SplitDocumentTxtByStringAsyncWithHttpInfo(inputFile, splitDelimiter, skipEmptyElements);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Split a single Text file (txt) by a string delimiter Split a Text (txt) Document by a string delimiter, returning each component of the string as an array of strings.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="splitDelimiter">Required; String to split up the input file on</param>
+        /// <param name="skipEmptyElements">Optional; If true, empty elements will be skipped in the output (optional)</param>
+        /// <returns>Task of ApiResponse (SplitTextDocumentByStringResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SplitTextDocumentByStringResult>> SplitDocumentTxtByStringAsyncWithHttpInfo (System.IO.Stream inputFile, string splitDelimiter, bool? skipEmptyElements = null)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling SplitDocumentApi->SplitDocumentTxtByString");
+            // verify the required parameter 'splitDelimiter' is set
+            if (splitDelimiter == null)
+                throw new ApiException(400, "Missing required parameter 'splitDelimiter' when calling SplitDocumentApi->SplitDocumentTxtByString");
+
+            var localVarPath = "/convert/split/txt/by-string";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (splitDelimiter != null) localVarHeaderParams.Add("splitDelimiter", this.Configuration.ApiClient.ParameterToString(splitDelimiter)); // header parameter
+            if (skipEmptyElements != null) localVarHeaderParams.Add("skipEmptyElements", this.Configuration.ApiClient.ParameterToString(skipEmptyElements)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SplitDocumentTxtByString", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SplitTextDocumentByStringResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SplitTextDocumentByStringResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SplitTextDocumentByStringResult)));
         }
 
         /// <summary>

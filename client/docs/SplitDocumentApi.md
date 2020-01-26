@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**SplitDocumentPdfByPage**](SplitDocumentApi.md#splitdocumentpdfbypage) | **POST** /convert/split/pdf | Split a PDF file into separate PDF files, one per page
 [**SplitDocumentPptx**](SplitDocumentApi.md#splitdocumentpptx) | **POST** /convert/split/pptx | Split a single PowerPoint Presentation PPTX into Separate Slides
 [**SplitDocumentTxtByLine**](SplitDocumentApi.md#splitdocumenttxtbyline) | **POST** /convert/split/txt/by-line | Split a single Text file (txt) into lines
+[**SplitDocumentTxtByString**](SplitDocumentApi.md#splitdocumenttxtbystring) | **POST** /convert/split/txt/by-string | Split a single Text file (txt) by a string delimiter
 [**SplitDocumentXlsx**](SplitDocumentApi.md#splitdocumentxlsx) | **POST** /convert/split/xlsx | Split a single Excel XLSX into Separate Worksheets
 
 
@@ -269,6 +270,76 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SplitTextDocumentByLinesResult**](SplitTextDocumentByLinesResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="splitdocumenttxtbystring"></a>
+# **SplitDocumentTxtByString**
+> SplitTextDocumentByStringResult SplitDocumentTxtByString (System.IO.Stream inputFile, string splitDelimiter, bool? skipEmptyElements = null)
+
+Split a single Text file (txt) by a string delimiter
+
+Split a Text (txt) Document by a string delimiter, returning each component of the string as an array of strings.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class SplitDocumentTxtByStringExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new SplitDocumentApi();
+            var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
+            var splitDelimiter = splitDelimiter_example;  // string | Required; String to split up the input file on
+            var skipEmptyElements = true;  // bool? | Optional; If true, empty elements will be skipped in the output (optional) 
+
+            try
+            {
+                // Split a single Text file (txt) by a string delimiter
+                SplitTextDocumentByStringResult result = apiInstance.SplitDocumentTxtByString(inputFile, splitDelimiter, skipEmptyElements);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SplitDocumentApi.SplitDocumentTxtByString: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
+ **splitDelimiter** | **string**| Required; String to split up the input file on | 
+ **skipEmptyElements** | **bool?**| Optional; If true, empty elements will be skipped in the output | [optional] 
+
+### Return type
+
+[**SplitTextDocumentByStringResult**](SplitTextDocumentByStringResult.md)
 
 ### Authorization
 

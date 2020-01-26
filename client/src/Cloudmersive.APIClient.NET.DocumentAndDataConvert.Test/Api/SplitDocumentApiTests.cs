@@ -116,6 +116,20 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test SplitDocumentTxtByString
+        /// </summary>
+        [Test]
+        public void SplitDocumentTxtByStringTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //string splitDelimiter = null;
+            //bool? skipEmptyElements = null;
+            //var response = instance.SplitDocumentTxtByString(inputFile, splitDelimiter, skipEmptyElements);
+            //Assert.IsInstanceOf<SplitTextDocumentByStringResult> (response, "response is SplitTextDocumentByStringResult");
+        }
+        
+        /// <summary>
         /// Test SplitDocumentXlsx
         /// </summary>
         [Test]
