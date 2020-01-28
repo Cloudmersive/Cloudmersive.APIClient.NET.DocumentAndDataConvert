@@ -9,8 +9,12 @@ Method | HTTP request | Description
 [**EditTextBase64Encode**](EditTextApi.md#edittextbase64encode) | **POST** /convert/edit/text/encoding/base64/encode | Base 64 encode, convert binary or file data to a text string
 [**EditTextChangeLineEndings**](EditTextApi.md#edittextchangelineendings) | **POST** /convert/edit/text/line-endings/change | Set, change line endings of a text file
 [**EditTextDetectLineEndings**](EditTextApi.md#edittextdetectlineendings) | **POST** /convert/edit/text/line-endings/detect | Detect line endings of a text file
+[**EditTextFindRegex**](EditTextApi.md#edittextfindregex) | **POST** /convert/edit/text/find/regex | Find a regular expression regex in text input
+[**EditTextFindSimple**](EditTextApi.md#edittextfindsimple) | **POST** /convert/edit/text/find/string | Find a string in text input
 [**EditTextRemoveAllWhitespace**](EditTextApi.md#edittextremoveallwhitespace) | **POST** /convert/edit/text/remove/whitespace/all | Remove whitespace from text string
 [**EditTextRemoveHtml**](EditTextApi.md#edittextremovehtml) | **POST** /convert/edit/text/remove/html | Remove HTML from text string
+[**EditTextReplaceRegex**](EditTextApi.md#edittextreplaceregex) | **POST** /convert/edit/text/replace/regex | Replace a string in text with a regex regular expression string
+[**EditTextReplaceSimple**](EditTextApi.md#edittextreplacesimple) | **POST** /convert/edit/text/replace/string | Replace a string in text with another string value
 [**EditTextTextEncodingDetect**](EditTextApi.md#edittexttextencodingdetect) | **POST** /convert/edit/text/encoding/detect | Detect text encoding of file
 [**EditTextTrimWhitespace**](EditTextApi.md#edittexttrimwhitespace) | **POST** /convert/edit/text/remove/whitespace/trim | Trim leading and trailing whitespace from text string
 
@@ -43,7 +47,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new EditTextApi();
-            var request = new Base64DecodeRequest(); // Base64DecodeRequest | 
+            var request = new Base64DecodeRequest(); // Base64DecodeRequest | Input request
 
             try
             {
@@ -64,7 +68,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**Base64DecodeRequest**](Base64DecodeRequest.md)|  | 
+ **request** | [**Base64DecodeRequest**](Base64DecodeRequest.md)| Input request | 
 
 ### Return type
 
@@ -109,7 +113,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new EditTextApi();
-            var request = new Base64DetectRequest(); // Base64DetectRequest | 
+            var request = new Base64DetectRequest(); // Base64DetectRequest | Input request
 
             try
             {
@@ -130,7 +134,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**Base64DetectRequest**](Base64DetectRequest.md)|  | 
+ **request** | [**Base64DetectRequest**](Base64DetectRequest.md)| Input request | 
 
 ### Return type
 
@@ -175,7 +179,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new EditTextApi();
-            var request = new Base64EncodeRequest(); // Base64EncodeRequest | 
+            var request = new Base64EncodeRequest(); // Base64EncodeRequest | Input request
 
             try
             {
@@ -196,7 +200,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**Base64EncodeRequest**](Base64EncodeRequest.md)|  | 
+ **request** | [**Base64EncodeRequest**](Base64EncodeRequest.md)| Input request | 
 
 ### Return type
 
@@ -347,6 +351,138 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="edittextfindregex"></a>
+# **EditTextFindRegex**
+> FindStringRegexResponse EditTextFindRegex (FindStringRegexRequest request)
+
+Find a regular expression regex in text input
+
+Find all occurrences of the input regular expression in the input content, and returns the matches
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class EditTextFindRegexExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new EditTextApi();
+            var request = new FindStringRegexRequest(); // FindStringRegexRequest | Input request
+
+            try
+            {
+                // Find a regular expression regex in text input
+                FindStringRegexResponse result = apiInstance.EditTextFindRegex(request);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling EditTextApi.EditTextFindRegex: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**FindStringRegexRequest**](FindStringRegexRequest.md)| Input request | 
+
+### Return type
+
+[**FindStringRegexResponse**](FindStringRegexResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="edittextfindsimple"></a>
+# **EditTextFindSimple**
+> FindStringSimpleResponse EditTextFindSimple (FindStringSimpleRequest request)
+
+Find a string in text input
+
+Finds all occurrences of the input string in the input content, and returns the matches
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class EditTextFindSimpleExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new EditTextApi();
+            var request = new FindStringSimpleRequest(); // FindStringSimpleRequest | Input request
+
+            try
+            {
+                // Find a string in text input
+                FindStringSimpleResponse result = apiInstance.EditTextFindSimple(request);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling EditTextApi.EditTextFindSimple: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**FindStringSimpleRequest**](FindStringSimpleRequest.md)| Input request | 
+
+### Return type
+
+[**FindStringSimpleResponse**](FindStringSimpleResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="edittextremoveallwhitespace"></a>
 # **EditTextRemoveAllWhitespace**
 > RemoveWhitespaceFromTextResponse EditTextRemoveAllWhitespace (RemoveWhitespaceFromTextRequest request)
@@ -375,7 +511,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new EditTextApi();
-            var request = new RemoveWhitespaceFromTextRequest(); // RemoveWhitespaceFromTextRequest | 
+            var request = new RemoveWhitespaceFromTextRequest(); // RemoveWhitespaceFromTextRequest | Input request
 
             try
             {
@@ -396,7 +532,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**RemoveWhitespaceFromTextRequest**](RemoveWhitespaceFromTextRequest.md)|  | 
+ **request** | [**RemoveWhitespaceFromTextRequest**](RemoveWhitespaceFromTextRequest.md)| Input request | 
 
 ### Return type
 
@@ -441,7 +577,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new EditTextApi();
-            var request = new RemoveHtmlFromTextRequest(); // RemoveHtmlFromTextRequest | 
+            var request = new RemoveHtmlFromTextRequest(); // RemoveHtmlFromTextRequest | Input request
 
             try
             {
@@ -462,11 +598,143 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**RemoveHtmlFromTextRequest**](RemoveHtmlFromTextRequest.md)|  | 
+ **request** | [**RemoveHtmlFromTextRequest**](RemoveHtmlFromTextRequest.md)| Input request | 
 
 ### Return type
 
 [**RemoveHtmlFromTextResponse**](RemoveHtmlFromTextResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="edittextreplaceregex"></a>
+# **EditTextReplaceRegex**
+> ReplaceStringRegexResponse EditTextReplaceRegex (ReplaceStringRegexRequest request)
+
+Replace a string in text with a regex regular expression string
+
+Replaces all occurrences of the input regular expression regex string in the input content, and returns the result
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class EditTextReplaceRegexExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new EditTextApi();
+            var request = new ReplaceStringRegexRequest(); // ReplaceStringRegexRequest | Input request
+
+            try
+            {
+                // Replace a string in text with a regex regular expression string
+                ReplaceStringRegexResponse result = apiInstance.EditTextReplaceRegex(request);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling EditTextApi.EditTextReplaceRegex: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**ReplaceStringRegexRequest**](ReplaceStringRegexRequest.md)| Input request | 
+
+### Return type
+
+[**ReplaceStringRegexResponse**](ReplaceStringRegexResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="edittextreplacesimple"></a>
+# **EditTextReplaceSimple**
+> ReplaceStringSimpleResponse EditTextReplaceSimple (ReplaceStringSimpleRequest request)
+
+Replace a string in text with another string value
+
+Replaces all occurrences of the input string in the input content, and returns the result
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class EditTextReplaceSimpleExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new EditTextApi();
+            var request = new ReplaceStringSimpleRequest(); // ReplaceStringSimpleRequest | Input request
+
+            try
+            {
+                // Replace a string in text with another string value
+                ReplaceStringSimpleResponse result = apiInstance.EditTextReplaceSimple(request);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling EditTextApi.EditTextReplaceSimple: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**ReplaceStringSimpleRequest**](ReplaceStringSimpleRequest.md)| Input request | 
+
+### Return type
+
+[**ReplaceStringSimpleResponse**](ReplaceStringSimpleResponse.md)
 
 ### Authorization
 
@@ -573,7 +841,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new EditTextApi();
-            var request = new RemoveWhitespaceFromTextRequest(); // RemoveWhitespaceFromTextRequest | 
+            var request = new RemoveWhitespaceFromTextRequest(); // RemoveWhitespaceFromTextRequest | Input request
 
             try
             {
@@ -594,7 +862,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**RemoveWhitespaceFromTextRequest**](RemoveWhitespaceFromTextRequest.md)|  | 
+ **request** | [**RemoveWhitespaceFromTextRequest**](RemoveWhitespaceFromTextRequest.md)| Input request | 
 
 ### Return type
 

@@ -126,6 +126,30 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test EditTextFindRegex
+        /// </summary>
+        [Test]
+        public void EditTextFindRegexTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //FindStringRegexRequest request = null;
+            //var response = instance.EditTextFindRegex(request);
+            //Assert.IsInstanceOf<FindStringRegexResponse> (response, "response is FindStringRegexResponse");
+        }
+        
+        /// <summary>
+        /// Test EditTextFindSimple
+        /// </summary>
+        [Test]
+        public void EditTextFindSimpleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //FindStringSimpleRequest request = null;
+            //var response = instance.EditTextFindSimple(request);
+            //Assert.IsInstanceOf<FindStringSimpleResponse> (response, "response is FindStringSimpleResponse");
+        }
+        
+        /// <summary>
         /// Test EditTextRemoveAllWhitespace
         /// </summary>
         [Test]
@@ -147,6 +171,30 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //RemoveHtmlFromTextRequest request = null;
             //var response = instance.EditTextRemoveHtml(request);
             //Assert.IsInstanceOf<RemoveHtmlFromTextResponse> (response, "response is RemoveHtmlFromTextResponse");
+        }
+        
+        /// <summary>
+        /// Test EditTextReplaceRegex
+        /// </summary>
+        [Test]
+        public void EditTextReplaceRegexTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //ReplaceStringRegexRequest request = null;
+            //var response = instance.EditTextReplaceRegex(request);
+            //Assert.IsInstanceOf<ReplaceStringRegexResponse> (response, "response is ReplaceStringRegexResponse");
+        }
+        
+        /// <summary>
+        /// Test EditTextReplaceSimple
+        /// </summary>
+        [Test]
+        public void EditTextReplaceSimpleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //ReplaceStringSimpleRequest request = null;
+            //var response = instance.EditTextReplaceSimple(request);
+            //Assert.IsInstanceOf<ReplaceStringSimpleResponse> (response, "response is ReplaceStringSimpleResponse");
         }
         
         /// <summary>

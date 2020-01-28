@@ -115,7 +115,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new ConvertDataApi();
-            var jsonObject = ;  // Object | 
+            var jsonObject = ;  // Object | Input JSON to convert to XML
 
             try
             {
@@ -136,7 +136,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **jsonObject** | **Object**|  | 
+ **jsonObject** | **Object**| Input JSON to convert to XML | 
 
 ### Return type
 

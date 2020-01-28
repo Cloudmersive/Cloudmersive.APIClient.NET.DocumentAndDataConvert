@@ -52,7 +52,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Convert a JSON object into XML
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jsonObject"></param>
+        /// <param name="jsonObject">Input JSON to convert to XML</param>
         /// <returns>byte[]</returns>
         byte[] ConvertDataJsonToXml (Object jsonObject);
 
@@ -63,7 +63,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Convert a JSON object into XML
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jsonObject"></param>
+        /// <param name="jsonObject">Input JSON to convert to XML</param>
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> ConvertDataJsonToXmlWithHttpInfo (Object jsonObject);
         /// <summary>
@@ -417,7 +417,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Convert a JSON object into XML
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jsonObject"></param>
+        /// <param name="jsonObject">Input JSON to convert to XML</param>
         /// <returns>Task of byte[]</returns>
         System.Threading.Tasks.Task<byte[]> ConvertDataJsonToXmlAsync (Object jsonObject);
 
@@ -428,7 +428,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Convert a JSON object into XML
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jsonObject"></param>
+        /// <param name="jsonObject">Input JSON to convert to XML</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDataJsonToXmlAsyncWithHttpInfo (Object jsonObject);
         /// <summary>
@@ -1001,7 +1001,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Convert JSON to XML conversion Convert a JSON object into XML
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jsonObject"></param>
+        /// <param name="jsonObject">Input JSON to convert to XML</param>
         /// <returns>byte[]</returns>
         public byte[] ConvertDataJsonToXml (Object jsonObject)
         {
@@ -1013,7 +1013,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Convert JSON to XML conversion Convert a JSON object into XML
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jsonObject"></param>
+        /// <param name="jsonObject">Input JSON to convert to XML</param>
         /// <returns>ApiResponse of byte[]</returns>
         public ApiResponse< byte[] > ConvertDataJsonToXmlWithHttpInfo (Object jsonObject)
         {
@@ -1084,7 +1084,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Convert JSON to XML conversion Convert a JSON object into XML
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jsonObject"></param>
+        /// <param name="jsonObject">Input JSON to convert to XML</param>
         /// <returns>Task of byte[]</returns>
         public async System.Threading.Tasks.Task<byte[]> ConvertDataJsonToXmlAsync (Object jsonObject)
         {
@@ -1097,7 +1097,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Convert JSON to XML conversion Convert a JSON object into XML
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jsonObject"></param>
+        /// <param name="jsonObject">Input JSON to convert to XML</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         public async System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDataJsonToXmlAsyncWithHttpInfo (Object jsonObject)
         {

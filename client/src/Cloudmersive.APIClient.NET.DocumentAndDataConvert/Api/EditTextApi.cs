@@ -31,7 +31,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Decodes / converts base 64 UTF-8 text string to binary content
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>Base64DecodeResponse</returns>
         Base64DecodeResponse EditTextBase64Decode (Base64DecodeRequest request);
 
@@ -42,7 +42,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Decodes / converts base 64 UTF-8 text string to binary content
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>ApiResponse of Base64DecodeResponse</returns>
         ApiResponse<Base64DecodeResponse> EditTextBase64DecodeWithHttpInfo (Base64DecodeRequest request);
         /// <summary>
@@ -52,7 +52,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Checks, detects if input string is base 64 encoded
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>Base64DetectResponse</returns>
         Base64DetectResponse EditTextBase64Detect (Base64DetectRequest request);
 
@@ -63,7 +63,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Checks, detects if input string is base 64 encoded
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>ApiResponse of Base64DetectResponse</returns>
         ApiResponse<Base64DetectResponse> EditTextBase64DetectWithHttpInfo (Base64DetectRequest request);
         /// <summary>
@@ -73,7 +73,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Encodes / converts binary or file data to a text string
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>Base64EncodeResponse</returns>
         Base64EncodeResponse EditTextBase64Encode (Base64EncodeRequest request);
 
@@ -84,7 +84,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Encodes / converts binary or file data to a text string
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>ApiResponse of Base64EncodeResponse</returns>
         ApiResponse<Base64EncodeResponse> EditTextBase64EncodeWithHttpInfo (Base64EncodeRequest request);
         /// <summary>
@@ -132,13 +132,55 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of DetectLineEndingsResponse</returns>
         ApiResponse<DetectLineEndingsResponse> EditTextDetectLineEndingsWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
+        /// Find a regular expression regex in text input
+        /// </summary>
+        /// <remarks>
+        /// Find all occurrences of the input regular expression in the input content, and returns the matches
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input request</param>
+        /// <returns>FindStringRegexResponse</returns>
+        FindStringRegexResponse EditTextFindRegex (FindStringRegexRequest request);
+
+        /// <summary>
+        /// Find a regular expression regex in text input
+        /// </summary>
+        /// <remarks>
+        /// Find all occurrences of the input regular expression in the input content, and returns the matches
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input request</param>
+        /// <returns>ApiResponse of FindStringRegexResponse</returns>
+        ApiResponse<FindStringRegexResponse> EditTextFindRegexWithHttpInfo (FindStringRegexRequest request);
+        /// <summary>
+        /// Find a string in text input
+        /// </summary>
+        /// <remarks>
+        /// Finds all occurrences of the input string in the input content, and returns the matches
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input request</param>
+        /// <returns>FindStringSimpleResponse</returns>
+        FindStringSimpleResponse EditTextFindSimple (FindStringSimpleRequest request);
+
+        /// <summary>
+        /// Find a string in text input
+        /// </summary>
+        /// <remarks>
+        /// Finds all occurrences of the input string in the input content, and returns the matches
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input request</param>
+        /// <returns>ApiResponse of FindStringSimpleResponse</returns>
+        ApiResponse<FindStringSimpleResponse> EditTextFindSimpleWithHttpInfo (FindStringSimpleRequest request);
+        /// <summary>
         /// Remove whitespace from text string
         /// </summary>
         /// <remarks>
         /// Removes all whitespace from text, leaving behind only non-whitespace characters.  Whitespace includes newlines, spaces and other whitespace characters.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>RemoveWhitespaceFromTextResponse</returns>
         RemoveWhitespaceFromTextResponse EditTextRemoveAllWhitespace (RemoveWhitespaceFromTextRequest request);
 
@@ -149,7 +191,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Removes all whitespace from text, leaving behind only non-whitespace characters.  Whitespace includes newlines, spaces and other whitespace characters.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>ApiResponse of RemoveWhitespaceFromTextResponse</returns>
         ApiResponse<RemoveWhitespaceFromTextResponse> EditTextRemoveAllWhitespaceWithHttpInfo (RemoveWhitespaceFromTextRequest request);
         /// <summary>
@@ -159,7 +201,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Removes HTML from text, leaving behind only text.  Formatted text will become plain text.  Important for protecting against HTML and Cross-Site-Scripting attacks.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>RemoveHtmlFromTextResponse</returns>
         RemoveHtmlFromTextResponse EditTextRemoveHtml (RemoveHtmlFromTextRequest request);
 
@@ -170,9 +212,51 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Removes HTML from text, leaving behind only text.  Formatted text will become plain text.  Important for protecting against HTML and Cross-Site-Scripting attacks.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>ApiResponse of RemoveHtmlFromTextResponse</returns>
         ApiResponse<RemoveHtmlFromTextResponse> EditTextRemoveHtmlWithHttpInfo (RemoveHtmlFromTextRequest request);
+        /// <summary>
+        /// Replace a string in text with a regex regular expression string
+        /// </summary>
+        /// <remarks>
+        /// Replaces all occurrences of the input regular expression regex string in the input content, and returns the result
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input request</param>
+        /// <returns>ReplaceStringRegexResponse</returns>
+        ReplaceStringRegexResponse EditTextReplaceRegex (ReplaceStringRegexRequest request);
+
+        /// <summary>
+        /// Replace a string in text with a regex regular expression string
+        /// </summary>
+        /// <remarks>
+        /// Replaces all occurrences of the input regular expression regex string in the input content, and returns the result
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input request</param>
+        /// <returns>ApiResponse of ReplaceStringRegexResponse</returns>
+        ApiResponse<ReplaceStringRegexResponse> EditTextReplaceRegexWithHttpInfo (ReplaceStringRegexRequest request);
+        /// <summary>
+        /// Replace a string in text with another string value
+        /// </summary>
+        /// <remarks>
+        /// Replaces all occurrences of the input string in the input content, and returns the result
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input request</param>
+        /// <returns>ReplaceStringSimpleResponse</returns>
+        ReplaceStringSimpleResponse EditTextReplaceSimple (ReplaceStringSimpleRequest request);
+
+        /// <summary>
+        /// Replace a string in text with another string value
+        /// </summary>
+        /// <remarks>
+        /// Replaces all occurrences of the input string in the input content, and returns the result
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input request</param>
+        /// <returns>ApiResponse of ReplaceStringSimpleResponse</returns>
+        ApiResponse<ReplaceStringSimpleResponse> EditTextReplaceSimpleWithHttpInfo (ReplaceStringSimpleRequest request);
         /// <summary>
         /// Detect text encoding of file
         /// </summary>
@@ -201,7 +285,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Trim leading and trailing whitespace from text, leaving behind a trimmed string.  Whitespace includes newlines, spaces and other whitespace characters.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>RemoveWhitespaceFromTextResponse</returns>
         RemoveWhitespaceFromTextResponse EditTextTrimWhitespace (RemoveWhitespaceFromTextRequest request);
 
@@ -212,7 +296,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Trim leading and trailing whitespace from text, leaving behind a trimmed string.  Whitespace includes newlines, spaces and other whitespace characters.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>ApiResponse of RemoveWhitespaceFromTextResponse</returns>
         ApiResponse<RemoveWhitespaceFromTextResponse> EditTextTrimWhitespaceWithHttpInfo (RemoveWhitespaceFromTextRequest request);
         #endregion Synchronous Operations
@@ -224,7 +308,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Decodes / converts base 64 UTF-8 text string to binary content
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>Task of Base64DecodeResponse</returns>
         System.Threading.Tasks.Task<Base64DecodeResponse> EditTextBase64DecodeAsync (Base64DecodeRequest request);
 
@@ -235,7 +319,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Decodes / converts base 64 UTF-8 text string to binary content
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>Task of ApiResponse (Base64DecodeResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<Base64DecodeResponse>> EditTextBase64DecodeAsyncWithHttpInfo (Base64DecodeRequest request);
         /// <summary>
@@ -245,7 +329,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Checks, detects if input string is base 64 encoded
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>Task of Base64DetectResponse</returns>
         System.Threading.Tasks.Task<Base64DetectResponse> EditTextBase64DetectAsync (Base64DetectRequest request);
 
@@ -256,7 +340,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Checks, detects if input string is base 64 encoded
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>Task of ApiResponse (Base64DetectResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<Base64DetectResponse>> EditTextBase64DetectAsyncWithHttpInfo (Base64DetectRequest request);
         /// <summary>
@@ -266,7 +350,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Encodes / converts binary or file data to a text string
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>Task of Base64EncodeResponse</returns>
         System.Threading.Tasks.Task<Base64EncodeResponse> EditTextBase64EncodeAsync (Base64EncodeRequest request);
 
@@ -277,7 +361,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Encodes / converts binary or file data to a text string
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>Task of ApiResponse (Base64EncodeResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<Base64EncodeResponse>> EditTextBase64EncodeAsyncWithHttpInfo (Base64EncodeRequest request);
         /// <summary>
@@ -325,13 +409,55 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (DetectLineEndingsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<DetectLineEndingsResponse>> EditTextDetectLineEndingsAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
+        /// Find a regular expression regex in text input
+        /// </summary>
+        /// <remarks>
+        /// Find all occurrences of the input regular expression in the input content, and returns the matches
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input request</param>
+        /// <returns>Task of FindStringRegexResponse</returns>
+        System.Threading.Tasks.Task<FindStringRegexResponse> EditTextFindRegexAsync (FindStringRegexRequest request);
+
+        /// <summary>
+        /// Find a regular expression regex in text input
+        /// </summary>
+        /// <remarks>
+        /// Find all occurrences of the input regular expression in the input content, and returns the matches
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input request</param>
+        /// <returns>Task of ApiResponse (FindStringRegexResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FindStringRegexResponse>> EditTextFindRegexAsyncWithHttpInfo (FindStringRegexRequest request);
+        /// <summary>
+        /// Find a string in text input
+        /// </summary>
+        /// <remarks>
+        /// Finds all occurrences of the input string in the input content, and returns the matches
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input request</param>
+        /// <returns>Task of FindStringSimpleResponse</returns>
+        System.Threading.Tasks.Task<FindStringSimpleResponse> EditTextFindSimpleAsync (FindStringSimpleRequest request);
+
+        /// <summary>
+        /// Find a string in text input
+        /// </summary>
+        /// <remarks>
+        /// Finds all occurrences of the input string in the input content, and returns the matches
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input request</param>
+        /// <returns>Task of ApiResponse (FindStringSimpleResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FindStringSimpleResponse>> EditTextFindSimpleAsyncWithHttpInfo (FindStringSimpleRequest request);
+        /// <summary>
         /// Remove whitespace from text string
         /// </summary>
         /// <remarks>
         /// Removes all whitespace from text, leaving behind only non-whitespace characters.  Whitespace includes newlines, spaces and other whitespace characters.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>Task of RemoveWhitespaceFromTextResponse</returns>
         System.Threading.Tasks.Task<RemoveWhitespaceFromTextResponse> EditTextRemoveAllWhitespaceAsync (RemoveWhitespaceFromTextRequest request);
 
@@ -342,7 +468,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Removes all whitespace from text, leaving behind only non-whitespace characters.  Whitespace includes newlines, spaces and other whitespace characters.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>Task of ApiResponse (RemoveWhitespaceFromTextResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<RemoveWhitespaceFromTextResponse>> EditTextRemoveAllWhitespaceAsyncWithHttpInfo (RemoveWhitespaceFromTextRequest request);
         /// <summary>
@@ -352,7 +478,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Removes HTML from text, leaving behind only text.  Formatted text will become plain text.  Important for protecting against HTML and Cross-Site-Scripting attacks.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>Task of RemoveHtmlFromTextResponse</returns>
         System.Threading.Tasks.Task<RemoveHtmlFromTextResponse> EditTextRemoveHtmlAsync (RemoveHtmlFromTextRequest request);
 
@@ -363,9 +489,51 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Removes HTML from text, leaving behind only text.  Formatted text will become plain text.  Important for protecting against HTML and Cross-Site-Scripting attacks.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>Task of ApiResponse (RemoveHtmlFromTextResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<RemoveHtmlFromTextResponse>> EditTextRemoveHtmlAsyncWithHttpInfo (RemoveHtmlFromTextRequest request);
+        /// <summary>
+        /// Replace a string in text with a regex regular expression string
+        /// </summary>
+        /// <remarks>
+        /// Replaces all occurrences of the input regular expression regex string in the input content, and returns the result
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input request</param>
+        /// <returns>Task of ReplaceStringRegexResponse</returns>
+        System.Threading.Tasks.Task<ReplaceStringRegexResponse> EditTextReplaceRegexAsync (ReplaceStringRegexRequest request);
+
+        /// <summary>
+        /// Replace a string in text with a regex regular expression string
+        /// </summary>
+        /// <remarks>
+        /// Replaces all occurrences of the input regular expression regex string in the input content, and returns the result
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input request</param>
+        /// <returns>Task of ApiResponse (ReplaceStringRegexResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ReplaceStringRegexResponse>> EditTextReplaceRegexAsyncWithHttpInfo (ReplaceStringRegexRequest request);
+        /// <summary>
+        /// Replace a string in text with another string value
+        /// </summary>
+        /// <remarks>
+        /// Replaces all occurrences of the input string in the input content, and returns the result
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input request</param>
+        /// <returns>Task of ReplaceStringSimpleResponse</returns>
+        System.Threading.Tasks.Task<ReplaceStringSimpleResponse> EditTextReplaceSimpleAsync (ReplaceStringSimpleRequest request);
+
+        /// <summary>
+        /// Replace a string in text with another string value
+        /// </summary>
+        /// <remarks>
+        /// Replaces all occurrences of the input string in the input content, and returns the result
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input request</param>
+        /// <returns>Task of ApiResponse (ReplaceStringSimpleResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ReplaceStringSimpleResponse>> EditTextReplaceSimpleAsyncWithHttpInfo (ReplaceStringSimpleRequest request);
         /// <summary>
         /// Detect text encoding of file
         /// </summary>
@@ -394,7 +562,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Trim leading and trailing whitespace from text, leaving behind a trimmed string.  Whitespace includes newlines, spaces and other whitespace characters.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>Task of RemoveWhitespaceFromTextResponse</returns>
         System.Threading.Tasks.Task<RemoveWhitespaceFromTextResponse> EditTextTrimWhitespaceAsync (RemoveWhitespaceFromTextRequest request);
 
@@ -405,7 +573,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Trim leading and trailing whitespace from text, leaving behind a trimmed string.  Whitespace includes newlines, spaces and other whitespace characters.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>Task of ApiResponse (RemoveWhitespaceFromTextResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<RemoveWhitespaceFromTextResponse>> EditTextTrimWhitespaceAsyncWithHttpInfo (RemoveWhitespaceFromTextRequest request);
         #endregion Asynchronous Operations
@@ -512,7 +680,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Base 64 decode, convert base 64 string to binary content Decodes / converts base 64 UTF-8 text string to binary content
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>Base64DecodeResponse</returns>
         public Base64DecodeResponse EditTextBase64Decode (Base64DecodeRequest request)
         {
@@ -524,7 +692,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Base 64 decode, convert base 64 string to binary content Decodes / converts base 64 UTF-8 text string to binary content
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>ApiResponse of Base64DecodeResponse</returns>
         public ApiResponse< Base64DecodeResponse > EditTextBase64DecodeWithHttpInfo (Base64DecodeRequest request)
         {
@@ -598,7 +766,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Base 64 decode, convert base 64 string to binary content Decodes / converts base 64 UTF-8 text string to binary content
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>Task of Base64DecodeResponse</returns>
         public async System.Threading.Tasks.Task<Base64DecodeResponse> EditTextBase64DecodeAsync (Base64DecodeRequest request)
         {
@@ -611,7 +779,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Base 64 decode, convert base 64 string to binary content Decodes / converts base 64 UTF-8 text string to binary content
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>Task of ApiResponse (Base64DecodeResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Base64DecodeResponse>> EditTextBase64DecodeAsyncWithHttpInfo (Base64DecodeRequest request)
         {
@@ -685,7 +853,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Detect, check if text string is base 64 encoded Checks, detects if input string is base 64 encoded
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>Base64DetectResponse</returns>
         public Base64DetectResponse EditTextBase64Detect (Base64DetectRequest request)
         {
@@ -697,7 +865,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Detect, check if text string is base 64 encoded Checks, detects if input string is base 64 encoded
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>ApiResponse of Base64DetectResponse</returns>
         public ApiResponse< Base64DetectResponse > EditTextBase64DetectWithHttpInfo (Base64DetectRequest request)
         {
@@ -771,7 +939,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Detect, check if text string is base 64 encoded Checks, detects if input string is base 64 encoded
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>Task of Base64DetectResponse</returns>
         public async System.Threading.Tasks.Task<Base64DetectResponse> EditTextBase64DetectAsync (Base64DetectRequest request)
         {
@@ -784,7 +952,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Detect, check if text string is base 64 encoded Checks, detects if input string is base 64 encoded
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>Task of ApiResponse (Base64DetectResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Base64DetectResponse>> EditTextBase64DetectAsyncWithHttpInfo (Base64DetectRequest request)
         {
@@ -858,7 +1026,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Base 64 encode, convert binary or file data to a text string Encodes / converts binary or file data to a text string
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>Base64EncodeResponse</returns>
         public Base64EncodeResponse EditTextBase64Encode (Base64EncodeRequest request)
         {
@@ -870,7 +1038,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Base 64 encode, convert binary or file data to a text string Encodes / converts binary or file data to a text string
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>ApiResponse of Base64EncodeResponse</returns>
         public ApiResponse< Base64EncodeResponse > EditTextBase64EncodeWithHttpInfo (Base64EncodeRequest request)
         {
@@ -944,7 +1112,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Base 64 encode, convert binary or file data to a text string Encodes / converts binary or file data to a text string
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>Task of Base64EncodeResponse</returns>
         public async System.Threading.Tasks.Task<Base64EncodeResponse> EditTextBase64EncodeAsync (Base64EncodeRequest request)
         {
@@ -957,7 +1125,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Base 64 encode, convert binary or file data to a text string Encodes / converts binary or file data to a text string
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>Task of ApiResponse (Base64EncodeResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Base64EncodeResponse>> EditTextBase64EncodeAsyncWithHttpInfo (Base64EncodeRequest request)
         {
@@ -1342,10 +1510,356 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
+        /// Find a regular expression regex in text input Find all occurrences of the input regular expression in the input content, and returns the matches
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input request</param>
+        /// <returns>FindStringRegexResponse</returns>
+        public FindStringRegexResponse EditTextFindRegex (FindStringRegexRequest request)
+        {
+             ApiResponse<FindStringRegexResponse> localVarResponse = EditTextFindRegexWithHttpInfo(request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Find a regular expression regex in text input Find all occurrences of the input regular expression in the input content, and returns the matches
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input request</param>
+        /// <returns>ApiResponse of FindStringRegexResponse</returns>
+        public ApiResponse< FindStringRegexResponse > EditTextFindRegexWithHttpInfo (FindStringRegexRequest request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling EditTextApi->EditTextFindRegex");
+
+            var localVarPath = "/convert/edit/text/find/regex";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditTextFindRegex", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<FindStringRegexResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FindStringRegexResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FindStringRegexResponse)));
+        }
+
+        /// <summary>
+        /// Find a regular expression regex in text input Find all occurrences of the input regular expression in the input content, and returns the matches
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input request</param>
+        /// <returns>Task of FindStringRegexResponse</returns>
+        public async System.Threading.Tasks.Task<FindStringRegexResponse> EditTextFindRegexAsync (FindStringRegexRequest request)
+        {
+             ApiResponse<FindStringRegexResponse> localVarResponse = await EditTextFindRegexAsyncWithHttpInfo(request);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Find a regular expression regex in text input Find all occurrences of the input regular expression in the input content, and returns the matches
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input request</param>
+        /// <returns>Task of ApiResponse (FindStringRegexResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FindStringRegexResponse>> EditTextFindRegexAsyncWithHttpInfo (FindStringRegexRequest request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling EditTextApi->EditTextFindRegex");
+
+            var localVarPath = "/convert/edit/text/find/regex";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditTextFindRegex", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<FindStringRegexResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FindStringRegexResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FindStringRegexResponse)));
+        }
+
+        /// <summary>
+        /// Find a string in text input Finds all occurrences of the input string in the input content, and returns the matches
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input request</param>
+        /// <returns>FindStringSimpleResponse</returns>
+        public FindStringSimpleResponse EditTextFindSimple (FindStringSimpleRequest request)
+        {
+             ApiResponse<FindStringSimpleResponse> localVarResponse = EditTextFindSimpleWithHttpInfo(request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Find a string in text input Finds all occurrences of the input string in the input content, and returns the matches
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input request</param>
+        /// <returns>ApiResponse of FindStringSimpleResponse</returns>
+        public ApiResponse< FindStringSimpleResponse > EditTextFindSimpleWithHttpInfo (FindStringSimpleRequest request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling EditTextApi->EditTextFindSimple");
+
+            var localVarPath = "/convert/edit/text/find/string";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditTextFindSimple", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<FindStringSimpleResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FindStringSimpleResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FindStringSimpleResponse)));
+        }
+
+        /// <summary>
+        /// Find a string in text input Finds all occurrences of the input string in the input content, and returns the matches
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input request</param>
+        /// <returns>Task of FindStringSimpleResponse</returns>
+        public async System.Threading.Tasks.Task<FindStringSimpleResponse> EditTextFindSimpleAsync (FindStringSimpleRequest request)
+        {
+             ApiResponse<FindStringSimpleResponse> localVarResponse = await EditTextFindSimpleAsyncWithHttpInfo(request);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Find a string in text input Finds all occurrences of the input string in the input content, and returns the matches
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input request</param>
+        /// <returns>Task of ApiResponse (FindStringSimpleResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FindStringSimpleResponse>> EditTextFindSimpleAsyncWithHttpInfo (FindStringSimpleRequest request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling EditTextApi->EditTextFindSimple");
+
+            var localVarPath = "/convert/edit/text/find/string";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditTextFindSimple", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<FindStringSimpleResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FindStringSimpleResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FindStringSimpleResponse)));
+        }
+
+        /// <summary>
         /// Remove whitespace from text string Removes all whitespace from text, leaving behind only non-whitespace characters.  Whitespace includes newlines, spaces and other whitespace characters.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>RemoveWhitespaceFromTextResponse</returns>
         public RemoveWhitespaceFromTextResponse EditTextRemoveAllWhitespace (RemoveWhitespaceFromTextRequest request)
         {
@@ -1357,7 +1871,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Remove whitespace from text string Removes all whitespace from text, leaving behind only non-whitespace characters.  Whitespace includes newlines, spaces and other whitespace characters.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>ApiResponse of RemoveWhitespaceFromTextResponse</returns>
         public ApiResponse< RemoveWhitespaceFromTextResponse > EditTextRemoveAllWhitespaceWithHttpInfo (RemoveWhitespaceFromTextRequest request)
         {
@@ -1431,7 +1945,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Remove whitespace from text string Removes all whitespace from text, leaving behind only non-whitespace characters.  Whitespace includes newlines, spaces and other whitespace characters.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>Task of RemoveWhitespaceFromTextResponse</returns>
         public async System.Threading.Tasks.Task<RemoveWhitespaceFromTextResponse> EditTextRemoveAllWhitespaceAsync (RemoveWhitespaceFromTextRequest request)
         {
@@ -1444,7 +1958,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Remove whitespace from text string Removes all whitespace from text, leaving behind only non-whitespace characters.  Whitespace includes newlines, spaces and other whitespace characters.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>Task of ApiResponse (RemoveWhitespaceFromTextResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RemoveWhitespaceFromTextResponse>> EditTextRemoveAllWhitespaceAsyncWithHttpInfo (RemoveWhitespaceFromTextRequest request)
         {
@@ -1518,7 +2032,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Remove HTML from text string Removes HTML from text, leaving behind only text.  Formatted text will become plain text.  Important for protecting against HTML and Cross-Site-Scripting attacks.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>RemoveHtmlFromTextResponse</returns>
         public RemoveHtmlFromTextResponse EditTextRemoveHtml (RemoveHtmlFromTextRequest request)
         {
@@ -1530,7 +2044,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Remove HTML from text string Removes HTML from text, leaving behind only text.  Formatted text will become plain text.  Important for protecting against HTML and Cross-Site-Scripting attacks.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>ApiResponse of RemoveHtmlFromTextResponse</returns>
         public ApiResponse< RemoveHtmlFromTextResponse > EditTextRemoveHtmlWithHttpInfo (RemoveHtmlFromTextRequest request)
         {
@@ -1604,7 +2118,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Remove HTML from text string Removes HTML from text, leaving behind only text.  Formatted text will become plain text.  Important for protecting against HTML and Cross-Site-Scripting attacks.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>Task of RemoveHtmlFromTextResponse</returns>
         public async System.Threading.Tasks.Task<RemoveHtmlFromTextResponse> EditTextRemoveHtmlAsync (RemoveHtmlFromTextRequest request)
         {
@@ -1617,7 +2131,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Remove HTML from text string Removes HTML from text, leaving behind only text.  Formatted text will become plain text.  Important for protecting against HTML and Cross-Site-Scripting attacks.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>Task of ApiResponse (RemoveHtmlFromTextResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RemoveHtmlFromTextResponse>> EditTextRemoveHtmlAsyncWithHttpInfo (RemoveHtmlFromTextRequest request)
         {
@@ -1685,6 +2199,352 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<RemoveHtmlFromTextResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RemoveHtmlFromTextResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RemoveHtmlFromTextResponse)));
+        }
+
+        /// <summary>
+        /// Replace a string in text with a regex regular expression string Replaces all occurrences of the input regular expression regex string in the input content, and returns the result
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input request</param>
+        /// <returns>ReplaceStringRegexResponse</returns>
+        public ReplaceStringRegexResponse EditTextReplaceRegex (ReplaceStringRegexRequest request)
+        {
+             ApiResponse<ReplaceStringRegexResponse> localVarResponse = EditTextReplaceRegexWithHttpInfo(request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Replace a string in text with a regex regular expression string Replaces all occurrences of the input regular expression regex string in the input content, and returns the result
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input request</param>
+        /// <returns>ApiResponse of ReplaceStringRegexResponse</returns>
+        public ApiResponse< ReplaceStringRegexResponse > EditTextReplaceRegexWithHttpInfo (ReplaceStringRegexRequest request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling EditTextApi->EditTextReplaceRegex");
+
+            var localVarPath = "/convert/edit/text/replace/regex";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditTextReplaceRegex", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ReplaceStringRegexResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ReplaceStringRegexResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReplaceStringRegexResponse)));
+        }
+
+        /// <summary>
+        /// Replace a string in text with a regex regular expression string Replaces all occurrences of the input regular expression regex string in the input content, and returns the result
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input request</param>
+        /// <returns>Task of ReplaceStringRegexResponse</returns>
+        public async System.Threading.Tasks.Task<ReplaceStringRegexResponse> EditTextReplaceRegexAsync (ReplaceStringRegexRequest request)
+        {
+             ApiResponse<ReplaceStringRegexResponse> localVarResponse = await EditTextReplaceRegexAsyncWithHttpInfo(request);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Replace a string in text with a regex regular expression string Replaces all occurrences of the input regular expression regex string in the input content, and returns the result
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input request</param>
+        /// <returns>Task of ApiResponse (ReplaceStringRegexResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ReplaceStringRegexResponse>> EditTextReplaceRegexAsyncWithHttpInfo (ReplaceStringRegexRequest request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling EditTextApi->EditTextReplaceRegex");
+
+            var localVarPath = "/convert/edit/text/replace/regex";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditTextReplaceRegex", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ReplaceStringRegexResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ReplaceStringRegexResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReplaceStringRegexResponse)));
+        }
+
+        /// <summary>
+        /// Replace a string in text with another string value Replaces all occurrences of the input string in the input content, and returns the result
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input request</param>
+        /// <returns>ReplaceStringSimpleResponse</returns>
+        public ReplaceStringSimpleResponse EditTextReplaceSimple (ReplaceStringSimpleRequest request)
+        {
+             ApiResponse<ReplaceStringSimpleResponse> localVarResponse = EditTextReplaceSimpleWithHttpInfo(request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Replace a string in text with another string value Replaces all occurrences of the input string in the input content, and returns the result
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input request</param>
+        /// <returns>ApiResponse of ReplaceStringSimpleResponse</returns>
+        public ApiResponse< ReplaceStringSimpleResponse > EditTextReplaceSimpleWithHttpInfo (ReplaceStringSimpleRequest request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling EditTextApi->EditTextReplaceSimple");
+
+            var localVarPath = "/convert/edit/text/replace/string";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditTextReplaceSimple", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ReplaceStringSimpleResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ReplaceStringSimpleResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReplaceStringSimpleResponse)));
+        }
+
+        /// <summary>
+        /// Replace a string in text with another string value Replaces all occurrences of the input string in the input content, and returns the result
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input request</param>
+        /// <returns>Task of ReplaceStringSimpleResponse</returns>
+        public async System.Threading.Tasks.Task<ReplaceStringSimpleResponse> EditTextReplaceSimpleAsync (ReplaceStringSimpleRequest request)
+        {
+             ApiResponse<ReplaceStringSimpleResponse> localVarResponse = await EditTextReplaceSimpleAsyncWithHttpInfo(request);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Replace a string in text with another string value Replaces all occurrences of the input string in the input content, and returns the result
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">Input request</param>
+        /// <returns>Task of ApiResponse (ReplaceStringSimpleResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ReplaceStringSimpleResponse>> EditTextReplaceSimpleAsyncWithHttpInfo (ReplaceStringSimpleRequest request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling EditTextApi->EditTextReplaceSimple");
+
+            var localVarPath = "/convert/edit/text/replace/string";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditTextReplaceSimple", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ReplaceStringSimpleResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ReplaceStringSimpleResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReplaceStringSimpleResponse)));
         }
 
         /// <summary>
@@ -1842,7 +2702,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Trim leading and trailing whitespace from text string Trim leading and trailing whitespace from text, leaving behind a trimmed string.  Whitespace includes newlines, spaces and other whitespace characters.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>RemoveWhitespaceFromTextResponse</returns>
         public RemoveWhitespaceFromTextResponse EditTextTrimWhitespace (RemoveWhitespaceFromTextRequest request)
         {
@@ -1854,7 +2714,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Trim leading and trailing whitespace from text string Trim leading and trailing whitespace from text, leaving behind a trimmed string.  Whitespace includes newlines, spaces and other whitespace characters.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>ApiResponse of RemoveWhitespaceFromTextResponse</returns>
         public ApiResponse< RemoveWhitespaceFromTextResponse > EditTextTrimWhitespaceWithHttpInfo (RemoveWhitespaceFromTextRequest request)
         {
@@ -1928,7 +2788,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Trim leading and trailing whitespace from text string Trim leading and trailing whitespace from text, leaving behind a trimmed string.  Whitespace includes newlines, spaces and other whitespace characters.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>Task of RemoveWhitespaceFromTextResponse</returns>
         public async System.Threading.Tasks.Task<RemoveWhitespaceFromTextResponse> EditTextTrimWhitespaceAsync (RemoveWhitespaceFromTextRequest request)
         {
@@ -1941,7 +2801,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Trim leading and trailing whitespace from text string Trim leading and trailing whitespace from text, leaving behind a trimmed string.  Whitespace includes newlines, spaces and other whitespace characters.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Input request</param>
         /// <returns>Task of ApiResponse (RemoveWhitespaceFromTextResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RemoveWhitespaceFromTextResponse>> EditTextTrimWhitespaceAsyncWithHttpInfo (RemoveWhitespaceFromTextRequest request)
         {

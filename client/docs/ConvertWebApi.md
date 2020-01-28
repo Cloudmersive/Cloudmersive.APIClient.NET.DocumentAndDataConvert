@@ -7,11 +7,11 @@ Method | HTTP request | Description
 [**ConvertWebHtmlToDocx**](ConvertWebApi.md#convertwebhtmltodocx) | **POST** /convert/html/to/docx | Convert HTML to Word DOCX Document
 [**ConvertWebHtmlToPdf**](ConvertWebApi.md#convertwebhtmltopdf) | **POST** /convert/web/html/to/pdf | Convert HTML string to PDF
 [**ConvertWebHtmlToPng**](ConvertWebApi.md#convertwebhtmltopng) | **POST** /convert/web/html/to/png | Convert HTML string to PNG screenshot
-[**ConvertWebHtmlToTxt**](ConvertWebApi.md#convertwebhtmltotxt) | **POST** /convert/web/url/to/txt | Convert website URL page to text (txt)
-[**ConvertWebHtmlToTxt_0**](ConvertWebApi.md#convertwebhtmltotxt_0) | **POST** /convert/web/html/to/txt | Convert HTML string to text (txt)
+[**ConvertWebHtmlToTxt**](ConvertWebApi.md#convertwebhtmltotxt) | **POST** /convert/web/html/to/txt | Convert HTML string to text (txt)
 [**ConvertWebMdToHtml**](ConvertWebApi.md#convertwebmdtohtml) | **POST** /convert/web/md/to/html | Convert Markdown to HTML
 [**ConvertWebUrlToPdf**](ConvertWebApi.md#convertweburltopdf) | **POST** /convert/web/url/to/pdf | Convert a URL to PDF
 [**ConvertWebUrlToScreenshot**](ConvertWebApi.md#convertweburltoscreenshot) | **POST** /convert/web/url/to/screenshot | Take screenshot of URL
+[**ConvertWebUrlToTxt**](ConvertWebApi.md#convertweburltotxt) | **POST** /convert/web/url/to/txt | Convert website URL page to text (txt)
 
 
 <a name="convertwebhtmltodocx"></a>
@@ -214,11 +214,11 @@ Name | Type | Description  | Notes
 
 <a name="convertwebhtmltotxt"></a>
 # **ConvertWebHtmlToTxt**
-> UrlToTextResponse ConvertWebHtmlToTxt (UrlToTextRequest input)
+> HtmlToTextResponse ConvertWebHtmlToTxt (HtmlToTextRequest input)
 
-Convert website URL page to text (txt)
+Convert HTML string to text (txt)
 
-Converts a website URL page into text (txt); extracts text from HTML
+Converts an HTML string input into text (txt); extracts text from HTML
 
 ### Example
 ```csharp
@@ -240,83 +240,17 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new ConvertWebApi();
-            var input = new UrlToTextRequest(); // UrlToTextRequest | HTML to Text request parameters
-
-            try
-            {
-                // Convert website URL page to text (txt)
-                UrlToTextResponse result = apiInstance.ConvertWebHtmlToTxt(input);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ConvertWebApi.ConvertWebHtmlToTxt: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **input** | [**UrlToTextRequest**](UrlToTextRequest.md)| HTML to Text request parameters | 
-
-### Return type
-
-[**UrlToTextResponse**](UrlToTextResponse.md)
-
-### Authorization
-
-[Apikey](../README.md#Apikey)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/octet-stream
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="convertwebhtmltotxt_0"></a>
-# **ConvertWebHtmlToTxt_0**
-> HtmlToTextResponse ConvertWebHtmlToTxt_0 (HtmlToTextRequest input)
-
-Convert HTML string to text (txt)
-
-Converts an HTML string input into text (txt); extracts text from HTML
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
-using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
-using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
-
-namespace Example
-{
-    public class ConvertWebHtmlToTxt_0Example
-    {
-        public void main()
-        {
-            // Configure API key authorization: Apikey
-            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
-
-            var apiInstance = new ConvertWebApi();
             var input = new HtmlToTextRequest(); // HtmlToTextRequest | HTML to Text request parameters
 
             try
             {
                 // Convert HTML string to text (txt)
-                HtmlToTextResponse result = apiInstance.ConvertWebHtmlToTxt_0(input);
+                HtmlToTextResponse result = apiInstance.ConvertWebHtmlToTxt(input);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ConvertWebApi.ConvertWebHtmlToTxt_0: " + e.Message );
+                Debug.Print("Exception when calling ConvertWebApi.ConvertWebHtmlToTxt: " + e.Message );
             }
         }
     }
@@ -530,6 +464,72 @@ Name | Type | Description  | Notes
 ### Return type
 
 **byte[]**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/octet-stream
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="convertweburltotxt"></a>
+# **ConvertWebUrlToTxt**
+> UrlToTextResponse ConvertWebUrlToTxt (UrlToTextRequest input)
+
+Convert website URL page to text (txt)
+
+Converts a website URL page into text (txt); extracts text from HTML
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class ConvertWebUrlToTxtExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new ConvertWebApi();
+            var input = new UrlToTextRequest(); // UrlToTextRequest | HTML to Text request parameters
+
+            try
+            {
+                // Convert website URL page to text (txt)
+                UrlToTextResponse result = apiInstance.ConvertWebUrlToTxt(input);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConvertWebApi.ConvertWebUrlToTxt: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **input** | [**UrlToTextRequest**](UrlToTextRequest.md)| HTML to Text request parameters | 
+
+### Return type
+
+[**UrlToTextResponse**](UrlToTextResponse.md)
 
 ### Authorization
 

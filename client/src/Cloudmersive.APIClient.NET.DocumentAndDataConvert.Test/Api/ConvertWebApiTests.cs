@@ -107,20 +107,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         public void ConvertWebHtmlToTxtTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //UrlToTextRequest input = null;
-            //var response = instance.ConvertWebHtmlToTxt(input);
-            //Assert.IsInstanceOf<UrlToTextResponse> (response, "response is UrlToTextResponse");
-        }
-        
-        /// <summary>
-        /// Test ConvertWebHtmlToTxt_0
-        /// </summary>
-        [Test]
-        public void ConvertWebHtmlToTxt_0Test()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
             //HtmlToTextRequest input = null;
-            //var response = instance.ConvertWebHtmlToTxt_0(input);
+            //var response = instance.ConvertWebHtmlToTxt(input);
             //Assert.IsInstanceOf<HtmlToTextResponse> (response, "response is HtmlToTextResponse");
         }
         
@@ -158,6 +146,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //ScreenshotRequest input = null;
             //var response = instance.ConvertWebUrlToScreenshot(input);
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
+        /// Test ConvertWebUrlToTxt
+        /// </summary>
+        [Test]
+        public void ConvertWebUrlToTxtTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //UrlToTextRequest input = null;
+            //var response = instance.ConvertWebUrlToTxt(input);
+            //Assert.IsInstanceOf<UrlToTextResponse> (response, "response is UrlToTextResponse");
         }
         
     }
