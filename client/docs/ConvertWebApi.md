@@ -346,7 +346,7 @@ Name | Type | Description  | Notes
 
 <a name="convertweburltopdf"></a>
 # **ConvertWebUrlToPdf**
-> byte[] ConvertWebUrlToPdf (ScreenshotRequest input)
+> byte[] ConvertWebUrlToPdf (UrlToPdfRequest input)
 
 Convert a URL to PDF
 
@@ -372,7 +372,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new ConvertWebApi();
-            var input = new ScreenshotRequest(); // ScreenshotRequest | URL to PDF request parameters
+            var input = new UrlToPdfRequest(); // UrlToPdfRequest | URL to PDF request parameters
 
             try
             {
@@ -393,7 +393,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **input** | [**ScreenshotRequest**](ScreenshotRequest.md)| URL to PDF request parameters | 
+ **input** | [**UrlToPdfRequest**](UrlToPdfRequest.md)| URL to PDF request parameters | 
 
 ### Return type
 

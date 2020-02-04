@@ -69,7 +69,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> EditPdfDecryptWithHttpInfo (string password, System.IO.Stream inputFile);
         /// <summary>
-        /// Remove / delete pages from a PDF document
+        /// Remove, delete pages from a PDF document
         /// </summary>
         /// <remarks>
         /// Remove one or more pages from a PDF document
@@ -82,7 +82,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         byte[] EditPdfDeletePages (System.IO.Stream inputFile, int? pageStart, int? pageEnd);
 
         /// <summary>
-        /// Remove / delete pages from a PDF document
+        /// Remove, delete pages from a PDF document
         /// </summary>
         /// <remarks>
         /// Remove one or more pages from a PDF document
@@ -205,7 +205,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of PdfTextByPageResult</returns>
         ApiResponse<PdfTextByPageResult> EditPdfGetPdfTextByPagesWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// Insert / copy pages from one PDF document into another
+        /// Insert, copy pages from one PDF document into another
         /// </summary>
         /// <remarks>
         /// Copy one or more pages from one PDF document (source document) and insert them into a second PDF document (destination document).
@@ -220,7 +220,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         byte[] EditPdfInsertPages (System.IO.Stream sourceFile, System.IO.Stream destinationFile, int? pageStartSource, int? pageEndSource, int? pageInsertBeforeDesitnation);
 
         /// <summary>
-        /// Insert / copy pages from one PDF document into another
+        /// Insert, copy pages from one PDF document into another
         /// </summary>
         /// <remarks>
         /// Copy one or more pages from one PDF document (source document) and insert them into a second PDF document (destination document).
@@ -509,7 +509,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfDecryptAsyncWithHttpInfo (string password, System.IO.Stream inputFile);
         /// <summary>
-        /// Remove / delete pages from a PDF document
+        /// Remove, delete pages from a PDF document
         /// </summary>
         /// <remarks>
         /// Remove one or more pages from a PDF document
@@ -522,7 +522,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<byte[]> EditPdfDeletePagesAsync (System.IO.Stream inputFile, int? pageStart, int? pageEnd);
 
         /// <summary>
-        /// Remove / delete pages from a PDF document
+        /// Remove, delete pages from a PDF document
         /// </summary>
         /// <remarks>
         /// Remove one or more pages from a PDF document
@@ -645,7 +645,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (PdfTextByPageResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<PdfTextByPageResult>> EditPdfGetPdfTextByPagesAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// Insert / copy pages from one PDF document into another
+        /// Insert, copy pages from one PDF document into another
         /// </summary>
         /// <remarks>
         /// Copy one or more pages from one PDF document (source document) and insert them into a second PDF document (destination document).
@@ -660,7 +660,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<byte[]> EditPdfInsertPagesAsync (System.IO.Stream sourceFile, System.IO.Stream destinationFile, int? pageStartSource, int? pageEndSource, int? pageInsertBeforeDesitnation);
 
         /// <summary>
-        /// Insert / copy pages from one PDF document into another
+        /// Insert, copy pages from one PDF document into another
         /// </summary>
         /// <remarks>
         /// Copy one or more pages from one PDF document (source document) and insert them into a second PDF document (destination document).
@@ -1327,7 +1327,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Remove / delete pages from a PDF document Remove one or more pages from a PDF document
+        /// Remove, delete pages from a PDF document Remove one or more pages from a PDF document
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -1341,7 +1341,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Remove / delete pages from a PDF document Remove one or more pages from a PDF document
+        /// Remove, delete pages from a PDF document Remove one or more pages from a PDF document
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -1411,7 +1411,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Remove / delete pages from a PDF document Remove one or more pages from a PDF document
+        /// Remove, delete pages from a PDF document Remove one or more pages from a PDF document
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -1426,7 +1426,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Remove / delete pages from a PDF document Remove one or more pages from a PDF document
+        /// Remove, delete pages from a PDF document Remove one or more pages from a PDF document
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -2251,7 +2251,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Insert / copy pages from one PDF document into another Copy one or more pages from one PDF document (source document) and insert them into a second PDF document (destination document).
+        /// Insert, copy pages from one PDF document into another Copy one or more pages from one PDF document (source document) and insert them into a second PDF document (destination document).
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sourceFile">Source PDF file to copy pages from.</param>
@@ -2267,7 +2267,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Insert / copy pages from one PDF document into another Copy one or more pages from one PDF document (source document) and insert them into a second PDF document (destination document).
+        /// Insert, copy pages from one PDF document into another Copy one or more pages from one PDF document (source document) and insert them into a second PDF document (destination document).
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sourceFile">Source PDF file to copy pages from.</param>
@@ -2347,7 +2347,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Insert / copy pages from one PDF document into another Copy one or more pages from one PDF document (source document) and insert them into a second PDF document (destination document).
+        /// Insert, copy pages from one PDF document into another Copy one or more pages from one PDF document (source document) and insert them into a second PDF document (destination document).
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sourceFile">Source PDF file to copy pages from.</param>
@@ -2364,7 +2364,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Insert / copy pages from one PDF document into another Copy one or more pages from one PDF document (source document) and insert them into a second PDF document (destination document).
+        /// Insert, copy pages from one PDF document into another Copy one or more pages from one PDF document (source document) and insert them into a second PDF document (destination document).
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sourceFile">Source PDF file to copy pages from.</param>

@@ -6,13 +6,13 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**EditPdfAddAnnotations**](EditPdfApi.md#editpdfaddannotations) | **POST** /convert/edit/pdf/annotations/add-item | Add one or more PDF annotations, comments in the PDF document
 [**EditPdfDecrypt**](EditPdfApi.md#editpdfdecrypt) | **POST** /convert/edit/pdf/decrypt | Decrypt and password-protect a PDF
-[**EditPdfDeletePages**](EditPdfApi.md#editpdfdeletepages) | **POST** /convert/edit/pdf/pages/delete | Remove / delete pages from a PDF document
+[**EditPdfDeletePages**](EditPdfApi.md#editpdfdeletepages) | **POST** /convert/edit/pdf/pages/delete | Remove, delete pages from a PDF document
 [**EditPdfEncrypt**](EditPdfApi.md#editpdfencrypt) | **POST** /convert/edit/pdf/encrypt | Encrypt and password-protect a PDF
 [**EditPdfGetAnnotations**](EditPdfApi.md#editpdfgetannotations) | **POST** /convert/edit/pdf/annotations/list | Get PDF annotations, including comments in the document
 [**EditPdfGetFormFields**](EditPdfApi.md#editpdfgetformfields) | **POST** /convert/edit/pdf/form/get-fields | Gets PDF Form fields and values
 [**EditPdfGetMetadata**](EditPdfApi.md#editpdfgetmetadata) | **POST** /convert/edit/pdf/get-metadata | Get PDF document metadata
 [**EditPdfGetPdfTextByPages**](EditPdfApi.md#editpdfgetpdftextbypages) | **POST** /convert/edit/pdf/pages/get-text | Get text in a PDF document by page
-[**EditPdfInsertPages**](EditPdfApi.md#editpdfinsertpages) | **POST** /convert/edit/pdf/pages/insert | Insert / copy pages from one PDF document into another
+[**EditPdfInsertPages**](EditPdfApi.md#editpdfinsertpages) | **POST** /convert/edit/pdf/pages/insert | Insert, copy pages from one PDF document into another
 [**EditPdfRasterize**](EditPdfApi.md#editpdfrasterize) | **POST** /convert/edit/pdf/rasterize | Rasterize a PDF to an image-based PDF
 [**EditPdfRemoveAllAnnotations**](EditPdfApi.md#editpdfremoveallannotations) | **POST** /convert/edit/pdf/annotations/remove-all | Remove all PDF annotations, including comments in the document
 [**EditPdfRemoveAnnotationItem**](EditPdfApi.md#editpdfremoveannotationitem) | **POST** /convert/edit/pdf/annotations/remove-item | Remove a specific PDF annotation, comment in the document
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 # **EditPdfDeletePages**
 > byte[] EditPdfDeletePages (System.IO.Stream inputFile, int? pageStart, int? pageEnd)
 
-Remove / delete pages from a PDF document
+Remove, delete pages from a PDF document
 
 Remove one or more pages from a PDF document
 
@@ -192,7 +192,7 @@ namespace Example
 
             try
             {
-                // Remove / delete pages from a PDF document
+                // Remove, delete pages from a PDF document
                 byte[] result = apiInstance.EditPdfDeletePages(inputFile, pageStart, pageEnd);
                 Debug.WriteLine(result);
             }
@@ -568,7 +568,7 @@ Name | Type | Description  | Notes
 # **EditPdfInsertPages**
 > byte[] EditPdfInsertPages (System.IO.Stream sourceFile, System.IO.Stream destinationFile, int? pageStartSource, int? pageEndSource, int? pageInsertBeforeDesitnation)
 
-Insert / copy pages from one PDF document into another
+Insert, copy pages from one PDF document into another
 
 Copy one or more pages from one PDF document (source document) and insert them into a second PDF document (destination document).
 
@@ -600,7 +600,7 @@ namespace Example
 
             try
             {
-                // Insert / copy pages from one PDF document into another
+                // Insert, copy pages from one PDF document into another
                 byte[] result = apiInstance.EditPdfInsertPages(sourceFile, destinationFile, pageStartSource, pageEndSource, pageInsertBeforeDesitnation);
                 Debug.WriteLine(result);
             }

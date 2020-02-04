@@ -823,10 +823,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of GetXlsxCellResponse</returns>
         ApiResponse<GetXlsxCellResponse> EditDocumentXlsxGetCellByIndexWithHttpInfo (GetXlsxCellRequest input);
         /// <summary>
-        /// Get rows and cells from a Excel XLSX spreadsheet, worksheet
+        /// Get columns from a Excel XLSX spreadsheet, worksheet
         /// </summary>
         /// <remarks>
-        /// Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// Returns the columns defined in the Excel Spreadsheet worksheet
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Document input request</param>
@@ -834,10 +834,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         GetXlsxColumnsResponse EditDocumentXlsxGetColumns (GetXlsxColumnsRequest input);
 
         /// <summary>
-        /// Get rows and cells from a Excel XLSX spreadsheet, worksheet
+        /// Get columns from a Excel XLSX spreadsheet, worksheet
         /// </summary>
         /// <remarks>
-        /// Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// Returns the columns defined in the Excel Spreadsheet worksheet
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Document input request</param>
@@ -1791,10 +1791,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (GetXlsxCellResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetXlsxCellResponse>> EditDocumentXlsxGetCellByIndexAsyncWithHttpInfo (GetXlsxCellRequest input);
         /// <summary>
-        /// Get rows and cells from a Excel XLSX spreadsheet, worksheet
+        /// Get columns from a Excel XLSX spreadsheet, worksheet
         /// </summary>
         /// <remarks>
-        /// Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// Returns the columns defined in the Excel Spreadsheet worksheet
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Document input request</param>
@@ -1802,10 +1802,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<GetXlsxColumnsResponse> EditDocumentXlsxGetColumnsAsync (GetXlsxColumnsRequest input);
 
         /// <summary>
-        /// Get rows and cells from a Excel XLSX spreadsheet, worksheet
+        /// Get columns from a Excel XLSX spreadsheet, worksheet
         /// </summary>
         /// <remarks>
-        /// Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// Returns the columns defined in the Excel Spreadsheet worksheet
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Document input request</param>
@@ -8575,7 +8575,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get rows and cells from a Excel XLSX spreadsheet, worksheet Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// Get columns from a Excel XLSX spreadsheet, worksheet Returns the columns defined in the Excel Spreadsheet worksheet
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Document input request</param>
@@ -8587,7 +8587,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get rows and cells from a Excel XLSX spreadsheet, worksheet Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// Get columns from a Excel XLSX spreadsheet, worksheet Returns the columns defined in the Excel Spreadsheet worksheet
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Document input request</param>
@@ -8661,7 +8661,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get rows and cells from a Excel XLSX spreadsheet, worksheet Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// Get columns from a Excel XLSX spreadsheet, worksheet Returns the columns defined in the Excel Spreadsheet worksheet
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Document input request</param>
@@ -8674,7 +8674,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Get rows and cells from a Excel XLSX spreadsheet, worksheet Returns the rows and cells defined in the Excel Spreadsheet worksheet
+        /// Get columns from a Excel XLSX spreadsheet, worksheet Returns the columns defined in the Excel Spreadsheet worksheet
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Document input request</param>

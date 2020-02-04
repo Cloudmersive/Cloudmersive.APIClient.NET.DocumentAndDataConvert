@@ -25,24 +25,22 @@ using SwaggerDateConverter = Cloudmersive.APIClient.NET.DocumentAndDataConvert.C
 namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
 {
     /// <summary>
-    /// Details of the screenshot request
+    /// Request to convert a URL to a PDF file
     /// </summary>
     [DataContract]
-    public partial class ScreenshotRequest :  IEquatable<ScreenshotRequest>, IValidatableObject
+    public partial class UrlToPdfRequest :  IEquatable<UrlToPdfRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ScreenshotRequest" /> class.
+        /// Initializes a new instance of the <see cref="UrlToPdfRequest" /> class.
         /// </summary>
         /// <param name="url">URL address of the website to screenshot.  HTTP and HTTPS are both supported, as are custom ports..</param>
         /// <param name="extraLoadingWait">Optional: Additional number of milliseconds to wait once the web page has finished loading before taking the screenshot.  Can be helpful for highly asynchronous websites.  Provide a value of 0 for the default of 5000 milliseconds (5 seconds).</param>
-        /// <param name="screenshotWidth">Optional: Width of the screenshot in pixels; supply 0 to default to 1280 x 1024.</param>
-        /// <param name="screenshotHeight">Optional: Height of the screenshot in pixels; supply 0 to default to 1280 x 1024, supply -1 to measure the full screen height of the page and attempt to take a screen-height screenshot.</param>
-        public ScreenshotRequest(string url = default(string), int? extraLoadingWait = default(int?), int? screenshotWidth = default(int?), int? screenshotHeight = default(int?))
+        /// <param name="includeBackgroundGraphics">Optional: Set to true to include background graphics in the PDF, or false to not include.  Default is true..</param>
+        public UrlToPdfRequest(string url = default(string), int? extraLoadingWait = default(int?), bool? includeBackgroundGraphics = default(bool?))
         {
             this.Url = url;
             this.ExtraLoadingWait = extraLoadingWait;
-            this.ScreenshotWidth = screenshotWidth;
-            this.ScreenshotHeight = screenshotHeight;
+            this.IncludeBackgroundGraphics = includeBackgroundGraphics;
         }
         
         /// <summary>
@@ -60,18 +58,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         public int? ExtraLoadingWait { get; set; }
 
         /// <summary>
-        /// Optional: Width of the screenshot in pixels; supply 0 to default to 1280 x 1024
+        /// Optional: Set to true to include background graphics in the PDF, or false to not include.  Default is true.
         /// </summary>
-        /// <value>Optional: Width of the screenshot in pixels; supply 0 to default to 1280 x 1024</value>
-        [DataMember(Name="ScreenshotWidth", EmitDefaultValue=false)]
-        public int? ScreenshotWidth { get; set; }
-
-        /// <summary>
-        /// Optional: Height of the screenshot in pixels; supply 0 to default to 1280 x 1024, supply -1 to measure the full screen height of the page and attempt to take a screen-height screenshot
-        /// </summary>
-        /// <value>Optional: Height of the screenshot in pixels; supply 0 to default to 1280 x 1024, supply -1 to measure the full screen height of the page and attempt to take a screen-height screenshot</value>
-        [DataMember(Name="ScreenshotHeight", EmitDefaultValue=false)]
-        public int? ScreenshotHeight { get; set; }
+        /// <value>Optional: Set to true to include background graphics in the PDF, or false to not include.  Default is true.</value>
+        [DataMember(Name="IncludeBackgroundGraphics", EmitDefaultValue=false)]
+        public bool? IncludeBackgroundGraphics { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -80,11 +71,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ScreenshotRequest {\n");
+            sb.Append("class UrlToPdfRequest {\n");
             sb.Append("  Url: ").Append(Url).Append("\n");
             sb.Append("  ExtraLoadingWait: ").Append(ExtraLoadingWait).Append("\n");
-            sb.Append("  ScreenshotWidth: ").Append(ScreenshotWidth).Append("\n");
-            sb.Append("  ScreenshotHeight: ").Append(ScreenshotHeight).Append("\n");
+            sb.Append("  IncludeBackgroundGraphics: ").Append(IncludeBackgroundGraphics).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -105,15 +95,15 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ScreenshotRequest);
+            return this.Equals(input as UrlToPdfRequest);
         }
 
         /// <summary>
-        /// Returns true if ScreenshotRequest instances are equal
+        /// Returns true if UrlToPdfRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of ScreenshotRequest to be compared</param>
+        /// <param name="input">Instance of UrlToPdfRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ScreenshotRequest input)
+        public bool Equals(UrlToPdfRequest input)
         {
             if (input == null)
                 return false;
@@ -130,14 +120,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                     this.ExtraLoadingWait.Equals(input.ExtraLoadingWait))
                 ) && 
                 (
-                    this.ScreenshotWidth == input.ScreenshotWidth ||
-                    (this.ScreenshotWidth != null &&
-                    this.ScreenshotWidth.Equals(input.ScreenshotWidth))
-                ) && 
-                (
-                    this.ScreenshotHeight == input.ScreenshotHeight ||
-                    (this.ScreenshotHeight != null &&
-                    this.ScreenshotHeight.Equals(input.ScreenshotHeight))
+                    this.IncludeBackgroundGraphics == input.IncludeBackgroundGraphics ||
+                    (this.IncludeBackgroundGraphics != null &&
+                    this.IncludeBackgroundGraphics.Equals(input.IncludeBackgroundGraphics))
                 );
         }
 
@@ -154,10 +139,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                     hashCode = hashCode * 59 + this.Url.GetHashCode();
                 if (this.ExtraLoadingWait != null)
                     hashCode = hashCode * 59 + this.ExtraLoadingWait.GetHashCode();
-                if (this.ScreenshotWidth != null)
-                    hashCode = hashCode * 59 + this.ScreenshotWidth.GetHashCode();
-                if (this.ScreenshotHeight != null)
-                    hashCode = hashCode * 59 + this.ScreenshotHeight.GetHashCode();
+                if (this.IncludeBackgroundGraphics != null)
+                    hashCode = hashCode * 59 + this.IncludeBackgroundGraphics.GetHashCode();
                 return hashCode;
             }
         }

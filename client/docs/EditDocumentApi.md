@@ -42,7 +42,7 @@ Method | HTTP request | Description
 [**EditDocumentXlsxDeleteWorksheet**](EditDocumentApi.md#editdocumentxlsxdeleteworksheet) | **POST** /convert/edit/xlsx/delete-worksheet | Delete, remove worksheet from an Excel XLSX spreadsheet document
 [**EditDocumentXlsxGetCellByIdentifier**](EditDocumentApi.md#editdocumentxlsxgetcellbyidentifier) | **POST** /convert/edit/xlsx/get-cell/by-identifier | Get cell from an Excel XLSX spreadsheet, worksheet by cell identifier
 [**EditDocumentXlsxGetCellByIndex**](EditDocumentApi.md#editdocumentxlsxgetcellbyindex) | **POST** /convert/edit/xlsx/get-cell/by-index | Get cell from an Excel XLSX spreadsheet, worksheet by index
-[**EditDocumentXlsxGetColumns**](EditDocumentApi.md#editdocumentxlsxgetcolumns) | **POST** /convert/edit/xlsx/get-columns | Get rows and cells from a Excel XLSX spreadsheet, worksheet
+[**EditDocumentXlsxGetColumns**](EditDocumentApi.md#editdocumentxlsxgetcolumns) | **POST** /convert/edit/xlsx/get-columns | Get columns from a Excel XLSX spreadsheet, worksheet
 [**EditDocumentXlsxGetImages**](EditDocumentApi.md#editdocumentxlsxgetimages) | **POST** /convert/edit/xlsx/get-images | Get images from a Excel XLSX spreadsheet, worksheet
 [**EditDocumentXlsxGetRowsAndCells**](EditDocumentApi.md#editdocumentxlsxgetrowsandcells) | **POST** /convert/edit/xlsx/get-rows-and-cells | Get rows and cells from a Excel XLSX spreadsheet, worksheet
 [**EditDocumentXlsxGetStyles**](EditDocumentApi.md#editdocumentxlsxgetstyles) | **POST** /convert/edit/xlsx/get-styles | Get styles from a Excel XLSX spreadsheet, worksheet
@@ -2564,9 +2564,9 @@ Name | Type | Description  | Notes
 # **EditDocumentXlsxGetColumns**
 > GetXlsxColumnsResponse EditDocumentXlsxGetColumns (GetXlsxColumnsRequest input)
 
-Get rows and cells from a Excel XLSX spreadsheet, worksheet
+Get columns from a Excel XLSX spreadsheet, worksheet
 
-Returns the rows and cells defined in the Excel Spreadsheet worksheet
+Returns the columns defined in the Excel Spreadsheet worksheet
 
 ### Example
 ```csharp
@@ -2592,7 +2592,7 @@ namespace Example
 
             try
             {
-                // Get rows and cells from a Excel XLSX spreadsheet, worksheet
+                // Get columns from a Excel XLSX spreadsheet, worksheet
                 GetXlsxColumnsResponse result = apiInstance.EditDocumentXlsxGetColumns(input);
                 Debug.WriteLine(result);
             }

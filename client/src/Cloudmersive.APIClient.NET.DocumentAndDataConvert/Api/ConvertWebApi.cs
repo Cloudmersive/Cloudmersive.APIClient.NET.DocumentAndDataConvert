@@ -138,7 +138,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">URL to PDF request parameters</param>
         /// <returns>byte[]</returns>
-        byte[] ConvertWebUrlToPdf (ScreenshotRequest input);
+        byte[] ConvertWebUrlToPdf (UrlToPdfRequest input);
 
         /// <summary>
         /// Convert a URL to PDF
@@ -149,7 +149,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">URL to PDF request parameters</param>
         /// <returns>ApiResponse of byte[]</returns>
-        ApiResponse<byte[]> ConvertWebUrlToPdfWithHttpInfo (ScreenshotRequest input);
+        ApiResponse<byte[]> ConvertWebUrlToPdfWithHttpInfo (UrlToPdfRequest input);
         /// <summary>
         /// Take screenshot of URL
         /// </summary>
@@ -308,7 +308,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">URL to PDF request parameters</param>
         /// <returns>Task of byte[]</returns>
-        System.Threading.Tasks.Task<byte[]> ConvertWebUrlToPdfAsync (ScreenshotRequest input);
+        System.Threading.Tasks.Task<byte[]> ConvertWebUrlToPdfAsync (UrlToPdfRequest input);
 
         /// <summary>
         /// Convert a URL to PDF
@@ -319,7 +319,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">URL to PDF request parameters</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertWebUrlToPdfAsyncWithHttpInfo (ScreenshotRequest input);
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertWebUrlToPdfAsyncWithHttpInfo (UrlToPdfRequest input);
         /// <summary>
         /// Take screenshot of URL
         /// </summary>
@@ -1281,7 +1281,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">URL to PDF request parameters</param>
         /// <returns>byte[]</returns>
-        public byte[] ConvertWebUrlToPdf (ScreenshotRequest input)
+        public byte[] ConvertWebUrlToPdf (UrlToPdfRequest input)
         {
              ApiResponse<byte[]> localVarResponse = ConvertWebUrlToPdfWithHttpInfo(input);
              return localVarResponse.Data;
@@ -1293,7 +1293,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">URL to PDF request parameters</param>
         /// <returns>ApiResponse of byte[]</returns>
-        public ApiResponse< byte[] > ConvertWebUrlToPdfWithHttpInfo (ScreenshotRequest input)
+        public ApiResponse< byte[] > ConvertWebUrlToPdfWithHttpInfo (UrlToPdfRequest input)
         {
             // verify the required parameter 'input' is set
             if (input == null)
@@ -1364,7 +1364,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">URL to PDF request parameters</param>
         /// <returns>Task of byte[]</returns>
-        public async System.Threading.Tasks.Task<byte[]> ConvertWebUrlToPdfAsync (ScreenshotRequest input)
+        public async System.Threading.Tasks.Task<byte[]> ConvertWebUrlToPdfAsync (UrlToPdfRequest input)
         {
              ApiResponse<byte[]> localVarResponse = await ConvertWebUrlToPdfAsyncWithHttpInfo(input);
              return localVarResponse.Data;
@@ -1377,7 +1377,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">URL to PDF request parameters</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertWebUrlToPdfAsyncWithHttpInfo (ScreenshotRequest input)
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertWebUrlToPdfAsyncWithHttpInfo (UrlToPdfRequest input)
         {
             // verify the required parameter 'input' is set
             if (input == null)

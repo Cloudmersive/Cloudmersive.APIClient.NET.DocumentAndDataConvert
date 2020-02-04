@@ -131,7 +131,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         public void ConvertWebUrlToPdfTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //ScreenshotRequest input = null;
+            //UrlToPdfRequest input = null;
             //var response = instance.ConvertWebUrlToPdf(input);
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
