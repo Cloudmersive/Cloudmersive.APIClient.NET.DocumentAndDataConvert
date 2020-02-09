@@ -497,6 +497,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test EditDocumentXlsxEnableSharedWorkbook
+        /// </summary>
+        [Test]
+        public void EditDocumentXlsxEnableSharedWorkbookTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //EnableSharedWorkbookRequest input = null;
+            //var response = instance.EditDocumentXlsxEnableSharedWorkbook(input);
+            //Assert.IsInstanceOf<EnableSharedWorkbookResponse> (response, "response is EnableSharedWorkbookResponse");
+        }
+        
+        /// <summary>
         /// Test EditDocumentXlsxGetCellByIdentifier
         /// </summary>
         [Test]

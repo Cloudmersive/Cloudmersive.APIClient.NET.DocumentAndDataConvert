@@ -40,6 +40,7 @@ Method | HTTP request | Description
 [**EditDocumentXlsxCreateBlankSpreadsheet**](EditDocumentApi.md#editdocumentxlsxcreateblankspreadsheet) | **POST** /convert/edit/xlsx/create/blank | Create a blank Excel XLSX spreadsheet
 [**EditDocumentXlsxCreateSpreadsheetFromData**](EditDocumentApi.md#editdocumentxlsxcreatespreadsheetfromdata) | **POST** /convert/edit/xlsx/create/from/data | Create a new Excel XLSX spreadsheet from column and row data
 [**EditDocumentXlsxDeleteWorksheet**](EditDocumentApi.md#editdocumentxlsxdeleteworksheet) | **POST** /convert/edit/xlsx/delete-worksheet | Delete, remove worksheet from an Excel XLSX spreadsheet document
+[**EditDocumentXlsxEnableSharedWorkbook**](EditDocumentApi.md#editdocumentxlsxenablesharedworkbook) | **POST** /convert/edit/xlsx/configuration/enable-shared-workbook | Enable Shared Workbook (legacy) in Excel XLSX spreadsheet
 [**EditDocumentXlsxGetCellByIdentifier**](EditDocumentApi.md#editdocumentxlsxgetcellbyidentifier) | **POST** /convert/edit/xlsx/get-cell/by-identifier | Get cell from an Excel XLSX spreadsheet, worksheet by cell identifier
 [**EditDocumentXlsxGetCellByIndex**](EditDocumentApi.md#editdocumentxlsxgetcellbyindex) | **POST** /convert/edit/xlsx/get-cell/by-index | Get cell from an Excel XLSX spreadsheet, worksheet by index
 [**EditDocumentXlsxGetColumns**](EditDocumentApi.md#editdocumentxlsxgetcolumns) | **POST** /convert/edit/xlsx/get-columns | Get columns from a Excel XLSX spreadsheet, worksheet
@@ -2425,6 +2426,72 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/octet-stream
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="editdocumentxlsxenablesharedworkbook"></a>
+# **EditDocumentXlsxEnableSharedWorkbook**
+> EnableSharedWorkbookResponse EditDocumentXlsxEnableSharedWorkbook (EnableSharedWorkbookRequest input)
+
+Enable Shared Workbook (legacy) in Excel XLSX spreadsheet
+
+Enables the Shared Workbook (legacy) mode in an Excel XLSX spreadsheet
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class EditDocumentXlsxEnableSharedWorkbookExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new EditDocumentApi();
+            var input = new EnableSharedWorkbookRequest(); // EnableSharedWorkbookRequest | Document input request
+
+            try
+            {
+                // Enable Shared Workbook (legacy) in Excel XLSX spreadsheet
+                EnableSharedWorkbookResponse result = apiInstance.EditDocumentXlsxEnableSharedWorkbook(input);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling EditDocumentApi.EditDocumentXlsxEnableSharedWorkbook: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **input** | [**EnableSharedWorkbookRequest**](EnableSharedWorkbookRequest.md)| Document input request | 
+
+### Return type
+
+[**EnableSharedWorkbookResponse**](EnableSharedWorkbookResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

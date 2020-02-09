@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 This C# SDK is for the [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api):
 
 - API version: v1
-- SDK version: 3.1.8
+- SDK version: 3.1.9
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -198,6 +198,7 @@ Class | Method | HTTP request | Description
 *EditDocumentApi* | [**EditDocumentXlsxCreateBlankSpreadsheet**](docs/EditDocumentApi.md#editdocumentxlsxcreateblankspreadsheet) | **POST** /convert/edit/xlsx/create/blank | Create a blank Excel XLSX spreadsheet
 *EditDocumentApi* | [**EditDocumentXlsxCreateSpreadsheetFromData**](docs/EditDocumentApi.md#editdocumentxlsxcreatespreadsheetfromdata) | **POST** /convert/edit/xlsx/create/from/data | Create a new Excel XLSX spreadsheet from column and row data
 *EditDocumentApi* | [**EditDocumentXlsxDeleteWorksheet**](docs/EditDocumentApi.md#editdocumentxlsxdeleteworksheet) | **POST** /convert/edit/xlsx/delete-worksheet | Delete, remove worksheet from an Excel XLSX spreadsheet document
+*EditDocumentApi* | [**EditDocumentXlsxEnableSharedWorkbook**](docs/EditDocumentApi.md#editdocumentxlsxenablesharedworkbook) | **POST** /convert/edit/xlsx/configuration/enable-shared-workbook | Enable Shared Workbook (legacy) in Excel XLSX spreadsheet
 *EditDocumentApi* | [**EditDocumentXlsxGetCellByIdentifier**](docs/EditDocumentApi.md#editdocumentxlsxgetcellbyidentifier) | **POST** /convert/edit/xlsx/get-cell/by-identifier | Get cell from an Excel XLSX spreadsheet, worksheet by cell identifier
 *EditDocumentApi* | [**EditDocumentXlsxGetCellByIndex**](docs/EditDocumentApi.md#editdocumentxlsxgetcellbyindex) | **POST** /convert/edit/xlsx/get-cell/by-index | Get cell from an Excel XLSX spreadsheet, worksheet by index
 *EditDocumentApi* | [**EditDocumentXlsxGetColumns**](docs/EditDocumentApi.md#editdocumentxlsxgetcolumns) | **POST** /convert/edit/xlsx/get-columns | Get columns from a Excel XLSX spreadsheet, worksheet
@@ -330,6 +331,8 @@ Class | Method | HTTP request | Description
  - [Model.DocxTemplateOperation](docs/DocxTemplateOperation.md)
  - [Model.DocxText](docs/DocxText.md)
  - [Model.DocxTopLevelComment](docs/DocxTopLevelComment.md)
+ - [Model.EnableSharedWorkbookRequest](docs/EnableSharedWorkbookRequest.md)
+ - [Model.EnableSharedWorkbookResponse](docs/EnableSharedWorkbookResponse.md)
  - [Model.ExifValue](docs/ExifValue.md)
  - [Model.FindRegexMatch](docs/FindRegexMatch.md)
  - [Model.FindStringMatch](docs/FindStringMatch.md)
