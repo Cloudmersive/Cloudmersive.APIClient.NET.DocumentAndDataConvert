@@ -90,6 +90,14 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         {
             // TODO unit test for the property 'IncludeBackgroundGraphics'
         }
+        /// <summary>
+        /// Test the property 'ScaleFactor'
+        /// </summary>
+        [Test]
+        public void ScaleFactorTest()
+        {
+            // TODO unit test for the property 'ScaleFactor'
+        }
 
     }
 
