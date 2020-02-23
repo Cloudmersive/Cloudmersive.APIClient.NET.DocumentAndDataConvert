@@ -781,6 +781,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> EditDocumentXlsxDeleteWorksheetWithHttpInfo (RemoveXlsxWorksheetRequest reqConfig);
         /// <summary>
+        /// Disable Shared Workbook (legacy) in Excel XLSX spreadsheet
+        /// </summary>
+        /// <remarks>
+        /// Disable the Shared Workbook (legacy) mode in an Excel XLSX spreadsheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Document input request</param>
+        /// <returns>DisableSharedWorkbookResponse</returns>
+        DisableSharedWorkbookResponse EditDocumentXlsxDisableSharedWorkbook (DisableSharedWorkbookRequest input);
+
+        /// <summary>
+        /// Disable Shared Workbook (legacy) in Excel XLSX spreadsheet
+        /// </summary>
+        /// <remarks>
+        /// Disable the Shared Workbook (legacy) mode in an Excel XLSX spreadsheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Document input request</param>
+        /// <returns>ApiResponse of DisableSharedWorkbookResponse</returns>
+        ApiResponse<DisableSharedWorkbookResponse> EditDocumentXlsxDisableSharedWorkbookWithHttpInfo (DisableSharedWorkbookRequest input);
+        /// <summary>
         /// Enable Shared Workbook (legacy) in Excel XLSX spreadsheet
         /// </summary>
         /// <remarks>
@@ -1769,6 +1790,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="reqConfig">Spreadsheet input request</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> EditDocumentXlsxDeleteWorksheetAsyncWithHttpInfo (RemoveXlsxWorksheetRequest reqConfig);
+        /// <summary>
+        /// Disable Shared Workbook (legacy) in Excel XLSX spreadsheet
+        /// </summary>
+        /// <remarks>
+        /// Disable the Shared Workbook (legacy) mode in an Excel XLSX spreadsheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Document input request</param>
+        /// <returns>Task of DisableSharedWorkbookResponse</returns>
+        System.Threading.Tasks.Task<DisableSharedWorkbookResponse> EditDocumentXlsxDisableSharedWorkbookAsync (DisableSharedWorkbookRequest input);
+
+        /// <summary>
+        /// Disable Shared Workbook (legacy) in Excel XLSX spreadsheet
+        /// </summary>
+        /// <remarks>
+        /// Disable the Shared Workbook (legacy) mode in an Excel XLSX spreadsheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Document input request</param>
+        /// <returns>Task of ApiResponse (DisableSharedWorkbookResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DisableSharedWorkbookResponse>> EditDocumentXlsxDisableSharedWorkbookAsyncWithHttpInfo (DisableSharedWorkbookRequest input);
         /// <summary>
         /// Enable Shared Workbook (legacy) in Excel XLSX spreadsheet
         /// </summary>
@@ -8268,6 +8310,179 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Disable Shared Workbook (legacy) in Excel XLSX spreadsheet Disable the Shared Workbook (legacy) mode in an Excel XLSX spreadsheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Document input request</param>
+        /// <returns>DisableSharedWorkbookResponse</returns>
+        public DisableSharedWorkbookResponse EditDocumentXlsxDisableSharedWorkbook (DisableSharedWorkbookRequest input)
+        {
+             ApiResponse<DisableSharedWorkbookResponse> localVarResponse = EditDocumentXlsxDisableSharedWorkbookWithHttpInfo(input);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Disable Shared Workbook (legacy) in Excel XLSX spreadsheet Disable the Shared Workbook (legacy) mode in an Excel XLSX spreadsheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Document input request</param>
+        /// <returns>ApiResponse of DisableSharedWorkbookResponse</returns>
+        public ApiResponse< DisableSharedWorkbookResponse > EditDocumentXlsxDisableSharedWorkbookWithHttpInfo (DisableSharedWorkbookRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling EditDocumentApi->EditDocumentXlsxDisableSharedWorkbook");
+
+            var localVarPath = "/convert/edit/xlsx/configuration/disable-shared-workbook";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentXlsxDisableSharedWorkbook", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DisableSharedWorkbookResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DisableSharedWorkbookResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DisableSharedWorkbookResponse)));
+        }
+
+        /// <summary>
+        /// Disable Shared Workbook (legacy) in Excel XLSX spreadsheet Disable the Shared Workbook (legacy) mode in an Excel XLSX spreadsheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Document input request</param>
+        /// <returns>Task of DisableSharedWorkbookResponse</returns>
+        public async System.Threading.Tasks.Task<DisableSharedWorkbookResponse> EditDocumentXlsxDisableSharedWorkbookAsync (DisableSharedWorkbookRequest input)
+        {
+             ApiResponse<DisableSharedWorkbookResponse> localVarResponse = await EditDocumentXlsxDisableSharedWorkbookAsyncWithHttpInfo(input);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Disable Shared Workbook (legacy) in Excel XLSX spreadsheet Disable the Shared Workbook (legacy) mode in an Excel XLSX spreadsheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Document input request</param>
+        /// <returns>Task of ApiResponse (DisableSharedWorkbookResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DisableSharedWorkbookResponse>> EditDocumentXlsxDisableSharedWorkbookAsyncWithHttpInfo (DisableSharedWorkbookRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling EditDocumentApi->EditDocumentXlsxDisableSharedWorkbook");
+
+            var localVarPath = "/convert/edit/xlsx/configuration/disable-shared-workbook";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentXlsxDisableSharedWorkbook", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DisableSharedWorkbookResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DisableSharedWorkbookResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DisableSharedWorkbookResponse)));
         }
 
         /// <summary>
