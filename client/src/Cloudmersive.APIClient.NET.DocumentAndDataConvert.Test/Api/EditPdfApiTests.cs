@@ -162,7 +162,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //System.IO.Stream inputFile = null;
-            //var response = instance.EditPdfGetPdfTextByPages(inputFile);
+            //string textFormattingMode = null;
+            //var response = instance.EditPdfGetPdfTextByPages(inputFile, textFormattingMode);
             //Assert.IsInstanceOf<PdfTextByPageResult> (response, "response is PdfTextByPageResult");
         }
         

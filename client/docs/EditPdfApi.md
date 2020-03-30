@@ -500,7 +500,7 @@ Name | Type | Description  | Notes
 
 <a name="editpdfgetpdftextbypages"></a>
 # **EditPdfGetPdfTextByPages**
-> PdfTextByPageResult EditPdfGetPdfTextByPages (System.IO.Stream inputFile)
+> PdfTextByPageResult EditPdfGetPdfTextByPages (System.IO.Stream inputFile, string textFormattingMode = null)
 
 Get text in a PDF document by page
 
@@ -527,11 +527,12 @@ namespace Example
 
             var apiInstance = new EditPdfApi();
             var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
+            var textFormattingMode = textFormattingMode_example;  // string | Optional; specify how whitespace should be handled when converting the document to text.  Possible values are 'preserveWhitespace' which will attempt to preserve whitespace in the document and relative positioning of text within the document, and 'minimizeWhitespace' which will not insert additional spaces into the document in most cases.  Default is 'preserveWhitespace'. (optional) 
 
             try
             {
                 // Get text in a PDF document by page
-                PdfTextByPageResult result = apiInstance.EditPdfGetPdfTextByPages(inputFile);
+                PdfTextByPageResult result = apiInstance.EditPdfGetPdfTextByPages(inputFile, textFormattingMode);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -548,6 +549,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
+ **textFormattingMode** | **string**| Optional; specify how whitespace should be handled when converting the document to text.  Possible values are &#39;preserveWhitespace&#39; which will attempt to preserve whitespace in the document and relative positioning of text within the document, and &#39;minimizeWhitespace&#39; which will not insert additional spaces into the document in most cases.  Default is &#39;preserveWhitespace&#39;. | [optional] 
 
 ### Return type
 

@@ -82,6 +82,14 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         {
             // TODO unit test for the property 'InputFileUrl'
         }
+        /// <summary>
+        /// Test the property 'MaximumPages'
+        /// </summary>
+        [Test]
+        public void MaximumPagesTest()
+        {
+            // TODO unit test for the property 'MaximumPages'
+        }
 
     }
 

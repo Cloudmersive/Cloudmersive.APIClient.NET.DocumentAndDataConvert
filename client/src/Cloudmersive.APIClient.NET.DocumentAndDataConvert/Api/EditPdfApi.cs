@@ -191,8 +191,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="textFormattingMode">Optional; specify how whitespace should be handled when converting the document to text.  Possible values are &#39;preserveWhitespace&#39; which will attempt to preserve whitespace in the document and relative positioning of text within the document, and &#39;minimizeWhitespace&#39; which will not insert additional spaces into the document in most cases.  Default is &#39;preserveWhitespace&#39;. (optional)</param>
         /// <returns>PdfTextByPageResult</returns>
-        PdfTextByPageResult EditPdfGetPdfTextByPages (System.IO.Stream inputFile);
+        PdfTextByPageResult EditPdfGetPdfTextByPages (System.IO.Stream inputFile, string textFormattingMode = null);
 
         /// <summary>
         /// Get text in a PDF document by page
@@ -202,8 +203,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="textFormattingMode">Optional; specify how whitespace should be handled when converting the document to text.  Possible values are &#39;preserveWhitespace&#39; which will attempt to preserve whitespace in the document and relative positioning of text within the document, and &#39;minimizeWhitespace&#39; which will not insert additional spaces into the document in most cases.  Default is &#39;preserveWhitespace&#39;. (optional)</param>
         /// <returns>ApiResponse of PdfTextByPageResult</returns>
-        ApiResponse<PdfTextByPageResult> EditPdfGetPdfTextByPagesWithHttpInfo (System.IO.Stream inputFile);
+        ApiResponse<PdfTextByPageResult> EditPdfGetPdfTextByPagesWithHttpInfo (System.IO.Stream inputFile, string textFormattingMode = null);
         /// <summary>
         /// Insert, copy pages from one PDF document into another
         /// </summary>
@@ -631,8 +633,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="textFormattingMode">Optional; specify how whitespace should be handled when converting the document to text.  Possible values are &#39;preserveWhitespace&#39; which will attempt to preserve whitespace in the document and relative positioning of text within the document, and &#39;minimizeWhitespace&#39; which will not insert additional spaces into the document in most cases.  Default is &#39;preserveWhitespace&#39;. (optional)</param>
         /// <returns>Task of PdfTextByPageResult</returns>
-        System.Threading.Tasks.Task<PdfTextByPageResult> EditPdfGetPdfTextByPagesAsync (System.IO.Stream inputFile);
+        System.Threading.Tasks.Task<PdfTextByPageResult> EditPdfGetPdfTextByPagesAsync (System.IO.Stream inputFile, string textFormattingMode = null);
 
         /// <summary>
         /// Get text in a PDF document by page
@@ -642,8 +645,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="textFormattingMode">Optional; specify how whitespace should be handled when converting the document to text.  Possible values are &#39;preserveWhitespace&#39; which will attempt to preserve whitespace in the document and relative positioning of text within the document, and &#39;minimizeWhitespace&#39; which will not insert additional spaces into the document in most cases.  Default is &#39;preserveWhitespace&#39;. (optional)</param>
         /// <returns>Task of ApiResponse (PdfTextByPageResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PdfTextByPageResult>> EditPdfGetPdfTextByPagesAsyncWithHttpInfo (System.IO.Stream inputFile);
+        System.Threading.Tasks.Task<ApiResponse<PdfTextByPageResult>> EditPdfGetPdfTextByPagesAsyncWithHttpInfo (System.IO.Stream inputFile, string textFormattingMode = null);
         /// <summary>
         /// Insert, copy pages from one PDF document into another
         /// </summary>
@@ -2104,10 +2108,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="textFormattingMode">Optional; specify how whitespace should be handled when converting the document to text.  Possible values are &#39;preserveWhitespace&#39; which will attempt to preserve whitespace in the document and relative positioning of text within the document, and &#39;minimizeWhitespace&#39; which will not insert additional spaces into the document in most cases.  Default is &#39;preserveWhitespace&#39;. (optional)</param>
         /// <returns>PdfTextByPageResult</returns>
-        public PdfTextByPageResult EditPdfGetPdfTextByPages (System.IO.Stream inputFile)
+        public PdfTextByPageResult EditPdfGetPdfTextByPages (System.IO.Stream inputFile, string textFormattingMode = null)
         {
-             ApiResponse<PdfTextByPageResult> localVarResponse = EditPdfGetPdfTextByPagesWithHttpInfo(inputFile);
+             ApiResponse<PdfTextByPageResult> localVarResponse = EditPdfGetPdfTextByPagesWithHttpInfo(inputFile, textFormattingMode);
              return localVarResponse.Data;
         }
 
@@ -2116,8 +2121,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="textFormattingMode">Optional; specify how whitespace should be handled when converting the document to text.  Possible values are &#39;preserveWhitespace&#39; which will attempt to preserve whitespace in the document and relative positioning of text within the document, and &#39;minimizeWhitespace&#39; which will not insert additional spaces into the document in most cases.  Default is &#39;preserveWhitespace&#39;. (optional)</param>
         /// <returns>ApiResponse of PdfTextByPageResult</returns>
-        public ApiResponse< PdfTextByPageResult > EditPdfGetPdfTextByPagesWithHttpInfo (System.IO.Stream inputFile)
+        public ApiResponse< PdfTextByPageResult > EditPdfGetPdfTextByPagesWithHttpInfo (System.IO.Stream inputFile, string textFormattingMode = null)
         {
             // verify the required parameter 'inputFile' is set
             if (inputFile == null)
@@ -2148,6 +2154,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (textFormattingMode != null) localVarHeaderParams.Add("textFormattingMode", this.Configuration.ApiClient.ParameterToString(textFormattingMode)); // header parameter
             if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
 
             // authentication (Apikey) required
@@ -2179,10 +2186,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="textFormattingMode">Optional; specify how whitespace should be handled when converting the document to text.  Possible values are &#39;preserveWhitespace&#39; which will attempt to preserve whitespace in the document and relative positioning of text within the document, and &#39;minimizeWhitespace&#39; which will not insert additional spaces into the document in most cases.  Default is &#39;preserveWhitespace&#39;. (optional)</param>
         /// <returns>Task of PdfTextByPageResult</returns>
-        public async System.Threading.Tasks.Task<PdfTextByPageResult> EditPdfGetPdfTextByPagesAsync (System.IO.Stream inputFile)
+        public async System.Threading.Tasks.Task<PdfTextByPageResult> EditPdfGetPdfTextByPagesAsync (System.IO.Stream inputFile, string textFormattingMode = null)
         {
-             ApiResponse<PdfTextByPageResult> localVarResponse = await EditPdfGetPdfTextByPagesAsyncWithHttpInfo(inputFile);
+             ApiResponse<PdfTextByPageResult> localVarResponse = await EditPdfGetPdfTextByPagesAsyncWithHttpInfo(inputFile, textFormattingMode);
              return localVarResponse.Data;
 
         }
@@ -2192,8 +2200,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="textFormattingMode">Optional; specify how whitespace should be handled when converting the document to text.  Possible values are &#39;preserveWhitespace&#39; which will attempt to preserve whitespace in the document and relative positioning of text within the document, and &#39;minimizeWhitespace&#39; which will not insert additional spaces into the document in most cases.  Default is &#39;preserveWhitespace&#39;. (optional)</param>
         /// <returns>Task of ApiResponse (PdfTextByPageResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PdfTextByPageResult>> EditPdfGetPdfTextByPagesAsyncWithHttpInfo (System.IO.Stream inputFile)
+        public async System.Threading.Tasks.Task<ApiResponse<PdfTextByPageResult>> EditPdfGetPdfTextByPagesAsyncWithHttpInfo (System.IO.Stream inputFile, string textFormattingMode = null)
         {
             // verify the required parameter 'inputFile' is set
             if (inputFile == null)
@@ -2224,6 +2233,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (textFormattingMode != null) localVarHeaderParams.Add("textFormattingMode", this.Configuration.ApiClient.ParameterToString(textFormattingMode)); // header parameter
             if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
 
             // authentication (Apikey) required
