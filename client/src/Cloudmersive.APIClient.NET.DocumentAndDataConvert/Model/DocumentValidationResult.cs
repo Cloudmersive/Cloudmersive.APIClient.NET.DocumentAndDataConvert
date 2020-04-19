@@ -34,12 +34,14 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Initializes a new instance of the <see cref="DocumentValidationResult" /> class.
         /// </summary>
         /// <param name="documentIsValid">True if the document is valid and has no errors, false otherwise.</param>
+        /// <param name="passwordProtected">True if the document is password protected, false otherwise.</param>
         /// <param name="errorCount">Number of validation errors found in the document.</param>
         /// <param name="warningCount">Number of validation warnings found in the document.</param>
         /// <param name="errorsAndWarnings">Details of errors and warnings found.</param>
-        public DocumentValidationResult(bool? documentIsValid = default(bool?), int? errorCount = default(int?), int? warningCount = default(int?), List<DocumentValidationError> errorsAndWarnings = default(List<DocumentValidationError>))
+        public DocumentValidationResult(bool? documentIsValid = default(bool?), bool? passwordProtected = default(bool?), int? errorCount = default(int?), int? warningCount = default(int?), List<DocumentValidationError> errorsAndWarnings = default(List<DocumentValidationError>))
         {
             this.DocumentIsValid = documentIsValid;
+            this.PasswordProtected = passwordProtected;
             this.ErrorCount = errorCount;
             this.WarningCount = warningCount;
             this.ErrorsAndWarnings = errorsAndWarnings;
@@ -51,6 +53,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <value>True if the document is valid and has no errors, false otherwise</value>
         [DataMember(Name="DocumentIsValid", EmitDefaultValue=false)]
         public bool? DocumentIsValid { get; set; }
+
+        /// <summary>
+        /// True if the document is password protected, false otherwise
+        /// </summary>
+        /// <value>True if the document is password protected, false otherwise</value>
+        [DataMember(Name="PasswordProtected", EmitDefaultValue=false)]
+        public bool? PasswordProtected { get; set; }
 
         /// <summary>
         /// Number of validation errors found in the document
@@ -82,6 +91,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
             var sb = new StringBuilder();
             sb.Append("class DocumentValidationResult {\n");
             sb.Append("  DocumentIsValid: ").Append(DocumentIsValid).Append("\n");
+            sb.Append("  PasswordProtected: ").Append(PasswordProtected).Append("\n");
             sb.Append("  ErrorCount: ").Append(ErrorCount).Append("\n");
             sb.Append("  WarningCount: ").Append(WarningCount).Append("\n");
             sb.Append("  ErrorsAndWarnings: ").Append(ErrorsAndWarnings).Append("\n");
@@ -125,6 +135,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                     this.DocumentIsValid.Equals(input.DocumentIsValid))
                 ) && 
                 (
+                    this.PasswordProtected == input.PasswordProtected ||
+                    (this.PasswordProtected != null &&
+                    this.PasswordProtected.Equals(input.PasswordProtected))
+                ) && 
+                (
                     this.ErrorCount == input.ErrorCount ||
                     (this.ErrorCount != null &&
                     this.ErrorCount.Equals(input.ErrorCount))
@@ -152,6 +167,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                 int hashCode = 41;
                 if (this.DocumentIsValid != null)
                     hashCode = hashCode * 59 + this.DocumentIsValid.GetHashCode();
+                if (this.PasswordProtected != null)
+                    hashCode = hashCode * 59 + this.PasswordProtected.GetHashCode();
                 if (this.ErrorCount != null)
                     hashCode = hashCode * 59 + this.ErrorCount.GetHashCode();
                 if (this.WarningCount != null)

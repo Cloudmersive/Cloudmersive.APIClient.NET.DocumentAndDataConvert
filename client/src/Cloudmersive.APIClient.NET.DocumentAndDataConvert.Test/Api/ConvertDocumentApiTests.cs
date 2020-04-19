@@ -414,6 +414,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test ConvertDocumentXlsxToCsvMulti
+        /// </summary>
+        [Test]
+        public void ConvertDocumentXlsxToCsvMultiTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //string outputEncoding = null;
+            //var response = instance.ConvertDocumentXlsxToCsvMulti(inputFile, outputEncoding);
+            //Assert.IsInstanceOf<CsvCollection> (response, "response is CsvCollection");
+        }
+        
+        /// <summary>
         /// Test ConvertDocumentXlsxToPdf
         /// </summary>
         [Test]

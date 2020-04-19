@@ -112,7 +112,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Validate a PDF document file
         /// </summary>
         /// <remarks>
-        /// Validate a PDF document; if the document is not valid, identifies the errors in the document
+        /// Validate a PDF document; if the document is not valid, identifies the errors in the document.  Also checks if the PDF is password protected.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -123,7 +123,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Validate a PDF document file
         /// </summary>
         /// <remarks>
-        /// Validate a PDF document; if the document is not valid, identifies the errors in the document
+        /// Validate a PDF document; if the document is not valid, identifies the errors in the document.  Also checks if the PDF is password protected.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -282,7 +282,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Validate a PDF document file
         /// </summary>
         /// <remarks>
-        /// Validate a PDF document; if the document is not valid, identifies the errors in the document
+        /// Validate a PDF document; if the document is not valid, identifies the errors in the document.  Also checks if the PDF is password protected.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -293,7 +293,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Validate a PDF document file
         /// </summary>
         /// <remarks>
-        /// Validate a PDF document; if the document is not valid, identifies the errors in the document
+        /// Validate a PDF document; if the document is not valid, identifies the errors in the document.  Also checks if the PDF is password protected.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -1067,7 +1067,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Validate a PDF document file Validate a PDF document; if the document is not valid, identifies the errors in the document
+        /// Validate a PDF document file Validate a PDF document; if the document is not valid, identifies the errors in the document.  Also checks if the PDF is password protected.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -1079,7 +1079,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Validate a PDF document file Validate a PDF document; if the document is not valid, identifies the errors in the document
+        /// Validate a PDF document file Validate a PDF document; if the document is not valid, identifies the errors in the document.  Also checks if the PDF is password protected.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -1142,7 +1142,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Validate a PDF document file Validate a PDF document; if the document is not valid, identifies the errors in the document
+        /// Validate a PDF document file Validate a PDF document; if the document is not valid, identifies the errors in the document.  Also checks if the PDF is password protected.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -1155,7 +1155,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Validate a PDF document file Validate a PDF document; if the document is not valid, identifies the errors in the document
+        /// Validate a PDF document file Validate a PDF document; if the document is not valid, identifies the errors in the document.  Also checks if the PDF is password protected.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>

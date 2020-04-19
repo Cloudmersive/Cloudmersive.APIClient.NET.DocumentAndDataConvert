@@ -75,6 +75,14 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             // TODO unit test for the property 'DocumentIsValid'
         }
         /// <summary>
+        /// Test the property 'PasswordProtected'
+        /// </summary>
+        [Test]
+        public void PasswordProtectedTest()
+        {
+            // TODO unit test for the property 'PasswordProtected'
+        }
+        /// <summary>
         /// Test the property 'ErrorCount'
         /// </summary>
         [Test]
