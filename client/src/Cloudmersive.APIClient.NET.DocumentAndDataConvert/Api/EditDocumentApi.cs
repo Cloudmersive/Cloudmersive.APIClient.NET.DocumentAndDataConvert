@@ -151,6 +151,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of DeleteDocxTableRowRangeResponse</returns>
         ApiResponse<DeleteDocxTableRowRangeResponse> EditDocumentDocxDeleteTableRowRangeWithHttpInfo (DeleteDocxTableRowRangeRequest reqConfig);
         /// <summary>
+        /// Find matching paragraphs in a Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Returns the paragraphs defined in the Word Document (DOCX) format file that match the input criteria
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>FindDocxParagraphResponse</returns>
+        FindDocxParagraphResponse EditDocumentDocxFindParagraph (FindDocxParagraphRequest reqConfig);
+
+        /// <summary>
+        /// Find matching paragraphs in a Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Returns the paragraphs defined in the Word Document (DOCX) format file that match the input criteria
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>ApiResponse of FindDocxParagraphResponse</returns>
+        ApiResponse<FindDocxParagraphResponse> EditDocumentDocxFindParagraphWithHttpInfo (FindDocxParagraphRequest reqConfig);
+        /// <summary>
         /// Get comments from a Word DOCX document as a flat list
         /// </summary>
         /// <remarks>
@@ -528,6 +549,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="reqConfig">Document string replacement configuration input</param>
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> EditDocumentDocxReplaceWithHttpInfo (ReplaceStringRequest reqConfig);
+        /// <summary>
+        /// Replace matching paragraphs in a Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Returns the edited Word Document (DOCX) format file with the matching paragraphs replaced as requested.  Replace a paragraph with another object such as an image.  Useful for performing templating operations.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>ReplaceDocxParagraphResponse</returns>
+        ReplaceDocxParagraphResponse EditDocumentDocxReplaceParagraph (ReplaceDocxParagraphRequest reqConfig);
+
+        /// <summary>
+        /// Replace matching paragraphs in a Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Returns the edited Word Document (DOCX) format file with the matching paragraphs replaced as requested.  Replace a paragraph with another object such as an image.  Useful for performing templating operations.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>ApiResponse of ReplaceDocxParagraphResponse</returns>
+        ApiResponse<ReplaceDocxParagraphResponse> EditDocumentDocxReplaceParagraphWithHttpInfo (ReplaceDocxParagraphRequest reqConfig);
         /// <summary>
         /// Set the footer in a Word DOCX document
         /// </summary>
@@ -1161,6 +1203,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (DeleteDocxTableRowRangeResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<DeleteDocxTableRowRangeResponse>> EditDocumentDocxDeleteTableRowRangeAsyncWithHttpInfo (DeleteDocxTableRowRangeRequest reqConfig);
         /// <summary>
+        /// Find matching paragraphs in a Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Returns the paragraphs defined in the Word Document (DOCX) format file that match the input criteria
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>Task of FindDocxParagraphResponse</returns>
+        System.Threading.Tasks.Task<FindDocxParagraphResponse> EditDocumentDocxFindParagraphAsync (FindDocxParagraphRequest reqConfig);
+
+        /// <summary>
+        /// Find matching paragraphs in a Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Returns the paragraphs defined in the Word Document (DOCX) format file that match the input criteria
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>Task of ApiResponse (FindDocxParagraphResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FindDocxParagraphResponse>> EditDocumentDocxFindParagraphAsyncWithHttpInfo (FindDocxParagraphRequest reqConfig);
+        /// <summary>
         /// Get comments from a Word DOCX document as a flat list
         /// </summary>
         /// <remarks>
@@ -1538,6 +1601,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="reqConfig">Document string replacement configuration input</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDocumentDocxReplaceAsyncWithHttpInfo (ReplaceStringRequest reqConfig);
+        /// <summary>
+        /// Replace matching paragraphs in a Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Returns the edited Word Document (DOCX) format file with the matching paragraphs replaced as requested.  Replace a paragraph with another object such as an image.  Useful for performing templating operations.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>Task of ReplaceDocxParagraphResponse</returns>
+        System.Threading.Tasks.Task<ReplaceDocxParagraphResponse> EditDocumentDocxReplaceParagraphAsync (ReplaceDocxParagraphRequest reqConfig);
+
+        /// <summary>
+        /// Replace matching paragraphs in a Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Returns the edited Word Document (DOCX) format file with the matching paragraphs replaced as requested.  Replace a paragraph with another object such as an image.  Useful for performing templating operations.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>Task of ApiResponse (ReplaceDocxParagraphResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ReplaceDocxParagraphResponse>> EditDocumentDocxReplaceParagraphAsyncWithHttpInfo (ReplaceDocxParagraphRequest reqConfig);
         /// <summary>
         /// Set the footer in a Word DOCX document
         /// </summary>
@@ -3150,6 +3234,179 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<DeleteDocxTableRowRangeResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (DeleteDocxTableRowRangeResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteDocxTableRowRangeResponse)));
+        }
+
+        /// <summary>
+        /// Find matching paragraphs in a Word DOCX document Returns the paragraphs defined in the Word Document (DOCX) format file that match the input criteria
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>FindDocxParagraphResponse</returns>
+        public FindDocxParagraphResponse EditDocumentDocxFindParagraph (FindDocxParagraphRequest reqConfig)
+        {
+             ApiResponse<FindDocxParagraphResponse> localVarResponse = EditDocumentDocxFindParagraphWithHttpInfo(reqConfig);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Find matching paragraphs in a Word DOCX document Returns the paragraphs defined in the Word Document (DOCX) format file that match the input criteria
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>ApiResponse of FindDocxParagraphResponse</returns>
+        public ApiResponse< FindDocxParagraphResponse > EditDocumentDocxFindParagraphWithHttpInfo (FindDocxParagraphRequest reqConfig)
+        {
+            // verify the required parameter 'reqConfig' is set
+            if (reqConfig == null)
+                throw new ApiException(400, "Missing required parameter 'reqConfig' when calling EditDocumentApi->EditDocumentDocxFindParagraph");
+
+            var localVarPath = "/convert/edit/docx/find/paragraph";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reqConfig; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentDocxFindParagraph", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<FindDocxParagraphResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FindDocxParagraphResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FindDocxParagraphResponse)));
+        }
+
+        /// <summary>
+        /// Find matching paragraphs in a Word DOCX document Returns the paragraphs defined in the Word Document (DOCX) format file that match the input criteria
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>Task of FindDocxParagraphResponse</returns>
+        public async System.Threading.Tasks.Task<FindDocxParagraphResponse> EditDocumentDocxFindParagraphAsync (FindDocxParagraphRequest reqConfig)
+        {
+             ApiResponse<FindDocxParagraphResponse> localVarResponse = await EditDocumentDocxFindParagraphAsyncWithHttpInfo(reqConfig);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Find matching paragraphs in a Word DOCX document Returns the paragraphs defined in the Word Document (DOCX) format file that match the input criteria
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>Task of ApiResponse (FindDocxParagraphResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FindDocxParagraphResponse>> EditDocumentDocxFindParagraphAsyncWithHttpInfo (FindDocxParagraphRequest reqConfig)
+        {
+            // verify the required parameter 'reqConfig' is set
+            if (reqConfig == null)
+                throw new ApiException(400, "Missing required parameter 'reqConfig' when calling EditDocumentApi->EditDocumentDocxFindParagraph");
+
+            var localVarPath = "/convert/edit/docx/find/paragraph";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reqConfig; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentDocxFindParagraph", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<FindDocxParagraphResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FindDocxParagraphResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FindDocxParagraphResponse)));
         }
 
         /// <summary>
@@ -6258,6 +6515,179 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Replace matching paragraphs in a Word DOCX document Returns the edited Word Document (DOCX) format file with the matching paragraphs replaced as requested.  Replace a paragraph with another object such as an image.  Useful for performing templating operations.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>ReplaceDocxParagraphResponse</returns>
+        public ReplaceDocxParagraphResponse EditDocumentDocxReplaceParagraph (ReplaceDocxParagraphRequest reqConfig)
+        {
+             ApiResponse<ReplaceDocxParagraphResponse> localVarResponse = EditDocumentDocxReplaceParagraphWithHttpInfo(reqConfig);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Replace matching paragraphs in a Word DOCX document Returns the edited Word Document (DOCX) format file with the matching paragraphs replaced as requested.  Replace a paragraph with another object such as an image.  Useful for performing templating operations.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>ApiResponse of ReplaceDocxParagraphResponse</returns>
+        public ApiResponse< ReplaceDocxParagraphResponse > EditDocumentDocxReplaceParagraphWithHttpInfo (ReplaceDocxParagraphRequest reqConfig)
+        {
+            // verify the required parameter 'reqConfig' is set
+            if (reqConfig == null)
+                throw new ApiException(400, "Missing required parameter 'reqConfig' when calling EditDocumentApi->EditDocumentDocxReplaceParagraph");
+
+            var localVarPath = "/convert/edit/docx/replace/paragraph";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reqConfig; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentDocxReplaceParagraph", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ReplaceDocxParagraphResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ReplaceDocxParagraphResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReplaceDocxParagraphResponse)));
+        }
+
+        /// <summary>
+        /// Replace matching paragraphs in a Word DOCX document Returns the edited Word Document (DOCX) format file with the matching paragraphs replaced as requested.  Replace a paragraph with another object such as an image.  Useful for performing templating operations.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>Task of ReplaceDocxParagraphResponse</returns>
+        public async System.Threading.Tasks.Task<ReplaceDocxParagraphResponse> EditDocumentDocxReplaceParagraphAsync (ReplaceDocxParagraphRequest reqConfig)
+        {
+             ApiResponse<ReplaceDocxParagraphResponse> localVarResponse = await EditDocumentDocxReplaceParagraphAsyncWithHttpInfo(reqConfig);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Replace matching paragraphs in a Word DOCX document Returns the edited Word Document (DOCX) format file with the matching paragraphs replaced as requested.  Replace a paragraph with another object such as an image.  Useful for performing templating operations.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document input request</param>
+        /// <returns>Task of ApiResponse (ReplaceDocxParagraphResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ReplaceDocxParagraphResponse>> EditDocumentDocxReplaceParagraphAsyncWithHttpInfo (ReplaceDocxParagraphRequest reqConfig)
+        {
+            // verify the required parameter 'reqConfig' is set
+            if (reqConfig == null)
+                throw new ApiException(400, "Missing required parameter 'reqConfig' when calling EditDocumentApi->EditDocumentDocxReplaceParagraph");
+
+            var localVarPath = "/convert/edit/docx/replace/paragraph";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reqConfig; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentDocxReplaceParagraph", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ReplaceDocxParagraphResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ReplaceDocxParagraphResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReplaceDocxParagraphResponse)));
         }
 
         /// <summary>

@@ -71,8 +71,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         public void ZipArchiveZipCreateTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.ZipArchiveZipCreate();
-            //Assert.IsInstanceOf<Object> (response, "response is Object");
+            //System.IO.Stream inputFile1 = null;
+            //System.IO.Stream inputFile2 = null;
+            //System.IO.Stream inputFile3 = null;
+            //System.IO.Stream inputFile4 = null;
+            //System.IO.Stream inputFile5 = null;
+            //System.IO.Stream inputFile6 = null;
+            //System.IO.Stream inputFile7 = null;
+            //System.IO.Stream inputFile8 = null;
+            //System.IO.Stream inputFile9 = null;
+            //System.IO.Stream inputFile10 = null;
+            //var response = instance.ZipArchiveZipCreate(inputFile1, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
         /// <summary>
@@ -84,6 +94,31 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             // TODO uncomment below to test the method and replace null with proper value
             //CreateZipArchiveRequest request = null;
             //var response = instance.ZipArchiveZipCreateAdvanced(request);
+            //Assert.IsInstanceOf<Object> (response, "response is Object");
+        }
+        
+        /// <summary>
+        /// Test ZipArchiveZipDecrypt
+        /// </summary>
+        [Test]
+        public void ZipArchiveZipDecryptTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //string zipPassword = null;
+            //var response = instance.ZipArchiveZipDecrypt(inputFile, zipPassword);
+            //Assert.IsInstanceOf<Object> (response, "response is Object");
+        }
+        
+        /// <summary>
+        /// Test ZipArchiveZipEncryptAdvanced
+        /// </summary>
+        [Test]
+        public void ZipArchiveZipEncryptAdvancedTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //ZipEncryptionAdvancedRequest encryptionRequest = null;
+            //var response = instance.ZipArchiveZipEncryptAdvanced(encryptionRequest);
             //Assert.IsInstanceOf<Object> (response, "response is Object");
         }
         

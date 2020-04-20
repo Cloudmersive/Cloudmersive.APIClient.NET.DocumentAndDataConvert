@@ -34,7 +34,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Initializes a new instance of the <see cref="DocxRun" /> class.
         /// </summary>
         /// <param name="runIndex">Index of the run, 0-based.</param>
-        /// <param name="path">The Path of the location of this object; leave blank for new tables.</param>
+        /// <param name="path">The Path of the location of this Run object; leave blank for creation.</param>
         /// <param name="textItems">Text items inside the run; this is where the actual text content is stored.</param>
         /// <param name="bold">True to make the text bold, false otherwise.</param>
         /// <param name="italic">True to make the text italic, false otherwise.</param>
@@ -61,9 +61,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         public int? RunIndex { get; set; }
 
         /// <summary>
-        /// The Path of the location of this object; leave blank for new tables
+        /// The Path of the location of this Run object; leave blank for creation
         /// </summary>
-        /// <value>The Path of the location of this object; leave blank for new tables</value>
+        /// <value>The Path of the location of this Run object; leave blank for creation</value>
         [DataMember(Name="Path", EmitDefaultValue=false)]
         public string Path { get; set; }
 

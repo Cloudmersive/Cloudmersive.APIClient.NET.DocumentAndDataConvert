@@ -34,7 +34,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Initializes a new instance of the <see cref="DocxParagraph" /> class.
         /// </summary>
         /// <param name="paragraphIndex">The index of the paragraph; 0-based.</param>
-        /// <param name="path">The Path of the location of this object; leave blank for new tables.</param>
+        /// <param name="path">The Path of the location of this Paragraph object; leave blank during creation.</param>
         /// <param name="contentRuns">The content runs in the paragraph - this is where text is stored; similar to a span in HTML.</param>
         /// <param name="styleID">Style ID of the style applied to the paragraph; null if no style is applied.</param>
         public DocxParagraph(int? paragraphIndex = default(int?), string path = default(string), List<DocxRun> contentRuns = default(List<DocxRun>), string styleID = default(string))
@@ -53,9 +53,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         public int? ParagraphIndex { get; set; }
 
         /// <summary>
-        /// The Path of the location of this object; leave blank for new tables
+        /// The Path of the location of this Paragraph object; leave blank during creation
         /// </summary>
-        /// <value>The Path of the location of this object; leave blank for new tables</value>
+        /// <value>The Path of the location of this Paragraph object; leave blank during creation</value>
         [DataMember(Name="Path", EmitDefaultValue=false)]
         public string Path { get; set; }
 

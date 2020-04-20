@@ -25,44 +25,44 @@ using SwaggerDateConverter = Cloudmersive.APIClient.NET.DocumentAndDataConvert.C
 namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
 {
     /// <summary>
-    /// Unit of text content in a Word Document (DOCX) file
+    /// Result of performing a find matching paragraphs operation on a Word Document
     /// </summary>
     [DataContract]
-    public partial class DocxText :  IEquatable<DocxText>, IValidatableObject
+    public partial class FindDocxParagraphResponse :  IEquatable<FindDocxParagraphResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="DocxText" /> class.
+        /// Initializes a new instance of the <see cref="FindDocxParagraphResponse" /> class.
         /// </summary>
-        /// <param name="textIndex">Index of the text content in the run; 0-based.</param>
-        /// <param name="path">The Path of the location of this Text object; leave blank for creation.</param>
-        /// <param name="textContent">Text string containing the text content of this text content item.</param>
-        public DocxText(int? textIndex = default(int?), string path = default(string), string textContent = default(string))
+        /// <param name="successful">True if successful; false otherwise.</param>
+        /// <param name="matchingParagraphs">Matching paragraphs.</param>
+        /// <param name="count">Count of matching paragraphs.</param>
+        public FindDocxParagraphResponse(bool? successful = default(bool?), List<DocxParagraph> matchingParagraphs = default(List<DocxParagraph>), int? count = default(int?))
         {
-            this.TextIndex = textIndex;
-            this.Path = path;
-            this.TextContent = textContent;
+            this.Successful = successful;
+            this.MatchingParagraphs = matchingParagraphs;
+            this.Count = count;
         }
         
         /// <summary>
-        /// Index of the text content in the run; 0-based
+        /// True if successful; false otherwise
         /// </summary>
-        /// <value>Index of the text content in the run; 0-based</value>
-        [DataMember(Name="TextIndex", EmitDefaultValue=false)]
-        public int? TextIndex { get; set; }
+        /// <value>True if successful; false otherwise</value>
+        [DataMember(Name="Successful", EmitDefaultValue=false)]
+        public bool? Successful { get; set; }
 
         /// <summary>
-        /// The Path of the location of this Text object; leave blank for creation
+        /// Matching paragraphs
         /// </summary>
-        /// <value>The Path of the location of this Text object; leave blank for creation</value>
-        [DataMember(Name="Path", EmitDefaultValue=false)]
-        public string Path { get; set; }
+        /// <value>Matching paragraphs</value>
+        [DataMember(Name="MatchingParagraphs", EmitDefaultValue=false)]
+        public List<DocxParagraph> MatchingParagraphs { get; set; }
 
         /// <summary>
-        /// Text string containing the text content of this text content item
+        /// Count of matching paragraphs
         /// </summary>
-        /// <value>Text string containing the text content of this text content item</value>
-        [DataMember(Name="TextContent", EmitDefaultValue=false)]
-        public string TextContent { get; set; }
+        /// <value>Count of matching paragraphs</value>
+        [DataMember(Name="Count", EmitDefaultValue=false)]
+        public int? Count { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -71,10 +71,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class DocxText {\n");
-            sb.Append("  TextIndex: ").Append(TextIndex).Append("\n");
-            sb.Append("  Path: ").Append(Path).Append("\n");
-            sb.Append("  TextContent: ").Append(TextContent).Append("\n");
+            sb.Append("class FindDocxParagraphResponse {\n");
+            sb.Append("  Successful: ").Append(Successful).Append("\n");
+            sb.Append("  MatchingParagraphs: ").Append(MatchingParagraphs).Append("\n");
+            sb.Append("  Count: ").Append(Count).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -95,34 +95,34 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as DocxText);
+            return this.Equals(input as FindDocxParagraphResponse);
         }
 
         /// <summary>
-        /// Returns true if DocxText instances are equal
+        /// Returns true if FindDocxParagraphResponse instances are equal
         /// </summary>
-        /// <param name="input">Instance of DocxText to be compared</param>
+        /// <param name="input">Instance of FindDocxParagraphResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(DocxText input)
+        public bool Equals(FindDocxParagraphResponse input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.TextIndex == input.TextIndex ||
-                    (this.TextIndex != null &&
-                    this.TextIndex.Equals(input.TextIndex))
+                    this.Successful == input.Successful ||
+                    (this.Successful != null &&
+                    this.Successful.Equals(input.Successful))
                 ) && 
                 (
-                    this.Path == input.Path ||
-                    (this.Path != null &&
-                    this.Path.Equals(input.Path))
+                    this.MatchingParagraphs == input.MatchingParagraphs ||
+                    this.MatchingParagraphs != null &&
+                    this.MatchingParagraphs.SequenceEqual(input.MatchingParagraphs)
                 ) && 
                 (
-                    this.TextContent == input.TextContent ||
-                    (this.TextContent != null &&
-                    this.TextContent.Equals(input.TextContent))
+                    this.Count == input.Count ||
+                    (this.Count != null &&
+                    this.Count.Equals(input.Count))
                 );
         }
 
@@ -135,12 +135,12 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.TextIndex != null)
-                    hashCode = hashCode * 59 + this.TextIndex.GetHashCode();
-                if (this.Path != null)
-                    hashCode = hashCode * 59 + this.Path.GetHashCode();
-                if (this.TextContent != null)
-                    hashCode = hashCode * 59 + this.TextContent.GetHashCode();
+                if (this.Successful != null)
+                    hashCode = hashCode * 59 + this.Successful.GetHashCode();
+                if (this.MatchingParagraphs != null)
+                    hashCode = hashCode * 59 + this.MatchingParagraphs.GetHashCode();
+                if (this.Count != null)
+                    hashCode = hashCode * 59 + this.Count.GetHashCode();
                 return hashCode;
             }
         }

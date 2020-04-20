@@ -137,6 +137,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test EditDocumentDocxFindParagraph
+        /// </summary>
+        [Test]
+        public void EditDocumentDocxFindParagraphTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //FindDocxParagraphRequest reqConfig = null;
+            //var response = instance.EditDocumentDocxFindParagraph(reqConfig);
+            //Assert.IsInstanceOf<FindDocxParagraphResponse> (response, "response is FindDocxParagraphResponse");
+        }
+        
+        /// <summary>
         /// Test EditDocumentDocxGetComments
         /// </summary>
         [Test]
@@ -350,6 +362,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //ReplaceStringRequest reqConfig = null;
             //var response = instance.EditDocumentDocxReplace(reqConfig);
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
+        /// Test EditDocumentDocxReplaceParagraph
+        /// </summary>
+        [Test]
+        public void EditDocumentDocxReplaceParagraphTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //ReplaceDocxParagraphRequest reqConfig = null;
+            //var response = instance.EditDocumentDocxReplaceParagraph(reqConfig);
+            //Assert.IsInstanceOf<ReplaceDocxParagraphResponse> (response, "response is ReplaceDocxParagraphResponse");
         }
         
         /// <summary>
