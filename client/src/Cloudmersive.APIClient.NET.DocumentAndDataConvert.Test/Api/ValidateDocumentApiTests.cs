@@ -77,6 +77,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test ValidateDocumentCsvValidation
+        /// </summary>
+        [Test]
+        public void ValidateDocumentCsvValidationTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.ValidateDocumentCsvValidation(inputFile);
+            //Assert.IsInstanceOf<DocumentValidationResult> (response, "response is DocumentValidationResult");
+        }
+        
+        /// <summary>
         /// Test ValidateDocumentDocxValidation
         /// </summary>
         [Test]

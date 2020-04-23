@@ -23,7 +23,7 @@ Method | HTTP request | Description
 
 <a name="convertdatacsvtojson"></a>
 # **ConvertDataCsvToJson**
-> Object ConvertDataCsvToJson (System.IO.Stream inputFile)
+> Object ConvertDataCsvToJson (System.IO.Stream inputFile, bool? columnNamesFromFirstRow = null)
 
 Convert CSV to JSON conversion
 
@@ -50,11 +50,12 @@ namespace Example
 
             var apiInstance = new ConvertDataApi();
             var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
+            var columnNamesFromFirstRow = true;  // bool? | Optional; If true, the first row will be used as the labels for the columns; if false, columns will be named Column0, Column1, etc.  Default is true.  Set to false if you are not using column headings, or have an irregular column structure. (optional) 
 
             try
             {
                 // Convert CSV to JSON conversion
-                Object result = apiInstance.ConvertDataCsvToJson(inputFile);
+                Object result = apiInstance.ConvertDataCsvToJson(inputFile, columnNamesFromFirstRow);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -71,6 +72,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
+ **columnNamesFromFirstRow** | **bool?**| Optional; If true, the first row will be used as the labels for the columns; if false, columns will be named Column0, Column1, etc.  Default is true.  Set to false if you are not using column headings, or have an irregular column structure. | [optional] 
 
 ### Return type
 

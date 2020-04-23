@@ -46,6 +46,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of AutodetectDocumentValidationResult</returns>
         ApiResponse<AutodetectDocumentValidationResult> ValidateDocumentAutodetectValidationWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
+        /// Validate a CSV file document (CSV)
+        /// </summary>
+        /// <remarks>
+        /// Validate a CSV file document (CSV); if the document is not valid, identifies the errors in the document
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>DocumentValidationResult</returns>
+        DocumentValidationResult ValidateDocumentCsvValidation (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Validate a CSV file document (CSV)
+        /// </summary>
+        /// <remarks>
+        /// Validate a CSV file document (CSV); if the document is not valid, identifies the errors in the document
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of DocumentValidationResult</returns>
+        ApiResponse<DocumentValidationResult> ValidateDocumentCsvValidationWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
         /// Validate a Word document (DOCX)
         /// </summary>
         /// <remarks>
@@ -299,6 +320,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>Task of ApiResponse (AutodetectDocumentValidationResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<AutodetectDocumentValidationResult>> ValidateDocumentAutodetectValidationAsyncWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// Validate a CSV file document (CSV)
+        /// </summary>
+        /// <remarks>
+        /// Validate a CSV file document (CSV); if the document is not valid, identifies the errors in the document
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of DocumentValidationResult</returns>
+        System.Threading.Tasks.Task<DocumentValidationResult> ValidateDocumentCsvValidationAsync (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Validate a CSV file document (CSV)
+        /// </summary>
+        /// <remarks>
+        /// Validate a CSV file document (CSV); if the document is not valid, identifies the errors in the document
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (DocumentValidationResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DocumentValidationResult>> ValidateDocumentCsvValidationAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
         /// Validate a Word document (DOCX)
         /// </summary>
@@ -779,6 +821,157 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<AutodetectDocumentValidationResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (AutodetectDocumentValidationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AutodetectDocumentValidationResult)));
+        }
+
+        /// <summary>
+        /// Validate a CSV file document (CSV) Validate a CSV file document (CSV); if the document is not valid, identifies the errors in the document
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>DocumentValidationResult</returns>
+        public DocumentValidationResult ValidateDocumentCsvValidation (System.IO.Stream inputFile)
+        {
+             ApiResponse<DocumentValidationResult> localVarResponse = ValidateDocumentCsvValidationWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Validate a CSV file document (CSV) Validate a CSV file document (CSV); if the document is not valid, identifies the errors in the document
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of DocumentValidationResult</returns>
+        public ApiResponse< DocumentValidationResult > ValidateDocumentCsvValidationWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ValidateDocumentApi->ValidateDocumentCsvValidation");
+
+            var localVarPath = "/convert/validate/csv";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ValidateDocumentCsvValidation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DocumentValidationResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DocumentValidationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentValidationResult)));
+        }
+
+        /// <summary>
+        /// Validate a CSV file document (CSV) Validate a CSV file document (CSV); if the document is not valid, identifies the errors in the document
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of DocumentValidationResult</returns>
+        public async System.Threading.Tasks.Task<DocumentValidationResult> ValidateDocumentCsvValidationAsync (System.IO.Stream inputFile)
+        {
+             ApiResponse<DocumentValidationResult> localVarResponse = await ValidateDocumentCsvValidationAsyncWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Validate a CSV file document (CSV) Validate a CSV file document (CSV); if the document is not valid, identifies the errors in the document
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (DocumentValidationResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DocumentValidationResult>> ValidateDocumentCsvValidationAsyncWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ValidateDocumentApi->ValidateDocumentCsvValidation");
+
+            var localVarPath = "/convert/validate/csv";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ValidateDocumentCsvValidation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DocumentValidationResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DocumentValidationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentValidationResult)));
         }
 
         /// <summary>

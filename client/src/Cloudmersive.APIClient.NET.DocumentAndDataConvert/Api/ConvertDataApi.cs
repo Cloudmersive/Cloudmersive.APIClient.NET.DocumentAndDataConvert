@@ -32,8 +32,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="columnNamesFromFirstRow">Optional; If true, the first row will be used as the labels for the columns; if false, columns will be named Column0, Column1, etc.  Default is true.  Set to false if you are not using column headings, or have an irregular column structure. (optional)</param>
         /// <returns>Object</returns>
-        Object ConvertDataCsvToJson (System.IO.Stream inputFile);
+        Object ConvertDataCsvToJson (System.IO.Stream inputFile, bool? columnNamesFromFirstRow = null);
 
         /// <summary>
         /// Convert CSV to JSON conversion
@@ -43,8 +44,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="columnNamesFromFirstRow">Optional; If true, the first row will be used as the labels for the columns; if false, columns will be named Column0, Column1, etc.  Default is true.  Set to false if you are not using column headings, or have an irregular column structure. (optional)</param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> ConvertDataCsvToJsonWithHttpInfo (System.IO.Stream inputFile);
+        ApiResponse<Object> ConvertDataCsvToJsonWithHttpInfo (System.IO.Stream inputFile, bool? columnNamesFromFirstRow = null);
         /// <summary>
         /// Convert JSON to XML conversion
         /// </summary>
@@ -397,8 +399,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="columnNamesFromFirstRow">Optional; If true, the first row will be used as the labels for the columns; if false, columns will be named Column0, Column1, etc.  Default is true.  Set to false if you are not using column headings, or have an irregular column structure. (optional)</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> ConvertDataCsvToJsonAsync (System.IO.Stream inputFile);
+        System.Threading.Tasks.Task<Object> ConvertDataCsvToJsonAsync (System.IO.Stream inputFile, bool? columnNamesFromFirstRow = null);
 
         /// <summary>
         /// Convert CSV to JSON conversion
@@ -408,8 +411,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="columnNamesFromFirstRow">Optional; If true, the first row will be used as the labels for the columns; if false, columns will be named Column0, Column1, etc.  Default is true.  Set to false if you are not using column headings, or have an irregular column structure. (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ConvertDataCsvToJsonAsyncWithHttpInfo (System.IO.Stream inputFile);
+        System.Threading.Tasks.Task<ApiResponse<Object>> ConvertDataCsvToJsonAsyncWithHttpInfo (System.IO.Stream inputFile, bool? columnNamesFromFirstRow = null);
         /// <summary>
         /// Convert JSON to XML conversion
         /// </summary>
@@ -857,10 +861,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="columnNamesFromFirstRow">Optional; If true, the first row will be used as the labels for the columns; if false, columns will be named Column0, Column1, etc.  Default is true.  Set to false if you are not using column headings, or have an irregular column structure. (optional)</param>
         /// <returns>Object</returns>
-        public Object ConvertDataCsvToJson (System.IO.Stream inputFile)
+        public Object ConvertDataCsvToJson (System.IO.Stream inputFile, bool? columnNamesFromFirstRow = null)
         {
-             ApiResponse<Object> localVarResponse = ConvertDataCsvToJsonWithHttpInfo(inputFile);
+             ApiResponse<Object> localVarResponse = ConvertDataCsvToJsonWithHttpInfo(inputFile, columnNamesFromFirstRow);
              return localVarResponse.Data;
         }
 
@@ -869,8 +874,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="columnNamesFromFirstRow">Optional; If true, the first row will be used as the labels for the columns; if false, columns will be named Column0, Column1, etc.  Default is true.  Set to false if you are not using column headings, or have an irregular column structure. (optional)</param>
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > ConvertDataCsvToJsonWithHttpInfo (System.IO.Stream inputFile)
+        public ApiResponse< Object > ConvertDataCsvToJsonWithHttpInfo (System.IO.Stream inputFile, bool? columnNamesFromFirstRow = null)
         {
             // verify the required parameter 'inputFile' is set
             if (inputFile == null)
@@ -898,6 +904,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (columnNamesFromFirstRow != null) localVarHeaderParams.Add("columnNamesFromFirstRow", this.Configuration.ApiClient.ParameterToString(columnNamesFromFirstRow)); // header parameter
             if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
 
             // authentication (Apikey) required
@@ -929,10 +936,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="columnNamesFromFirstRow">Optional; If true, the first row will be used as the labels for the columns; if false, columns will be named Column0, Column1, etc.  Default is true.  Set to false if you are not using column headings, or have an irregular column structure. (optional)</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> ConvertDataCsvToJsonAsync (System.IO.Stream inputFile)
+        public async System.Threading.Tasks.Task<Object> ConvertDataCsvToJsonAsync (System.IO.Stream inputFile, bool? columnNamesFromFirstRow = null)
         {
-             ApiResponse<Object> localVarResponse = await ConvertDataCsvToJsonAsyncWithHttpInfo(inputFile);
+             ApiResponse<Object> localVarResponse = await ConvertDataCsvToJsonAsyncWithHttpInfo(inputFile, columnNamesFromFirstRow);
              return localVarResponse.Data;
 
         }
@@ -942,8 +950,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="columnNamesFromFirstRow">Optional; If true, the first row will be used as the labels for the columns; if false, columns will be named Column0, Column1, etc.  Default is true.  Set to false if you are not using column headings, or have an irregular column structure. (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ConvertDataCsvToJsonAsyncWithHttpInfo (System.IO.Stream inputFile)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ConvertDataCsvToJsonAsyncWithHttpInfo (System.IO.Stream inputFile, bool? columnNamesFromFirstRow = null)
         {
             // verify the required parameter 'inputFile' is set
             if (inputFile == null)
@@ -971,6 +980,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (columnNamesFromFirstRow != null) localVarHeaderParams.Add("columnNamesFromFirstRow", this.Configuration.ApiClient.ParameterToString(columnNamesFromFirstRow)); // header parameter
             if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
 
             // authentication (Apikey) required
