@@ -101,6 +101,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test ValidateDocumentEmlValidation
+        /// </summary>
+        [Test]
+        public void ValidateDocumentEmlValidationTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.ValidateDocumentEmlValidation(inputFile);
+            //Assert.IsInstanceOf<DocumentValidationResult> (response, "response is DocumentValidationResult");
+        }
+        
+        /// <summary>
         /// Test ValidateDocumentExecutableValidation
         /// </summary>
         [Test]
@@ -133,6 +145,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             // TODO uncomment below to test the method and replace null with proper value
             //System.IO.Stream inputFile = null;
             //var response = instance.ValidateDocumentJsonValidation(inputFile);
+            //Assert.IsInstanceOf<DocumentValidationResult> (response, "response is DocumentValidationResult");
+        }
+        
+        /// <summary>
+        /// Test ValidateDocumentMsgValidation
+        /// </summary>
+        [Test]
+        public void ValidateDocumentMsgValidationTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.ValidateDocumentMsgValidation(inputFile);
             //Assert.IsInstanceOf<DocumentValidationResult> (response, "response is DocumentValidationResult");
         }
         

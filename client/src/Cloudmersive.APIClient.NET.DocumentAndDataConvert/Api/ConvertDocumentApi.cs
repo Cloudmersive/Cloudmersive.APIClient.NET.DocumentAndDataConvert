@@ -88,6 +88,62 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of AutodetectToPngResult</returns>
         ApiResponse<AutodetectToPngResult> ConvertDocumentAutodetectToPngArrayWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
+        /// Convert File to Thumbnail Image
+        /// </summary>
+        /// <remarks>
+        /// Automatically detect file type and convert it to a PNG thumbnail. Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, and even multi-page TIFF files. Returns a generic PNG thumbnail for unsupported formats.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="maxWidth">Optional; Maximum width of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
+        /// <param name="maxHeight">Optional; Maximum height of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
+        /// <param name="extension">Optional; Specify the file extension of the inputFile. This will improve the response time in most cases. Also allows unsupported files without extensions to still return a corresponding generic icon. (optional)</param>
+        /// <returns>Object</returns>
+        Object ConvertDocumentAutodetectToThumbnail (System.IO.Stream inputFile, int? maxWidth = null, int? maxHeight = null, string extension = null);
+
+        /// <summary>
+        /// Convert File to Thumbnail Image
+        /// </summary>
+        /// <remarks>
+        /// Automatically detect file type and convert it to a PNG thumbnail. Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, and even multi-page TIFF files. Returns a generic PNG thumbnail for unsupported formats.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="maxWidth">Optional; Maximum width of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
+        /// <param name="maxHeight">Optional; Maximum height of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
+        /// <param name="extension">Optional; Specify the file extension of the inputFile. This will improve the response time in most cases. Also allows unsupported files without extensions to still return a corresponding generic icon. (optional)</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> ConvertDocumentAutodetectToThumbnailWithHttpInfo (System.IO.Stream inputFile, int? maxWidth = null, int? maxHeight = null, string extension = null);
+        /// <summary>
+        /// Convert File to Thumbnail Image Object
+        /// </summary>
+        /// <remarks>
+        /// Automatically detect file type and convert it to an array of PNG thumbnails, returned as an object. May specify the number of pages for multiple thumbnails; default is one thumbnail. Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, and even multi-page TIFF files. Returns a generic PNG thumbnail for unsupported formats.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="pages">Optional; Specify how many pages of the document will be converted to thumbnails. Default is 1 page. (optional)</param>
+        /// <param name="maxWidth">Optional; Maximum width of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
+        /// <param name="maxHeight">Optional; Maximum height of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
+        /// <param name="extension">Optional; Specify the file extension of the inputFile. This will improve the response time in most cases. Also allows unsupported files without extensions to still return a corresponding generic icon. (optional)</param>
+        /// <returns>AutodetectToThumbnailsResult</returns>
+        AutodetectToThumbnailsResult ConvertDocumentAutodetectToThumbnailsAdvanced (System.IO.Stream inputFile, int? pages = null, int? maxWidth = null, int? maxHeight = null, string extension = null);
+
+        /// <summary>
+        /// Convert File to Thumbnail Image Object
+        /// </summary>
+        /// <remarks>
+        /// Automatically detect file type and convert it to an array of PNG thumbnails, returned as an object. May specify the number of pages for multiple thumbnails; default is one thumbnail. Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, and even multi-page TIFF files. Returns a generic PNG thumbnail for unsupported formats.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="pages">Optional; Specify how many pages of the document will be converted to thumbnails. Default is 1 page. (optional)</param>
+        /// <param name="maxWidth">Optional; Maximum width of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
+        /// <param name="maxHeight">Optional; Maximum height of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
+        /// <param name="extension">Optional; Specify the file extension of the inputFile. This will improve the response time in most cases. Also allows unsupported files without extensions to still return a corresponding generic icon. (optional)</param>
+        /// <returns>ApiResponse of AutodetectToThumbnailsResult</returns>
+        ApiResponse<AutodetectToThumbnailsResult> ConvertDocumentAutodetectToThumbnailsAdvancedWithHttpInfo (System.IO.Stream inputFile, int? pages = null, int? maxWidth = null, int? maxHeight = null, string extension = null);
+        /// <summary>
         /// Convert Document to Text (txt)
         /// </summary>
         /// <remarks>
@@ -216,6 +272,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> ConvertDocumentDocxToPdfWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
+        /// Convert DOCX document to PNG image array
+        /// </summary>
+        /// <remarks>
+        /// Converts an Office Word Document (DOCX) file to an array of PNG images, one for each page.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>DocxToPngResult</returns>
+        DocxToPngResult ConvertDocumentDocxToPng (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Convert DOCX document to PNG image array
+        /// </summary>
+        /// <remarks>
+        /// Converts an Office Word Document (DOCX) file to an array of PNG images, one for each page.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of DocxToPngResult</returns>
+        ApiResponse<DocxToPngResult> ConvertDocumentDocxToPngWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
         /// Convert Word DOCX Document to Text (txt)
         /// </summary>
         /// <remarks>
@@ -238,6 +315,100 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="textFormattingMode">Optional; specify how whitespace should be handled when converting the document to text.  Possible values are &#39;preserveWhitespace&#39; which will attempt to preserve whitespace in the document and relative positioning of text within the document, and &#39;minimizeWhitespace&#39; which will not insert additional spaces into the document in most cases.  Default is &#39;minimizeWhitespace&#39;. (optional)</param>
         /// <returns>ApiResponse of TextConversionResult</returns>
         ApiResponse<TextConversionResult> ConvertDocumentDocxToTxtWithHttpInfo (System.IO.Stream inputFile, string textFormattingMode = null);
+        /// <summary>
+        /// Convert Email EML file to HTML string
+        /// </summary>
+        /// <remarks>
+        /// Convert Outlook Email EML file to HTML string and attachments. Supports images if they are base 64 inline.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
+        /// <param name="includeAttachments">Optional; If false, the response object will not include any attachment files from the input file. Default is true. (optional)</param>
+        /// <returns>EmlToHtmlResult</returns>
+        EmlToHtmlResult ConvertDocumentEmlToHtml (System.IO.Stream inputFile, bool? bodyOnly = null, bool? includeAttachments = null);
+
+        /// <summary>
+        /// Convert Email EML file to HTML string
+        /// </summary>
+        /// <remarks>
+        /// Convert Outlook Email EML file to HTML string and attachments. Supports images if they are base 64 inline.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
+        /// <param name="includeAttachments">Optional; If false, the response object will not include any attachment files from the input file. Default is true. (optional)</param>
+        /// <returns>ApiResponse of EmlToHtmlResult</returns>
+        ApiResponse<EmlToHtmlResult> ConvertDocumentEmlToHtmlWithHttpInfo (System.IO.Stream inputFile, bool? bodyOnly = null, bool? includeAttachments = null);
+        /// <summary>
+        /// Convert Email EML file to PDF document
+        /// </summary>
+        /// <remarks>
+        /// Convert Outlook Email EML file to PDF document. Supports images if they are base 64 inline.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
+        /// <returns>Object</returns>
+        Object ConvertDocumentEmlToPdf (System.IO.Stream inputFile, bool? bodyOnly = null);
+
+        /// <summary>
+        /// Convert Email EML file to PDF document
+        /// </summary>
+        /// <remarks>
+        /// Convert Outlook Email EML file to PDF document. Supports images if they are base 64 inline.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> ConvertDocumentEmlToPdfWithHttpInfo (System.IO.Stream inputFile, bool? bodyOnly = null);
+        /// <summary>
+        /// Get PNG icon file for the file extension
+        /// </summary>
+        /// <remarks>
+        /// Returns a PNG icon for the given file format extension as a file for download. User may specify the icon size. Supports over 100 file formats, with a generic icon for unsupported formats.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileExtension">Required; The file extension to be used for the icon. Limited to 4 AlphaNumeric characters.</param>
+        /// <param name="iconSize">Optional; The desired width of the icon, preserving its aspect ratio. (optional)</param>
+        /// <returns>Object</returns>
+        Object ConvertDocumentGetFileTypeIcon (string fileExtension, int? iconSize = null);
+
+        /// <summary>
+        /// Get PNG icon file for the file extension
+        /// </summary>
+        /// <remarks>
+        /// Returns a PNG icon for the given file format extension as a file for download. User may specify the icon size. Supports over 100 file formats, with a generic icon for unsupported formats.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileExtension">Required; The file extension to be used for the icon. Limited to 4 AlphaNumeric characters.</param>
+        /// <param name="iconSize">Optional; The desired width of the icon, preserving its aspect ratio. (optional)</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> ConvertDocumentGetFileTypeIconWithHttpInfo (string fileExtension, int? iconSize = null);
+        /// <summary>
+        /// Get PNG icon byte array for the file extension
+        /// </summary>
+        /// <remarks>
+        /// Returns a PNG icon for the given file format extension directly as a byte array. User may specify the icon size. Supports over 100 file formats, with a generic icon for unsupported formats.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileExtension">Required; The file extension to be used for the icon. Limited to 4 AlphaNumeric characters.</param>
+        /// <param name="iconSize">Optional; The desired width of the icon, preserving its aspect ratio. (optional)</param>
+        /// <returns>GetFileTypeIconResult</returns>
+        GetFileTypeIconResult ConvertDocumentGetFileTypeIconAdvanced (string fileExtension, int? iconSize = null);
+
+        /// <summary>
+        /// Get PNG icon byte array for the file extension
+        /// </summary>
+        /// <remarks>
+        /// Returns a PNG icon for the given file format extension directly as a byte array. User may specify the icon size. Supports over 100 file formats, with a generic icon for unsupported formats.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileExtension">Required; The file extension to be used for the icon. Limited to 4 AlphaNumeric characters.</param>
+        /// <param name="iconSize">Optional; The desired width of the icon, preserving its aspect ratio. (optional)</param>
+        /// <returns>ApiResponse of GetFileTypeIconResult</returns>
+        ApiResponse<GetFileTypeIconResult> ConvertDocumentGetFileTypeIconAdvancedWithHttpInfo (string fileExtension, int? iconSize = null);
         /// <summary>
         /// Convert HTML document file to PDF Document
         /// </summary>
@@ -301,6 +472,54 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>ApiResponse of TextConversionResult</returns>
         ApiResponse<TextConversionResult> ConvertDocumentHtmlToTxtWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// Convert Email MSG file to HTML string
+        /// </summary>
+        /// <remarks>
+        /// Convert Outlook Email MSG file to HTML string and attachments. Supports images if they are base 64 inline. Supports most, but not all, RTF bodied MSG files.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the MSG. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
+        /// <param name="includeAttachments">Optional; If false, the response object will not include any attachment files from the input file. Default is true. (optional)</param>
+        /// <returns>MsgToHtmlResult</returns>
+        MsgToHtmlResult ConvertDocumentMsgToHtml (System.IO.Stream inputFile, bool? bodyOnly = null, bool? includeAttachments = null);
+
+        /// <summary>
+        /// Convert Email MSG file to HTML string
+        /// </summary>
+        /// <remarks>
+        /// Convert Outlook Email MSG file to HTML string and attachments. Supports images if they are base 64 inline. Supports most, but not all, RTF bodied MSG files.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the MSG. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
+        /// <param name="includeAttachments">Optional; If false, the response object will not include any attachment files from the input file. Default is true. (optional)</param>
+        /// <returns>ApiResponse of MsgToHtmlResult</returns>
+        ApiResponse<MsgToHtmlResult> ConvertDocumentMsgToHtmlWithHttpInfo (System.IO.Stream inputFile, bool? bodyOnly = null, bool? includeAttachments = null);
+        /// <summary>
+        /// Convert Email MSG file to PDF document
+        /// </summary>
+        /// <remarks>
+        /// Convert Outlook Email MSG file to PDF document. Supports images if they are base 64 inline. Supports most, but not all, RTF bodied MSG files.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
+        /// <returns>Object</returns>
+        Object ConvertDocumentMsgToPdf (System.IO.Stream inputFile, bool? bodyOnly = null);
+
+        /// <summary>
+        /// Convert Email MSG file to PDF document
+        /// </summary>
+        /// <remarks>
+        /// Convert Outlook Email MSG file to PDF document. Supports images if they are base 64 inline. Supports most, but not all, RTF bodied MSG files.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> ConvertDocumentMsgToPdfWithHttpInfo (System.IO.Stream inputFile, bool? bodyOnly = null);
         /// <summary>
         /// Convert PDF to Word DOCX Document
         /// </summary>
@@ -532,6 +751,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> ConvertDocumentPptxToPdfWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
+        /// Convert PowerPoint PPTX to PNG image array
+        /// </summary>
+        /// <remarks>
+        /// Converts a PowerPoint Presentation (PPTX) file to an array of PNG images, one for each page.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>PptxToPngResult</returns>
+        PptxToPngResult ConvertDocumentPptxToPng (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Convert PowerPoint PPTX to PNG image array
+        /// </summary>
+        /// <remarks>
+        /// Converts a PowerPoint Presentation (PPTX) file to an array of PNG images, one for each page.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of PptxToPngResult</returns>
+        ApiResponse<PptxToPngResult> ConvertDocumentPptxToPngWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
         /// Convert PowerPoint PPTX Presentation to Text (txt)
         /// </summary>
         /// <remarks>
@@ -683,6 +923,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> ConvertDocumentXlsxToPdfWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
+        /// Convert Excel XLSX spreadsheet to PNG image array
+        /// </summary>
+        /// <remarks>
+        /// Converts an Excel Spreadsheet (XLSX) file to an array of PNG images, one for each page.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>XlsxToPngResult</returns>
+        XlsxToPngResult ConvertDocumentXlsxToPng (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Convert Excel XLSX spreadsheet to PNG image array
+        /// </summary>
+        /// <remarks>
+        /// Converts an Excel Spreadsheet (XLSX) file to an array of PNG images, one for each page.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of XlsxToPngResult</returns>
+        ApiResponse<XlsxToPngResult> ConvertDocumentXlsxToPngWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
         /// Convert Excel XLSX Spreadsheet to Text (txt)
         /// </summary>
         /// <remarks>
@@ -768,6 +1029,62 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>Task of ApiResponse (AutodetectToPngResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<AutodetectToPngResult>> ConvertDocumentAutodetectToPngArrayAsyncWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// Convert File to Thumbnail Image
+        /// </summary>
+        /// <remarks>
+        /// Automatically detect file type and convert it to a PNG thumbnail. Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, and even multi-page TIFF files. Returns a generic PNG thumbnail for unsupported formats.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="maxWidth">Optional; Maximum width of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
+        /// <param name="maxHeight">Optional; Maximum height of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
+        /// <param name="extension">Optional; Specify the file extension of the inputFile. This will improve the response time in most cases. Also allows unsupported files without extensions to still return a corresponding generic icon. (optional)</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> ConvertDocumentAutodetectToThumbnailAsync (System.IO.Stream inputFile, int? maxWidth = null, int? maxHeight = null, string extension = null);
+
+        /// <summary>
+        /// Convert File to Thumbnail Image
+        /// </summary>
+        /// <remarks>
+        /// Automatically detect file type and convert it to a PNG thumbnail. Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, and even multi-page TIFF files. Returns a generic PNG thumbnail for unsupported formats.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="maxWidth">Optional; Maximum width of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
+        /// <param name="maxHeight">Optional; Maximum height of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
+        /// <param name="extension">Optional; Specify the file extension of the inputFile. This will improve the response time in most cases. Also allows unsupported files without extensions to still return a corresponding generic icon. (optional)</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> ConvertDocumentAutodetectToThumbnailAsyncWithHttpInfo (System.IO.Stream inputFile, int? maxWidth = null, int? maxHeight = null, string extension = null);
+        /// <summary>
+        /// Convert File to Thumbnail Image Object
+        /// </summary>
+        /// <remarks>
+        /// Automatically detect file type and convert it to an array of PNG thumbnails, returned as an object. May specify the number of pages for multiple thumbnails; default is one thumbnail. Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, and even multi-page TIFF files. Returns a generic PNG thumbnail for unsupported formats.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="pages">Optional; Specify how many pages of the document will be converted to thumbnails. Default is 1 page. (optional)</param>
+        /// <param name="maxWidth">Optional; Maximum width of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
+        /// <param name="maxHeight">Optional; Maximum height of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
+        /// <param name="extension">Optional; Specify the file extension of the inputFile. This will improve the response time in most cases. Also allows unsupported files without extensions to still return a corresponding generic icon. (optional)</param>
+        /// <returns>Task of AutodetectToThumbnailsResult</returns>
+        System.Threading.Tasks.Task<AutodetectToThumbnailsResult> ConvertDocumentAutodetectToThumbnailsAdvancedAsync (System.IO.Stream inputFile, int? pages = null, int? maxWidth = null, int? maxHeight = null, string extension = null);
+
+        /// <summary>
+        /// Convert File to Thumbnail Image Object
+        /// </summary>
+        /// <remarks>
+        /// Automatically detect file type and convert it to an array of PNG thumbnails, returned as an object. May specify the number of pages for multiple thumbnails; default is one thumbnail. Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, and even multi-page TIFF files. Returns a generic PNG thumbnail for unsupported formats.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="pages">Optional; Specify how many pages of the document will be converted to thumbnails. Default is 1 page. (optional)</param>
+        /// <param name="maxWidth">Optional; Maximum width of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
+        /// <param name="maxHeight">Optional; Maximum height of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
+        /// <param name="extension">Optional; Specify the file extension of the inputFile. This will improve the response time in most cases. Also allows unsupported files without extensions to still return a corresponding generic icon. (optional)</param>
+        /// <returns>Task of ApiResponse (AutodetectToThumbnailsResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AutodetectToThumbnailsResult>> ConvertDocumentAutodetectToThumbnailsAdvancedAsyncWithHttpInfo (System.IO.Stream inputFile, int? pages = null, int? maxWidth = null, int? maxHeight = null, string extension = null);
         /// <summary>
         /// Convert Document to Text (txt)
         /// </summary>
@@ -897,6 +1214,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentDocxToPdfAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
+        /// Convert DOCX document to PNG image array
+        /// </summary>
+        /// <remarks>
+        /// Converts an Office Word Document (DOCX) file to an array of PNG images, one for each page.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of DocxToPngResult</returns>
+        System.Threading.Tasks.Task<DocxToPngResult> ConvertDocumentDocxToPngAsync (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Convert DOCX document to PNG image array
+        /// </summary>
+        /// <remarks>
+        /// Converts an Office Word Document (DOCX) file to an array of PNG images, one for each page.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (DocxToPngResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DocxToPngResult>> ConvertDocumentDocxToPngAsyncWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
         /// Convert Word DOCX Document to Text (txt)
         /// </summary>
         /// <remarks>
@@ -919,6 +1257,100 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="textFormattingMode">Optional; specify how whitespace should be handled when converting the document to text.  Possible values are &#39;preserveWhitespace&#39; which will attempt to preserve whitespace in the document and relative positioning of text within the document, and &#39;minimizeWhitespace&#39; which will not insert additional spaces into the document in most cases.  Default is &#39;minimizeWhitespace&#39;. (optional)</param>
         /// <returns>Task of ApiResponse (TextConversionResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<TextConversionResult>> ConvertDocumentDocxToTxtAsyncWithHttpInfo (System.IO.Stream inputFile, string textFormattingMode = null);
+        /// <summary>
+        /// Convert Email EML file to HTML string
+        /// </summary>
+        /// <remarks>
+        /// Convert Outlook Email EML file to HTML string and attachments. Supports images if they are base 64 inline.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
+        /// <param name="includeAttachments">Optional; If false, the response object will not include any attachment files from the input file. Default is true. (optional)</param>
+        /// <returns>Task of EmlToHtmlResult</returns>
+        System.Threading.Tasks.Task<EmlToHtmlResult> ConvertDocumentEmlToHtmlAsync (System.IO.Stream inputFile, bool? bodyOnly = null, bool? includeAttachments = null);
+
+        /// <summary>
+        /// Convert Email EML file to HTML string
+        /// </summary>
+        /// <remarks>
+        /// Convert Outlook Email EML file to HTML string and attachments. Supports images if they are base 64 inline.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
+        /// <param name="includeAttachments">Optional; If false, the response object will not include any attachment files from the input file. Default is true. (optional)</param>
+        /// <returns>Task of ApiResponse (EmlToHtmlResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EmlToHtmlResult>> ConvertDocumentEmlToHtmlAsyncWithHttpInfo (System.IO.Stream inputFile, bool? bodyOnly = null, bool? includeAttachments = null);
+        /// <summary>
+        /// Convert Email EML file to PDF document
+        /// </summary>
+        /// <remarks>
+        /// Convert Outlook Email EML file to PDF document. Supports images if they are base 64 inline.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> ConvertDocumentEmlToPdfAsync (System.IO.Stream inputFile, bool? bodyOnly = null);
+
+        /// <summary>
+        /// Convert Email EML file to PDF document
+        /// </summary>
+        /// <remarks>
+        /// Convert Outlook Email EML file to PDF document. Supports images if they are base 64 inline.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> ConvertDocumentEmlToPdfAsyncWithHttpInfo (System.IO.Stream inputFile, bool? bodyOnly = null);
+        /// <summary>
+        /// Get PNG icon file for the file extension
+        /// </summary>
+        /// <remarks>
+        /// Returns a PNG icon for the given file format extension as a file for download. User may specify the icon size. Supports over 100 file formats, with a generic icon for unsupported formats.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileExtension">Required; The file extension to be used for the icon. Limited to 4 AlphaNumeric characters.</param>
+        /// <param name="iconSize">Optional; The desired width of the icon, preserving its aspect ratio. (optional)</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> ConvertDocumentGetFileTypeIconAsync (string fileExtension, int? iconSize = null);
+
+        /// <summary>
+        /// Get PNG icon file for the file extension
+        /// </summary>
+        /// <remarks>
+        /// Returns a PNG icon for the given file format extension as a file for download. User may specify the icon size. Supports over 100 file formats, with a generic icon for unsupported formats.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileExtension">Required; The file extension to be used for the icon. Limited to 4 AlphaNumeric characters.</param>
+        /// <param name="iconSize">Optional; The desired width of the icon, preserving its aspect ratio. (optional)</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> ConvertDocumentGetFileTypeIconAsyncWithHttpInfo (string fileExtension, int? iconSize = null);
+        /// <summary>
+        /// Get PNG icon byte array for the file extension
+        /// </summary>
+        /// <remarks>
+        /// Returns a PNG icon for the given file format extension directly as a byte array. User may specify the icon size. Supports over 100 file formats, with a generic icon for unsupported formats.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileExtension">Required; The file extension to be used for the icon. Limited to 4 AlphaNumeric characters.</param>
+        /// <param name="iconSize">Optional; The desired width of the icon, preserving its aspect ratio. (optional)</param>
+        /// <returns>Task of GetFileTypeIconResult</returns>
+        System.Threading.Tasks.Task<GetFileTypeIconResult> ConvertDocumentGetFileTypeIconAdvancedAsync (string fileExtension, int? iconSize = null);
+
+        /// <summary>
+        /// Get PNG icon byte array for the file extension
+        /// </summary>
+        /// <remarks>
+        /// Returns a PNG icon for the given file format extension directly as a byte array. User may specify the icon size. Supports over 100 file formats, with a generic icon for unsupported formats.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileExtension">Required; The file extension to be used for the icon. Limited to 4 AlphaNumeric characters.</param>
+        /// <param name="iconSize">Optional; The desired width of the icon, preserving its aspect ratio. (optional)</param>
+        /// <returns>Task of ApiResponse (GetFileTypeIconResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetFileTypeIconResult>> ConvertDocumentGetFileTypeIconAdvancedAsyncWithHttpInfo (string fileExtension, int? iconSize = null);
         /// <summary>
         /// Convert HTML document file to PDF Document
         /// </summary>
@@ -982,6 +1414,54 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>Task of ApiResponse (TextConversionResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<TextConversionResult>> ConvertDocumentHtmlToTxtAsyncWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// Convert Email MSG file to HTML string
+        /// </summary>
+        /// <remarks>
+        /// Convert Outlook Email MSG file to HTML string and attachments. Supports images if they are base 64 inline. Supports most, but not all, RTF bodied MSG files.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the MSG. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
+        /// <param name="includeAttachments">Optional; If false, the response object will not include any attachment files from the input file. Default is true. (optional)</param>
+        /// <returns>Task of MsgToHtmlResult</returns>
+        System.Threading.Tasks.Task<MsgToHtmlResult> ConvertDocumentMsgToHtmlAsync (System.IO.Stream inputFile, bool? bodyOnly = null, bool? includeAttachments = null);
+
+        /// <summary>
+        /// Convert Email MSG file to HTML string
+        /// </summary>
+        /// <remarks>
+        /// Convert Outlook Email MSG file to HTML string and attachments. Supports images if they are base 64 inline. Supports most, but not all, RTF bodied MSG files.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the MSG. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
+        /// <param name="includeAttachments">Optional; If false, the response object will not include any attachment files from the input file. Default is true. (optional)</param>
+        /// <returns>Task of ApiResponse (MsgToHtmlResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<MsgToHtmlResult>> ConvertDocumentMsgToHtmlAsyncWithHttpInfo (System.IO.Stream inputFile, bool? bodyOnly = null, bool? includeAttachments = null);
+        /// <summary>
+        /// Convert Email MSG file to PDF document
+        /// </summary>
+        /// <remarks>
+        /// Convert Outlook Email MSG file to PDF document. Supports images if they are base 64 inline. Supports most, but not all, RTF bodied MSG files.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> ConvertDocumentMsgToPdfAsync (System.IO.Stream inputFile, bool? bodyOnly = null);
+
+        /// <summary>
+        /// Convert Email MSG file to PDF document
+        /// </summary>
+        /// <remarks>
+        /// Convert Outlook Email MSG file to PDF document. Supports images if they are base 64 inline. Supports most, but not all, RTF bodied MSG files.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> ConvertDocumentMsgToPdfAsyncWithHttpInfo (System.IO.Stream inputFile, bool? bodyOnly = null);
         /// <summary>
         /// Convert PDF to Word DOCX Document
         /// </summary>
@@ -1213,6 +1693,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentPptxToPdfAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
+        /// Convert PowerPoint PPTX to PNG image array
+        /// </summary>
+        /// <remarks>
+        /// Converts a PowerPoint Presentation (PPTX) file to an array of PNG images, one for each page.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of PptxToPngResult</returns>
+        System.Threading.Tasks.Task<PptxToPngResult> ConvertDocumentPptxToPngAsync (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Convert PowerPoint PPTX to PNG image array
+        /// </summary>
+        /// <remarks>
+        /// Converts a PowerPoint Presentation (PPTX) file to an array of PNG images, one for each page.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (PptxToPngResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PptxToPngResult>> ConvertDocumentPptxToPngAsyncWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
         /// Convert PowerPoint PPTX Presentation to Text (txt)
         /// </summary>
         /// <remarks>
@@ -1363,6 +1864,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentXlsxToPdfAsyncWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// Convert Excel XLSX spreadsheet to PNG image array
+        /// </summary>
+        /// <remarks>
+        /// Converts an Excel Spreadsheet (XLSX) file to an array of PNG images, one for each page.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of XlsxToPngResult</returns>
+        System.Threading.Tasks.Task<XlsxToPngResult> ConvertDocumentXlsxToPngAsync (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Convert Excel XLSX spreadsheet to PNG image array
+        /// </summary>
+        /// <remarks>
+        /// Converts an Excel Spreadsheet (XLSX) file to an array of PNG images, one for each page.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (XlsxToPngResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<XlsxToPngResult>> ConvertDocumentXlsxToPngAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
         /// Convert Excel XLSX Spreadsheet to Text (txt)
         /// </summary>
@@ -1929,6 +2451,344 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<AutodetectToPngResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (AutodetectToPngResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AutodetectToPngResult)));
+        }
+
+        /// <summary>
+        /// Convert File to Thumbnail Image Automatically detect file type and convert it to a PNG thumbnail. Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, and even multi-page TIFF files. Returns a generic PNG thumbnail for unsupported formats.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="maxWidth">Optional; Maximum width of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
+        /// <param name="maxHeight">Optional; Maximum height of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
+        /// <param name="extension">Optional; Specify the file extension of the inputFile. This will improve the response time in most cases. Also allows unsupported files without extensions to still return a corresponding generic icon. (optional)</param>
+        /// <returns>Object</returns>
+        public Object ConvertDocumentAutodetectToThumbnail (System.IO.Stream inputFile, int? maxWidth = null, int? maxHeight = null, string extension = null)
+        {
+             ApiResponse<Object> localVarResponse = ConvertDocumentAutodetectToThumbnailWithHttpInfo(inputFile, maxWidth, maxHeight, extension);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Convert File to Thumbnail Image Automatically detect file type and convert it to a PNG thumbnail. Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, and even multi-page TIFF files. Returns a generic PNG thumbnail for unsupported formats.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="maxWidth">Optional; Maximum width of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
+        /// <param name="maxHeight">Optional; Maximum height of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
+        /// <param name="extension">Optional; Specify the file extension of the inputFile. This will improve the response time in most cases. Also allows unsupported files without extensions to still return a corresponding generic icon. (optional)</param>
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > ConvertDocumentAutodetectToThumbnailWithHttpInfo (System.IO.Stream inputFile, int? maxWidth = null, int? maxHeight = null, string extension = null)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentAutodetectToThumbnail");
+
+            var localVarPath = "/convert/autodetect/to/thumbnail";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (maxWidth != null) localVarHeaderParams.Add("maxWidth", this.Configuration.ApiClient.ParameterToString(maxWidth)); // header parameter
+            if (maxHeight != null) localVarHeaderParams.Add("maxHeight", this.Configuration.ApiClient.ParameterToString(maxHeight)); // header parameter
+            if (extension != null) localVarHeaderParams.Add("extension", this.Configuration.ApiClient.ParameterToString(extension)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentAutodetectToThumbnail", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Convert File to Thumbnail Image Automatically detect file type and convert it to a PNG thumbnail. Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, and even multi-page TIFF files. Returns a generic PNG thumbnail for unsupported formats.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="maxWidth">Optional; Maximum width of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
+        /// <param name="maxHeight">Optional; Maximum height of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
+        /// <param name="extension">Optional; Specify the file extension of the inputFile. This will improve the response time in most cases. Also allows unsupported files without extensions to still return a corresponding generic icon. (optional)</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> ConvertDocumentAutodetectToThumbnailAsync (System.IO.Stream inputFile, int? maxWidth = null, int? maxHeight = null, string extension = null)
+        {
+             ApiResponse<Object> localVarResponse = await ConvertDocumentAutodetectToThumbnailAsyncWithHttpInfo(inputFile, maxWidth, maxHeight, extension);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Convert File to Thumbnail Image Automatically detect file type and convert it to a PNG thumbnail. Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, and even multi-page TIFF files. Returns a generic PNG thumbnail for unsupported formats.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="maxWidth">Optional; Maximum width of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
+        /// <param name="maxHeight">Optional; Maximum height of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
+        /// <param name="extension">Optional; Specify the file extension of the inputFile. This will improve the response time in most cases. Also allows unsupported files without extensions to still return a corresponding generic icon. (optional)</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ConvertDocumentAutodetectToThumbnailAsyncWithHttpInfo (System.IO.Stream inputFile, int? maxWidth = null, int? maxHeight = null, string extension = null)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentAutodetectToThumbnail");
+
+            var localVarPath = "/convert/autodetect/to/thumbnail";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (maxWidth != null) localVarHeaderParams.Add("maxWidth", this.Configuration.ApiClient.ParameterToString(maxWidth)); // header parameter
+            if (maxHeight != null) localVarHeaderParams.Add("maxHeight", this.Configuration.ApiClient.ParameterToString(maxHeight)); // header parameter
+            if (extension != null) localVarHeaderParams.Add("extension", this.Configuration.ApiClient.ParameterToString(extension)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentAutodetectToThumbnail", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Convert File to Thumbnail Image Object Automatically detect file type and convert it to an array of PNG thumbnails, returned as an object. May specify the number of pages for multiple thumbnails; default is one thumbnail. Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, and even multi-page TIFF files. Returns a generic PNG thumbnail for unsupported formats.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="pages">Optional; Specify how many pages of the document will be converted to thumbnails. Default is 1 page. (optional)</param>
+        /// <param name="maxWidth">Optional; Maximum width of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
+        /// <param name="maxHeight">Optional; Maximum height of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
+        /// <param name="extension">Optional; Specify the file extension of the inputFile. This will improve the response time in most cases. Also allows unsupported files without extensions to still return a corresponding generic icon. (optional)</param>
+        /// <returns>AutodetectToThumbnailsResult</returns>
+        public AutodetectToThumbnailsResult ConvertDocumentAutodetectToThumbnailsAdvanced (System.IO.Stream inputFile, int? pages = null, int? maxWidth = null, int? maxHeight = null, string extension = null)
+        {
+             ApiResponse<AutodetectToThumbnailsResult> localVarResponse = ConvertDocumentAutodetectToThumbnailsAdvancedWithHttpInfo(inputFile, pages, maxWidth, maxHeight, extension);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Convert File to Thumbnail Image Object Automatically detect file type and convert it to an array of PNG thumbnails, returned as an object. May specify the number of pages for multiple thumbnails; default is one thumbnail. Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, and even multi-page TIFF files. Returns a generic PNG thumbnail for unsupported formats.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="pages">Optional; Specify how many pages of the document will be converted to thumbnails. Default is 1 page. (optional)</param>
+        /// <param name="maxWidth">Optional; Maximum width of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
+        /// <param name="maxHeight">Optional; Maximum height of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
+        /// <param name="extension">Optional; Specify the file extension of the inputFile. This will improve the response time in most cases. Also allows unsupported files without extensions to still return a corresponding generic icon. (optional)</param>
+        /// <returns>ApiResponse of AutodetectToThumbnailsResult</returns>
+        public ApiResponse< AutodetectToThumbnailsResult > ConvertDocumentAutodetectToThumbnailsAdvancedWithHttpInfo (System.IO.Stream inputFile, int? pages = null, int? maxWidth = null, int? maxHeight = null, string extension = null)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentAutodetectToThumbnailsAdvanced");
+
+            var localVarPath = "/convert/autodetect/to/thumbnail/advanced";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pages != null) localVarHeaderParams.Add("pages", this.Configuration.ApiClient.ParameterToString(pages)); // header parameter
+            if (maxWidth != null) localVarHeaderParams.Add("maxWidth", this.Configuration.ApiClient.ParameterToString(maxWidth)); // header parameter
+            if (maxHeight != null) localVarHeaderParams.Add("maxHeight", this.Configuration.ApiClient.ParameterToString(maxHeight)); // header parameter
+            if (extension != null) localVarHeaderParams.Add("extension", this.Configuration.ApiClient.ParameterToString(extension)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentAutodetectToThumbnailsAdvanced", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<AutodetectToThumbnailsResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AutodetectToThumbnailsResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AutodetectToThumbnailsResult)));
+        }
+
+        /// <summary>
+        /// Convert File to Thumbnail Image Object Automatically detect file type and convert it to an array of PNG thumbnails, returned as an object. May specify the number of pages for multiple thumbnails; default is one thumbnail. Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, and even multi-page TIFF files. Returns a generic PNG thumbnail for unsupported formats.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="pages">Optional; Specify how many pages of the document will be converted to thumbnails. Default is 1 page. (optional)</param>
+        /// <param name="maxWidth">Optional; Maximum width of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
+        /// <param name="maxHeight">Optional; Maximum height of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
+        /// <param name="extension">Optional; Specify the file extension of the inputFile. This will improve the response time in most cases. Also allows unsupported files without extensions to still return a corresponding generic icon. (optional)</param>
+        /// <returns>Task of AutodetectToThumbnailsResult</returns>
+        public async System.Threading.Tasks.Task<AutodetectToThumbnailsResult> ConvertDocumentAutodetectToThumbnailsAdvancedAsync (System.IO.Stream inputFile, int? pages = null, int? maxWidth = null, int? maxHeight = null, string extension = null)
+        {
+             ApiResponse<AutodetectToThumbnailsResult> localVarResponse = await ConvertDocumentAutodetectToThumbnailsAdvancedAsyncWithHttpInfo(inputFile, pages, maxWidth, maxHeight, extension);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Convert File to Thumbnail Image Object Automatically detect file type and convert it to an array of PNG thumbnails, returned as an object. May specify the number of pages for multiple thumbnails; default is one thumbnail. Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, and even multi-page TIFF files. Returns a generic PNG thumbnail for unsupported formats.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="pages">Optional; Specify how many pages of the document will be converted to thumbnails. Default is 1 page. (optional)</param>
+        /// <param name="maxWidth">Optional; Maximum width of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
+        /// <param name="maxHeight">Optional; Maximum height of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
+        /// <param name="extension">Optional; Specify the file extension of the inputFile. This will improve the response time in most cases. Also allows unsupported files without extensions to still return a corresponding generic icon. (optional)</param>
+        /// <returns>Task of ApiResponse (AutodetectToThumbnailsResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AutodetectToThumbnailsResult>> ConvertDocumentAutodetectToThumbnailsAdvancedAsyncWithHttpInfo (System.IO.Stream inputFile, int? pages = null, int? maxWidth = null, int? maxHeight = null, string extension = null)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentAutodetectToThumbnailsAdvanced");
+
+            var localVarPath = "/convert/autodetect/to/thumbnail/advanced";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pages != null) localVarHeaderParams.Add("pages", this.Configuration.ApiClient.ParameterToString(pages)); // header parameter
+            if (maxWidth != null) localVarHeaderParams.Add("maxWidth", this.Configuration.ApiClient.ParameterToString(maxWidth)); // header parameter
+            if (maxHeight != null) localVarHeaderParams.Add("maxHeight", this.Configuration.ApiClient.ParameterToString(maxHeight)); // header parameter
+            if (extension != null) localVarHeaderParams.Add("extension", this.Configuration.ApiClient.ParameterToString(extension)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentAutodetectToThumbnailsAdvanced", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<AutodetectToThumbnailsResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AutodetectToThumbnailsResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AutodetectToThumbnailsResult)));
         }
 
         /// <summary>
@@ -2820,6 +3680,157 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
+        /// Convert DOCX document to PNG image array Converts an Office Word Document (DOCX) file to an array of PNG images, one for each page.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>DocxToPngResult</returns>
+        public DocxToPngResult ConvertDocumentDocxToPng (System.IO.Stream inputFile)
+        {
+             ApiResponse<DocxToPngResult> localVarResponse = ConvertDocumentDocxToPngWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Convert DOCX document to PNG image array Converts an Office Word Document (DOCX) file to an array of PNG images, one for each page.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of DocxToPngResult</returns>
+        public ApiResponse< DocxToPngResult > ConvertDocumentDocxToPngWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentDocxToPng");
+
+            var localVarPath = "/convert/docx/to/png";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentDocxToPng", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DocxToPngResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DocxToPngResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocxToPngResult)));
+        }
+
+        /// <summary>
+        /// Convert DOCX document to PNG image array Converts an Office Word Document (DOCX) file to an array of PNG images, one for each page.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of DocxToPngResult</returns>
+        public async System.Threading.Tasks.Task<DocxToPngResult> ConvertDocumentDocxToPngAsync (System.IO.Stream inputFile)
+        {
+             ApiResponse<DocxToPngResult> localVarResponse = await ConvertDocumentDocxToPngAsyncWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Convert DOCX document to PNG image array Converts an Office Word Document (DOCX) file to an array of PNG images, one for each page.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (DocxToPngResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DocxToPngResult>> ConvertDocumentDocxToPngAsyncWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentDocxToPng");
+
+            var localVarPath = "/convert/docx/to/png";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentDocxToPng", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DocxToPngResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DocxToPngResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocxToPngResult)));
+        }
+
+        /// <summary>
         /// Convert Word DOCX Document to Text (txt) Convert Office Word Documents (docx) to text
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2974,6 +3985,624 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<TextConversionResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (TextConversionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TextConversionResult)));
+        }
+
+        /// <summary>
+        /// Convert Email EML file to HTML string Convert Outlook Email EML file to HTML string and attachments. Supports images if they are base 64 inline.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
+        /// <param name="includeAttachments">Optional; If false, the response object will not include any attachment files from the input file. Default is true. (optional)</param>
+        /// <returns>EmlToHtmlResult</returns>
+        public EmlToHtmlResult ConvertDocumentEmlToHtml (System.IO.Stream inputFile, bool? bodyOnly = null, bool? includeAttachments = null)
+        {
+             ApiResponse<EmlToHtmlResult> localVarResponse = ConvertDocumentEmlToHtmlWithHttpInfo(inputFile, bodyOnly, includeAttachments);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Convert Email EML file to HTML string Convert Outlook Email EML file to HTML string and attachments. Supports images if they are base 64 inline.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
+        /// <param name="includeAttachments">Optional; If false, the response object will not include any attachment files from the input file. Default is true. (optional)</param>
+        /// <returns>ApiResponse of EmlToHtmlResult</returns>
+        public ApiResponse< EmlToHtmlResult > ConvertDocumentEmlToHtmlWithHttpInfo (System.IO.Stream inputFile, bool? bodyOnly = null, bool? includeAttachments = null)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentEmlToHtml");
+
+            var localVarPath = "/convert/eml/to/html";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (bodyOnly != null) localVarHeaderParams.Add("bodyOnly", this.Configuration.ApiClient.ParameterToString(bodyOnly)); // header parameter
+            if (includeAttachments != null) localVarHeaderParams.Add("includeAttachments", this.Configuration.ApiClient.ParameterToString(includeAttachments)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentEmlToHtml", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EmlToHtmlResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EmlToHtmlResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmlToHtmlResult)));
+        }
+
+        /// <summary>
+        /// Convert Email EML file to HTML string Convert Outlook Email EML file to HTML string and attachments. Supports images if they are base 64 inline.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
+        /// <param name="includeAttachments">Optional; If false, the response object will not include any attachment files from the input file. Default is true. (optional)</param>
+        /// <returns>Task of EmlToHtmlResult</returns>
+        public async System.Threading.Tasks.Task<EmlToHtmlResult> ConvertDocumentEmlToHtmlAsync (System.IO.Stream inputFile, bool? bodyOnly = null, bool? includeAttachments = null)
+        {
+             ApiResponse<EmlToHtmlResult> localVarResponse = await ConvertDocumentEmlToHtmlAsyncWithHttpInfo(inputFile, bodyOnly, includeAttachments);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Convert Email EML file to HTML string Convert Outlook Email EML file to HTML string and attachments. Supports images if they are base 64 inline.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
+        /// <param name="includeAttachments">Optional; If false, the response object will not include any attachment files from the input file. Default is true. (optional)</param>
+        /// <returns>Task of ApiResponse (EmlToHtmlResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EmlToHtmlResult>> ConvertDocumentEmlToHtmlAsyncWithHttpInfo (System.IO.Stream inputFile, bool? bodyOnly = null, bool? includeAttachments = null)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentEmlToHtml");
+
+            var localVarPath = "/convert/eml/to/html";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (bodyOnly != null) localVarHeaderParams.Add("bodyOnly", this.Configuration.ApiClient.ParameterToString(bodyOnly)); // header parameter
+            if (includeAttachments != null) localVarHeaderParams.Add("includeAttachments", this.Configuration.ApiClient.ParameterToString(includeAttachments)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentEmlToHtml", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EmlToHtmlResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EmlToHtmlResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmlToHtmlResult)));
+        }
+
+        /// <summary>
+        /// Convert Email EML file to PDF document Convert Outlook Email EML file to PDF document. Supports images if they are base 64 inline.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
+        /// <returns>Object</returns>
+        public Object ConvertDocumentEmlToPdf (System.IO.Stream inputFile, bool? bodyOnly = null)
+        {
+             ApiResponse<Object> localVarResponse = ConvertDocumentEmlToPdfWithHttpInfo(inputFile, bodyOnly);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Convert Email EML file to PDF document Convert Outlook Email EML file to PDF document. Supports images if they are base 64 inline.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > ConvertDocumentEmlToPdfWithHttpInfo (System.IO.Stream inputFile, bool? bodyOnly = null)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentEmlToPdf");
+
+            var localVarPath = "/convert/eml/to/pdf";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (bodyOnly != null) localVarHeaderParams.Add("bodyOnly", this.Configuration.ApiClient.ParameterToString(bodyOnly)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentEmlToPdf", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Convert Email EML file to PDF document Convert Outlook Email EML file to PDF document. Supports images if they are base 64 inline.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> ConvertDocumentEmlToPdfAsync (System.IO.Stream inputFile, bool? bodyOnly = null)
+        {
+             ApiResponse<Object> localVarResponse = await ConvertDocumentEmlToPdfAsyncWithHttpInfo(inputFile, bodyOnly);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Convert Email EML file to PDF document Convert Outlook Email EML file to PDF document. Supports images if they are base 64 inline.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ConvertDocumentEmlToPdfAsyncWithHttpInfo (System.IO.Stream inputFile, bool? bodyOnly = null)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentEmlToPdf");
+
+            var localVarPath = "/convert/eml/to/pdf";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (bodyOnly != null) localVarHeaderParams.Add("bodyOnly", this.Configuration.ApiClient.ParameterToString(bodyOnly)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentEmlToPdf", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Get PNG icon file for the file extension Returns a PNG icon for the given file format extension as a file for download. User may specify the icon size. Supports over 100 file formats, with a generic icon for unsupported formats.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileExtension">Required; The file extension to be used for the icon. Limited to 4 AlphaNumeric characters.</param>
+        /// <param name="iconSize">Optional; The desired width of the icon, preserving its aspect ratio. (optional)</param>
+        /// <returns>Object</returns>
+        public Object ConvertDocumentGetFileTypeIcon (string fileExtension, int? iconSize = null)
+        {
+             ApiResponse<Object> localVarResponse = ConvertDocumentGetFileTypeIconWithHttpInfo(fileExtension, iconSize);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get PNG icon file for the file extension Returns a PNG icon for the given file format extension as a file for download. User may specify the icon size. Supports over 100 file formats, with a generic icon for unsupported formats.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileExtension">Required; The file extension to be used for the icon. Limited to 4 AlphaNumeric characters.</param>
+        /// <param name="iconSize">Optional; The desired width of the icon, preserving its aspect ratio. (optional)</param>
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > ConvertDocumentGetFileTypeIconWithHttpInfo (string fileExtension, int? iconSize = null)
+        {
+            // verify the required parameter 'fileExtension' is set
+            if (fileExtension == null)
+                throw new ApiException(400, "Missing required parameter 'fileExtension' when calling ConvertDocumentApi->ConvertDocumentGetFileTypeIcon");
+
+            var localVarPath = "/convert/autodetect/get-icon";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (fileExtension != null) localVarHeaderParams.Add("fileExtension", this.Configuration.ApiClient.ParameterToString(fileExtension)); // header parameter
+            if (iconSize != null) localVarHeaderParams.Add("iconSize", this.Configuration.ApiClient.ParameterToString(iconSize)); // header parameter
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentGetFileTypeIcon", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Get PNG icon file for the file extension Returns a PNG icon for the given file format extension as a file for download. User may specify the icon size. Supports over 100 file formats, with a generic icon for unsupported formats.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileExtension">Required; The file extension to be used for the icon. Limited to 4 AlphaNumeric characters.</param>
+        /// <param name="iconSize">Optional; The desired width of the icon, preserving its aspect ratio. (optional)</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> ConvertDocumentGetFileTypeIconAsync (string fileExtension, int? iconSize = null)
+        {
+             ApiResponse<Object> localVarResponse = await ConvertDocumentGetFileTypeIconAsyncWithHttpInfo(fileExtension, iconSize);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get PNG icon file for the file extension Returns a PNG icon for the given file format extension as a file for download. User may specify the icon size. Supports over 100 file formats, with a generic icon for unsupported formats.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileExtension">Required; The file extension to be used for the icon. Limited to 4 AlphaNumeric characters.</param>
+        /// <param name="iconSize">Optional; The desired width of the icon, preserving its aspect ratio. (optional)</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ConvertDocumentGetFileTypeIconAsyncWithHttpInfo (string fileExtension, int? iconSize = null)
+        {
+            // verify the required parameter 'fileExtension' is set
+            if (fileExtension == null)
+                throw new ApiException(400, "Missing required parameter 'fileExtension' when calling ConvertDocumentApi->ConvertDocumentGetFileTypeIcon");
+
+            var localVarPath = "/convert/autodetect/get-icon";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (fileExtension != null) localVarHeaderParams.Add("fileExtension", this.Configuration.ApiClient.ParameterToString(fileExtension)); // header parameter
+            if (iconSize != null) localVarHeaderParams.Add("iconSize", this.Configuration.ApiClient.ParameterToString(iconSize)); // header parameter
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentGetFileTypeIcon", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Get PNG icon byte array for the file extension Returns a PNG icon for the given file format extension directly as a byte array. User may specify the icon size. Supports over 100 file formats, with a generic icon for unsupported formats.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileExtension">Required; The file extension to be used for the icon. Limited to 4 AlphaNumeric characters.</param>
+        /// <param name="iconSize">Optional; The desired width of the icon, preserving its aspect ratio. (optional)</param>
+        /// <returns>GetFileTypeIconResult</returns>
+        public GetFileTypeIconResult ConvertDocumentGetFileTypeIconAdvanced (string fileExtension, int? iconSize = null)
+        {
+             ApiResponse<GetFileTypeIconResult> localVarResponse = ConvertDocumentGetFileTypeIconAdvancedWithHttpInfo(fileExtension, iconSize);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get PNG icon byte array for the file extension Returns a PNG icon for the given file format extension directly as a byte array. User may specify the icon size. Supports over 100 file formats, with a generic icon for unsupported formats.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileExtension">Required; The file extension to be used for the icon. Limited to 4 AlphaNumeric characters.</param>
+        /// <param name="iconSize">Optional; The desired width of the icon, preserving its aspect ratio. (optional)</param>
+        /// <returns>ApiResponse of GetFileTypeIconResult</returns>
+        public ApiResponse< GetFileTypeIconResult > ConvertDocumentGetFileTypeIconAdvancedWithHttpInfo (string fileExtension, int? iconSize = null)
+        {
+            // verify the required parameter 'fileExtension' is set
+            if (fileExtension == null)
+                throw new ApiException(400, "Missing required parameter 'fileExtension' when calling ConvertDocumentApi->ConvertDocumentGetFileTypeIconAdvanced");
+
+            var localVarPath = "/convert/autodetect/get-icon-advanced";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (fileExtension != null) localVarHeaderParams.Add("fileExtension", this.Configuration.ApiClient.ParameterToString(fileExtension)); // header parameter
+            if (iconSize != null) localVarHeaderParams.Add("iconSize", this.Configuration.ApiClient.ParameterToString(iconSize)); // header parameter
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentGetFileTypeIconAdvanced", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetFileTypeIconResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetFileTypeIconResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetFileTypeIconResult)));
+        }
+
+        /// <summary>
+        /// Get PNG icon byte array for the file extension Returns a PNG icon for the given file format extension directly as a byte array. User may specify the icon size. Supports over 100 file formats, with a generic icon for unsupported formats.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileExtension">Required; The file extension to be used for the icon. Limited to 4 AlphaNumeric characters.</param>
+        /// <param name="iconSize">Optional; The desired width of the icon, preserving its aspect ratio. (optional)</param>
+        /// <returns>Task of GetFileTypeIconResult</returns>
+        public async System.Threading.Tasks.Task<GetFileTypeIconResult> ConvertDocumentGetFileTypeIconAdvancedAsync (string fileExtension, int? iconSize = null)
+        {
+             ApiResponse<GetFileTypeIconResult> localVarResponse = await ConvertDocumentGetFileTypeIconAdvancedAsyncWithHttpInfo(fileExtension, iconSize);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get PNG icon byte array for the file extension Returns a PNG icon for the given file format extension directly as a byte array. User may specify the icon size. Supports over 100 file formats, with a generic icon for unsupported formats.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileExtension">Required; The file extension to be used for the icon. Limited to 4 AlphaNumeric characters.</param>
+        /// <param name="iconSize">Optional; The desired width of the icon, preserving its aspect ratio. (optional)</param>
+        /// <returns>Task of ApiResponse (GetFileTypeIconResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetFileTypeIconResult>> ConvertDocumentGetFileTypeIconAdvancedAsyncWithHttpInfo (string fileExtension, int? iconSize = null)
+        {
+            // verify the required parameter 'fileExtension' is set
+            if (fileExtension == null)
+                throw new ApiException(400, "Missing required parameter 'fileExtension' when calling ConvertDocumentApi->ConvertDocumentGetFileTypeIconAdvanced");
+
+            var localVarPath = "/convert/autodetect/get-icon-advanced";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (fileExtension != null) localVarHeaderParams.Add("fileExtension", this.Configuration.ApiClient.ParameterToString(fileExtension)); // header parameter
+            if (iconSize != null) localVarHeaderParams.Add("iconSize", this.Configuration.ApiClient.ParameterToString(iconSize)); // header parameter
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentGetFileTypeIconAdvanced", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetFileTypeIconResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetFileTypeIconResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetFileTypeIconResult)));
         }
 
         /// <summary>
@@ -3421,6 +5050,320 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<TextConversionResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (TextConversionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TextConversionResult)));
+        }
+
+        /// <summary>
+        /// Convert Email MSG file to HTML string Convert Outlook Email MSG file to HTML string and attachments. Supports images if they are base 64 inline. Supports most, but not all, RTF bodied MSG files.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the MSG. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
+        /// <param name="includeAttachments">Optional; If false, the response object will not include any attachment files from the input file. Default is true. (optional)</param>
+        /// <returns>MsgToHtmlResult</returns>
+        public MsgToHtmlResult ConvertDocumentMsgToHtml (System.IO.Stream inputFile, bool? bodyOnly = null, bool? includeAttachments = null)
+        {
+             ApiResponse<MsgToHtmlResult> localVarResponse = ConvertDocumentMsgToHtmlWithHttpInfo(inputFile, bodyOnly, includeAttachments);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Convert Email MSG file to HTML string Convert Outlook Email MSG file to HTML string and attachments. Supports images if they are base 64 inline. Supports most, but not all, RTF bodied MSG files.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the MSG. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
+        /// <param name="includeAttachments">Optional; If false, the response object will not include any attachment files from the input file. Default is true. (optional)</param>
+        /// <returns>ApiResponse of MsgToHtmlResult</returns>
+        public ApiResponse< MsgToHtmlResult > ConvertDocumentMsgToHtmlWithHttpInfo (System.IO.Stream inputFile, bool? bodyOnly = null, bool? includeAttachments = null)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentMsgToHtml");
+
+            var localVarPath = "/convert/msg/to/html";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (bodyOnly != null) localVarHeaderParams.Add("bodyOnly", this.Configuration.ApiClient.ParameterToString(bodyOnly)); // header parameter
+            if (includeAttachments != null) localVarHeaderParams.Add("includeAttachments", this.Configuration.ApiClient.ParameterToString(includeAttachments)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentMsgToHtml", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<MsgToHtmlResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (MsgToHtmlResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MsgToHtmlResult)));
+        }
+
+        /// <summary>
+        /// Convert Email MSG file to HTML string Convert Outlook Email MSG file to HTML string and attachments. Supports images if they are base 64 inline. Supports most, but not all, RTF bodied MSG files.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the MSG. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
+        /// <param name="includeAttachments">Optional; If false, the response object will not include any attachment files from the input file. Default is true. (optional)</param>
+        /// <returns>Task of MsgToHtmlResult</returns>
+        public async System.Threading.Tasks.Task<MsgToHtmlResult> ConvertDocumentMsgToHtmlAsync (System.IO.Stream inputFile, bool? bodyOnly = null, bool? includeAttachments = null)
+        {
+             ApiResponse<MsgToHtmlResult> localVarResponse = await ConvertDocumentMsgToHtmlAsyncWithHttpInfo(inputFile, bodyOnly, includeAttachments);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Convert Email MSG file to HTML string Convert Outlook Email MSG file to HTML string and attachments. Supports images if they are base 64 inline. Supports most, but not all, RTF bodied MSG files.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the MSG. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
+        /// <param name="includeAttachments">Optional; If false, the response object will not include any attachment files from the input file. Default is true. (optional)</param>
+        /// <returns>Task of ApiResponse (MsgToHtmlResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<MsgToHtmlResult>> ConvertDocumentMsgToHtmlAsyncWithHttpInfo (System.IO.Stream inputFile, bool? bodyOnly = null, bool? includeAttachments = null)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentMsgToHtml");
+
+            var localVarPath = "/convert/msg/to/html";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (bodyOnly != null) localVarHeaderParams.Add("bodyOnly", this.Configuration.ApiClient.ParameterToString(bodyOnly)); // header parameter
+            if (includeAttachments != null) localVarHeaderParams.Add("includeAttachments", this.Configuration.ApiClient.ParameterToString(includeAttachments)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentMsgToHtml", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<MsgToHtmlResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (MsgToHtmlResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MsgToHtmlResult)));
+        }
+
+        /// <summary>
+        /// Convert Email MSG file to PDF document Convert Outlook Email MSG file to PDF document. Supports images if they are base 64 inline. Supports most, but not all, RTF bodied MSG files.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
+        /// <returns>Object</returns>
+        public Object ConvertDocumentMsgToPdf (System.IO.Stream inputFile, bool? bodyOnly = null)
+        {
+             ApiResponse<Object> localVarResponse = ConvertDocumentMsgToPdfWithHttpInfo(inputFile, bodyOnly);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Convert Email MSG file to PDF document Convert Outlook Email MSG file to PDF document. Supports images if they are base 64 inline. Supports most, but not all, RTF bodied MSG files.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > ConvertDocumentMsgToPdfWithHttpInfo (System.IO.Stream inputFile, bool? bodyOnly = null)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentMsgToPdf");
+
+            var localVarPath = "/convert/msg/to/pdf";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (bodyOnly != null) localVarHeaderParams.Add("bodyOnly", this.Configuration.ApiClient.ParameterToString(bodyOnly)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentMsgToPdf", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Convert Email MSG file to PDF document Convert Outlook Email MSG file to PDF document. Supports images if they are base 64 inline. Supports most, but not all, RTF bodied MSG files.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> ConvertDocumentMsgToPdfAsync (System.IO.Stream inputFile, bool? bodyOnly = null)
+        {
+             ApiResponse<Object> localVarResponse = await ConvertDocumentMsgToPdfAsyncWithHttpInfo(inputFile, bodyOnly);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Convert Email MSG file to PDF document Convert Outlook Email MSG file to PDF document. Supports images if they are base 64 inline. Supports most, but not all, RTF bodied MSG files.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ConvertDocumentMsgToPdfAsyncWithHttpInfo (System.IO.Stream inputFile, bool? bodyOnly = null)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentMsgToPdf");
+
+            var localVarPath = "/convert/msg/to/pdf";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (bodyOnly != null) localVarHeaderParams.Add("bodyOnly", this.Configuration.ApiClient.ParameterToString(bodyOnly)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentMsgToPdf", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -4952,6 +6895,157 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
+        /// Convert PowerPoint PPTX to PNG image array Converts a PowerPoint Presentation (PPTX) file to an array of PNG images, one for each page.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>PptxToPngResult</returns>
+        public PptxToPngResult ConvertDocumentPptxToPng (System.IO.Stream inputFile)
+        {
+             ApiResponse<PptxToPngResult> localVarResponse = ConvertDocumentPptxToPngWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Convert PowerPoint PPTX to PNG image array Converts a PowerPoint Presentation (PPTX) file to an array of PNG images, one for each page.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of PptxToPngResult</returns>
+        public ApiResponse< PptxToPngResult > ConvertDocumentPptxToPngWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentPptxToPng");
+
+            var localVarPath = "/convert/pptx/to/png";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentPptxToPng", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<PptxToPngResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PptxToPngResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PptxToPngResult)));
+        }
+
+        /// <summary>
+        /// Convert PowerPoint PPTX to PNG image array Converts a PowerPoint Presentation (PPTX) file to an array of PNG images, one for each page.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of PptxToPngResult</returns>
+        public async System.Threading.Tasks.Task<PptxToPngResult> ConvertDocumentPptxToPngAsync (System.IO.Stream inputFile)
+        {
+             ApiResponse<PptxToPngResult> localVarResponse = await ConvertDocumentPptxToPngAsyncWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Convert PowerPoint PPTX to PNG image array Converts a PowerPoint Presentation (PPTX) file to an array of PNG images, one for each page.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (PptxToPngResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PptxToPngResult>> ConvertDocumentPptxToPngAsyncWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentPptxToPng");
+
+            var localVarPath = "/convert/pptx/to/png";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentPptxToPng", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<PptxToPngResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PptxToPngResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PptxToPngResult)));
+        }
+
+        /// <summary>
         /// Convert PowerPoint PPTX Presentation to Text (txt) Convert Office PowerPoint Documents (pptx) to standard Text
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5982,6 +8076,157 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Convert Excel XLSX spreadsheet to PNG image array Converts an Excel Spreadsheet (XLSX) file to an array of PNG images, one for each page.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>XlsxToPngResult</returns>
+        public XlsxToPngResult ConvertDocumentXlsxToPng (System.IO.Stream inputFile)
+        {
+             ApiResponse<XlsxToPngResult> localVarResponse = ConvertDocumentXlsxToPngWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Convert Excel XLSX spreadsheet to PNG image array Converts an Excel Spreadsheet (XLSX) file to an array of PNG images, one for each page.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of XlsxToPngResult</returns>
+        public ApiResponse< XlsxToPngResult > ConvertDocumentXlsxToPngWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentXlsxToPng");
+
+            var localVarPath = "/convert/xlsx/to/png";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentXlsxToPng", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<XlsxToPngResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (XlsxToPngResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(XlsxToPngResult)));
+        }
+
+        /// <summary>
+        /// Convert Excel XLSX spreadsheet to PNG image array Converts an Excel Spreadsheet (XLSX) file to an array of PNG images, one for each page.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of XlsxToPngResult</returns>
+        public async System.Threading.Tasks.Task<XlsxToPngResult> ConvertDocumentXlsxToPngAsync (System.IO.Stream inputFile)
+        {
+             ApiResponse<XlsxToPngResult> localVarResponse = await ConvertDocumentXlsxToPngAsyncWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Convert Excel XLSX spreadsheet to PNG image array Converts an Excel Spreadsheet (XLSX) file to an array of PNG images, one for each page.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (XlsxToPngResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<XlsxToPngResult>> ConvertDocumentXlsxToPngAsyncWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentXlsxToPng");
+
+            var localVarPath = "/convert/xlsx/to/png";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentXlsxToPng", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<XlsxToPngResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (XlsxToPngResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(XlsxToPngResult)));
         }
 
         /// <summary>
