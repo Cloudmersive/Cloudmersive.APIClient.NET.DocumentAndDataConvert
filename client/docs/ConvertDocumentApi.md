@@ -20,7 +20,7 @@ Method | HTTP request | Description
 [**ConvertDocumentEmlToHtml**](ConvertDocumentApi.md#convertdocumentemltohtml) | **POST** /convert/eml/to/html | Convert Email EML file to HTML string
 [**ConvertDocumentEmlToPdf**](ConvertDocumentApi.md#convertdocumentemltopdf) | **POST** /convert/eml/to/pdf | Convert Email EML file to PDF document
 [**ConvertDocumentGetFileTypeIcon**](ConvertDocumentApi.md#convertdocumentgetfiletypeicon) | **POST** /convert/autodetect/get-icon | Get PNG icon file for the file extension
-[**ConvertDocumentGetFileTypeIconAdvanced**](ConvertDocumentApi.md#convertdocumentgetfiletypeiconadvanced) | **POST** /convert/autodetect/get-icon-advanced | Get PNG icon byte array for the file extension
+[**ConvertDocumentGetFileTypeIconAdvanced**](ConvertDocumentApi.md#convertdocumentgetfiletypeiconadvanced) | **POST** /convert/autodetect/get-icon/advanced | Get PNG icon byte array for the file extension
 [**ConvertDocumentHtmlToPdf**](ConvertDocumentApi.md#convertdocumenthtmltopdf) | **POST** /convert/html/to/pdf | Convert HTML document file to PDF Document
 [**ConvertDocumentHtmlToPng**](ConvertDocumentApi.md#convertdocumenthtmltopng) | **POST** /convert/html/to/png | Convert HTML document file to PNG image array
 [**ConvertDocumentHtmlToTxt**](ConvertDocumentApi.md#convertdocumenthtmltotxt) | **POST** /convert/html/to/txt | HTML Document file to Text (txt)
@@ -248,7 +248,7 @@ Name | Type | Description  | Notes
 
 <a name="convertdocumentautodetecttothumbnail"></a>
 # **ConvertDocumentAutodetectToThumbnail**
-> Object ConvertDocumentAutodetectToThumbnail (System.IO.Stream inputFile, int? maxWidth = null, int? maxHeight = null, string extension = null)
+> byte[] ConvertDocumentAutodetectToThumbnail (System.IO.Stream inputFile, int? maxWidth = null, int? maxHeight = null, string extension = null)
 
 Convert File to Thumbnail Image
 
@@ -282,7 +282,7 @@ namespace Example
             try
             {
                 // Convert File to Thumbnail Image
-                Object result = apiInstance.ConvertDocumentAutodetectToThumbnail(inputFile, maxWidth, maxHeight, extension);
+                byte[] result = apiInstance.ConvertDocumentAutodetectToThumbnail(inputFile, maxWidth, maxHeight, extension);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -305,7 +305,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**byte[]**
 
 ### Authorization
 
@@ -996,7 +996,7 @@ Name | Type | Description  | Notes
 
 <a name="convertdocumentemltopdf"></a>
 # **ConvertDocumentEmlToPdf**
-> Object ConvertDocumentEmlToPdf (System.IO.Stream inputFile, bool? bodyOnly = null)
+> byte[] ConvertDocumentEmlToPdf (System.IO.Stream inputFile, bool? bodyOnly = null)
 
 Convert Email EML file to PDF document
 
@@ -1028,7 +1028,7 @@ namespace Example
             try
             {
                 // Convert Email EML file to PDF document
-                Object result = apiInstance.ConvertDocumentEmlToPdf(inputFile, bodyOnly);
+                byte[] result = apiInstance.ConvertDocumentEmlToPdf(inputFile, bodyOnly);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1049,7 +1049,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**byte[]**
 
 ### Authorization
 
@@ -1064,7 +1064,7 @@ Name | Type | Description  | Notes
 
 <a name="convertdocumentgetfiletypeicon"></a>
 # **ConvertDocumentGetFileTypeIcon**
-> Object ConvertDocumentGetFileTypeIcon (string fileExtension, int? iconSize = null)
+> byte[] ConvertDocumentGetFileTypeIcon (string fileExtension, int? iconSize = null)
 
 Get PNG icon file for the file extension
 
@@ -1096,7 +1096,7 @@ namespace Example
             try
             {
                 // Get PNG icon file for the file extension
-                Object result = apiInstance.ConvertDocumentGetFileTypeIcon(fileExtension, iconSize);
+                byte[] result = apiInstance.ConvertDocumentGetFileTypeIcon(fileExtension, iconSize);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1117,7 +1117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**byte[]**
 
 ### Authorization
 
@@ -1468,7 +1468,7 @@ Name | Type | Description  | Notes
 
 <a name="convertdocumentmsgtopdf"></a>
 # **ConvertDocumentMsgToPdf**
-> Object ConvertDocumentMsgToPdf (System.IO.Stream inputFile, bool? bodyOnly = null)
+> byte[] ConvertDocumentMsgToPdf (System.IO.Stream inputFile, bool? bodyOnly = null)
 
 Convert Email MSG file to PDF document
 
@@ -1500,7 +1500,7 @@ namespace Example
             try
             {
                 // Convert Email MSG file to PDF document
-                Object result = apiInstance.ConvertDocumentMsgToPdf(inputFile, bodyOnly);
+                byte[] result = apiInstance.ConvertDocumentMsgToPdf(inputFile, bodyOnly);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1521,7 +1521,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**byte[]**
 
 ### Authorization
 

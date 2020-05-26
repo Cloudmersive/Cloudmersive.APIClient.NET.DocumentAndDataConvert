@@ -115,20 +115,12 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             // TODO unit test for the property 'Cc'
         }
         /// <summary>
-        /// Test the property 'Bcc'
+        /// Test the property 'DateSent'
         /// </summary>
         [Test]
-        public void BccTest()
+        public void DateSentTest()
         {
-            // TODO unit test for the property 'Bcc'
-        }
-        /// <summary>
-        /// Test the property 'ReceivedTime'
-        /// </summary>
-        [Test]
-        public void ReceivedTimeTest()
-        {
-            // TODO unit test for the property 'ReceivedTime'
+            // TODO unit test for the property 'DateSent'
         }
         /// <summary>
         /// Test the property 'Subject'
@@ -137,14 +129,6 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         public void SubjectTest()
         {
             // TODO unit test for the property 'Subject'
-        }
-        /// <summary>
-        /// Test the property 'Organization'
-        /// </summary>
-        [Test]
-        public void OrganizationTest()
-        {
-            // TODO unit test for the property 'Organization'
         }
         /// <summary>
         /// Test the property 'Attachments'

@@ -98,8 +98,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="maxWidth">Optional; Maximum width of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
         /// <param name="maxHeight">Optional; Maximum height of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
         /// <param name="extension">Optional; Specify the file extension of the inputFile. This will improve the response time in most cases. Also allows unsupported files without extensions to still return a corresponding generic icon. (optional)</param>
-        /// <returns>Object</returns>
-        Object ConvertDocumentAutodetectToThumbnail (System.IO.Stream inputFile, int? maxWidth = null, int? maxHeight = null, string extension = null);
+        /// <returns>byte[]</returns>
+        byte[] ConvertDocumentAutodetectToThumbnail (System.IO.Stream inputFile, int? maxWidth = null, int? maxHeight = null, string extension = null);
 
         /// <summary>
         /// Convert File to Thumbnail Image
@@ -112,8 +112,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="maxWidth">Optional; Maximum width of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
         /// <param name="maxHeight">Optional; Maximum height of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
         /// <param name="extension">Optional; Specify the file extension of the inputFile. This will improve the response time in most cases. Also allows unsupported files without extensions to still return a corresponding generic icon. (optional)</param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> ConvertDocumentAutodetectToThumbnailWithHttpInfo (System.IO.Stream inputFile, int? maxWidth = null, int? maxHeight = null, string extension = null);
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> ConvertDocumentAutodetectToThumbnailWithHttpInfo (System.IO.Stream inputFile, int? maxWidth = null, int? maxHeight = null, string extension = null);
         /// <summary>
         /// Convert File to Thumbnail Image Object
         /// </summary>
@@ -349,8 +349,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
-        /// <returns>Object</returns>
-        Object ConvertDocumentEmlToPdf (System.IO.Stream inputFile, bool? bodyOnly = null);
+        /// <returns>byte[]</returns>
+        byte[] ConvertDocumentEmlToPdf (System.IO.Stream inputFile, bool? bodyOnly = null);
 
         /// <summary>
         /// Convert Email EML file to PDF document
@@ -361,8 +361,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> ConvertDocumentEmlToPdfWithHttpInfo (System.IO.Stream inputFile, bool? bodyOnly = null);
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> ConvertDocumentEmlToPdfWithHttpInfo (System.IO.Stream inputFile, bool? bodyOnly = null);
         /// <summary>
         /// Get PNG icon file for the file extension
         /// </summary>
@@ -372,8 +372,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileExtension">Required; The file extension to be used for the icon. Limited to 4 AlphaNumeric characters.</param>
         /// <param name="iconSize">Optional; The desired width of the icon, preserving its aspect ratio. (optional)</param>
-        /// <returns>Object</returns>
-        Object ConvertDocumentGetFileTypeIcon (string fileExtension, int? iconSize = null);
+        /// <returns>byte[]</returns>
+        byte[] ConvertDocumentGetFileTypeIcon (string fileExtension, int? iconSize = null);
 
         /// <summary>
         /// Get PNG icon file for the file extension
@@ -384,8 +384,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileExtension">Required; The file extension to be used for the icon. Limited to 4 AlphaNumeric characters.</param>
         /// <param name="iconSize">Optional; The desired width of the icon, preserving its aspect ratio. (optional)</param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> ConvertDocumentGetFileTypeIconWithHttpInfo (string fileExtension, int? iconSize = null);
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> ConvertDocumentGetFileTypeIconWithHttpInfo (string fileExtension, int? iconSize = null);
         /// <summary>
         /// Get PNG icon byte array for the file extension
         /// </summary>
@@ -506,8 +506,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
-        /// <returns>Object</returns>
-        Object ConvertDocumentMsgToPdf (System.IO.Stream inputFile, bool? bodyOnly = null);
+        /// <returns>byte[]</returns>
+        byte[] ConvertDocumentMsgToPdf (System.IO.Stream inputFile, bool? bodyOnly = null);
 
         /// <summary>
         /// Convert Email MSG file to PDF document
@@ -518,8 +518,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> ConvertDocumentMsgToPdfWithHttpInfo (System.IO.Stream inputFile, bool? bodyOnly = null);
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> ConvertDocumentMsgToPdfWithHttpInfo (System.IO.Stream inputFile, bool? bodyOnly = null);
         /// <summary>
         /// Convert PDF to Word DOCX Document
         /// </summary>
@@ -1040,8 +1040,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="maxWidth">Optional; Maximum width of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
         /// <param name="maxHeight">Optional; Maximum height of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
         /// <param name="extension">Optional; Specify the file extension of the inputFile. This will improve the response time in most cases. Also allows unsupported files without extensions to still return a corresponding generic icon. (optional)</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> ConvertDocumentAutodetectToThumbnailAsync (System.IO.Stream inputFile, int? maxWidth = null, int? maxHeight = null, string extension = null);
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> ConvertDocumentAutodetectToThumbnailAsync (System.IO.Stream inputFile, int? maxWidth = null, int? maxHeight = null, string extension = null);
 
         /// <summary>
         /// Convert File to Thumbnail Image
@@ -1054,8 +1054,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="maxWidth">Optional; Maximum width of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
         /// <param name="maxHeight">Optional; Maximum height of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
         /// <param name="extension">Optional; Specify the file extension of the inputFile. This will improve the response time in most cases. Also allows unsupported files without extensions to still return a corresponding generic icon. (optional)</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ConvertDocumentAutodetectToThumbnailAsyncWithHttpInfo (System.IO.Stream inputFile, int? maxWidth = null, int? maxHeight = null, string extension = null);
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentAutodetectToThumbnailAsyncWithHttpInfo (System.IO.Stream inputFile, int? maxWidth = null, int? maxHeight = null, string extension = null);
         /// <summary>
         /// Convert File to Thumbnail Image Object
         /// </summary>
@@ -1291,8 +1291,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> ConvertDocumentEmlToPdfAsync (System.IO.Stream inputFile, bool? bodyOnly = null);
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> ConvertDocumentEmlToPdfAsync (System.IO.Stream inputFile, bool? bodyOnly = null);
 
         /// <summary>
         /// Convert Email EML file to PDF document
@@ -1303,8 +1303,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ConvertDocumentEmlToPdfAsyncWithHttpInfo (System.IO.Stream inputFile, bool? bodyOnly = null);
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentEmlToPdfAsyncWithHttpInfo (System.IO.Stream inputFile, bool? bodyOnly = null);
         /// <summary>
         /// Get PNG icon file for the file extension
         /// </summary>
@@ -1314,8 +1314,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileExtension">Required; The file extension to be used for the icon. Limited to 4 AlphaNumeric characters.</param>
         /// <param name="iconSize">Optional; The desired width of the icon, preserving its aspect ratio. (optional)</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> ConvertDocumentGetFileTypeIconAsync (string fileExtension, int? iconSize = null);
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> ConvertDocumentGetFileTypeIconAsync (string fileExtension, int? iconSize = null);
 
         /// <summary>
         /// Get PNG icon file for the file extension
@@ -1326,8 +1326,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileExtension">Required; The file extension to be used for the icon. Limited to 4 AlphaNumeric characters.</param>
         /// <param name="iconSize">Optional; The desired width of the icon, preserving its aspect ratio. (optional)</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ConvertDocumentGetFileTypeIconAsyncWithHttpInfo (string fileExtension, int? iconSize = null);
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentGetFileTypeIconAsyncWithHttpInfo (string fileExtension, int? iconSize = null);
         /// <summary>
         /// Get PNG icon byte array for the file extension
         /// </summary>
@@ -1448,8 +1448,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> ConvertDocumentMsgToPdfAsync (System.IO.Stream inputFile, bool? bodyOnly = null);
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> ConvertDocumentMsgToPdfAsync (System.IO.Stream inputFile, bool? bodyOnly = null);
 
         /// <summary>
         /// Convert Email MSG file to PDF document
@@ -1460,8 +1460,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ConvertDocumentMsgToPdfAsyncWithHttpInfo (System.IO.Stream inputFile, bool? bodyOnly = null);
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentMsgToPdfAsyncWithHttpInfo (System.IO.Stream inputFile, bool? bodyOnly = null);
         /// <summary>
         /// Convert PDF to Word DOCX Document
         /// </summary>
@@ -2461,10 +2461,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="maxWidth">Optional; Maximum width of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
         /// <param name="maxHeight">Optional; Maximum height of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
         /// <param name="extension">Optional; Specify the file extension of the inputFile. This will improve the response time in most cases. Also allows unsupported files without extensions to still return a corresponding generic icon. (optional)</param>
-        /// <returns>Object</returns>
-        public Object ConvertDocumentAutodetectToThumbnail (System.IO.Stream inputFile, int? maxWidth = null, int? maxHeight = null, string extension = null)
+        /// <returns>byte[]</returns>
+        public byte[] ConvertDocumentAutodetectToThumbnail (System.IO.Stream inputFile, int? maxWidth = null, int? maxHeight = null, string extension = null)
         {
-             ApiResponse<Object> localVarResponse = ConvertDocumentAutodetectToThumbnailWithHttpInfo(inputFile, maxWidth, maxHeight, extension);
+             ApiResponse<byte[]> localVarResponse = ConvertDocumentAutodetectToThumbnailWithHttpInfo(inputFile, maxWidth, maxHeight, extension);
              return localVarResponse.Data;
         }
 
@@ -2476,8 +2476,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="maxWidth">Optional; Maximum width of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
         /// <param name="maxHeight">Optional; Maximum height of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
         /// <param name="extension">Optional; Specify the file extension of the inputFile. This will improve the response time in most cases. Also allows unsupported files without extensions to still return a corresponding generic icon. (optional)</param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > ConvertDocumentAutodetectToThumbnailWithHttpInfo (System.IO.Stream inputFile, int? maxWidth = null, int? maxHeight = null, string extension = null)
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > ConvertDocumentAutodetectToThumbnailWithHttpInfo (System.IO.Stream inputFile, int? maxWidth = null, int? maxHeight = null, string extension = null)
         {
             // verify the required parameter 'inputFile' is set
             if (inputFile == null)
@@ -2529,9 +2529,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
@@ -2542,10 +2542,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="maxWidth">Optional; Maximum width of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
         /// <param name="maxHeight">Optional; Maximum height of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
         /// <param name="extension">Optional; Specify the file extension of the inputFile. This will improve the response time in most cases. Also allows unsupported files without extensions to still return a corresponding generic icon. (optional)</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> ConvertDocumentAutodetectToThumbnailAsync (System.IO.Stream inputFile, int? maxWidth = null, int? maxHeight = null, string extension = null)
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> ConvertDocumentAutodetectToThumbnailAsync (System.IO.Stream inputFile, int? maxWidth = null, int? maxHeight = null, string extension = null)
         {
-             ApiResponse<Object> localVarResponse = await ConvertDocumentAutodetectToThumbnailAsyncWithHttpInfo(inputFile, maxWidth, maxHeight, extension);
+             ApiResponse<byte[]> localVarResponse = await ConvertDocumentAutodetectToThumbnailAsyncWithHttpInfo(inputFile, maxWidth, maxHeight, extension);
              return localVarResponse.Data;
 
         }
@@ -2558,8 +2558,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="maxWidth">Optional; Maximum width of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
         /// <param name="maxHeight">Optional; Maximum height of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128. (optional)</param>
         /// <param name="extension">Optional; Specify the file extension of the inputFile. This will improve the response time in most cases. Also allows unsupported files without extensions to still return a corresponding generic icon. (optional)</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ConvertDocumentAutodetectToThumbnailAsyncWithHttpInfo (System.IO.Stream inputFile, int? maxWidth = null, int? maxHeight = null, string extension = null)
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentAutodetectToThumbnailAsyncWithHttpInfo (System.IO.Stream inputFile, int? maxWidth = null, int? maxHeight = null, string extension = null)
         {
             // verify the required parameter 'inputFile' is set
             if (inputFile == null)
@@ -2611,9 +2611,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
@@ -4156,10 +4156,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
-        /// <returns>Object</returns>
-        public Object ConvertDocumentEmlToPdf (System.IO.Stream inputFile, bool? bodyOnly = null)
+        /// <returns>byte[]</returns>
+        public byte[] ConvertDocumentEmlToPdf (System.IO.Stream inputFile, bool? bodyOnly = null)
         {
-             ApiResponse<Object> localVarResponse = ConvertDocumentEmlToPdfWithHttpInfo(inputFile, bodyOnly);
+             ApiResponse<byte[]> localVarResponse = ConvertDocumentEmlToPdfWithHttpInfo(inputFile, bodyOnly);
              return localVarResponse.Data;
         }
 
@@ -4169,8 +4169,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > ConvertDocumentEmlToPdfWithHttpInfo (System.IO.Stream inputFile, bool? bodyOnly = null)
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > ConvertDocumentEmlToPdfWithHttpInfo (System.IO.Stream inputFile, bool? bodyOnly = null)
         {
             // verify the required parameter 'inputFile' is set
             if (inputFile == null)
@@ -4220,9 +4220,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
@@ -4231,10 +4231,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> ConvertDocumentEmlToPdfAsync (System.IO.Stream inputFile, bool? bodyOnly = null)
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> ConvertDocumentEmlToPdfAsync (System.IO.Stream inputFile, bool? bodyOnly = null)
         {
-             ApiResponse<Object> localVarResponse = await ConvertDocumentEmlToPdfAsyncWithHttpInfo(inputFile, bodyOnly);
+             ApiResponse<byte[]> localVarResponse = await ConvertDocumentEmlToPdfAsyncWithHttpInfo(inputFile, bodyOnly);
              return localVarResponse.Data;
 
         }
@@ -4245,8 +4245,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ConvertDocumentEmlToPdfAsyncWithHttpInfo (System.IO.Stream inputFile, bool? bodyOnly = null)
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentEmlToPdfAsyncWithHttpInfo (System.IO.Stream inputFile, bool? bodyOnly = null)
         {
             // verify the required parameter 'inputFile' is set
             if (inputFile == null)
@@ -4296,9 +4296,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
@@ -4307,10 +4307,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileExtension">Required; The file extension to be used for the icon. Limited to 4 AlphaNumeric characters.</param>
         /// <param name="iconSize">Optional; The desired width of the icon, preserving its aspect ratio. (optional)</param>
-        /// <returns>Object</returns>
-        public Object ConvertDocumentGetFileTypeIcon (string fileExtension, int? iconSize = null)
+        /// <returns>byte[]</returns>
+        public byte[] ConvertDocumentGetFileTypeIcon (string fileExtension, int? iconSize = null)
         {
-             ApiResponse<Object> localVarResponse = ConvertDocumentGetFileTypeIconWithHttpInfo(fileExtension, iconSize);
+             ApiResponse<byte[]> localVarResponse = ConvertDocumentGetFileTypeIconWithHttpInfo(fileExtension, iconSize);
              return localVarResponse.Data;
         }
 
@@ -4320,8 +4320,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileExtension">Required; The file extension to be used for the icon. Limited to 4 AlphaNumeric characters.</param>
         /// <param name="iconSize">Optional; The desired width of the icon, preserving its aspect ratio. (optional)</param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > ConvertDocumentGetFileTypeIconWithHttpInfo (string fileExtension, int? iconSize = null)
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > ConvertDocumentGetFileTypeIconWithHttpInfo (string fileExtension, int? iconSize = null)
         {
             // verify the required parameter 'fileExtension' is set
             if (fileExtension == null)
@@ -4370,9 +4370,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
@@ -4381,10 +4381,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileExtension">Required; The file extension to be used for the icon. Limited to 4 AlphaNumeric characters.</param>
         /// <param name="iconSize">Optional; The desired width of the icon, preserving its aspect ratio. (optional)</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> ConvertDocumentGetFileTypeIconAsync (string fileExtension, int? iconSize = null)
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> ConvertDocumentGetFileTypeIconAsync (string fileExtension, int? iconSize = null)
         {
-             ApiResponse<Object> localVarResponse = await ConvertDocumentGetFileTypeIconAsyncWithHttpInfo(fileExtension, iconSize);
+             ApiResponse<byte[]> localVarResponse = await ConvertDocumentGetFileTypeIconAsyncWithHttpInfo(fileExtension, iconSize);
              return localVarResponse.Data;
 
         }
@@ -4395,8 +4395,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileExtension">Required; The file extension to be used for the icon. Limited to 4 AlphaNumeric characters.</param>
         /// <param name="iconSize">Optional; The desired width of the icon, preserving its aspect ratio. (optional)</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ConvertDocumentGetFileTypeIconAsyncWithHttpInfo (string fileExtension, int? iconSize = null)
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentGetFileTypeIconAsyncWithHttpInfo (string fileExtension, int? iconSize = null)
         {
             // verify the required parameter 'fileExtension' is set
             if (fileExtension == null)
@@ -4445,9 +4445,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
@@ -4476,7 +4476,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (fileExtension == null)
                 throw new ApiException(400, "Missing required parameter 'fileExtension' when calling ConvertDocumentApi->ConvertDocumentGetFileTypeIconAdvanced");
 
-            var localVarPath = "/convert/autodetect/get-icon-advanced";
+            var localVarPath = "/convert/autodetect/get-icon/advanced";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -4554,7 +4554,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (fileExtension == null)
                 throw new ApiException(400, "Missing required parameter 'fileExtension' when calling ConvertDocumentApi->ConvertDocumentGetFileTypeIconAdvanced");
 
-            var localVarPath = "/convert/autodetect/get-icon-advanced";
+            var localVarPath = "/convert/autodetect/get-icon/advanced";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -5221,10 +5221,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
-        /// <returns>Object</returns>
-        public Object ConvertDocumentMsgToPdf (System.IO.Stream inputFile, bool? bodyOnly = null)
+        /// <returns>byte[]</returns>
+        public byte[] ConvertDocumentMsgToPdf (System.IO.Stream inputFile, bool? bodyOnly = null)
         {
-             ApiResponse<Object> localVarResponse = ConvertDocumentMsgToPdfWithHttpInfo(inputFile, bodyOnly);
+             ApiResponse<byte[]> localVarResponse = ConvertDocumentMsgToPdfWithHttpInfo(inputFile, bodyOnly);
              return localVarResponse.Data;
         }
 
@@ -5234,8 +5234,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > ConvertDocumentMsgToPdfWithHttpInfo (System.IO.Stream inputFile, bool? bodyOnly = null)
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > ConvertDocumentMsgToPdfWithHttpInfo (System.IO.Stream inputFile, bool? bodyOnly = null)
         {
             // verify the required parameter 'inputFile' is set
             if (inputFile == null)
@@ -5285,9 +5285,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
@@ -5296,10 +5296,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> ConvertDocumentMsgToPdfAsync (System.IO.Stream inputFile, bool? bodyOnly = null)
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> ConvertDocumentMsgToPdfAsync (System.IO.Stream inputFile, bool? bodyOnly = null)
         {
-             ApiResponse<Object> localVarResponse = await ConvertDocumentMsgToPdfAsyncWithHttpInfo(inputFile, bodyOnly);
+             ApiResponse<byte[]> localVarResponse = await ConvertDocumentMsgToPdfAsyncWithHttpInfo(inputFile, bodyOnly);
              return localVarResponse.Data;
 
         }
@@ -5310,8 +5310,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ConvertDocumentMsgToPdfAsyncWithHttpInfo (System.IO.Stream inputFile, bool? bodyOnly = null)
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentMsgToPdfAsyncWithHttpInfo (System.IO.Stream inputFile, bool? bodyOnly = null)
         {
             // verify the required parameter 'inputFile' is set
             if (inputFile == null)
@@ -5361,9 +5361,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>

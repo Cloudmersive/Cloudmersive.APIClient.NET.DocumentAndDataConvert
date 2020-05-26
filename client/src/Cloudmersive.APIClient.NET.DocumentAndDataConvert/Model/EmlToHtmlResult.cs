@@ -39,12 +39,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <param name="from">The From sender of the EML file&#39;s email.</param>
         /// <param name="to">The To recipients of the EML file&#39;s email.</param>
         /// <param name="cc">The CC recipients of the EML file&#39;s email.</param>
-        /// <param name="bcc">The BCC recipients of the EML file&#39;s email.</param>
-        /// <param name="receivedTime">The time that the EML file&#39;s email was received.</param>
+        /// <param name="dateSent">The date and time that the EML file&#39;s email was sent.</param>
         /// <param name="subject">The subject of the EML file&#39;s email.</param>
-        /// <param name="organization">The Organization of the EML file&#39;s email.</param>
         /// <param name="attachments">List of all attachments for the EML file.</param>
-        public EmlToHtmlResult(bool? successful = default(bool?), string content = default(string), string body = default(string), string from = default(string), string to = default(string), string cc = default(string), string bcc = default(string), string receivedTime = default(string), string subject = default(string), string organization = default(string), List<EmlAttachment> attachments = default(List<EmlAttachment>))
+        public EmlToHtmlResult(bool? successful = default(bool?), string content = default(string), string body = default(string), string from = default(string), string to = default(string), string cc = default(string), string dateSent = default(string), string subject = default(string), List<EmlAttachment> attachments = default(List<EmlAttachment>))
         {
             this.Successful = successful;
             this.Content = content;
@@ -52,10 +50,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
             this.From = from;
             this.To = to;
             this.Cc = cc;
-            this.Bcc = bcc;
-            this.ReceivedTime = receivedTime;
+            this.DateSent = dateSent;
             this.Subject = subject;
-            this.Organization = organization;
             this.Attachments = attachments;
         }
         
@@ -102,18 +98,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         public string Cc { get; set; }
 
         /// <summary>
-        /// The BCC recipients of the EML file&#39;s email
+        /// The date and time that the EML file&#39;s email was sent
         /// </summary>
-        /// <value>The BCC recipients of the EML file&#39;s email</value>
-        [DataMember(Name="Bcc", EmitDefaultValue=false)]
-        public string Bcc { get; set; }
-
-        /// <summary>
-        /// The time that the EML file&#39;s email was received
-        /// </summary>
-        /// <value>The time that the EML file&#39;s email was received</value>
-        [DataMember(Name="ReceivedTime", EmitDefaultValue=false)]
-        public string ReceivedTime { get; set; }
+        /// <value>The date and time that the EML file&#39;s email was sent</value>
+        [DataMember(Name="DateSent", EmitDefaultValue=false)]
+        public string DateSent { get; set; }
 
         /// <summary>
         /// The subject of the EML file&#39;s email
@@ -121,13 +110,6 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <value>The subject of the EML file&#39;s email</value>
         [DataMember(Name="Subject", EmitDefaultValue=false)]
         public string Subject { get; set; }
-
-        /// <summary>
-        /// The Organization of the EML file&#39;s email
-        /// </summary>
-        /// <value>The Organization of the EML file&#39;s email</value>
-        [DataMember(Name="Organization", EmitDefaultValue=false)]
-        public string Organization { get; set; }
 
         /// <summary>
         /// List of all attachments for the EML file
@@ -150,10 +132,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
             sb.Append("  From: ").Append(From).Append("\n");
             sb.Append("  To: ").Append(To).Append("\n");
             sb.Append("  Cc: ").Append(Cc).Append("\n");
-            sb.Append("  Bcc: ").Append(Bcc).Append("\n");
-            sb.Append("  ReceivedTime: ").Append(ReceivedTime).Append("\n");
+            sb.Append("  DateSent: ").Append(DateSent).Append("\n");
             sb.Append("  Subject: ").Append(Subject).Append("\n");
-            sb.Append("  Organization: ").Append(Organization).Append("\n");
             sb.Append("  Attachments: ").Append(Attachments).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -220,24 +200,14 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                     this.Cc.Equals(input.Cc))
                 ) && 
                 (
-                    this.Bcc == input.Bcc ||
-                    (this.Bcc != null &&
-                    this.Bcc.Equals(input.Bcc))
-                ) && 
-                (
-                    this.ReceivedTime == input.ReceivedTime ||
-                    (this.ReceivedTime != null &&
-                    this.ReceivedTime.Equals(input.ReceivedTime))
+                    this.DateSent == input.DateSent ||
+                    (this.DateSent != null &&
+                    this.DateSent.Equals(input.DateSent))
                 ) && 
                 (
                     this.Subject == input.Subject ||
                     (this.Subject != null &&
                     this.Subject.Equals(input.Subject))
-                ) && 
-                (
-                    this.Organization == input.Organization ||
-                    (this.Organization != null &&
-                    this.Organization.Equals(input.Organization))
                 ) && 
                 (
                     this.Attachments == input.Attachments ||
@@ -267,14 +237,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                     hashCode = hashCode * 59 + this.To.GetHashCode();
                 if (this.Cc != null)
                     hashCode = hashCode * 59 + this.Cc.GetHashCode();
-                if (this.Bcc != null)
-                    hashCode = hashCode * 59 + this.Bcc.GetHashCode();
-                if (this.ReceivedTime != null)
-                    hashCode = hashCode * 59 + this.ReceivedTime.GetHashCode();
+                if (this.DateSent != null)
+                    hashCode = hashCode * 59 + this.DateSent.GetHashCode();
                 if (this.Subject != null)
                     hashCode = hashCode * 59 + this.Subject.GetHashCode();
-                if (this.Organization != null)
-                    hashCode = hashCode * 59 + this.Organization.GetHashCode();
                 if (this.Attachments != null)
                     hashCode = hashCode * 59 + this.Attachments.GetHashCode();
                 return hashCode;

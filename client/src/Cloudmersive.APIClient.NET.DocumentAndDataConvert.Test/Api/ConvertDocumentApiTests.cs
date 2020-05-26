@@ -112,7 +112,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //int? maxHeight = null;
             //string extension = null;
             //var response = instance.ConvertDocumentAutodetectToThumbnail(inputFile, maxWidth, maxHeight, extension);
-            //Assert.IsInstanceOf<Object> (response, "response is Object");
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
         /// <summary>
@@ -253,7 +253,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //System.IO.Stream inputFile = null;
             //bool? bodyOnly = null;
             //var response = instance.ConvertDocumentEmlToPdf(inputFile, bodyOnly);
-            //Assert.IsInstanceOf<Object> (response, "response is Object");
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
         /// <summary>
@@ -266,7 +266,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //string fileExtension = null;
             //int? iconSize = null;
             //var response = instance.ConvertDocumentGetFileTypeIcon(fileExtension, iconSize);
-            //Assert.IsInstanceOf<Object> (response, "response is Object");
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
         /// <summary>
@@ -342,7 +342,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //System.IO.Stream inputFile = null;
             //bool? bodyOnly = null;
             //var response = instance.ConvertDocumentMsgToPdf(inputFile, bodyOnly);
-            //Assert.IsInstanceOf<Object> (response, "response is Object");
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
         /// <summary>
