@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 This C# SDK is for the [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api):
 
 - API version: v1
-- SDK version: 3.2.8
+- SDK version: 3.2.9
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -208,7 +208,9 @@ Class | Method | HTTP request | Description
 *EditDocumentApi* | [**EditDocumentFinishEditing**](docs/EditDocumentApi.md#editdocumentfinishediting) | **POST** /convert/edit/finish-editing | Finish editing document, and download result from document editing
 *EditDocumentApi* | [**EditDocumentPptxDeleteSlides**](docs/EditDocumentApi.md#editdocumentpptxdeleteslides) | **POST** /convert/edit/pptx/delete-slides | Delete, remove slides from a PowerPoint PPTX presentation document
 *EditDocumentApi* | [**EditDocumentPptxReplace**](docs/EditDocumentApi.md#editdocumentpptxreplace) | **POST** /convert/edit/pptx/replace-all | Replace string in PowerPoint PPTX presentation
+*EditDocumentApi* | [**EditDocumentXlsxAppendRow**](docs/EditDocumentApi.md#editdocumentxlsxappendrow) | **POST** /convert/edit/xlsx/append-row | Append row to a Excel XLSX spreadsheet, worksheet
 *EditDocumentApi* | [**EditDocumentXlsxClearCellByIndex**](docs/EditDocumentApi.md#editdocumentxlsxclearcellbyindex) | **POST** /convert/edit/xlsx/clear-cell/by-index | Clear cell contents in an Excel XLSX spreadsheet, worksheet by index
+*EditDocumentApi* | [**EditDocumentXlsxClearRow**](docs/EditDocumentApi.md#editdocumentxlsxclearrow) | **POST** /convert/edit/xlsx/clear-row | Clear row from a Excel XLSX spreadsheet, worksheet
 *EditDocumentApi* | [**EditDocumentXlsxCreateBlankSpreadsheet**](docs/EditDocumentApi.md#editdocumentxlsxcreateblankspreadsheet) | **POST** /convert/edit/xlsx/create/blank | Create a blank Excel XLSX spreadsheet
 *EditDocumentApi* | [**EditDocumentXlsxCreateSpreadsheetFromData**](docs/EditDocumentApi.md#editdocumentxlsxcreatespreadsheetfromdata) | **POST** /convert/edit/xlsx/create/from/data | Create a new Excel XLSX spreadsheet from column and row data
 *EditDocumentApi* | [**EditDocumentXlsxDeleteWorksheet**](docs/EditDocumentApi.md#editdocumentxlsxdeleteworksheet) | **POST** /convert/edit/xlsx/delete-worksheet | Delete, remove worksheet from an Excel XLSX spreadsheet document
@@ -219,9 +221,11 @@ Class | Method | HTTP request | Description
 *EditDocumentApi* | [**EditDocumentXlsxGetColumns**](docs/EditDocumentApi.md#editdocumentxlsxgetcolumns) | **POST** /convert/edit/xlsx/get-columns | Get columns from a Excel XLSX spreadsheet, worksheet
 *EditDocumentApi* | [**EditDocumentXlsxGetImages**](docs/EditDocumentApi.md#editdocumentxlsxgetimages) | **POST** /convert/edit/xlsx/get-images | Get images from a Excel XLSX spreadsheet, worksheet
 *EditDocumentApi* | [**EditDocumentXlsxGetRowsAndCells**](docs/EditDocumentApi.md#editdocumentxlsxgetrowsandcells) | **POST** /convert/edit/xlsx/get-rows-and-cells | Get rows and cells from a Excel XLSX spreadsheet, worksheet
+*EditDocumentApi* | [**EditDocumentXlsxGetSpecificRow**](docs/EditDocumentApi.md#editdocumentxlsxgetspecificrow) | **POST** /convert/edit/xlsx/get-specific-row | Get a specific row from a Excel XLSX spreadsheet, worksheet by path
 *EditDocumentApi* | [**EditDocumentXlsxGetStyles**](docs/EditDocumentApi.md#editdocumentxlsxgetstyles) | **POST** /convert/edit/xlsx/get-styles | Get styles from a Excel XLSX spreadsheet, worksheet
 *EditDocumentApi* | [**EditDocumentXlsxGetWorksheets**](docs/EditDocumentApi.md#editdocumentxlsxgetworksheets) | **POST** /convert/edit/xlsx/get-worksheets | Get worksheets from a Excel XLSX spreadsheet
 *EditDocumentApi* | [**EditDocumentXlsxInsertWorksheet**](docs/EditDocumentApi.md#editdocumentxlsxinsertworksheet) | **POST** /convert/edit/xlsx/insert-worksheet | Insert a new worksheet into an Excel XLSX spreadsheet
+*EditDocumentApi* | [**EditDocumentXlsxRenameWorksheet**](docs/EditDocumentApi.md#editdocumentxlsxrenameworksheet) | **POST** /convert/edit/xlsx/rename-worksheet | Rename a specific worksheet in a Excel XLSX spreadsheet
 *EditDocumentApi* | [**EditDocumentXlsxSetCellByIdentifier**](docs/EditDocumentApi.md#editdocumentxlsxsetcellbyidentifier) | **POST** /convert/edit/xlsx/set-cell/by-identifier | Set, update cell contents in an Excel XLSX spreadsheet, worksheet by cell identifier
 *EditDocumentApi* | [**EditDocumentXlsxSetCellByIndex**](docs/EditDocumentApi.md#editdocumentxlsxsetcellbyindex) | **POST** /convert/edit/xlsx/set-cell/by-index | Set, update cell contents in an Excel XLSX spreadsheet, worksheet by index
 *EditPdfApi* | [**EditPdfAddAnnotations**](docs/EditPdfApi.md#editpdfaddannotations) | **POST** /convert/edit/pdf/annotations/add-item | Add one or more PDF annotations, comments in the PDF document
@@ -301,6 +305,8 @@ Class | Method | HTTP request | Description
 
  - [Model.AddPdfAnnotationRequest](docs/AddPdfAnnotationRequest.md)
  - [Model.AlternateFileFormatCandidate](docs/AlternateFileFormatCandidate.md)
+ - [Model.AppendXlsxRowRequest](docs/AppendXlsxRowRequest.md)
+ - [Model.AppendXlsxRowResponse](docs/AppendXlsxRowResponse.md)
  - [Model.AutodetectDocumentValidationResult](docs/AutodetectDocumentValidationResult.md)
  - [Model.AutodetectGetInfoResult](docs/AutodetectGetInfoResult.md)
  - [Model.AutodetectToPngResult](docs/AutodetectToPngResult.md)
@@ -314,6 +320,8 @@ Class | Method | HTTP request | Description
  - [Model.ChangeLineEndingResponse](docs/ChangeLineEndingResponse.md)
  - [Model.ClearXlsxCellRequest](docs/ClearXlsxCellRequest.md)
  - [Model.ClearXlsxCellResponse](docs/ClearXlsxCellResponse.md)
+ - [Model.ClearXlsxRowRequest](docs/ClearXlsxRowRequest.md)
+ - [Model.ClearXlsxRowResponse](docs/ClearXlsxRowResponse.md)
  - [Model.ConvertedPngPage](docs/ConvertedPngPage.md)
  - [Model.CreateBlankDocxRequest](docs/CreateBlankDocxRequest.md)
  - [Model.CreateBlankDocxResponse](docs/CreateBlankDocxResponse.md)
@@ -411,6 +419,8 @@ Class | Method | HTTP request | Description
  - [Model.GetXlsxImagesResponse](docs/GetXlsxImagesResponse.md)
  - [Model.GetXlsxRowsAndCellsRequest](docs/GetXlsxRowsAndCellsRequest.md)
  - [Model.GetXlsxRowsAndCellsResponse](docs/GetXlsxRowsAndCellsResponse.md)
+ - [Model.GetXlsxSpecificRowRequest](docs/GetXlsxSpecificRowRequest.md)
+ - [Model.GetXlsxSpecificRowResponse](docs/GetXlsxSpecificRowResponse.md)
  - [Model.GetXlsxStylesRequest](docs/GetXlsxStylesRequest.md)
  - [Model.GetXlsxStylesResponse](docs/GetXlsxStylesResponse.md)
  - [Model.GetXlsxWorksheetsRequest](docs/GetXlsxWorksheetsRequest.md)
@@ -456,6 +466,8 @@ Class | Method | HTTP request | Description
  - [Model.RemoveWhitespaceFromTextRequest](docs/RemoveWhitespaceFromTextRequest.md)
  - [Model.RemoveWhitespaceFromTextResponse](docs/RemoveWhitespaceFromTextResponse.md)
  - [Model.RemoveXlsxWorksheetRequest](docs/RemoveXlsxWorksheetRequest.md)
+ - [Model.RenameXlsxWorksheetRequest](docs/RenameXlsxWorksheetRequest.md)
+ - [Model.RenameXlsxWorksheetResponse](docs/RenameXlsxWorksheetResponse.md)
  - [Model.ReplaceDocxParagraphRequest](docs/ReplaceDocxParagraphRequest.md)
  - [Model.ReplaceDocxParagraphResponse](docs/ReplaceDocxParagraphResponse.md)
  - [Model.ReplaceStringRegexRequest](docs/ReplaceStringRegexRequest.md)

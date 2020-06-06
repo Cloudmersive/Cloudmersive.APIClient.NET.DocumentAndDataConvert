@@ -38,7 +38,9 @@ Method | HTTP request | Description
 [**EditDocumentFinishEditing**](EditDocumentApi.md#editdocumentfinishediting) | **POST** /convert/edit/finish-editing | Finish editing document, and download result from document editing
 [**EditDocumentPptxDeleteSlides**](EditDocumentApi.md#editdocumentpptxdeleteslides) | **POST** /convert/edit/pptx/delete-slides | Delete, remove slides from a PowerPoint PPTX presentation document
 [**EditDocumentPptxReplace**](EditDocumentApi.md#editdocumentpptxreplace) | **POST** /convert/edit/pptx/replace-all | Replace string in PowerPoint PPTX presentation
+[**EditDocumentXlsxAppendRow**](EditDocumentApi.md#editdocumentxlsxappendrow) | **POST** /convert/edit/xlsx/append-row | Append row to a Excel XLSX spreadsheet, worksheet
 [**EditDocumentXlsxClearCellByIndex**](EditDocumentApi.md#editdocumentxlsxclearcellbyindex) | **POST** /convert/edit/xlsx/clear-cell/by-index | Clear cell contents in an Excel XLSX spreadsheet, worksheet by index
+[**EditDocumentXlsxClearRow**](EditDocumentApi.md#editdocumentxlsxclearrow) | **POST** /convert/edit/xlsx/clear-row | Clear row from a Excel XLSX spreadsheet, worksheet
 [**EditDocumentXlsxCreateBlankSpreadsheet**](EditDocumentApi.md#editdocumentxlsxcreateblankspreadsheet) | **POST** /convert/edit/xlsx/create/blank | Create a blank Excel XLSX spreadsheet
 [**EditDocumentXlsxCreateSpreadsheetFromData**](EditDocumentApi.md#editdocumentxlsxcreatespreadsheetfromdata) | **POST** /convert/edit/xlsx/create/from/data | Create a new Excel XLSX spreadsheet from column and row data
 [**EditDocumentXlsxDeleteWorksheet**](EditDocumentApi.md#editdocumentxlsxdeleteworksheet) | **POST** /convert/edit/xlsx/delete-worksheet | Delete, remove worksheet from an Excel XLSX spreadsheet document
@@ -49,9 +51,11 @@ Method | HTTP request | Description
 [**EditDocumentXlsxGetColumns**](EditDocumentApi.md#editdocumentxlsxgetcolumns) | **POST** /convert/edit/xlsx/get-columns | Get columns from a Excel XLSX spreadsheet, worksheet
 [**EditDocumentXlsxGetImages**](EditDocumentApi.md#editdocumentxlsxgetimages) | **POST** /convert/edit/xlsx/get-images | Get images from a Excel XLSX spreadsheet, worksheet
 [**EditDocumentXlsxGetRowsAndCells**](EditDocumentApi.md#editdocumentxlsxgetrowsandcells) | **POST** /convert/edit/xlsx/get-rows-and-cells | Get rows and cells from a Excel XLSX spreadsheet, worksheet
+[**EditDocumentXlsxGetSpecificRow**](EditDocumentApi.md#editdocumentxlsxgetspecificrow) | **POST** /convert/edit/xlsx/get-specific-row | Get a specific row from a Excel XLSX spreadsheet, worksheet by path
 [**EditDocumentXlsxGetStyles**](EditDocumentApi.md#editdocumentxlsxgetstyles) | **POST** /convert/edit/xlsx/get-styles | Get styles from a Excel XLSX spreadsheet, worksheet
 [**EditDocumentXlsxGetWorksheets**](EditDocumentApi.md#editdocumentxlsxgetworksheets) | **POST** /convert/edit/xlsx/get-worksheets | Get worksheets from a Excel XLSX spreadsheet
 [**EditDocumentXlsxInsertWorksheet**](EditDocumentApi.md#editdocumentxlsxinsertworksheet) | **POST** /convert/edit/xlsx/insert-worksheet | Insert a new worksheet into an Excel XLSX spreadsheet
+[**EditDocumentXlsxRenameWorksheet**](EditDocumentApi.md#editdocumentxlsxrenameworksheet) | **POST** /convert/edit/xlsx/rename-worksheet | Rename a specific worksheet in a Excel XLSX spreadsheet
 [**EditDocumentXlsxSetCellByIdentifier**](EditDocumentApi.md#editdocumentxlsxsetcellbyidentifier) | **POST** /convert/edit/xlsx/set-cell/by-identifier | Set, update cell contents in an Excel XLSX spreadsheet, worksheet by cell identifier
 [**EditDocumentXlsxSetCellByIndex**](EditDocumentApi.md#editdocumentxlsxsetcellbyindex) | **POST** /convert/edit/xlsx/set-cell/by-index | Set, update cell contents in an Excel XLSX spreadsheet, worksheet by index
 
@@ -2300,6 +2304,72 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="editdocumentxlsxappendrow"></a>
+# **EditDocumentXlsxAppendRow**
+> AppendXlsxRowResponse EditDocumentXlsxAppendRow (AppendXlsxRowRequest input)
+
+Append row to a Excel XLSX spreadsheet, worksheet
+
+Appends a row to the end of an Excel Spreadsheet worksheet.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class EditDocumentXlsxAppendRowExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new EditDocumentApi();
+            var input = new AppendXlsxRowRequest(); // AppendXlsxRowRequest | Document input request
+
+            try
+            {
+                // Append row to a Excel XLSX spreadsheet, worksheet
+                AppendXlsxRowResponse result = apiInstance.EditDocumentXlsxAppendRow(input);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling EditDocumentApi.EditDocumentXlsxAppendRow: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **input** | [**AppendXlsxRowRequest**](AppendXlsxRowRequest.md)| Document input request | 
+
+### Return type
+
+[**AppendXlsxRowResponse**](AppendXlsxRowResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="editdocumentxlsxclearcellbyindex"></a>
 # **EditDocumentXlsxClearCellByIndex**
 > ClearXlsxCellResponse EditDocumentXlsxClearCellByIndex (ClearXlsxCellRequest input)
@@ -2354,6 +2424,72 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ClearXlsxCellResponse**](ClearXlsxCellResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="editdocumentxlsxclearrow"></a>
+# **EditDocumentXlsxClearRow**
+> ClearXlsxRowResponse EditDocumentXlsxClearRow (ClearXlsxRowRequest input)
+
+Clear row from a Excel XLSX spreadsheet, worksheet
+
+Clears data from a specific row in the Excel Spreadsheet worksheet, leaving a blank row. Use the Get Rows And Cells API to enumerate available rows in a spreadsheet.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class EditDocumentXlsxClearRowExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new EditDocumentApi();
+            var input = new ClearXlsxRowRequest(); // ClearXlsxRowRequest | Document input request
+
+            try
+            {
+                // Clear row from a Excel XLSX spreadsheet, worksheet
+                ClearXlsxRowResponse result = apiInstance.EditDocumentXlsxClearRow(input);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling EditDocumentApi.EditDocumentXlsxClearRow: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **input** | [**ClearXlsxRowRequest**](ClearXlsxRowRequest.md)| Document input request | 
+
+### Return type
+
+[**ClearXlsxRowResponse**](ClearXlsxRowResponse.md)
 
 ### Authorization
 
@@ -2500,7 +2636,7 @@ Name | Type | Description  | Notes
 
 <a name="editdocumentxlsxdeleteworksheet"></a>
 # **EditDocumentXlsxDeleteWorksheet**
-> Object EditDocumentXlsxDeleteWorksheet (RemoveXlsxWorksheetRequest reqConfig)
+> byte[] EditDocumentXlsxDeleteWorksheet (RemoveXlsxWorksheetRequest reqConfig)
 
 Delete, remove worksheet from an Excel XLSX spreadsheet document
 
@@ -2531,7 +2667,7 @@ namespace Example
             try
             {
                 // Delete, remove worksheet from an Excel XLSX spreadsheet document
-                Object result = apiInstance.EditDocumentXlsxDeleteWorksheet(reqConfig);
+                byte[] result = apiInstance.EditDocumentXlsxDeleteWorksheet(reqConfig);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2551,7 +2687,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**byte[]**
 
 ### Authorization
 
@@ -3026,6 +3162,72 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="editdocumentxlsxgetspecificrow"></a>
+# **EditDocumentXlsxGetSpecificRow**
+> GetXlsxSpecificRowResponse EditDocumentXlsxGetSpecificRow (GetXlsxSpecificRowRequest input)
+
+Get a specific row from a Excel XLSX spreadsheet, worksheet by path
+
+Returns the specific row and its cells defined in the Excel Spreadsheet worksheet based on the specified path.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class EditDocumentXlsxGetSpecificRowExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new EditDocumentApi();
+            var input = new GetXlsxSpecificRowRequest(); // GetXlsxSpecificRowRequest | Document input request
+
+            try
+            {
+                // Get a specific row from a Excel XLSX spreadsheet, worksheet by path
+                GetXlsxSpecificRowResponse result = apiInstance.EditDocumentXlsxGetSpecificRow(input);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling EditDocumentApi.EditDocumentXlsxGetSpecificRow: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **input** | [**GetXlsxSpecificRowRequest**](GetXlsxSpecificRowRequest.md)| Document input request | 
+
+### Return type
+
+[**GetXlsxSpecificRowResponse**](GetXlsxSpecificRowResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="editdocumentxlsxgetstyles"></a>
 # **EditDocumentXlsxGetStyles**
 > GetXlsxStylesResponse EditDocumentXlsxGetStyles (GetXlsxStylesRequest input)
@@ -3212,6 +3414,72 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**InsertXlsxWorksheetResponse**](InsertXlsxWorksheetResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="editdocumentxlsxrenameworksheet"></a>
+# **EditDocumentXlsxRenameWorksheet**
+> RenameXlsxWorksheetResponse EditDocumentXlsxRenameWorksheet (RenameXlsxWorksheetRequest input)
+
+Rename a specific worksheet in a Excel XLSX spreadsheet
+
+Edits the input Excel XLSX spreadsheet document to rename a specified worksheet (tab).  Use the Get Worksheets API to enumerate available worksheets in a spreadsheet.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class EditDocumentXlsxRenameWorksheetExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new EditDocumentApi();
+            var input = new RenameXlsxWorksheetRequest(); // RenameXlsxWorksheetRequest | Document input request
+
+            try
+            {
+                // Rename a specific worksheet in a Excel XLSX spreadsheet
+                RenameXlsxWorksheetResponse result = apiInstance.EditDocumentXlsxRenameWorksheet(input);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling EditDocumentApi.EditDocumentXlsxRenameWorksheet: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **input** | [**RenameXlsxWorksheetRequest**](RenameXlsxWorksheetRequest.md)| Document input request | 
+
+### Return type
+
+[**RenameXlsxWorksheetResponse**](RenameXlsxWorksheetResponse.md)
 
 ### Authorization
 

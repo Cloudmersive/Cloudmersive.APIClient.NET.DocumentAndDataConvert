@@ -473,6 +473,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test EditDocumentXlsxAppendRow
+        /// </summary>
+        [Test]
+        public void EditDocumentXlsxAppendRowTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //AppendXlsxRowRequest input = null;
+            //var response = instance.EditDocumentXlsxAppendRow(input);
+            //Assert.IsInstanceOf<AppendXlsxRowResponse> (response, "response is AppendXlsxRowResponse");
+        }
+        
+        /// <summary>
         /// Test EditDocumentXlsxClearCellByIndex
         /// </summary>
         [Test]
@@ -482,6 +494,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //ClearXlsxCellRequest input = null;
             //var response = instance.EditDocumentXlsxClearCellByIndex(input);
             //Assert.IsInstanceOf<ClearXlsxCellResponse> (response, "response is ClearXlsxCellResponse");
+        }
+        
+        /// <summary>
+        /// Test EditDocumentXlsxClearRow
+        /// </summary>
+        [Test]
+        public void EditDocumentXlsxClearRowTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //ClearXlsxRowRequest input = null;
+            //var response = instance.EditDocumentXlsxClearRow(input);
+            //Assert.IsInstanceOf<ClearXlsxRowResponse> (response, "response is ClearXlsxRowResponse");
         }
         
         /// <summary>
@@ -517,7 +541,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             // TODO uncomment below to test the method and replace null with proper value
             //RemoveXlsxWorksheetRequest reqConfig = null;
             //var response = instance.EditDocumentXlsxDeleteWorksheet(reqConfig);
-            //Assert.IsInstanceOf<Object> (response, "response is Object");
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
         /// <summary>
@@ -605,6 +629,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test EditDocumentXlsxGetSpecificRow
+        /// </summary>
+        [Test]
+        public void EditDocumentXlsxGetSpecificRowTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //GetXlsxSpecificRowRequest input = null;
+            //var response = instance.EditDocumentXlsxGetSpecificRow(input);
+            //Assert.IsInstanceOf<GetXlsxSpecificRowResponse> (response, "response is GetXlsxSpecificRowResponse");
+        }
+        
+        /// <summary>
         /// Test EditDocumentXlsxGetStyles
         /// </summary>
         [Test]
@@ -638,6 +674,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //InsertXlsxWorksheetRequest input = null;
             //var response = instance.EditDocumentXlsxInsertWorksheet(input);
             //Assert.IsInstanceOf<InsertXlsxWorksheetResponse> (response, "response is InsertXlsxWorksheetResponse");
+        }
+        
+        /// <summary>
+        /// Test EditDocumentXlsxRenameWorksheet
+        /// </summary>
+        [Test]
+        public void EditDocumentXlsxRenameWorksheetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //RenameXlsxWorksheetRequest input = null;
+            //var response = instance.EditDocumentXlsxRenameWorksheet(input);
+            //Assert.IsInstanceOf<RenameXlsxWorksheetResponse> (response, "response is RenameXlsxWorksheetResponse");
         }
         
         /// <summary>
