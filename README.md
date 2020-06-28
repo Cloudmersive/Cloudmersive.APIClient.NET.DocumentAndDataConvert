@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 This C# SDK is for the [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api):
 
 - API version: v1
-- SDK version: 3.3.0
+- SDK version: 3.3.1
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -119,6 +119,7 @@ Class | Method | HTTP request | Description
 *ConvertDataApi* | [**ConvertDataXmlToJson**](docs/ConvertDataApi.md#convertdataxmltojson) | **POST** /convert/xml/to/json | Convert XML to JSON conversion
 *ConvertDataApi* | [**ConvertDataXmlTransformWithXsltToXml**](docs/ConvertDataApi.md#convertdataxmltransformwithxslttoxml) | **POST** /convert/xml/transform/xslt/to/xml | Transform XML document file with XSLT into a new XML document
 *ConvertDocumentApi* | [**ConvertDocumentAutodetectGetInfo**](docs/ConvertDocumentApi.md#convertdocumentautodetectgetinfo) | **POST** /convert/autodetect/get-info | Get document type information
+*ConvertDocumentApi* | [**ConvertDocumentAutodetectToJpg**](docs/ConvertDocumentApi.md#convertdocumentautodetecttojpg) | **POST** /convert/autodetect/to/jpg | Convert Document to JPG/JPEG image array
 *ConvertDocumentApi* | [**ConvertDocumentAutodetectToPdf**](docs/ConvertDocumentApi.md#convertdocumentautodetecttopdf) | **POST** /convert/autodetect/to/pdf | Convert Document to PDF
 *ConvertDocumentApi* | [**ConvertDocumentAutodetectToPngArray**](docs/ConvertDocumentApi.md#convertdocumentautodetecttopngarray) | **POST** /convert/autodetect/to/png | Convert Document to PNG array
 *ConvertDocumentApi* | [**ConvertDocumentAutodetectToThumbnail**](docs/ConvertDocumentApi.md#convertdocumentautodetecttothumbnail) | **POST** /convert/autodetect/to/thumbnail | Convert File to Thumbnail Image
@@ -128,23 +129,41 @@ Class | Method | HTTP request | Description
 *ConvertDocumentApi* | [**ConvertDocumentDocToDocx**](docs/ConvertDocumentApi.md#convertdocumentdoctodocx) | **POST** /convert/doc/to/docx | Convert Word DOC (97-03) Document to DOCX
 *ConvertDocumentApi* | [**ConvertDocumentDocToPdf**](docs/ConvertDocumentApi.md#convertdocumentdoctopdf) | **POST** /convert/doc/to/pdf | Convert Word DOC (97-03) Document to PDF
 *ConvertDocumentApi* | [**ConvertDocumentDocToTxt**](docs/ConvertDocumentApi.md#convertdocumentdoctotxt) | **POST** /convert/doc/to/txt | Convert Word DOC (97-03) Document to Text (txt)
+*ConvertDocumentApi* | [**ConvertDocumentDocxToHtml**](docs/ConvertDocumentApi.md#convertdocumentdocxtohtml) | **POST** /convert/docx/to/html | Convert Word DOCX Document to HTML Document
+*ConvertDocumentApi* | [**ConvertDocumentDocxToJpg**](docs/ConvertDocumentApi.md#convertdocumentdocxtojpg) | **POST** /convert/docx/to/jpg | Convert Word DOCX Document to JPG/JPEG image array
 *ConvertDocumentApi* | [**ConvertDocumentDocxToPdf**](docs/ConvertDocumentApi.md#convertdocumentdocxtopdf) | **POST** /convert/docx/to/pdf | Convert Word DOCX Document to PDF
-*ConvertDocumentApi* | [**ConvertDocumentDocxToPng**](docs/ConvertDocumentApi.md#convertdocumentdocxtopng) | **POST** /convert/docx/to/png | Convert DOCX document to PNG image array
+*ConvertDocumentApi* | [**ConvertDocumentDocxToPng**](docs/ConvertDocumentApi.md#convertdocumentdocxtopng) | **POST** /convert/docx/to/png | Convert Word DOCX Document to PNG image array
+*ConvertDocumentApi* | [**ConvertDocumentDocxToRtf**](docs/ConvertDocumentApi.md#convertdocumentdocxtortf) | **POST** /convert/docx/to/rtf | Convert Word DOCX Document to RTF
 *ConvertDocumentApi* | [**ConvertDocumentDocxToTxt**](docs/ConvertDocumentApi.md#convertdocumentdocxtotxt) | **POST** /convert/docx/to/txt | Convert Word DOCX Document to Text (txt)
 *ConvertDocumentApi* | [**ConvertDocumentEmlToHtml**](docs/ConvertDocumentApi.md#convertdocumentemltohtml) | **POST** /convert/eml/to/html | Convert Email EML file to HTML string
+*ConvertDocumentApi* | [**ConvertDocumentEmlToJpg**](docs/ConvertDocumentApi.md#convertdocumentemltojpg) | **POST** /convert/eml/to/jpg | Convert Email EML file to JPG/JPEG image array
 *ConvertDocumentApi* | [**ConvertDocumentEmlToPdf**](docs/ConvertDocumentApi.md#convertdocumentemltopdf) | **POST** /convert/eml/to/pdf | Convert Email EML file to PDF document
+*ConvertDocumentApi* | [**ConvertDocumentEmlToPng**](docs/ConvertDocumentApi.md#convertdocumentemltopng) | **POST** /convert/eml/to/png | Convert Email EML file to PNG image array
 *ConvertDocumentApi* | [**ConvertDocumentGetFileTypeIcon**](docs/ConvertDocumentApi.md#convertdocumentgetfiletypeicon) | **POST** /convert/autodetect/get-icon | Get PNG icon file for the file extension
 *ConvertDocumentApi* | [**ConvertDocumentGetFileTypeIconAdvanced**](docs/ConvertDocumentApi.md#convertdocumentgetfiletypeiconadvanced) | **POST** /convert/autodetect/get-icon/advanced | Get PNG icon byte array for the file extension
 *ConvertDocumentApi* | [**ConvertDocumentHtmlToPdf**](docs/ConvertDocumentApi.md#convertdocumenthtmltopdf) | **POST** /convert/html/to/pdf | Convert HTML document file to PDF Document
 *ConvertDocumentApi* | [**ConvertDocumentHtmlToPng**](docs/ConvertDocumentApi.md#convertdocumenthtmltopng) | **POST** /convert/html/to/png | Convert HTML document file to PNG image array
 *ConvertDocumentApi* | [**ConvertDocumentHtmlToTxt**](docs/ConvertDocumentApi.md#convertdocumenthtmltotxt) | **POST** /convert/html/to/txt | HTML Document file to Text (txt)
-*ConvertDocumentApi* | [**ConvertDocumentKeynoteToPdf**](docs/ConvertDocumentApi.md#convertdocumentkeynotetopdf) | **POST** /convert/keynote/to/pdf | Convert Keynote Presentation (KEY) to PDF
+*ConvertDocumentApi* | [**ConvertDocumentKeynoteToJpg**](docs/ConvertDocumentApi.md#convertdocumentkeynotetojpg) | **POST** /convert/key/to/jpg | Convert Keynote Presentation (KEY) to JPG/JPEG image array
+*ConvertDocumentApi* | [**ConvertDocumentKeynoteToPdf**](docs/ConvertDocumentApi.md#convertdocumentkeynotetopdf) | **POST** /convert/key/to/pdf | Convert Keynote Presentation (KEY) to PDF
+*ConvertDocumentApi* | [**ConvertDocumentKeynoteToPng**](docs/ConvertDocumentApi.md#convertdocumentkeynotetopng) | **POST** /convert/key/to/png | Convert Keynote Presentation (KEY) to PNG image array
+*ConvertDocumentApi* | [**ConvertDocumentKeynoteToPptx**](docs/ConvertDocumentApi.md#convertdocumentkeynotetopptx) | **POST** /convert/key/to/pptx | Convert Keynote Presentation (KEY) to PPTX
 *ConvertDocumentApi* | [**ConvertDocumentMsgToHtml**](docs/ConvertDocumentApi.md#convertdocumentmsgtohtml) | **POST** /convert/msg/to/html | Convert Email MSG file to HTML string
+*ConvertDocumentApi* | [**ConvertDocumentMsgToJpg**](docs/ConvertDocumentApi.md#convertdocumentmsgtojpg) | **POST** /convert/msg/to/jpg | Convert Email MSG file to JPG/JPEG image array
 *ConvertDocumentApi* | [**ConvertDocumentMsgToPdf**](docs/ConvertDocumentApi.md#convertdocumentmsgtopdf) | **POST** /convert/msg/to/pdf | Convert Email MSG file to PDF document
-*ConvertDocumentApi* | [**ConvertDocumentOdpToPdf**](docs/ConvertDocumentApi.md#convertdocumentodptopdf) | **POST** /convert/odp/to/pdf | Convert Office Open Document Presentation ODP to PDF
-*ConvertDocumentApi* | [**ConvertDocumentOdsToPdf**](docs/ConvertDocumentApi.md#convertdocumentodstopdf) | **POST** /convert/ods/to/pdf | Convert Office Open Document Spreadsheet ODS to PDF
-*ConvertDocumentApi* | [**ConvertDocumentOdtToDocx**](docs/ConvertDocumentApi.md#convertdocumentodttodocx) | **POST** /convert/odt/to/docx | Convert Office Open Document ODT to Word DOCX
-*ConvertDocumentApi* | [**ConvertDocumentOdtToPdf**](docs/ConvertDocumentApi.md#convertdocumentodttopdf) | **POST** /convert/odt/to/pdf | Convert Office Open Document ODT to PDF
+*ConvertDocumentApi* | [**ConvertDocumentMsgToPng**](docs/ConvertDocumentApi.md#convertdocumentmsgtopng) | **POST** /convert/msg/to/png | Convert Email MSG file to PNG image array
+*ConvertDocumentApi* | [**ConvertDocumentOdpToJpg**](docs/ConvertDocumentApi.md#convertdocumentodptojpg) | **POST** /convert/odp/to/jpg | Convert ODP Presentation to JPG/JPEG image array
+*ConvertDocumentApi* | [**ConvertDocumentOdpToPdf**](docs/ConvertDocumentApi.md#convertdocumentodptopdf) | **POST** /convert/odp/to/pdf | Convert ODP Presentation to PDF
+*ConvertDocumentApi* | [**ConvertDocumentOdpToPng**](docs/ConvertDocumentApi.md#convertdocumentodptopng) | **POST** /convert/odp/to/png | Convert ODP Presentation to PNG image array
+*ConvertDocumentApi* | [**ConvertDocumentOdpToPptx**](docs/ConvertDocumentApi.md#convertdocumentodptopptx) | **POST** /convert/odp/to/pptx | Convert ODP Presentation to PPTX
+*ConvertDocumentApi* | [**ConvertDocumentOdsToJpg**](docs/ConvertDocumentApi.md#convertdocumentodstojpg) | **POST** /convert/ods/to/jpg | Convert ODS Spreadsheet to JPG/JPEG image array
+*ConvertDocumentApi* | [**ConvertDocumentOdsToPdf**](docs/ConvertDocumentApi.md#convertdocumentodstopdf) | **POST** /convert/ods/to/pdf | Convert ODS Spreadsheet to PDF
+*ConvertDocumentApi* | [**ConvertDocumentOdsToPng**](docs/ConvertDocumentApi.md#convertdocumentodstopng) | **POST** /convert/ods/to/png | Convert ODS Spreadsheet to PNG image array
+*ConvertDocumentApi* | [**ConvertDocumentOdsToXlsx**](docs/ConvertDocumentApi.md#convertdocumentodstoxlsx) | **POST** /convert/ods/to/xlsx | Convert ODS Spreadsheet to XLSX
+*ConvertDocumentApi* | [**ConvertDocumentOdtToDocx**](docs/ConvertDocumentApi.md#convertdocumentodttodocx) | **POST** /convert/odt/to/docx | Convert ODT Text File to Word DOCX
+*ConvertDocumentApi* | [**ConvertDocumentOdtToJpg**](docs/ConvertDocumentApi.md#convertdocumentodttojpg) | **POST** /convert/odt/to/jpg | Convert ODT Text File to JPG/JPEG image array
+*ConvertDocumentApi* | [**ConvertDocumentOdtToPdf**](docs/ConvertDocumentApi.md#convertdocumentodttopdf) | **POST** /convert/odt/to/pdf | Convert ODT Text File to PDF
+*ConvertDocumentApi* | [**ConvertDocumentOdtToPng**](docs/ConvertDocumentApi.md#convertdocumentodttopng) | **POST** /convert/odt/to/png | Convert ODT Text File to PNG image array
 *ConvertDocumentApi* | [**ConvertDocumentPdfToDocx**](docs/ConvertDocumentApi.md#convertdocumentpdftodocx) | **POST** /convert/pdf/to/docx | Convert PDF to Word DOCX Document
 *ConvertDocumentApi* | [**ConvertDocumentPdfToDocxRasterize**](docs/ConvertDocumentApi.md#convertdocumentpdftodocxrasterize) | **POST** /convert/pdf/to/docx/rasterize | Convert PDF to Word DOCX Document based on rasterized version of the PDF
 *ConvertDocumentApi* | [**ConvertDocumentPdfToPngArray**](docs/ConvertDocumentApi.md#convertdocumentpdftopngarray) | **POST** /convert/pdf/to/png | Convert PDF to PNG Image Array
@@ -157,7 +176,11 @@ Class | Method | HTTP request | Description
 *ConvertDocumentApi* | [**ConvertDocumentPptxToPdf**](docs/ConvertDocumentApi.md#convertdocumentpptxtopdf) | **POST** /convert/pptx/to/pdf | Convert PowerPoint PPTX Presentation to PDF
 *ConvertDocumentApi* | [**ConvertDocumentPptxToPng**](docs/ConvertDocumentApi.md#convertdocumentpptxtopng) | **POST** /convert/pptx/to/png | Convert PowerPoint PPTX to PNG image array
 *ConvertDocumentApi* | [**ConvertDocumentPptxToTxt**](docs/ConvertDocumentApi.md#convertdocumentpptxtotxt) | **POST** /convert/pptx/to/txt | Convert PowerPoint PPTX Presentation to Text (txt)
+*ConvertDocumentApi* | [**ConvertDocumentRtfToDocx**](docs/ConvertDocumentApi.md#convertdocumentrtftodocx) | **POST** /convert/rtf/to/docx | Convert Rich Text Format RTF to DOCX Document
+*ConvertDocumentApi* | [**ConvertDocumentRtfToHtml**](docs/ConvertDocumentApi.md#convertdocumentrtftohtml) | **POST** /convert/rtf/to/html | Convert Rich Text Format RTF to HTML Document
+*ConvertDocumentApi* | [**ConvertDocumentRtfToJpg**](docs/ConvertDocumentApi.md#convertdocumentrtftojpg) | **POST** /convert/rtf/to/jpg | Convert Rich Text Format RTF to JPG/JPEG image array
 *ConvertDocumentApi* | [**ConvertDocumentRtfToPdf**](docs/ConvertDocumentApi.md#convertdocumentrtftopdf) | **POST** /convert/rtf/to/pdf | Convert Rich Text Format RTF to PDF
+*ConvertDocumentApi* | [**ConvertDocumentRtfToPng**](docs/ConvertDocumentApi.md#convertdocumentrtftopng) | **POST** /convert/rtf/to/png | Convert Rich Text Format RTF to PNG image array
 *ConvertDocumentApi* | [**ConvertDocumentXlsToCsv**](docs/ConvertDocumentApi.md#convertdocumentxlstocsv) | **POST** /convert/xls/to/csv | Convert Excel XLS (97-03) Spreadsheet to CSV
 *ConvertDocumentApi* | [**ConvertDocumentXlsToPdf**](docs/ConvertDocumentApi.md#convertdocumentxlstopdf) | **POST** /convert/xls/to/pdf | Convert Excel XLS (97-03) Spreadsheet to PDF
 *ConvertDocumentApi* | [**ConvertDocumentXlsToXlsx**](docs/ConvertDocumentApi.md#convertdocumentxlstoxlsx) | **POST** /convert/xls/to/xlsx | Convert Excel XLS (97-03) Spreadsheet to XLSX
@@ -315,6 +338,7 @@ Class | Method | HTTP request | Description
  - [Model.AppendXlsxRowResponse](docs/AppendXlsxRowResponse.md)
  - [Model.AutodetectDocumentValidationResult](docs/AutodetectDocumentValidationResult.md)
  - [Model.AutodetectGetInfoResult](docs/AutodetectGetInfoResult.md)
+ - [Model.AutodetectToJpgResult](docs/AutodetectToJpgResult.md)
  - [Model.AutodetectToPngResult](docs/AutodetectToPngResult.md)
  - [Model.AutodetectToThumbnailsResult](docs/AutodetectToThumbnailsResult.md)
  - [Model.Base64DecodeRequest](docs/Base64DecodeRequest.md)
@@ -328,6 +352,7 @@ Class | Method | HTTP request | Description
  - [Model.ClearXlsxCellResponse](docs/ClearXlsxCellResponse.md)
  - [Model.ClearXlsxRowRequest](docs/ClearXlsxRowRequest.md)
  - [Model.ClearXlsxRowResponse](docs/ClearXlsxRowResponse.md)
+ - [Model.ConvertedJpgPage](docs/ConvertedJpgPage.md)
  - [Model.ConvertedPngPage](docs/ConvertedPngPage.md)
  - [Model.CreateBlankDocxRequest](docs/CreateBlankDocxRequest.md)
  - [Model.CreateBlankDocxResponse](docs/CreateBlankDocxResponse.md)
@@ -374,10 +399,13 @@ Class | Method | HTTP request | Description
  - [Model.DocxTemplateApplicationRequest](docs/DocxTemplateApplicationRequest.md)
  - [Model.DocxTemplateOperation](docs/DocxTemplateOperation.md)
  - [Model.DocxText](docs/DocxText.md)
+ - [Model.DocxToJpgResult](docs/DocxToJpgResult.md)
  - [Model.DocxToPngResult](docs/DocxToPngResult.md)
  - [Model.DocxTopLevelComment](docs/DocxTopLevelComment.md)
  - [Model.EmlAttachment](docs/EmlAttachment.md)
  - [Model.EmlToHtmlResult](docs/EmlToHtmlResult.md)
+ - [Model.EmlToJpgResult](docs/EmlToJpgResult.md)
+ - [Model.EmlToPngResult](docs/EmlToPngResult.md)
  - [Model.EnableSharedWorkbookRequest](docs/EnableSharedWorkbookRequest.md)
  - [Model.EnableSharedWorkbookResponse](docs/EnableSharedWorkbookResponse.md)
  - [Model.ExifValue](docs/ExifValue.md)
@@ -449,9 +477,19 @@ Class | Method | HTTP request | Description
  - [Model.InsertDocxTablesResponse](docs/InsertDocxTablesResponse.md)
  - [Model.InsertXlsxWorksheetRequest](docs/InsertXlsxWorksheetRequest.md)
  - [Model.InsertXlsxWorksheetResponse](docs/InsertXlsxWorksheetResponse.md)
+ - [Model.KeynoteToJpgResult](docs/KeynoteToJpgResult.md)
+ - [Model.KeynoteToPngResult](docs/KeynoteToPngResult.md)
  - [Model.MsgAttachment](docs/MsgAttachment.md)
  - [Model.MsgToHtmlResult](docs/MsgToHtmlResult.md)
+ - [Model.MsgToJpgResult](docs/MsgToJpgResult.md)
+ - [Model.MsgToPngResult](docs/MsgToPngResult.md)
  - [Model.MultipageImageFormatConversionResult](docs/MultipageImageFormatConversionResult.md)
+ - [Model.OdpToJpgResult](docs/OdpToJpgResult.md)
+ - [Model.OdpToPngResult](docs/OdpToPngResult.md)
+ - [Model.OdsToJpgResult](docs/OdsToJpgResult.md)
+ - [Model.OdsToPngResult](docs/OdsToPngResult.md)
+ - [Model.OdtToJpgResult](docs/OdtToJpgResult.md)
+ - [Model.OdtToPngResult](docs/OdtToPngResult.md)
  - [Model.PageConversionResult](docs/PageConversionResult.md)
  - [Model.PdfAnnotation](docs/PdfAnnotation.md)
  - [Model.PdfDocument](docs/PdfDocument.md)
@@ -481,6 +519,8 @@ Class | Method | HTTP request | Description
  - [Model.ReplaceStringRequest](docs/ReplaceStringRequest.md)
  - [Model.ReplaceStringSimpleRequest](docs/ReplaceStringSimpleRequest.md)
  - [Model.ReplaceStringSimpleResponse](docs/ReplaceStringSimpleResponse.md)
+ - [Model.RtfToJpgResult](docs/RtfToJpgResult.md)
+ - [Model.RtfToPngResult](docs/RtfToPngResult.md)
  - [Model.ScreenshotRequest](docs/ScreenshotRequest.md)
  - [Model.SetFormFieldValue](docs/SetFormFieldValue.md)
  - [Model.SetPdfFormFieldsRequest](docs/SetPdfFormFieldsRequest.md)
