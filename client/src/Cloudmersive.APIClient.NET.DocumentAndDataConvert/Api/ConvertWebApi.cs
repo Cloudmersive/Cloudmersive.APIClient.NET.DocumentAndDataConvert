@@ -31,7 +31,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Convert HTML to Office Word Document (DOCX) format
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inputRequest">HTL input to convert to DOCX</param>
+        /// <param name="inputRequest">HTML input to convert to DOCX</param>
         /// <returns>byte[]</returns>
         byte[] ConvertWebHtmlToDocx (HtmlToOfficeRequest inputRequest);
 
@@ -42,7 +42,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Convert HTML to Office Word Document (DOCX) format
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inputRequest">HTL input to convert to DOCX</param>
+        /// <param name="inputRequest">HTML input to convert to DOCX</param>
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> ConvertWebHtmlToDocxWithHttpInfo (HtmlToOfficeRequest inputRequest);
         /// <summary>
@@ -201,7 +201,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Convert HTML to Office Word Document (DOCX) format
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inputRequest">HTL input to convert to DOCX</param>
+        /// <param name="inputRequest">HTML input to convert to DOCX</param>
         /// <returns>Task of byte[]</returns>
         System.Threading.Tasks.Task<byte[]> ConvertWebHtmlToDocxAsync (HtmlToOfficeRequest inputRequest);
 
@@ -212,7 +212,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Convert HTML to Office Word Document (DOCX) format
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inputRequest">HTL input to convert to DOCX</param>
+        /// <param name="inputRequest">HTML input to convert to DOCX</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertWebHtmlToDocxAsyncWithHttpInfo (HtmlToOfficeRequest inputRequest);
         /// <summary>
@@ -466,7 +466,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Convert HTML to Word DOCX Document Convert HTML to Office Word Document (DOCX) format
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inputRequest">HTL input to convert to DOCX</param>
+        /// <param name="inputRequest">HTML input to convert to DOCX</param>
         /// <returns>byte[]</returns>
         public byte[] ConvertWebHtmlToDocx (HtmlToOfficeRequest inputRequest)
         {
@@ -478,7 +478,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Convert HTML to Word DOCX Document Convert HTML to Office Word Document (DOCX) format
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inputRequest">HTL input to convert to DOCX</param>
+        /// <param name="inputRequest">HTML input to convert to DOCX</param>
         /// <returns>ApiResponse of byte[]</returns>
         public ApiResponse< byte[] > ConvertWebHtmlToDocxWithHttpInfo (HtmlToOfficeRequest inputRequest)
         {
@@ -549,7 +549,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Convert HTML to Word DOCX Document Convert HTML to Office Word Document (DOCX) format
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inputRequest">HTL input to convert to DOCX</param>
+        /// <param name="inputRequest">HTML input to convert to DOCX</param>
         /// <returns>Task of byte[]</returns>
         public async System.Threading.Tasks.Task<byte[]> ConvertWebHtmlToDocxAsync (HtmlToOfficeRequest inputRequest)
         {
@@ -562,7 +562,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Convert HTML to Word DOCX Document Convert HTML to Office Word Document (DOCX) format
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="inputRequest">HTL input to convert to DOCX</param>
+        /// <param name="inputRequest">HTML input to convert to DOCX</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         public async System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertWebHtmlToDocxAsyncWithHttpInfo (HtmlToOfficeRequest inputRequest)
         {

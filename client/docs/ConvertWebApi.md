@@ -42,7 +42,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new ConvertWebApi();
-            var inputRequest = new HtmlToOfficeRequest(); // HtmlToOfficeRequest | HTL input to convert to DOCX
+            var inputRequest = new HtmlToOfficeRequest(); // HtmlToOfficeRequest | HTML input to convert to DOCX
 
             try
             {
@@ -63,7 +63,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **inputRequest** | [**HtmlToOfficeRequest**](HtmlToOfficeRequest.md)| HTL input to convert to DOCX | 
+ **inputRequest** | [**HtmlToOfficeRequest**](HtmlToOfficeRequest.md)| HTML input to convert to DOCX | 
 
 ### Return type
 

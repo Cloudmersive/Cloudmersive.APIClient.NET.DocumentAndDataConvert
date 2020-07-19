@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 This C# SDK is for the [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api):
 
 - API version: v1
-- SDK version: 3.3.1
+- SDK version: 3.3.2
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -166,6 +166,7 @@ Class | Method | HTTP request | Description
 *ConvertDocumentApi* | [**ConvertDocumentOdtToPng**](docs/ConvertDocumentApi.md#convertdocumentodttopng) | **POST** /convert/odt/to/png | Convert ODT Text File to PNG image array
 *ConvertDocumentApi* | [**ConvertDocumentPdfToDocx**](docs/ConvertDocumentApi.md#convertdocumentpdftodocx) | **POST** /convert/pdf/to/docx | Convert PDF to Word DOCX Document
 *ConvertDocumentApi* | [**ConvertDocumentPdfToDocxRasterize**](docs/ConvertDocumentApi.md#convertdocumentpdftodocxrasterize) | **POST** /convert/pdf/to/docx/rasterize | Convert PDF to Word DOCX Document based on rasterized version of the PDF
+*ConvertDocumentApi* | [**ConvertDocumentPdfToJpg**](docs/ConvertDocumentApi.md#convertdocumentpdftojpg) | **POST** /convert/pdf/to/jpg | Convert PDF to JPG/JPEG image array
 *ConvertDocumentApi* | [**ConvertDocumentPdfToPngArray**](docs/ConvertDocumentApi.md#convertdocumentpdftopngarray) | **POST** /convert/pdf/to/png | Convert PDF to PNG Image Array
 *ConvertDocumentApi* | [**ConvertDocumentPdfToPngSingle**](docs/ConvertDocumentApi.md#convertdocumentpdftopngsingle) | **POST** /convert/pdf/to/png/merge-single | Convert PDF to Single PNG image
 *ConvertDocumentApi* | [**ConvertDocumentPdfToPptx**](docs/ConvertDocumentApi.md#convertdocumentpdftopptx) | **POST** /convert/pdf/to/pptx | Convert PDF to PowerPoint PPTX Presentation
@@ -498,6 +499,7 @@ Class | Method | HTTP request | Description
  - [Model.PdfMetadata](docs/PdfMetadata.md)
  - [Model.PdfPageText](docs/PdfPageText.md)
  - [Model.PdfTextByPageResult](docs/PdfTextByPageResult.md)
+ - [Model.PdfToJpgResult](docs/PdfToJpgResult.md)
  - [Model.PdfToPngResult](docs/PdfToPngResult.md)
  - [Model.PptxToPngResult](docs/PptxToPngResult.md)
  - [Model.PresentationResult](docs/PresentationResult.md)

@@ -666,6 +666,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test ConvertDocumentPdfToJpg
+        /// </summary>
+        [Test]
+        public void ConvertDocumentPdfToJpgTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //int? quality = null;
+            //var response = instance.ConvertDocumentPdfToJpg(inputFile, quality);
+            //Assert.IsInstanceOf<PdfToJpgResult> (response, "response is PdfToJpgResult");
+        }
+        
+        /// <summary>
         /// Test ConvertDocumentPdfToPngArray
         /// </summary>
         [Test]

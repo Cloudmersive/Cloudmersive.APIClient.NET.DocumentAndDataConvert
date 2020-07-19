@@ -52,6 +52,7 @@ Method | HTTP request | Description
 [**ConvertDocumentOdtToPng**](ConvertDocumentApi.md#convertdocumentodttopng) | **POST** /convert/odt/to/png | Convert ODT Text File to PNG image array
 [**ConvertDocumentPdfToDocx**](ConvertDocumentApi.md#convertdocumentpdftodocx) | **POST** /convert/pdf/to/docx | Convert PDF to Word DOCX Document
 [**ConvertDocumentPdfToDocxRasterize**](ConvertDocumentApi.md#convertdocumentpdftodocxrasterize) | **POST** /convert/pdf/to/docx/rasterize | Convert PDF to Word DOCX Document based on rasterized version of the PDF
+[**ConvertDocumentPdfToJpg**](ConvertDocumentApi.md#convertdocumentpdftojpg) | **POST** /convert/pdf/to/jpg | Convert PDF to JPG/JPEG image array
 [**ConvertDocumentPdfToPngArray**](ConvertDocumentApi.md#convertdocumentpdftopngarray) | **POST** /convert/pdf/to/png | Convert PDF to PNG Image Array
 [**ConvertDocumentPdfToPngSingle**](ConvertDocumentApi.md#convertdocumentpdftopngsingle) | **POST** /convert/pdf/to/png/merge-single | Convert PDF to Single PNG image
 [**ConvertDocumentPdfToPptx**](ConvertDocumentApi.md#convertdocumentpdftopptx) | **POST** /convert/pdf/to/pptx | Convert PDF to PowerPoint PPTX Presentation
@@ -3292,6 +3293,74 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: multipart/form-data
  - **Accept**: application/octet-stream
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="convertdocumentpdftojpg"></a>
+# **ConvertDocumentPdfToJpg**
+> PdfToJpgResult ConvertDocumentPdfToJpg (System.IO.Stream inputFile, int? quality = null)
+
+Convert PDF to JPG/JPEG image array
+
+Converts a PDF Document to an array of JPG/JPEG images, one for each page. Customize image quality using quality header.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class ConvertDocumentPdfToJpgExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new ConvertDocumentApi();
+            var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
+            var quality = 56;  // int? | Optional; Set the JPEG quality level; lowest quality is 1 (highest compression), highest quality (lowest compression) is 100; recommended value is 75. Default value is 75. (optional) 
+
+            try
+            {
+                // Convert PDF to JPG/JPEG image array
+                PdfToJpgResult result = apiInstance.ConvertDocumentPdfToJpg(inputFile, quality);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConvertDocumentApi.ConvertDocumentPdfToJpg: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
+ **quality** | **int?**| Optional; Set the JPEG quality level; lowest quality is 1 (highest compression), highest quality (lowest compression) is 100; recommended value is 75. Default value is 75. | [optional] 
+
+### Return type
+
+[**PdfToJpgResult**](PdfToJpgResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
