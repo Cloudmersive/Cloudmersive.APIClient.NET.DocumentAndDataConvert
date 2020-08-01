@@ -365,6 +365,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test EditDocumentDocxReplaceMulti
+        /// </summary>
+        [Test]
+        public void EditDocumentDocxReplaceMultiTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //MultiReplaceStringRequest reqConfig = null;
+            //var response = instance.EditDocumentDocxReplaceMulti(reqConfig);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
         /// Test EditDocumentDocxReplaceParagraph
         /// </summary>
         [Test]

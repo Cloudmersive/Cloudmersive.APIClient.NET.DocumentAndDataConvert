@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
 
 <a name="convertwebhtmltopng"></a>
 # **ConvertWebHtmlToPng**
-> Object ConvertWebHtmlToPng (HtmlToPngRequest input)
+> byte[] ConvertWebHtmlToPng (HtmlToPngRequest input)
 
 Convert HTML string to PNG screenshot
 
@@ -179,7 +179,7 @@ namespace Example
             try
             {
                 // Convert HTML string to PNG screenshot
-                Object result = apiInstance.ConvertWebHtmlToPng(input);
+                byte[] result = apiInstance.ConvertWebHtmlToPng(input);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -199,7 +199,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**byte[]**
 
 ### Authorization
 

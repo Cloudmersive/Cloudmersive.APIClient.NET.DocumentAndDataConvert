@@ -158,6 +158,52 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test ConvertDocumentCsvMultiToXlsx
+        /// </summary>
+        [Test]
+        public void ConvertDocumentCsvMultiToXlsxTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile1 = null;
+            //System.IO.Stream inputFile2 = null;
+            //System.IO.Stream inputFile3 = null;
+            //System.IO.Stream inputFile4 = null;
+            //System.IO.Stream inputFile5 = null;
+            //System.IO.Stream inputFile6 = null;
+            //System.IO.Stream inputFile7 = null;
+            //System.IO.Stream inputFile8 = null;
+            //System.IO.Stream inputFile9 = null;
+            //System.IO.Stream inputFile10 = null;
+            //string worksheetNames = null;
+            //var response = instance.ConvertDocumentCsvMultiToXlsx(inputFile1, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10, worksheetNames);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
+        /// Test ConvertDocumentCsvToHtml
+        /// </summary>
+        [Test]
+        public void ConvertDocumentCsvToHtmlTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.ConvertDocumentCsvToHtml(inputFile);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
+        /// Test ConvertDocumentCsvToPdf
+        /// </summary>
+        [Test]
+        public void ConvertDocumentCsvToPdfTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.ConvertDocumentCsvToPdf(inputFile);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
         /// Test ConvertDocumentCsvToXlsx
         /// </summary>
         [Test]
@@ -365,7 +411,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //System.IO.Stream inputFile = null;
-            //var response = instance.ConvertDocumentHtmlToPdf(inputFile);
+            //bool? includeBackgroundGraphics = null;
+            //int? scaleFactor = null;
+            //var response = instance.ConvertDocumentHtmlToPdf(inputFile, includeBackgroundGraphics, scaleFactor);
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
@@ -929,6 +977,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //string outputEncoding = null;
             //var response = instance.ConvertDocumentXlsxToCsvMulti(inputFile, outputEncoding);
             //Assert.IsInstanceOf<CsvCollection> (response, "response is CsvCollection");
+        }
+        
+        /// <summary>
+        /// Test ConvertDocumentXlsxToHtml
+        /// </summary>
+        [Test]
+        public void ConvertDocumentXlsxToHtmlTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.ConvertDocumentXlsxToHtml(inputFile);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
         /// <summary>

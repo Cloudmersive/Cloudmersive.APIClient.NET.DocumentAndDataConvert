@@ -11,6 +11,9 @@ Method | HTTP request | Description
 [**ConvertDocumentAutodetectToThumbnail**](ConvertDocumentApi.md#convertdocumentautodetecttothumbnail) | **POST** /convert/autodetect/to/thumbnail | Convert File to Thumbnail Image
 [**ConvertDocumentAutodetectToThumbnailsAdvanced**](ConvertDocumentApi.md#convertdocumentautodetecttothumbnailsadvanced) | **POST** /convert/autodetect/to/thumbnail/advanced | Convert File to Thumbnail Image Object
 [**ConvertDocumentAutodetectToTxt**](ConvertDocumentApi.md#convertdocumentautodetecttotxt) | **POST** /convert/autodetect/to/txt | Convert Document to Text (txt)
+[**ConvertDocumentCsvMultiToXlsx**](ConvertDocumentApi.md#convertdocumentcsvmultitoxlsx) | **POST** /convert/csv/multi/to/xlsx | Convert Multiple CSV Files into a Single XLSX Spreadsheet
+[**ConvertDocumentCsvToHtml**](ConvertDocumentApi.md#convertdocumentcsvtohtml) | **POST** /convert/csv/to/html | Convert CSV to HTML document
+[**ConvertDocumentCsvToPdf**](ConvertDocumentApi.md#convertdocumentcsvtopdf) | **POST** /convert/csv/to/pdf | Convert CSV to PDF document
 [**ConvertDocumentCsvToXlsx**](ConvertDocumentApi.md#convertdocumentcsvtoxlsx) | **POST** /convert/csv/to/xlsx | Convert CSV to Excel XLSX Spreadsheet
 [**ConvertDocumentDocToDocx**](ConvertDocumentApi.md#convertdocumentdoctodocx) | **POST** /convert/doc/to/docx | Convert Word DOC (97-03) Document to DOCX
 [**ConvertDocumentDocToPdf**](ConvertDocumentApi.md#convertdocumentdoctopdf) | **POST** /convert/doc/to/pdf | Convert Word DOC (97-03) Document to PDF
@@ -73,6 +76,7 @@ Method | HTTP request | Description
 [**ConvertDocumentXlsToXlsx**](ConvertDocumentApi.md#convertdocumentxlstoxlsx) | **POST** /convert/xls/to/xlsx | Convert Excel XLS (97-03) Spreadsheet to XLSX
 [**ConvertDocumentXlsxToCsv**](ConvertDocumentApi.md#convertdocumentxlsxtocsv) | **POST** /convert/xlsx/to/csv | Convert Excel XLSX Spreadsheet to CSV, Single Worksheet
 [**ConvertDocumentXlsxToCsvMulti**](ConvertDocumentApi.md#convertdocumentxlsxtocsvmulti) | **POST** /convert/xlsx/to/csv/multi | Convert Excel XLSX Spreadsheet to CSV, Multiple Worksheets
+[**ConvertDocumentXlsxToHtml**](ConvertDocumentApi.md#convertdocumentxlsxtohtml) | **POST** /convert/xlsx/to/html | Convert Excel XLSX Spreadsheet to HTML Document
 [**ConvertDocumentXlsxToPdf**](ConvertDocumentApi.md#convertdocumentxlsxtopdf) | **POST** /convert/xlsx/to/pdf | Convert Excel XLSX Spreadsheet to PDF
 [**ConvertDocumentXlsxToPng**](ConvertDocumentApi.md#convertdocumentxlsxtopng) | **POST** /convert/xlsx/to/png | Convert Excel XLSX spreadsheet to PNG image array
 [**ConvertDocumentXlsxToTxt**](ConvertDocumentApi.md#convertdocumentxlsxtotxt) | **POST** /convert/xlsx/to/txt | Convert Excel XLSX Spreadsheet to Text (txt)
@@ -555,6 +559,224 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: multipart/form-data
  - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="convertdocumentcsvmultitoxlsx"></a>
+# **ConvertDocumentCsvMultiToXlsx**
+> byte[] ConvertDocumentCsvMultiToXlsx (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null, string worksheetNames = null)
+
+Convert Multiple CSV Files into a Single XLSX Spreadsheet
+
+Convert multiple Comma-Separated Values (CSV) files into a single Excel XLSX Spreadsheet, with one worksheet corresponding to each CSV file.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class ConvertDocumentCsvMultiToXlsxExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new ConvertDocumentApi();
+            var inputFile1 = new System.IO.Stream(); // System.IO.Stream | First input file to perform the operation on.
+            var inputFile2 = new System.IO.Stream(); // System.IO.Stream | Second input file to perform the operation on.
+            var inputFile3 = new System.IO.Stream(); // System.IO.Stream | Third input file to perform the operation on. (optional) 
+            var inputFile4 = new System.IO.Stream(); // System.IO.Stream | Fourth input file to perform the operation on. (optional) 
+            var inputFile5 = new System.IO.Stream(); // System.IO.Stream | Fifth input file to perform the operation on. (optional) 
+            var inputFile6 = new System.IO.Stream(); // System.IO.Stream | Sixth input file to perform the operation on. (optional) 
+            var inputFile7 = new System.IO.Stream(); // System.IO.Stream | Seventh input file to perform the operation on. (optional) 
+            var inputFile8 = new System.IO.Stream(); // System.IO.Stream | Eighth input file to perform the operation on. (optional) 
+            var inputFile9 = new System.IO.Stream(); // System.IO.Stream | Ninth input file to perform the operation on. (optional) 
+            var inputFile10 = new System.IO.Stream(); // System.IO.Stream | Tenth input file to perform the operation on. (optional) 
+            var worksheetNames = worksheetNames_example;  // string | Optional; Specify the name of each CSV's worksheet in order, separated with commas (e.g. \"worksheet1,worksheet2,worksheet3\"). Defaults to the names of the input CSV files. Recommended when inputting the files directly, without file names. (optional) 
+
+            try
+            {
+                // Convert Multiple CSV Files into a Single XLSX Spreadsheet
+                byte[] result = apiInstance.ConvertDocumentCsvMultiToXlsx(inputFile1, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10, worksheetNames);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConvertDocumentApi.ConvertDocumentCsvMultiToXlsx: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile1** | **System.IO.Stream**| First input file to perform the operation on. | 
+ **inputFile2** | **System.IO.Stream**| Second input file to perform the operation on. | 
+ **inputFile3** | **System.IO.Stream**| Third input file to perform the operation on. | [optional] 
+ **inputFile4** | **System.IO.Stream**| Fourth input file to perform the operation on. | [optional] 
+ **inputFile5** | **System.IO.Stream**| Fifth input file to perform the operation on. | [optional] 
+ **inputFile6** | **System.IO.Stream**| Sixth input file to perform the operation on. | [optional] 
+ **inputFile7** | **System.IO.Stream**| Seventh input file to perform the operation on. | [optional] 
+ **inputFile8** | **System.IO.Stream**| Eighth input file to perform the operation on. | [optional] 
+ **inputFile9** | **System.IO.Stream**| Ninth input file to perform the operation on. | [optional] 
+ **inputFile10** | **System.IO.Stream**| Tenth input file to perform the operation on. | [optional] 
+ **worksheetNames** | **string**| Optional; Specify the name of each CSV&#39;s worksheet in order, separated with commas (e.g. \&quot;worksheet1,worksheet2,worksheet3\&quot;). Defaults to the names of the input CSV files. Recommended when inputting the files directly, without file names. | [optional] 
+
+### Return type
+
+**byte[]**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/octet-stream
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="convertdocumentcsvtohtml"></a>
+# **ConvertDocumentCsvToHtml**
+> byte[] ConvertDocumentCsvToHtml (System.IO.Stream inputFile)
+
+Convert CSV to HTML document
+
+Convert Comma-Separated Values (CSV) file to HTML document.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class ConvertDocumentCsvToHtmlExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new ConvertDocumentApi();
+            var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
+
+            try
+            {
+                // Convert CSV to HTML document
+                byte[] result = apiInstance.ConvertDocumentCsvToHtml(inputFile);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConvertDocumentApi.ConvertDocumentCsvToHtml: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
+
+### Return type
+
+**byte[]**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/octet-stream
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="convertdocumentcsvtopdf"></a>
+# **ConvertDocumentCsvToPdf**
+> byte[] ConvertDocumentCsvToPdf (System.IO.Stream inputFile)
+
+Convert CSV to PDF document
+
+Convert Comma-Separated Values (CSV) file to PDF document.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class ConvertDocumentCsvToPdfExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new ConvertDocumentApi();
+            var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
+
+            try
+            {
+                // Convert CSV to PDF document
+                byte[] result = apiInstance.ConvertDocumentCsvToPdf(inputFile);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConvertDocumentApi.ConvertDocumentCsvToPdf: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
+
+### Return type
+
+**byte[]**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/octet-stream
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1632,7 +1854,7 @@ Name | Type | Description  | Notes
 
 <a name="convertdocumenthtmltopdf"></a>
 # **ConvertDocumentHtmlToPdf**
-> byte[] ConvertDocumentHtmlToPdf (System.IO.Stream inputFile)
+> byte[] ConvertDocumentHtmlToPdf (System.IO.Stream inputFile, bool? includeBackgroundGraphics = null, int? scaleFactor = null)
 
 Convert HTML document file to PDF Document
 
@@ -1659,11 +1881,13 @@ namespace Example
 
             var apiInstance = new ConvertDocumentApi();
             var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
+            var includeBackgroundGraphics = true;  // bool? | Optional: Set to true to include background graphics in the PDF, or false to not include.  Default is true. (optional) 
+            var scaleFactor = 56;  // int? | Optional: Set to 100 to scale at 100%, set to 50% to scale down to 50% scale, set to 200% to scale up to 200% scale, etc.  Default is 100%. Maximum is 1000%. (optional) 
 
             try
             {
                 // Convert HTML document file to PDF Document
-                byte[] result = apiInstance.ConvertDocumentHtmlToPdf(inputFile);
+                byte[] result = apiInstance.ConvertDocumentHtmlToPdf(inputFile, includeBackgroundGraphics, scaleFactor);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1680,6 +1904,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
+ **includeBackgroundGraphics** | **bool?**| Optional: Set to true to include background graphics in the PDF, or false to not include.  Default is true. | [optional] 
+ **scaleFactor** | **int?**| Optional: Set to 100 to scale at 100%, set to 50% to scale down to 50% scale, set to 200% to scale up to 200% scale, etc.  Default is 100%. Maximum is 1000%. | [optional] 
 
 ### Return type
 
@@ -4698,6 +4924,72 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CsvCollection**](CsvCollection.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/octet-stream
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="convertdocumentxlsxtohtml"></a>
+# **ConvertDocumentXlsxToHtml**
+> byte[] ConvertDocumentXlsxToHtml (System.IO.Stream inputFile)
+
+Convert Excel XLSX Spreadsheet to HTML Document
+
+Convert Office Excel Spreadsheet (XLSX) to HTML Document.  Converts all worksheets to HTML.  Supports both XLSX and XLSB Excel file formats.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class ConvertDocumentXlsxToHtmlExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new ConvertDocumentApi();
+            var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
+
+            try
+            {
+                // Convert Excel XLSX Spreadsheet to HTML Document
+                byte[] result = apiInstance.ConvertDocumentXlsxToHtml(inputFile);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConvertDocumentApi.ConvertDocumentXlsxToHtml: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
+
+### Return type
+
+**byte[]**
 
 ### Authorization
 

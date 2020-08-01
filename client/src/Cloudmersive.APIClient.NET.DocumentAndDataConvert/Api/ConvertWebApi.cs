@@ -74,8 +74,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">HTML to PNG request parameters</param>
-        /// <returns>Object</returns>
-        Object ConvertWebHtmlToPng (HtmlToPngRequest input);
+        /// <returns>byte[]</returns>
+        byte[] ConvertWebHtmlToPng (HtmlToPngRequest input);
 
         /// <summary>
         /// Convert HTML string to PNG screenshot
@@ -85,8 +85,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">HTML to PNG request parameters</param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> ConvertWebHtmlToPngWithHttpInfo (HtmlToPngRequest input);
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> ConvertWebHtmlToPngWithHttpInfo (HtmlToPngRequest input);
         /// <summary>
         /// Convert HTML string to text (txt)
         /// </summary>
@@ -244,8 +244,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">HTML to PNG request parameters</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> ConvertWebHtmlToPngAsync (HtmlToPngRequest input);
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> ConvertWebHtmlToPngAsync (HtmlToPngRequest input);
 
         /// <summary>
         /// Convert HTML string to PNG screenshot
@@ -255,8 +255,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">HTML to PNG request parameters</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ConvertWebHtmlToPngAsyncWithHttpInfo (HtmlToPngRequest input);
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertWebHtmlToPngAsyncWithHttpInfo (HtmlToPngRequest input);
         /// <summary>
         /// Convert HTML string to text (txt)
         /// </summary>
@@ -801,10 +801,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">HTML to PNG request parameters</param>
-        /// <returns>Object</returns>
-        public Object ConvertWebHtmlToPng (HtmlToPngRequest input)
+        /// <returns>byte[]</returns>
+        public byte[] ConvertWebHtmlToPng (HtmlToPngRequest input)
         {
-             ApiResponse<Object> localVarResponse = ConvertWebHtmlToPngWithHttpInfo(input);
+             ApiResponse<byte[]> localVarResponse = ConvertWebHtmlToPngWithHttpInfo(input);
              return localVarResponse.Data;
         }
 
@@ -813,8 +813,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">HTML to PNG request parameters</param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > ConvertWebHtmlToPngWithHttpInfo (HtmlToPngRequest input)
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > ConvertWebHtmlToPngWithHttpInfo (HtmlToPngRequest input)
         {
             // verify the required parameter 'input' is set
             if (input == null)
@@ -874,9 +874,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
@@ -884,10 +884,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">HTML to PNG request parameters</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> ConvertWebHtmlToPngAsync (HtmlToPngRequest input)
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> ConvertWebHtmlToPngAsync (HtmlToPngRequest input)
         {
-             ApiResponse<Object> localVarResponse = await ConvertWebHtmlToPngAsyncWithHttpInfo(input);
+             ApiResponse<byte[]> localVarResponse = await ConvertWebHtmlToPngAsyncWithHttpInfo(input);
              return localVarResponse.Data;
 
         }
@@ -897,8 +897,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">HTML to PNG request parameters</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ConvertWebHtmlToPngAsyncWithHttpInfo (HtmlToPngRequest input)
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertWebHtmlToPngAsyncWithHttpInfo (HtmlToPngRequest input)
         {
             // verify the required parameter 'input' is set
             if (input == null)
@@ -958,9 +958,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>

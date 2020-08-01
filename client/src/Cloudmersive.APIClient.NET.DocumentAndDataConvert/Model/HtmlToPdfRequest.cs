@@ -34,11 +34,15 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Initializes a new instance of the <see cref="HtmlToPdfRequest" /> class.
         /// </summary>
         /// <param name="html">HTML to render to PDF.</param>
-        /// <param name="extraLoadingWait">Optional: Additional number of milliseconds to wait once the web page has finished loading before taking the screenshot.  Can be helpful for highly asynchronous websites..</param>
-        public HtmlToPdfRequest(string html = default(string), int? extraLoadingWait = default(int?))
+        /// <param name="extraLoadingWait">Optional: Additional number of milliseconds to wait once the web page has finished loading before taking the screenshot.  Can be helpful for highly asynchronous websites. Provide a value of 0 for the default of 5000 milliseconds (5 seconds). Maximum is 30000 milliseconds (30 seconds)..</param>
+        /// <param name="includeBackgroundGraphics">Optional: Set to true to include background graphics in the PDF, or false to not include.  Default is true..</param>
+        /// <param name="scaleFactor">Optional: Set to 100 to scale at 100%, set to 50% to scale down to 50% scale, set to 200% to scale up to 200% scale, etc.  Default is 100%. Maximum is 1000%..</param>
+        public HtmlToPdfRequest(string html = default(string), int? extraLoadingWait = default(int?), bool? includeBackgroundGraphics = default(bool?), int? scaleFactor = default(int?))
         {
             this.Html = html;
             this.ExtraLoadingWait = extraLoadingWait;
+            this.IncludeBackgroundGraphics = includeBackgroundGraphics;
+            this.ScaleFactor = scaleFactor;
         }
         
         /// <summary>
@@ -49,11 +53,25 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         public string Html { get; set; }
 
         /// <summary>
-        /// Optional: Additional number of milliseconds to wait once the web page has finished loading before taking the screenshot.  Can be helpful for highly asynchronous websites.
+        /// Optional: Additional number of milliseconds to wait once the web page has finished loading before taking the screenshot.  Can be helpful for highly asynchronous websites. Provide a value of 0 for the default of 5000 milliseconds (5 seconds). Maximum is 30000 milliseconds (30 seconds).
         /// </summary>
-        /// <value>Optional: Additional number of milliseconds to wait once the web page has finished loading before taking the screenshot.  Can be helpful for highly asynchronous websites.</value>
+        /// <value>Optional: Additional number of milliseconds to wait once the web page has finished loading before taking the screenshot.  Can be helpful for highly asynchronous websites. Provide a value of 0 for the default of 5000 milliseconds (5 seconds). Maximum is 30000 milliseconds (30 seconds).</value>
         [DataMember(Name="ExtraLoadingWait", EmitDefaultValue=false)]
         public int? ExtraLoadingWait { get; set; }
+
+        /// <summary>
+        /// Optional: Set to true to include background graphics in the PDF, or false to not include.  Default is true.
+        /// </summary>
+        /// <value>Optional: Set to true to include background graphics in the PDF, or false to not include.  Default is true.</value>
+        [DataMember(Name="IncludeBackgroundGraphics", EmitDefaultValue=false)]
+        public bool? IncludeBackgroundGraphics { get; set; }
+
+        /// <summary>
+        /// Optional: Set to 100 to scale at 100%, set to 50% to scale down to 50% scale, set to 200% to scale up to 200% scale, etc.  Default is 100%. Maximum is 1000%.
+        /// </summary>
+        /// <value>Optional: Set to 100 to scale at 100%, set to 50% to scale down to 50% scale, set to 200% to scale up to 200% scale, etc.  Default is 100%. Maximum is 1000%.</value>
+        [DataMember(Name="ScaleFactor", EmitDefaultValue=false)]
+        public int? ScaleFactor { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -65,6 +83,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
             sb.Append("class HtmlToPdfRequest {\n");
             sb.Append("  Html: ").Append(Html).Append("\n");
             sb.Append("  ExtraLoadingWait: ").Append(ExtraLoadingWait).Append("\n");
+            sb.Append("  IncludeBackgroundGraphics: ").Append(IncludeBackgroundGraphics).Append("\n");
+            sb.Append("  ScaleFactor: ").Append(ScaleFactor).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -108,6 +128,16 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                     this.ExtraLoadingWait == input.ExtraLoadingWait ||
                     (this.ExtraLoadingWait != null &&
                     this.ExtraLoadingWait.Equals(input.ExtraLoadingWait))
+                ) && 
+                (
+                    this.IncludeBackgroundGraphics == input.IncludeBackgroundGraphics ||
+                    (this.IncludeBackgroundGraphics != null &&
+                    this.IncludeBackgroundGraphics.Equals(input.IncludeBackgroundGraphics))
+                ) && 
+                (
+                    this.ScaleFactor == input.ScaleFactor ||
+                    (this.ScaleFactor != null &&
+                    this.ScaleFactor.Equals(input.ScaleFactor))
                 );
         }
 
@@ -124,6 +154,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                     hashCode = hashCode * 59 + this.Html.GetHashCode();
                 if (this.ExtraLoadingWait != null)
                     hashCode = hashCode * 59 + this.ExtraLoadingWait.GetHashCode();
+                if (this.IncludeBackgroundGraphics != null)
+                    hashCode = hashCode * 59 + this.IncludeBackgroundGraphics.GetHashCode();
+                if (this.ScaleFactor != null)
+                    hashCode = hashCode * 59 + this.ScaleFactor.GetHashCode();
                 return hashCode;
             }
         }
