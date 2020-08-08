@@ -301,6 +301,29 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> EditPdfRemoveAnnotationItemWithHttpInfo (System.IO.Stream inputFile, int? annotationIndex);
         /// <summary>
+        /// Change PDF Document&#39;s Paper Size
+        /// </summary>
+        /// <remarks>
+        /// Resizes a PDF document&#39;s paper size.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="paperSize">The desired paper size for the resized PDF document. Size ranges from A7 (smallest) to A0 (largest).</param>
+        /// <returns>byte[]</returns>
+        byte[] EditPdfResize (System.IO.Stream inputFile, string paperSize);
+
+        /// <summary>
+        /// Change PDF Document&#39;s Paper Size
+        /// </summary>
+        /// <remarks>
+        /// Resizes a PDF document&#39;s paper size.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="paperSize">The desired paper size for the resized PDF document. Size ranges from A7 (smallest) to A0 (largest).</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> EditPdfResizeWithHttpInfo (System.IO.Stream inputFile, string paperSize);
+        /// <summary>
         /// Rotate all pages in a PDF document
         /// </summary>
         /// <remarks>
@@ -742,6 +765,29 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="annotationIndex">The 0-based index of the annotation in the document</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfRemoveAnnotationItemAsyncWithHttpInfo (System.IO.Stream inputFile, int? annotationIndex);
+        /// <summary>
+        /// Change PDF Document&#39;s Paper Size
+        /// </summary>
+        /// <remarks>
+        /// Resizes a PDF document&#39;s paper size.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="paperSize">The desired paper size for the resized PDF document. Size ranges from A7 (smallest) to A0 (largest).</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> EditPdfResizeAsync (System.IO.Stream inputFile, string paperSize);
+
+        /// <summary>
+        /// Change PDF Document&#39;s Paper Size
+        /// </summary>
+        /// <remarks>
+        /// Resizes a PDF document&#39;s paper size.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="paperSize">The desired paper size for the resized PDF document. Size ranges from A7 (smallest) to A0 (largest).</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfResizeAsyncWithHttpInfo (System.IO.Stream inputFile, string paperSize);
         /// <summary>
         /// Rotate all pages in a PDF document
         /// </summary>
@@ -2892,6 +2938,163 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("EditPdfRemoveAnnotationItem", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Change PDF Document&#39;s Paper Size Resizes a PDF document&#39;s paper size.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="paperSize">The desired paper size for the resized PDF document. Size ranges from A7 (smallest) to A0 (largest).</param>
+        /// <returns>byte[]</returns>
+        public byte[] EditPdfResize (System.IO.Stream inputFile, string paperSize)
+        {
+             ApiResponse<byte[]> localVarResponse = EditPdfResizeWithHttpInfo(inputFile, paperSize);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Change PDF Document&#39;s Paper Size Resizes a PDF document&#39;s paper size.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="paperSize">The desired paper size for the resized PDF document. Size ranges from A7 (smallest) to A0 (largest).</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > EditPdfResizeWithHttpInfo (System.IO.Stream inputFile, string paperSize)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditPdfApi->EditPdfResize");
+            // verify the required parameter 'paperSize' is set
+            if (paperSize == null)
+                throw new ApiException(400, "Missing required parameter 'paperSize' when calling EditPdfApi->EditPdfResize");
+
+            var localVarPath = "/convert/edit/pdf/resize";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (paperSize != null) localVarHeaderParams.Add("paperSize", this.Configuration.ApiClient.ParameterToString(paperSize)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditPdfResize", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Change PDF Document&#39;s Paper Size Resizes a PDF document&#39;s paper size.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="paperSize">The desired paper size for the resized PDF document. Size ranges from A7 (smallest) to A0 (largest).</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> EditPdfResizeAsync (System.IO.Stream inputFile, string paperSize)
+        {
+             ApiResponse<byte[]> localVarResponse = await EditPdfResizeAsyncWithHttpInfo(inputFile, paperSize);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Change PDF Document&#39;s Paper Size Resizes a PDF document&#39;s paper size.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="paperSize">The desired paper size for the resized PDF document. Size ranges from A7 (smallest) to A0 (largest).</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfResizeAsyncWithHttpInfo (System.IO.Stream inputFile, string paperSize)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditPdfApi->EditPdfResize");
+            // verify the required parameter 'paperSize' is set
+            if (paperSize == null)
+                throw new ApiException(400, "Missing required parameter 'paperSize' when calling EditPdfApi->EditPdfResize");
+
+            var localVarPath = "/convert/edit/pdf/resize";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (paperSize != null) localVarHeaderParams.Add("paperSize", this.Configuration.ApiClient.ParameterToString(paperSize)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditPdfResize", localVarResponse);
                 if (exception != null) throw exception;
             }
 

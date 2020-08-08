@@ -221,6 +221,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test EditPdfResize
+        /// </summary>
+        [Test]
+        public void EditPdfResizeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //string paperSize = null;
+            //var response = instance.EditPdfResize(inputFile, paperSize);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
         /// Test EditPdfRotateAllPages
         /// </summary>
         [Test]

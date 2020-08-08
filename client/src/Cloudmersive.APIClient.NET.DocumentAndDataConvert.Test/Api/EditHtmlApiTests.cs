@@ -74,7 +74,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //System.IO.Stream inputFile = null;
             //string inputFileUrl = null;
             //int? headingSize = null;
-            //var response = instance.EditHtmlHtmlAppendHeading(headingText, inputFile, inputFileUrl, headingSize);
+            //string cssStyle = null;
+            //var response = instance.EditHtmlHtmlAppendHeading(headingText, inputFile, inputFileUrl, headingSize, cssStyle);
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
@@ -120,7 +121,24 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //string paragraphText = null;
             //System.IO.Stream inputFile = null;
             //string inputFileUrl = null;
-            //var response = instance.EditHtmlHtmlAppendParagraph(paragraphText, inputFile, inputFileUrl);
+            //string cssStyle = null;
+            //var response = instance.EditHtmlHtmlAppendParagraph(paragraphText, inputFile, inputFileUrl, cssStyle);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
+        /// Test EditHtmlHtmlCreateBlankDocument
+        /// </summary>
+        [Test]
+        public void EditHtmlHtmlCreateBlankDocumentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string title = null;
+            //string cssUrl = null;
+            //string cssInline = null;
+            //string javascriptUrl = null;
+            //string javascriptInline = null;
+            //var response = instance.EditHtmlHtmlCreateBlankDocument(title, cssUrl, cssInline, javascriptUrl, javascriptInline);
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         

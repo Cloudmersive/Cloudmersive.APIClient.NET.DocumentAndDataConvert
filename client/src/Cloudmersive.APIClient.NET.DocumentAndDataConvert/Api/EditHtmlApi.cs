@@ -32,10 +32,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="headingText">The text content to be used in the header.</param>
         /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
-        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public). (optional)</param>
-        /// <param name="headingSize">Optional: The heading size number. Default is 1. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <param name="headingSize">Optional: The heading size number. Default is 1. Accepts values between 1 and 6. (optional)</param>
+        /// <param name="cssStyle">Optional: The CSS style for the heading. (optional)</param>
         /// <returns>byte[]</returns>
-        byte[] EditHtmlHtmlAppendHeading (string headingText, System.IO.Stream inputFile = null, string inputFileUrl = null, int? headingSize = null);
+        byte[] EditHtmlHtmlAppendHeading (string headingText, System.IO.Stream inputFile = null, string inputFileUrl = null, int? headingSize = null, string cssStyle = null);
 
         /// <summary>
         /// Append a Heading to an HTML Document
@@ -46,10 +47,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="headingText">The text content to be used in the header.</param>
         /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
-        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public). (optional)</param>
-        /// <param name="headingSize">Optional: The heading size number. Default is 1. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <param name="headingSize">Optional: The heading size number. Default is 1. Accepts values between 1 and 6. (optional)</param>
+        /// <param name="cssStyle">Optional: The CSS style for the heading. (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
-        ApiResponse<byte[]> EditHtmlHtmlAppendHeadingWithHttpInfo (string headingText, System.IO.Stream inputFile = null, string inputFileUrl = null, int? headingSize = null);
+        ApiResponse<byte[]> EditHtmlHtmlAppendHeadingWithHttpInfo (string headingText, System.IO.Stream inputFile = null, string inputFileUrl = null, int? headingSize = null, string cssStyle = null);
         /// <summary>
         /// Append an Image to an HTML Document from a URL
         /// </summary>
@@ -59,7 +61,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageUrl">The URL for the image.</param>
         /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
-        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public). (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
         /// <param name="cssStyle">Optional: CSS style for the image. (optional)</param>
         /// <returns>byte[]</returns>
         byte[] EditHtmlHtmlAppendImageFromUrl (string imageUrl, System.IO.Stream inputFile = null, string inputFileUrl = null, string cssStyle = null);
@@ -73,7 +75,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageUrl">The URL for the image.</param>
         /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
-        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public). (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
         /// <param name="cssStyle">Optional: CSS style for the image. (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> EditHtmlHtmlAppendImageFromUrlWithHttpInfo (string imageUrl, System.IO.Stream inputFile = null, string inputFileUrl = null, string cssStyle = null);
@@ -85,11 +87,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
-        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public). (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
         /// <param name="imageFile">Optional: Image file to be appended as base64 inline image. (optional)</param>
         /// <param name="imageUrl">Optional: Image URL to be appended as base64 inline image. (optional)</param>
         /// <param name="cssStyle">Optional: CSS style for the image. (optional)</param>
-        /// <param name="imageExtension">Optional: The extension (JPG, PNG, GIF, etc.) of the image file. Recommended if uploading a file directly, such as with a byte array. If no extension can be determined, will default to JPG. (optional)</param>
+        /// <param name="imageExtension">Optional: The extension (JPG, PNG, GIF, etc.) of the image file. Recommended if uploading an imageFile directly, instead of using imageUrl. If no extension can be determined, will default to JPG. (optional)</param>
         /// <returns>byte[]</returns>
         byte[] EditHtmlHtmlAppendImageInline (System.IO.Stream inputFile = null, string inputFileUrl = null, System.IO.Stream imageFile = null, string imageUrl = null, string cssStyle = null, string imageExtension = null);
 
@@ -101,11 +103,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
-        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public). (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
         /// <param name="imageFile">Optional: Image file to be appended as base64 inline image. (optional)</param>
         /// <param name="imageUrl">Optional: Image URL to be appended as base64 inline image. (optional)</param>
         /// <param name="cssStyle">Optional: CSS style for the image. (optional)</param>
-        /// <param name="imageExtension">Optional: The extension (JPG, PNG, GIF, etc.) of the image file. Recommended if uploading a file directly, such as with a byte array. If no extension can be determined, will default to JPG. (optional)</param>
+        /// <param name="imageExtension">Optional: The extension (JPG, PNG, GIF, etc.) of the image file. Recommended if uploading an imageFile directly, instead of using imageUrl. If no extension can be determined, will default to JPG. (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> EditHtmlHtmlAppendImageInlineWithHttpInfo (System.IO.Stream inputFile = null, string inputFileUrl = null, System.IO.Stream imageFile = null, string imageUrl = null, string cssStyle = null, string imageExtension = null);
         /// <summary>
@@ -117,9 +119,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="paragraphText">The text content to be used in the paragraph.</param>
         /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
-        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public). (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <param name="cssStyle">Optional: The CSS style for the paragraph. (optional)</param>
         /// <returns>byte[]</returns>
-        byte[] EditHtmlHtmlAppendParagraph (string paragraphText, System.IO.Stream inputFile = null, string inputFileUrl = null);
+        byte[] EditHtmlHtmlAppendParagraph (string paragraphText, System.IO.Stream inputFile = null, string inputFileUrl = null, string cssStyle = null);
 
         /// <summary>
         /// Append a Paragraph to an HTML Document
@@ -130,9 +133,39 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="paragraphText">The text content to be used in the paragraph.</param>
         /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
-        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public). (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <param name="cssStyle">Optional: The CSS style for the paragraph. (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
-        ApiResponse<byte[]> EditHtmlHtmlAppendParagraphWithHttpInfo (string paragraphText, System.IO.Stream inputFile = null, string inputFileUrl = null);
+        ApiResponse<byte[]> EditHtmlHtmlAppendParagraphWithHttpInfo (string paragraphText, System.IO.Stream inputFile = null, string inputFileUrl = null, string cssStyle = null);
+        /// <summary>
+        /// Create a Blank HTML Document
+        /// </summary>
+        /// <remarks>
+        /// Returns a blank HTML Document format file.  The file is blank, with no contents by default.  Use the optional input parameters to add various starting elements.  Use additional editing commands such as Append Header, Append Paragraph or Append Image from URL to populate the document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="title">Optional: The title of the HTML document (optional)</param>
+        /// <param name="cssUrl">Optional: A CSS style URL to be added to the document. (optional)</param>
+        /// <param name="cssInline">Optional: An inline CSS style to be added to the document. (optional)</param>
+        /// <param name="javascriptUrl">Optional: Javascript URL to be added to the document. (optional)</param>
+        /// <param name="javascriptInline">Optional: Inline Javascript to be added to the document. (optional)</param>
+        /// <returns>byte[]</returns>
+        byte[] EditHtmlHtmlCreateBlankDocument (string title = null, string cssUrl = null, string cssInline = null, string javascriptUrl = null, string javascriptInline = null);
+
+        /// <summary>
+        /// Create a Blank HTML Document
+        /// </summary>
+        /// <remarks>
+        /// Returns a blank HTML Document format file.  The file is blank, with no contents by default.  Use the optional input parameters to add various starting elements.  Use additional editing commands such as Append Header, Append Paragraph or Append Image from URL to populate the document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="title">Optional: The title of the HTML document (optional)</param>
+        /// <param name="cssUrl">Optional: A CSS style URL to be added to the document. (optional)</param>
+        /// <param name="cssInline">Optional: An inline CSS style to be added to the document. (optional)</param>
+        /// <param name="javascriptUrl">Optional: Javascript URL to be added to the document. (optional)</param>
+        /// <param name="javascriptInline">Optional: Inline Javascript to be added to the document. (optional)</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> EditHtmlHtmlCreateBlankDocumentWithHttpInfo (string title = null, string cssUrl = null, string cssInline = null, string javascriptUrl = null, string javascriptInline = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -144,10 +177,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="headingText">The text content to be used in the header.</param>
         /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
-        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public). (optional)</param>
-        /// <param name="headingSize">Optional: The heading size number. Default is 1. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <param name="headingSize">Optional: The heading size number. Default is 1. Accepts values between 1 and 6. (optional)</param>
+        /// <param name="cssStyle">Optional: The CSS style for the heading. (optional)</param>
         /// <returns>Task of byte[]</returns>
-        System.Threading.Tasks.Task<byte[]> EditHtmlHtmlAppendHeadingAsync (string headingText, System.IO.Stream inputFile = null, string inputFileUrl = null, int? headingSize = null);
+        System.Threading.Tasks.Task<byte[]> EditHtmlHtmlAppendHeadingAsync (string headingText, System.IO.Stream inputFile = null, string inputFileUrl = null, int? headingSize = null, string cssStyle = null);
 
         /// <summary>
         /// Append a Heading to an HTML Document
@@ -158,10 +192,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="headingText">The text content to be used in the header.</param>
         /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
-        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public). (optional)</param>
-        /// <param name="headingSize">Optional: The heading size number. Default is 1. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <param name="headingSize">Optional: The heading size number. Default is 1. Accepts values between 1 and 6. (optional)</param>
+        /// <param name="cssStyle">Optional: The CSS style for the heading. (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditHtmlHtmlAppendHeadingAsyncWithHttpInfo (string headingText, System.IO.Stream inputFile = null, string inputFileUrl = null, int? headingSize = null);
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditHtmlHtmlAppendHeadingAsyncWithHttpInfo (string headingText, System.IO.Stream inputFile = null, string inputFileUrl = null, int? headingSize = null, string cssStyle = null);
         /// <summary>
         /// Append an Image to an HTML Document from a URL
         /// </summary>
@@ -171,7 +206,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageUrl">The URL for the image.</param>
         /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
-        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public). (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
         /// <param name="cssStyle">Optional: CSS style for the image. (optional)</param>
         /// <returns>Task of byte[]</returns>
         System.Threading.Tasks.Task<byte[]> EditHtmlHtmlAppendImageFromUrlAsync (string imageUrl, System.IO.Stream inputFile = null, string inputFileUrl = null, string cssStyle = null);
@@ -185,7 +220,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageUrl">The URL for the image.</param>
         /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
-        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public). (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
         /// <param name="cssStyle">Optional: CSS style for the image. (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> EditHtmlHtmlAppendImageFromUrlAsyncWithHttpInfo (string imageUrl, System.IO.Stream inputFile = null, string inputFileUrl = null, string cssStyle = null);
@@ -197,11 +232,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
-        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public). (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
         /// <param name="imageFile">Optional: Image file to be appended as base64 inline image. (optional)</param>
         /// <param name="imageUrl">Optional: Image URL to be appended as base64 inline image. (optional)</param>
         /// <param name="cssStyle">Optional: CSS style for the image. (optional)</param>
-        /// <param name="imageExtension">Optional: The extension (JPG, PNG, GIF, etc.) of the image file. Recommended if uploading a file directly, such as with a byte array. If no extension can be determined, will default to JPG. (optional)</param>
+        /// <param name="imageExtension">Optional: The extension (JPG, PNG, GIF, etc.) of the image file. Recommended if uploading an imageFile directly, instead of using imageUrl. If no extension can be determined, will default to JPG. (optional)</param>
         /// <returns>Task of byte[]</returns>
         System.Threading.Tasks.Task<byte[]> EditHtmlHtmlAppendImageInlineAsync (System.IO.Stream inputFile = null, string inputFileUrl = null, System.IO.Stream imageFile = null, string imageUrl = null, string cssStyle = null, string imageExtension = null);
 
@@ -213,11 +248,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
-        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public). (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
         /// <param name="imageFile">Optional: Image file to be appended as base64 inline image. (optional)</param>
         /// <param name="imageUrl">Optional: Image URL to be appended as base64 inline image. (optional)</param>
         /// <param name="cssStyle">Optional: CSS style for the image. (optional)</param>
-        /// <param name="imageExtension">Optional: The extension (JPG, PNG, GIF, etc.) of the image file. Recommended if uploading a file directly, such as with a byte array. If no extension can be determined, will default to JPG. (optional)</param>
+        /// <param name="imageExtension">Optional: The extension (JPG, PNG, GIF, etc.) of the image file. Recommended if uploading an imageFile directly, instead of using imageUrl. If no extension can be determined, will default to JPG. (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> EditHtmlHtmlAppendImageInlineAsyncWithHttpInfo (System.IO.Stream inputFile = null, string inputFileUrl = null, System.IO.Stream imageFile = null, string imageUrl = null, string cssStyle = null, string imageExtension = null);
         /// <summary>
@@ -229,9 +264,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="paragraphText">The text content to be used in the paragraph.</param>
         /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
-        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public). (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <param name="cssStyle">Optional: The CSS style for the paragraph. (optional)</param>
         /// <returns>Task of byte[]</returns>
-        System.Threading.Tasks.Task<byte[]> EditHtmlHtmlAppendParagraphAsync (string paragraphText, System.IO.Stream inputFile = null, string inputFileUrl = null);
+        System.Threading.Tasks.Task<byte[]> EditHtmlHtmlAppendParagraphAsync (string paragraphText, System.IO.Stream inputFile = null, string inputFileUrl = null, string cssStyle = null);
 
         /// <summary>
         /// Append a Paragraph to an HTML Document
@@ -242,9 +278,39 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="paragraphText">The text content to be used in the paragraph.</param>
         /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
-        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public). (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <param name="cssStyle">Optional: The CSS style for the paragraph. (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditHtmlHtmlAppendParagraphAsyncWithHttpInfo (string paragraphText, System.IO.Stream inputFile = null, string inputFileUrl = null);
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditHtmlHtmlAppendParagraphAsyncWithHttpInfo (string paragraphText, System.IO.Stream inputFile = null, string inputFileUrl = null, string cssStyle = null);
+        /// <summary>
+        /// Create a Blank HTML Document
+        /// </summary>
+        /// <remarks>
+        /// Returns a blank HTML Document format file.  The file is blank, with no contents by default.  Use the optional input parameters to add various starting elements.  Use additional editing commands such as Append Header, Append Paragraph or Append Image from URL to populate the document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="title">Optional: The title of the HTML document (optional)</param>
+        /// <param name="cssUrl">Optional: A CSS style URL to be added to the document. (optional)</param>
+        /// <param name="cssInline">Optional: An inline CSS style to be added to the document. (optional)</param>
+        /// <param name="javascriptUrl">Optional: Javascript URL to be added to the document. (optional)</param>
+        /// <param name="javascriptInline">Optional: Inline Javascript to be added to the document. (optional)</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> EditHtmlHtmlCreateBlankDocumentAsync (string title = null, string cssUrl = null, string cssInline = null, string javascriptUrl = null, string javascriptInline = null);
+
+        /// <summary>
+        /// Create a Blank HTML Document
+        /// </summary>
+        /// <remarks>
+        /// Returns a blank HTML Document format file.  The file is blank, with no contents by default.  Use the optional input parameters to add various starting elements.  Use additional editing commands such as Append Header, Append Paragraph or Append Image from URL to populate the document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="title">Optional: The title of the HTML document (optional)</param>
+        /// <param name="cssUrl">Optional: A CSS style URL to be added to the document. (optional)</param>
+        /// <param name="cssInline">Optional: An inline CSS style to be added to the document. (optional)</param>
+        /// <param name="javascriptUrl">Optional: Javascript URL to be added to the document. (optional)</param>
+        /// <param name="javascriptInline">Optional: Inline Javascript to be added to the document. (optional)</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditHtmlHtmlCreateBlankDocumentAsyncWithHttpInfo (string title = null, string cssUrl = null, string cssInline = null, string javascriptUrl = null, string javascriptInline = null);
         #endregion Asynchronous Operations
     }
 
@@ -351,12 +417,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="headingText">The text content to be used in the header.</param>
         /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
-        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public). (optional)</param>
-        /// <param name="headingSize">Optional: The heading size number. Default is 1. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <param name="headingSize">Optional: The heading size number. Default is 1. Accepts values between 1 and 6. (optional)</param>
+        /// <param name="cssStyle">Optional: The CSS style for the heading. (optional)</param>
         /// <returns>byte[]</returns>
-        public byte[] EditHtmlHtmlAppendHeading (string headingText, System.IO.Stream inputFile = null, string inputFileUrl = null, int? headingSize = null)
+        public byte[] EditHtmlHtmlAppendHeading (string headingText, System.IO.Stream inputFile = null, string inputFileUrl = null, int? headingSize = null, string cssStyle = null)
         {
-             ApiResponse<byte[]> localVarResponse = EditHtmlHtmlAppendHeadingWithHttpInfo(headingText, inputFile, inputFileUrl, headingSize);
+             ApiResponse<byte[]> localVarResponse = EditHtmlHtmlAppendHeadingWithHttpInfo(headingText, inputFile, inputFileUrl, headingSize, cssStyle);
              return localVarResponse.Data;
         }
 
@@ -366,10 +433,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="headingText">The text content to be used in the header.</param>
         /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
-        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public). (optional)</param>
-        /// <param name="headingSize">Optional: The heading size number. Default is 1. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <param name="headingSize">Optional: The heading size number. Default is 1. Accepts values between 1 and 6. (optional)</param>
+        /// <param name="cssStyle">Optional: The CSS style for the heading. (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
-        public ApiResponse< byte[] > EditHtmlHtmlAppendHeadingWithHttpInfo (string headingText, System.IO.Stream inputFile = null, string inputFileUrl = null, int? headingSize = null)
+        public ApiResponse< byte[] > EditHtmlHtmlAppendHeadingWithHttpInfo (string headingText, System.IO.Stream inputFile = null, string inputFileUrl = null, int? headingSize = null, string cssStyle = null)
         {
             // verify the required parameter 'headingText' is set
             if (headingText == null)
@@ -402,6 +470,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (inputFileUrl != null) localVarHeaderParams.Add("inputFileUrl", this.Configuration.ApiClient.ParameterToString(inputFileUrl)); // header parameter
             if (headingText != null) localVarHeaderParams.Add("headingText", this.Configuration.ApiClient.ParameterToString(headingText)); // header parameter
             if (headingSize != null) localVarHeaderParams.Add("headingSize", this.Configuration.ApiClient.ParameterToString(headingSize)); // header parameter
+            if (cssStyle != null) localVarHeaderParams.Add("cssStyle", this.Configuration.ApiClient.ParameterToString(cssStyle)); // header parameter
             if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
 
             // authentication (Apikey) required
@@ -434,12 +503,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="headingText">The text content to be used in the header.</param>
         /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
-        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public). (optional)</param>
-        /// <param name="headingSize">Optional: The heading size number. Default is 1. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <param name="headingSize">Optional: The heading size number. Default is 1. Accepts values between 1 and 6. (optional)</param>
+        /// <param name="cssStyle">Optional: The CSS style for the heading. (optional)</param>
         /// <returns>Task of byte[]</returns>
-        public async System.Threading.Tasks.Task<byte[]> EditHtmlHtmlAppendHeadingAsync (string headingText, System.IO.Stream inputFile = null, string inputFileUrl = null, int? headingSize = null)
+        public async System.Threading.Tasks.Task<byte[]> EditHtmlHtmlAppendHeadingAsync (string headingText, System.IO.Stream inputFile = null, string inputFileUrl = null, int? headingSize = null, string cssStyle = null)
         {
-             ApiResponse<byte[]> localVarResponse = await EditHtmlHtmlAppendHeadingAsyncWithHttpInfo(headingText, inputFile, inputFileUrl, headingSize);
+             ApiResponse<byte[]> localVarResponse = await EditHtmlHtmlAppendHeadingAsyncWithHttpInfo(headingText, inputFile, inputFileUrl, headingSize, cssStyle);
              return localVarResponse.Data;
 
         }
@@ -450,10 +520,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="headingText">The text content to be used in the header.</param>
         /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
-        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public). (optional)</param>
-        /// <param name="headingSize">Optional: The heading size number. Default is 1. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <param name="headingSize">Optional: The heading size number. Default is 1. Accepts values between 1 and 6. (optional)</param>
+        /// <param name="cssStyle">Optional: The CSS style for the heading. (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditHtmlHtmlAppendHeadingAsyncWithHttpInfo (string headingText, System.IO.Stream inputFile = null, string inputFileUrl = null, int? headingSize = null)
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditHtmlHtmlAppendHeadingAsyncWithHttpInfo (string headingText, System.IO.Stream inputFile = null, string inputFileUrl = null, int? headingSize = null, string cssStyle = null)
         {
             // verify the required parameter 'headingText' is set
             if (headingText == null)
@@ -486,6 +557,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (inputFileUrl != null) localVarHeaderParams.Add("inputFileUrl", this.Configuration.ApiClient.ParameterToString(inputFileUrl)); // header parameter
             if (headingText != null) localVarHeaderParams.Add("headingText", this.Configuration.ApiClient.ParameterToString(headingText)); // header parameter
             if (headingSize != null) localVarHeaderParams.Add("headingSize", this.Configuration.ApiClient.ParameterToString(headingSize)); // header parameter
+            if (cssStyle != null) localVarHeaderParams.Add("cssStyle", this.Configuration.ApiClient.ParameterToString(cssStyle)); // header parameter
             if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
 
             // authentication (Apikey) required
@@ -518,7 +590,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageUrl">The URL for the image.</param>
         /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
-        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public). (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
         /// <param name="cssStyle">Optional: CSS style for the image. (optional)</param>
         /// <returns>byte[]</returns>
         public byte[] EditHtmlHtmlAppendImageFromUrl (string imageUrl, System.IO.Stream inputFile = null, string inputFileUrl = null, string cssStyle = null)
@@ -533,7 +605,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageUrl">The URL for the image.</param>
         /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
-        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public). (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
         /// <param name="cssStyle">Optional: CSS style for the image. (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
         public ApiResponse< byte[] > EditHtmlHtmlAppendImageFromUrlWithHttpInfo (string imageUrl, System.IO.Stream inputFile = null, string inputFileUrl = null, string cssStyle = null)
@@ -601,7 +673,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageUrl">The URL for the image.</param>
         /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
-        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public). (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
         /// <param name="cssStyle">Optional: CSS style for the image. (optional)</param>
         /// <returns>Task of byte[]</returns>
         public async System.Threading.Tasks.Task<byte[]> EditHtmlHtmlAppendImageFromUrlAsync (string imageUrl, System.IO.Stream inputFile = null, string inputFileUrl = null, string cssStyle = null)
@@ -617,7 +689,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageUrl">The URL for the image.</param>
         /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
-        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public). (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
         /// <param name="cssStyle">Optional: CSS style for the image. (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditHtmlHtmlAppendImageFromUrlAsyncWithHttpInfo (string imageUrl, System.IO.Stream inputFile = null, string inputFileUrl = null, string cssStyle = null)
@@ -684,11 +756,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
-        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public). (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
         /// <param name="imageFile">Optional: Image file to be appended as base64 inline image. (optional)</param>
         /// <param name="imageUrl">Optional: Image URL to be appended as base64 inline image. (optional)</param>
         /// <param name="cssStyle">Optional: CSS style for the image. (optional)</param>
-        /// <param name="imageExtension">Optional: The extension (JPG, PNG, GIF, etc.) of the image file. Recommended if uploading a file directly, such as with a byte array. If no extension can be determined, will default to JPG. (optional)</param>
+        /// <param name="imageExtension">Optional: The extension (JPG, PNG, GIF, etc.) of the image file. Recommended if uploading an imageFile directly, instead of using imageUrl. If no extension can be determined, will default to JPG. (optional)</param>
         /// <returns>byte[]</returns>
         public byte[] EditHtmlHtmlAppendImageInline (System.IO.Stream inputFile = null, string inputFileUrl = null, System.IO.Stream imageFile = null, string imageUrl = null, string cssStyle = null, string imageExtension = null)
         {
@@ -701,11 +773,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
-        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public). (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
         /// <param name="imageFile">Optional: Image file to be appended as base64 inline image. (optional)</param>
         /// <param name="imageUrl">Optional: Image URL to be appended as base64 inline image. (optional)</param>
         /// <param name="cssStyle">Optional: CSS style for the image. (optional)</param>
-        /// <param name="imageExtension">Optional: The extension (JPG, PNG, GIF, etc.) of the image file. Recommended if uploading a file directly, such as with a byte array. If no extension can be determined, will default to JPG. (optional)</param>
+        /// <param name="imageExtension">Optional: The extension (JPG, PNG, GIF, etc.) of the image file. Recommended if uploading an imageFile directly, instead of using imageUrl. If no extension can be determined, will default to JPG. (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
         public ApiResponse< byte[] > EditHtmlHtmlAppendImageInlineWithHttpInfo (System.IO.Stream inputFile = null, string inputFileUrl = null, System.IO.Stream imageFile = null, string imageUrl = null, string cssStyle = null, string imageExtension = null)
         {
@@ -720,6 +792,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -770,11 +843,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
-        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public). (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
         /// <param name="imageFile">Optional: Image file to be appended as base64 inline image. (optional)</param>
         /// <param name="imageUrl">Optional: Image URL to be appended as base64 inline image. (optional)</param>
         /// <param name="cssStyle">Optional: CSS style for the image. (optional)</param>
-        /// <param name="imageExtension">Optional: The extension (JPG, PNG, GIF, etc.) of the image file. Recommended if uploading a file directly, such as with a byte array. If no extension can be determined, will default to JPG. (optional)</param>
+        /// <param name="imageExtension">Optional: The extension (JPG, PNG, GIF, etc.) of the image file. Recommended if uploading an imageFile directly, instead of using imageUrl. If no extension can be determined, will default to JPG. (optional)</param>
         /// <returns>Task of byte[]</returns>
         public async System.Threading.Tasks.Task<byte[]> EditHtmlHtmlAppendImageInlineAsync (System.IO.Stream inputFile = null, string inputFileUrl = null, System.IO.Stream imageFile = null, string imageUrl = null, string cssStyle = null, string imageExtension = null)
         {
@@ -788,11 +861,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
-        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public). (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
         /// <param name="imageFile">Optional: Image file to be appended as base64 inline image. (optional)</param>
         /// <param name="imageUrl">Optional: Image URL to be appended as base64 inline image. (optional)</param>
         /// <param name="cssStyle">Optional: CSS style for the image. (optional)</param>
-        /// <param name="imageExtension">Optional: The extension (JPG, PNG, GIF, etc.) of the image file. Recommended if uploading a file directly, such as with a byte array. If no extension can be determined, will default to JPG. (optional)</param>
+        /// <param name="imageExtension">Optional: The extension (JPG, PNG, GIF, etc.) of the image file. Recommended if uploading an imageFile directly, instead of using imageUrl. If no extension can be determined, will default to JPG. (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditHtmlHtmlAppendImageInlineAsyncWithHttpInfo (System.IO.Stream inputFile = null, string inputFileUrl = null, System.IO.Stream imageFile = null, string imageUrl = null, string cssStyle = null, string imageExtension = null)
         {
@@ -807,6 +880,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -858,11 +932,12 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="paragraphText">The text content to be used in the paragraph.</param>
         /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
-        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public). (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <param name="cssStyle">Optional: The CSS style for the paragraph. (optional)</param>
         /// <returns>byte[]</returns>
-        public byte[] EditHtmlHtmlAppendParagraph (string paragraphText, System.IO.Stream inputFile = null, string inputFileUrl = null)
+        public byte[] EditHtmlHtmlAppendParagraph (string paragraphText, System.IO.Stream inputFile = null, string inputFileUrl = null, string cssStyle = null)
         {
-             ApiResponse<byte[]> localVarResponse = EditHtmlHtmlAppendParagraphWithHttpInfo(paragraphText, inputFile, inputFileUrl);
+             ApiResponse<byte[]> localVarResponse = EditHtmlHtmlAppendParagraphWithHttpInfo(paragraphText, inputFile, inputFileUrl, cssStyle);
              return localVarResponse.Data;
         }
 
@@ -872,9 +947,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="paragraphText">The text content to be used in the paragraph.</param>
         /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
-        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public). (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <param name="cssStyle">Optional: The CSS style for the paragraph. (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
-        public ApiResponse< byte[] > EditHtmlHtmlAppendParagraphWithHttpInfo (string paragraphText, System.IO.Stream inputFile = null, string inputFileUrl = null)
+        public ApiResponse< byte[] > EditHtmlHtmlAppendParagraphWithHttpInfo (string paragraphText, System.IO.Stream inputFile = null, string inputFileUrl = null, string cssStyle = null)
         {
             // verify the required parameter 'paragraphText' is set
             if (paragraphText == null)
@@ -906,6 +982,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             if (inputFileUrl != null) localVarHeaderParams.Add("inputFileUrl", this.Configuration.ApiClient.ParameterToString(inputFileUrl)); // header parameter
             if (paragraphText != null) localVarHeaderParams.Add("paragraphText", this.Configuration.ApiClient.ParameterToString(paragraphText)); // header parameter
+            if (cssStyle != null) localVarHeaderParams.Add("cssStyle", this.Configuration.ApiClient.ParameterToString(cssStyle)); // header parameter
             if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
 
             // authentication (Apikey) required
@@ -938,11 +1015,12 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="paragraphText">The text content to be used in the paragraph.</param>
         /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
-        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public). (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <param name="cssStyle">Optional: The CSS style for the paragraph. (optional)</param>
         /// <returns>Task of byte[]</returns>
-        public async System.Threading.Tasks.Task<byte[]> EditHtmlHtmlAppendParagraphAsync (string paragraphText, System.IO.Stream inputFile = null, string inputFileUrl = null)
+        public async System.Threading.Tasks.Task<byte[]> EditHtmlHtmlAppendParagraphAsync (string paragraphText, System.IO.Stream inputFile = null, string inputFileUrl = null, string cssStyle = null)
         {
-             ApiResponse<byte[]> localVarResponse = await EditHtmlHtmlAppendParagraphAsyncWithHttpInfo(paragraphText, inputFile, inputFileUrl);
+             ApiResponse<byte[]> localVarResponse = await EditHtmlHtmlAppendParagraphAsyncWithHttpInfo(paragraphText, inputFile, inputFileUrl, cssStyle);
              return localVarResponse.Data;
 
         }
@@ -953,9 +1031,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="paragraphText">The text content to be used in the paragraph.</param>
         /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
-        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public). (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <param name="cssStyle">Optional: The CSS style for the paragraph. (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditHtmlHtmlAppendParagraphAsyncWithHttpInfo (string paragraphText, System.IO.Stream inputFile = null, string inputFileUrl = null)
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditHtmlHtmlAppendParagraphAsyncWithHttpInfo (string paragraphText, System.IO.Stream inputFile = null, string inputFileUrl = null, string cssStyle = null)
         {
             // verify the required parameter 'paragraphText' is set
             if (paragraphText == null)
@@ -987,6 +1066,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             if (inputFileUrl != null) localVarHeaderParams.Add("inputFileUrl", this.Configuration.ApiClient.ParameterToString(inputFileUrl)); // header parameter
             if (paragraphText != null) localVarHeaderParams.Add("paragraphText", this.Configuration.ApiClient.ParameterToString(paragraphText)); // header parameter
+            if (cssStyle != null) localVarHeaderParams.Add("cssStyle", this.Configuration.ApiClient.ParameterToString(cssStyle)); // header parameter
             if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
 
             // authentication (Apikey) required
@@ -1005,6 +1085,173 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("EditHtmlHtmlAppendParagraph", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Create a Blank HTML Document Returns a blank HTML Document format file.  The file is blank, with no contents by default.  Use the optional input parameters to add various starting elements.  Use additional editing commands such as Append Header, Append Paragraph or Append Image from URL to populate the document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="title">Optional: The title of the HTML document (optional)</param>
+        /// <param name="cssUrl">Optional: A CSS style URL to be added to the document. (optional)</param>
+        /// <param name="cssInline">Optional: An inline CSS style to be added to the document. (optional)</param>
+        /// <param name="javascriptUrl">Optional: Javascript URL to be added to the document. (optional)</param>
+        /// <param name="javascriptInline">Optional: Inline Javascript to be added to the document. (optional)</param>
+        /// <returns>byte[]</returns>
+        public byte[] EditHtmlHtmlCreateBlankDocument (string title = null, string cssUrl = null, string cssInline = null, string javascriptUrl = null, string javascriptInline = null)
+        {
+             ApiResponse<byte[]> localVarResponse = EditHtmlHtmlCreateBlankDocumentWithHttpInfo(title, cssUrl, cssInline, javascriptUrl, javascriptInline);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a Blank HTML Document Returns a blank HTML Document format file.  The file is blank, with no contents by default.  Use the optional input parameters to add various starting elements.  Use additional editing commands such as Append Header, Append Paragraph or Append Image from URL to populate the document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="title">Optional: The title of the HTML document (optional)</param>
+        /// <param name="cssUrl">Optional: A CSS style URL to be added to the document. (optional)</param>
+        /// <param name="cssInline">Optional: An inline CSS style to be added to the document. (optional)</param>
+        /// <param name="javascriptUrl">Optional: Javascript URL to be added to the document. (optional)</param>
+        /// <param name="javascriptInline">Optional: Inline Javascript to be added to the document. (optional)</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > EditHtmlHtmlCreateBlankDocumentWithHttpInfo (string title = null, string cssUrl = null, string cssInline = null, string javascriptUrl = null, string javascriptInline = null)
+        {
+
+            var localVarPath = "/convert/edit/html/create/blank";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (title != null) localVarHeaderParams.Add("title", this.Configuration.ApiClient.ParameterToString(title)); // header parameter
+            if (cssUrl != null) localVarHeaderParams.Add("cssUrl", this.Configuration.ApiClient.ParameterToString(cssUrl)); // header parameter
+            if (cssInline != null) localVarHeaderParams.Add("cssInline", this.Configuration.ApiClient.ParameterToString(cssInline)); // header parameter
+            if (javascriptUrl != null) localVarHeaderParams.Add("javascriptUrl", this.Configuration.ApiClient.ParameterToString(javascriptUrl)); // header parameter
+            if (javascriptInline != null) localVarHeaderParams.Add("javascriptInline", this.Configuration.ApiClient.ParameterToString(javascriptInline)); // header parameter
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditHtmlHtmlCreateBlankDocument", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Create a Blank HTML Document Returns a blank HTML Document format file.  The file is blank, with no contents by default.  Use the optional input parameters to add various starting elements.  Use additional editing commands such as Append Header, Append Paragraph or Append Image from URL to populate the document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="title">Optional: The title of the HTML document (optional)</param>
+        /// <param name="cssUrl">Optional: A CSS style URL to be added to the document. (optional)</param>
+        /// <param name="cssInline">Optional: An inline CSS style to be added to the document. (optional)</param>
+        /// <param name="javascriptUrl">Optional: Javascript URL to be added to the document. (optional)</param>
+        /// <param name="javascriptInline">Optional: Inline Javascript to be added to the document. (optional)</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> EditHtmlHtmlCreateBlankDocumentAsync (string title = null, string cssUrl = null, string cssInline = null, string javascriptUrl = null, string javascriptInline = null)
+        {
+             ApiResponse<byte[]> localVarResponse = await EditHtmlHtmlCreateBlankDocumentAsyncWithHttpInfo(title, cssUrl, cssInline, javascriptUrl, javascriptInline);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a Blank HTML Document Returns a blank HTML Document format file.  The file is blank, with no contents by default.  Use the optional input parameters to add various starting elements.  Use additional editing commands such as Append Header, Append Paragraph or Append Image from URL to populate the document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="title">Optional: The title of the HTML document (optional)</param>
+        /// <param name="cssUrl">Optional: A CSS style URL to be added to the document. (optional)</param>
+        /// <param name="cssInline">Optional: An inline CSS style to be added to the document. (optional)</param>
+        /// <param name="javascriptUrl">Optional: Javascript URL to be added to the document. (optional)</param>
+        /// <param name="javascriptInline">Optional: Inline Javascript to be added to the document. (optional)</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditHtmlHtmlCreateBlankDocumentAsyncWithHttpInfo (string title = null, string cssUrl = null, string cssInline = null, string javascriptUrl = null, string javascriptInline = null)
+        {
+
+            var localVarPath = "/convert/edit/html/create/blank";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (title != null) localVarHeaderParams.Add("title", this.Configuration.ApiClient.ParameterToString(title)); // header parameter
+            if (cssUrl != null) localVarHeaderParams.Add("cssUrl", this.Configuration.ApiClient.ParameterToString(cssUrl)); // header parameter
+            if (cssInline != null) localVarHeaderParams.Add("cssInline", this.Configuration.ApiClient.ParameterToString(cssInline)); // header parameter
+            if (javascriptUrl != null) localVarHeaderParams.Add("javascriptUrl", this.Configuration.ApiClient.ParameterToString(javascriptUrl)); // header parameter
+            if (javascriptInline != null) localVarHeaderParams.Add("javascriptInline", this.Configuration.ApiClient.ParameterToString(javascriptInline)); // header parameter
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditHtmlHtmlCreateBlankDocument", localVarResponse);
                 if (exception != null) throw exception;
             }
 
