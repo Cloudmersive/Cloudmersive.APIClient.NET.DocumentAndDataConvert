@@ -77,6 +77,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test EditDocumentDocxAcceptAllTrackChanges
+        /// </summary>
+        [Test]
+        public void EditDocumentDocxAcceptAllTrackChangesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.EditDocumentDocxAcceptAllTrackChanges(inputFile);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
         /// Test EditDocumentDocxBody
         /// </summary>
         [Test]
@@ -134,6 +146,30 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //DeleteDocxTableRowRangeRequest reqConfig = null;
             //var response = instance.EditDocumentDocxDeleteTableRowRange(reqConfig);
             //Assert.IsInstanceOf<DeleteDocxTableRowRangeResponse> (response, "response is DeleteDocxTableRowRangeResponse");
+        }
+        
+        /// <summary>
+        /// Test EditDocumentDocxDisableTrackChanges
+        /// </summary>
+        [Test]
+        public void EditDocumentDocxDisableTrackChangesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.EditDocumentDocxDisableTrackChanges(inputFile);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
+        /// Test EditDocumentDocxEnableTrackChanges
+        /// </summary>
+        [Test]
+        public void EditDocumentDocxEnableTrackChangesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.EditDocumentDocxEnableTrackChanges(inputFile);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
         /// <summary>
@@ -326,6 +362,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //GetDocxPagesRequest reqConfig = null;
             //var response = instance.EditDocumentDocxPages(reqConfig);
             //Assert.IsInstanceOf<GetDocxPagesResponse> (response, "response is GetDocxPagesResponse");
+        }
+        
+        /// <summary>
+        /// Test EditDocumentDocxRemoveAllComments
+        /// </summary>
+        [Test]
+        public void EditDocumentDocxRemoveAllCommentsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.EditDocumentDocxRemoveAllComments(inputFile);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
         /// <summary>
