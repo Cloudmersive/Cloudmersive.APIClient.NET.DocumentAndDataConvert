@@ -137,6 +137,30 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test ValidateDocumentHtmlValidation
+        /// </summary>
+        [Test]
+        public void ValidateDocumentHtmlValidationTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.ValidateDocumentHtmlValidation(inputFile);
+            //Assert.IsInstanceOf<DocumentValidationResult> (response, "response is DocumentValidationResult");
+        }
+        
+        /// <summary>
+        /// Test ValidateDocumentImageValidation
+        /// </summary>
+        [Test]
+        public void ValidateDocumentImageValidationTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.ValidateDocumentImageValidation(inputFile);
+            //Assert.IsInstanceOf<DocumentValidationResult> (response, "response is DocumentValidationResult");
+        }
+        
+        /// <summary>
         /// Test ValidateDocumentJsonValidation
         /// </summary>
         [Test]

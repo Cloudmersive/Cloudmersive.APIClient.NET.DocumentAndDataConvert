@@ -85,6 +85,49 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> ZipArchiveZipCreateAdvancedWithHttpInfo (CreateZipArchiveRequest request);
         /// <summary>
+        /// Compress files to create a new, encrypted and password-protected zip archive
+        /// </summary>
+        /// <remarks>
+        /// Create a new zip archive by compressing input files, and also applies encryption and password protection to the zip.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="password">Password to place on the Zip file; the longer the password, the more secure</param>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="encryptionAlgorithm">Encryption algorithm to use; possible values are AES-256 (recommended), AES-128, and PK-Zip (not recommended; legacy, weak encryption algorithm). Default is AES-256. (optional)</param>
+        /// <param name="inputFile2">Second input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
+        /// <returns>byte[]</returns>
+        byte[] ZipArchiveZipCreateEncrypted (string password, System.IO.Stream inputFile1, string encryptionAlgorithm = null, System.IO.Stream inputFile2 = null, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
+
+        /// <summary>
+        /// Compress files to create a new, encrypted and password-protected zip archive
+        /// </summary>
+        /// <remarks>
+        /// Create a new zip archive by compressing input files, and also applies encryption and password protection to the zip.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="password">Password to place on the Zip file; the longer the password, the more secure</param>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="encryptionAlgorithm">Encryption algorithm to use; possible values are AES-256 (recommended), AES-128, and PK-Zip (not recommended; legacy, weak encryption algorithm). Default is AES-256. (optional)</param>
+        /// <param name="inputFile2">Second input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> ZipArchiveZipCreateEncryptedWithHttpInfo (string password, System.IO.Stream inputFile1, string encryptionAlgorithm = null, System.IO.Stream inputFile2 = null, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
+        /// <summary>
         /// Decrypt and remove password protection on a zip file
         /// </summary>
         /// <remarks>
@@ -211,6 +254,49 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="request">Input request</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ZipArchiveZipCreateAdvancedAsyncWithHttpInfo (CreateZipArchiveRequest request);
+        /// <summary>
+        /// Compress files to create a new, encrypted and password-protected zip archive
+        /// </summary>
+        /// <remarks>
+        /// Create a new zip archive by compressing input files, and also applies encryption and password protection to the zip.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="password">Password to place on the Zip file; the longer the password, the more secure</param>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="encryptionAlgorithm">Encryption algorithm to use; possible values are AES-256 (recommended), AES-128, and PK-Zip (not recommended; legacy, weak encryption algorithm). Default is AES-256. (optional)</param>
+        /// <param name="inputFile2">Second input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> ZipArchiveZipCreateEncryptedAsync (string password, System.IO.Stream inputFile1, string encryptionAlgorithm = null, System.IO.Stream inputFile2 = null, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
+
+        /// <summary>
+        /// Compress files to create a new, encrypted and password-protected zip archive
+        /// </summary>
+        /// <remarks>
+        /// Create a new zip archive by compressing input files, and also applies encryption and password protection to the zip.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="password">Password to place on the Zip file; the longer the password, the more secure</param>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="encryptionAlgorithm">Encryption algorithm to use; possible values are AES-256 (recommended), AES-128, and PK-Zip (not recommended; legacy, weak encryption algorithm). Default is AES-256. (optional)</param>
+        /// <param name="inputFile2">Second input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> ZipArchiveZipCreateEncryptedAsyncWithHttpInfo (string password, System.IO.Stream inputFile1, string encryptionAlgorithm = null, System.IO.Stream inputFile2 = null, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
         /// <summary>
         /// Decrypt and remove password protection on a zip file
         /// </summary>
@@ -740,6 +826,223 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Compress files to create a new, encrypted and password-protected zip archive Create a new zip archive by compressing input files, and also applies encryption and password protection to the zip.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="password">Password to place on the Zip file; the longer the password, the more secure</param>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="encryptionAlgorithm">Encryption algorithm to use; possible values are AES-256 (recommended), AES-128, and PK-Zip (not recommended; legacy, weak encryption algorithm). Default is AES-256. (optional)</param>
+        /// <param name="inputFile2">Second input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
+        /// <returns>byte[]</returns>
+        public byte[] ZipArchiveZipCreateEncrypted (string password, System.IO.Stream inputFile1, string encryptionAlgorithm = null, System.IO.Stream inputFile2 = null, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null)
+        {
+             ApiResponse<byte[]> localVarResponse = ZipArchiveZipCreateEncryptedWithHttpInfo(password, inputFile1, encryptionAlgorithm, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Compress files to create a new, encrypted and password-protected zip archive Create a new zip archive by compressing input files, and also applies encryption and password protection to the zip.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="password">Password to place on the Zip file; the longer the password, the more secure</param>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="encryptionAlgorithm">Encryption algorithm to use; possible values are AES-256 (recommended), AES-128, and PK-Zip (not recommended; legacy, weak encryption algorithm). Default is AES-256. (optional)</param>
+        /// <param name="inputFile2">Second input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > ZipArchiveZipCreateEncryptedWithHttpInfo (string password, System.IO.Stream inputFile1, string encryptionAlgorithm = null, System.IO.Stream inputFile2 = null, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null)
+        {
+            // verify the required parameter 'password' is set
+            if (password == null)
+                throw new ApiException(400, "Missing required parameter 'password' when calling ZipArchiveApi->ZipArchiveZipCreateEncrypted");
+            // verify the required parameter 'inputFile1' is set
+            if (inputFile1 == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile1' when calling ZipArchiveApi->ZipArchiveZipCreateEncrypted");
+
+            var localVarPath = "/convert/archive/zip/create/encrypted";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (password != null) localVarHeaderParams.Add("password", this.Configuration.ApiClient.ParameterToString(password)); // header parameter
+            if (encryptionAlgorithm != null) localVarHeaderParams.Add("encryptionAlgorithm", this.Configuration.ApiClient.ParameterToString(encryptionAlgorithm)); // header parameter
+            if (inputFile1 != null) localVarFileParams.Add("inputFile1", this.Configuration.ApiClient.ParameterToFile("inputFile1", inputFile1));
+            if (inputFile2 != null) localVarFileParams.Add("inputFile2", this.Configuration.ApiClient.ParameterToFile("inputFile2", inputFile2));
+            if (inputFile3 != null) localVarFileParams.Add("inputFile3", this.Configuration.ApiClient.ParameterToFile("inputFile3", inputFile3));
+            if (inputFile4 != null) localVarFileParams.Add("inputFile4", this.Configuration.ApiClient.ParameterToFile("inputFile4", inputFile4));
+            if (inputFile5 != null) localVarFileParams.Add("inputFile5", this.Configuration.ApiClient.ParameterToFile("inputFile5", inputFile5));
+            if (inputFile6 != null) localVarFileParams.Add("inputFile6", this.Configuration.ApiClient.ParameterToFile("inputFile6", inputFile6));
+            if (inputFile7 != null) localVarFileParams.Add("inputFile7", this.Configuration.ApiClient.ParameterToFile("inputFile7", inputFile7));
+            if (inputFile8 != null) localVarFileParams.Add("inputFile8", this.Configuration.ApiClient.ParameterToFile("inputFile8", inputFile8));
+            if (inputFile9 != null) localVarFileParams.Add("inputFile9", this.Configuration.ApiClient.ParameterToFile("inputFile9", inputFile9));
+            if (inputFile10 != null) localVarFileParams.Add("inputFile10", this.Configuration.ApiClient.ParameterToFile("inputFile10", inputFile10));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ZipArchiveZipCreateEncrypted", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Compress files to create a new, encrypted and password-protected zip archive Create a new zip archive by compressing input files, and also applies encryption and password protection to the zip.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="password">Password to place on the Zip file; the longer the password, the more secure</param>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="encryptionAlgorithm">Encryption algorithm to use; possible values are AES-256 (recommended), AES-128, and PK-Zip (not recommended; legacy, weak encryption algorithm). Default is AES-256. (optional)</param>
+        /// <param name="inputFile2">Second input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> ZipArchiveZipCreateEncryptedAsync (string password, System.IO.Stream inputFile1, string encryptionAlgorithm = null, System.IO.Stream inputFile2 = null, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null)
+        {
+             ApiResponse<byte[]> localVarResponse = await ZipArchiveZipCreateEncryptedAsyncWithHttpInfo(password, inputFile1, encryptionAlgorithm, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Compress files to create a new, encrypted and password-protected zip archive Create a new zip archive by compressing input files, and also applies encryption and password protection to the zip.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="password">Password to place on the Zip file; the longer the password, the more secure</param>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="encryptionAlgorithm">Encryption algorithm to use; possible values are AES-256 (recommended), AES-128, and PK-Zip (not recommended; legacy, weak encryption algorithm). Default is AES-256. (optional)</param>
+        /// <param name="inputFile2">Second input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile6">Sixth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile7">Seventh input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile8">Eighth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
+        /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> ZipArchiveZipCreateEncryptedAsyncWithHttpInfo (string password, System.IO.Stream inputFile1, string encryptionAlgorithm = null, System.IO.Stream inputFile2 = null, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null)
+        {
+            // verify the required parameter 'password' is set
+            if (password == null)
+                throw new ApiException(400, "Missing required parameter 'password' when calling ZipArchiveApi->ZipArchiveZipCreateEncrypted");
+            // verify the required parameter 'inputFile1' is set
+            if (inputFile1 == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile1' when calling ZipArchiveApi->ZipArchiveZipCreateEncrypted");
+
+            var localVarPath = "/convert/archive/zip/create/encrypted";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (password != null) localVarHeaderParams.Add("password", this.Configuration.ApiClient.ParameterToString(password)); // header parameter
+            if (encryptionAlgorithm != null) localVarHeaderParams.Add("encryptionAlgorithm", this.Configuration.ApiClient.ParameterToString(encryptionAlgorithm)); // header parameter
+            if (inputFile1 != null) localVarFileParams.Add("inputFile1", this.Configuration.ApiClient.ParameterToFile("inputFile1", inputFile1));
+            if (inputFile2 != null) localVarFileParams.Add("inputFile2", this.Configuration.ApiClient.ParameterToFile("inputFile2", inputFile2));
+            if (inputFile3 != null) localVarFileParams.Add("inputFile3", this.Configuration.ApiClient.ParameterToFile("inputFile3", inputFile3));
+            if (inputFile4 != null) localVarFileParams.Add("inputFile4", this.Configuration.ApiClient.ParameterToFile("inputFile4", inputFile4));
+            if (inputFile5 != null) localVarFileParams.Add("inputFile5", this.Configuration.ApiClient.ParameterToFile("inputFile5", inputFile5));
+            if (inputFile6 != null) localVarFileParams.Add("inputFile6", this.Configuration.ApiClient.ParameterToFile("inputFile6", inputFile6));
+            if (inputFile7 != null) localVarFileParams.Add("inputFile7", this.Configuration.ApiClient.ParameterToFile("inputFile7", inputFile7));
+            if (inputFile8 != null) localVarFileParams.Add("inputFile8", this.Configuration.ApiClient.ParameterToFile("inputFile8", inputFile8));
+            if (inputFile9 != null) localVarFileParams.Add("inputFile9", this.Configuration.ApiClient.ParameterToFile("inputFile9", inputFile9));
+            if (inputFile10 != null) localVarFileParams.Add("inputFile10", this.Configuration.ApiClient.ParameterToFile("inputFile10", inputFile10));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ZipArchiveZipCreateEncrypted", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
