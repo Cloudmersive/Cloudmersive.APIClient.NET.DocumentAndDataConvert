@@ -78,6 +78,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test ConvertDataCsvToXml
+        /// </summary>
+        [Test]
+        public void ConvertDataCsvToXmlTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //bool? columnNamesFromFirstRow = null;
+            //var response = instance.ConvertDataCsvToXml(inputFile, columnNamesFromFirstRow);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
         /// Test ConvertDataJsonToXml
         /// </summary>
         [Test]
@@ -110,7 +123,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             // TODO uncomment below to test the method and replace null with proper value
             //System.IO.Stream inputFile = null;
             //var response = instance.ConvertDataXlsxToJson(inputFile);
-            //Assert.IsInstanceOf<Object> (response, "response is Object");
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
+        /// Test ConvertDataXlsxToXml
+        /// </summary>
+        [Test]
+        public void ConvertDataXlsxToXmlTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.ConvertDataXlsxToXml(inputFile);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
         /// <summary>

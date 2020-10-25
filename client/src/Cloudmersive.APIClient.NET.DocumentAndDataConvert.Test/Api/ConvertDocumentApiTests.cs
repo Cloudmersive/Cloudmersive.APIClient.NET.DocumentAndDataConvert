@@ -252,6 +252,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test ConvertDocumentDocxToDoc
+        /// </summary>
+        [Test]
+        public void ConvertDocumentDocxToDocTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.ConvertDocumentDocxToDoc(inputFile);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
         /// Test ConvertDocumentDocxToHtml
         /// </summary>
         [Test]
@@ -845,6 +857,17 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test ConvertDocumentPptxToPpt
+        /// </summary>
+        [Test]
+        public void ConvertDocumentPptxToPptTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.ConvertDocumentPptxToPpt();
+            //Assert.IsInstanceOf<Object> (response, "response is Object");
+        }
+        
+        /// <summary>
         /// Test ConvertDocumentPptxToTxt
         /// </summary>
         [Test]
@@ -1025,6 +1048,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //System.IO.Stream inputFile = null;
             //var response = instance.ConvertDocumentXlsxToTxt(inputFile);
             //Assert.IsInstanceOf<TextConversionResult> (response, "response is TextConversionResult");
+        }
+        
+        /// <summary>
+        /// Test ConvertDocumentXlsxToXls
+        /// </summary>
+        [Test]
+        public void ConvertDocumentXlsxToXlsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.ConvertDocumentXlsxToXls(inputFile);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
     }

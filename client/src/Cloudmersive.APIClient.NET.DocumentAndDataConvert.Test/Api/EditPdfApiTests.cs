@@ -77,6 +77,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test EditPdfConvertToPdfA
+        /// </summary>
+        [Test]
+        public void EditPdfConvertToPdfATest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //string conformanceLevel = null;
+            //var response = instance.EditPdfConvertToPdfA(inputFile, conformanceLevel);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
         /// Test EditPdfDecrypt
         /// </summary>
         [Test]
@@ -184,6 +197,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test EditPdfLinearize
+        /// </summary>
+        [Test]
+        public void EditPdfLinearizeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.EditPdfLinearize(inputFile);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
         /// Test EditPdfRasterize
         /// </summary>
         [Test]
@@ -192,6 +217,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             // TODO uncomment below to test the method and replace null with proper value
             //System.IO.Stream inputFile = null;
             //var response = instance.EditPdfRasterize(inputFile);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
+        /// Test EditPdfReduceFileSize
+        /// </summary>
+        [Test]
+        public void EditPdfReduceFileSizeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.EditPdfReduceFileSize(inputFile);
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
