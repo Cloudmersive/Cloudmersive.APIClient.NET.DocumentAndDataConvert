@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="viewertoolscreatesimple"></a>
 # **ViewerToolsCreateSimple**
-> ViewerResponse ViewerToolsCreateSimple (System.IO.Stream inputFile)
+> ViewerResponse ViewerToolsCreateSimple (System.IO.Stream inputFile, int? width = null, int? height = null)
 
 Create a web-based viewer
 
@@ -36,11 +36,13 @@ namespace Example
 
             var apiInstance = new ViewerToolsApi();
             var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
+            var width = 56;  // int? | Optional; width of the output viewer in pixels (optional) 
+            var height = 56;  // int? | Optional; height of the output viewer in pixels (optional) 
 
             try
             {
                 // Create a web-based viewer
-                ViewerResponse result = apiInstance.ViewerToolsCreateSimple(inputFile);
+                ViewerResponse result = apiInstance.ViewerToolsCreateSimple(inputFile, width, height);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -57,6 +59,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
+ **width** | **int?**| Optional; width of the output viewer in pixels | [optional] 
+ **height** | **int?**| Optional; height of the output viewer in pixels | [optional] 
 
 ### Return type
 

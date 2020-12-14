@@ -32,8 +32,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="width">Optional; width of the output viewer in pixels (optional)</param>
+        /// <param name="height">Optional; height of the output viewer in pixels (optional)</param>
         /// <returns>ViewerResponse</returns>
-        ViewerResponse ViewerToolsCreateSimple (System.IO.Stream inputFile);
+        ViewerResponse ViewerToolsCreateSimple (System.IO.Stream inputFile, int? width = null, int? height = null);
 
         /// <summary>
         /// Create a web-based viewer
@@ -43,8 +45,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="width">Optional; width of the output viewer in pixels (optional)</param>
+        /// <param name="height">Optional; height of the output viewer in pixels (optional)</param>
         /// <returns>ApiResponse of ViewerResponse</returns>
-        ApiResponse<ViewerResponse> ViewerToolsCreateSimpleWithHttpInfo (System.IO.Stream inputFile);
+        ApiResponse<ViewerResponse> ViewerToolsCreateSimpleWithHttpInfo (System.IO.Stream inputFile, int? width = null, int? height = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -55,8 +59,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="width">Optional; width of the output viewer in pixels (optional)</param>
+        /// <param name="height">Optional; height of the output viewer in pixels (optional)</param>
         /// <returns>Task of ViewerResponse</returns>
-        System.Threading.Tasks.Task<ViewerResponse> ViewerToolsCreateSimpleAsync (System.IO.Stream inputFile);
+        System.Threading.Tasks.Task<ViewerResponse> ViewerToolsCreateSimpleAsync (System.IO.Stream inputFile, int? width = null, int? height = null);
 
         /// <summary>
         /// Create a web-based viewer
@@ -66,8 +72,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="width">Optional; width of the output viewer in pixels (optional)</param>
+        /// <param name="height">Optional; height of the output viewer in pixels (optional)</param>
         /// <returns>Task of ApiResponse (ViewerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ViewerResponse>> ViewerToolsCreateSimpleAsyncWithHttpInfo (System.IO.Stream inputFile);
+        System.Threading.Tasks.Task<ApiResponse<ViewerResponse>> ViewerToolsCreateSimpleAsyncWithHttpInfo (System.IO.Stream inputFile, int? width = null, int? height = null);
         #endregion Asynchronous Operations
     }
 
@@ -173,10 +181,12 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="width">Optional; width of the output viewer in pixels (optional)</param>
+        /// <param name="height">Optional; height of the output viewer in pixels (optional)</param>
         /// <returns>ViewerResponse</returns>
-        public ViewerResponse ViewerToolsCreateSimple (System.IO.Stream inputFile)
+        public ViewerResponse ViewerToolsCreateSimple (System.IO.Stream inputFile, int? width = null, int? height = null)
         {
-             ApiResponse<ViewerResponse> localVarResponse = ViewerToolsCreateSimpleWithHttpInfo(inputFile);
+             ApiResponse<ViewerResponse> localVarResponse = ViewerToolsCreateSimpleWithHttpInfo(inputFile, width, height);
              return localVarResponse.Data;
         }
 
@@ -185,8 +195,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="width">Optional; width of the output viewer in pixels (optional)</param>
+        /// <param name="height">Optional; height of the output viewer in pixels (optional)</param>
         /// <returns>ApiResponse of ViewerResponse</returns>
-        public ApiResponse< ViewerResponse > ViewerToolsCreateSimpleWithHttpInfo (System.IO.Stream inputFile)
+        public ApiResponse< ViewerResponse > ViewerToolsCreateSimpleWithHttpInfo (System.IO.Stream inputFile, int? width = null, int? height = null)
         {
             // verify the required parameter 'inputFile' is set
             if (inputFile == null)
@@ -217,6 +229,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (width != null) localVarHeaderParams.Add("width", this.Configuration.ApiClient.ParameterToString(width)); // header parameter
+            if (height != null) localVarHeaderParams.Add("height", this.Configuration.ApiClient.ParameterToString(height)); // header parameter
             if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
 
             // authentication (Apikey) required
@@ -248,10 +262,12 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="width">Optional; width of the output viewer in pixels (optional)</param>
+        /// <param name="height">Optional; height of the output viewer in pixels (optional)</param>
         /// <returns>Task of ViewerResponse</returns>
-        public async System.Threading.Tasks.Task<ViewerResponse> ViewerToolsCreateSimpleAsync (System.IO.Stream inputFile)
+        public async System.Threading.Tasks.Task<ViewerResponse> ViewerToolsCreateSimpleAsync (System.IO.Stream inputFile, int? width = null, int? height = null)
         {
-             ApiResponse<ViewerResponse> localVarResponse = await ViewerToolsCreateSimpleAsyncWithHttpInfo(inputFile);
+             ApiResponse<ViewerResponse> localVarResponse = await ViewerToolsCreateSimpleAsyncWithHttpInfo(inputFile, width, height);
              return localVarResponse.Data;
 
         }
@@ -261,8 +277,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="width">Optional; width of the output viewer in pixels (optional)</param>
+        /// <param name="height">Optional; height of the output viewer in pixels (optional)</param>
         /// <returns>Task of ApiResponse (ViewerResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ViewerResponse>> ViewerToolsCreateSimpleAsyncWithHttpInfo (System.IO.Stream inputFile)
+        public async System.Threading.Tasks.Task<ApiResponse<ViewerResponse>> ViewerToolsCreateSimpleAsyncWithHttpInfo (System.IO.Stream inputFile, int? width = null, int? height = null)
         {
             // verify the required parameter 'inputFile' is set
             if (inputFile == null)
@@ -293,6 +311,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (width != null) localVarHeaderParams.Add("width", this.Configuration.ApiClient.ParameterToString(width)); // header parameter
+            if (height != null) localVarHeaderParams.Add("height", this.Configuration.ApiClient.ParameterToString(height)); // header parameter
             if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
 
             // authentication (Apikey) required
