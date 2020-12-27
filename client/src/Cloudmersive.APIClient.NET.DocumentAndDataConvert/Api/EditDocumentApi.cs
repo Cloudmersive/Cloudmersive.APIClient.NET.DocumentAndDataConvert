@@ -319,6 +319,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of GetDocxImagesResponse</returns>
         ApiResponse<GetDocxImagesResponse> EditDocumentDocxGetImagesWithHttpInfo (GetDocxImagesRequest reqConfig);
         /// <summary>
+        /// Get all metadata properties in Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Returns all the metadata properties in an Office Word Document (docx)
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>GetDocxMetadataPropertiesResponse</returns>
+        GetDocxMetadataPropertiesResponse EditDocumentDocxGetMetadataProperties (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Get all metadata properties in Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Returns all the metadata properties in an Office Word Document (docx)
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of GetDocxMetadataPropertiesResponse</returns>
+        ApiResponse<GetDocxMetadataPropertiesResponse> EditDocumentDocxGetMetadataPropertiesWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
         /// Get sections from a Word DOCX document
         /// </summary>
         /// <remarks>
@@ -675,6 +696,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="reqConfig">Document input request</param>
         /// <returns>ApiResponse of ReplaceDocxParagraphResponse</returns>
         ApiResponse<ReplaceDocxParagraphResponse> EditDocumentDocxReplaceParagraphWithHttpInfo (ReplaceDocxParagraphRequest reqConfig);
+        /// <summary>
+        /// Set custom property metadata properties in Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Sets the custom property metadata for the metadata properties in an Office Word Document (docx)
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>byte[]</returns>
+        byte[] EditDocumentDocxSetCustomMetadataProperties (DocxSetCustomMetadataPropertiesRequest input);
+
+        /// <summary>
+        /// Set custom property metadata properties in Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Sets the custom property metadata for the metadata properties in an Office Word Document (docx)
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> EditDocumentDocxSetCustomMetadataPropertiesWithHttpInfo (DocxSetCustomMetadataPropertiesRequest input);
         /// <summary>
         /// Set the footer in a Word DOCX document
         /// </summary>
@@ -1560,6 +1602,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (GetDocxImagesResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetDocxImagesResponse>> EditDocumentDocxGetImagesAsyncWithHttpInfo (GetDocxImagesRequest reqConfig);
         /// <summary>
+        /// Get all metadata properties in Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Returns all the metadata properties in an Office Word Document (docx)
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of GetDocxMetadataPropertiesResponse</returns>
+        System.Threading.Tasks.Task<GetDocxMetadataPropertiesResponse> EditDocumentDocxGetMetadataPropertiesAsync (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Get all metadata properties in Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Returns all the metadata properties in an Office Word Document (docx)
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (GetDocxMetadataPropertiesResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetDocxMetadataPropertiesResponse>> EditDocumentDocxGetMetadataPropertiesAsyncWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
         /// Get sections from a Word DOCX document
         /// </summary>
         /// <remarks>
@@ -1916,6 +1979,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of ApiResponse (ReplaceDocxParagraphResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ReplaceDocxParagraphResponse>> EditDocumentDocxReplaceParagraphAsyncWithHttpInfo (ReplaceDocxParagraphRequest reqConfig);
+        /// <summary>
+        /// Set custom property metadata properties in Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Sets the custom property metadata for the metadata properties in an Office Word Document (docx)
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> EditDocumentDocxSetCustomMetadataPropertiesAsync (DocxSetCustomMetadataPropertiesRequest input);
+
+        /// <summary>
+        /// Set custom property metadata properties in Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Sets the custom property metadata for the metadata properties in an Office Word Document (docx)
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDocumentDocxSetCustomMetadataPropertiesAsyncWithHttpInfo (DocxSetCustomMetadataPropertiesRequest input);
         /// <summary>
         /// Set the footer in a Word DOCX document
         /// </summary>
@@ -4933,6 +5017,157 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
+        /// Get all metadata properties in Word DOCX document Returns all the metadata properties in an Office Word Document (docx)
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>GetDocxMetadataPropertiesResponse</returns>
+        public GetDocxMetadataPropertiesResponse EditDocumentDocxGetMetadataProperties (System.IO.Stream inputFile)
+        {
+             ApiResponse<GetDocxMetadataPropertiesResponse> localVarResponse = EditDocumentDocxGetMetadataPropertiesWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get all metadata properties in Word DOCX document Returns all the metadata properties in an Office Word Document (docx)
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of GetDocxMetadataPropertiesResponse</returns>
+        public ApiResponse< GetDocxMetadataPropertiesResponse > EditDocumentDocxGetMetadataPropertiesWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditDocumentApi->EditDocumentDocxGetMetadataProperties");
+
+            var localVarPath = "/convert/edit/docx/get-metadata";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentDocxGetMetadataProperties", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetDocxMetadataPropertiesResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetDocxMetadataPropertiesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxMetadataPropertiesResponse)));
+        }
+
+        /// <summary>
+        /// Get all metadata properties in Word DOCX document Returns all the metadata properties in an Office Word Document (docx)
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of GetDocxMetadataPropertiesResponse</returns>
+        public async System.Threading.Tasks.Task<GetDocxMetadataPropertiesResponse> EditDocumentDocxGetMetadataPropertiesAsync (System.IO.Stream inputFile)
+        {
+             ApiResponse<GetDocxMetadataPropertiesResponse> localVarResponse = await EditDocumentDocxGetMetadataPropertiesAsyncWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get all metadata properties in Word DOCX document Returns all the metadata properties in an Office Word Document (docx)
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (GetDocxMetadataPropertiesResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetDocxMetadataPropertiesResponse>> EditDocumentDocxGetMetadataPropertiesAsyncWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditDocumentApi->EditDocumentDocxGetMetadataProperties");
+
+            var localVarPath = "/convert/edit/docx/get-metadata";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentDocxGetMetadataProperties", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetDocxMetadataPropertiesResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetDocxMetadataPropertiesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxMetadataPropertiesResponse)));
+        }
+
+        /// <summary>
         /// Get sections from a Word DOCX document Returns the sections defined in the Word Document (DOCX) format file
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7837,6 +8072,179 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<ReplaceDocxParagraphResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ReplaceDocxParagraphResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReplaceDocxParagraphResponse)));
+        }
+
+        /// <summary>
+        /// Set custom property metadata properties in Word DOCX document Sets the custom property metadata for the metadata properties in an Office Word Document (docx)
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>byte[]</returns>
+        public byte[] EditDocumentDocxSetCustomMetadataProperties (DocxSetCustomMetadataPropertiesRequest input)
+        {
+             ApiResponse<byte[]> localVarResponse = EditDocumentDocxSetCustomMetadataPropertiesWithHttpInfo(input);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Set custom property metadata properties in Word DOCX document Sets the custom property metadata for the metadata properties in an Office Word Document (docx)
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > EditDocumentDocxSetCustomMetadataPropertiesWithHttpInfo (DocxSetCustomMetadataPropertiesRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling EditDocumentApi->EditDocumentDocxSetCustomMetadataProperties");
+
+            var localVarPath = "/convert/edit/docx/set-metadata/custom-property";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentDocxSetCustomMetadataProperties", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Set custom property metadata properties in Word DOCX document Sets the custom property metadata for the metadata properties in an Office Word Document (docx)
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> EditDocumentDocxSetCustomMetadataPropertiesAsync (DocxSetCustomMetadataPropertiesRequest input)
+        {
+             ApiResponse<byte[]> localVarResponse = await EditDocumentDocxSetCustomMetadataPropertiesAsyncWithHttpInfo(input);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Set custom property metadata properties in Word DOCX document Sets the custom property metadata for the metadata properties in an Office Word Document (docx)
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDocumentDocxSetCustomMetadataPropertiesAsyncWithHttpInfo (DocxSetCustomMetadataPropertiesRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling EditDocumentApi->EditDocumentDocxSetCustomMetadataProperties");
+
+            var localVarPath = "/convert/edit/docx/set-metadata/custom-property";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentDocxSetCustomMetadataProperties", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>

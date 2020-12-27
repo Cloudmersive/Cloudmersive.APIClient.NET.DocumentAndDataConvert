@@ -233,6 +233,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test EditDocumentDocxGetMetadataProperties
+        /// </summary>
+        [Test]
+        public void EditDocumentDocxGetMetadataPropertiesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.EditDocumentDocxGetMetadataProperties(inputFile);
+            //Assert.IsInstanceOf<GetDocxMetadataPropertiesResponse> (response, "response is GetDocxMetadataPropertiesResponse");
+        }
+        
+        /// <summary>
         /// Test EditDocumentDocxGetSections
         /// </summary>
         [Test]
@@ -434,6 +446,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //ReplaceDocxParagraphRequest reqConfig = null;
             //var response = instance.EditDocumentDocxReplaceParagraph(reqConfig);
             //Assert.IsInstanceOf<ReplaceDocxParagraphResponse> (response, "response is ReplaceDocxParagraphResponse");
+        }
+        
+        /// <summary>
+        /// Test EditDocumentDocxSetCustomMetadataProperties
+        /// </summary>
+        [Test]
+        public void EditDocumentDocxSetCustomMetadataPropertiesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //DocxSetCustomMetadataPropertiesRequest input = null;
+            //var response = instance.EditDocumentDocxSetCustomMetadataProperties(input);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
         /// <summary>
