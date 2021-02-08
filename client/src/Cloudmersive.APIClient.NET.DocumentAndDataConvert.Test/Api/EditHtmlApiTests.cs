@@ -19,6 +19,7 @@ using NUnit.Framework;
 
 using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
 using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
 
 namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
 {
@@ -140,6 +141,20 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //string javascriptInline = null;
             //var response = instance.EditHtmlHtmlCreateBlankDocument(title, cssUrl, cssInline, javascriptUrl, javascriptInline);
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
+        /// Test EditHtmlHtmlGetLinks
+        /// </summary>
+        [Test]
+        public void EditHtmlHtmlGetLinksTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //string inputFileUrl = null;
+            //string baseUrl = null;
+            //var response = instance.EditHtmlHtmlGetLinks(inputFile, inputFileUrl, baseUrl);
+            //Assert.IsInstanceOf<HtmlGetLinksResponse> (response, "response is HtmlGetLinksResponse");
         }
         
     }

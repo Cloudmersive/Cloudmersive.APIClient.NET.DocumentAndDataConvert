@@ -151,6 +151,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of DocumentValidationResult</returns>
         ApiResponse<DocumentValidationResult> ValidateDocumentGZipValidationWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
+        /// Validate an HTML file and checks for SSRF threats
+        /// </summary>
+        /// <remarks>
+        /// Validate an HTML document file and checks for SSRF (Server-side Request Forgery) threats in the file; if the document is not valid, identifies the errors in the document
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>HtmlSsrfThreatCheckResult</returns>
+        HtmlSsrfThreatCheckResult ValidateDocumentHtmlSsrfValidation (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Validate an HTML file and checks for SSRF threats
+        /// </summary>
+        /// <remarks>
+        /// Validate an HTML document file and checks for SSRF (Server-side Request Forgery) threats in the file; if the document is not valid, identifies the errors in the document
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of HtmlSsrfThreatCheckResult</returns>
+        ApiResponse<HtmlSsrfThreatCheckResult> ValidateDocumentHtmlSsrfValidationWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
         /// Validate an HTML file
         /// </summary>
         /// <remarks>
@@ -572,6 +593,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>Task of ApiResponse (DocumentValidationResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<DocumentValidationResult>> ValidateDocumentGZipValidationAsyncWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// Validate an HTML file and checks for SSRF threats
+        /// </summary>
+        /// <remarks>
+        /// Validate an HTML document file and checks for SSRF (Server-side Request Forgery) threats in the file; if the document is not valid, identifies the errors in the document
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of HtmlSsrfThreatCheckResult</returns>
+        System.Threading.Tasks.Task<HtmlSsrfThreatCheckResult> ValidateDocumentHtmlSsrfValidationAsync (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Validate an HTML file and checks for SSRF threats
+        /// </summary>
+        /// <remarks>
+        /// Validate an HTML document file and checks for SSRF (Server-side Request Forgery) threats in the file; if the document is not valid, identifies the errors in the document
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (HtmlSsrfThreatCheckResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<HtmlSsrfThreatCheckResult>> ValidateDocumentHtmlSsrfValidationAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
         /// Validate an HTML file
         /// </summary>
@@ -1870,6 +1912,157 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<DocumentValidationResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (DocumentValidationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentValidationResult)));
+        }
+
+        /// <summary>
+        /// Validate an HTML file and checks for SSRF threats Validate an HTML document file and checks for SSRF (Server-side Request Forgery) threats in the file; if the document is not valid, identifies the errors in the document
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>HtmlSsrfThreatCheckResult</returns>
+        public HtmlSsrfThreatCheckResult ValidateDocumentHtmlSsrfValidation (System.IO.Stream inputFile)
+        {
+             ApiResponse<HtmlSsrfThreatCheckResult> localVarResponse = ValidateDocumentHtmlSsrfValidationWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Validate an HTML file and checks for SSRF threats Validate an HTML document file and checks for SSRF (Server-side Request Forgery) threats in the file; if the document is not valid, identifies the errors in the document
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of HtmlSsrfThreatCheckResult</returns>
+        public ApiResponse< HtmlSsrfThreatCheckResult > ValidateDocumentHtmlSsrfValidationWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ValidateDocumentApi->ValidateDocumentHtmlSsrfValidation");
+
+            var localVarPath = "/convert/validate/html/ssrf-threat-check";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ValidateDocumentHtmlSsrfValidation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<HtmlSsrfThreatCheckResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (HtmlSsrfThreatCheckResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(HtmlSsrfThreatCheckResult)));
+        }
+
+        /// <summary>
+        /// Validate an HTML file and checks for SSRF threats Validate an HTML document file and checks for SSRF (Server-side Request Forgery) threats in the file; if the document is not valid, identifies the errors in the document
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of HtmlSsrfThreatCheckResult</returns>
+        public async System.Threading.Tasks.Task<HtmlSsrfThreatCheckResult> ValidateDocumentHtmlSsrfValidationAsync (System.IO.Stream inputFile)
+        {
+             ApiResponse<HtmlSsrfThreatCheckResult> localVarResponse = await ValidateDocumentHtmlSsrfValidationAsyncWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Validate an HTML file and checks for SSRF threats Validate an HTML document file and checks for SSRF (Server-side Request Forgery) threats in the file; if the document is not valid, identifies the errors in the document
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (HtmlSsrfThreatCheckResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<HtmlSsrfThreatCheckResult>> ValidateDocumentHtmlSsrfValidationAsyncWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ValidateDocumentApi->ValidateDocumentHtmlSsrfValidation");
+
+            var localVarPath = "/convert/validate/html/ssrf-threat-check";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ValidateDocumentHtmlSsrfValidation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<HtmlSsrfThreatCheckResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (HtmlSsrfThreatCheckResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(HtmlSsrfThreatCheckResult)));
         }
 
         /// <summary>

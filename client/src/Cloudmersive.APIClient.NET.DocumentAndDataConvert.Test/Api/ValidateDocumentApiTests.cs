@@ -137,6 +137,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test ValidateDocumentHtmlSsrfValidation
+        /// </summary>
+        [Test]
+        public void ValidateDocumentHtmlSsrfValidationTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.ValidateDocumentHtmlSsrfValidation(inputFile);
+            //Assert.IsInstanceOf<HtmlSsrfThreatCheckResult> (response, "response is HtmlSsrfThreatCheckResult");
+        }
+        
+        /// <summary>
         /// Test ValidateDocumentHtmlValidation
         /// </summary>
         [Test]

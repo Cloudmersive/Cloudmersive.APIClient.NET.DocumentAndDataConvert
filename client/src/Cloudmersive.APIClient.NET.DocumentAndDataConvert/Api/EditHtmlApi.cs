@@ -14,6 +14,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
 using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
 
 namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 {
@@ -166,6 +167,31 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="javascriptInline">Optional: Inline Javascript to be added to the document. (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> EditHtmlHtmlCreateBlankDocumentWithHttpInfo (string title = null, string cssUrl = null, string cssInline = null, string javascriptUrl = null, string javascriptInline = null);
+        /// <summary>
+        /// Extract resolved link URLs from HTML File
+        /// </summary>
+        /// <remarks>
+        /// Extracts the resolved link URLs, fully-qualified if possible, from an input HTML file.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <param name="baseUrl">Optional: Base URL of the page, such as https://mydomain.com (optional)</param>
+        /// <returns>HtmlGetLinksResponse</returns>
+        HtmlGetLinksResponse EditHtmlHtmlGetLinks (System.IO.Stream inputFile = null, string inputFileUrl = null, string baseUrl = null);
+
+        /// <summary>
+        /// Extract resolved link URLs from HTML File
+        /// </summary>
+        /// <remarks>
+        /// Extracts the resolved link URLs, fully-qualified if possible, from an input HTML file.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <param name="baseUrl">Optional: Base URL of the page, such as https://mydomain.com (optional)</param>
+        /// <returns>ApiResponse of HtmlGetLinksResponse</returns>
+        ApiResponse<HtmlGetLinksResponse> EditHtmlHtmlGetLinksWithHttpInfo (System.IO.Stream inputFile = null, string inputFileUrl = null, string baseUrl = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -311,6 +337,31 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="javascriptInline">Optional: Inline Javascript to be added to the document. (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> EditHtmlHtmlCreateBlankDocumentAsyncWithHttpInfo (string title = null, string cssUrl = null, string cssInline = null, string javascriptUrl = null, string javascriptInline = null);
+        /// <summary>
+        /// Extract resolved link URLs from HTML File
+        /// </summary>
+        /// <remarks>
+        /// Extracts the resolved link URLs, fully-qualified if possible, from an input HTML file.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <param name="baseUrl">Optional: Base URL of the page, such as https://mydomain.com (optional)</param>
+        /// <returns>Task of HtmlGetLinksResponse</returns>
+        System.Threading.Tasks.Task<HtmlGetLinksResponse> EditHtmlHtmlGetLinksAsync (System.IO.Stream inputFile = null, string inputFileUrl = null, string baseUrl = null);
+
+        /// <summary>
+        /// Extract resolved link URLs from HTML File
+        /// </summary>
+        /// <remarks>
+        /// Extracts the resolved link URLs, fully-qualified if possible, from an input HTML file.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <param name="baseUrl">Optional: Base URL of the page, such as https://mydomain.com (optional)</param>
+        /// <returns>Task of ApiResponse (HtmlGetLinksResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<HtmlGetLinksResponse>> EditHtmlHtmlGetLinksAsyncWithHttpInfo (System.IO.Stream inputFile = null, string inputFileUrl = null, string baseUrl = null);
         #endregion Asynchronous Operations
     }
 
@@ -1258,6 +1309,161 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Extract resolved link URLs from HTML File Extracts the resolved link URLs, fully-qualified if possible, from an input HTML file.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <param name="baseUrl">Optional: Base URL of the page, such as https://mydomain.com (optional)</param>
+        /// <returns>HtmlGetLinksResponse</returns>
+        public HtmlGetLinksResponse EditHtmlHtmlGetLinks (System.IO.Stream inputFile = null, string inputFileUrl = null, string baseUrl = null)
+        {
+             ApiResponse<HtmlGetLinksResponse> localVarResponse = EditHtmlHtmlGetLinksWithHttpInfo(inputFile, inputFileUrl, baseUrl);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Extract resolved link URLs from HTML File Extracts the resolved link URLs, fully-qualified if possible, from an input HTML file.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <param name="baseUrl">Optional: Base URL of the page, such as https://mydomain.com (optional)</param>
+        /// <returns>ApiResponse of HtmlGetLinksResponse</returns>
+        public ApiResponse< HtmlGetLinksResponse > EditHtmlHtmlGetLinksWithHttpInfo (System.IO.Stream inputFile = null, string inputFileUrl = null, string baseUrl = null)
+        {
+
+            var localVarPath = "/convert/edit/html/extract/links";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFileUrl != null) localVarHeaderParams.Add("inputFileUrl", this.Configuration.ApiClient.ParameterToString(inputFileUrl)); // header parameter
+            if (baseUrl != null) localVarHeaderParams.Add("baseUrl", this.Configuration.ApiClient.ParameterToString(baseUrl)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditHtmlHtmlGetLinks", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<HtmlGetLinksResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (HtmlGetLinksResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(HtmlGetLinksResponse)));
+        }
+
+        /// <summary>
+        /// Extract resolved link URLs from HTML File Extracts the resolved link URLs, fully-qualified if possible, from an input HTML file.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <param name="baseUrl">Optional: Base URL of the page, such as https://mydomain.com (optional)</param>
+        /// <returns>Task of HtmlGetLinksResponse</returns>
+        public async System.Threading.Tasks.Task<HtmlGetLinksResponse> EditHtmlHtmlGetLinksAsync (System.IO.Stream inputFile = null, string inputFileUrl = null, string baseUrl = null)
+        {
+             ApiResponse<HtmlGetLinksResponse> localVarResponse = await EditHtmlHtmlGetLinksAsyncWithHttpInfo(inputFile, inputFileUrl, baseUrl);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Extract resolved link URLs from HTML File Extracts the resolved link URLs, fully-qualified if possible, from an input HTML file.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <param name="baseUrl">Optional: Base URL of the page, such as https://mydomain.com (optional)</param>
+        /// <returns>Task of ApiResponse (HtmlGetLinksResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<HtmlGetLinksResponse>> EditHtmlHtmlGetLinksAsyncWithHttpInfo (System.IO.Stream inputFile = null, string inputFileUrl = null, string baseUrl = null)
+        {
+
+            var localVarPath = "/convert/edit/html/extract/links";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFileUrl != null) localVarHeaderParams.Add("inputFileUrl", this.Configuration.ApiClient.ParameterToString(inputFileUrl)); // header parameter
+            if (baseUrl != null) localVarHeaderParams.Add("baseUrl", this.Configuration.ApiClient.ParameterToString(baseUrl)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditHtmlHtmlGetLinks", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<HtmlGetLinksResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (HtmlGetLinksResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(HtmlGetLinksResponse)));
         }
 
     }

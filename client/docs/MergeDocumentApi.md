@@ -6,6 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**MergeDocumentDocx**](MergeDocumentApi.md#mergedocumentdocx) | **POST** /convert/merge/docx | Merge Two Word DOCX Together
 [**MergeDocumentDocxMulti**](MergeDocumentApi.md#mergedocumentdocxmulti) | **POST** /convert/merge/docx/multi | Merge Multple Word DOCX Together
+[**MergeDocumentHtml**](MergeDocumentApi.md#mergedocumenthtml) | **POST** /convert/merge/html | Merge Two HTML (HTM) Files Together
+[**MergeDocumentHtmlMulti**](MergeDocumentApi.md#mergedocumenthtmlmulti) | **POST** /convert/merge/html/multi | Merge Multple HTML (HTM) Files Together
 [**MergeDocumentPdf**](MergeDocumentApi.md#mergedocumentpdf) | **POST** /convert/merge/pdf | Merge Two PDF Files Together
 [**MergeDocumentPdfMulti**](MergeDocumentApi.md#mergedocumentpdfmulti) | **POST** /convert/merge/pdf/multi | Merge Multple PDF Files Together
 [**MergeDocumentPng**](MergeDocumentApi.md#mergedocumentpng) | **POST** /convert/merge/png/vertical | Merge Two PNG Files Together
@@ -134,6 +136,158 @@ namespace Example
             catch (Exception e)
             {
                 Debug.Print("Exception when calling MergeDocumentApi.MergeDocumentDocxMulti: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile1** | **System.IO.Stream**| First input file to perform the operation on. | 
+ **inputFile2** | **System.IO.Stream**| Second input file to perform the operation on. | 
+ **inputFile3** | **System.IO.Stream**| Third input file to perform the operation on. | [optional] 
+ **inputFile4** | **System.IO.Stream**| Fourth input file to perform the operation on. | [optional] 
+ **inputFile5** | **System.IO.Stream**| Fifth input file to perform the operation on. | [optional] 
+ **inputFile6** | **System.IO.Stream**| Sixth input file to perform the operation on. | [optional] 
+ **inputFile7** | **System.IO.Stream**| Seventh input file to perform the operation on. | [optional] 
+ **inputFile8** | **System.IO.Stream**| Eighth input file to perform the operation on. | [optional] 
+ **inputFile9** | **System.IO.Stream**| Ninth input file to perform the operation on. | [optional] 
+ **inputFile10** | **System.IO.Stream**| Tenth input file to perform the operation on. | [optional] 
+
+### Return type
+
+**byte[]**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/octet-stream
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="mergedocumenthtml"></a>
+# **MergeDocumentHtml**
+> Object MergeDocumentHtml (System.IO.Stream inputFile1, System.IO.Stream inputFile2)
+
+Merge Two HTML (HTM) Files Together
+
+Combine two HTML (.HTM) files into a single text document, preserving the order of the input documents in the combined document by stacking them vertically.  The title will be taken from the first document.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class MergeDocumentHtmlExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new MergeDocumentApi();
+            var inputFile1 = new System.IO.Stream(); // System.IO.Stream | First input file to perform the operation on.
+            var inputFile2 = new System.IO.Stream(); // System.IO.Stream | Second input file to perform the operation on (more than 2 can be supplied).
+
+            try
+            {
+                // Merge Two HTML (HTM) Files Together
+                Object result = apiInstance.MergeDocumentHtml(inputFile1, inputFile2);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MergeDocumentApi.MergeDocumentHtml: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile1** | **System.IO.Stream**| First input file to perform the operation on. | 
+ **inputFile2** | **System.IO.Stream**| Second input file to perform the operation on (more than 2 can be supplied). | 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/octet-stream
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="mergedocumenthtmlmulti"></a>
+# **MergeDocumentHtmlMulti**
+> byte[] MergeDocumentHtmlMulti (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null)
+
+Merge Multple HTML (HTM) Files Together
+
+Combine multiple HTML (.HTM) files into a single text document, preserving the order of the input documents in the combined document by stacking them vertically.  The title will be taken from the first document.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class MergeDocumentHtmlMultiExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new MergeDocumentApi();
+            var inputFile1 = new System.IO.Stream(); // System.IO.Stream | First input file to perform the operation on.
+            var inputFile2 = new System.IO.Stream(); // System.IO.Stream | Second input file to perform the operation on.
+            var inputFile3 = new System.IO.Stream(); // System.IO.Stream | Third input file to perform the operation on. (optional) 
+            var inputFile4 = new System.IO.Stream(); // System.IO.Stream | Fourth input file to perform the operation on. (optional) 
+            var inputFile5 = new System.IO.Stream(); // System.IO.Stream | Fifth input file to perform the operation on. (optional) 
+            var inputFile6 = new System.IO.Stream(); // System.IO.Stream | Sixth input file to perform the operation on. (optional) 
+            var inputFile7 = new System.IO.Stream(); // System.IO.Stream | Seventh input file to perform the operation on. (optional) 
+            var inputFile8 = new System.IO.Stream(); // System.IO.Stream | Eighth input file to perform the operation on. (optional) 
+            var inputFile9 = new System.IO.Stream(); // System.IO.Stream | Ninth input file to perform the operation on. (optional) 
+            var inputFile10 = new System.IO.Stream(); // System.IO.Stream | Tenth input file to perform the operation on. (optional) 
+
+            try
+            {
+                // Merge Multple HTML (HTM) Files Together
+                byte[] result = apiInstance.MergeDocumentHtmlMulti(inputFile1, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MergeDocumentApi.MergeDocumentHtmlMulti: " + e.Message );
             }
         }
     }

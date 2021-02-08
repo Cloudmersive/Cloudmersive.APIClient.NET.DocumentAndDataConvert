@@ -98,6 +98,40 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test MergeDocumentHtml
+        /// </summary>
+        [Test]
+        public void MergeDocumentHtmlTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile1 = null;
+            //System.IO.Stream inputFile2 = null;
+            //var response = instance.MergeDocumentHtml(inputFile1, inputFile2);
+            //Assert.IsInstanceOf<Object> (response, "response is Object");
+        }
+        
+        /// <summary>
+        /// Test MergeDocumentHtmlMulti
+        /// </summary>
+        [Test]
+        public void MergeDocumentHtmlMultiTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile1 = null;
+            //System.IO.Stream inputFile2 = null;
+            //System.IO.Stream inputFile3 = null;
+            //System.IO.Stream inputFile4 = null;
+            //System.IO.Stream inputFile5 = null;
+            //System.IO.Stream inputFile6 = null;
+            //System.IO.Stream inputFile7 = null;
+            //System.IO.Stream inputFile8 = null;
+            //System.IO.Stream inputFile9 = null;
+            //System.IO.Stream inputFile10 = null;
+            //var response = instance.MergeDocumentHtmlMulti(inputFile1, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
         /// Test MergeDocumentPdf
         /// </summary>
         [Test]

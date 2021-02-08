@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**ValidateDocumentEmlValidation**](ValidateDocumentApi.md#validatedocumentemlvalidation) | **POST** /convert/validate/eml | Validate if an EML file is executable
 [**ValidateDocumentExecutableValidation**](ValidateDocumentApi.md#validatedocumentexecutablevalidation) | **POST** /convert/validate/executable | Validate if a file is executable
 [**ValidateDocumentGZipValidation**](ValidateDocumentApi.md#validatedocumentgzipvalidation) | **POST** /convert/validate/gzip | Validate a GZip Archive file (gzip or gz)
+[**ValidateDocumentHtmlSsrfValidation**](ValidateDocumentApi.md#validatedocumenthtmlssrfvalidation) | **POST** /convert/validate/html/ssrf-threat-check | Validate an HTML file and checks for SSRF threats
 [**ValidateDocumentHtmlValidation**](ValidateDocumentApi.md#validatedocumenthtmlvalidation) | **POST** /convert/validate/html | Validate an HTML file
 [**ValidateDocumentImageValidation**](ValidateDocumentApi.md#validatedocumentimagevalidation) | **POST** /convert/validate/image | Validate an Image File
 [**ValidateDocumentJpgValidation**](ValidateDocumentApi.md#validatedocumentjpgvalidation) | **POST** /convert/validate/jpg | Validate a JPG File
@@ -410,6 +411,72 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DocumentValidationResult**](DocumentValidationResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="validatedocumenthtmlssrfvalidation"></a>
+# **ValidateDocumentHtmlSsrfValidation**
+> HtmlSsrfThreatCheckResult ValidateDocumentHtmlSsrfValidation (System.IO.Stream inputFile)
+
+Validate an HTML file and checks for SSRF threats
+
+Validate an HTML document file and checks for SSRF (Server-side Request Forgery) threats in the file; if the document is not valid, identifies the errors in the document
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class ValidateDocumentHtmlSsrfValidationExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new ValidateDocumentApi();
+            var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
+
+            try
+            {
+                // Validate an HTML file and checks for SSRF threats
+                HtmlSsrfThreatCheckResult result = apiInstance.ValidateDocumentHtmlSsrfValidation(inputFile);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ValidateDocumentApi.ValidateDocumentHtmlSsrfValidation: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
+
+### Return type
+
+[**HtmlSsrfThreatCheckResult**](HtmlSsrfThreatCheckResult.md)
 
 ### Authorization
 

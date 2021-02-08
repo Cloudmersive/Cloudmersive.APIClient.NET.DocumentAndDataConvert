@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**EditHtmlHtmlAppendImageInline**](EditHtmlApi.md#edithtmlhtmlappendimageinline) | **POST** /convert/edit/html/append/image/inline | Append a Base64 Inline Image to an HTML Document
 [**EditHtmlHtmlAppendParagraph**](EditHtmlApi.md#edithtmlhtmlappendparagraph) | **POST** /convert/edit/html/append/paragraph | Append a Paragraph to an HTML Document
 [**EditHtmlHtmlCreateBlankDocument**](EditHtmlApi.md#edithtmlhtmlcreateblankdocument) | **POST** /convert/edit/html/create/blank | Create a Blank HTML Document
+[**EditHtmlHtmlGetLinks**](EditHtmlApi.md#edithtmlhtmlgetlinks) | **POST** /convert/edit/html/extract/links | Extract resolved link URLs from HTML File
 
 
 <a name="edithtmlhtmlappendheading"></a>
@@ -367,6 +368,76 @@ Name | Type | Description  | Notes
 ### Return type
 
 **byte[]**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="edithtmlhtmlgetlinks"></a>
+# **EditHtmlHtmlGetLinks**
+> HtmlGetLinksResponse EditHtmlHtmlGetLinks (System.IO.Stream inputFile = null, string inputFileUrl = null, string baseUrl = null)
+
+Extract resolved link URLs from HTML File
+
+Extracts the resolved link URLs, fully-qualified if possible, from an input HTML file.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class EditHtmlHtmlGetLinksExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new EditHtmlApi();
+            var inputFile = new System.IO.Stream(); // System.IO.Stream | Optional: Input file to perform the operation on. (optional) 
+            var inputFileUrl = inputFileUrl_example;  // string | Optional: URL of a file to operate on as input. (optional) 
+            var baseUrl = baseUrl_example;  // string | Optional: Base URL of the page, such as https://mydomain.com (optional) 
+
+            try
+            {
+                // Extract resolved link URLs from HTML File
+                HtmlGetLinksResponse result = apiInstance.EditHtmlHtmlGetLinks(inputFile, inputFileUrl, baseUrl);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling EditHtmlApi.EditHtmlHtmlGetLinks: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **System.IO.Stream**| Optional: Input file to perform the operation on. | [optional] 
+ **inputFileUrl** | **string**| Optional: URL of a file to operate on as input. | [optional] 
+ **baseUrl** | **string**| Optional: Base URL of the page, such as https://mydomain.com | [optional] 
+
+### Return type
+
+[**HtmlGetLinksResponse**](HtmlGetLinksResponse.md)
 
 ### Authorization
 
