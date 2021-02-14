@@ -319,6 +319,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of GetDocxImagesResponse</returns>
         ApiResponse<GetDocxImagesResponse> EditDocumentDocxGetImagesWithHttpInfo (GetDocxImagesRequest reqConfig);
         /// <summary>
+        /// Get macro information from a Word DOCX/DOCM document
+        /// </summary>
+        /// <remarks>
+        /// Returns information about the Macros (e.g. VBA) defined in the Word Document
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>GetMacrosResponse</returns>
+        GetMacrosResponse EditDocumentDocxGetMacroInformation (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Get macro information from a Word DOCX/DOCM document
+        /// </summary>
+        /// <remarks>
+        /// Returns information about the Macros (e.g. VBA) defined in the Word Document
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of GetMacrosResponse</returns>
+        ApiResponse<GetMacrosResponse> EditDocumentDocxGetMacroInformationWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
         /// Get all metadata properties in Word DOCX document
         /// </summary>
         /// <remarks>
@@ -865,6 +886,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> EditDocumentPptxDeleteSlidesWithHttpInfo (RemovePptxSlidesRequest reqConfig);
         /// <summary>
+        /// Get macro information from a PowerPoint PPTX/PPTM presentation document
+        /// </summary>
+        /// <remarks>
+        /// Returns information about the Macros (e.g. VBA) defined in the PowerPoint Document
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>GetMacrosResponse</returns>
+        GetMacrosResponse EditDocumentPptxGetMacroInformation (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Get macro information from a PowerPoint PPTX/PPTM presentation document
+        /// </summary>
+        /// <remarks>
+        /// Returns information about the Macros (e.g. VBA) defined in the PowerPoint Document
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of GetMacrosResponse</returns>
+        ApiResponse<GetMacrosResponse> EditDocumentPptxGetMacroInformationWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
         /// Replace string in PowerPoint PPTX presentation
         /// </summary>
         /// <remarks>
@@ -1137,6 +1179,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="input">Document input request</param>
         /// <returns>ApiResponse of GetXlsxImagesResponse</returns>
         ApiResponse<GetXlsxImagesResponse> EditDocumentXlsxGetImagesWithHttpInfo (GetXlsxImagesRequest input);
+        /// <summary>
+        /// Get macro information from a Excel XLSX/XLSM spreadsheet, worksheet
+        /// </summary>
+        /// <remarks>
+        /// Returns information about the Macros (e.g. VBA) defined in the Excel Spreadsheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>GetMacrosResponse</returns>
+        GetMacrosResponse EditDocumentXlsxGetMacroInformation (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Get macro information from a Excel XLSX/XLSM spreadsheet, worksheet
+        /// </summary>
+        /// <remarks>
+        /// Returns information about the Macros (e.g. VBA) defined in the Excel Spreadsheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of GetMacrosResponse</returns>
+        ApiResponse<GetMacrosResponse> EditDocumentXlsxGetMacroInformationWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
         /// Get rows and cells from a Excel XLSX spreadsheet, worksheet
         /// </summary>
@@ -1601,6 +1664,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of ApiResponse (GetDocxImagesResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetDocxImagesResponse>> EditDocumentDocxGetImagesAsyncWithHttpInfo (GetDocxImagesRequest reqConfig);
+        /// <summary>
+        /// Get macro information from a Word DOCX/DOCM document
+        /// </summary>
+        /// <remarks>
+        /// Returns information about the Macros (e.g. VBA) defined in the Word Document
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of GetMacrosResponse</returns>
+        System.Threading.Tasks.Task<GetMacrosResponse> EditDocumentDocxGetMacroInformationAsync (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Get macro information from a Word DOCX/DOCM document
+        /// </summary>
+        /// <remarks>
+        /// Returns information about the Macros (e.g. VBA) defined in the Word Document
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (GetMacrosResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetMacrosResponse>> EditDocumentDocxGetMacroInformationAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
         /// Get all metadata properties in Word DOCX document
         /// </summary>
@@ -2148,6 +2232,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDocumentPptxDeleteSlidesAsyncWithHttpInfo (RemovePptxSlidesRequest reqConfig);
         /// <summary>
+        /// Get macro information from a PowerPoint PPTX/PPTM presentation document
+        /// </summary>
+        /// <remarks>
+        /// Returns information about the Macros (e.g. VBA) defined in the PowerPoint Document
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of GetMacrosResponse</returns>
+        System.Threading.Tasks.Task<GetMacrosResponse> EditDocumentPptxGetMacroInformationAsync (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Get macro information from a PowerPoint PPTX/PPTM presentation document
+        /// </summary>
+        /// <remarks>
+        /// Returns information about the Macros (e.g. VBA) defined in the PowerPoint Document
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (GetMacrosResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetMacrosResponse>> EditDocumentPptxGetMacroInformationAsyncWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
         /// Replace string in PowerPoint PPTX presentation
         /// </summary>
         /// <remarks>
@@ -2420,6 +2525,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="input">Document input request</param>
         /// <returns>Task of ApiResponse (GetXlsxImagesResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetXlsxImagesResponse>> EditDocumentXlsxGetImagesAsyncWithHttpInfo (GetXlsxImagesRequest input);
+        /// <summary>
+        /// Get macro information from a Excel XLSX/XLSM spreadsheet, worksheet
+        /// </summary>
+        /// <remarks>
+        /// Returns information about the Macros (e.g. VBA) defined in the Excel Spreadsheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of GetMacrosResponse</returns>
+        System.Threading.Tasks.Task<GetMacrosResponse> EditDocumentXlsxGetMacroInformationAsync (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Get macro information from a Excel XLSX/XLSM spreadsheet, worksheet
+        /// </summary>
+        /// <remarks>
+        /// Returns information about the Macros (e.g. VBA) defined in the Excel Spreadsheet
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (GetMacrosResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetMacrosResponse>> EditDocumentXlsxGetMacroInformationAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
         /// Get rows and cells from a Excel XLSX spreadsheet, worksheet
         /// </summary>
@@ -5014,6 +5140,157 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<GetDocxImagesResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (GetDocxImagesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxImagesResponse)));
+        }
+
+        /// <summary>
+        /// Get macro information from a Word DOCX/DOCM document Returns information about the Macros (e.g. VBA) defined in the Word Document
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>GetMacrosResponse</returns>
+        public GetMacrosResponse EditDocumentDocxGetMacroInformation (System.IO.Stream inputFile)
+        {
+             ApiResponse<GetMacrosResponse> localVarResponse = EditDocumentDocxGetMacroInformationWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get macro information from a Word DOCX/DOCM document Returns information about the Macros (e.g. VBA) defined in the Word Document
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of GetMacrosResponse</returns>
+        public ApiResponse< GetMacrosResponse > EditDocumentDocxGetMacroInformationWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditDocumentApi->EditDocumentDocxGetMacroInformation");
+
+            var localVarPath = "/convert/edit/docx/get-macros";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentDocxGetMacroInformation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetMacrosResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetMacrosResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetMacrosResponse)));
+        }
+
+        /// <summary>
+        /// Get macro information from a Word DOCX/DOCM document Returns information about the Macros (e.g. VBA) defined in the Word Document
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of GetMacrosResponse</returns>
+        public async System.Threading.Tasks.Task<GetMacrosResponse> EditDocumentDocxGetMacroInformationAsync (System.IO.Stream inputFile)
+        {
+             ApiResponse<GetMacrosResponse> localVarResponse = await EditDocumentDocxGetMacroInformationAsyncWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get macro information from a Word DOCX/DOCM document Returns information about the Macros (e.g. VBA) defined in the Word Document
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (GetMacrosResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetMacrosResponse>> EditDocumentDocxGetMacroInformationAsyncWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditDocumentApi->EditDocumentDocxGetMacroInformation");
+
+            var localVarPath = "/convert/edit/docx/get-macros";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentDocxGetMacroInformation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetMacrosResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetMacrosResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetMacrosResponse)));
         }
 
         /// <summary>
@@ -9447,6 +9724,157 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
+        /// Get macro information from a PowerPoint PPTX/PPTM presentation document Returns information about the Macros (e.g. VBA) defined in the PowerPoint Document
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>GetMacrosResponse</returns>
+        public GetMacrosResponse EditDocumentPptxGetMacroInformation (System.IO.Stream inputFile)
+        {
+             ApiResponse<GetMacrosResponse> localVarResponse = EditDocumentPptxGetMacroInformationWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get macro information from a PowerPoint PPTX/PPTM presentation document Returns information about the Macros (e.g. VBA) defined in the PowerPoint Document
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of GetMacrosResponse</returns>
+        public ApiResponse< GetMacrosResponse > EditDocumentPptxGetMacroInformationWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditDocumentApi->EditDocumentPptxGetMacroInformation");
+
+            var localVarPath = "/convert/edit/pptx/get-macros";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentPptxGetMacroInformation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetMacrosResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetMacrosResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetMacrosResponse)));
+        }
+
+        /// <summary>
+        /// Get macro information from a PowerPoint PPTX/PPTM presentation document Returns information about the Macros (e.g. VBA) defined in the PowerPoint Document
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of GetMacrosResponse</returns>
+        public async System.Threading.Tasks.Task<GetMacrosResponse> EditDocumentPptxGetMacroInformationAsync (System.IO.Stream inputFile)
+        {
+             ApiResponse<GetMacrosResponse> localVarResponse = await EditDocumentPptxGetMacroInformationAsyncWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get macro information from a PowerPoint PPTX/PPTM presentation document Returns information about the Macros (e.g. VBA) defined in the PowerPoint Document
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (GetMacrosResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetMacrosResponse>> EditDocumentPptxGetMacroInformationAsyncWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditDocumentApi->EditDocumentPptxGetMacroInformation");
+
+            var localVarPath = "/convert/edit/pptx/get-macros";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentPptxGetMacroInformation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetMacrosResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetMacrosResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetMacrosResponse)));
+        }
+
+        /// <summary>
         /// Replace string in PowerPoint PPTX presentation Replace all instances of a string in an Office PowerPoint Document (pptx)
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11681,6 +12109,157 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<GetXlsxImagesResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (GetXlsxImagesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetXlsxImagesResponse)));
+        }
+
+        /// <summary>
+        /// Get macro information from a Excel XLSX/XLSM spreadsheet, worksheet Returns information about the Macros (e.g. VBA) defined in the Excel Spreadsheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>GetMacrosResponse</returns>
+        public GetMacrosResponse EditDocumentXlsxGetMacroInformation (System.IO.Stream inputFile)
+        {
+             ApiResponse<GetMacrosResponse> localVarResponse = EditDocumentXlsxGetMacroInformationWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get macro information from a Excel XLSX/XLSM spreadsheet, worksheet Returns information about the Macros (e.g. VBA) defined in the Excel Spreadsheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of GetMacrosResponse</returns>
+        public ApiResponse< GetMacrosResponse > EditDocumentXlsxGetMacroInformationWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditDocumentApi->EditDocumentXlsxGetMacroInformation");
+
+            var localVarPath = "/convert/edit/xlsx/get-macros";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentXlsxGetMacroInformation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetMacrosResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetMacrosResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetMacrosResponse)));
+        }
+
+        /// <summary>
+        /// Get macro information from a Excel XLSX/XLSM spreadsheet, worksheet Returns information about the Macros (e.g. VBA) defined in the Excel Spreadsheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of GetMacrosResponse</returns>
+        public async System.Threading.Tasks.Task<GetMacrosResponse> EditDocumentXlsxGetMacroInformationAsync (System.IO.Stream inputFile)
+        {
+             ApiResponse<GetMacrosResponse> localVarResponse = await EditDocumentXlsxGetMacroInformationAsyncWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get macro information from a Excel XLSX/XLSM spreadsheet, worksheet Returns information about the Macros (e.g. VBA) defined in the Excel Spreadsheet
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (GetMacrosResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetMacrosResponse>> EditDocumentXlsxGetMacroInformationAsyncWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditDocumentApi->EditDocumentXlsxGetMacroInformation");
+
+            var localVarPath = "/convert/edit/xlsx/get-macros";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentXlsxGetMacroInformation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetMacrosResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetMacrosResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetMacrosResponse)));
         }
 
         /// <summary>

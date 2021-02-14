@@ -233,6 +233,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test EditDocumentDocxGetMacroInformation
+        /// </summary>
+        [Test]
+        public void EditDocumentDocxGetMacroInformationTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.EditDocumentDocxGetMacroInformation(inputFile);
+            //Assert.IsInstanceOf<GetMacrosResponse> (response, "response is GetMacrosResponse");
+        }
+        
+        /// <summary>
         /// Test EditDocumentDocxGetMetadataProperties
         /// </summary>
         [Test]
@@ -545,6 +557,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test EditDocumentPptxGetMacroInformation
+        /// </summary>
+        [Test]
+        public void EditDocumentPptxGetMacroInformationTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.EditDocumentPptxGetMacroInformation(inputFile);
+            //Assert.IsInstanceOf<GetMacrosResponse> (response, "response is GetMacrosResponse");
+        }
+        
+        /// <summary>
         /// Test EditDocumentPptxReplace
         /// </summary>
         [Test]
@@ -698,6 +722,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //GetXlsxImagesRequest input = null;
             //var response = instance.EditDocumentXlsxGetImages(input);
             //Assert.IsInstanceOf<GetXlsxImagesResponse> (response, "response is GetXlsxImagesResponse");
+        }
+        
+        /// <summary>
+        /// Test EditDocumentXlsxGetMacroInformation
+        /// </summary>
+        [Test]
+        public void EditDocumentXlsxGetMacroInformationTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.EditDocumentXlsxGetMacroInformation(inputFile);
+            //Assert.IsInstanceOf<GetMacrosResponse> (response, "response is GetMacrosResponse");
         }
         
         /// <summary>
