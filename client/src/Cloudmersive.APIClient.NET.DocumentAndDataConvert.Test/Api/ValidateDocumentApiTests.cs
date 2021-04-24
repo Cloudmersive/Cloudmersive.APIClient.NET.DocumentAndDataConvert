@@ -305,6 +305,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test ValidateDocumentXmlXxeThreatValidation
+        /// </summary>
+        [Test]
+        public void ValidateDocumentXmlXxeThreatValidationTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.ValidateDocumentXmlXxeThreatValidation(inputFile);
+            //Assert.IsInstanceOf<XxeThreatDetectionResult> (response, "response is XxeThreatDetectionResult");
+        }
+        
+        /// <summary>
         /// Test ValidateDocumentZipValidation
         /// </summary>
         [Test]

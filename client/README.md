@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 This C# SDK is for the [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api):
 
 - API version: v1
-- SDK version: 3.4.2
+- SDK version: 3.4.3
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -360,11 +360,13 @@ Class | Method | HTTP request | Description
 *ValidateDocumentApi* | [**ValidateDocumentTxtValidation**](docs/ValidateDocumentApi.md#validatedocumenttxtvalidation) | **POST** /convert/validate/txt | Validate an TXT file
 *ValidateDocumentApi* | [**ValidateDocumentXlsxValidation**](docs/ValidateDocumentApi.md#validatedocumentxlsxvalidation) | **POST** /convert/validate/xlsx | Validate a Excel document (XLSX)
 *ValidateDocumentApi* | [**ValidateDocumentXmlValidation**](docs/ValidateDocumentApi.md#validatedocumentxmlvalidation) | **POST** /convert/validate/xml | Validate an XML file
+*ValidateDocumentApi* | [**ValidateDocumentXmlXxeThreatValidation**](docs/ValidateDocumentApi.md#validatedocumentxmlxxethreatvalidation) | **POST** /convert/validate/xml/xxe-threats | Validate an XML file for XML External Entity (XXE) threats
 *ValidateDocumentApi* | [**ValidateDocumentZipValidation**](docs/ValidateDocumentApi.md#validatedocumentzipvalidation) | **POST** /convert/validate/zip | Validate a Zip Archive file (zip)
 *ViewerToolsApi* | [**ViewerToolsCreateSimple**](docs/ViewerToolsApi.md#viewertoolscreatesimple) | **POST** /convert/viewer/create/web/simple | Create a web-based viewer
 *ZipArchiveApi* | [**ZipArchiveZipCreate**](docs/ZipArchiveApi.md#ziparchivezipcreate) | **POST** /convert/archive/zip/create | Compress files to create a new zip archive
 *ZipArchiveApi* | [**ZipArchiveZipCreateAdvanced**](docs/ZipArchiveApi.md#ziparchivezipcreateadvanced) | **POST** /convert/archive/zip/create/advanced | Compress files and folders to create a new zip archive with advanced options
 *ZipArchiveApi* | [**ZipArchiveZipCreateEncrypted**](docs/ZipArchiveApi.md#ziparchivezipcreateencrypted) | **POST** /convert/archive/zip/create/encrypted | Compress files to create a new, encrypted and password-protected zip archive
+*ZipArchiveApi* | [**ZipArchiveZipCreateQuarantine**](docs/ZipArchiveApi.md#ziparchivezipcreatequarantine) | **POST** /convert/archive/zip/create/quarantine | Create an encrypted zip file to quarantine a dangerous file
 *ZipArchiveApi* | [**ZipArchiveZipDecrypt**](docs/ZipArchiveApi.md#ziparchivezipdecrypt) | **POST** /convert/archive/zip/decrypt | Decrypt and remove password protection on a zip file
 *ZipArchiveApi* | [**ZipArchiveZipEncryptAdvanced**](docs/ZipArchiveApi.md#ziparchivezipencryptadvanced) | **POST** /convert/archive/zip/encrypt/advanced | Encrypt and password protect a zip file
 *ZipArchiveApi* | [**ZipArchiveZipExtract**](docs/ZipArchiveApi.md#ziparchivezipextract) | **POST** /convert/archive/zip/extract | Extract, decompress files and folders from a zip archive
@@ -617,6 +619,7 @@ Class | Method | HTTP request | Description
  - [Model.XmlRemoveWithXPathResult](docs/XmlRemoveWithXPathResult.md)
  - [Model.XmlReplaceWithXPathResult](docs/XmlReplaceWithXPathResult.md)
  - [Model.XmlSetValueWithXPathResult](docs/XmlSetValueWithXPathResult.md)
+ - [Model.XxeThreatDetectionResult](docs/XxeThreatDetectionResult.md)
  - [Model.ZipDirectory](docs/ZipDirectory.md)
  - [Model.ZipEncryptionAdvancedRequest](docs/ZipEncryptionAdvancedRequest.md)
  - [Model.ZipExtractResponse](docs/ZipExtractResponse.md)
