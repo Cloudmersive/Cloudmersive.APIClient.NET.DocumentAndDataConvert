@@ -127,7 +127,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         public void ZipArchiveZipCreateQuarantineTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.ZipArchiveZipCreateQuarantine();
+            //string password = null;
+            //System.IO.Stream inputFile1 = null;
+            //string encryptionAlgorithm = null;
+            //var response = instance.ZipArchiveZipCreateQuarantine(password, inputFile1, encryptionAlgorithm);
             //Assert.IsInstanceOf<Object> (response, "response is Object");
         }
         

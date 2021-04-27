@@ -134,8 +134,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Create a new zip archive by compressing input files, and also applies encryption and password protection to the zip, for the purposes of quarantining the underlyikng file.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="password">Password to place on the Zip file; the longer the password, the more secure</param>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="encryptionAlgorithm">Encryption algorithm to use; possible values are AES-256 (recommended), AES-128, and PK-Zip (not recommended; legacy, weak encryption algorithm). Default is AES-256. (optional)</param>
         /// <returns>Object</returns>
-        Object ZipArchiveZipCreateQuarantine ();
+        Object ZipArchiveZipCreateQuarantine (string password, System.IO.Stream inputFile1, string encryptionAlgorithm = null);
 
         /// <summary>
         /// Create an encrypted zip file to quarantine a dangerous file
@@ -144,8 +147,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Create a new zip archive by compressing input files, and also applies encryption and password protection to the zip, for the purposes of quarantining the underlyikng file.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="password">Password to place on the Zip file; the longer the password, the more secure</param>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="encryptionAlgorithm">Encryption algorithm to use; possible values are AES-256 (recommended), AES-128, and PK-Zip (not recommended; legacy, weak encryption algorithm). Default is AES-256. (optional)</param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> ZipArchiveZipCreateQuarantineWithHttpInfo ();
+        ApiResponse<Object> ZipArchiveZipCreateQuarantineWithHttpInfo (string password, System.IO.Stream inputFile1, string encryptionAlgorithm = null);
         /// <summary>
         /// Decrypt and remove password protection on a zip file
         /// </summary>
@@ -323,8 +329,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Create a new zip archive by compressing input files, and also applies encryption and password protection to the zip, for the purposes of quarantining the underlyikng file.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="password">Password to place on the Zip file; the longer the password, the more secure</param>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="encryptionAlgorithm">Encryption algorithm to use; possible values are AES-256 (recommended), AES-128, and PK-Zip (not recommended; legacy, weak encryption algorithm). Default is AES-256. (optional)</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> ZipArchiveZipCreateQuarantineAsync ();
+        System.Threading.Tasks.Task<Object> ZipArchiveZipCreateQuarantineAsync (string password, System.IO.Stream inputFile1, string encryptionAlgorithm = null);
 
         /// <summary>
         /// Create an encrypted zip file to quarantine a dangerous file
@@ -333,8 +342,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Create a new zip archive by compressing input files, and also applies encryption and password protection to the zip, for the purposes of quarantining the underlyikng file.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="password">Password to place on the Zip file; the longer the password, the more secure</param>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="encryptionAlgorithm">Encryption algorithm to use; possible values are AES-256 (recommended), AES-128, and PK-Zip (not recommended; legacy, weak encryption algorithm). Default is AES-256. (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ZipArchiveZipCreateQuarantineAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<Object>> ZipArchiveZipCreateQuarantineAsyncWithHttpInfo (string password, System.IO.Stream inputFile1, string encryptionAlgorithm = null);
         /// <summary>
         /// Decrypt and remove password protection on a zip file
         /// </summary>
@@ -1087,10 +1099,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Create an encrypted zip file to quarantine a dangerous file Create a new zip archive by compressing input files, and also applies encryption and password protection to the zip, for the purposes of quarantining the underlyikng file.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="password">Password to place on the Zip file; the longer the password, the more secure</param>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="encryptionAlgorithm">Encryption algorithm to use; possible values are AES-256 (recommended), AES-128, and PK-Zip (not recommended; legacy, weak encryption algorithm). Default is AES-256. (optional)</param>
         /// <returns>Object</returns>
-        public Object ZipArchiveZipCreateQuarantine ()
+        public Object ZipArchiveZipCreateQuarantine (string password, System.IO.Stream inputFile1, string encryptionAlgorithm = null)
         {
-             ApiResponse<Object> localVarResponse = ZipArchiveZipCreateQuarantineWithHttpInfo();
+             ApiResponse<Object> localVarResponse = ZipArchiveZipCreateQuarantineWithHttpInfo(password, inputFile1, encryptionAlgorithm);
              return localVarResponse.Data;
         }
 
@@ -1098,9 +1113,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Create an encrypted zip file to quarantine a dangerous file Create a new zip archive by compressing input files, and also applies encryption and password protection to the zip, for the purposes of quarantining the underlyikng file.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="password">Password to place on the Zip file; the longer the password, the more secure</param>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="encryptionAlgorithm">Encryption algorithm to use; possible values are AES-256 (recommended), AES-128, and PK-Zip (not recommended; legacy, weak encryption algorithm). Default is AES-256. (optional)</param>
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > ZipArchiveZipCreateQuarantineWithHttpInfo ()
+        public ApiResponse< Object > ZipArchiveZipCreateQuarantineWithHttpInfo (string password, System.IO.Stream inputFile1, string encryptionAlgorithm = null)
         {
+            // verify the required parameter 'password' is set
+            if (password == null)
+                throw new ApiException(400, "Missing required parameter 'password' when calling ZipArchiveApi->ZipArchiveZipCreateQuarantine");
+            // verify the required parameter 'inputFile1' is set
+            if (inputFile1 == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile1' when calling ZipArchiveApi->ZipArchiveZipCreateQuarantine");
 
             var localVarPath = "/convert/archive/zip/create/quarantine";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1123,6 +1147,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (password != null) localVarHeaderParams.Add("password", this.Configuration.ApiClient.ParameterToString(password)); // header parameter
+            if (encryptionAlgorithm != null) localVarHeaderParams.Add("encryptionAlgorithm", this.Configuration.ApiClient.ParameterToString(encryptionAlgorithm)); // header parameter
+            if (inputFile1 != null) localVarFileParams.Add("inputFile1", this.Configuration.ApiClient.ParameterToFile("inputFile1", inputFile1));
 
             // authentication (Apikey) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
@@ -1152,10 +1179,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Create an encrypted zip file to quarantine a dangerous file Create a new zip archive by compressing input files, and also applies encryption and password protection to the zip, for the purposes of quarantining the underlyikng file.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="password">Password to place on the Zip file; the longer the password, the more secure</param>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="encryptionAlgorithm">Encryption algorithm to use; possible values are AES-256 (recommended), AES-128, and PK-Zip (not recommended; legacy, weak encryption algorithm). Default is AES-256. (optional)</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> ZipArchiveZipCreateQuarantineAsync ()
+        public async System.Threading.Tasks.Task<Object> ZipArchiveZipCreateQuarantineAsync (string password, System.IO.Stream inputFile1, string encryptionAlgorithm = null)
         {
-             ApiResponse<Object> localVarResponse = await ZipArchiveZipCreateQuarantineAsyncWithHttpInfo();
+             ApiResponse<Object> localVarResponse = await ZipArchiveZipCreateQuarantineAsyncWithHttpInfo(password, inputFile1, encryptionAlgorithm);
              return localVarResponse.Data;
 
         }
@@ -1164,9 +1194,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Create an encrypted zip file to quarantine a dangerous file Create a new zip archive by compressing input files, and also applies encryption and password protection to the zip, for the purposes of quarantining the underlyikng file.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="password">Password to place on the Zip file; the longer the password, the more secure</param>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="encryptionAlgorithm">Encryption algorithm to use; possible values are AES-256 (recommended), AES-128, and PK-Zip (not recommended; legacy, weak encryption algorithm). Default is AES-256. (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ZipArchiveZipCreateQuarantineAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ZipArchiveZipCreateQuarantineAsyncWithHttpInfo (string password, System.IO.Stream inputFile1, string encryptionAlgorithm = null)
         {
+            // verify the required parameter 'password' is set
+            if (password == null)
+                throw new ApiException(400, "Missing required parameter 'password' when calling ZipArchiveApi->ZipArchiveZipCreateQuarantine");
+            // verify the required parameter 'inputFile1' is set
+            if (inputFile1 == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile1' when calling ZipArchiveApi->ZipArchiveZipCreateQuarantine");
 
             var localVarPath = "/convert/archive/zip/create/quarantine";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1189,6 +1228,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (password != null) localVarHeaderParams.Add("password", this.Configuration.ApiClient.ParameterToString(password)); // header parameter
+            if (encryptionAlgorithm != null) localVarHeaderParams.Add("encryptionAlgorithm", this.Configuration.ApiClient.ParameterToString(encryptionAlgorithm)); // header parameter
+            if (inputFile1 != null) localVarFileParams.Add("inputFile1", this.Configuration.ApiClient.ParameterToFile("inputFile1", inputFile1));
 
             // authentication (Apikey) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))

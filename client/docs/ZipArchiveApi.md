@@ -253,7 +253,7 @@ Name | Type | Description  | Notes
 
 <a name="ziparchivezipcreatequarantine"></a>
 # **ZipArchiveZipCreateQuarantine**
-> Object ZipArchiveZipCreateQuarantine ()
+> Object ZipArchiveZipCreateQuarantine (string password, System.IO.Stream inputFile1, string encryptionAlgorithm = null)
 
 Create an encrypted zip file to quarantine a dangerous file
 
@@ -279,11 +279,14 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new ZipArchiveApi();
+            var password = password_example;  // string | Password to place on the Zip file; the longer the password, the more secure
+            var inputFile1 = new System.IO.Stream(); // System.IO.Stream | First input file to perform the operation on.
+            var encryptionAlgorithm = encryptionAlgorithm_example;  // string | Encryption algorithm to use; possible values are AES-256 (recommended), AES-128, and PK-Zip (not recommended; legacy, weak encryption algorithm). Default is AES-256. (optional) 
 
             try
             {
                 // Create an encrypted zip file to quarantine a dangerous file
-                Object result = apiInstance.ZipArchiveZipCreateQuarantine();
+                Object result = apiInstance.ZipArchiveZipCreateQuarantine(password, inputFile1, encryptionAlgorithm);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -296,7 +299,12 @@ namespace Example
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **password** | **string**| Password to place on the Zip file; the longer the password, the more secure | 
+ **inputFile1** | **System.IO.Stream**| First input file to perform the operation on. | 
+ **encryptionAlgorithm** | **string**| Encryption algorithm to use; possible values are AES-256 (recommended), AES-128, and PK-Zip (not recommended; legacy, weak encryption algorithm). Default is AES-256. | [optional] 
 
 ### Return type
 
