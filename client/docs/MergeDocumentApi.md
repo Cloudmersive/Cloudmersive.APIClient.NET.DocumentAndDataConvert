@@ -174,7 +174,7 @@ Name | Type | Description  | Notes
 
 <a name="mergedocumenthtml"></a>
 # **MergeDocumentHtml**
-> Object MergeDocumentHtml (System.IO.Stream inputFile1, System.IO.Stream inputFile2)
+> byte[] MergeDocumentHtml (System.IO.Stream inputFile1, System.IO.Stream inputFile2)
 
 Merge Two HTML (HTM) Files Together
 
@@ -206,7 +206,7 @@ namespace Example
             try
             {
                 // Merge Two HTML (HTM) Files Together
-                Object result = apiInstance.MergeDocumentHtml(inputFile1, inputFile2);
+                byte[] result = apiInstance.MergeDocumentHtml(inputFile1, inputFile2);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -227,7 +227,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**byte[]**
 
 ### Authorization
 

@@ -94,8 +94,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
-        /// <returns>Object</returns>
-        Object MergeDocumentHtml (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+        /// <returns>byte[]</returns>
+        byte[] MergeDocumentHtml (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
 
         /// <summary>
         /// Merge Two HTML (HTM) Files Together
@@ -106,8 +106,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> MergeDocumentHtmlWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> MergeDocumentHtmlWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
         /// <summary>
         /// Merge Multple HTML (HTM) Files Together
         /// </summary>
@@ -530,8 +530,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> MergeDocumentHtmlAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> MergeDocumentHtmlAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
 
         /// <summary>
         /// Merge Two HTML (HTM) Files Together
@@ -542,8 +542,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> MergeDocumentHtmlAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> MergeDocumentHtmlAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
         /// <summary>
         /// Merge Multple HTML (HTM) Files Together
         /// </summary>
@@ -1361,10 +1361,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
-        /// <returns>Object</returns>
-        public Object MergeDocumentHtml (System.IO.Stream inputFile1, System.IO.Stream inputFile2)
+        /// <returns>byte[]</returns>
+        public byte[] MergeDocumentHtml (System.IO.Stream inputFile1, System.IO.Stream inputFile2)
         {
-             ApiResponse<Object> localVarResponse = MergeDocumentHtmlWithHttpInfo(inputFile1, inputFile2);
+             ApiResponse<byte[]> localVarResponse = MergeDocumentHtmlWithHttpInfo(inputFile1, inputFile2);
              return localVarResponse.Data;
         }
 
@@ -1374,8 +1374,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > MergeDocumentHtmlWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2)
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > MergeDocumentHtmlWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2)
         {
             // verify the required parameter 'inputFile1' is set
             if (inputFile1 == null)
@@ -1428,9 +1428,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
@@ -1439,10 +1439,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> MergeDocumentHtmlAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2)
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> MergeDocumentHtmlAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2)
         {
-             ApiResponse<Object> localVarResponse = await MergeDocumentHtmlAsyncWithHttpInfo(inputFile1, inputFile2);
+             ApiResponse<byte[]> localVarResponse = await MergeDocumentHtmlAsyncWithHttpInfo(inputFile1, inputFile2);
              return localVarResponse.Data;
 
         }
@@ -1453,8 +1453,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> MergeDocumentHtmlAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2)
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> MergeDocumentHtmlAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2)
         {
             // verify the required parameter 'inputFile1' is set
             if (inputFile1 == null)
@@ -1507,9 +1507,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>

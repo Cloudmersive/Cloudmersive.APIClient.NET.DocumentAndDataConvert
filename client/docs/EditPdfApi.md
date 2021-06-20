@@ -846,7 +846,7 @@ Name | Type | Description  | Notes
 
 <a name="editpdfreducefilesize"></a>
 # **EditPdfReduceFileSize**
-> byte[] EditPdfReduceFileSize (System.IO.Stream inputFile)
+> byte[] EditPdfReduceFileSize (System.IO.Stream inputFile, decimal? quality = null)
 
 Reduce the file size and optimize a PDF
 
@@ -873,11 +873,12 @@ namespace Example
 
             var apiInstance = new EditPdfApi();
             var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
+            var quality = 8.14;  // decimal? | Quality level for the images in the PDF, ranging from 0.0 (low quality) to 1.0 (high quality); default is 0.3 (optional) 
 
             try
             {
                 // Reduce the file size and optimize a PDF
-                byte[] result = apiInstance.EditPdfReduceFileSize(inputFile);
+                byte[] result = apiInstance.EditPdfReduceFileSize(inputFile, quality);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -894,6 +895,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
+ **quality** | **decimal?**| Quality level for the images in the PDF, ranging from 0.0 (low quality) to 1.0 (high quality); default is 0.3 | [optional] 
 
 ### Return type
 

@@ -107,7 +107,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //System.IO.Stream inputFile1 = null;
             //System.IO.Stream inputFile2 = null;
             //var response = instance.MergeDocumentHtml(inputFile1, inputFile2);
-            //Assert.IsInstanceOf<Object> (response, "response is Object");
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
         /// <summary>

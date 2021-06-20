@@ -4,13 +4,90 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**EditHtmlHtmlAppendHeaderTag**](EditHtmlApi.md#edithtmlhtmlappendheadertag) | **POST** /convert/edit/html/head/append/tag | Append an HTML tag to the HEAD section of an HTML Document
 [**EditHtmlHtmlAppendHeading**](EditHtmlApi.md#edithtmlhtmlappendheading) | **POST** /convert/edit/html/append/heading | Append a Heading to an HTML Document
 [**EditHtmlHtmlAppendImageFromUrl**](EditHtmlApi.md#edithtmlhtmlappendimagefromurl) | **POST** /convert/edit/html/append/image/from-url | Append an Image to an HTML Document from a URL
 [**EditHtmlHtmlAppendImageInline**](EditHtmlApi.md#edithtmlhtmlappendimageinline) | **POST** /convert/edit/html/append/image/inline | Append a Base64 Inline Image to an HTML Document
 [**EditHtmlHtmlAppendParagraph**](EditHtmlApi.md#edithtmlhtmlappendparagraph) | **POST** /convert/edit/html/append/paragraph | Append a Paragraph to an HTML Document
 [**EditHtmlHtmlCreateBlankDocument**](EditHtmlApi.md#edithtmlhtmlcreateblankdocument) | **POST** /convert/edit/html/create/blank | Create a Blank HTML Document
+[**EditHtmlHtmlGetLanguage**](EditHtmlApi.md#edithtmlhtmlgetlanguage) | **POST** /convert/edit/html/head/get/language | Gets the language for the HTML document
 [**EditHtmlHtmlGetLinks**](EditHtmlApi.md#edithtmlhtmlgetlinks) | **POST** /convert/edit/html/extract/links | Extract resolved link URLs from HTML File
+[**EditHtmlHtmlGetRelCanonical**](EditHtmlApi.md#edithtmlhtmlgetrelcanonical) | **POST** /convert/edit/html/head/get/rel-canonical-url | Gets the rel canonical URL for the HTML document
+[**EditHtmlHtmlGetSitemap**](EditHtmlApi.md#edithtmlhtmlgetsitemap) | **POST** /convert/edit/html/head/get/sitemap-url | Gets the sitemap URL for the HTML document
+[**EditHtmlHtmlSetLanguage**](EditHtmlApi.md#edithtmlhtmlsetlanguage) | **POST** /convert/edit/html/head/set/language | Sets the language for the HTML document
+[**EditHtmlHtmlSetRelCanonical**](EditHtmlApi.md#edithtmlhtmlsetrelcanonical) | **POST** /convert/edit/html/head/set/rel-canonical-url | Sets the rel canonical URL for the HTML document
+[**EditHtmlHtmlSetSitemapUrl**](EditHtmlApi.md#edithtmlhtmlsetsitemapurl) | **POST** /convert/edit/html/head/set/sitemap-url | Sets the sitemap URL for the HTML document
 
+
+<a name="edithtmlhtmlappendheadertag"></a>
+# **EditHtmlHtmlAppendHeaderTag**
+> byte[] EditHtmlHtmlAppendHeaderTag (string htmlTag, System.IO.Stream inputFile = null, string inputFileUrl = null)
+
+Append an HTML tag to the HEAD section of an HTML Document
+
+Appends an HTML tag to the HEAD section of an HTML document.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class EditHtmlHtmlAppendHeaderTagExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new EditHtmlApi();
+            var htmlTag = htmlTag_example;  // string | The HTML tag to append.
+            var inputFile = new System.IO.Stream(); // System.IO.Stream | Optional: Input file to perform the operation on. (optional) 
+            var inputFileUrl = inputFileUrl_example;  // string | Optional: URL of a file to operate on as input. (optional) 
+
+            try
+            {
+                // Append an HTML tag to the HEAD section of an HTML Document
+                byte[] result = apiInstance.EditHtmlHtmlAppendHeaderTag(htmlTag, inputFile, inputFileUrl);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling EditHtmlApi.EditHtmlHtmlAppendHeaderTag: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **htmlTag** | **string**| The HTML tag to append. | 
+ **inputFile** | **System.IO.Stream**| Optional: Input file to perform the operation on. | [optional] 
+ **inputFileUrl** | **string**| Optional: URL of a file to operate on as input. | [optional] 
+
+### Return type
+
+**byte[]**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="edithtmlhtmlappendheading"></a>
 # **EditHtmlHtmlAppendHeading**
@@ -380,6 +457,74 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="edithtmlhtmlgetlanguage"></a>
+# **EditHtmlHtmlGetLanguage**
+> HtmlGetLanguageResult EditHtmlHtmlGetLanguage (System.IO.Stream inputFile = null, string inputFileUrl = null)
+
+Gets the language for the HTML document
+
+Retrieves the language code (e.g. \"en\" or \"de\") of an HTML document.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class EditHtmlHtmlGetLanguageExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new EditHtmlApi();
+            var inputFile = new System.IO.Stream(); // System.IO.Stream | Optional: Input file to perform the operation on. (optional) 
+            var inputFileUrl = inputFileUrl_example;  // string | Optional: URL of a file to operate on as input. (optional) 
+
+            try
+            {
+                // Gets the language for the HTML document
+                HtmlGetLanguageResult result = apiInstance.EditHtmlHtmlGetLanguage(inputFile, inputFileUrl);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling EditHtmlApi.EditHtmlHtmlGetLanguage: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **System.IO.Stream**| Optional: Input file to perform the operation on. | [optional] 
+ **inputFileUrl** | **string**| Optional: URL of a file to operate on as input. | [optional] 
+
+### Return type
+
+[**HtmlGetLanguageResult**](HtmlGetLanguageResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="edithtmlhtmlgetlinks"></a>
 # **EditHtmlHtmlGetLinks**
 > HtmlGetLinksResponse EditHtmlHtmlGetLinks (System.IO.Stream inputFile = null, string inputFileUrl = null, string baseUrl = null)
@@ -438,6 +583,352 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**HtmlGetLinksResponse**](HtmlGetLinksResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="edithtmlhtmlgetrelcanonical"></a>
+# **EditHtmlHtmlGetRelCanonical**
+> HtmlGetRelCanonicalUrlResult EditHtmlHtmlGetRelCanonical (System.IO.Stream inputFile = null, string inputFileUrl = null)
+
+Gets the rel canonical URL for the HTML document
+
+Gets the rel canonical URL of an HTML document.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class EditHtmlHtmlGetRelCanonicalExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new EditHtmlApi();
+            var inputFile = new System.IO.Stream(); // System.IO.Stream | Optional: Input file to perform the operation on. (optional) 
+            var inputFileUrl = inputFileUrl_example;  // string | Optional: URL of a file to operate on as input. (optional) 
+
+            try
+            {
+                // Gets the rel canonical URL for the HTML document
+                HtmlGetRelCanonicalUrlResult result = apiInstance.EditHtmlHtmlGetRelCanonical(inputFile, inputFileUrl);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling EditHtmlApi.EditHtmlHtmlGetRelCanonical: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **System.IO.Stream**| Optional: Input file to perform the operation on. | [optional] 
+ **inputFileUrl** | **string**| Optional: URL of a file to operate on as input. | [optional] 
+
+### Return type
+
+[**HtmlGetRelCanonicalUrlResult**](HtmlGetRelCanonicalUrlResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="edithtmlhtmlgetsitemap"></a>
+# **EditHtmlHtmlGetSitemap**
+> HtmlGetSitemapUrlResult EditHtmlHtmlGetSitemap (System.IO.Stream inputFile = null, string inputFileUrl = null)
+
+Gets the sitemap URL for the HTML document
+
+Gets the sitemap link URL of an HTML document.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class EditHtmlHtmlGetSitemapExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new EditHtmlApi();
+            var inputFile = new System.IO.Stream(); // System.IO.Stream | Optional: Input file to perform the operation on. (optional) 
+            var inputFileUrl = inputFileUrl_example;  // string | Optional: URL of a file to operate on as input. (optional) 
+
+            try
+            {
+                // Gets the sitemap URL for the HTML document
+                HtmlGetSitemapUrlResult result = apiInstance.EditHtmlHtmlGetSitemap(inputFile, inputFileUrl);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling EditHtmlApi.EditHtmlHtmlGetSitemap: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **System.IO.Stream**| Optional: Input file to perform the operation on. | [optional] 
+ **inputFileUrl** | **string**| Optional: URL of a file to operate on as input. | [optional] 
+
+### Return type
+
+[**HtmlGetSitemapUrlResult**](HtmlGetSitemapUrlResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="edithtmlhtmlsetlanguage"></a>
+# **EditHtmlHtmlSetLanguage**
+> byte[] EditHtmlHtmlSetLanguage (string languageCode, System.IO.Stream inputFile = null, string inputFileUrl = null)
+
+Sets the language for the HTML document
+
+Sets the language code of an HTML document.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class EditHtmlHtmlSetLanguageExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new EditHtmlApi();
+            var languageCode = languageCode_example;  // string | The HTML langauge code to set.
+            var inputFile = new System.IO.Stream(); // System.IO.Stream | Optional: Input file to perform the operation on. (optional) 
+            var inputFileUrl = inputFileUrl_example;  // string | Optional: URL of a file to operate on as input. (optional) 
+
+            try
+            {
+                // Sets the language for the HTML document
+                byte[] result = apiInstance.EditHtmlHtmlSetLanguage(languageCode, inputFile, inputFileUrl);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling EditHtmlApi.EditHtmlHtmlSetLanguage: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **languageCode** | **string**| The HTML langauge code to set. | 
+ **inputFile** | **System.IO.Stream**| Optional: Input file to perform the operation on. | [optional] 
+ **inputFileUrl** | **string**| Optional: URL of a file to operate on as input. | [optional] 
+
+### Return type
+
+**byte[]**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="edithtmlhtmlsetrelcanonical"></a>
+# **EditHtmlHtmlSetRelCanonical**
+> byte[] EditHtmlHtmlSetRelCanonical (string canonicalUrl, System.IO.Stream inputFile = null, string inputFileUrl = null)
+
+Sets the rel canonical URL for the HTML document
+
+Sets the rel canonical URL of an HTML document.  This is useful for telling search engines and other indexers which pages are duplicates of eachother; any pages with the rel=canonical tag will be treated as duplicates of the canonical URL.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class EditHtmlHtmlSetRelCanonicalExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new EditHtmlApi();
+            var canonicalUrl = canonicalUrl_example;  // string | The HTML canonical URL to set.
+            var inputFile = new System.IO.Stream(); // System.IO.Stream | Optional: Input file to perform the operation on. (optional) 
+            var inputFileUrl = inputFileUrl_example;  // string | Optional: URL of a file to operate on as input. (optional) 
+
+            try
+            {
+                // Sets the rel canonical URL for the HTML document
+                byte[] result = apiInstance.EditHtmlHtmlSetRelCanonical(canonicalUrl, inputFile, inputFileUrl);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling EditHtmlApi.EditHtmlHtmlSetRelCanonical: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **canonicalUrl** | **string**| The HTML canonical URL to set. | 
+ **inputFile** | **System.IO.Stream**| Optional: Input file to perform the operation on. | [optional] 
+ **inputFileUrl** | **string**| Optional: URL of a file to operate on as input. | [optional] 
+
+### Return type
+
+**byte[]**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="edithtmlhtmlsetsitemapurl"></a>
+# **EditHtmlHtmlSetSitemapUrl**
+> byte[] EditHtmlHtmlSetSitemapUrl (string sitemapUrl, System.IO.Stream inputFile = null, string inputFileUrl = null)
+
+Sets the sitemap URL for the HTML document
+
+Sets the sitemap URL of an HTML document.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class EditHtmlHtmlSetSitemapUrlExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new EditHtmlApi();
+            var sitemapUrl = sitemapUrl_example;  // string | The HTML sitemap URL to set.
+            var inputFile = new System.IO.Stream(); // System.IO.Stream | Optional: Input file to perform the operation on. (optional) 
+            var inputFileUrl = inputFileUrl_example;  // string | Optional: URL of a file to operate on as input. (optional) 
+
+            try
+            {
+                // Sets the sitemap URL for the HTML document
+                byte[] result = apiInstance.EditHtmlHtmlSetSitemapUrl(sitemapUrl, inputFile, inputFileUrl);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling EditHtmlApi.EditHtmlHtmlSetSitemapUrl: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sitemapUrl** | **string**| The HTML sitemap URL to set. | 
+ **inputFile** | **System.IO.Stream**| Optional: Input file to perform the operation on. | [optional] 
+ **inputFileUrl** | **string**| Optional: URL of a file to operate on as input. | [optional] 
+
+### Return type
+
+**byte[]**
 
 ### Authorization
 

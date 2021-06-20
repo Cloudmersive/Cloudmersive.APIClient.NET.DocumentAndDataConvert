@@ -308,8 +308,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="quality">Quality level for the images in the PDF, ranging from 0.0 (low quality) to 1.0 (high quality); default is 0.3 (optional)</param>
         /// <returns>byte[]</returns>
-        byte[] EditPdfReduceFileSize (System.IO.Stream inputFile);
+        byte[] EditPdfReduceFileSize (System.IO.Stream inputFile, decimal? quality = null);
 
         /// <summary>
         /// Reduce the file size and optimize a PDF
@@ -319,8 +320,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="quality">Quality level for the images in the PDF, ranging from 0.0 (low quality) to 1.0 (high quality); default is 0.3 (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
-        ApiResponse<byte[]> EditPdfReduceFileSizeWithHttpInfo (System.IO.Stream inputFile);
+        ApiResponse<byte[]> EditPdfReduceFileSizeWithHttpInfo (System.IO.Stream inputFile, decimal? quality = null);
         /// <summary>
         /// Remove all PDF annotations, including comments in the document
         /// </summary>
@@ -838,8 +840,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="quality">Quality level for the images in the PDF, ranging from 0.0 (low quality) to 1.0 (high quality); default is 0.3 (optional)</param>
         /// <returns>Task of byte[]</returns>
-        System.Threading.Tasks.Task<byte[]> EditPdfReduceFileSizeAsync (System.IO.Stream inputFile);
+        System.Threading.Tasks.Task<byte[]> EditPdfReduceFileSizeAsync (System.IO.Stream inputFile, decimal? quality = null);
 
         /// <summary>
         /// Reduce the file size and optimize a PDF
@@ -849,8 +852,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="quality">Quality level for the images in the PDF, ranging from 0.0 (low quality) to 1.0 (high quality); default is 0.3 (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfReduceFileSizeAsyncWithHttpInfo (System.IO.Stream inputFile);
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfReduceFileSizeAsyncWithHttpInfo (System.IO.Stream inputFile, decimal? quality = null);
         /// <summary>
         /// Remove all PDF annotations, including comments in the document
         /// </summary>
@@ -3075,10 +3079,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="quality">Quality level for the images in the PDF, ranging from 0.0 (low quality) to 1.0 (high quality); default is 0.3 (optional)</param>
         /// <returns>byte[]</returns>
-        public byte[] EditPdfReduceFileSize (System.IO.Stream inputFile)
+        public byte[] EditPdfReduceFileSize (System.IO.Stream inputFile, decimal? quality = null)
         {
-             ApiResponse<byte[]> localVarResponse = EditPdfReduceFileSizeWithHttpInfo(inputFile);
+             ApiResponse<byte[]> localVarResponse = EditPdfReduceFileSizeWithHttpInfo(inputFile, quality);
              return localVarResponse.Data;
         }
 
@@ -3087,8 +3092,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="quality">Quality level for the images in the PDF, ranging from 0.0 (low quality) to 1.0 (high quality); default is 0.3 (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
-        public ApiResponse< byte[] > EditPdfReduceFileSizeWithHttpInfo (System.IO.Stream inputFile)
+        public ApiResponse< byte[] > EditPdfReduceFileSizeWithHttpInfo (System.IO.Stream inputFile, decimal? quality = null)
         {
             // verify the required parameter 'inputFile' is set
             if (inputFile == null)
@@ -3116,6 +3122,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (quality != null) localVarHeaderParams.Add("quality", this.Configuration.ApiClient.ParameterToString(quality)); // header parameter
             if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
 
             // authentication (Apikey) required
@@ -3147,10 +3154,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="quality">Quality level for the images in the PDF, ranging from 0.0 (low quality) to 1.0 (high quality); default is 0.3 (optional)</param>
         /// <returns>Task of byte[]</returns>
-        public async System.Threading.Tasks.Task<byte[]> EditPdfReduceFileSizeAsync (System.IO.Stream inputFile)
+        public async System.Threading.Tasks.Task<byte[]> EditPdfReduceFileSizeAsync (System.IO.Stream inputFile, decimal? quality = null)
         {
-             ApiResponse<byte[]> localVarResponse = await EditPdfReduceFileSizeAsyncWithHttpInfo(inputFile);
+             ApiResponse<byte[]> localVarResponse = await EditPdfReduceFileSizeAsyncWithHttpInfo(inputFile, quality);
              return localVarResponse.Data;
 
         }
@@ -3160,8 +3168,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="quality">Quality level for the images in the PDF, ranging from 0.0 (low quality) to 1.0 (high quality); default is 0.3 (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfReduceFileSizeAsyncWithHttpInfo (System.IO.Stream inputFile)
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfReduceFileSizeAsyncWithHttpInfo (System.IO.Stream inputFile, decimal? quality = null)
         {
             // verify the required parameter 'inputFile' is set
             if (inputFile == null)
@@ -3189,6 +3198,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (quality != null) localVarHeaderParams.Add("quality", this.Configuration.ApiClient.ParameterToString(quality)); // header parameter
             if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
 
             // authentication (Apikey) required

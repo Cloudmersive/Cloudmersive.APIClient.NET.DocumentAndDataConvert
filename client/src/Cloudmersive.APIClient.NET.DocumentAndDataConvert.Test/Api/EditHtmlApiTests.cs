@@ -65,6 +65,20 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
 
         
         /// <summary>
+        /// Test EditHtmlHtmlAppendHeaderTag
+        /// </summary>
+        [Test]
+        public void EditHtmlHtmlAppendHeaderTagTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string htmlTag = null;
+            //System.IO.Stream inputFile = null;
+            //string inputFileUrl = null;
+            //var response = instance.EditHtmlHtmlAppendHeaderTag(htmlTag, inputFile, inputFileUrl);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
         /// Test EditHtmlHtmlAppendHeading
         /// </summary>
         [Test]
@@ -144,6 +158,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test EditHtmlHtmlGetLanguage
+        /// </summary>
+        [Test]
+        public void EditHtmlHtmlGetLanguageTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //string inputFileUrl = null;
+            //var response = instance.EditHtmlHtmlGetLanguage(inputFile, inputFileUrl);
+            //Assert.IsInstanceOf<HtmlGetLanguageResult> (response, "response is HtmlGetLanguageResult");
+        }
+        
+        /// <summary>
         /// Test EditHtmlHtmlGetLinks
         /// </summary>
         [Test]
@@ -155,6 +182,74 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //string baseUrl = null;
             //var response = instance.EditHtmlHtmlGetLinks(inputFile, inputFileUrl, baseUrl);
             //Assert.IsInstanceOf<HtmlGetLinksResponse> (response, "response is HtmlGetLinksResponse");
+        }
+        
+        /// <summary>
+        /// Test EditHtmlHtmlGetRelCanonical
+        /// </summary>
+        [Test]
+        public void EditHtmlHtmlGetRelCanonicalTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //string inputFileUrl = null;
+            //var response = instance.EditHtmlHtmlGetRelCanonical(inputFile, inputFileUrl);
+            //Assert.IsInstanceOf<HtmlGetRelCanonicalUrlResult> (response, "response is HtmlGetRelCanonicalUrlResult");
+        }
+        
+        /// <summary>
+        /// Test EditHtmlHtmlGetSitemap
+        /// </summary>
+        [Test]
+        public void EditHtmlHtmlGetSitemapTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //string inputFileUrl = null;
+            //var response = instance.EditHtmlHtmlGetSitemap(inputFile, inputFileUrl);
+            //Assert.IsInstanceOf<HtmlGetSitemapUrlResult> (response, "response is HtmlGetSitemapUrlResult");
+        }
+        
+        /// <summary>
+        /// Test EditHtmlHtmlSetLanguage
+        /// </summary>
+        [Test]
+        public void EditHtmlHtmlSetLanguageTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string languageCode = null;
+            //System.IO.Stream inputFile = null;
+            //string inputFileUrl = null;
+            //var response = instance.EditHtmlHtmlSetLanguage(languageCode, inputFile, inputFileUrl);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
+        /// Test EditHtmlHtmlSetRelCanonical
+        /// </summary>
+        [Test]
+        public void EditHtmlHtmlSetRelCanonicalTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string canonicalUrl = null;
+            //System.IO.Stream inputFile = null;
+            //string inputFileUrl = null;
+            //var response = instance.EditHtmlHtmlSetRelCanonical(canonicalUrl, inputFile, inputFileUrl);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
+        /// Test EditHtmlHtmlSetSitemapUrl
+        /// </summary>
+        [Test]
+        public void EditHtmlHtmlSetSitemapUrlTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string sitemapUrl = null;
+            //System.IO.Stream inputFile = null;
+            //string inputFileUrl = null;
+            //var response = instance.EditHtmlHtmlSetSitemapUrl(sitemapUrl, inputFile, inputFileUrl);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
     }

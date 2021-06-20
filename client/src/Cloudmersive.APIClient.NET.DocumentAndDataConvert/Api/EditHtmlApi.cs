@@ -25,6 +25,31 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Append an HTML tag to the HEAD section of an HTML Document
+        /// </summary>
+        /// <remarks>
+        /// Appends an HTML tag to the HEAD section of an HTML document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="htmlTag">The HTML tag to append.</param>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>byte[]</returns>
+        byte[] EditHtmlHtmlAppendHeaderTag (string htmlTag, System.IO.Stream inputFile = null, string inputFileUrl = null);
+
+        /// <summary>
+        /// Append an HTML tag to the HEAD section of an HTML Document
+        /// </summary>
+        /// <remarks>
+        /// Appends an HTML tag to the HEAD section of an HTML document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="htmlTag">The HTML tag to append.</param>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> EditHtmlHtmlAppendHeaderTagWithHttpInfo (string htmlTag, System.IO.Stream inputFile = null, string inputFileUrl = null);
+        /// <summary>
         /// Append a Heading to an HTML Document
         /// </summary>
         /// <remarks>
@@ -168,6 +193,29 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> EditHtmlHtmlCreateBlankDocumentWithHttpInfo (string title = null, string cssUrl = null, string cssInline = null, string javascriptUrl = null, string javascriptInline = null);
         /// <summary>
+        /// Gets the language for the HTML document
+        /// </summary>
+        /// <remarks>
+        /// Retrieves the language code (e.g. \&quot;en\&quot; or \&quot;de\&quot;) of an HTML document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>HtmlGetLanguageResult</returns>
+        HtmlGetLanguageResult EditHtmlHtmlGetLanguage (System.IO.Stream inputFile = null, string inputFileUrl = null);
+
+        /// <summary>
+        /// Gets the language for the HTML document
+        /// </summary>
+        /// <remarks>
+        /// Retrieves the language code (e.g. \&quot;en\&quot; or \&quot;de\&quot;) of an HTML document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>ApiResponse of HtmlGetLanguageResult</returns>
+        ApiResponse<HtmlGetLanguageResult> EditHtmlHtmlGetLanguageWithHttpInfo (System.IO.Stream inputFile = null, string inputFileUrl = null);
+        /// <summary>
         /// Extract resolved link URLs from HTML File
         /// </summary>
         /// <remarks>
@@ -192,8 +240,154 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="baseUrl">Optional: Base URL of the page, such as https://mydomain.com (optional)</param>
         /// <returns>ApiResponse of HtmlGetLinksResponse</returns>
         ApiResponse<HtmlGetLinksResponse> EditHtmlHtmlGetLinksWithHttpInfo (System.IO.Stream inputFile = null, string inputFileUrl = null, string baseUrl = null);
+        /// <summary>
+        /// Gets the rel canonical URL for the HTML document
+        /// </summary>
+        /// <remarks>
+        /// Gets the rel canonical URL of an HTML document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>HtmlGetRelCanonicalUrlResult</returns>
+        HtmlGetRelCanonicalUrlResult EditHtmlHtmlGetRelCanonical (System.IO.Stream inputFile = null, string inputFileUrl = null);
+
+        /// <summary>
+        /// Gets the rel canonical URL for the HTML document
+        /// </summary>
+        /// <remarks>
+        /// Gets the rel canonical URL of an HTML document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>ApiResponse of HtmlGetRelCanonicalUrlResult</returns>
+        ApiResponse<HtmlGetRelCanonicalUrlResult> EditHtmlHtmlGetRelCanonicalWithHttpInfo (System.IO.Stream inputFile = null, string inputFileUrl = null);
+        /// <summary>
+        /// Gets the sitemap URL for the HTML document
+        /// </summary>
+        /// <remarks>
+        /// Gets the sitemap link URL of an HTML document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>HtmlGetSitemapUrlResult</returns>
+        HtmlGetSitemapUrlResult EditHtmlHtmlGetSitemap (System.IO.Stream inputFile = null, string inputFileUrl = null);
+
+        /// <summary>
+        /// Gets the sitemap URL for the HTML document
+        /// </summary>
+        /// <remarks>
+        /// Gets the sitemap link URL of an HTML document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>ApiResponse of HtmlGetSitemapUrlResult</returns>
+        ApiResponse<HtmlGetSitemapUrlResult> EditHtmlHtmlGetSitemapWithHttpInfo (System.IO.Stream inputFile = null, string inputFileUrl = null);
+        /// <summary>
+        /// Sets the language for the HTML document
+        /// </summary>
+        /// <remarks>
+        /// Sets the language code of an HTML document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">The HTML langauge code to set.</param>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>byte[]</returns>
+        byte[] EditHtmlHtmlSetLanguage (string languageCode, System.IO.Stream inputFile = null, string inputFileUrl = null);
+
+        /// <summary>
+        /// Sets the language for the HTML document
+        /// </summary>
+        /// <remarks>
+        /// Sets the language code of an HTML document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">The HTML langauge code to set.</param>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> EditHtmlHtmlSetLanguageWithHttpInfo (string languageCode, System.IO.Stream inputFile = null, string inputFileUrl = null);
+        /// <summary>
+        /// Sets the rel canonical URL for the HTML document
+        /// </summary>
+        /// <remarks>
+        /// Sets the rel canonical URL of an HTML document.  This is useful for telling search engines and other indexers which pages are duplicates of eachother; any pages with the rel&#x3D;canonical tag will be treated as duplicates of the canonical URL.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="canonicalUrl">The HTML canonical URL to set.</param>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>byte[]</returns>
+        byte[] EditHtmlHtmlSetRelCanonical (string canonicalUrl, System.IO.Stream inputFile = null, string inputFileUrl = null);
+
+        /// <summary>
+        /// Sets the rel canonical URL for the HTML document
+        /// </summary>
+        /// <remarks>
+        /// Sets the rel canonical URL of an HTML document.  This is useful for telling search engines and other indexers which pages are duplicates of eachother; any pages with the rel&#x3D;canonical tag will be treated as duplicates of the canonical URL.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="canonicalUrl">The HTML canonical URL to set.</param>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> EditHtmlHtmlSetRelCanonicalWithHttpInfo (string canonicalUrl, System.IO.Stream inputFile = null, string inputFileUrl = null);
+        /// <summary>
+        /// Sets the sitemap URL for the HTML document
+        /// </summary>
+        /// <remarks>
+        /// Sets the sitemap URL of an HTML document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sitemapUrl">The HTML sitemap URL to set.</param>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>byte[]</returns>
+        byte[] EditHtmlHtmlSetSitemapUrl (string sitemapUrl, System.IO.Stream inputFile = null, string inputFileUrl = null);
+
+        /// <summary>
+        /// Sets the sitemap URL for the HTML document
+        /// </summary>
+        /// <remarks>
+        /// Sets the sitemap URL of an HTML document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sitemapUrl">The HTML sitemap URL to set.</param>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> EditHtmlHtmlSetSitemapUrlWithHttpInfo (string sitemapUrl, System.IO.Stream inputFile = null, string inputFileUrl = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// Append an HTML tag to the HEAD section of an HTML Document
+        /// </summary>
+        /// <remarks>
+        /// Appends an HTML tag to the HEAD section of an HTML document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="htmlTag">The HTML tag to append.</param>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> EditHtmlHtmlAppendHeaderTagAsync (string htmlTag, System.IO.Stream inputFile = null, string inputFileUrl = null);
+
+        /// <summary>
+        /// Append an HTML tag to the HEAD section of an HTML Document
+        /// </summary>
+        /// <remarks>
+        /// Appends an HTML tag to the HEAD section of an HTML document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="htmlTag">The HTML tag to append.</param>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditHtmlHtmlAppendHeaderTagAsyncWithHttpInfo (string htmlTag, System.IO.Stream inputFile = null, string inputFileUrl = null);
         /// <summary>
         /// Append a Heading to an HTML Document
         /// </summary>
@@ -338,6 +532,29 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> EditHtmlHtmlCreateBlankDocumentAsyncWithHttpInfo (string title = null, string cssUrl = null, string cssInline = null, string javascriptUrl = null, string javascriptInline = null);
         /// <summary>
+        /// Gets the language for the HTML document
+        /// </summary>
+        /// <remarks>
+        /// Retrieves the language code (e.g. \&quot;en\&quot; or \&quot;de\&quot;) of an HTML document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>Task of HtmlGetLanguageResult</returns>
+        System.Threading.Tasks.Task<HtmlGetLanguageResult> EditHtmlHtmlGetLanguageAsync (System.IO.Stream inputFile = null, string inputFileUrl = null);
+
+        /// <summary>
+        /// Gets the language for the HTML document
+        /// </summary>
+        /// <remarks>
+        /// Retrieves the language code (e.g. \&quot;en\&quot; or \&quot;de\&quot;) of an HTML document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>Task of ApiResponse (HtmlGetLanguageResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<HtmlGetLanguageResult>> EditHtmlHtmlGetLanguageAsyncWithHttpInfo (System.IO.Stream inputFile = null, string inputFileUrl = null);
+        /// <summary>
         /// Extract resolved link URLs from HTML File
         /// </summary>
         /// <remarks>
@@ -362,6 +579,127 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="baseUrl">Optional: Base URL of the page, such as https://mydomain.com (optional)</param>
         /// <returns>Task of ApiResponse (HtmlGetLinksResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<HtmlGetLinksResponse>> EditHtmlHtmlGetLinksAsyncWithHttpInfo (System.IO.Stream inputFile = null, string inputFileUrl = null, string baseUrl = null);
+        /// <summary>
+        /// Gets the rel canonical URL for the HTML document
+        /// </summary>
+        /// <remarks>
+        /// Gets the rel canonical URL of an HTML document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>Task of HtmlGetRelCanonicalUrlResult</returns>
+        System.Threading.Tasks.Task<HtmlGetRelCanonicalUrlResult> EditHtmlHtmlGetRelCanonicalAsync (System.IO.Stream inputFile = null, string inputFileUrl = null);
+
+        /// <summary>
+        /// Gets the rel canonical URL for the HTML document
+        /// </summary>
+        /// <remarks>
+        /// Gets the rel canonical URL of an HTML document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>Task of ApiResponse (HtmlGetRelCanonicalUrlResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<HtmlGetRelCanonicalUrlResult>> EditHtmlHtmlGetRelCanonicalAsyncWithHttpInfo (System.IO.Stream inputFile = null, string inputFileUrl = null);
+        /// <summary>
+        /// Gets the sitemap URL for the HTML document
+        /// </summary>
+        /// <remarks>
+        /// Gets the sitemap link URL of an HTML document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>Task of HtmlGetSitemapUrlResult</returns>
+        System.Threading.Tasks.Task<HtmlGetSitemapUrlResult> EditHtmlHtmlGetSitemapAsync (System.IO.Stream inputFile = null, string inputFileUrl = null);
+
+        /// <summary>
+        /// Gets the sitemap URL for the HTML document
+        /// </summary>
+        /// <remarks>
+        /// Gets the sitemap link URL of an HTML document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>Task of ApiResponse (HtmlGetSitemapUrlResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<HtmlGetSitemapUrlResult>> EditHtmlHtmlGetSitemapAsyncWithHttpInfo (System.IO.Stream inputFile = null, string inputFileUrl = null);
+        /// <summary>
+        /// Sets the language for the HTML document
+        /// </summary>
+        /// <remarks>
+        /// Sets the language code of an HTML document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">The HTML langauge code to set.</param>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> EditHtmlHtmlSetLanguageAsync (string languageCode, System.IO.Stream inputFile = null, string inputFileUrl = null);
+
+        /// <summary>
+        /// Sets the language for the HTML document
+        /// </summary>
+        /// <remarks>
+        /// Sets the language code of an HTML document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">The HTML langauge code to set.</param>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditHtmlHtmlSetLanguageAsyncWithHttpInfo (string languageCode, System.IO.Stream inputFile = null, string inputFileUrl = null);
+        /// <summary>
+        /// Sets the rel canonical URL for the HTML document
+        /// </summary>
+        /// <remarks>
+        /// Sets the rel canonical URL of an HTML document.  This is useful for telling search engines and other indexers which pages are duplicates of eachother; any pages with the rel&#x3D;canonical tag will be treated as duplicates of the canonical URL.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="canonicalUrl">The HTML canonical URL to set.</param>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> EditHtmlHtmlSetRelCanonicalAsync (string canonicalUrl, System.IO.Stream inputFile = null, string inputFileUrl = null);
+
+        /// <summary>
+        /// Sets the rel canonical URL for the HTML document
+        /// </summary>
+        /// <remarks>
+        /// Sets the rel canonical URL of an HTML document.  This is useful for telling search engines and other indexers which pages are duplicates of eachother; any pages with the rel&#x3D;canonical tag will be treated as duplicates of the canonical URL.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="canonicalUrl">The HTML canonical URL to set.</param>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditHtmlHtmlSetRelCanonicalAsyncWithHttpInfo (string canonicalUrl, System.IO.Stream inputFile = null, string inputFileUrl = null);
+        /// <summary>
+        /// Sets the sitemap URL for the HTML document
+        /// </summary>
+        /// <remarks>
+        /// Sets the sitemap URL of an HTML document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sitemapUrl">The HTML sitemap URL to set.</param>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> EditHtmlHtmlSetSitemapUrlAsync (string sitemapUrl, System.IO.Stream inputFile = null, string inputFileUrl = null);
+
+        /// <summary>
+        /// Sets the sitemap URL for the HTML document
+        /// </summary>
+        /// <remarks>
+        /// Sets the sitemap URL of an HTML document.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sitemapUrl">The HTML sitemap URL to set.</param>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditHtmlHtmlSetSitemapUrlAsyncWithHttpInfo (string sitemapUrl, System.IO.Stream inputFile = null, string inputFileUrl = null);
         #endregion Asynchronous Operations
     }
 
@@ -460,6 +798,167 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// Append an HTML tag to the HEAD section of an HTML Document Appends an HTML tag to the HEAD section of an HTML document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="htmlTag">The HTML tag to append.</param>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>byte[]</returns>
+        public byte[] EditHtmlHtmlAppendHeaderTag (string htmlTag, System.IO.Stream inputFile = null, string inputFileUrl = null)
+        {
+             ApiResponse<byte[]> localVarResponse = EditHtmlHtmlAppendHeaderTagWithHttpInfo(htmlTag, inputFile, inputFileUrl);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Append an HTML tag to the HEAD section of an HTML Document Appends an HTML tag to the HEAD section of an HTML document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="htmlTag">The HTML tag to append.</param>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > EditHtmlHtmlAppendHeaderTagWithHttpInfo (string htmlTag, System.IO.Stream inputFile = null, string inputFileUrl = null)
+        {
+            // verify the required parameter 'htmlTag' is set
+            if (htmlTag == null)
+                throw new ApiException(400, "Missing required parameter 'htmlTag' when calling EditHtmlApi->EditHtmlHtmlAppendHeaderTag");
+
+            var localVarPath = "/convert/edit/html/head/append/tag";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFileUrl != null) localVarHeaderParams.Add("inputFileUrl", this.Configuration.ApiClient.ParameterToString(inputFileUrl)); // header parameter
+            if (htmlTag != null) localVarHeaderParams.Add("htmlTag", this.Configuration.ApiClient.ParameterToString(htmlTag)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditHtmlHtmlAppendHeaderTag", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Append an HTML tag to the HEAD section of an HTML Document Appends an HTML tag to the HEAD section of an HTML document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="htmlTag">The HTML tag to append.</param>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> EditHtmlHtmlAppendHeaderTagAsync (string htmlTag, System.IO.Stream inputFile = null, string inputFileUrl = null)
+        {
+             ApiResponse<byte[]> localVarResponse = await EditHtmlHtmlAppendHeaderTagAsyncWithHttpInfo(htmlTag, inputFile, inputFileUrl);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Append an HTML tag to the HEAD section of an HTML Document Appends an HTML tag to the HEAD section of an HTML document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="htmlTag">The HTML tag to append.</param>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditHtmlHtmlAppendHeaderTagAsyncWithHttpInfo (string htmlTag, System.IO.Stream inputFile = null, string inputFileUrl = null)
+        {
+            // verify the required parameter 'htmlTag' is set
+            if (htmlTag == null)
+                throw new ApiException(400, "Missing required parameter 'htmlTag' when calling EditHtmlApi->EditHtmlHtmlAppendHeaderTag");
+
+            var localVarPath = "/convert/edit/html/head/append/tag";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFileUrl != null) localVarHeaderParams.Add("inputFileUrl", this.Configuration.ApiClient.ParameterToString(inputFileUrl)); // header parameter
+            if (htmlTag != null) localVarHeaderParams.Add("htmlTag", this.Configuration.ApiClient.ParameterToString(htmlTag)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditHtmlHtmlAppendHeaderTag", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
@@ -1312,6 +1811,155 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
+        /// Gets the language for the HTML document Retrieves the language code (e.g. \&quot;en\&quot; or \&quot;de\&quot;) of an HTML document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>HtmlGetLanguageResult</returns>
+        public HtmlGetLanguageResult EditHtmlHtmlGetLanguage (System.IO.Stream inputFile = null, string inputFileUrl = null)
+        {
+             ApiResponse<HtmlGetLanguageResult> localVarResponse = EditHtmlHtmlGetLanguageWithHttpInfo(inputFile, inputFileUrl);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets the language for the HTML document Retrieves the language code (e.g. \&quot;en\&quot; or \&quot;de\&quot;) of an HTML document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>ApiResponse of HtmlGetLanguageResult</returns>
+        public ApiResponse< HtmlGetLanguageResult > EditHtmlHtmlGetLanguageWithHttpInfo (System.IO.Stream inputFile = null, string inputFileUrl = null)
+        {
+
+            var localVarPath = "/convert/edit/html/head/get/language";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFileUrl != null) localVarHeaderParams.Add("inputFileUrl", this.Configuration.ApiClient.ParameterToString(inputFileUrl)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditHtmlHtmlGetLanguage", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<HtmlGetLanguageResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (HtmlGetLanguageResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(HtmlGetLanguageResult)));
+        }
+
+        /// <summary>
+        /// Gets the language for the HTML document Retrieves the language code (e.g. \&quot;en\&quot; or \&quot;de\&quot;) of an HTML document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>Task of HtmlGetLanguageResult</returns>
+        public async System.Threading.Tasks.Task<HtmlGetLanguageResult> EditHtmlHtmlGetLanguageAsync (System.IO.Stream inputFile = null, string inputFileUrl = null)
+        {
+             ApiResponse<HtmlGetLanguageResult> localVarResponse = await EditHtmlHtmlGetLanguageAsyncWithHttpInfo(inputFile, inputFileUrl);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets the language for the HTML document Retrieves the language code (e.g. \&quot;en\&quot; or \&quot;de\&quot;) of an HTML document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>Task of ApiResponse (HtmlGetLanguageResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<HtmlGetLanguageResult>> EditHtmlHtmlGetLanguageAsyncWithHttpInfo (System.IO.Stream inputFile = null, string inputFileUrl = null)
+        {
+
+            var localVarPath = "/convert/edit/html/head/get/language";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFileUrl != null) localVarHeaderParams.Add("inputFileUrl", this.Configuration.ApiClient.ParameterToString(inputFileUrl)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditHtmlHtmlGetLanguage", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<HtmlGetLanguageResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (HtmlGetLanguageResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(HtmlGetLanguageResult)));
+        }
+
+        /// <summary>
         /// Extract resolved link URLs from HTML File Extracts the resolved link URLs, fully-qualified if possible, from an input HTML file.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1464,6 +2112,787 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<HtmlGetLinksResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (HtmlGetLinksResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(HtmlGetLinksResponse)));
+        }
+
+        /// <summary>
+        /// Gets the rel canonical URL for the HTML document Gets the rel canonical URL of an HTML document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>HtmlGetRelCanonicalUrlResult</returns>
+        public HtmlGetRelCanonicalUrlResult EditHtmlHtmlGetRelCanonical (System.IO.Stream inputFile = null, string inputFileUrl = null)
+        {
+             ApiResponse<HtmlGetRelCanonicalUrlResult> localVarResponse = EditHtmlHtmlGetRelCanonicalWithHttpInfo(inputFile, inputFileUrl);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets the rel canonical URL for the HTML document Gets the rel canonical URL of an HTML document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>ApiResponse of HtmlGetRelCanonicalUrlResult</returns>
+        public ApiResponse< HtmlGetRelCanonicalUrlResult > EditHtmlHtmlGetRelCanonicalWithHttpInfo (System.IO.Stream inputFile = null, string inputFileUrl = null)
+        {
+
+            var localVarPath = "/convert/edit/html/head/get/rel-canonical-url";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFileUrl != null) localVarHeaderParams.Add("inputFileUrl", this.Configuration.ApiClient.ParameterToString(inputFileUrl)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditHtmlHtmlGetRelCanonical", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<HtmlGetRelCanonicalUrlResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (HtmlGetRelCanonicalUrlResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(HtmlGetRelCanonicalUrlResult)));
+        }
+
+        /// <summary>
+        /// Gets the rel canonical URL for the HTML document Gets the rel canonical URL of an HTML document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>Task of HtmlGetRelCanonicalUrlResult</returns>
+        public async System.Threading.Tasks.Task<HtmlGetRelCanonicalUrlResult> EditHtmlHtmlGetRelCanonicalAsync (System.IO.Stream inputFile = null, string inputFileUrl = null)
+        {
+             ApiResponse<HtmlGetRelCanonicalUrlResult> localVarResponse = await EditHtmlHtmlGetRelCanonicalAsyncWithHttpInfo(inputFile, inputFileUrl);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets the rel canonical URL for the HTML document Gets the rel canonical URL of an HTML document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>Task of ApiResponse (HtmlGetRelCanonicalUrlResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<HtmlGetRelCanonicalUrlResult>> EditHtmlHtmlGetRelCanonicalAsyncWithHttpInfo (System.IO.Stream inputFile = null, string inputFileUrl = null)
+        {
+
+            var localVarPath = "/convert/edit/html/head/get/rel-canonical-url";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFileUrl != null) localVarHeaderParams.Add("inputFileUrl", this.Configuration.ApiClient.ParameterToString(inputFileUrl)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditHtmlHtmlGetRelCanonical", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<HtmlGetRelCanonicalUrlResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (HtmlGetRelCanonicalUrlResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(HtmlGetRelCanonicalUrlResult)));
+        }
+
+        /// <summary>
+        /// Gets the sitemap URL for the HTML document Gets the sitemap link URL of an HTML document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>HtmlGetSitemapUrlResult</returns>
+        public HtmlGetSitemapUrlResult EditHtmlHtmlGetSitemap (System.IO.Stream inputFile = null, string inputFileUrl = null)
+        {
+             ApiResponse<HtmlGetSitemapUrlResult> localVarResponse = EditHtmlHtmlGetSitemapWithHttpInfo(inputFile, inputFileUrl);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets the sitemap URL for the HTML document Gets the sitemap link URL of an HTML document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>ApiResponse of HtmlGetSitemapUrlResult</returns>
+        public ApiResponse< HtmlGetSitemapUrlResult > EditHtmlHtmlGetSitemapWithHttpInfo (System.IO.Stream inputFile = null, string inputFileUrl = null)
+        {
+
+            var localVarPath = "/convert/edit/html/head/get/sitemap-url";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFileUrl != null) localVarHeaderParams.Add("inputFileUrl", this.Configuration.ApiClient.ParameterToString(inputFileUrl)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditHtmlHtmlGetSitemap", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<HtmlGetSitemapUrlResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (HtmlGetSitemapUrlResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(HtmlGetSitemapUrlResult)));
+        }
+
+        /// <summary>
+        /// Gets the sitemap URL for the HTML document Gets the sitemap link URL of an HTML document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>Task of HtmlGetSitemapUrlResult</returns>
+        public async System.Threading.Tasks.Task<HtmlGetSitemapUrlResult> EditHtmlHtmlGetSitemapAsync (System.IO.Stream inputFile = null, string inputFileUrl = null)
+        {
+             ApiResponse<HtmlGetSitemapUrlResult> localVarResponse = await EditHtmlHtmlGetSitemapAsyncWithHttpInfo(inputFile, inputFileUrl);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets the sitemap URL for the HTML document Gets the sitemap link URL of an HTML document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>Task of ApiResponse (HtmlGetSitemapUrlResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<HtmlGetSitemapUrlResult>> EditHtmlHtmlGetSitemapAsyncWithHttpInfo (System.IO.Stream inputFile = null, string inputFileUrl = null)
+        {
+
+            var localVarPath = "/convert/edit/html/head/get/sitemap-url";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFileUrl != null) localVarHeaderParams.Add("inputFileUrl", this.Configuration.ApiClient.ParameterToString(inputFileUrl)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditHtmlHtmlGetSitemap", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<HtmlGetSitemapUrlResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (HtmlGetSitemapUrlResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(HtmlGetSitemapUrlResult)));
+        }
+
+        /// <summary>
+        /// Sets the language for the HTML document Sets the language code of an HTML document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">The HTML langauge code to set.</param>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>byte[]</returns>
+        public byte[] EditHtmlHtmlSetLanguage (string languageCode, System.IO.Stream inputFile = null, string inputFileUrl = null)
+        {
+             ApiResponse<byte[]> localVarResponse = EditHtmlHtmlSetLanguageWithHttpInfo(languageCode, inputFile, inputFileUrl);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Sets the language for the HTML document Sets the language code of an HTML document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">The HTML langauge code to set.</param>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > EditHtmlHtmlSetLanguageWithHttpInfo (string languageCode, System.IO.Stream inputFile = null, string inputFileUrl = null)
+        {
+            // verify the required parameter 'languageCode' is set
+            if (languageCode == null)
+                throw new ApiException(400, "Missing required parameter 'languageCode' when calling EditHtmlApi->EditHtmlHtmlSetLanguage");
+
+            var localVarPath = "/convert/edit/html/head/set/language";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFileUrl != null) localVarHeaderParams.Add("inputFileUrl", this.Configuration.ApiClient.ParameterToString(inputFileUrl)); // header parameter
+            if (languageCode != null) localVarHeaderParams.Add("languageCode", this.Configuration.ApiClient.ParameterToString(languageCode)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditHtmlHtmlSetLanguage", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Sets the language for the HTML document Sets the language code of an HTML document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">The HTML langauge code to set.</param>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> EditHtmlHtmlSetLanguageAsync (string languageCode, System.IO.Stream inputFile = null, string inputFileUrl = null)
+        {
+             ApiResponse<byte[]> localVarResponse = await EditHtmlHtmlSetLanguageAsyncWithHttpInfo(languageCode, inputFile, inputFileUrl);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Sets the language for the HTML document Sets the language code of an HTML document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">The HTML langauge code to set.</param>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditHtmlHtmlSetLanguageAsyncWithHttpInfo (string languageCode, System.IO.Stream inputFile = null, string inputFileUrl = null)
+        {
+            // verify the required parameter 'languageCode' is set
+            if (languageCode == null)
+                throw new ApiException(400, "Missing required parameter 'languageCode' when calling EditHtmlApi->EditHtmlHtmlSetLanguage");
+
+            var localVarPath = "/convert/edit/html/head/set/language";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFileUrl != null) localVarHeaderParams.Add("inputFileUrl", this.Configuration.ApiClient.ParameterToString(inputFileUrl)); // header parameter
+            if (languageCode != null) localVarHeaderParams.Add("languageCode", this.Configuration.ApiClient.ParameterToString(languageCode)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditHtmlHtmlSetLanguage", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Sets the rel canonical URL for the HTML document Sets the rel canonical URL of an HTML document.  This is useful for telling search engines and other indexers which pages are duplicates of eachother; any pages with the rel&#x3D;canonical tag will be treated as duplicates of the canonical URL.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="canonicalUrl">The HTML canonical URL to set.</param>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>byte[]</returns>
+        public byte[] EditHtmlHtmlSetRelCanonical (string canonicalUrl, System.IO.Stream inputFile = null, string inputFileUrl = null)
+        {
+             ApiResponse<byte[]> localVarResponse = EditHtmlHtmlSetRelCanonicalWithHttpInfo(canonicalUrl, inputFile, inputFileUrl);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Sets the rel canonical URL for the HTML document Sets the rel canonical URL of an HTML document.  This is useful for telling search engines and other indexers which pages are duplicates of eachother; any pages with the rel&#x3D;canonical tag will be treated as duplicates of the canonical URL.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="canonicalUrl">The HTML canonical URL to set.</param>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > EditHtmlHtmlSetRelCanonicalWithHttpInfo (string canonicalUrl, System.IO.Stream inputFile = null, string inputFileUrl = null)
+        {
+            // verify the required parameter 'canonicalUrl' is set
+            if (canonicalUrl == null)
+                throw new ApiException(400, "Missing required parameter 'canonicalUrl' when calling EditHtmlApi->EditHtmlHtmlSetRelCanonical");
+
+            var localVarPath = "/convert/edit/html/head/set/rel-canonical-url";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFileUrl != null) localVarHeaderParams.Add("inputFileUrl", this.Configuration.ApiClient.ParameterToString(inputFileUrl)); // header parameter
+            if (canonicalUrl != null) localVarHeaderParams.Add("canonicalUrl", this.Configuration.ApiClient.ParameterToString(canonicalUrl)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditHtmlHtmlSetRelCanonical", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Sets the rel canonical URL for the HTML document Sets the rel canonical URL of an HTML document.  This is useful for telling search engines and other indexers which pages are duplicates of eachother; any pages with the rel&#x3D;canonical tag will be treated as duplicates of the canonical URL.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="canonicalUrl">The HTML canonical URL to set.</param>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> EditHtmlHtmlSetRelCanonicalAsync (string canonicalUrl, System.IO.Stream inputFile = null, string inputFileUrl = null)
+        {
+             ApiResponse<byte[]> localVarResponse = await EditHtmlHtmlSetRelCanonicalAsyncWithHttpInfo(canonicalUrl, inputFile, inputFileUrl);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Sets the rel canonical URL for the HTML document Sets the rel canonical URL of an HTML document.  This is useful for telling search engines and other indexers which pages are duplicates of eachother; any pages with the rel&#x3D;canonical tag will be treated as duplicates of the canonical URL.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="canonicalUrl">The HTML canonical URL to set.</param>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditHtmlHtmlSetRelCanonicalAsyncWithHttpInfo (string canonicalUrl, System.IO.Stream inputFile = null, string inputFileUrl = null)
+        {
+            // verify the required parameter 'canonicalUrl' is set
+            if (canonicalUrl == null)
+                throw new ApiException(400, "Missing required parameter 'canonicalUrl' when calling EditHtmlApi->EditHtmlHtmlSetRelCanonical");
+
+            var localVarPath = "/convert/edit/html/head/set/rel-canonical-url";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFileUrl != null) localVarHeaderParams.Add("inputFileUrl", this.Configuration.ApiClient.ParameterToString(inputFileUrl)); // header parameter
+            if (canonicalUrl != null) localVarHeaderParams.Add("canonicalUrl", this.Configuration.ApiClient.ParameterToString(canonicalUrl)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditHtmlHtmlSetRelCanonical", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Sets the sitemap URL for the HTML document Sets the sitemap URL of an HTML document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sitemapUrl">The HTML sitemap URL to set.</param>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>byte[]</returns>
+        public byte[] EditHtmlHtmlSetSitemapUrl (string sitemapUrl, System.IO.Stream inputFile = null, string inputFileUrl = null)
+        {
+             ApiResponse<byte[]> localVarResponse = EditHtmlHtmlSetSitemapUrlWithHttpInfo(sitemapUrl, inputFile, inputFileUrl);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Sets the sitemap URL for the HTML document Sets the sitemap URL of an HTML document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sitemapUrl">The HTML sitemap URL to set.</param>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > EditHtmlHtmlSetSitemapUrlWithHttpInfo (string sitemapUrl, System.IO.Stream inputFile = null, string inputFileUrl = null)
+        {
+            // verify the required parameter 'sitemapUrl' is set
+            if (sitemapUrl == null)
+                throw new ApiException(400, "Missing required parameter 'sitemapUrl' when calling EditHtmlApi->EditHtmlHtmlSetSitemapUrl");
+
+            var localVarPath = "/convert/edit/html/head/set/sitemap-url";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFileUrl != null) localVarHeaderParams.Add("inputFileUrl", this.Configuration.ApiClient.ParameterToString(inputFileUrl)); // header parameter
+            if (sitemapUrl != null) localVarHeaderParams.Add("sitemapUrl", this.Configuration.ApiClient.ParameterToString(sitemapUrl)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditHtmlHtmlSetSitemapUrl", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Sets the sitemap URL for the HTML document Sets the sitemap URL of an HTML document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sitemapUrl">The HTML sitemap URL to set.</param>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> EditHtmlHtmlSetSitemapUrlAsync (string sitemapUrl, System.IO.Stream inputFile = null, string inputFileUrl = null)
+        {
+             ApiResponse<byte[]> localVarResponse = await EditHtmlHtmlSetSitemapUrlAsyncWithHttpInfo(sitemapUrl, inputFile, inputFileUrl);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Sets the sitemap URL for the HTML document Sets the sitemap URL of an HTML document.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sitemapUrl">The HTML sitemap URL to set.</param>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input. (optional)</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditHtmlHtmlSetSitemapUrlAsyncWithHttpInfo (string sitemapUrl, System.IO.Stream inputFile = null, string inputFileUrl = null)
+        {
+            // verify the required parameter 'sitemapUrl' is set
+            if (sitemapUrl == null)
+                throw new ApiException(400, "Missing required parameter 'sitemapUrl' when calling EditHtmlApi->EditHtmlHtmlSetSitemapUrl");
+
+            var localVarPath = "/convert/edit/html/head/set/sitemap-url";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFileUrl != null) localVarHeaderParams.Add("inputFileUrl", this.Configuration.ApiClient.ParameterToString(inputFileUrl)); // header parameter
+            if (sitemapUrl != null) localVarHeaderParams.Add("sitemapUrl", this.Configuration.ApiClient.ParameterToString(sitemapUrl)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditHtmlHtmlSetSitemapUrl", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
     }
