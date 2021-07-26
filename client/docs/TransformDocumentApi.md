@@ -5,6 +5,7 @@ All URIs are relative to *https://api.cloudmersive.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**TransformDocumentDocxReplace**](TransformDocumentApi.md#transformdocumentdocxreplace) | **POST** /convert/transform/docx/replace-all | Replace string in Word DOCX document
+[**TransformDocumentDocxTableFillIn**](TransformDocumentApi.md#transformdocumentdocxtablefillin) | **POST** /convert/transform/docx/table/fill/data | Fill in data in a table in a Word DOCX document
 [**TransformDocumentPptxReplace**](TransformDocumentApi.md#transformdocumentpptxreplace) | **POST** /convert/transform/pptx/replace-all | Replace string in PowerPoint PPTX presentation
 
 
@@ -78,6 +79,72 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/octet-stream
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="transformdocumentdocxtablefillin"></a>
+# **TransformDocumentDocxTableFillIn**
+> byte[] TransformDocumentDocxTableFillIn (DocxTableTableFillRequest request)
+
+Fill in data in a table in a Word DOCX document
+
+Replace placeholder rows ina  table in an Office Word Document (docx) using one or more templates
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class TransformDocumentDocxTableFillInExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new TransformDocumentApi();
+            var request = new DocxTableTableFillRequest(); // DocxTableTableFillRequest | 
+
+            try
+            {
+                // Fill in data in a table in a Word DOCX document
+                byte[] result = apiInstance.TransformDocumentDocxTableFillIn(request);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TransformDocumentApi.TransformDocumentDocxTableFillIn: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**DocxTableTableFillRequest**](DocxTableTableFillRequest.md)|  | 
+
+### Return type
+
+**byte[]**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/octet-stream
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

@@ -19,6 +19,7 @@ using NUnit.Framework;
 
 using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
 using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
 
 namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
 {
@@ -76,6 +77,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //string inputFileUrl = null;
             //bool? matchCase = null;
             //var response = instance.TransformDocumentDocxReplace(matchString, replaceString, inputFile, inputFileUrl, matchCase);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
+        /// Test TransformDocumentDocxTableFillIn
+        /// </summary>
+        [Test]
+        public void TransformDocumentDocxTableFillInTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //DocxTableTableFillRequest request = null;
+            //var response = instance.TransformDocumentDocxTableFillIn(request);
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         

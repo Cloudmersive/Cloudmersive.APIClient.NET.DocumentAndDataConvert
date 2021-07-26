@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 This C# SDK is for the [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api):
 
 - API version: v1
-- SDK version: 3.4.7
+- SDK version: 3.4.8
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -346,6 +346,7 @@ Class | Method | HTTP request | Description
 *SplitDocumentApi* | [**SplitDocumentTxtByString**](docs/SplitDocumentApi.md#splitdocumenttxtbystring) | **POST** /convert/split/txt/by-string | Split a single Text file (txt) by a string delimiter
 *SplitDocumentApi* | [**SplitDocumentXlsx**](docs/SplitDocumentApi.md#splitdocumentxlsx) | **POST** /convert/split/xlsx | Split a single Excel XLSX into Separate Worksheets
 *TransformDocumentApi* | [**TransformDocumentDocxReplace**](docs/TransformDocumentApi.md#transformdocumentdocxreplace) | **POST** /convert/transform/docx/replace-all | Replace string in Word DOCX document
+*TransformDocumentApi* | [**TransformDocumentDocxTableFillIn**](docs/TransformDocumentApi.md#transformdocumentdocxtablefillin) | **POST** /convert/transform/docx/table/fill/data | Fill in data in a table in a Word DOCX document
 *TransformDocumentApi* | [**TransformDocumentPptxReplace**](docs/TransformDocumentApi.md#transformdocumentpptxreplace) | **POST** /convert/transform/pptx/replace-all | Replace string in PowerPoint PPTX presentation
 *ValidateDocumentApi* | [**ValidateDocumentAutodetectValidation**](docs/ValidateDocumentApi.md#validatedocumentautodetectvalidation) | **POST** /convert/validate/autodetect | Autodetect content type and validate
 *ValidateDocumentApi* | [**ValidateDocumentCsvValidation**](docs/ValidateDocumentApi.md#validatedocumentcsvvalidation) | **POST** /convert/validate/csv | Validate a CSV file document (CSV)
@@ -448,6 +449,9 @@ Class | Method | HTTP request | Description
  - [Model.DocxTable](docs/DocxTable.md)
  - [Model.DocxTableCell](docs/DocxTableCell.md)
  - [Model.DocxTableRow](docs/DocxTableRow.md)
+ - [Model.DocxTableTableFillRequest](docs/DocxTableTableFillRequest.md)
+ - [Model.DocxTableTableFillTableCell](docs/DocxTableTableFillTableCell.md)
+ - [Model.DocxTableTableFillTableRow](docs/DocxTableTableFillTableRow.md)
  - [Model.DocxTemplateApplicationRequest](docs/DocxTemplateApplicationRequest.md)
  - [Model.DocxTemplateOperation](docs/DocxTemplateOperation.md)
  - [Model.DocxText](docs/DocxText.md)
