@@ -81,6 +81,22 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test TransformDocumentDocxReplaceEditSession
+        /// </summary>
+        [Test]
+        public void TransformDocumentDocxReplaceEditSessionTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string matchString = null;
+            //string replaceString = null;
+            //System.IO.Stream inputFile = null;
+            //string inputFileUrl = null;
+            //bool? matchCase = null;
+            //var response = instance.TransformDocumentDocxReplaceEditSession(matchString, replaceString, inputFile, inputFileUrl, matchCase);
+            //Assert.IsInstanceOf<DocumentTransformEditSession> (response, "response is DocumentTransformEditSession");
+        }
+        
+        /// <summary>
         /// Test TransformDocumentDocxTableFillIn
         /// </summary>
         [Test]
@@ -90,6 +106,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //DocxTableTableFillRequest request = null;
             //var response = instance.TransformDocumentDocxTableFillIn(request);
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
+        /// Test TransformDocumentDocxTableFillInEditSession
+        /// </summary>
+        [Test]
+        public void TransformDocumentDocxTableFillInEditSessionTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //DocxTableTableFillRequest request = null;
+            //var response = instance.TransformDocumentDocxTableFillInEditSession(request);
+            //Assert.IsInstanceOf<DocumentTransformEditSession> (response, "response is DocumentTransformEditSession");
         }
         
         /// <summary>

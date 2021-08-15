@@ -25,7 +25,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Replace string in Word DOCX document
+        /// Replace string in Word DOCX document, return result
         /// </summary>
         /// <remarks>
         /// Replace all instances of a string in an Office Word Document (docx)
@@ -40,7 +40,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         byte[] TransformDocumentDocxReplace (string matchString, string replaceString, System.IO.Stream inputFile = null, string inputFileUrl = null, bool? matchCase = null);
 
         /// <summary>
-        /// Replace string in Word DOCX document
+        /// Replace string in Word DOCX document, return result
         /// </summary>
         /// <remarks>
         /// Replace all instances of a string in an Office Word Document (docx)
@@ -54,7 +54,36 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> TransformDocumentDocxReplaceWithHttpInfo (string matchString, string replaceString, System.IO.Stream inputFile = null, string inputFileUrl = null, bool? matchCase = null);
         /// <summary>
-        /// Fill in data in a table in a Word DOCX document
+        /// Replace string in Word DOCX document, return edit session
+        /// </summary>
+        /// <remarks>
+        /// Replace all instances of a string in an Office Word Document (docx).  Returns an edit session URL so that you can chain together multiple edit operations without having to send the entire document contents back and forth multiple times.  Call the Finish Editing API to retrieve the final document once editing is complete.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="matchString">String to search for and match against, to be replaced</param>
+        /// <param name="replaceString">String to replace the matched values with</param>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public). (optional)</param>
+        /// <param name="matchCase">Optional: True if the case should be matched, false for case insensitive match. Default is false. (optional)</param>
+        /// <returns>DocumentTransformEditSession</returns>
+        DocumentTransformEditSession TransformDocumentDocxReplaceEditSession (string matchString, string replaceString, System.IO.Stream inputFile = null, string inputFileUrl = null, bool? matchCase = null);
+
+        /// <summary>
+        /// Replace string in Word DOCX document, return edit session
+        /// </summary>
+        /// <remarks>
+        /// Replace all instances of a string in an Office Word Document (docx).  Returns an edit session URL so that you can chain together multiple edit operations without having to send the entire document contents back and forth multiple times.  Call the Finish Editing API to retrieve the final document once editing is complete.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="matchString">String to search for and match against, to be replaced</param>
+        /// <param name="replaceString">String to replace the matched values with</param>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public). (optional)</param>
+        /// <param name="matchCase">Optional: True if the case should be matched, false for case insensitive match. Default is false. (optional)</param>
+        /// <returns>ApiResponse of DocumentTransformEditSession</returns>
+        ApiResponse<DocumentTransformEditSession> TransformDocumentDocxReplaceEditSessionWithHttpInfo (string matchString, string replaceString, System.IO.Stream inputFile = null, string inputFileUrl = null, bool? matchCase = null);
+        /// <summary>
+        /// Fill in data in a table in a Word DOCX document, return result
         /// </summary>
         /// <remarks>
         /// Replace placeholder rows ina  table in an Office Word Document (docx) using one or more templates
@@ -65,7 +94,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         byte[] TransformDocumentDocxTableFillIn (DocxTableTableFillRequest request);
 
         /// <summary>
-        /// Fill in data in a table in a Word DOCX document
+        /// Fill in data in a table in a Word DOCX document, return result
         /// </summary>
         /// <remarks>
         /// Replace placeholder rows ina  table in an Office Word Document (docx) using one or more templates
@@ -75,7 +104,28 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> TransformDocumentDocxTableFillInWithHttpInfo (DocxTableTableFillRequest request);
         /// <summary>
-        /// Replace string in PowerPoint PPTX presentation
+        /// Fill in data in a table in a Word DOCX document, return edit session
+        /// </summary>
+        /// <remarks>
+        /// Replace placeholder rows ina  table in an Office Word Document (docx) using one or more templates.  Returns an edit session URL so that you can chain together multiple edit operations without having to send the entire document contents back and forth multiple times.  Call the Finish Editing API to retrieve the final document once editing is complete.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>DocumentTransformEditSession</returns>
+        DocumentTransformEditSession TransformDocumentDocxTableFillInEditSession (DocxTableTableFillRequest request);
+
+        /// <summary>
+        /// Fill in data in a table in a Word DOCX document, return edit session
+        /// </summary>
+        /// <remarks>
+        /// Replace placeholder rows ina  table in an Office Word Document (docx) using one or more templates.  Returns an edit session URL so that you can chain together multiple edit operations without having to send the entire document contents back and forth multiple times.  Call the Finish Editing API to retrieve the final document once editing is complete.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>ApiResponse of DocumentTransformEditSession</returns>
+        ApiResponse<DocumentTransformEditSession> TransformDocumentDocxTableFillInEditSessionWithHttpInfo (DocxTableTableFillRequest request);
+        /// <summary>
+        /// Replace string in PowerPoint PPTX presentation, return result
         /// </summary>
         /// <remarks>
         /// Replace all instances of a string in an Office PowerPoint Document (pptx)
@@ -90,7 +140,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         byte[] TransformDocumentPptxReplace (string matchString, string replaceString, System.IO.Stream inputFile = null, string inputFileUrl = null, bool? matchCase = null);
 
         /// <summary>
-        /// Replace string in PowerPoint PPTX presentation
+        /// Replace string in PowerPoint PPTX presentation, return result
         /// </summary>
         /// <remarks>
         /// Replace all instances of a string in an Office PowerPoint Document (pptx)
@@ -106,7 +156,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Replace string in Word DOCX document
+        /// Replace string in Word DOCX document, return result
         /// </summary>
         /// <remarks>
         /// Replace all instances of a string in an Office Word Document (docx)
@@ -121,7 +171,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<byte[]> TransformDocumentDocxReplaceAsync (string matchString, string replaceString, System.IO.Stream inputFile = null, string inputFileUrl = null, bool? matchCase = null);
 
         /// <summary>
-        /// Replace string in Word DOCX document
+        /// Replace string in Word DOCX document, return result
         /// </summary>
         /// <remarks>
         /// Replace all instances of a string in an Office Word Document (docx)
@@ -135,7 +185,36 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> TransformDocumentDocxReplaceAsyncWithHttpInfo (string matchString, string replaceString, System.IO.Stream inputFile = null, string inputFileUrl = null, bool? matchCase = null);
         /// <summary>
-        /// Fill in data in a table in a Word DOCX document
+        /// Replace string in Word DOCX document, return edit session
+        /// </summary>
+        /// <remarks>
+        /// Replace all instances of a string in an Office Word Document (docx).  Returns an edit session URL so that you can chain together multiple edit operations without having to send the entire document contents back and forth multiple times.  Call the Finish Editing API to retrieve the final document once editing is complete.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="matchString">String to search for and match against, to be replaced</param>
+        /// <param name="replaceString">String to replace the matched values with</param>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public). (optional)</param>
+        /// <param name="matchCase">Optional: True if the case should be matched, false for case insensitive match. Default is false. (optional)</param>
+        /// <returns>Task of DocumentTransformEditSession</returns>
+        System.Threading.Tasks.Task<DocumentTransformEditSession> TransformDocumentDocxReplaceEditSessionAsync (string matchString, string replaceString, System.IO.Stream inputFile = null, string inputFileUrl = null, bool? matchCase = null);
+
+        /// <summary>
+        /// Replace string in Word DOCX document, return edit session
+        /// </summary>
+        /// <remarks>
+        /// Replace all instances of a string in an Office Word Document (docx).  Returns an edit session URL so that you can chain together multiple edit operations without having to send the entire document contents back and forth multiple times.  Call the Finish Editing API to retrieve the final document once editing is complete.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="matchString">String to search for and match against, to be replaced</param>
+        /// <param name="replaceString">String to replace the matched values with</param>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public). (optional)</param>
+        /// <param name="matchCase">Optional: True if the case should be matched, false for case insensitive match. Default is false. (optional)</param>
+        /// <returns>Task of ApiResponse (DocumentTransformEditSession)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DocumentTransformEditSession>> TransformDocumentDocxReplaceEditSessionAsyncWithHttpInfo (string matchString, string replaceString, System.IO.Stream inputFile = null, string inputFileUrl = null, bool? matchCase = null);
+        /// <summary>
+        /// Fill in data in a table in a Word DOCX document, return result
         /// </summary>
         /// <remarks>
         /// Replace placeholder rows ina  table in an Office Word Document (docx) using one or more templates
@@ -146,7 +225,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<byte[]> TransformDocumentDocxTableFillInAsync (DocxTableTableFillRequest request);
 
         /// <summary>
-        /// Fill in data in a table in a Word DOCX document
+        /// Fill in data in a table in a Word DOCX document, return result
         /// </summary>
         /// <remarks>
         /// Replace placeholder rows ina  table in an Office Word Document (docx) using one or more templates
@@ -156,7 +235,28 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> TransformDocumentDocxTableFillInAsyncWithHttpInfo (DocxTableTableFillRequest request);
         /// <summary>
-        /// Replace string in PowerPoint PPTX presentation
+        /// Fill in data in a table in a Word DOCX document, return edit session
+        /// </summary>
+        /// <remarks>
+        /// Replace placeholder rows ina  table in an Office Word Document (docx) using one or more templates.  Returns an edit session URL so that you can chain together multiple edit operations without having to send the entire document contents back and forth multiple times.  Call the Finish Editing API to retrieve the final document once editing is complete.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>Task of DocumentTransformEditSession</returns>
+        System.Threading.Tasks.Task<DocumentTransformEditSession> TransformDocumentDocxTableFillInEditSessionAsync (DocxTableTableFillRequest request);
+
+        /// <summary>
+        /// Fill in data in a table in a Word DOCX document, return edit session
+        /// </summary>
+        /// <remarks>
+        /// Replace placeholder rows ina  table in an Office Word Document (docx) using one or more templates.  Returns an edit session URL so that you can chain together multiple edit operations without having to send the entire document contents back and forth multiple times.  Call the Finish Editing API to retrieve the final document once editing is complete.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>Task of ApiResponse (DocumentTransformEditSession)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DocumentTransformEditSession>> TransformDocumentDocxTableFillInEditSessionAsyncWithHttpInfo (DocxTableTableFillRequest request);
+        /// <summary>
+        /// Replace string in PowerPoint PPTX presentation, return result
         /// </summary>
         /// <remarks>
         /// Replace all instances of a string in an Office PowerPoint Document (pptx)
@@ -171,7 +271,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<byte[]> TransformDocumentPptxReplaceAsync (string matchString, string replaceString, System.IO.Stream inputFile = null, string inputFileUrl = null, bool? matchCase = null);
 
         /// <summary>
-        /// Replace string in PowerPoint PPTX presentation
+        /// Replace string in PowerPoint PPTX presentation, return result
         /// </summary>
         /// <remarks>
         /// Replace all instances of a string in an Office PowerPoint Document (pptx)
@@ -285,7 +385,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Replace string in Word DOCX document Replace all instances of a string in an Office Word Document (docx)
+        /// Replace string in Word DOCX document, return result Replace all instances of a string in an Office Word Document (docx)
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="matchString">String to search for and match against, to be replaced</param>
@@ -301,7 +401,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Replace string in Word DOCX document Replace all instances of a string in an Office Word Document (docx)
+        /// Replace string in Word DOCX document, return result Replace all instances of a string in an Office Word Document (docx)
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="matchString">String to search for and match against, to be replaced</param>
@@ -371,7 +471,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Replace string in Word DOCX document Replace all instances of a string in an Office Word Document (docx)
+        /// Replace string in Word DOCX document, return result Replace all instances of a string in an Office Word Document (docx)
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="matchString">String to search for and match against, to be replaced</param>
@@ -388,7 +488,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Replace string in Word DOCX document Replace all instances of a string in an Office Word Document (docx)
+        /// Replace string in Word DOCX document, return result Replace all instances of a string in an Office Word Document (docx)
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="matchString">String to search for and match against, to be replaced</param>
@@ -458,7 +558,186 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Fill in data in a table in a Word DOCX document Replace placeholder rows ina  table in an Office Word Document (docx) using one or more templates
+        /// Replace string in Word DOCX document, return edit session Replace all instances of a string in an Office Word Document (docx).  Returns an edit session URL so that you can chain together multiple edit operations without having to send the entire document contents back and forth multiple times.  Call the Finish Editing API to retrieve the final document once editing is complete.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="matchString">String to search for and match against, to be replaced</param>
+        /// <param name="replaceString">String to replace the matched values with</param>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public). (optional)</param>
+        /// <param name="matchCase">Optional: True if the case should be matched, false for case insensitive match. Default is false. (optional)</param>
+        /// <returns>DocumentTransformEditSession</returns>
+        public DocumentTransformEditSession TransformDocumentDocxReplaceEditSession (string matchString, string replaceString, System.IO.Stream inputFile = null, string inputFileUrl = null, bool? matchCase = null)
+        {
+             ApiResponse<DocumentTransformEditSession> localVarResponse = TransformDocumentDocxReplaceEditSessionWithHttpInfo(matchString, replaceString, inputFile, inputFileUrl, matchCase);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Replace string in Word DOCX document, return edit session Replace all instances of a string in an Office Word Document (docx).  Returns an edit session URL so that you can chain together multiple edit operations without having to send the entire document contents back and forth multiple times.  Call the Finish Editing API to retrieve the final document once editing is complete.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="matchString">String to search for and match against, to be replaced</param>
+        /// <param name="replaceString">String to replace the matched values with</param>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public). (optional)</param>
+        /// <param name="matchCase">Optional: True if the case should be matched, false for case insensitive match. Default is false. (optional)</param>
+        /// <returns>ApiResponse of DocumentTransformEditSession</returns>
+        public ApiResponse< DocumentTransformEditSession > TransformDocumentDocxReplaceEditSessionWithHttpInfo (string matchString, string replaceString, System.IO.Stream inputFile = null, string inputFileUrl = null, bool? matchCase = null)
+        {
+            // verify the required parameter 'matchString' is set
+            if (matchString == null)
+                throw new ApiException(400, "Missing required parameter 'matchString' when calling TransformDocumentApi->TransformDocumentDocxReplaceEditSession");
+            // verify the required parameter 'replaceString' is set
+            if (replaceString == null)
+                throw new ApiException(400, "Missing required parameter 'replaceString' when calling TransformDocumentApi->TransformDocumentDocxReplaceEditSession");
+
+            var localVarPath = "/convert/transform/docx/replace-all/edit-session";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFileUrl != null) localVarHeaderParams.Add("inputFileUrl", this.Configuration.ApiClient.ParameterToString(inputFileUrl)); // header parameter
+            if (matchString != null) localVarHeaderParams.Add("matchString", this.Configuration.ApiClient.ParameterToString(matchString)); // header parameter
+            if (replaceString != null) localVarHeaderParams.Add("replaceString", this.Configuration.ApiClient.ParameterToString(replaceString)); // header parameter
+            if (matchCase != null) localVarHeaderParams.Add("matchCase", this.Configuration.ApiClient.ParameterToString(matchCase)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TransformDocumentDocxReplaceEditSession", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DocumentTransformEditSession>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DocumentTransformEditSession) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentTransformEditSession)));
+        }
+
+        /// <summary>
+        /// Replace string in Word DOCX document, return edit session Replace all instances of a string in an Office Word Document (docx).  Returns an edit session URL so that you can chain together multiple edit operations without having to send the entire document contents back and forth multiple times.  Call the Finish Editing API to retrieve the final document once editing is complete.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="matchString">String to search for and match against, to be replaced</param>
+        /// <param name="replaceString">String to replace the matched values with</param>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public). (optional)</param>
+        /// <param name="matchCase">Optional: True if the case should be matched, false for case insensitive match. Default is false. (optional)</param>
+        /// <returns>Task of DocumentTransformEditSession</returns>
+        public async System.Threading.Tasks.Task<DocumentTransformEditSession> TransformDocumentDocxReplaceEditSessionAsync (string matchString, string replaceString, System.IO.Stream inputFile = null, string inputFileUrl = null, bool? matchCase = null)
+        {
+             ApiResponse<DocumentTransformEditSession> localVarResponse = await TransformDocumentDocxReplaceEditSessionAsyncWithHttpInfo(matchString, replaceString, inputFile, inputFileUrl, matchCase);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Replace string in Word DOCX document, return edit session Replace all instances of a string in an Office Word Document (docx).  Returns an edit session URL so that you can chain together multiple edit operations without having to send the entire document contents back and forth multiple times.  Call the Finish Editing API to retrieve the final document once editing is complete.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="matchString">String to search for and match against, to be replaced</param>
+        /// <param name="replaceString">String to replace the matched values with</param>
+        /// <param name="inputFile">Optional: Input file to perform the operation on. (optional)</param>
+        /// <param name="inputFileUrl">Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public). (optional)</param>
+        /// <param name="matchCase">Optional: True if the case should be matched, false for case insensitive match. Default is false. (optional)</param>
+        /// <returns>Task of ApiResponse (DocumentTransformEditSession)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DocumentTransformEditSession>> TransformDocumentDocxReplaceEditSessionAsyncWithHttpInfo (string matchString, string replaceString, System.IO.Stream inputFile = null, string inputFileUrl = null, bool? matchCase = null)
+        {
+            // verify the required parameter 'matchString' is set
+            if (matchString == null)
+                throw new ApiException(400, "Missing required parameter 'matchString' when calling TransformDocumentApi->TransformDocumentDocxReplaceEditSession");
+            // verify the required parameter 'replaceString' is set
+            if (replaceString == null)
+                throw new ApiException(400, "Missing required parameter 'replaceString' when calling TransformDocumentApi->TransformDocumentDocxReplaceEditSession");
+
+            var localVarPath = "/convert/transform/docx/replace-all/edit-session";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFileUrl != null) localVarHeaderParams.Add("inputFileUrl", this.Configuration.ApiClient.ParameterToString(inputFileUrl)); // header parameter
+            if (matchString != null) localVarHeaderParams.Add("matchString", this.Configuration.ApiClient.ParameterToString(matchString)); // header parameter
+            if (replaceString != null) localVarHeaderParams.Add("replaceString", this.Configuration.ApiClient.ParameterToString(replaceString)); // header parameter
+            if (matchCase != null) localVarHeaderParams.Add("matchCase", this.Configuration.ApiClient.ParameterToString(matchCase)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TransformDocumentDocxReplaceEditSession", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DocumentTransformEditSession>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DocumentTransformEditSession) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentTransformEditSession)));
+        }
+
+        /// <summary>
+        /// Fill in data in a table in a Word DOCX document, return result Replace placeholder rows ina  table in an Office Word Document (docx) using one or more templates
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
@@ -470,7 +749,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Fill in data in a table in a Word DOCX document Replace placeholder rows ina  table in an Office Word Document (docx) using one or more templates
+        /// Fill in data in a table in a Word DOCX document, return result Replace placeholder rows ina  table in an Office Word Document (docx) using one or more templates
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
@@ -541,7 +820,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Fill in data in a table in a Word DOCX document Replace placeholder rows ina  table in an Office Word Document (docx) using one or more templates
+        /// Fill in data in a table in a Word DOCX document, return result Replace placeholder rows ina  table in an Office Word Document (docx) using one or more templates
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
@@ -554,7 +833,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Fill in data in a table in a Word DOCX document Replace placeholder rows ina  table in an Office Word Document (docx) using one or more templates
+        /// Fill in data in a table in a Word DOCX document, return result Replace placeholder rows ina  table in an Office Word Document (docx) using one or more templates
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
@@ -625,7 +904,180 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Replace string in PowerPoint PPTX presentation Replace all instances of a string in an Office PowerPoint Document (pptx)
+        /// Fill in data in a table in a Word DOCX document, return edit session Replace placeholder rows ina  table in an Office Word Document (docx) using one or more templates.  Returns an edit session URL so that you can chain together multiple edit operations without having to send the entire document contents back and forth multiple times.  Call the Finish Editing API to retrieve the final document once editing is complete.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>DocumentTransformEditSession</returns>
+        public DocumentTransformEditSession TransformDocumentDocxTableFillInEditSession (DocxTableTableFillRequest request)
+        {
+             ApiResponse<DocumentTransformEditSession> localVarResponse = TransformDocumentDocxTableFillInEditSessionWithHttpInfo(request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Fill in data in a table in a Word DOCX document, return edit session Replace placeholder rows ina  table in an Office Word Document (docx) using one or more templates.  Returns an edit session URL so that you can chain together multiple edit operations without having to send the entire document contents back and forth multiple times.  Call the Finish Editing API to retrieve the final document once editing is complete.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>ApiResponse of DocumentTransformEditSession</returns>
+        public ApiResponse< DocumentTransformEditSession > TransformDocumentDocxTableFillInEditSessionWithHttpInfo (DocxTableTableFillRequest request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling TransformDocumentApi->TransformDocumentDocxTableFillInEditSession");
+
+            var localVarPath = "/convert/transform/docx/table/fill/data/edit-session";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TransformDocumentDocxTableFillInEditSession", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DocumentTransformEditSession>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DocumentTransformEditSession) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentTransformEditSession)));
+        }
+
+        /// <summary>
+        /// Fill in data in a table in a Word DOCX document, return edit session Replace placeholder rows ina  table in an Office Word Document (docx) using one or more templates.  Returns an edit session URL so that you can chain together multiple edit operations without having to send the entire document contents back and forth multiple times.  Call the Finish Editing API to retrieve the final document once editing is complete.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>Task of DocumentTransformEditSession</returns>
+        public async System.Threading.Tasks.Task<DocumentTransformEditSession> TransformDocumentDocxTableFillInEditSessionAsync (DocxTableTableFillRequest request)
+        {
+             ApiResponse<DocumentTransformEditSession> localVarResponse = await TransformDocumentDocxTableFillInEditSessionAsyncWithHttpInfo(request);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Fill in data in a table in a Word DOCX document, return edit session Replace placeholder rows ina  table in an Office Word Document (docx) using one or more templates.  Returns an edit session URL so that you can chain together multiple edit operations without having to send the entire document contents back and forth multiple times.  Call the Finish Editing API to retrieve the final document once editing is complete.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>Task of ApiResponse (DocumentTransformEditSession)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DocumentTransformEditSession>> TransformDocumentDocxTableFillInEditSessionAsyncWithHttpInfo (DocxTableTableFillRequest request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling TransformDocumentApi->TransformDocumentDocxTableFillInEditSession");
+
+            var localVarPath = "/convert/transform/docx/table/fill/data/edit-session";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TransformDocumentDocxTableFillInEditSession", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DocumentTransformEditSession>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DocumentTransformEditSession) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentTransformEditSession)));
+        }
+
+        /// <summary>
+        /// Replace string in PowerPoint PPTX presentation, return result Replace all instances of a string in an Office PowerPoint Document (pptx)
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="matchString">String to search for and match against, to be replaced</param>
@@ -641,7 +1093,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Replace string in PowerPoint PPTX presentation Replace all instances of a string in an Office PowerPoint Document (pptx)
+        /// Replace string in PowerPoint PPTX presentation, return result Replace all instances of a string in an Office PowerPoint Document (pptx)
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="matchString">String to search for and match against, to be replaced</param>
@@ -711,7 +1163,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Replace string in PowerPoint PPTX presentation Replace all instances of a string in an Office PowerPoint Document (pptx)
+        /// Replace string in PowerPoint PPTX presentation, return result Replace all instances of a string in an Office PowerPoint Document (pptx)
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="matchString">String to search for and match against, to be replaced</param>
@@ -728,7 +1180,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Replace string in PowerPoint PPTX presentation Replace all instances of a string in an Office PowerPoint Document (pptx)
+        /// Replace string in PowerPoint PPTX presentation, return result Replace all instances of a string in an Office PowerPoint Document (pptx)
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="matchString">String to search for and match against, to be replaced</param>

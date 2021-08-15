@@ -676,7 +676,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> EditDocumentDocxReplaceWithHttpInfo (ReplaceStringRequest reqConfig);
         /// <summary>
-        /// Replace multiple strings in Word DOCX document
+        /// Replace multiple strings in Word DOCX document, return result
         /// </summary>
         /// <remarks>
         /// Replace all instances of multiple strings in an Office Word Document (docx)
@@ -687,7 +687,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         byte[] EditDocumentDocxReplaceMulti (MultiReplaceStringRequest reqConfig);
 
         /// <summary>
-        /// Replace multiple strings in Word DOCX document
+        /// Replace multiple strings in Word DOCX document, return result
         /// </summary>
         /// <remarks>
         /// Replace all instances of multiple strings in an Office Word Document (docx)
@@ -696,6 +696,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="reqConfig">Document string replacement configuration input</param>
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> EditDocumentDocxReplaceMultiWithHttpInfo (MultiReplaceStringRequest reqConfig);
+        /// <summary>
+        /// Replace multiple strings in Word DOCX document, return edit session
+        /// </summary>
+        /// <remarks>
+        /// Replace all instances of multiple strings in an Office Word Document (docx).  Returns an edit session URL so that you can chain together multiple edit operations without having to send the entire document contents back and forth multiple times.  Call the Finish Editing API to retrieve the final document once editing is complete.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document string replacement configuration input</param>
+        /// <returns>DocumentEditingEditSession</returns>
+        DocumentEditingEditSession EditDocumentDocxReplaceMultiEditSession (MultiReplaceStringRequest reqConfig);
+
+        /// <summary>
+        /// Replace multiple strings in Word DOCX document, return edit session
+        /// </summary>
+        /// <remarks>
+        /// Replace all instances of multiple strings in an Office Word Document (docx).  Returns an edit session URL so that you can chain together multiple edit operations without having to send the entire document contents back and forth multiple times.  Call the Finish Editing API to retrieve the final document once editing is complete.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document string replacement configuration input</param>
+        /// <returns>ApiResponse of DocumentEditingEditSession</returns>
+        ApiResponse<DocumentEditingEditSession> EditDocumentDocxReplaceMultiEditSessionWithHttpInfo (MultiReplaceStringRequest reqConfig);
         /// <summary>
         /// Replace matching paragraphs in a Word DOCX document
         /// </summary>
@@ -2022,7 +2043,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDocumentDocxReplaceAsyncWithHttpInfo (ReplaceStringRequest reqConfig);
         /// <summary>
-        /// Replace multiple strings in Word DOCX document
+        /// Replace multiple strings in Word DOCX document, return result
         /// </summary>
         /// <remarks>
         /// Replace all instances of multiple strings in an Office Word Document (docx)
@@ -2033,7 +2054,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<byte[]> EditDocumentDocxReplaceMultiAsync (MultiReplaceStringRequest reqConfig);
 
         /// <summary>
-        /// Replace multiple strings in Word DOCX document
+        /// Replace multiple strings in Word DOCX document, return result
         /// </summary>
         /// <remarks>
         /// Replace all instances of multiple strings in an Office Word Document (docx)
@@ -2042,6 +2063,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="reqConfig">Document string replacement configuration input</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDocumentDocxReplaceMultiAsyncWithHttpInfo (MultiReplaceStringRequest reqConfig);
+        /// <summary>
+        /// Replace multiple strings in Word DOCX document, return edit session
+        /// </summary>
+        /// <remarks>
+        /// Replace all instances of multiple strings in an Office Word Document (docx).  Returns an edit session URL so that you can chain together multiple edit operations without having to send the entire document contents back and forth multiple times.  Call the Finish Editing API to retrieve the final document once editing is complete.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document string replacement configuration input</param>
+        /// <returns>Task of DocumentEditingEditSession</returns>
+        System.Threading.Tasks.Task<DocumentEditingEditSession> EditDocumentDocxReplaceMultiEditSessionAsync (MultiReplaceStringRequest reqConfig);
+
+        /// <summary>
+        /// Replace multiple strings in Word DOCX document, return edit session
+        /// </summary>
+        /// <remarks>
+        /// Replace all instances of multiple strings in an Office Word Document (docx).  Returns an edit session URL so that you can chain together multiple edit operations without having to send the entire document contents back and forth multiple times.  Call the Finish Editing API to retrieve the final document once editing is complete.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document string replacement configuration input</param>
+        /// <returns>Task of ApiResponse (DocumentEditingEditSession)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DocumentEditingEditSession>> EditDocumentDocxReplaceMultiEditSessionAsyncWithHttpInfo (MultiReplaceStringRequest reqConfig);
         /// <summary>
         /// Replace matching paragraphs in a Word DOCX document
         /// </summary>
@@ -8012,7 +8054,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Replace multiple strings in Word DOCX document Replace all instances of multiple strings in an Office Word Document (docx)
+        /// Replace multiple strings in Word DOCX document, return result Replace all instances of multiple strings in an Office Word Document (docx)
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reqConfig">Document string replacement configuration input</param>
@@ -8024,7 +8066,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Replace multiple strings in Word DOCX document Replace all instances of multiple strings in an Office Word Document (docx)
+        /// Replace multiple strings in Word DOCX document, return result Replace all instances of multiple strings in an Office Word Document (docx)
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reqConfig">Document string replacement configuration input</param>
@@ -8095,7 +8137,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Replace multiple strings in Word DOCX document Replace all instances of multiple strings in an Office Word Document (docx)
+        /// Replace multiple strings in Word DOCX document, return result Replace all instances of multiple strings in an Office Word Document (docx)
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reqConfig">Document string replacement configuration input</param>
@@ -8108,7 +8150,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Replace multiple strings in Word DOCX document Replace all instances of multiple strings in an Office Word Document (docx)
+        /// Replace multiple strings in Word DOCX document, return result Replace all instances of multiple strings in an Office Word Document (docx)
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reqConfig">Document string replacement configuration input</param>
@@ -8176,6 +8218,179 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Replace multiple strings in Word DOCX document, return edit session Replace all instances of multiple strings in an Office Word Document (docx).  Returns an edit session URL so that you can chain together multiple edit operations without having to send the entire document contents back and forth multiple times.  Call the Finish Editing API to retrieve the final document once editing is complete.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document string replacement configuration input</param>
+        /// <returns>DocumentEditingEditSession</returns>
+        public DocumentEditingEditSession EditDocumentDocxReplaceMultiEditSession (MultiReplaceStringRequest reqConfig)
+        {
+             ApiResponse<DocumentEditingEditSession> localVarResponse = EditDocumentDocxReplaceMultiEditSessionWithHttpInfo(reqConfig);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Replace multiple strings in Word DOCX document, return edit session Replace all instances of multiple strings in an Office Word Document (docx).  Returns an edit session URL so that you can chain together multiple edit operations without having to send the entire document contents back and forth multiple times.  Call the Finish Editing API to retrieve the final document once editing is complete.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document string replacement configuration input</param>
+        /// <returns>ApiResponse of DocumentEditingEditSession</returns>
+        public ApiResponse< DocumentEditingEditSession > EditDocumentDocxReplaceMultiEditSessionWithHttpInfo (MultiReplaceStringRequest reqConfig)
+        {
+            // verify the required parameter 'reqConfig' is set
+            if (reqConfig == null)
+                throw new ApiException(400, "Missing required parameter 'reqConfig' when calling EditDocumentApi->EditDocumentDocxReplaceMultiEditSession");
+
+            var localVarPath = "/convert/edit/docx/replace-all/multi/edit-session";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reqConfig; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentDocxReplaceMultiEditSession", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DocumentEditingEditSession>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DocumentEditingEditSession) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentEditingEditSession)));
+        }
+
+        /// <summary>
+        /// Replace multiple strings in Word DOCX document, return edit session Replace all instances of multiple strings in an Office Word Document (docx).  Returns an edit session URL so that you can chain together multiple edit operations without having to send the entire document contents back and forth multiple times.  Call the Finish Editing API to retrieve the final document once editing is complete.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document string replacement configuration input</param>
+        /// <returns>Task of DocumentEditingEditSession</returns>
+        public async System.Threading.Tasks.Task<DocumentEditingEditSession> EditDocumentDocxReplaceMultiEditSessionAsync (MultiReplaceStringRequest reqConfig)
+        {
+             ApiResponse<DocumentEditingEditSession> localVarResponse = await EditDocumentDocxReplaceMultiEditSessionAsyncWithHttpInfo(reqConfig);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Replace multiple strings in Word DOCX document, return edit session Replace all instances of multiple strings in an Office Word Document (docx).  Returns an edit session URL so that you can chain together multiple edit operations without having to send the entire document contents back and forth multiple times.  Call the Finish Editing API to retrieve the final document once editing is complete.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig">Document string replacement configuration input</param>
+        /// <returns>Task of ApiResponse (DocumentEditingEditSession)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DocumentEditingEditSession>> EditDocumentDocxReplaceMultiEditSessionAsyncWithHttpInfo (MultiReplaceStringRequest reqConfig)
+        {
+            // verify the required parameter 'reqConfig' is set
+            if (reqConfig == null)
+                throw new ApiException(400, "Missing required parameter 'reqConfig' when calling EditDocumentApi->EditDocumentDocxReplaceMultiEditSession");
+
+            var localVarPath = "/convert/edit/docx/replace-all/multi/edit-session";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reqConfig; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentDocxReplaceMultiEditSession", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DocumentEditingEditSession>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DocumentEditingEditSession) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentEditingEditSession)));
         }
 
         /// <summary>

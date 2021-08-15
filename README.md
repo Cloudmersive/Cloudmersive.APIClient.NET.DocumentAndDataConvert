@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 This C# SDK is for the [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api):
 
 - API version: v1
-- SDK version: 3.4.8
+- SDK version: 3.4.9
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -244,7 +244,8 @@ Class | Method | HTTP request | Description
 *EditDocumentApi* | [**EditDocumentDocxRemoveHeadersAndFooters**](docs/EditDocumentApi.md#editdocumentdocxremoveheadersandfooters) | **POST** /convert/edit/docx/remove-headers-and-footers | Remove headers and footers from Word DOCX document
 *EditDocumentApi* | [**EditDocumentDocxRemoveObject**](docs/EditDocumentApi.md#editdocumentdocxremoveobject) | **POST** /convert/edit/docx/remove-object | Delete any object in a Word DOCX document
 *EditDocumentApi* | [**EditDocumentDocxReplace**](docs/EditDocumentApi.md#editdocumentdocxreplace) | **POST** /convert/edit/docx/replace-all | Replace string in Word DOCX document
-*EditDocumentApi* | [**EditDocumentDocxReplaceMulti**](docs/EditDocumentApi.md#editdocumentdocxreplacemulti) | **POST** /convert/edit/docx/replace-all/multi | Replace multiple strings in Word DOCX document
+*EditDocumentApi* | [**EditDocumentDocxReplaceMulti**](docs/EditDocumentApi.md#editdocumentdocxreplacemulti) | **POST** /convert/edit/docx/replace-all/multi | Replace multiple strings in Word DOCX document, return result
+*EditDocumentApi* | [**EditDocumentDocxReplaceMultiEditSession**](docs/EditDocumentApi.md#editdocumentdocxreplacemultieditsession) | **POST** /convert/edit/docx/replace-all/multi/edit-session | Replace multiple strings in Word DOCX document, return edit session
 *EditDocumentApi* | [**EditDocumentDocxReplaceParagraph**](docs/EditDocumentApi.md#editdocumentdocxreplaceparagraph) | **POST** /convert/edit/docx/replace/paragraph | Replace matching paragraphs in a Word DOCX document
 *EditDocumentApi* | [**EditDocumentDocxSetCustomMetadataProperties**](docs/EditDocumentApi.md#editdocumentdocxsetcustommetadataproperties) | **POST** /convert/edit/docx/set-metadata/custom-property | Set custom property metadata properties in Word DOCX document
 *EditDocumentApi* | [**EditDocumentDocxSetFooter**](docs/EditDocumentApi.md#editdocumentdocxsetfooter) | **POST** /convert/edit/docx/set-footer | Set the footer in a Word DOCX document
@@ -345,9 +346,11 @@ Class | Method | HTTP request | Description
 *SplitDocumentApi* | [**SplitDocumentTxtByLine**](docs/SplitDocumentApi.md#splitdocumenttxtbyline) | **POST** /convert/split/txt/by-line | Split a single Text file (txt) into lines
 *SplitDocumentApi* | [**SplitDocumentTxtByString**](docs/SplitDocumentApi.md#splitdocumenttxtbystring) | **POST** /convert/split/txt/by-string | Split a single Text file (txt) by a string delimiter
 *SplitDocumentApi* | [**SplitDocumentXlsx**](docs/SplitDocumentApi.md#splitdocumentxlsx) | **POST** /convert/split/xlsx | Split a single Excel XLSX into Separate Worksheets
-*TransformDocumentApi* | [**TransformDocumentDocxReplace**](docs/TransformDocumentApi.md#transformdocumentdocxreplace) | **POST** /convert/transform/docx/replace-all | Replace string in Word DOCX document
-*TransformDocumentApi* | [**TransformDocumentDocxTableFillIn**](docs/TransformDocumentApi.md#transformdocumentdocxtablefillin) | **POST** /convert/transform/docx/table/fill/data | Fill in data in a table in a Word DOCX document
-*TransformDocumentApi* | [**TransformDocumentPptxReplace**](docs/TransformDocumentApi.md#transformdocumentpptxreplace) | **POST** /convert/transform/pptx/replace-all | Replace string in PowerPoint PPTX presentation
+*TransformDocumentApi* | [**TransformDocumentDocxReplace**](docs/TransformDocumentApi.md#transformdocumentdocxreplace) | **POST** /convert/transform/docx/replace-all | Replace string in Word DOCX document, return result
+*TransformDocumentApi* | [**TransformDocumentDocxReplaceEditSession**](docs/TransformDocumentApi.md#transformdocumentdocxreplaceeditsession) | **POST** /convert/transform/docx/replace-all/edit-session | Replace string in Word DOCX document, return edit session
+*TransformDocumentApi* | [**TransformDocumentDocxTableFillIn**](docs/TransformDocumentApi.md#transformdocumentdocxtablefillin) | **POST** /convert/transform/docx/table/fill/data | Fill in data in a table in a Word DOCX document, return result
+*TransformDocumentApi* | [**TransformDocumentDocxTableFillInEditSession**](docs/TransformDocumentApi.md#transformdocumentdocxtablefillineditsession) | **POST** /convert/transform/docx/table/fill/data/edit-session | Fill in data in a table in a Word DOCX document, return edit session
+*TransformDocumentApi* | [**TransformDocumentPptxReplace**](docs/TransformDocumentApi.md#transformdocumentpptxreplace) | **POST** /convert/transform/pptx/replace-all | Replace string in PowerPoint PPTX presentation, return result
 *ValidateDocumentApi* | [**ValidateDocumentAutodetectValidation**](docs/ValidateDocumentApi.md#validatedocumentautodetectvalidation) | **POST** /convert/validate/autodetect | Autodetect content type and validate
 *ValidateDocumentApi* | [**ValidateDocumentCsvValidation**](docs/ValidateDocumentApi.md#validatedocumentcsvvalidation) | **POST** /convert/validate/csv | Validate a CSV file document (CSV)
 *ValidateDocumentApi* | [**ValidateDocumentDocxValidation**](docs/ValidateDocumentApi.md#validatedocumentdocxvalidation) | **POST** /convert/validate/docx | Validate a Word document (DOCX)
@@ -421,6 +424,8 @@ Class | Method | HTTP request | Description
  - [Model.DetectLineEndingsResponse](docs/DetectLineEndingsResponse.md)
  - [Model.DisableSharedWorkbookRequest](docs/DisableSharedWorkbookRequest.md)
  - [Model.DisableSharedWorkbookResponse](docs/DisableSharedWorkbookResponse.md)
+ - [Model.DocumentEditingEditSession](docs/DocumentEditingEditSession.md)
+ - [Model.DocumentTransformEditSession](docs/DocumentTransformEditSession.md)
  - [Model.DocumentValidationError](docs/DocumentValidationError.md)
  - [Model.DocumentValidationResult](docs/DocumentValidationResult.md)
  - [Model.DocxBody](docs/DocxBody.md)

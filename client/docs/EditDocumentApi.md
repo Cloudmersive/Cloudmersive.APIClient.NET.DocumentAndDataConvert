@@ -35,7 +35,8 @@ Method | HTTP request | Description
 [**EditDocumentDocxRemoveHeadersAndFooters**](EditDocumentApi.md#editdocumentdocxremoveheadersandfooters) | **POST** /convert/edit/docx/remove-headers-and-footers | Remove headers and footers from Word DOCX document
 [**EditDocumentDocxRemoveObject**](EditDocumentApi.md#editdocumentdocxremoveobject) | **POST** /convert/edit/docx/remove-object | Delete any object in a Word DOCX document
 [**EditDocumentDocxReplace**](EditDocumentApi.md#editdocumentdocxreplace) | **POST** /convert/edit/docx/replace-all | Replace string in Word DOCX document
-[**EditDocumentDocxReplaceMulti**](EditDocumentApi.md#editdocumentdocxreplacemulti) | **POST** /convert/edit/docx/replace-all/multi | Replace multiple strings in Word DOCX document
+[**EditDocumentDocxReplaceMulti**](EditDocumentApi.md#editdocumentdocxreplacemulti) | **POST** /convert/edit/docx/replace-all/multi | Replace multiple strings in Word DOCX document, return result
+[**EditDocumentDocxReplaceMultiEditSession**](EditDocumentApi.md#editdocumentdocxreplacemultieditsession) | **POST** /convert/edit/docx/replace-all/multi/edit-session | Replace multiple strings in Word DOCX document, return edit session
 [**EditDocumentDocxReplaceParagraph**](EditDocumentApi.md#editdocumentdocxreplaceparagraph) | **POST** /convert/edit/docx/replace/paragraph | Replace matching paragraphs in a Word DOCX document
 [**EditDocumentDocxSetCustomMetadataProperties**](EditDocumentApi.md#editdocumentdocxsetcustommetadataproperties) | **POST** /convert/edit/docx/set-metadata/custom-property | Set custom property metadata properties in Word DOCX document
 [**EditDocumentDocxSetFooter**](EditDocumentApi.md#editdocumentdocxsetfooter) | **POST** /convert/edit/docx/set-footer | Set the footer in a Word DOCX document
@@ -2120,7 +2121,7 @@ Name | Type | Description  | Notes
 # **EditDocumentDocxReplaceMulti**
 > byte[] EditDocumentDocxReplaceMulti (MultiReplaceStringRequest reqConfig)
 
-Replace multiple strings in Word DOCX document
+Replace multiple strings in Word DOCX document, return result
 
 Replace all instances of multiple strings in an Office Word Document (docx)
 
@@ -2148,7 +2149,7 @@ namespace Example
 
             try
             {
-                // Replace multiple strings in Word DOCX document
+                // Replace multiple strings in Word DOCX document, return result
                 byte[] result = apiInstance.EditDocumentDocxReplaceMulti(reqConfig);
                 Debug.WriteLine(result);
             }
@@ -2179,6 +2180,72 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/octet-stream
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="editdocumentdocxreplacemultieditsession"></a>
+# **EditDocumentDocxReplaceMultiEditSession**
+> DocumentEditingEditSession EditDocumentDocxReplaceMultiEditSession (MultiReplaceStringRequest reqConfig)
+
+Replace multiple strings in Word DOCX document, return edit session
+
+Replace all instances of multiple strings in an Office Word Document (docx).  Returns an edit session URL so that you can chain together multiple edit operations without having to send the entire document contents back and forth multiple times.  Call the Finish Editing API to retrieve the final document once editing is complete.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class EditDocumentDocxReplaceMultiEditSessionExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new EditDocumentApi();
+            var reqConfig = new MultiReplaceStringRequest(); // MultiReplaceStringRequest | Document string replacement configuration input
+
+            try
+            {
+                // Replace multiple strings in Word DOCX document, return edit session
+                DocumentEditingEditSession result = apiInstance.EditDocumentDocxReplaceMultiEditSession(reqConfig);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling EditDocumentApi.EditDocumentDocxReplaceMultiEditSession: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **reqConfig** | [**MultiReplaceStringRequest**](MultiReplaceStringRequest.md)| Document string replacement configuration input | 
+
+### Return type
+
+[**DocumentEditingEditSession**](DocumentEditingEditSession.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -449,6 +449,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test EditDocumentDocxReplaceMultiEditSession
+        /// </summary>
+        [Test]
+        public void EditDocumentDocxReplaceMultiEditSessionTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //MultiReplaceStringRequest reqConfig = null;
+            //var response = instance.EditDocumentDocxReplaceMultiEditSession(reqConfig);
+            //Assert.IsInstanceOf<DocumentEditingEditSession> (response, "response is DocumentEditingEditSession");
+        }
+        
+        /// <summary>
         /// Test EditDocumentDocxReplaceParagraph
         /// </summary>
         [Test]
