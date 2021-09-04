@@ -125,6 +125,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of DocumentTransformEditSession</returns>
         ApiResponse<DocumentTransformEditSession> TransformDocumentDocxTableFillInEditSessionWithHttpInfo (DocxTableTableFillRequest request);
         /// <summary>
+        /// Fill in data in multiple tables in a Word DOCX document, return result
+        /// </summary>
+        /// <remarks>
+        /// Replace placeholder rows in multiple tables in an Office Word Document (docx) using one or more templates
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>Object</returns>
+        Object TransformDocumentDocxTableFillInMulti (DocxTableTableFillMultiRequest request);
+
+        /// <summary>
+        /// Fill in data in multiple tables in a Word DOCX document, return result
+        /// </summary>
+        /// <remarks>
+        /// Replace placeholder rows in multiple tables in an Office Word Document (docx) using one or more templates
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> TransformDocumentDocxTableFillInMultiWithHttpInfo (DocxTableTableFillMultiRequest request);
+        /// <summary>
         /// Replace string in PowerPoint PPTX presentation, return result
         /// </summary>
         /// <remarks>
@@ -255,6 +276,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="request"></param>
         /// <returns>Task of ApiResponse (DocumentTransformEditSession)</returns>
         System.Threading.Tasks.Task<ApiResponse<DocumentTransformEditSession>> TransformDocumentDocxTableFillInEditSessionAsyncWithHttpInfo (DocxTableTableFillRequest request);
+        /// <summary>
+        /// Fill in data in multiple tables in a Word DOCX document, return result
+        /// </summary>
+        /// <remarks>
+        /// Replace placeholder rows in multiple tables in an Office Word Document (docx) using one or more templates
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> TransformDocumentDocxTableFillInMultiAsync (DocxTableTableFillMultiRequest request);
+
+        /// <summary>
+        /// Fill in data in multiple tables in a Word DOCX document, return result
+        /// </summary>
+        /// <remarks>
+        /// Replace placeholder rows in multiple tables in an Office Word Document (docx) using one or more templates
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> TransformDocumentDocxTableFillInMultiAsyncWithHttpInfo (DocxTableTableFillMultiRequest request);
         /// <summary>
         /// Replace string in PowerPoint PPTX presentation, return result
         /// </summary>
@@ -1074,6 +1116,173 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<DocumentTransformEditSession>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (DocumentTransformEditSession) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentTransformEditSession)));
+        }
+
+        /// <summary>
+        /// Fill in data in multiple tables in a Word DOCX document, return result Replace placeholder rows in multiple tables in an Office Word Document (docx) using one or more templates
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>Object</returns>
+        public Object TransformDocumentDocxTableFillInMulti (DocxTableTableFillMultiRequest request)
+        {
+             ApiResponse<Object> localVarResponse = TransformDocumentDocxTableFillInMultiWithHttpInfo(request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Fill in data in multiple tables in a Word DOCX document, return result Replace placeholder rows in multiple tables in an Office Word Document (docx) using one or more templates
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > TransformDocumentDocxTableFillInMultiWithHttpInfo (DocxTableTableFillMultiRequest request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling TransformDocumentApi->TransformDocumentDocxTableFillInMulti");
+
+            var localVarPath = "/convert/transform/docx/table/fill/data/multi";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TransformDocumentDocxTableFillInMulti", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Fill in data in multiple tables in a Word DOCX document, return result Replace placeholder rows in multiple tables in an Office Word Document (docx) using one or more templates
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> TransformDocumentDocxTableFillInMultiAsync (DocxTableTableFillMultiRequest request)
+        {
+             ApiResponse<Object> localVarResponse = await TransformDocumentDocxTableFillInMultiAsyncWithHttpInfo(request);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Fill in data in multiple tables in a Word DOCX document, return result Replace placeholder rows in multiple tables in an Office Word Document (docx) using one or more templates
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> TransformDocumentDocxTableFillInMultiAsyncWithHttpInfo (DocxTableTableFillMultiRequest request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling TransformDocumentApi->TransformDocumentDocxTableFillInMulti");
+
+            var localVarPath = "/convert/transform/docx/table/fill/data/multi";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TransformDocumentDocxTableFillInMulti", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>

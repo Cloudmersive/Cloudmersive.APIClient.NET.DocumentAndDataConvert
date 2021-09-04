@@ -121,6 +121,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test TransformDocumentDocxTableFillInMulti
+        /// </summary>
+        [Test]
+        public void TransformDocumentDocxTableFillInMultiTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //DocxTableTableFillMultiRequest request = null;
+            //var response = instance.TransformDocumentDocxTableFillInMulti(request);
+            //Assert.IsInstanceOf<Object> (response, "response is Object");
+        }
+        
+        /// <summary>
         /// Test TransformDocumentPptxReplace
         /// </summary>
         [Test]
