@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 This C# SDK is for the [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api):
 
 - API version: v1
-- SDK version: 3.5.0
+- SDK version: 3.5.1
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -225,6 +225,8 @@ Class | Method | HTTP request | Description
 *EditDocumentApi* | [**EditDocumentDocxFindParagraph**](docs/EditDocumentApi.md#editdocumentdocxfindparagraph) | **POST** /convert/edit/docx/find/paragraph | Find matching paragraphs in a Word DOCX document
 *EditDocumentApi* | [**EditDocumentDocxGetComments**](docs/EditDocumentApi.md#editdocumentdocxgetcomments) | **POST** /convert/edit/docx/get-comments/flat-list | Get comments from a Word DOCX document as a flat list
 *EditDocumentApi* | [**EditDocumentDocxGetCommentsHierarchical**](docs/EditDocumentApi.md#editdocumentdocxgetcommentshierarchical) | **POST** /convert/edit/docx/get-comments/hierarchical | Get comments from a Word DOCX document hierarchically
+*EditDocumentApi* | [**EditDocumentDocxGetContentControls**](docs/EditDocumentApi.md#editdocumentdocxgetcontentcontrols) | **POST** /convert/edit/docx/get-content-controls | Get all content controls (form fields) and values in a Word DOCX document
+*EditDocumentApi* | [**EditDocumentDocxGetFormFields**](docs/EditDocumentApi.md#editdocumentdocxgetformfields) | **POST** /convert/edit/docx/get-form-fields | Get all form fields in a Word DOCX document
 *EditDocumentApi* | [**EditDocumentDocxGetHeadersAndFooters**](docs/EditDocumentApi.md#editdocumentdocxgetheadersandfooters) | **POST** /convert/edit/docx/get-headers-and-footers | Get content of a footer from a Word DOCX document
 *EditDocumentApi* | [**EditDocumentDocxGetImages**](docs/EditDocumentApi.md#editdocumentdocxgetimages) | **POST** /convert/edit/docx/get-images | Get images from a Word DOCX document
 *EditDocumentApi* | [**EditDocumentDocxGetMacroInformation**](docs/EditDocumentApi.md#editdocumentdocxgetmacroinformation) | **POST** /convert/edit/docx/get-macros | Get macro information from a Word DOCX/DOCM document
@@ -250,6 +252,7 @@ Class | Method | HTTP request | Description
 *EditDocumentApi* | [**EditDocumentDocxSetCustomMetadataProperties**](docs/EditDocumentApi.md#editdocumentdocxsetcustommetadataproperties) | **POST** /convert/edit/docx/set-metadata/custom-property | Set custom property metadata properties in Word DOCX document
 *EditDocumentApi* | [**EditDocumentDocxSetFooter**](docs/EditDocumentApi.md#editdocumentdocxsetfooter) | **POST** /convert/edit/docx/set-footer | Set the footer in a Word DOCX document
 *EditDocumentApi* | [**EditDocumentDocxSetFooterAddPageNumber**](docs/EditDocumentApi.md#editdocumentdocxsetfooteraddpagenumber) | **POST** /convert/edit/docx/set-footer/add-page-number | Add page number to footer in a Word DOCX document
+*EditDocumentApi* | [**EditDocumentDocxSetFormFields**](docs/EditDocumentApi.md#editdocumentdocxsetformfields) | **POST** /convert/edit/docx/set-form-fields | Set and fill values for form fields in a Word DOCX document
 *EditDocumentApi* | [**EditDocumentDocxSetHeader**](docs/EditDocumentApi.md#editdocumentdocxsetheader) | **POST** /convert/edit/docx/set-header | Set the header in a Word DOCX document
 *EditDocumentApi* | [**EditDocumentDocxUpdateTableCell**](docs/EditDocumentApi.md#editdocumentdocxupdatetablecell) | **POST** /convert/edit/docx/update-table-cell | Update, set contents of a table cell in an existing table in a Word DOCX document
 *EditDocumentApi* | [**EditDocumentDocxUpdateTableRow**](docs/EditDocumentApi.md#editdocumentdocxupdatetablerow) | **POST** /convert/edit/docx/update-table-row | Update, set contents of a table row in an existing table in a Word DOCX document
@@ -432,6 +435,7 @@ Class | Method | HTTP request | Description
  - [Model.DocxBody](docs/DocxBody.md)
  - [Model.DocxCellStyle](docs/DocxCellStyle.md)
  - [Model.DocxComment](docs/DocxComment.md)
+ - [Model.DocxContentControl](docs/DocxContentControl.md)
  - [Model.DocxFooter](docs/DocxFooter.md)
  - [Model.DocxHeader](docs/DocxHeader.md)
  - [Model.DocxImage](docs/DocxImage.md)
@@ -449,6 +453,7 @@ Class | Method | HTTP request | Description
  - [Model.DocxSetFooterAddPageNumberRequest](docs/DocxSetFooterAddPageNumberRequest.md)
  - [Model.DocxSetFooterRequest](docs/DocxSetFooterRequest.md)
  - [Model.DocxSetFooterResponse](docs/DocxSetFooterResponse.md)
+ - [Model.DocxSetFormFieldsRequest](docs/DocxSetFormFieldsRequest.md)
  - [Model.DocxSetHeaderRequest](docs/DocxSetHeaderRequest.md)
  - [Model.DocxSetHeaderResponse](docs/DocxSetHeaderResponse.md)
  - [Model.DocxStyle](docs/DocxStyle.md)
@@ -473,6 +478,7 @@ Class | Method | HTTP request | Description
  - [Model.EnableSharedWorkbookRequest](docs/EnableSharedWorkbookRequest.md)
  - [Model.EnableSharedWorkbookResponse](docs/EnableSharedWorkbookResponse.md)
  - [Model.ExifValue](docs/ExifValue.md)
+ - [Model.FillHandlebarFormField](docs/FillHandlebarFormField.md)
  - [Model.FindDocxParagraphRequest](docs/FindDocxParagraphRequest.md)
  - [Model.FindDocxParagraphResponse](docs/FindDocxParagraphResponse.md)
  - [Model.FindRegexMatch](docs/FindRegexMatch.md)
@@ -486,8 +492,10 @@ Class | Method | HTTP request | Description
  - [Model.GetDocxBodyResponse](docs/GetDocxBodyResponse.md)
  - [Model.GetDocxCommentsHierarchicalResponse](docs/GetDocxCommentsHierarchicalResponse.md)
  - [Model.GetDocxCommentsResponse](docs/GetDocxCommentsResponse.md)
+ - [Model.GetDocxContentControlsResponse](docs/GetDocxContentControlsResponse.md)
  - [Model.GetDocxGetCommentsHierarchicalRequest](docs/GetDocxGetCommentsHierarchicalRequest.md)
  - [Model.GetDocxGetCommentsRequest](docs/GetDocxGetCommentsRequest.md)
+ - [Model.GetDocxGetFormFieldsResponse](docs/GetDocxGetFormFieldsResponse.md)
  - [Model.GetDocxHeadersAndFootersRequest](docs/GetDocxHeadersAndFootersRequest.md)
  - [Model.GetDocxHeadersAndFootersResponse](docs/GetDocxHeadersAndFootersResponse.md)
  - [Model.GetDocxImagesRequest](docs/GetDocxImagesRequest.md)
@@ -525,6 +533,7 @@ Class | Method | HTTP request | Description
  - [Model.GetXlsxStylesResponse](docs/GetXlsxStylesResponse.md)
  - [Model.GetXlsxWorksheetsRequest](docs/GetXlsxWorksheetsRequest.md)
  - [Model.GetXlsxWorksheetsResponse](docs/GetXlsxWorksheetsResponse.md)
+ - [Model.HandlebarFormField](docs/HandlebarFormField.md)
  - [Model.HtmlGetLanguageResult](docs/HtmlGetLanguageResult.md)
  - [Model.HtmlGetLinksResponse](docs/HtmlGetLinksResponse.md)
  - [Model.HtmlGetRelCanonicalUrlResult](docs/HtmlGetRelCanonicalUrlResult.md)

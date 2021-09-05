@@ -277,6 +277,48 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of GetDocxCommentsHierarchicalResponse</returns>
         ApiResponse<GetDocxCommentsHierarchicalResponse> EditDocumentDocxGetCommentsHierarchicalWithHttpInfo (GetDocxGetCommentsHierarchicalRequest reqConfig);
         /// <summary>
+        /// Get all content controls (form fields) and values in a Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Returns all the content controls, used for creating form fields, in a Office Word Document (docx)
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>GetDocxContentControlsResponse</returns>
+        GetDocxContentControlsResponse EditDocumentDocxGetContentControls (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Get all content controls (form fields) and values in a Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Returns all the content controls, used for creating form fields, in a Office Word Document (docx)
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of GetDocxContentControlsResponse</returns>
+        ApiResponse<GetDocxContentControlsResponse> EditDocumentDocxGetContentControlsWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// Get all form fields in a Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Returns all the content controls, used for creating form fields, as well as handlebar style text-based form fields such as \&quot;{{FieldName}}\&quot;, in a Office Word Document (docx)
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>GetDocxGetFormFieldsResponse</returns>
+        GetDocxGetFormFieldsResponse EditDocumentDocxGetFormFields (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Get all form fields in a Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Returns all the content controls, used for creating form fields, as well as handlebar style text-based form fields such as \&quot;{{FieldName}}\&quot;, in a Office Word Document (docx)
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of GetDocxGetFormFieldsResponse</returns>
+        ApiResponse<GetDocxGetFormFieldsResponse> EditDocumentDocxGetFormFieldsWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
         /// Get content of a footer from a Word DOCX document
         /// </summary>
         /// <remarks>
@@ -801,6 +843,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="reqConfig">Document input request</param>
         /// <returns>ApiResponse of DocxSetFooterResponse</returns>
         ApiResponse<DocxSetFooterResponse> EditDocumentDocxSetFooterAddPageNumberWithHttpInfo (DocxSetFooterAddPageNumberRequest reqConfig);
+        /// <summary>
+        /// Set and fill values for form fields in a Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Modifies a Office Word Document (docx) by filling in form fields using the provided values.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>byte[]</returns>
+        byte[] EditDocumentDocxSetFormFields (DocxSetFormFieldsRequest reqConfig);
+
+        /// <summary>
+        /// Set and fill values for form fields in a Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Modifies a Office Word Document (docx) by filling in form fields using the provided values.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> EditDocumentDocxSetFormFieldsWithHttpInfo (DocxSetFormFieldsRequest reqConfig);
         /// <summary>
         /// Set the header in a Word DOCX document
         /// </summary>
@@ -1644,6 +1707,48 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (GetDocxCommentsHierarchicalResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetDocxCommentsHierarchicalResponse>> EditDocumentDocxGetCommentsHierarchicalAsyncWithHttpInfo (GetDocxGetCommentsHierarchicalRequest reqConfig);
         /// <summary>
+        /// Get all content controls (form fields) and values in a Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Returns all the content controls, used for creating form fields, in a Office Word Document (docx)
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of GetDocxContentControlsResponse</returns>
+        System.Threading.Tasks.Task<GetDocxContentControlsResponse> EditDocumentDocxGetContentControlsAsync (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Get all content controls (form fields) and values in a Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Returns all the content controls, used for creating form fields, in a Office Word Document (docx)
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (GetDocxContentControlsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetDocxContentControlsResponse>> EditDocumentDocxGetContentControlsAsyncWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// Get all form fields in a Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Returns all the content controls, used for creating form fields, as well as handlebar style text-based form fields such as \&quot;{{FieldName}}\&quot;, in a Office Word Document (docx)
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of GetDocxGetFormFieldsResponse</returns>
+        System.Threading.Tasks.Task<GetDocxGetFormFieldsResponse> EditDocumentDocxGetFormFieldsAsync (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Get all form fields in a Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Returns all the content controls, used for creating form fields, as well as handlebar style text-based form fields such as \&quot;{{FieldName}}\&quot;, in a Office Word Document (docx)
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (GetDocxGetFormFieldsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GetDocxGetFormFieldsResponse>> EditDocumentDocxGetFormFieldsAsyncWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
         /// Get content of a footer from a Word DOCX document
         /// </summary>
         /// <remarks>
@@ -2168,6 +2273,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="reqConfig">Document input request</param>
         /// <returns>Task of ApiResponse (DocxSetFooterResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<DocxSetFooterResponse>> EditDocumentDocxSetFooterAddPageNumberAsyncWithHttpInfo (DocxSetFooterAddPageNumberRequest reqConfig);
+        /// <summary>
+        /// Set and fill values for form fields in a Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Modifies a Office Word Document (docx) by filling in form fields using the provided values.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> EditDocumentDocxSetFormFieldsAsync (DocxSetFormFieldsRequest reqConfig);
+
+        /// <summary>
+        /// Set and fill values for form fields in a Word DOCX document
+        /// </summary>
+        /// <remarks>
+        /// Modifies a Office Word Document (docx) by filling in form fields using the provided values.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDocumentDocxSetFormFieldsAsyncWithHttpInfo (DocxSetFormFieldsRequest reqConfig);
         /// <summary>
         /// Set the header in a Word DOCX document
         /// </summary>
@@ -4836,6 +4962,308 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<GetDocxCommentsHierarchicalResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (GetDocxCommentsHierarchicalResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxCommentsHierarchicalResponse)));
+        }
+
+        /// <summary>
+        /// Get all content controls (form fields) and values in a Word DOCX document Returns all the content controls, used for creating form fields, in a Office Word Document (docx)
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>GetDocxContentControlsResponse</returns>
+        public GetDocxContentControlsResponse EditDocumentDocxGetContentControls (System.IO.Stream inputFile)
+        {
+             ApiResponse<GetDocxContentControlsResponse> localVarResponse = EditDocumentDocxGetContentControlsWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get all content controls (form fields) and values in a Word DOCX document Returns all the content controls, used for creating form fields, in a Office Word Document (docx)
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of GetDocxContentControlsResponse</returns>
+        public ApiResponse< GetDocxContentControlsResponse > EditDocumentDocxGetContentControlsWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditDocumentApi->EditDocumentDocxGetContentControls");
+
+            var localVarPath = "/convert/edit/docx/get-content-controls";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentDocxGetContentControls", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetDocxContentControlsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetDocxContentControlsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxContentControlsResponse)));
+        }
+
+        /// <summary>
+        /// Get all content controls (form fields) and values in a Word DOCX document Returns all the content controls, used for creating form fields, in a Office Word Document (docx)
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of GetDocxContentControlsResponse</returns>
+        public async System.Threading.Tasks.Task<GetDocxContentControlsResponse> EditDocumentDocxGetContentControlsAsync (System.IO.Stream inputFile)
+        {
+             ApiResponse<GetDocxContentControlsResponse> localVarResponse = await EditDocumentDocxGetContentControlsAsyncWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get all content controls (form fields) and values in a Word DOCX document Returns all the content controls, used for creating form fields, in a Office Word Document (docx)
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (GetDocxContentControlsResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetDocxContentControlsResponse>> EditDocumentDocxGetContentControlsAsyncWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditDocumentApi->EditDocumentDocxGetContentControls");
+
+            var localVarPath = "/convert/edit/docx/get-content-controls";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentDocxGetContentControls", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetDocxContentControlsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetDocxContentControlsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxContentControlsResponse)));
+        }
+
+        /// <summary>
+        /// Get all form fields in a Word DOCX document Returns all the content controls, used for creating form fields, as well as handlebar style text-based form fields such as \&quot;{{FieldName}}\&quot;, in a Office Word Document (docx)
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>GetDocxGetFormFieldsResponse</returns>
+        public GetDocxGetFormFieldsResponse EditDocumentDocxGetFormFields (System.IO.Stream inputFile)
+        {
+             ApiResponse<GetDocxGetFormFieldsResponse> localVarResponse = EditDocumentDocxGetFormFieldsWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get all form fields in a Word DOCX document Returns all the content controls, used for creating form fields, as well as handlebar style text-based form fields such as \&quot;{{FieldName}}\&quot;, in a Office Word Document (docx)
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of GetDocxGetFormFieldsResponse</returns>
+        public ApiResponse< GetDocxGetFormFieldsResponse > EditDocumentDocxGetFormFieldsWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditDocumentApi->EditDocumentDocxGetFormFields");
+
+            var localVarPath = "/convert/edit/docx/get-form-fields";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentDocxGetFormFields", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetDocxGetFormFieldsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetDocxGetFormFieldsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxGetFormFieldsResponse)));
+        }
+
+        /// <summary>
+        /// Get all form fields in a Word DOCX document Returns all the content controls, used for creating form fields, as well as handlebar style text-based form fields such as \&quot;{{FieldName}}\&quot;, in a Office Word Document (docx)
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of GetDocxGetFormFieldsResponse</returns>
+        public async System.Threading.Tasks.Task<GetDocxGetFormFieldsResponse> EditDocumentDocxGetFormFieldsAsync (System.IO.Stream inputFile)
+        {
+             ApiResponse<GetDocxGetFormFieldsResponse> localVarResponse = await EditDocumentDocxGetFormFieldsAsyncWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get all form fields in a Word DOCX document Returns all the content controls, used for creating form fields, as well as handlebar style text-based form fields such as \&quot;{{FieldName}}\&quot;, in a Office Word Document (docx)
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (GetDocxGetFormFieldsResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GetDocxGetFormFieldsResponse>> EditDocumentDocxGetFormFieldsAsyncWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditDocumentApi->EditDocumentDocxGetFormFields");
+
+            var localVarPath = "/convert/edit/docx/get-form-fields";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentDocxGetFormFields", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GetDocxGetFormFieldsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GetDocxGetFormFieldsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetDocxGetFormFieldsResponse)));
         }
 
         /// <summary>
@@ -9083,6 +9511,179 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<DocxSetFooterResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (DocxSetFooterResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocxSetFooterResponse)));
+        }
+
+        /// <summary>
+        /// Set and fill values for form fields in a Word DOCX document Modifies a Office Word Document (docx) by filling in form fields using the provided values.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>byte[]</returns>
+        public byte[] EditDocumentDocxSetFormFields (DocxSetFormFieldsRequest reqConfig)
+        {
+             ApiResponse<byte[]> localVarResponse = EditDocumentDocxSetFormFieldsWithHttpInfo(reqConfig);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Set and fill values for form fields in a Word DOCX document Modifies a Office Word Document (docx) by filling in form fields using the provided values.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > EditDocumentDocxSetFormFieldsWithHttpInfo (DocxSetFormFieldsRequest reqConfig)
+        {
+            // verify the required parameter 'reqConfig' is set
+            if (reqConfig == null)
+                throw new ApiException(400, "Missing required parameter 'reqConfig' when calling EditDocumentApi->EditDocumentDocxSetFormFields");
+
+            var localVarPath = "/convert/edit/docx/set-form-fields";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reqConfig; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentDocxSetFormFields", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Set and fill values for form fields in a Word DOCX document Modifies a Office Word Document (docx) by filling in form fields using the provided values.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> EditDocumentDocxSetFormFieldsAsync (DocxSetFormFieldsRequest reqConfig)
+        {
+             ApiResponse<byte[]> localVarResponse = await EditDocumentDocxSetFormFieldsAsyncWithHttpInfo(reqConfig);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Set and fill values for form fields in a Word DOCX document Modifies a Office Word Document (docx) by filling in form fields using the provided values.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reqConfig"></param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDocumentDocxSetFormFieldsAsyncWithHttpInfo (DocxSetFormFieldsRequest reqConfig)
+        {
+            // verify the required parameter 'reqConfig' is set
+            if (reqConfig == null)
+                throw new ApiException(400, "Missing required parameter 'reqConfig' when calling EditDocumentApi->EditDocumentDocxSetFormFields");
+
+            var localVarPath = "/convert/edit/docx/set-form-fields";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (reqConfig != null && reqConfig.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reqConfig); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reqConfig; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentDocxSetFormFields", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>

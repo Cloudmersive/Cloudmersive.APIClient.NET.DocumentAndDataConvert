@@ -209,6 +209,30 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test EditDocumentDocxGetContentControls
+        /// </summary>
+        [Test]
+        public void EditDocumentDocxGetContentControlsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.EditDocumentDocxGetContentControls(inputFile);
+            //Assert.IsInstanceOf<GetDocxContentControlsResponse> (response, "response is GetDocxContentControlsResponse");
+        }
+        
+        /// <summary>
+        /// Test EditDocumentDocxGetFormFields
+        /// </summary>
+        [Test]
+        public void EditDocumentDocxGetFormFieldsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.EditDocumentDocxGetFormFields(inputFile);
+            //Assert.IsInstanceOf<GetDocxGetFormFieldsResponse> (response, "response is GetDocxGetFormFieldsResponse");
+        }
+        
+        /// <summary>
         /// Test EditDocumentDocxGetHeadersAndFooters
         /// </summary>
         [Test]
@@ -506,6 +530,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //DocxSetFooterAddPageNumberRequest reqConfig = null;
             //var response = instance.EditDocumentDocxSetFooterAddPageNumber(reqConfig);
             //Assert.IsInstanceOf<DocxSetFooterResponse> (response, "response is DocxSetFooterResponse");
+        }
+        
+        /// <summary>
+        /// Test EditDocumentDocxSetFormFields
+        /// </summary>
+        [Test]
+        public void EditDocumentDocxSetFormFieldsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //DocxSetFormFieldsRequest reqConfig = null;
+            //var response = instance.EditDocumentDocxSetFormFields(reqConfig);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
         /// <summary>

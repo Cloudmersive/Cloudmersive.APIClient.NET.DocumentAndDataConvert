@@ -16,6 +16,8 @@ Method | HTTP request | Description
 [**EditDocumentDocxFindParagraph**](EditDocumentApi.md#editdocumentdocxfindparagraph) | **POST** /convert/edit/docx/find/paragraph | Find matching paragraphs in a Word DOCX document
 [**EditDocumentDocxGetComments**](EditDocumentApi.md#editdocumentdocxgetcomments) | **POST** /convert/edit/docx/get-comments/flat-list | Get comments from a Word DOCX document as a flat list
 [**EditDocumentDocxGetCommentsHierarchical**](EditDocumentApi.md#editdocumentdocxgetcommentshierarchical) | **POST** /convert/edit/docx/get-comments/hierarchical | Get comments from a Word DOCX document hierarchically
+[**EditDocumentDocxGetContentControls**](EditDocumentApi.md#editdocumentdocxgetcontentcontrols) | **POST** /convert/edit/docx/get-content-controls | Get all content controls (form fields) and values in a Word DOCX document
+[**EditDocumentDocxGetFormFields**](EditDocumentApi.md#editdocumentdocxgetformfields) | **POST** /convert/edit/docx/get-form-fields | Get all form fields in a Word DOCX document
 [**EditDocumentDocxGetHeadersAndFooters**](EditDocumentApi.md#editdocumentdocxgetheadersandfooters) | **POST** /convert/edit/docx/get-headers-and-footers | Get content of a footer from a Word DOCX document
 [**EditDocumentDocxGetImages**](EditDocumentApi.md#editdocumentdocxgetimages) | **POST** /convert/edit/docx/get-images | Get images from a Word DOCX document
 [**EditDocumentDocxGetMacroInformation**](EditDocumentApi.md#editdocumentdocxgetmacroinformation) | **POST** /convert/edit/docx/get-macros | Get macro information from a Word DOCX/DOCM document
@@ -41,6 +43,7 @@ Method | HTTP request | Description
 [**EditDocumentDocxSetCustomMetadataProperties**](EditDocumentApi.md#editdocumentdocxsetcustommetadataproperties) | **POST** /convert/edit/docx/set-metadata/custom-property | Set custom property metadata properties in Word DOCX document
 [**EditDocumentDocxSetFooter**](EditDocumentApi.md#editdocumentdocxsetfooter) | **POST** /convert/edit/docx/set-footer | Set the footer in a Word DOCX document
 [**EditDocumentDocxSetFooterAddPageNumber**](EditDocumentApi.md#editdocumentdocxsetfooteraddpagenumber) | **POST** /convert/edit/docx/set-footer/add-page-number | Add page number to footer in a Word DOCX document
+[**EditDocumentDocxSetFormFields**](EditDocumentApi.md#editdocumentdocxsetformfields) | **POST** /convert/edit/docx/set-form-fields | Set and fill values for form fields in a Word DOCX document
 [**EditDocumentDocxSetHeader**](EditDocumentApi.md#editdocumentdocxsetheader) | **POST** /convert/edit/docx/set-header | Set the header in a Word DOCX document
 [**EditDocumentDocxUpdateTableCell**](EditDocumentApi.md#editdocumentdocxupdatetablecell) | **POST** /convert/edit/docx/update-table-cell | Update, set contents of a table cell in an existing table in a Word DOCX document
 [**EditDocumentDocxUpdateTableRow**](EditDocumentApi.md#editdocumentdocxupdatetablerow) | **POST** /convert/edit/docx/update-table-row | Update, set contents of a table row in an existing table in a Word DOCX document
@@ -859,6 +862,138 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="editdocumentdocxgetcontentcontrols"></a>
+# **EditDocumentDocxGetContentControls**
+> GetDocxContentControlsResponse EditDocumentDocxGetContentControls (System.IO.Stream inputFile)
+
+Get all content controls (form fields) and values in a Word DOCX document
+
+Returns all the content controls, used for creating form fields, in a Office Word Document (docx)
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class EditDocumentDocxGetContentControlsExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new EditDocumentApi();
+            var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
+
+            try
+            {
+                // Get all content controls (form fields) and values in a Word DOCX document
+                GetDocxContentControlsResponse result = apiInstance.EditDocumentDocxGetContentControls(inputFile);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling EditDocumentApi.EditDocumentDocxGetContentControls: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
+
+### Return type
+
+[**GetDocxContentControlsResponse**](GetDocxContentControlsResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="editdocumentdocxgetformfields"></a>
+# **EditDocumentDocxGetFormFields**
+> GetDocxGetFormFieldsResponse EditDocumentDocxGetFormFields (System.IO.Stream inputFile)
+
+Get all form fields in a Word DOCX document
+
+Returns all the content controls, used for creating form fields, as well as handlebar style text-based form fields such as \"{{FieldName}}\", in a Office Word Document (docx)
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class EditDocumentDocxGetFormFieldsExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new EditDocumentApi();
+            var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
+
+            try
+            {
+                // Get all form fields in a Word DOCX document
+                GetDocxGetFormFieldsResponse result = apiInstance.EditDocumentDocxGetFormFields(inputFile);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling EditDocumentApi.EditDocumentDocxGetFormFields: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
+
+### Return type
+
+[**GetDocxGetFormFieldsResponse**](GetDocxGetFormFieldsResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -2501,6 +2636,72 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DocxSetFooterResponse**](DocxSetFooterResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="editdocumentdocxsetformfields"></a>
+# **EditDocumentDocxSetFormFields**
+> byte[] EditDocumentDocxSetFormFields (DocxSetFormFieldsRequest reqConfig)
+
+Set and fill values for form fields in a Word DOCX document
+
+Modifies a Office Word Document (docx) by filling in form fields using the provided values.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class EditDocumentDocxSetFormFieldsExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new EditDocumentApi();
+            var reqConfig = new DocxSetFormFieldsRequest(); // DocxSetFormFieldsRequest | 
+
+            try
+            {
+                // Set and fill values for form fields in a Word DOCX document
+                byte[] result = apiInstance.EditDocumentDocxSetFormFields(reqConfig);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling EditDocumentApi.EditDocumentDocxSetFormFields: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **reqConfig** | [**DocxSetFormFieldsRequest**](DocxSetFormFieldsRequest.md)|  | 
+
+### Return type
+
+**byte[]**
 
 ### Authorization
 
