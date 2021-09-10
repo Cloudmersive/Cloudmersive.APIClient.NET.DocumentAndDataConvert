@@ -132,8 +132,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>Object</returns>
-        Object TransformDocumentDocxTableFillInMulti (DocxTableTableFillMultiRequest request);
+        /// <returns>byte[]</returns>
+        byte[] TransformDocumentDocxTableFillInMulti (DocxTableTableFillMultiRequest request);
 
         /// <summary>
         /// Fill in data in multiple tables in a Word DOCX document, return result
@@ -143,8 +143,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> TransformDocumentDocxTableFillInMultiWithHttpInfo (DocxTableTableFillMultiRequest request);
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> TransformDocumentDocxTableFillInMultiWithHttpInfo (DocxTableTableFillMultiRequest request);
         /// <summary>
         /// Replace string in PowerPoint PPTX presentation, return result
         /// </summary>
@@ -284,8 +284,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> TransformDocumentDocxTableFillInMultiAsync (DocxTableTableFillMultiRequest request);
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> TransformDocumentDocxTableFillInMultiAsync (DocxTableTableFillMultiRequest request);
 
         /// <summary>
         /// Fill in data in multiple tables in a Word DOCX document, return result
@@ -295,8 +295,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> TransformDocumentDocxTableFillInMultiAsyncWithHttpInfo (DocxTableTableFillMultiRequest request);
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> TransformDocumentDocxTableFillInMultiAsyncWithHttpInfo (DocxTableTableFillMultiRequest request);
         /// <summary>
         /// Replace string in PowerPoint PPTX presentation, return result
         /// </summary>
@@ -1123,10 +1123,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>Object</returns>
-        public Object TransformDocumentDocxTableFillInMulti (DocxTableTableFillMultiRequest request)
+        /// <returns>byte[]</returns>
+        public byte[] TransformDocumentDocxTableFillInMulti (DocxTableTableFillMultiRequest request)
         {
-             ApiResponse<Object> localVarResponse = TransformDocumentDocxTableFillInMultiWithHttpInfo(request);
+             ApiResponse<byte[]> localVarResponse = TransformDocumentDocxTableFillInMultiWithHttpInfo(request);
              return localVarResponse.Data;
         }
 
@@ -1135,8 +1135,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > TransformDocumentDocxTableFillInMultiWithHttpInfo (DocxTableTableFillMultiRequest request)
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > TransformDocumentDocxTableFillInMultiWithHttpInfo (DocxTableTableFillMultiRequest request)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -1162,7 +1162,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/octet-stream"
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1196,9 +1199,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
@@ -1206,10 +1209,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> TransformDocumentDocxTableFillInMultiAsync (DocxTableTableFillMultiRequest request)
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> TransformDocumentDocxTableFillInMultiAsync (DocxTableTableFillMultiRequest request)
         {
-             ApiResponse<Object> localVarResponse = await TransformDocumentDocxTableFillInMultiAsyncWithHttpInfo(request);
+             ApiResponse<byte[]> localVarResponse = await TransformDocumentDocxTableFillInMultiAsyncWithHttpInfo(request);
              return localVarResponse.Data;
 
         }
@@ -1219,8 +1222,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> TransformDocumentDocxTableFillInMultiAsyncWithHttpInfo (DocxTableTableFillMultiRequest request)
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> TransformDocumentDocxTableFillInMultiAsyncWithHttpInfo (DocxTableTableFillMultiRequest request)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -1246,7 +1249,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/octet-stream"
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1280,9 +1286,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>

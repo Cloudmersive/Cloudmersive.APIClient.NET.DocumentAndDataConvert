@@ -294,7 +294,7 @@ Name | Type | Description  | Notes
 
 <a name="transformdocumentdocxtablefillinmulti"></a>
 # **TransformDocumentDocxTableFillInMulti**
-> Object TransformDocumentDocxTableFillInMulti (DocxTableTableFillMultiRequest request)
+> byte[] TransformDocumentDocxTableFillInMulti (DocxTableTableFillMultiRequest request)
 
 Fill in data in multiple tables in a Word DOCX document, return result
 
@@ -325,7 +325,7 @@ namespace Example
             try
             {
                 // Fill in data in multiple tables in a Word DOCX document, return result
-                Object result = apiInstance.TransformDocumentDocxTableFillInMulti(request);
+                byte[] result = apiInstance.TransformDocumentDocxTableFillInMulti(request);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -345,7 +345,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**byte[]**
 
 ### Authorization
 
@@ -354,7 +354,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/octet-stream
+ - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
