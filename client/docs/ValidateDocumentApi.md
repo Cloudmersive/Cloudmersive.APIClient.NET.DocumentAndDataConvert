@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ValidateDocumentAutodetectValidation**](ValidateDocumentApi.md#validatedocumentautodetectvalidation) | **POST** /convert/validate/autodetect | Autodetect content type and validate
 [**ValidateDocumentCsvValidation**](ValidateDocumentApi.md#validatedocumentcsvvalidation) | **POST** /convert/validate/csv | Validate a CSV file document (CSV)
+[**ValidateDocumentDocValidation**](ValidateDocumentApi.md#validatedocumentdocvalidation) | **POST** /convert/validate/doc | Validate a Word 97-2003 Legacy document (DOC)
 [**ValidateDocumentDocxValidation**](ValidateDocumentApi.md#validatedocumentdocxvalidation) | **POST** /convert/validate/docx | Validate a Word document (DOCX)
 [**ValidateDocumentEmlValidation**](ValidateDocumentApi.md#validatedocumentemlvalidation) | **POST** /convert/validate/eml | Validate if an EML file is executable
 [**ValidateDocumentExecutableValidation**](ValidateDocumentApi.md#validatedocumentexecutablevalidation) | **POST** /convert/validate/executable | Validate if a file is executable
@@ -18,10 +19,13 @@ Method | HTTP request | Description
 [**ValidateDocumentMsgValidation**](ValidateDocumentApi.md#validatedocumentmsgvalidation) | **POST** /convert/validate/msg | Validate if an MSG file is executable
 [**ValidateDocumentPdfValidation**](ValidateDocumentApi.md#validatedocumentpdfvalidation) | **POST** /convert/validate/pdf | Validate a PDF document file
 [**ValidateDocumentPngValidation**](ValidateDocumentApi.md#validatedocumentpngvalidation) | **POST** /convert/validate/png | Validate a PNG File
+[**ValidateDocumentPptValidation**](ValidateDocumentApi.md#validatedocumentpptvalidation) | **POST** /convert/validate/ppt | Validate a PowerPoint 97-2003 Legacy presentation (PPT)
 [**ValidateDocumentPptxValidation**](ValidateDocumentApi.md#validatedocumentpptxvalidation) | **POST** /convert/validate/pptx | Validate a PowerPoint presentation (PPTX)
 [**ValidateDocumentRarValidation**](ValidateDocumentApi.md#validatedocumentrarvalidation) | **POST** /convert/validate/rar | Validate a RAR Archive file (RAR)
+[**ValidateDocumentRtfValidation**](ValidateDocumentApi.md#validatedocumentrtfvalidation) | **POST** /convert/validate/rtf | Validate a Rich Text Format document (RTF)
 [**ValidateDocumentTarValidation**](ValidateDocumentApi.md#validatedocumenttarvalidation) | **POST** /convert/validate/tar | Validate a TAR Tarball Archive file (TAR)
 [**ValidateDocumentTxtValidation**](ValidateDocumentApi.md#validatedocumenttxtvalidation) | **POST** /convert/validate/txt | Validate an TXT file
+[**ValidateDocumentXlsValidation**](ValidateDocumentApi.md#validatedocumentxlsvalidation) | **POST** /convert/validate/xls | Validate a Excel 97-2003 Legacy spreadsheet (XLS)
 [**ValidateDocumentXlsxValidation**](ValidateDocumentApi.md#validatedocumentxlsxvalidation) | **POST** /convert/validate/xlsx | Validate a Excel document (XLSX)
 [**ValidateDocumentXmlValidation**](ValidateDocumentApi.md#validatedocumentxmlvalidation) | **POST** /convert/validate/xml | Validate an XML file
 [**ValidateDocumentXmlXxeThreatValidation**](ValidateDocumentApi.md#validatedocumentxmlxxethreatvalidation) | **POST** /convert/validate/xml/xxe-threats | Validate an XML file for XML External Entity (XXE) threats
@@ -133,6 +137,72 @@ namespace Example
             catch (Exception e)
             {
                 Debug.Print("Exception when calling ValidateDocumentApi.ValidateDocumentCsvValidation: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
+
+### Return type
+
+[**DocumentValidationResult**](DocumentValidationResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="validatedocumentdocvalidation"></a>
+# **ValidateDocumentDocValidation**
+> DocumentValidationResult ValidateDocumentDocValidation (System.IO.Stream inputFile)
+
+Validate a Word 97-2003 Legacy document (DOC)
+
+Validate a Word 97-2003 Legacy document (DOC)
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class ValidateDocumentDocValidationExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new ValidateDocumentApi();
+            var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
+
+            try
+            {
+                // Validate a Word 97-2003 Legacy document (DOC)
+                DocumentValidationResult result = apiInstance.ValidateDocumentDocValidation(inputFile);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ValidateDocumentApi.ValidateDocumentDocValidation: " + e.Message );
             }
         }
     }
@@ -952,6 +1022,72 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="validatedocumentpptvalidation"></a>
+# **ValidateDocumentPptValidation**
+> DocumentValidationResult ValidateDocumentPptValidation (System.IO.Stream inputFile)
+
+Validate a PowerPoint 97-2003 Legacy presentation (PPT)
+
+Validate a PowerPoint 97-2003 Legacy presentation (PPT)
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class ValidateDocumentPptValidationExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new ValidateDocumentApi();
+            var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
+
+            try
+            {
+                // Validate a PowerPoint 97-2003 Legacy presentation (PPT)
+                DocumentValidationResult result = apiInstance.ValidateDocumentPptValidation(inputFile);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ValidateDocumentApi.ValidateDocumentPptValidation: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
+
+### Return type
+
+[**DocumentValidationResult**](DocumentValidationResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="validatedocumentpptxvalidation"></a>
 # **ValidateDocumentPptxValidation**
 > DocumentValidationResult ValidateDocumentPptxValidation (System.IO.Stream inputFile)
@@ -1084,6 +1220,72 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="validatedocumentrtfvalidation"></a>
+# **ValidateDocumentRtfValidation**
+> DocumentValidationResult ValidateDocumentRtfValidation (System.IO.Stream inputFile)
+
+Validate a Rich Text Format document (RTF)
+
+Validate a Rich Text Format document (RTF)
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class ValidateDocumentRtfValidationExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new ValidateDocumentApi();
+            var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
+
+            try
+            {
+                // Validate a Rich Text Format document (RTF)
+                DocumentValidationResult result = apiInstance.ValidateDocumentRtfValidation(inputFile);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ValidateDocumentApi.ValidateDocumentRtfValidation: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
+
+### Return type
+
+[**DocumentValidationResult**](DocumentValidationResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="validatedocumenttarvalidation"></a>
 # **ValidateDocumentTarValidation**
 > DocumentValidationResult ValidateDocumentTarValidation (System.IO.Stream inputFile)
@@ -1189,6 +1391,72 @@ namespace Example
             catch (Exception e)
             {
                 Debug.Print("Exception when calling ValidateDocumentApi.ValidateDocumentTxtValidation: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
+
+### Return type
+
+[**DocumentValidationResult**](DocumentValidationResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="validatedocumentxlsvalidation"></a>
+# **ValidateDocumentXlsValidation**
+> DocumentValidationResult ValidateDocumentXlsValidation (System.IO.Stream inputFile)
+
+Validate a Excel 97-2003 Legacy spreadsheet (XLS)
+
+Validate a Excel 97-2003 Legacy spreadsheet (XLS)
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class ValidateDocumentXlsValidationExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new ValidateDocumentApi();
+            var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
+
+            try
+            {
+                // Validate a Excel 97-2003 Legacy spreadsheet (XLS)
+                DocumentValidationResult result = apiInstance.ValidateDocumentXlsValidation(inputFile);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ValidateDocumentApi.ValidateDocumentXlsValidation: " + e.Message );
             }
         }
     }

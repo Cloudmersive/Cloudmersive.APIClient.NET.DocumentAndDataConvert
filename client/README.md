@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 This C# SDK is for the [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api):
 
 - API version: v1
-- SDK version: 3.5.2
+- SDK version: 3.5.3
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -357,6 +357,7 @@ Class | Method | HTTP request | Description
 *TransformDocumentApi* | [**TransformDocumentPptxReplace**](docs/TransformDocumentApi.md#transformdocumentpptxreplace) | **POST** /convert/transform/pptx/replace-all | Replace string in PowerPoint PPTX presentation, return result
 *ValidateDocumentApi* | [**ValidateDocumentAutodetectValidation**](docs/ValidateDocumentApi.md#validatedocumentautodetectvalidation) | **POST** /convert/validate/autodetect | Autodetect content type and validate
 *ValidateDocumentApi* | [**ValidateDocumentCsvValidation**](docs/ValidateDocumentApi.md#validatedocumentcsvvalidation) | **POST** /convert/validate/csv | Validate a CSV file document (CSV)
+*ValidateDocumentApi* | [**ValidateDocumentDocValidation**](docs/ValidateDocumentApi.md#validatedocumentdocvalidation) | **POST** /convert/validate/doc | Validate a Word 97-2003 Legacy document (DOC)
 *ValidateDocumentApi* | [**ValidateDocumentDocxValidation**](docs/ValidateDocumentApi.md#validatedocumentdocxvalidation) | **POST** /convert/validate/docx | Validate a Word document (DOCX)
 *ValidateDocumentApi* | [**ValidateDocumentEmlValidation**](docs/ValidateDocumentApi.md#validatedocumentemlvalidation) | **POST** /convert/validate/eml | Validate if an EML file is executable
 *ValidateDocumentApi* | [**ValidateDocumentExecutableValidation**](docs/ValidateDocumentApi.md#validatedocumentexecutablevalidation) | **POST** /convert/validate/executable | Validate if a file is executable
@@ -369,10 +370,13 @@ Class | Method | HTTP request | Description
 *ValidateDocumentApi* | [**ValidateDocumentMsgValidation**](docs/ValidateDocumentApi.md#validatedocumentmsgvalidation) | **POST** /convert/validate/msg | Validate if an MSG file is executable
 *ValidateDocumentApi* | [**ValidateDocumentPdfValidation**](docs/ValidateDocumentApi.md#validatedocumentpdfvalidation) | **POST** /convert/validate/pdf | Validate a PDF document file
 *ValidateDocumentApi* | [**ValidateDocumentPngValidation**](docs/ValidateDocumentApi.md#validatedocumentpngvalidation) | **POST** /convert/validate/png | Validate a PNG File
+*ValidateDocumentApi* | [**ValidateDocumentPptValidation**](docs/ValidateDocumentApi.md#validatedocumentpptvalidation) | **POST** /convert/validate/ppt | Validate a PowerPoint 97-2003 Legacy presentation (PPT)
 *ValidateDocumentApi* | [**ValidateDocumentPptxValidation**](docs/ValidateDocumentApi.md#validatedocumentpptxvalidation) | **POST** /convert/validate/pptx | Validate a PowerPoint presentation (PPTX)
 *ValidateDocumentApi* | [**ValidateDocumentRarValidation**](docs/ValidateDocumentApi.md#validatedocumentrarvalidation) | **POST** /convert/validate/rar | Validate a RAR Archive file (RAR)
+*ValidateDocumentApi* | [**ValidateDocumentRtfValidation**](docs/ValidateDocumentApi.md#validatedocumentrtfvalidation) | **POST** /convert/validate/rtf | Validate a Rich Text Format document (RTF)
 *ValidateDocumentApi* | [**ValidateDocumentTarValidation**](docs/ValidateDocumentApi.md#validatedocumenttarvalidation) | **POST** /convert/validate/tar | Validate a TAR Tarball Archive file (TAR)
 *ValidateDocumentApi* | [**ValidateDocumentTxtValidation**](docs/ValidateDocumentApi.md#validatedocumenttxtvalidation) | **POST** /convert/validate/txt | Validate an TXT file
+*ValidateDocumentApi* | [**ValidateDocumentXlsValidation**](docs/ValidateDocumentApi.md#validatedocumentxlsvalidation) | **POST** /convert/validate/xls | Validate a Excel 97-2003 Legacy spreadsheet (XLS)
 *ValidateDocumentApi* | [**ValidateDocumentXlsxValidation**](docs/ValidateDocumentApi.md#validatedocumentxlsxvalidation) | **POST** /convert/validate/xlsx | Validate a Excel document (XLSX)
 *ValidateDocumentApi* | [**ValidateDocumentXmlValidation**](docs/ValidateDocumentApi.md#validatedocumentxmlvalidation) | **POST** /convert/validate/xml | Validate an XML file
 *ValidateDocumentApi* | [**ValidateDocumentXmlXxeThreatValidation**](docs/ValidateDocumentApi.md#validatedocumentxmlxxethreatvalidation) | **POST** /convert/validate/xml/xxe-threats | Validate an XML file for XML External Entity (XXE) threats

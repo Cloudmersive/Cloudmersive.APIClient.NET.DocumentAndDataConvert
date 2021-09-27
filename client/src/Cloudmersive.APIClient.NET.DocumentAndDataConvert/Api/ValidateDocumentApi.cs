@@ -67,6 +67,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of DocumentValidationResult</returns>
         ApiResponse<DocumentValidationResult> ValidateDocumentCsvValidationWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
+        /// Validate a Word 97-2003 Legacy document (DOC)
+        /// </summary>
+        /// <remarks>
+        /// Validate a Word 97-2003 Legacy document (DOC)
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>DocumentValidationResult</returns>
+        DocumentValidationResult ValidateDocumentDocValidation (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Validate a Word 97-2003 Legacy document (DOC)
+        /// </summary>
+        /// <remarks>
+        /// Validate a Word 97-2003 Legacy document (DOC)
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of DocumentValidationResult</returns>
+        ApiResponse<DocumentValidationResult> ValidateDocumentDocValidationWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
         /// Validate a Word document (DOCX)
         /// </summary>
         /// <remarks>
@@ -319,6 +340,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of DocumentValidationResult</returns>
         ApiResponse<DocumentValidationResult> ValidateDocumentPngValidationWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
+        /// Validate a PowerPoint 97-2003 Legacy presentation (PPT)
+        /// </summary>
+        /// <remarks>
+        /// Validate a PowerPoint 97-2003 Legacy presentation (PPT)
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>DocumentValidationResult</returns>
+        DocumentValidationResult ValidateDocumentPptValidation (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Validate a PowerPoint 97-2003 Legacy presentation (PPT)
+        /// </summary>
+        /// <remarks>
+        /// Validate a PowerPoint 97-2003 Legacy presentation (PPT)
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of DocumentValidationResult</returns>
+        ApiResponse<DocumentValidationResult> ValidateDocumentPptValidationWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
         /// Validate a PowerPoint presentation (PPTX)
         /// </summary>
         /// <remarks>
@@ -361,6 +403,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of DocumentValidationResult</returns>
         ApiResponse<DocumentValidationResult> ValidateDocumentRarValidationWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
+        /// Validate a Rich Text Format document (RTF)
+        /// </summary>
+        /// <remarks>
+        /// Validate a Rich Text Format document (RTF)
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>DocumentValidationResult</returns>
+        DocumentValidationResult ValidateDocumentRtfValidation (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Validate a Rich Text Format document (RTF)
+        /// </summary>
+        /// <remarks>
+        /// Validate a Rich Text Format document (RTF)
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of DocumentValidationResult</returns>
+        ApiResponse<DocumentValidationResult> ValidateDocumentRtfValidationWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
         /// Validate a TAR Tarball Archive file (TAR)
         /// </summary>
         /// <remarks>
@@ -402,6 +465,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>ApiResponse of DocumentValidationResult</returns>
         ApiResponse<DocumentValidationResult> ValidateDocumentTxtValidationWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// Validate a Excel 97-2003 Legacy spreadsheet (XLS)
+        /// </summary>
+        /// <remarks>
+        /// Validate a Excel 97-2003 Legacy spreadsheet (XLS)
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>DocumentValidationResult</returns>
+        DocumentValidationResult ValidateDocumentXlsValidation (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Validate a Excel 97-2003 Legacy spreadsheet (XLS)
+        /// </summary>
+        /// <remarks>
+        /// Validate a Excel 97-2003 Legacy spreadsheet (XLS)
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of DocumentValidationResult</returns>
+        ApiResponse<DocumentValidationResult> ValidateDocumentXlsValidationWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
         /// Validate a Excel document (XLSX)
         /// </summary>
@@ -530,6 +614,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>Task of ApiResponse (DocumentValidationResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<DocumentValidationResult>> ValidateDocumentCsvValidationAsyncWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// Validate a Word 97-2003 Legacy document (DOC)
+        /// </summary>
+        /// <remarks>
+        /// Validate a Word 97-2003 Legacy document (DOC)
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of DocumentValidationResult</returns>
+        System.Threading.Tasks.Task<DocumentValidationResult> ValidateDocumentDocValidationAsync (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Validate a Word 97-2003 Legacy document (DOC)
+        /// </summary>
+        /// <remarks>
+        /// Validate a Word 97-2003 Legacy document (DOC)
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (DocumentValidationResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DocumentValidationResult>> ValidateDocumentDocValidationAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
         /// Validate a Word document (DOCX)
         /// </summary>
@@ -783,6 +888,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (DocumentValidationResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<DocumentValidationResult>> ValidateDocumentPngValidationAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
+        /// Validate a PowerPoint 97-2003 Legacy presentation (PPT)
+        /// </summary>
+        /// <remarks>
+        /// Validate a PowerPoint 97-2003 Legacy presentation (PPT)
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of DocumentValidationResult</returns>
+        System.Threading.Tasks.Task<DocumentValidationResult> ValidateDocumentPptValidationAsync (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Validate a PowerPoint 97-2003 Legacy presentation (PPT)
+        /// </summary>
+        /// <remarks>
+        /// Validate a PowerPoint 97-2003 Legacy presentation (PPT)
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (DocumentValidationResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DocumentValidationResult>> ValidateDocumentPptValidationAsyncWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
         /// Validate a PowerPoint presentation (PPTX)
         /// </summary>
         /// <remarks>
@@ -825,6 +951,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (DocumentValidationResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<DocumentValidationResult>> ValidateDocumentRarValidationAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
+        /// Validate a Rich Text Format document (RTF)
+        /// </summary>
+        /// <remarks>
+        /// Validate a Rich Text Format document (RTF)
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of DocumentValidationResult</returns>
+        System.Threading.Tasks.Task<DocumentValidationResult> ValidateDocumentRtfValidationAsync (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Validate a Rich Text Format document (RTF)
+        /// </summary>
+        /// <remarks>
+        /// Validate a Rich Text Format document (RTF)
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (DocumentValidationResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DocumentValidationResult>> ValidateDocumentRtfValidationAsyncWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
         /// Validate a TAR Tarball Archive file (TAR)
         /// </summary>
         /// <remarks>
@@ -866,6 +1013,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>Task of ApiResponse (DocumentValidationResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<DocumentValidationResult>> ValidateDocumentTxtValidationAsyncWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// Validate a Excel 97-2003 Legacy spreadsheet (XLS)
+        /// </summary>
+        /// <remarks>
+        /// Validate a Excel 97-2003 Legacy spreadsheet (XLS)
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of DocumentValidationResult</returns>
+        System.Threading.Tasks.Task<DocumentValidationResult> ValidateDocumentXlsValidationAsync (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Validate a Excel 97-2003 Legacy spreadsheet (XLS)
+        /// </summary>
+        /// <remarks>
+        /// Validate a Excel 97-2003 Legacy spreadsheet (XLS)
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (DocumentValidationResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DocumentValidationResult>> ValidateDocumentXlsValidationAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
         /// Validate a Excel document (XLSX)
         /// </summary>
@@ -1344,6 +1512,157 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("ValidateDocumentCsvValidation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DocumentValidationResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DocumentValidationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentValidationResult)));
+        }
+
+        /// <summary>
+        /// Validate a Word 97-2003 Legacy document (DOC) Validate a Word 97-2003 Legacy document (DOC)
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>DocumentValidationResult</returns>
+        public DocumentValidationResult ValidateDocumentDocValidation (System.IO.Stream inputFile)
+        {
+             ApiResponse<DocumentValidationResult> localVarResponse = ValidateDocumentDocValidationWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Validate a Word 97-2003 Legacy document (DOC) Validate a Word 97-2003 Legacy document (DOC)
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of DocumentValidationResult</returns>
+        public ApiResponse< DocumentValidationResult > ValidateDocumentDocValidationWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ValidateDocumentApi->ValidateDocumentDocValidation");
+
+            var localVarPath = "/convert/validate/doc";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ValidateDocumentDocValidation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DocumentValidationResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DocumentValidationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentValidationResult)));
+        }
+
+        /// <summary>
+        /// Validate a Word 97-2003 Legacy document (DOC) Validate a Word 97-2003 Legacy document (DOC)
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of DocumentValidationResult</returns>
+        public async System.Threading.Tasks.Task<DocumentValidationResult> ValidateDocumentDocValidationAsync (System.IO.Stream inputFile)
+        {
+             ApiResponse<DocumentValidationResult> localVarResponse = await ValidateDocumentDocValidationAsyncWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Validate a Word 97-2003 Legacy document (DOC) Validate a Word 97-2003 Legacy document (DOC)
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (DocumentValidationResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DocumentValidationResult>> ValidateDocumentDocValidationAsyncWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ValidateDocumentApi->ValidateDocumentDocValidation");
+
+            var localVarPath = "/convert/validate/doc";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ValidateDocumentDocValidation", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -3165,6 +3484,157 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
+        /// Validate a PowerPoint 97-2003 Legacy presentation (PPT) Validate a PowerPoint 97-2003 Legacy presentation (PPT)
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>DocumentValidationResult</returns>
+        public DocumentValidationResult ValidateDocumentPptValidation (System.IO.Stream inputFile)
+        {
+             ApiResponse<DocumentValidationResult> localVarResponse = ValidateDocumentPptValidationWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Validate a PowerPoint 97-2003 Legacy presentation (PPT) Validate a PowerPoint 97-2003 Legacy presentation (PPT)
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of DocumentValidationResult</returns>
+        public ApiResponse< DocumentValidationResult > ValidateDocumentPptValidationWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ValidateDocumentApi->ValidateDocumentPptValidation");
+
+            var localVarPath = "/convert/validate/ppt";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ValidateDocumentPptValidation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DocumentValidationResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DocumentValidationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentValidationResult)));
+        }
+
+        /// <summary>
+        /// Validate a PowerPoint 97-2003 Legacy presentation (PPT) Validate a PowerPoint 97-2003 Legacy presentation (PPT)
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of DocumentValidationResult</returns>
+        public async System.Threading.Tasks.Task<DocumentValidationResult> ValidateDocumentPptValidationAsync (System.IO.Stream inputFile)
+        {
+             ApiResponse<DocumentValidationResult> localVarResponse = await ValidateDocumentPptValidationAsyncWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Validate a PowerPoint 97-2003 Legacy presentation (PPT) Validate a PowerPoint 97-2003 Legacy presentation (PPT)
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (DocumentValidationResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DocumentValidationResult>> ValidateDocumentPptValidationAsyncWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ValidateDocumentApi->ValidateDocumentPptValidation");
+
+            var localVarPath = "/convert/validate/ppt";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ValidateDocumentPptValidation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DocumentValidationResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DocumentValidationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentValidationResult)));
+        }
+
+        /// <summary>
         /// Validate a PowerPoint presentation (PPTX) Validate a PowerPoint presentation (PPTX); if the document is not valid, identifies the errors in the document
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3467,6 +3937,157 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
+        /// Validate a Rich Text Format document (RTF) Validate a Rich Text Format document (RTF)
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>DocumentValidationResult</returns>
+        public DocumentValidationResult ValidateDocumentRtfValidation (System.IO.Stream inputFile)
+        {
+             ApiResponse<DocumentValidationResult> localVarResponse = ValidateDocumentRtfValidationWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Validate a Rich Text Format document (RTF) Validate a Rich Text Format document (RTF)
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of DocumentValidationResult</returns>
+        public ApiResponse< DocumentValidationResult > ValidateDocumentRtfValidationWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ValidateDocumentApi->ValidateDocumentRtfValidation");
+
+            var localVarPath = "/convert/validate/rtf";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ValidateDocumentRtfValidation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DocumentValidationResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DocumentValidationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentValidationResult)));
+        }
+
+        /// <summary>
+        /// Validate a Rich Text Format document (RTF) Validate a Rich Text Format document (RTF)
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of DocumentValidationResult</returns>
+        public async System.Threading.Tasks.Task<DocumentValidationResult> ValidateDocumentRtfValidationAsync (System.IO.Stream inputFile)
+        {
+             ApiResponse<DocumentValidationResult> localVarResponse = await ValidateDocumentRtfValidationAsyncWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Validate a Rich Text Format document (RTF) Validate a Rich Text Format document (RTF)
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (DocumentValidationResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DocumentValidationResult>> ValidateDocumentRtfValidationAsyncWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ValidateDocumentApi->ValidateDocumentRtfValidation");
+
+            var localVarPath = "/convert/validate/rtf";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ValidateDocumentRtfValidation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DocumentValidationResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DocumentValidationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentValidationResult)));
+        }
+
+        /// <summary>
         /// Validate a TAR Tarball Archive file (TAR) Validate a TAR tarball archive file (TAR)
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3760,6 +4381,157 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("ValidateDocumentTxtValidation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DocumentValidationResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DocumentValidationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentValidationResult)));
+        }
+
+        /// <summary>
+        /// Validate a Excel 97-2003 Legacy spreadsheet (XLS) Validate a Excel 97-2003 Legacy spreadsheet (XLS)
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>DocumentValidationResult</returns>
+        public DocumentValidationResult ValidateDocumentXlsValidation (System.IO.Stream inputFile)
+        {
+             ApiResponse<DocumentValidationResult> localVarResponse = ValidateDocumentXlsValidationWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Validate a Excel 97-2003 Legacy spreadsheet (XLS) Validate a Excel 97-2003 Legacy spreadsheet (XLS)
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of DocumentValidationResult</returns>
+        public ApiResponse< DocumentValidationResult > ValidateDocumentXlsValidationWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ValidateDocumentApi->ValidateDocumentXlsValidation");
+
+            var localVarPath = "/convert/validate/xls";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ValidateDocumentXlsValidation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DocumentValidationResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DocumentValidationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentValidationResult)));
+        }
+
+        /// <summary>
+        /// Validate a Excel 97-2003 Legacy spreadsheet (XLS) Validate a Excel 97-2003 Legacy spreadsheet (XLS)
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of DocumentValidationResult</returns>
+        public async System.Threading.Tasks.Task<DocumentValidationResult> ValidateDocumentXlsValidationAsync (System.IO.Stream inputFile)
+        {
+             ApiResponse<DocumentValidationResult> localVarResponse = await ValidateDocumentXlsValidationAsyncWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Validate a Excel 97-2003 Legacy spreadsheet (XLS) Validate a Excel 97-2003 Legacy spreadsheet (XLS)
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (DocumentValidationResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DocumentValidationResult>> ValidateDocumentXlsValidationAsyncWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ValidateDocumentApi->ValidateDocumentXlsValidation");
+
+            var localVarPath = "/convert/validate/xls";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ValidateDocumentXlsValidation", localVarResponse);
                 if (exception != null) throw exception;
             }
 

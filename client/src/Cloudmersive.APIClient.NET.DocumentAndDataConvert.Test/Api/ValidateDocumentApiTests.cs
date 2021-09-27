@@ -89,6 +89,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test ValidateDocumentDocValidation
+        /// </summary>
+        [Test]
+        public void ValidateDocumentDocValidationTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.ValidateDocumentDocValidation(inputFile);
+            //Assert.IsInstanceOf<DocumentValidationResult> (response, "response is DocumentValidationResult");
+        }
+        
+        /// <summary>
         /// Test ValidateDocumentDocxValidation
         /// </summary>
         [Test]
@@ -233,6 +245,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test ValidateDocumentPptValidation
+        /// </summary>
+        [Test]
+        public void ValidateDocumentPptValidationTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.ValidateDocumentPptValidation(inputFile);
+            //Assert.IsInstanceOf<DocumentValidationResult> (response, "response is DocumentValidationResult");
+        }
+        
+        /// <summary>
         /// Test ValidateDocumentPptxValidation
         /// </summary>
         [Test]
@@ -257,6 +281,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test ValidateDocumentRtfValidation
+        /// </summary>
+        [Test]
+        public void ValidateDocumentRtfValidationTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.ValidateDocumentRtfValidation(inputFile);
+            //Assert.IsInstanceOf<DocumentValidationResult> (response, "response is DocumentValidationResult");
+        }
+        
+        /// <summary>
         /// Test ValidateDocumentTarValidation
         /// </summary>
         [Test]
@@ -277,6 +313,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             // TODO uncomment below to test the method and replace null with proper value
             //System.IO.Stream inputFile = null;
             //var response = instance.ValidateDocumentTxtValidation(inputFile);
+            //Assert.IsInstanceOf<DocumentValidationResult> (response, "response is DocumentValidationResult");
+        }
+        
+        /// <summary>
+        /// Test ValidateDocumentXlsValidation
+        /// </summary>
+        [Test]
+        public void ValidateDocumentXlsValidationTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.ValidateDocumentXlsValidation(inputFile);
             //Assert.IsInstanceOf<DocumentValidationResult> (response, "response is DocumentValidationResult");
         }
         
