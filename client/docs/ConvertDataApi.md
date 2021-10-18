@@ -6,7 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ConvertDataCsvToJson**](ConvertDataApi.md#convertdatacsvtojson) | **POST** /convert/csv/to/json | Convert CSV to JSON conversion
 [**ConvertDataCsvToXml**](ConvertDataApi.md#convertdatacsvtoxml) | **POST** /convert/csv/to/xml | Convert CSV to XML conversion
-[**ConvertDataJsonToXml**](ConvertDataApi.md#convertdatajsontoxml) | **POST** /convert/json/to/xml | Convert JSON to XML conversion
+[**ConvertDataJsonStringToXml**](ConvertDataApi.md#convertdatajsonstringtoxml) | **POST** /convert/json-string/to/xml | Convert JSON String to XML conversion
+[**ConvertDataJsonToXml**](ConvertDataApi.md#convertdatajsontoxml) | **POST** /convert/json/to/xml | Convert JSON Object to XML conversion
 [**ConvertDataXlsToJson**](ConvertDataApi.md#convertdataxlstojson) | **POST** /convert/xls/to/json | Convert Excel (97-2003) XLS to JSON conversion
 [**ConvertDataXlsxToJson**](ConvertDataApi.md#convertdataxlsxtojson) | **POST** /convert/xlsx/to/json | Convert Excel XLSX to JSON conversion
 [**ConvertDataXlsxToXml**](ConvertDataApi.md#convertdataxlsxtoxml) | **POST** /convert/xlsx/to/xml | Convert Excel XLSX to XML conversion
@@ -159,11 +160,77 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="convertdatajsonstringtoxml"></a>
+# **ConvertDataJsonStringToXml**
+> Object ConvertDataJsonStringToXml (string jsonString)
+
+Convert JSON String to XML conversion
+
+Convert a JSON object into XML
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class ConvertDataJsonStringToXmlExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new ConvertDataApi();
+            var jsonString = jsonString_example;  // string | Input JSON String to convert to XML
+
+            try
+            {
+                // Convert JSON String to XML conversion
+                Object result = apiInstance.ConvertDataJsonStringToXml(jsonString);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConvertDataApi.ConvertDataJsonStringToXml: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **jsonString** | **string**| Input JSON String to convert to XML | 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="convertdatajsontoxml"></a>
 # **ConvertDataJsonToXml**
 > byte[] ConvertDataJsonToXml (Object jsonObject)
 
-Convert JSON to XML conversion
+Convert JSON Object to XML conversion
 
 Convert a JSON object into XML
 
@@ -187,11 +254,11 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new ConvertDataApi();
-            var jsonObject = ;  // Object | Input JSON to convert to XML
+            var jsonObject = ;  // Object | Input JSON Object to convert to XML
 
             try
             {
-                // Convert JSON to XML conversion
+                // Convert JSON Object to XML conversion
                 byte[] result = apiInstance.ConvertDataJsonToXml(jsonObject);
                 Debug.WriteLine(result);
             }
@@ -208,7 +275,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **jsonObject** | **Object**| Input JSON to convert to XML | 
+ **jsonObject** | **Object**| Input JSON Object to convert to XML | 
 
 ### Return type
 

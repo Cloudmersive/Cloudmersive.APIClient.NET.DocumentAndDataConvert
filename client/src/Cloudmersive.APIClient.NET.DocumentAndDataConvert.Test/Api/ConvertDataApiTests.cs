@@ -91,6 +91,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test ConvertDataJsonStringToXml
+        /// </summary>
+        [Test]
+        public void ConvertDataJsonStringToXmlTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string jsonString = null;
+            //var response = instance.ConvertDataJsonStringToXml(jsonString);
+            //Assert.IsInstanceOf<Object> (response, "response is Object");
+        }
+        
+        /// <summary>
         /// Test ConvertDataJsonToXml
         /// </summary>
         [Test]

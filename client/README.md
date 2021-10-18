@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 This C# SDK is for the [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api):
 
 - API version: v1
-- SDK version: 3.5.3
+- SDK version: 3.5.4
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -105,7 +105,8 @@ Class | Method | HTTP request | Description
 *CompareDocumentApi* | [**CompareDocumentDocx**](docs/CompareDocumentApi.md#comparedocumentdocx) | **POST** /convert/compare/docx | Compare Two Word DOCX
 *ConvertDataApi* | [**ConvertDataCsvToJson**](docs/ConvertDataApi.md#convertdatacsvtojson) | **POST** /convert/csv/to/json | Convert CSV to JSON conversion
 *ConvertDataApi* | [**ConvertDataCsvToXml**](docs/ConvertDataApi.md#convertdatacsvtoxml) | **POST** /convert/csv/to/xml | Convert CSV to XML conversion
-*ConvertDataApi* | [**ConvertDataJsonToXml**](docs/ConvertDataApi.md#convertdatajsontoxml) | **POST** /convert/json/to/xml | Convert JSON to XML conversion
+*ConvertDataApi* | [**ConvertDataJsonStringToXml**](docs/ConvertDataApi.md#convertdatajsonstringtoxml) | **POST** /convert/json-string/to/xml | Convert JSON String to XML conversion
+*ConvertDataApi* | [**ConvertDataJsonToXml**](docs/ConvertDataApi.md#convertdatajsontoxml) | **POST** /convert/json/to/xml | Convert JSON Object to XML conversion
 *ConvertDataApi* | [**ConvertDataXlsToJson**](docs/ConvertDataApi.md#convertdataxlstojson) | **POST** /convert/xls/to/json | Convert Excel (97-2003) XLS to JSON conversion
 *ConvertDataApi* | [**ConvertDataXlsxToJson**](docs/ConvertDataApi.md#convertdataxlsxtojson) | **POST** /convert/xlsx/to/json | Convert Excel XLSX to JSON conversion
 *ConvertDataApi* | [**ConvertDataXlsxToXml**](docs/ConvertDataApi.md#convertdataxlsxtoxml) | **POST** /convert/xlsx/to/xml | Convert Excel XLSX to XML conversion
