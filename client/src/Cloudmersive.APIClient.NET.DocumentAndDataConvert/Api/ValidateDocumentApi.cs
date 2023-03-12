@@ -109,7 +109,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of DocumentValidationResult</returns>
         ApiResponse<DocumentValidationResult> ValidateDocumentDocxValidationWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// Validate if an EML file is executable
+        /// Validate if input file is a valid EML file
         /// </summary>
         /// <remarks>
         /// Validate if an input file is an EML email file; if the document is not valid
@@ -120,7 +120,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         DocumentValidationResult ValidateDocumentEmlValidation (System.IO.Stream inputFile);
 
         /// <summary>
-        /// Validate if an EML file is executable
+        /// Validate if input file is a valid EML file
         /// </summary>
         /// <remarks>
         /// Validate if an input file is an EML email file; if the document is not valid
@@ -277,7 +277,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of DocumentValidationResult</returns>
         ApiResponse<DocumentValidationResult> ValidateDocumentJsonValidationWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// Validate if an MSG file is executable
+        /// Validate if input file is a valid MSG file
         /// </summary>
         /// <remarks>
         /// Validate if an input file is an MSG email file; if the document is not valid
@@ -288,7 +288,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         DocumentValidationResult ValidateDocumentMsgValidation (System.IO.Stream inputFile);
 
         /// <summary>
-        /// Validate if an MSG file is executable
+        /// Validate if input file is a valid MSG file
         /// </summary>
         /// <remarks>
         /// Validate if an input file is an MSG email file; if the document is not valid
@@ -657,7 +657,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (DocumentValidationResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<DocumentValidationResult>> ValidateDocumentDocxValidationAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// Validate if an EML file is executable
+        /// Validate if input file is a valid EML file
         /// </summary>
         /// <remarks>
         /// Validate if an input file is an EML email file; if the document is not valid
@@ -668,7 +668,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<DocumentValidationResult> ValidateDocumentEmlValidationAsync (System.IO.Stream inputFile);
 
         /// <summary>
-        /// Validate if an EML file is executable
+        /// Validate if input file is a valid EML file
         /// </summary>
         /// <remarks>
         /// Validate if an input file is an EML email file; if the document is not valid
@@ -825,7 +825,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (DocumentValidationResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<DocumentValidationResult>> ValidateDocumentJsonValidationAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
-        /// Validate if an MSG file is executable
+        /// Validate if input file is a valid MSG file
         /// </summary>
         /// <remarks>
         /// Validate if an input file is an MSG email file; if the document is not valid
@@ -836,7 +836,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         System.Threading.Tasks.Task<DocumentValidationResult> ValidateDocumentMsgValidationAsync (System.IO.Stream inputFile);
 
         /// <summary>
-        /// Validate if an MSG file is executable
+        /// Validate if input file is a valid MSG file
         /// </summary>
         /// <remarks>
         /// Validate if an input file is an MSG email file; if the document is not valid
@@ -1823,7 +1823,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Validate if an EML file is executable Validate if an input file is an EML email file; if the document is not valid
+        /// Validate if input file is a valid EML file Validate if an input file is an EML email file; if the document is not valid
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -1835,7 +1835,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Validate if an EML file is executable Validate if an input file is an EML email file; if the document is not valid
+        /// Validate if input file is a valid EML file Validate if an input file is an EML email file; if the document is not valid
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -1898,7 +1898,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Validate if an EML file is executable Validate if an input file is an EML email file; if the document is not valid
+        /// Validate if input file is a valid EML file Validate if an input file is an EML email file; if the document is not valid
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -1911,7 +1911,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Validate if an EML file is executable Validate if an input file is an EML email file; if the document is not valid
+        /// Validate if input file is a valid EML file Validate if an input file is an EML email file; if the document is not valid
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -3031,7 +3031,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Validate if an MSG file is executable Validate if an input file is an MSG email file; if the document is not valid
+        /// Validate if input file is a valid MSG file Validate if an input file is an MSG email file; if the document is not valid
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -3043,7 +3043,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Validate if an MSG file is executable Validate if an input file is an MSG email file; if the document is not valid
+        /// Validate if input file is a valid MSG file Validate if an input file is an MSG email file; if the document is not valid
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -3106,7 +3106,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Validate if an MSG file is executable Validate if an input file is an MSG email file; if the document is not valid
+        /// Validate if input file is a valid MSG file Validate if an input file is an MSG email file; if the document is not valid
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
@@ -3119,7 +3119,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
-        /// Validate if an MSG file is executable Validate if an input file is an MSG email file; if the document is not valid
+        /// Validate if input file is a valid MSG file Validate if an input file is an MSG email file; if the document is not valid
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>

@@ -751,6 +751,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test ConvertDocumentPdfToPngArrayDirect
+        /// </summary>
+        [Test]
+        public void ConvertDocumentPdfToPngArrayDirectTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.ConvertDocumentPdfToPngArrayDirect(inputFile);
+            //Assert.IsInstanceOf<PdfToPngDirectResult> (response, "response is PdfToPngDirectResult");
+        }
+        
+        /// <summary>
         /// Test ConvertDocumentPdfToPngSingle
         /// </summary>
         [Test]
@@ -938,6 +950,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //System.IO.Stream inputFile = null;
             //var response = instance.ConvertDocumentRtfToPng(inputFile);
             //Assert.IsInstanceOf<RtfToPngResult> (response, "response is RtfToPngResult");
+        }
+        
+        /// <summary>
+        /// Test ConvertDocumentTxtToPdf
+        /// </summary>
+        [Test]
+        public void ConvertDocumentTxtToPdfTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //int? scaleFactor = null;
+            //var response = instance.ConvertDocumentTxtToPdf(inputFile, scaleFactor);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
         /// <summary>

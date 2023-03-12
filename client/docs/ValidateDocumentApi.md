@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**ValidateDocumentCsvValidation**](ValidateDocumentApi.md#validatedocumentcsvvalidation) | **POST** /convert/validate/csv | Validate a CSV file document (CSV)
 [**ValidateDocumentDocValidation**](ValidateDocumentApi.md#validatedocumentdocvalidation) | **POST** /convert/validate/doc | Validate a Word 97-2003 Legacy document (DOC)
 [**ValidateDocumentDocxValidation**](ValidateDocumentApi.md#validatedocumentdocxvalidation) | **POST** /convert/validate/docx | Validate a Word document (DOCX)
-[**ValidateDocumentEmlValidation**](ValidateDocumentApi.md#validatedocumentemlvalidation) | **POST** /convert/validate/eml | Validate if an EML file is executable
+[**ValidateDocumentEmlValidation**](ValidateDocumentApi.md#validatedocumentemlvalidation) | **POST** /convert/validate/eml | Validate if input file is a valid EML file
 [**ValidateDocumentExecutableValidation**](ValidateDocumentApi.md#validatedocumentexecutablevalidation) | **POST** /convert/validate/executable | Validate if a file is executable
 [**ValidateDocumentGZipValidation**](ValidateDocumentApi.md#validatedocumentgzipvalidation) | **POST** /convert/validate/gzip | Validate a GZip Archive file (gzip or gz)
 [**ValidateDocumentHtmlSsrfValidation**](ValidateDocumentApi.md#validatedocumenthtmlssrfvalidation) | **POST** /convert/validate/html/ssrf-threat-check | Validate an HTML file and checks for SSRF threats
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 [**ValidateDocumentImageValidation**](ValidateDocumentApi.md#validatedocumentimagevalidation) | **POST** /convert/validate/image | Validate an Image File
 [**ValidateDocumentJpgValidation**](ValidateDocumentApi.md#validatedocumentjpgvalidation) | **POST** /convert/validate/jpg | Validate a JPG File
 [**ValidateDocumentJsonValidation**](ValidateDocumentApi.md#validatedocumentjsonvalidation) | **POST** /convert/validate/json | Validate a JSON file
-[**ValidateDocumentMsgValidation**](ValidateDocumentApi.md#validatedocumentmsgvalidation) | **POST** /convert/validate/msg | Validate if an MSG file is executable
+[**ValidateDocumentMsgValidation**](ValidateDocumentApi.md#validatedocumentmsgvalidation) | **POST** /convert/validate/msg | Validate if input file is a valid MSG file
 [**ValidateDocumentPdfValidation**](ValidateDocumentApi.md#validatedocumentpdfvalidation) | **POST** /convert/validate/pdf | Validate a PDF document file
 [**ValidateDocumentPngValidation**](ValidateDocumentApi.md#validatedocumentpngvalidation) | **POST** /convert/validate/png | Validate a PNG File
 [**ValidateDocumentPptValidation**](ValidateDocumentApi.md#validatedocumentpptvalidation) | **POST** /convert/validate/ppt | Validate a PowerPoint 97-2003 Legacy presentation (PPT)
@@ -300,7 +300,7 @@ Name | Type | Description  | Notes
 # **ValidateDocumentEmlValidation**
 > DocumentValidationResult ValidateDocumentEmlValidation (System.IO.Stream inputFile)
 
-Validate if an EML file is executable
+Validate if input file is a valid EML file
 
 Validate if an input file is an EML email file; if the document is not valid
 
@@ -328,7 +328,7 @@ namespace Example
 
             try
             {
-                // Validate if an EML file is executable
+                // Validate if input file is a valid EML file
                 DocumentValidationResult result = apiInstance.ValidateDocumentEmlValidation(inputFile);
                 Debug.WriteLine(result);
             }
@@ -828,7 +828,7 @@ Name | Type | Description  | Notes
 # **ValidateDocumentMsgValidation**
 > DocumentValidationResult ValidateDocumentMsgValidation (System.IO.Stream inputFile)
 
-Validate if an MSG file is executable
+Validate if input file is a valid MSG file
 
 Validate if an input file is an MSG email file; if the document is not valid
 
@@ -856,7 +856,7 @@ namespace Example
 
             try
             {
-                // Validate if an MSG file is executable
+                // Validate if input file is a valid MSG file
                 DocumentValidationResult result = apiInstance.ValidateDocumentMsgValidation(inputFile);
                 Debug.WriteLine(result);
             }
