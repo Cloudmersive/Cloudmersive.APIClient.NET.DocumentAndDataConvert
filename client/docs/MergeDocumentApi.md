@@ -4,21 +4,95 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**MergeDocumentBatchJobCreate**](MergeDocumentApi.md#mergedocumentbatchjobcreate) | **POST** /convert/merge/batch-job/create | Merge an array of Documents into a Single Document by Page as a Batch Job
 [**MergeDocumentDocx**](MergeDocumentApi.md#mergedocumentdocx) | **POST** /convert/merge/docx | Merge Two Word DOCX Together
 [**MergeDocumentDocxMulti**](MergeDocumentApi.md#mergedocumentdocxmulti) | **POST** /convert/merge/docx/multi | Merge Multple Word DOCX Together
+[**MergeDocumentDocxMultiArray**](MergeDocumentApi.md#mergedocumentdocxmultiarray) | **POST** /convert/merge/docx/multi/array | Merge Multple Word DOCX Together from an array
+[**MergeDocumentGetAsyncJobStatus**](MergeDocumentApi.md#mergedocumentgetasyncjobstatus) | **GET** /convert/merge/batch-job/status | Get the status and result of a Merge Document Batch Job
 [**MergeDocumentHtml**](MergeDocumentApi.md#mergedocumenthtml) | **POST** /convert/merge/html | Merge Two HTML (HTM) Files Together
 [**MergeDocumentHtmlMulti**](MergeDocumentApi.md#mergedocumenthtmlmulti) | **POST** /convert/merge/html/multi | Merge Multple HTML (HTM) Files Together
+[**MergeDocumentHtmlMultiArray**](MergeDocumentApi.md#mergedocumenthtmlmultiarray) | **POST** /convert/merge/html/multi/array | Merge Multple HTML (HTM) Files Together from an array
 [**MergeDocumentPdf**](MergeDocumentApi.md#mergedocumentpdf) | **POST** /convert/merge/pdf | Merge Two PDF Files Together
 [**MergeDocumentPdfMulti**](MergeDocumentApi.md#mergedocumentpdfmulti) | **POST** /convert/merge/pdf/multi | Merge Multple PDF Files Together
+[**MergeDocumentPdfMultiArray**](MergeDocumentApi.md#mergedocumentpdfmultiarray) | **POST** /convert/merge/pdf/multi/array | Merge Multple PDF Files Together from an array
 [**MergeDocumentPng**](MergeDocumentApi.md#mergedocumentpng) | **POST** /convert/merge/png/vertical | Merge Two PNG Files Together
 [**MergeDocumentPngMulti**](MergeDocumentApi.md#mergedocumentpngmulti) | **POST** /convert/merge/png/vertical/multi | Merge Multple PNG Files Together
+[**MergeDocumentPngMultiArray**](MergeDocumentApi.md#mergedocumentpngmultiarray) | **POST** /convert/merge/png/vertical/multi/array | Merge Multple PNG Files Together from an array
 [**MergeDocumentPptx**](MergeDocumentApi.md#mergedocumentpptx) | **POST** /convert/merge/pptx | Merge Two PowerPoint PPTX Together
 [**MergeDocumentPptxMulti**](MergeDocumentApi.md#mergedocumentpptxmulti) | **POST** /convert/merge/pptx/multi | Merge Multple PowerPoint PPTX Together
+[**MergeDocumentPptxMultiArray**](MergeDocumentApi.md#mergedocumentpptxmultiarray) | **POST** /convert/merge/pptx/multi/array | Merge Multple PowerPoint PPTX Together from an array
 [**MergeDocumentTxt**](MergeDocumentApi.md#mergedocumenttxt) | **POST** /convert/merge/txt | Merge Two Text (TXT) Files Together
 [**MergeDocumentTxtMulti**](MergeDocumentApi.md#mergedocumenttxtmulti) | **POST** /convert/merge/txt/multi | Merge Multple Text (TXT) Files Together
 [**MergeDocumentXlsx**](MergeDocumentApi.md#mergedocumentxlsx) | **POST** /convert/merge/xlsx | Merge Two Excel XLSX Together
 [**MergeDocumentXlsxMulti**](MergeDocumentApi.md#mergedocumentxlsxmulti) | **POST** /convert/merge/xlsx/multi | Merge Multple Excel XLSX Together
+[**MergeDocumentXlsxMultiArray**](MergeDocumentApi.md#mergedocumentxlsxmultiarray) | **POST** /convert/merge/xlsx/multi/array | Merge Multple Excel XLSX Together from an Array
 
+
+<a name="mergedocumentbatchjobcreate"></a>
+# **MergeDocumentBatchJobCreate**
+> MergeBatchJobCreateResult MergeDocumentBatchJobCreate (DocumentArrayInput input)
+
+Merge an array of Documents into a Single Document by Page as a Batch Job
+
+Merge an array of Documents (PDF supported), into a single document.  This API is designed for large jobs that could take a long time to create and so runs as a batch job that returns a Job ID that you can use with the GetAsyncJobStatus API to check on the status of the Job and ultimately get the output result.  This API automatically detects the document type and then performs the split by using the document type-specific API needed to perform the split.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class MergeDocumentBatchJobCreateExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new MergeDocumentApi();
+            var input = new DocumentArrayInput(); // DocumentArrayInput | 
+
+            try
+            {
+                // Merge an array of Documents into a Single Document by Page as a Batch Job
+                MergeBatchJobCreateResult result = apiInstance.MergeDocumentBatchJobCreate(input);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MergeDocumentApi.MergeDocumentBatchJobCreate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **input** | [**DocumentArrayInput**](DocumentArrayInput.md)|  | 
+
+### Return type
+
+[**MergeBatchJobCreateResult**](MergeBatchJobCreateResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="mergedocumentdocx"></a>
 # **MergeDocumentDocx**
@@ -172,6 +246,138 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="mergedocumentdocxmultiarray"></a>
+# **MergeDocumentDocxMultiArray**
+> Object MergeDocumentDocxMultiArray (DocumentArrayInput input)
+
+Merge Multple Word DOCX Together from an array
+
+Combine multiple Office Word Documents (docx), stored in an array, into one single Office Word document
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class MergeDocumentDocxMultiArrayExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new MergeDocumentApi();
+            var input = new DocumentArrayInput(); // DocumentArrayInput | Array of input files
+
+            try
+            {
+                // Merge Multple Word DOCX Together from an array
+                Object result = apiInstance.MergeDocumentDocxMultiArray(input);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MergeDocumentApi.MergeDocumentDocxMultiArray: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **input** | [**DocumentArrayInput**](DocumentArrayInput.md)| Array of input files | 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/octet-stream
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="mergedocumentgetasyncjobstatus"></a>
+# **MergeDocumentGetAsyncJobStatus**
+> MergeJobStatusResult MergeDocumentGetAsyncJobStatus (string asyncJobID)
+
+Get the status and result of a Merge Document Batch Job
+
+Returns the result of the Async Job - possible states can be STARTED or COMPLETED.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class MergeDocumentGetAsyncJobStatusExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new MergeDocumentApi();
+            var asyncJobID = asyncJobID_example;  // string | 
+
+            try
+            {
+                // Get the status and result of a Merge Document Batch Job
+                MergeJobStatusResult result = apiInstance.MergeDocumentGetAsyncJobStatus(asyncJobID);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MergeDocumentApi.MergeDocumentGetAsyncJobStatus: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **asyncJobID** | **string**|  | 
+
+### Return type
+
+[**MergeJobStatusResult**](MergeJobStatusResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="mergedocumenthtml"></a>
 # **MergeDocumentHtml**
 > byte[] MergeDocumentHtml (System.IO.Stream inputFile1, System.IO.Stream inputFile2)
@@ -320,6 +526,72 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
+ - **Accept**: application/octet-stream
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="mergedocumenthtmlmultiarray"></a>
+# **MergeDocumentHtmlMultiArray**
+> Object MergeDocumentHtmlMultiArray (DocumentArrayInput input)
+
+Merge Multple HTML (HTM) Files Together from an array
+
+Combine multiple HTML (.HTM) files, from an array, into a single text document, preserving the order of the input documents in the combined document by stacking them vertically.  The title will be taken from the first document.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class MergeDocumentHtmlMultiArrayExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new MergeDocumentApi();
+            var input = new DocumentArrayInput(); // DocumentArrayInput | Array of input files
+
+            try
+            {
+                // Merge Multple HTML (HTM) Files Together from an array
+                Object result = apiInstance.MergeDocumentHtmlMultiArray(input);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MergeDocumentApi.MergeDocumentHtmlMultiArray: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **input** | [**DocumentArrayInput**](DocumentArrayInput.md)| Array of input files | 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/octet-stream
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -476,6 +748,72 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="mergedocumentpdfmultiarray"></a>
+# **MergeDocumentPdfMultiArray**
+> Object MergeDocumentPdfMultiArray (DocumentArrayInput input)
+
+Merge Multple PDF Files Together from an array
+
+Combine multiple PDF files (pdf), as an array, into a single PDF document, preserving the order of the input documents in the combined document
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class MergeDocumentPdfMultiArrayExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new MergeDocumentApi();
+            var input = new DocumentArrayInput(); // DocumentArrayInput | Array of input files
+
+            try
+            {
+                // Merge Multple PDF Files Together from an array
+                Object result = apiInstance.MergeDocumentPdfMultiArray(input);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MergeDocumentApi.MergeDocumentPdfMultiArray: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **input** | [**DocumentArrayInput**](DocumentArrayInput.md)| Array of input files | 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/octet-stream
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="mergedocumentpng"></a>
 # **MergeDocumentPng**
 > byte[] MergeDocumentPng (System.IO.Stream inputFile1, System.IO.Stream inputFile2)
@@ -628,6 +966,72 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="mergedocumentpngmultiarray"></a>
+# **MergeDocumentPngMultiArray**
+> Object MergeDocumentPngMultiArray (DocumentArrayInput input)
+
+Merge Multple PNG Files Together from an array
+
+Combine multiple PNG files, from an array, into a single PNG document, preserving the order of the input documents in the combined document by stacking them vertically
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class MergeDocumentPngMultiArrayExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new MergeDocumentApi();
+            var input = new DocumentArrayInput(); // DocumentArrayInput | Array of input files
+
+            try
+            {
+                // Merge Multple PNG Files Together from an array
+                Object result = apiInstance.MergeDocumentPngMultiArray(input);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MergeDocumentApi.MergeDocumentPngMultiArray: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **input** | [**DocumentArrayInput**](DocumentArrayInput.md)| Array of input files | 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/octet-stream
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="mergedocumentpptx"></a>
 # **MergeDocumentPptx**
 > byte[] MergeDocumentPptx (System.IO.Stream inputFile1, System.IO.Stream inputFile2)
@@ -776,6 +1180,72 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
+ - **Accept**: application/octet-stream
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="mergedocumentpptxmultiarray"></a>
+# **MergeDocumentPptxMultiArray**
+> Object MergeDocumentPptxMultiArray (DocumentArrayInput input)
+
+Merge Multple PowerPoint PPTX Together from an array
+
+Combine multiple Office PowerPoint presentations (pptx), from an array, into one single Office PowerPoint presentation
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class MergeDocumentPptxMultiArrayExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new MergeDocumentApi();
+            var input = new DocumentArrayInput(); // DocumentArrayInput | Array of input files
+
+            try
+            {
+                // Merge Multple PowerPoint PPTX Together from an array
+                Object result = apiInstance.MergeDocumentPptxMultiArray(input);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MergeDocumentApi.MergeDocumentPptxMultiArray: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **input** | [**DocumentArrayInput**](DocumentArrayInput.md)| Array of input files | 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/octet-stream
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1080,6 +1550,72 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
+ - **Accept**: application/octet-stream
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="mergedocumentxlsxmultiarray"></a>
+# **MergeDocumentXlsxMultiArray**
+> Object MergeDocumentXlsxMultiArray (DocumentArrayInput input)
+
+Merge Multple Excel XLSX Together from an Array
+
+Combine multiple Office Excel spreadsheets (xlsx), as an array, into a single Office Excel spreadsheet
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class MergeDocumentXlsxMultiArrayExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new MergeDocumentApi();
+            var input = new DocumentArrayInput(); // DocumentArrayInput | Array of input files
+
+            try
+            {
+                // Merge Multple Excel XLSX Together from an Array
+                Object result = apiInstance.MergeDocumentXlsxMultiArray(input);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling MergeDocumentApi.MergeDocumentXlsxMultiArray: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **input** | [**DocumentArrayInput**](DocumentArrayInput.md)| Array of input files | 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/octet-stream
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

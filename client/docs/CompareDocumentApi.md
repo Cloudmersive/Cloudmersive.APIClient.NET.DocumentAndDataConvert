@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="comparedocumentdocx"></a>
 # **CompareDocumentDocx**
-> byte[] CompareDocumentDocx (System.IO.Stream inputFile1, System.IO.Stream inputFile2)
+> byte[] CompareDocumentDocx (System.IO.Stream inputFile1, System.IO.Stream inputFile2, bool? autorepair = null)
 
 Compare Two Word DOCX
 
@@ -37,11 +37,12 @@ namespace Example
             var apiInstance = new CompareDocumentApi();
             var inputFile1 = new System.IO.Stream(); // System.IO.Stream | First input file to perform the operation on.
             var inputFile2 = new System.IO.Stream(); // System.IO.Stream | Second input file to perform the operation on (more than 2 can be supplied).
+            var autorepair = true;  // bool? | Optional; automatically repair input documents that have errors (default is true) (optional) 
 
             try
             {
                 // Compare Two Word DOCX
-                byte[] result = apiInstance.CompareDocumentDocx(inputFile1, inputFile2);
+                byte[] result = apiInstance.CompareDocumentDocx(inputFile1, inputFile2, autorepair);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -59,6 +60,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **inputFile1** | **System.IO.Stream**| First input file to perform the operation on. | 
  **inputFile2** | **System.IO.Stream**| Second input file to perform the operation on (more than 2 can be supplied). | 
+ **autorepair** | **bool?**| Optional; automatically repair input documents that have errors (default is true) | [optional] 
 
 ### Return type
 

@@ -75,6 +75,14 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             // TODO unit test for the property 'Successful'
         }
         /// <summary>
+        /// Test the property 'ErrorDetails'
+        /// </summary>
+        [Test]
+        public void ErrorDetailsTest()
+        {
+            // TODO unit test for the property 'ErrorDetails'
+        }
+        /// <summary>
         /// Test the property 'Title'
         /// </summary>
         [Test]
@@ -137,6 +145,14 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         public void PageCountTest()
         {
             // TODO unit test for the property 'PageCount'
+        }
+        /// <summary>
+        /// Test the property 'Encrypted'
+        /// </summary>
+        [Test]
+        public void EncryptedTest()
+        {
+            // TODO unit test for the property 'Encrypted'
         }
 
     }

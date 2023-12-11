@@ -8,14 +8,18 @@ Method | HTTP request | Description
 [**EditPdfConvertToPdfA**](EditPdfApi.md#editpdfconverttopdfa) | **POST** /convert/edit/pdf/optimize/pdf-a | Convert a PDF file to PDF/A
 [**EditPdfDecrypt**](EditPdfApi.md#editpdfdecrypt) | **POST** /convert/edit/pdf/decrypt | Decrypt and password-protect a PDF
 [**EditPdfDeletePages**](EditPdfApi.md#editpdfdeletepages) | **POST** /convert/edit/pdf/pages/delete | Remove, delete pages from a PDF document
+[**EditPdfDeletePagesBatchJob**](EditPdfApi.md#editpdfdeletepagesbatchjob) | **POST** /convert/edit/pdf/pages/delete/batch-job | Remove, delete pages from a PDF document as Batch Job
 [**EditPdfEncrypt**](EditPdfApi.md#editpdfencrypt) | **POST** /convert/edit/pdf/encrypt | Encrypt and password-protect a PDF
 [**EditPdfGetAnnotations**](EditPdfApi.md#editpdfgetannotations) | **POST** /convert/edit/pdf/annotations/list | Get PDF annotations, including comments in the document
+[**EditPdfGetAsyncJobStatus**](EditPdfApi.md#editpdfgetasyncjobstatus) | **GET** /convert/edit/pdf/batch-job/status | Get the status and result of a PDF Batch Job
 [**EditPdfGetFormFields**](EditPdfApi.md#editpdfgetformfields) | **POST** /convert/edit/pdf/form/get-fields | Gets PDF Form fields and values
 [**EditPdfGetMetadata**](EditPdfApi.md#editpdfgetmetadata) | **POST** /convert/edit/pdf/get-metadata | Get PDF document metadata
 [**EditPdfGetPdfTextByPages**](EditPdfApi.md#editpdfgetpdftextbypages) | **POST** /convert/edit/pdf/pages/get-text | Get text in a PDF document by page
 [**EditPdfInsertPages**](EditPdfApi.md#editpdfinsertpages) | **POST** /convert/edit/pdf/pages/insert | Insert, copy pages from one PDF document into another
+[**EditPdfInsertPagesBatchJob**](EditPdfApi.md#editpdfinsertpagesbatchjob) | **POST** /convert/edit/pdf/pages/insert/batch-job | Insert, copy pages from one PDF document into another as a batch job
 [**EditPdfLinearize**](EditPdfApi.md#editpdflinearize) | **POST** /convert/edit/pdf/optimize/linearize | Linearize and optimize a PDF for streaming download
 [**EditPdfRasterize**](EditPdfApi.md#editpdfrasterize) | **POST** /convert/edit/pdf/rasterize | Rasterize a PDF to an image-based PDF
+[**EditPdfRasterizeBatchJob**](EditPdfApi.md#editpdfrasterizebatchjob) | **POST** /convert/edit/pdf/rasterize/batch-job | Rasterize a PDF to an image-based PDF as Batch Job
 [**EditPdfReduceFileSize**](EditPdfApi.md#editpdfreducefilesize) | **POST** /convert/edit/pdf/optimize/reduce-file-size | Reduce the file size and optimize a PDF
 [**EditPdfRemoveAllAnnotations**](EditPdfApi.md#editpdfremoveallannotations) | **POST** /convert/edit/pdf/annotations/remove-all | Remove all PDF annotations, including comments in the document
 [**EditPdfRemoveAnnotationItem**](EditPdfApi.md#editpdfremoveannotationitem) | **POST** /convert/edit/pdf/annotations/remove-item | Remove a specific PDF annotation, comment in the document
@@ -300,6 +304,76 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="editpdfdeletepagesbatchjob"></a>
+# **EditPdfDeletePagesBatchJob**
+> EditPdfBatchJobCreateResult EditPdfDeletePagesBatchJob (System.IO.Stream inputFile, int? pageStart, int? pageEnd)
+
+Remove, delete pages from a PDF document as Batch Job
+
+Remove one or more pages from a PDF document.  Runs as a batch job async and returns a batch job ID that you can check the status of to get the result.  Requires Cloudmersive Private Cloud or Managed Instance.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class EditPdfDeletePagesBatchJobExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new EditPdfApi();
+            var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
+            var pageStart = 56;  // int? | Page number (1 based) to start deleting pages from (inclusive).
+            var pageEnd = 56;  // int? | Page number (1 based) to stop deleting pages from (inclusive).
+
+            try
+            {
+                // Remove, delete pages from a PDF document as Batch Job
+                EditPdfBatchJobCreateResult result = apiInstance.EditPdfDeletePagesBatchJob(inputFile, pageStart, pageEnd);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling EditPdfApi.EditPdfDeletePagesBatchJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
+ **pageStart** | **int?**| Page number (1 based) to start deleting pages from (inclusive). | 
+ **pageEnd** | **int?**| Page number (1 based) to stop deleting pages from (inclusive). | 
+
+### Return type
+
+[**EditPdfBatchJobCreateResult**](EditPdfBatchJobCreateResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/octet-stream
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="editpdfencrypt"></a>
 # **EditPdfEncrypt**
 > byte[] EditPdfEncrypt (System.IO.Stream inputFile, string userPassword = null, string ownerPassword = null, string encryptionKeyLength = null)
@@ -435,6 +509,72 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: multipart/form-data
  - **Accept**: application/octet-stream
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="editpdfgetasyncjobstatus"></a>
+# **EditPdfGetAsyncJobStatus**
+> EditPdfJobStatusResult EditPdfGetAsyncJobStatus (string asyncJobID)
+
+Get the status and result of a PDF Batch Job
+
+Returns the result of the Async Job - possible states can be STARTED or COMPLETED.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class EditPdfGetAsyncJobStatusExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new EditPdfApi();
+            var asyncJobID = asyncJobID_example;  // string | 
+
+            try
+            {
+                // Get the status and result of a PDF Batch Job
+                EditPdfJobStatusResult result = apiInstance.EditPdfGetAsyncJobStatus(asyncJobID);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling EditPdfApi.EditPdfGetAsyncJobStatus: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **asyncJobID** | **string**|  | 
+
+### Return type
+
+[**EditPdfJobStatusResult**](EditPdfJobStatusResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -712,6 +852,80 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="editpdfinsertpagesbatchjob"></a>
+# **EditPdfInsertPagesBatchJob**
+> EditPdfBatchJobCreateResult EditPdfInsertPagesBatchJob (System.IO.Stream sourceFile, System.IO.Stream destinationFile, int? pageStartSource, int? pageEndSource, int? pageInsertBeforeDesitnation)
+
+Insert, copy pages from one PDF document into another as a batch job
+
+Copy one or more pages from one PDF document (source document) and insert them into a second PDF document (destination document).  Runs as a batch job async and returns a batch job ID that you can check the status of to get the result.  Requires Cloudmersive Private Cloud or Managed Instance.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class EditPdfInsertPagesBatchJobExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new EditPdfApi();
+            var sourceFile = new System.IO.Stream(); // System.IO.Stream | Source PDF file to copy pages from.
+            var destinationFile = new System.IO.Stream(); // System.IO.Stream | Destination PDF file to copy pages into.
+            var pageStartSource = 56;  // int? | Page number (1 based) to start copying pages from (inclusive) in the Source file.
+            var pageEndSource = 56;  // int? | Page number (1 based) to stop copying pages pages from (inclusive) in the Source file.
+            var pageInsertBeforeDesitnation = 56;  // int? | Page number (1 based) to insert the pages before in the Destination file.
+
+            try
+            {
+                // Insert, copy pages from one PDF document into another as a batch job
+                EditPdfBatchJobCreateResult result = apiInstance.EditPdfInsertPagesBatchJob(sourceFile, destinationFile, pageStartSource, pageEndSource, pageInsertBeforeDesitnation);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling EditPdfApi.EditPdfInsertPagesBatchJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sourceFile** | **System.IO.Stream**| Source PDF file to copy pages from. | 
+ **destinationFile** | **System.IO.Stream**| Destination PDF file to copy pages into. | 
+ **pageStartSource** | **int?**| Page number (1 based) to start copying pages from (inclusive) in the Source file. | 
+ **pageEndSource** | **int?**| Page number (1 based) to stop copying pages pages from (inclusive) in the Source file. | 
+ **pageInsertBeforeDesitnation** | **int?**| Page number (1 based) to insert the pages before in the Destination file. | 
+
+### Return type
+
+[**EditPdfBatchJobCreateResult**](EditPdfBatchJobCreateResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/octet-stream
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="editpdflinearize"></a>
 # **EditPdfLinearize**
 > byte[] EditPdfLinearize (System.IO.Stream inputFile)
@@ -780,7 +994,7 @@ Name | Type | Description  | Notes
 
 <a name="editpdfrasterize"></a>
 # **EditPdfRasterize**
-> byte[] EditPdfRasterize (System.IO.Stream inputFile)
+> byte[] EditPdfRasterize (System.IO.Stream inputFile, int? dpi = null)
 
 Rasterize a PDF to an image-based PDF
 
@@ -807,11 +1021,12 @@ namespace Example
 
             var apiInstance = new EditPdfApi();
             var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
+            var dpi = 56;  // int? | Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. (optional) 
 
             try
             {
                 // Rasterize a PDF to an image-based PDF
-                byte[] result = apiInstance.EditPdfRasterize(inputFile);
+                byte[] result = apiInstance.EditPdfRasterize(inputFile, dpi);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -828,10 +1043,77 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
+ **dpi** | **int?**| Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. | [optional] 
 
 ### Return type
 
 **byte[]**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/octet-stream
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="editpdfrasterizebatchjob"></a>
+# **EditPdfRasterizeBatchJob**
+> EditPdfBatchJobCreateResult EditPdfRasterizeBatchJob (System.IO.Stream inputFile)
+
+Rasterize a PDF to an image-based PDF as Batch Job
+
+Rasterize a PDF into an image-based PDF.  The output is a PDF where each page is comprised of a high-resolution image, with all text, figures and other components removed.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class EditPdfRasterizeBatchJobExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new EditPdfApi();
+            var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
+
+            try
+            {
+                // Rasterize a PDF to an image-based PDF as Batch Job
+                EditPdfBatchJobCreateResult result = apiInstance.EditPdfRasterizeBatchJob(inputFile);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling EditPdfApi.EditPdfRasterizeBatchJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
+
+### Return type
+
+[**EditPdfBatchJobCreateResult**](EditPdfBatchJobCreateResult.md)
 
 ### Authorization
 

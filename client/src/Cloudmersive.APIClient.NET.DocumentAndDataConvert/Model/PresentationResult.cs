@@ -25,7 +25,7 @@ using SwaggerDateConverter = Cloudmersive.APIClient.NET.DocumentAndDataConvert.C
 namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
 {
     /// <summary>
-    /// A single Excel XLSX file corresponding to one worksheet (tab) in the original spreadsheet
+    /// A single PowerPoint PPTX file corresponding to one slide in the original presentation
     /// </summary>
     [DataContract]
     public partial class PresentationResult :  IEquatable<PresentationResult>, IValidatableObject

@@ -101,6 +101,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test ValidateDocumentDocxRepair
+        /// </summary>
+        [Test]
+        public void ValidateDocumentDocxRepairTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //string repairMode = null;
+            //var response = instance.ValidateDocumentDocxRepair(inputFile, repairMode);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
         /// Test ValidateDocumentDocxValidation
         /// </summary>
         [Test]
@@ -257,6 +270,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test ValidateDocumentPptxRepair
+        /// </summary>
+        [Test]
+        public void ValidateDocumentPptxRepairTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.ValidateDocumentPptxRepair(inputFile);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
         /// Test ValidateDocumentPptxValidation
         /// </summary>
         [Test]
@@ -326,6 +351,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //System.IO.Stream inputFile = null;
             //var response = instance.ValidateDocumentXlsValidation(inputFile);
             //Assert.IsInstanceOf<DocumentValidationResult> (response, "response is DocumentValidationResult");
+        }
+        
+        /// <summary>
+        /// Test ValidateDocumentXlsxRepair
+        /// </summary>
+        [Test]
+        public void ValidateDocumentXlsxRepairTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.ValidateDocumentXlsxRepair(inputFile);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
         /// <summary>

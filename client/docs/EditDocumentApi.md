@@ -49,7 +49,9 @@ Method | HTTP request | Description
 [**EditDocumentDocxUpdateTableRow**](EditDocumentApi.md#editdocumentdocxupdatetablerow) | **POST** /convert/edit/docx/update-table-row | Update, set contents of a table row in an existing table in a Word DOCX document
 [**EditDocumentFinishEditing**](EditDocumentApi.md#editdocumentfinishediting) | **POST** /convert/edit/finish-editing | Finish editing document, and download result from document editing
 [**EditDocumentPptxDeleteSlides**](EditDocumentApi.md#editdocumentpptxdeleteslides) | **POST** /convert/edit/pptx/delete-slides | Delete, remove slides from a PowerPoint PPTX presentation document
+[**EditDocumentPptxEditSizeAndOrientation**](EditDocumentApi.md#editdocumentpptxeditsizeandorientation) | **POST** /convert/edit/pptx/set-size-and-orientation | Set the size and/or orientation of a PowerPoint PPTX presentation document
 [**EditDocumentPptxGetMacroInformation**](EditDocumentApi.md#editdocumentpptxgetmacroinformation) | **POST** /convert/edit/pptx/get-macros | Get macro information from a PowerPoint PPTX/PPTM presentation document
+[**EditDocumentPptxGetSizeAndOrientation**](EditDocumentApi.md#editdocumentpptxgetsizeandorientation) | **POST** /convert/edit/pptx/get-size-and-orientation | Get the page layout information, including size and orientation of a PowerPoint PPTX presentation document
 [**EditDocumentPptxReplace**](EditDocumentApi.md#editdocumentpptxreplace) | **POST** /convert/edit/pptx/replace-all | Replace string in PowerPoint PPTX presentation
 [**EditDocumentXlsxAppendRow**](EditDocumentApi.md#editdocumentxlsxappendrow) | **POST** /convert/edit/xlsx/append-row | Append row to a Excel XLSX spreadsheet, worksheet
 [**EditDocumentXlsxClearCellByIndex**](EditDocumentApi.md#editdocumentxlsxclearcellbyindex) | **POST** /convert/edit/xlsx/clear-cell/by-index | Clear cell contents in an Excel XLSX spreadsheet, worksheet by index
@@ -142,7 +144,7 @@ Name | Type | Description  | Notes
 
 <a name="editdocumentdocxacceptalltrackchanges"></a>
 # **EditDocumentDocxAcceptAllTrackChanges**
-> byte[] EditDocumentDocxAcceptAllTrackChanges (System.IO.Stream inputFile)
+> byte[] EditDocumentDocxAcceptAllTrackChanges (System.IO.Stream inputFile, bool? autorepair = null)
 
 Accept all tracked changes, revisions in a Word DOCX document
 
@@ -169,11 +171,12 @@ namespace Example
 
             var apiInstance = new EditDocumentApi();
             var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
+            var autorepair = true;  // bool? | Optional; automatically repair input documents that have errors (default is true) (optional) 
 
             try
             {
                 // Accept all tracked changes, revisions in a Word DOCX document
-                byte[] result = apiInstance.EditDocumentDocxAcceptAllTrackChanges(inputFile);
+                byte[] result = apiInstance.EditDocumentDocxAcceptAllTrackChanges(inputFile, autorepair);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -190,6 +193,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
+ **autorepair** | **bool?**| Optional; automatically repair input documents that have errors (default is true) | [optional] 
 
 ### Return type
 
@@ -3044,6 +3048,78 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="editdocumentpptxeditsizeandorientation"></a>
+# **EditDocumentPptxEditSizeAndOrientation**
+> byte[] EditDocumentPptxEditSizeAndOrientation (System.IO.Stream inputFile, string orientation = null, int? width = null, int? height = null)
+
+Set the size and/or orientation of a PowerPoint PPTX presentation document
+
+Edits the input PowerPoint PPTX presentation document to be a different orientation and/or size
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class EditDocumentPptxEditSizeAndOrientationExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new EditDocumentApi();
+            var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
+            var orientation = orientation_example;  // string | Optional: The desired slide orientation; can be landscape or portrait. (optional) 
+            var width = 56;  // int? | Optional: The desired slide width in Emu, where 1 inch equals 914400 emu. (optional) 
+            var height = 56;  // int? | Optional: The desired slide height in Emu, where 1 inch equals 914400 emu (optional) 
+
+            try
+            {
+                // Set the size and/or orientation of a PowerPoint PPTX presentation document
+                byte[] result = apiInstance.EditDocumentPptxEditSizeAndOrientation(inputFile, orientation, width, height);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling EditDocumentApi.EditDocumentPptxEditSizeAndOrientation: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
+ **orientation** | **string**| Optional: The desired slide orientation; can be landscape or portrait. | [optional] 
+ **width** | **int?**| Optional: The desired slide width in Emu, where 1 inch equals 914400 emu. | [optional] 
+ **height** | **int?**| Optional: The desired slide height in Emu, where 1 inch equals 914400 emu | [optional] 
+
+### Return type
+
+**byte[]**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="editdocumentpptxgetmacroinformation"></a>
 # **EditDocumentPptxGetMacroInformation**
 > GetMacrosResponse EditDocumentPptxGetMacroInformation (System.IO.Stream inputFile)
@@ -3098,6 +3174,72 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetMacrosResponse**](GetMacrosResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="editdocumentpptxgetsizeandorientation"></a>
+# **EditDocumentPptxGetSizeAndOrientation**
+> PptxPageLayoutInformation EditDocumentPptxGetSizeAndOrientation (System.IO.Stream inputFile)
+
+Get the page layout information, including size and orientation of a PowerPoint PPTX presentation document
+
+Gets size and orientation of an input PowerPoint PPTX presentation
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class EditDocumentPptxGetSizeAndOrientationExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new EditDocumentApi();
+            var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
+
+            try
+            {
+                // Get the page layout information, including size and orientation of a PowerPoint PPTX presentation document
+                PptxPageLayoutInformation result = apiInstance.EditDocumentPptxGetSizeAndOrientation(inputFile);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling EditDocumentApi.EditDocumentPptxGetSizeAndOrientation: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
+
+### Return type
+
+[**PptxPageLayoutInformation**](PptxPageLayoutInformation.md)
 
 ### Authorization
 

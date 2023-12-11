@@ -117,6 +117,31 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> EditPdfDeletePagesWithHttpInfo (System.IO.Stream inputFile, int? pageStart, int? pageEnd);
         /// <summary>
+        /// Remove, delete pages from a PDF document as Batch Job
+        /// </summary>
+        /// <remarks>
+        /// Remove one or more pages from a PDF document.  Runs as a batch job async and returns a batch job ID that you can check the status of to get the result.  Requires Cloudmersive Private Cloud or Managed Instance.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="pageStart">Page number (1 based) to start deleting pages from (inclusive).</param>
+        /// <param name="pageEnd">Page number (1 based) to stop deleting pages from (inclusive).</param>
+        /// <returns>EditPdfBatchJobCreateResult</returns>
+        EditPdfBatchJobCreateResult EditPdfDeletePagesBatchJob (System.IO.Stream inputFile, int? pageStart, int? pageEnd);
+
+        /// <summary>
+        /// Remove, delete pages from a PDF document as Batch Job
+        /// </summary>
+        /// <remarks>
+        /// Remove one or more pages from a PDF document.  Runs as a batch job async and returns a batch job ID that you can check the status of to get the result.  Requires Cloudmersive Private Cloud or Managed Instance.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="pageStart">Page number (1 based) to start deleting pages from (inclusive).</param>
+        /// <param name="pageEnd">Page number (1 based) to stop deleting pages from (inclusive).</param>
+        /// <returns>ApiResponse of EditPdfBatchJobCreateResult</returns>
+        ApiResponse<EditPdfBatchJobCreateResult> EditPdfDeletePagesBatchJobWithHttpInfo (System.IO.Stream inputFile, int? pageStart, int? pageEnd);
+        /// <summary>
         /// Encrypt and password-protect a PDF
         /// </summary>
         /// <remarks>
@@ -164,6 +189,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>ApiResponse of GetPdfAnnotationsResult</returns>
         ApiResponse<GetPdfAnnotationsResult> EditPdfGetAnnotationsWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// Get the status and result of a PDF Batch Job
+        /// </summary>
+        /// <remarks>
+        /// Returns the result of the Async Job - possible states can be STARTED or COMPLETED.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="asyncJobID"></param>
+        /// <returns>EditPdfJobStatusResult</returns>
+        EditPdfJobStatusResult EditPdfGetAsyncJobStatus (string asyncJobID);
+
+        /// <summary>
+        /// Get the status and result of a PDF Batch Job
+        /// </summary>
+        /// <remarks>
+        /// Returns the result of the Async Job - possible states can be STARTED or COMPLETED.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="asyncJobID"></param>
+        /// <returns>ApiResponse of EditPdfJobStatusResult</returns>
+        ApiResponse<EditPdfJobStatusResult> EditPdfGetAsyncJobStatusWithHttpInfo (string asyncJobID);
         /// <summary>
         /// Gets PDF Form fields and values
         /// </summary>
@@ -259,6 +305,35 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> EditPdfInsertPagesWithHttpInfo (System.IO.Stream sourceFile, System.IO.Stream destinationFile, int? pageStartSource, int? pageEndSource, int? pageInsertBeforeDesitnation);
         /// <summary>
+        /// Insert, copy pages from one PDF document into another as a batch job
+        /// </summary>
+        /// <remarks>
+        /// Copy one or more pages from one PDF document (source document) and insert them into a second PDF document (destination document).  Runs as a batch job async and returns a batch job ID that you can check the status of to get the result.  Requires Cloudmersive Private Cloud or Managed Instance.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceFile">Source PDF file to copy pages from.</param>
+        /// <param name="destinationFile">Destination PDF file to copy pages into.</param>
+        /// <param name="pageStartSource">Page number (1 based) to start copying pages from (inclusive) in the Source file.</param>
+        /// <param name="pageEndSource">Page number (1 based) to stop copying pages pages from (inclusive) in the Source file.</param>
+        /// <param name="pageInsertBeforeDesitnation">Page number (1 based) to insert the pages before in the Destination file.</param>
+        /// <returns>EditPdfBatchJobCreateResult</returns>
+        EditPdfBatchJobCreateResult EditPdfInsertPagesBatchJob (System.IO.Stream sourceFile, System.IO.Stream destinationFile, int? pageStartSource, int? pageEndSource, int? pageInsertBeforeDesitnation);
+
+        /// <summary>
+        /// Insert, copy pages from one PDF document into another as a batch job
+        /// </summary>
+        /// <remarks>
+        /// Copy one or more pages from one PDF document (source document) and insert them into a second PDF document (destination document).  Runs as a batch job async and returns a batch job ID that you can check the status of to get the result.  Requires Cloudmersive Private Cloud or Managed Instance.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceFile">Source PDF file to copy pages from.</param>
+        /// <param name="destinationFile">Destination PDF file to copy pages into.</param>
+        /// <param name="pageStartSource">Page number (1 based) to start copying pages from (inclusive) in the Source file.</param>
+        /// <param name="pageEndSource">Page number (1 based) to stop copying pages pages from (inclusive) in the Source file.</param>
+        /// <param name="pageInsertBeforeDesitnation">Page number (1 based) to insert the pages before in the Destination file.</param>
+        /// <returns>ApiResponse of EditPdfBatchJobCreateResult</returns>
+        ApiResponse<EditPdfBatchJobCreateResult> EditPdfInsertPagesBatchJobWithHttpInfo (System.IO.Stream sourceFile, System.IO.Stream destinationFile, int? pageStartSource, int? pageEndSource, int? pageInsertBeforeDesitnation);
+        /// <summary>
         /// Linearize and optimize a PDF for streaming download
         /// </summary>
         /// <remarks>
@@ -287,8 +362,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="dpi">Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. (optional)</param>
         /// <returns>byte[]</returns>
-        byte[] EditPdfRasterize (System.IO.Stream inputFile);
+        byte[] EditPdfRasterize (System.IO.Stream inputFile, int? dpi = null);
 
         /// <summary>
         /// Rasterize a PDF to an image-based PDF
@@ -298,8 +374,30 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="dpi">Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
-        ApiResponse<byte[]> EditPdfRasterizeWithHttpInfo (System.IO.Stream inputFile);
+        ApiResponse<byte[]> EditPdfRasterizeWithHttpInfo (System.IO.Stream inputFile, int? dpi = null);
+        /// <summary>
+        /// Rasterize a PDF to an image-based PDF as Batch Job
+        /// </summary>
+        /// <remarks>
+        /// Rasterize a PDF into an image-based PDF.  The output is a PDF where each page is comprised of a high-resolution image, with all text, figures and other components removed.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>EditPdfBatchJobCreateResult</returns>
+        EditPdfBatchJobCreateResult EditPdfRasterizeBatchJob (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Rasterize a PDF to an image-based PDF as Batch Job
+        /// </summary>
+        /// <remarks>
+        /// Rasterize a PDF into an image-based PDF.  The output is a PDF where each page is comprised of a high-resolution image, with all text, figures and other components removed.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of EditPdfBatchJobCreateResult</returns>
+        ApiResponse<EditPdfBatchJobCreateResult> EditPdfRasterizeBatchJobWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
         /// Reduce the file size and optimize a PDF
         /// </summary>
@@ -649,6 +747,31 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfDeletePagesAsyncWithHttpInfo (System.IO.Stream inputFile, int? pageStart, int? pageEnd);
         /// <summary>
+        /// Remove, delete pages from a PDF document as Batch Job
+        /// </summary>
+        /// <remarks>
+        /// Remove one or more pages from a PDF document.  Runs as a batch job async and returns a batch job ID that you can check the status of to get the result.  Requires Cloudmersive Private Cloud or Managed Instance.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="pageStart">Page number (1 based) to start deleting pages from (inclusive).</param>
+        /// <param name="pageEnd">Page number (1 based) to stop deleting pages from (inclusive).</param>
+        /// <returns>Task of EditPdfBatchJobCreateResult</returns>
+        System.Threading.Tasks.Task<EditPdfBatchJobCreateResult> EditPdfDeletePagesBatchJobAsync (System.IO.Stream inputFile, int? pageStart, int? pageEnd);
+
+        /// <summary>
+        /// Remove, delete pages from a PDF document as Batch Job
+        /// </summary>
+        /// <remarks>
+        /// Remove one or more pages from a PDF document.  Runs as a batch job async and returns a batch job ID that you can check the status of to get the result.  Requires Cloudmersive Private Cloud or Managed Instance.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="pageStart">Page number (1 based) to start deleting pages from (inclusive).</param>
+        /// <param name="pageEnd">Page number (1 based) to stop deleting pages from (inclusive).</param>
+        /// <returns>Task of ApiResponse (EditPdfBatchJobCreateResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EditPdfBatchJobCreateResult>> EditPdfDeletePagesBatchJobAsyncWithHttpInfo (System.IO.Stream inputFile, int? pageStart, int? pageEnd);
+        /// <summary>
         /// Encrypt and password-protect a PDF
         /// </summary>
         /// <remarks>
@@ -696,6 +819,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>Task of ApiResponse (GetPdfAnnotationsResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetPdfAnnotationsResult>> EditPdfGetAnnotationsAsyncWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// Get the status and result of a PDF Batch Job
+        /// </summary>
+        /// <remarks>
+        /// Returns the result of the Async Job - possible states can be STARTED or COMPLETED.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="asyncJobID"></param>
+        /// <returns>Task of EditPdfJobStatusResult</returns>
+        System.Threading.Tasks.Task<EditPdfJobStatusResult> EditPdfGetAsyncJobStatusAsync (string asyncJobID);
+
+        /// <summary>
+        /// Get the status and result of a PDF Batch Job
+        /// </summary>
+        /// <remarks>
+        /// Returns the result of the Async Job - possible states can be STARTED or COMPLETED.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="asyncJobID"></param>
+        /// <returns>Task of ApiResponse (EditPdfJobStatusResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EditPdfJobStatusResult>> EditPdfGetAsyncJobStatusAsyncWithHttpInfo (string asyncJobID);
         /// <summary>
         /// Gets PDF Form fields and values
         /// </summary>
@@ -791,6 +935,35 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfInsertPagesAsyncWithHttpInfo (System.IO.Stream sourceFile, System.IO.Stream destinationFile, int? pageStartSource, int? pageEndSource, int? pageInsertBeforeDesitnation);
         /// <summary>
+        /// Insert, copy pages from one PDF document into another as a batch job
+        /// </summary>
+        /// <remarks>
+        /// Copy one or more pages from one PDF document (source document) and insert them into a second PDF document (destination document).  Runs as a batch job async and returns a batch job ID that you can check the status of to get the result.  Requires Cloudmersive Private Cloud or Managed Instance.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceFile">Source PDF file to copy pages from.</param>
+        /// <param name="destinationFile">Destination PDF file to copy pages into.</param>
+        /// <param name="pageStartSource">Page number (1 based) to start copying pages from (inclusive) in the Source file.</param>
+        /// <param name="pageEndSource">Page number (1 based) to stop copying pages pages from (inclusive) in the Source file.</param>
+        /// <param name="pageInsertBeforeDesitnation">Page number (1 based) to insert the pages before in the Destination file.</param>
+        /// <returns>Task of EditPdfBatchJobCreateResult</returns>
+        System.Threading.Tasks.Task<EditPdfBatchJobCreateResult> EditPdfInsertPagesBatchJobAsync (System.IO.Stream sourceFile, System.IO.Stream destinationFile, int? pageStartSource, int? pageEndSource, int? pageInsertBeforeDesitnation);
+
+        /// <summary>
+        /// Insert, copy pages from one PDF document into another as a batch job
+        /// </summary>
+        /// <remarks>
+        /// Copy one or more pages from one PDF document (source document) and insert them into a second PDF document (destination document).  Runs as a batch job async and returns a batch job ID that you can check the status of to get the result.  Requires Cloudmersive Private Cloud or Managed Instance.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceFile">Source PDF file to copy pages from.</param>
+        /// <param name="destinationFile">Destination PDF file to copy pages into.</param>
+        /// <param name="pageStartSource">Page number (1 based) to start copying pages from (inclusive) in the Source file.</param>
+        /// <param name="pageEndSource">Page number (1 based) to stop copying pages pages from (inclusive) in the Source file.</param>
+        /// <param name="pageInsertBeforeDesitnation">Page number (1 based) to insert the pages before in the Destination file.</param>
+        /// <returns>Task of ApiResponse (EditPdfBatchJobCreateResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EditPdfBatchJobCreateResult>> EditPdfInsertPagesBatchJobAsyncWithHttpInfo (System.IO.Stream sourceFile, System.IO.Stream destinationFile, int? pageStartSource, int? pageEndSource, int? pageInsertBeforeDesitnation);
+        /// <summary>
         /// Linearize and optimize a PDF for streaming download
         /// </summary>
         /// <remarks>
@@ -819,8 +992,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="dpi">Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. (optional)</param>
         /// <returns>Task of byte[]</returns>
-        System.Threading.Tasks.Task<byte[]> EditPdfRasterizeAsync (System.IO.Stream inputFile);
+        System.Threading.Tasks.Task<byte[]> EditPdfRasterizeAsync (System.IO.Stream inputFile, int? dpi = null);
 
         /// <summary>
         /// Rasterize a PDF to an image-based PDF
@@ -830,8 +1004,30 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="dpi">Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfRasterizeAsyncWithHttpInfo (System.IO.Stream inputFile);
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfRasterizeAsyncWithHttpInfo (System.IO.Stream inputFile, int? dpi = null);
+        /// <summary>
+        /// Rasterize a PDF to an image-based PDF as Batch Job
+        /// </summary>
+        /// <remarks>
+        /// Rasterize a PDF into an image-based PDF.  The output is a PDF where each page is comprised of a high-resolution image, with all text, figures and other components removed.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of EditPdfBatchJobCreateResult</returns>
+        System.Threading.Tasks.Task<EditPdfBatchJobCreateResult> EditPdfRasterizeBatchJobAsync (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Rasterize a PDF to an image-based PDF as Batch Job
+        /// </summary>
+        /// <remarks>
+        /// Rasterize a PDF into an image-based PDF.  The output is a PDF where each page is comprised of a high-resolution image, with all text, figures and other components removed.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (EditPdfBatchJobCreateResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EditPdfBatchJobCreateResult>> EditPdfRasterizeBatchJobAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
         /// Reduce the file size and optimize a PDF
         /// </summary>
@@ -1831,6 +2027,175 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
+        /// Remove, delete pages from a PDF document as Batch Job Remove one or more pages from a PDF document.  Runs as a batch job async and returns a batch job ID that you can check the status of to get the result.  Requires Cloudmersive Private Cloud or Managed Instance.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="pageStart">Page number (1 based) to start deleting pages from (inclusive).</param>
+        /// <param name="pageEnd">Page number (1 based) to stop deleting pages from (inclusive).</param>
+        /// <returns>EditPdfBatchJobCreateResult</returns>
+        public EditPdfBatchJobCreateResult EditPdfDeletePagesBatchJob (System.IO.Stream inputFile, int? pageStart, int? pageEnd)
+        {
+             ApiResponse<EditPdfBatchJobCreateResult> localVarResponse = EditPdfDeletePagesBatchJobWithHttpInfo(inputFile, pageStart, pageEnd);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Remove, delete pages from a PDF document as Batch Job Remove one or more pages from a PDF document.  Runs as a batch job async and returns a batch job ID that you can check the status of to get the result.  Requires Cloudmersive Private Cloud or Managed Instance.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="pageStart">Page number (1 based) to start deleting pages from (inclusive).</param>
+        /// <param name="pageEnd">Page number (1 based) to stop deleting pages from (inclusive).</param>
+        /// <returns>ApiResponse of EditPdfBatchJobCreateResult</returns>
+        public ApiResponse< EditPdfBatchJobCreateResult > EditPdfDeletePagesBatchJobWithHttpInfo (System.IO.Stream inputFile, int? pageStart, int? pageEnd)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditPdfApi->EditPdfDeletePagesBatchJob");
+            // verify the required parameter 'pageStart' is set
+            if (pageStart == null)
+                throw new ApiException(400, "Missing required parameter 'pageStart' when calling EditPdfApi->EditPdfDeletePagesBatchJob");
+            // verify the required parameter 'pageEnd' is set
+            if (pageEnd == null)
+                throw new ApiException(400, "Missing required parameter 'pageEnd' when calling EditPdfApi->EditPdfDeletePagesBatchJob");
+
+            var localVarPath = "/convert/edit/pdf/pages/delete/batch-job";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pageStart != null) localVarHeaderParams.Add("pageStart", this.Configuration.ApiClient.ParameterToString(pageStart)); // header parameter
+            if (pageEnd != null) localVarHeaderParams.Add("pageEnd", this.Configuration.ApiClient.ParameterToString(pageEnd)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditPdfDeletePagesBatchJob", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EditPdfBatchJobCreateResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EditPdfBatchJobCreateResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EditPdfBatchJobCreateResult)));
+        }
+
+        /// <summary>
+        /// Remove, delete pages from a PDF document as Batch Job Remove one or more pages from a PDF document.  Runs as a batch job async and returns a batch job ID that you can check the status of to get the result.  Requires Cloudmersive Private Cloud or Managed Instance.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="pageStart">Page number (1 based) to start deleting pages from (inclusive).</param>
+        /// <param name="pageEnd">Page number (1 based) to stop deleting pages from (inclusive).</param>
+        /// <returns>Task of EditPdfBatchJobCreateResult</returns>
+        public async System.Threading.Tasks.Task<EditPdfBatchJobCreateResult> EditPdfDeletePagesBatchJobAsync (System.IO.Stream inputFile, int? pageStart, int? pageEnd)
+        {
+             ApiResponse<EditPdfBatchJobCreateResult> localVarResponse = await EditPdfDeletePagesBatchJobAsyncWithHttpInfo(inputFile, pageStart, pageEnd);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Remove, delete pages from a PDF document as Batch Job Remove one or more pages from a PDF document.  Runs as a batch job async and returns a batch job ID that you can check the status of to get the result.  Requires Cloudmersive Private Cloud or Managed Instance.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="pageStart">Page number (1 based) to start deleting pages from (inclusive).</param>
+        /// <param name="pageEnd">Page number (1 based) to stop deleting pages from (inclusive).</param>
+        /// <returns>Task of ApiResponse (EditPdfBatchJobCreateResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EditPdfBatchJobCreateResult>> EditPdfDeletePagesBatchJobAsyncWithHttpInfo (System.IO.Stream inputFile, int? pageStart, int? pageEnd)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditPdfApi->EditPdfDeletePagesBatchJob");
+            // verify the required parameter 'pageStart' is set
+            if (pageStart == null)
+                throw new ApiException(400, "Missing required parameter 'pageStart' when calling EditPdfApi->EditPdfDeletePagesBatchJob");
+            // verify the required parameter 'pageEnd' is set
+            if (pageEnd == null)
+                throw new ApiException(400, "Missing required parameter 'pageEnd' when calling EditPdfApi->EditPdfDeletePagesBatchJob");
+
+            var localVarPath = "/convert/edit/pdf/pages/delete/batch-job";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pageStart != null) localVarHeaderParams.Add("pageStart", this.Configuration.ApiClient.ParameterToString(pageStart)); // header parameter
+            if (pageEnd != null) localVarHeaderParams.Add("pageEnd", this.Configuration.ApiClient.ParameterToString(pageEnd)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditPdfDeletePagesBatchJob", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EditPdfBatchJobCreateResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EditPdfBatchJobCreateResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EditPdfBatchJobCreateResult)));
+        }
+
+        /// <summary>
         /// Encrypt and password-protect a PDF Encrypt a PDF document with a password.  Set an owner password to control owner (editor/creator) permissions, and set a user (reader) password to control the viewer of the PDF.  Set the password fields null to omit the given password.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2136,6 +2501,155 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<GetPdfAnnotationsResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (GetPdfAnnotationsResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetPdfAnnotationsResult)));
+        }
+
+        /// <summary>
+        /// Get the status and result of a PDF Batch Job Returns the result of the Async Job - possible states can be STARTED or COMPLETED.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="asyncJobID"></param>
+        /// <returns>EditPdfJobStatusResult</returns>
+        public EditPdfJobStatusResult EditPdfGetAsyncJobStatus (string asyncJobID)
+        {
+             ApiResponse<EditPdfJobStatusResult> localVarResponse = EditPdfGetAsyncJobStatusWithHttpInfo(asyncJobID);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the status and result of a PDF Batch Job Returns the result of the Async Job - possible states can be STARTED or COMPLETED.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="asyncJobID"></param>
+        /// <returns>ApiResponse of EditPdfJobStatusResult</returns>
+        public ApiResponse< EditPdfJobStatusResult > EditPdfGetAsyncJobStatusWithHttpInfo (string asyncJobID)
+        {
+            // verify the required parameter 'asyncJobID' is set
+            if (asyncJobID == null)
+                throw new ApiException(400, "Missing required parameter 'asyncJobID' when calling EditPdfApi->EditPdfGetAsyncJobStatus");
+
+            var localVarPath = "/convert/edit/pdf/batch-job/status";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (asyncJobID != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AsyncJobID", asyncJobID)); // query parameter
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditPdfGetAsyncJobStatus", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EditPdfJobStatusResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EditPdfJobStatusResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EditPdfJobStatusResult)));
+        }
+
+        /// <summary>
+        /// Get the status and result of a PDF Batch Job Returns the result of the Async Job - possible states can be STARTED or COMPLETED.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="asyncJobID"></param>
+        /// <returns>Task of EditPdfJobStatusResult</returns>
+        public async System.Threading.Tasks.Task<EditPdfJobStatusResult> EditPdfGetAsyncJobStatusAsync (string asyncJobID)
+        {
+             ApiResponse<EditPdfJobStatusResult> localVarResponse = await EditPdfGetAsyncJobStatusAsyncWithHttpInfo(asyncJobID);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the status and result of a PDF Batch Job Returns the result of the Async Job - possible states can be STARTED or COMPLETED.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="asyncJobID"></param>
+        /// <returns>Task of ApiResponse (EditPdfJobStatusResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EditPdfJobStatusResult>> EditPdfGetAsyncJobStatusAsyncWithHttpInfo (string asyncJobID)
+        {
+            // verify the required parameter 'asyncJobID' is set
+            if (asyncJobID == null)
+                throw new ApiException(400, "Missing required parameter 'asyncJobID' when calling EditPdfApi->EditPdfGetAsyncJobStatus");
+
+            var localVarPath = "/convert/edit/pdf/batch-job/status";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (asyncJobID != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AsyncJobID", asyncJobID)); // query parameter
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditPdfGetAsyncJobStatus", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EditPdfJobStatusResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EditPdfJobStatusResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EditPdfJobStatusResult)));
         }
 
         /// <summary>
@@ -2785,6 +3299,199 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
+        /// Insert, copy pages from one PDF document into another as a batch job Copy one or more pages from one PDF document (source document) and insert them into a second PDF document (destination document).  Runs as a batch job async and returns a batch job ID that you can check the status of to get the result.  Requires Cloudmersive Private Cloud or Managed Instance.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceFile">Source PDF file to copy pages from.</param>
+        /// <param name="destinationFile">Destination PDF file to copy pages into.</param>
+        /// <param name="pageStartSource">Page number (1 based) to start copying pages from (inclusive) in the Source file.</param>
+        /// <param name="pageEndSource">Page number (1 based) to stop copying pages pages from (inclusive) in the Source file.</param>
+        /// <param name="pageInsertBeforeDesitnation">Page number (1 based) to insert the pages before in the Destination file.</param>
+        /// <returns>EditPdfBatchJobCreateResult</returns>
+        public EditPdfBatchJobCreateResult EditPdfInsertPagesBatchJob (System.IO.Stream sourceFile, System.IO.Stream destinationFile, int? pageStartSource, int? pageEndSource, int? pageInsertBeforeDesitnation)
+        {
+             ApiResponse<EditPdfBatchJobCreateResult> localVarResponse = EditPdfInsertPagesBatchJobWithHttpInfo(sourceFile, destinationFile, pageStartSource, pageEndSource, pageInsertBeforeDesitnation);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Insert, copy pages from one PDF document into another as a batch job Copy one or more pages from one PDF document (source document) and insert them into a second PDF document (destination document).  Runs as a batch job async and returns a batch job ID that you can check the status of to get the result.  Requires Cloudmersive Private Cloud or Managed Instance.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceFile">Source PDF file to copy pages from.</param>
+        /// <param name="destinationFile">Destination PDF file to copy pages into.</param>
+        /// <param name="pageStartSource">Page number (1 based) to start copying pages from (inclusive) in the Source file.</param>
+        /// <param name="pageEndSource">Page number (1 based) to stop copying pages pages from (inclusive) in the Source file.</param>
+        /// <param name="pageInsertBeforeDesitnation">Page number (1 based) to insert the pages before in the Destination file.</param>
+        /// <returns>ApiResponse of EditPdfBatchJobCreateResult</returns>
+        public ApiResponse< EditPdfBatchJobCreateResult > EditPdfInsertPagesBatchJobWithHttpInfo (System.IO.Stream sourceFile, System.IO.Stream destinationFile, int? pageStartSource, int? pageEndSource, int? pageInsertBeforeDesitnation)
+        {
+            // verify the required parameter 'sourceFile' is set
+            if (sourceFile == null)
+                throw new ApiException(400, "Missing required parameter 'sourceFile' when calling EditPdfApi->EditPdfInsertPagesBatchJob");
+            // verify the required parameter 'destinationFile' is set
+            if (destinationFile == null)
+                throw new ApiException(400, "Missing required parameter 'destinationFile' when calling EditPdfApi->EditPdfInsertPagesBatchJob");
+            // verify the required parameter 'pageStartSource' is set
+            if (pageStartSource == null)
+                throw new ApiException(400, "Missing required parameter 'pageStartSource' when calling EditPdfApi->EditPdfInsertPagesBatchJob");
+            // verify the required parameter 'pageEndSource' is set
+            if (pageEndSource == null)
+                throw new ApiException(400, "Missing required parameter 'pageEndSource' when calling EditPdfApi->EditPdfInsertPagesBatchJob");
+            // verify the required parameter 'pageInsertBeforeDesitnation' is set
+            if (pageInsertBeforeDesitnation == null)
+                throw new ApiException(400, "Missing required parameter 'pageInsertBeforeDesitnation' when calling EditPdfApi->EditPdfInsertPagesBatchJob");
+
+            var localVarPath = "/convert/edit/pdf/pages/insert/batch-job";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pageStartSource != null) localVarHeaderParams.Add("pageStartSource", this.Configuration.ApiClient.ParameterToString(pageStartSource)); // header parameter
+            if (pageEndSource != null) localVarHeaderParams.Add("pageEndSource", this.Configuration.ApiClient.ParameterToString(pageEndSource)); // header parameter
+            if (pageInsertBeforeDesitnation != null) localVarHeaderParams.Add("pageInsertBeforeDesitnation", this.Configuration.ApiClient.ParameterToString(pageInsertBeforeDesitnation)); // header parameter
+            if (sourceFile != null) localVarFileParams.Add("sourceFile", this.Configuration.ApiClient.ParameterToFile("sourceFile", sourceFile));
+            if (destinationFile != null) localVarFileParams.Add("destinationFile", this.Configuration.ApiClient.ParameterToFile("destinationFile", destinationFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditPdfInsertPagesBatchJob", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EditPdfBatchJobCreateResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EditPdfBatchJobCreateResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EditPdfBatchJobCreateResult)));
+        }
+
+        /// <summary>
+        /// Insert, copy pages from one PDF document into another as a batch job Copy one or more pages from one PDF document (source document) and insert them into a second PDF document (destination document).  Runs as a batch job async and returns a batch job ID that you can check the status of to get the result.  Requires Cloudmersive Private Cloud or Managed Instance.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceFile">Source PDF file to copy pages from.</param>
+        /// <param name="destinationFile">Destination PDF file to copy pages into.</param>
+        /// <param name="pageStartSource">Page number (1 based) to start copying pages from (inclusive) in the Source file.</param>
+        /// <param name="pageEndSource">Page number (1 based) to stop copying pages pages from (inclusive) in the Source file.</param>
+        /// <param name="pageInsertBeforeDesitnation">Page number (1 based) to insert the pages before in the Destination file.</param>
+        /// <returns>Task of EditPdfBatchJobCreateResult</returns>
+        public async System.Threading.Tasks.Task<EditPdfBatchJobCreateResult> EditPdfInsertPagesBatchJobAsync (System.IO.Stream sourceFile, System.IO.Stream destinationFile, int? pageStartSource, int? pageEndSource, int? pageInsertBeforeDesitnation)
+        {
+             ApiResponse<EditPdfBatchJobCreateResult> localVarResponse = await EditPdfInsertPagesBatchJobAsyncWithHttpInfo(sourceFile, destinationFile, pageStartSource, pageEndSource, pageInsertBeforeDesitnation);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Insert, copy pages from one PDF document into another as a batch job Copy one or more pages from one PDF document (source document) and insert them into a second PDF document (destination document).  Runs as a batch job async and returns a batch job ID that you can check the status of to get the result.  Requires Cloudmersive Private Cloud or Managed Instance.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sourceFile">Source PDF file to copy pages from.</param>
+        /// <param name="destinationFile">Destination PDF file to copy pages into.</param>
+        /// <param name="pageStartSource">Page number (1 based) to start copying pages from (inclusive) in the Source file.</param>
+        /// <param name="pageEndSource">Page number (1 based) to stop copying pages pages from (inclusive) in the Source file.</param>
+        /// <param name="pageInsertBeforeDesitnation">Page number (1 based) to insert the pages before in the Destination file.</param>
+        /// <returns>Task of ApiResponse (EditPdfBatchJobCreateResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EditPdfBatchJobCreateResult>> EditPdfInsertPagesBatchJobAsyncWithHttpInfo (System.IO.Stream sourceFile, System.IO.Stream destinationFile, int? pageStartSource, int? pageEndSource, int? pageInsertBeforeDesitnation)
+        {
+            // verify the required parameter 'sourceFile' is set
+            if (sourceFile == null)
+                throw new ApiException(400, "Missing required parameter 'sourceFile' when calling EditPdfApi->EditPdfInsertPagesBatchJob");
+            // verify the required parameter 'destinationFile' is set
+            if (destinationFile == null)
+                throw new ApiException(400, "Missing required parameter 'destinationFile' when calling EditPdfApi->EditPdfInsertPagesBatchJob");
+            // verify the required parameter 'pageStartSource' is set
+            if (pageStartSource == null)
+                throw new ApiException(400, "Missing required parameter 'pageStartSource' when calling EditPdfApi->EditPdfInsertPagesBatchJob");
+            // verify the required parameter 'pageEndSource' is set
+            if (pageEndSource == null)
+                throw new ApiException(400, "Missing required parameter 'pageEndSource' when calling EditPdfApi->EditPdfInsertPagesBatchJob");
+            // verify the required parameter 'pageInsertBeforeDesitnation' is set
+            if (pageInsertBeforeDesitnation == null)
+                throw new ApiException(400, "Missing required parameter 'pageInsertBeforeDesitnation' when calling EditPdfApi->EditPdfInsertPagesBatchJob");
+
+            var localVarPath = "/convert/edit/pdf/pages/insert/batch-job";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pageStartSource != null) localVarHeaderParams.Add("pageStartSource", this.Configuration.ApiClient.ParameterToString(pageStartSource)); // header parameter
+            if (pageEndSource != null) localVarHeaderParams.Add("pageEndSource", this.Configuration.ApiClient.ParameterToString(pageEndSource)); // header parameter
+            if (pageInsertBeforeDesitnation != null) localVarHeaderParams.Add("pageInsertBeforeDesitnation", this.Configuration.ApiClient.ParameterToString(pageInsertBeforeDesitnation)); // header parameter
+            if (sourceFile != null) localVarFileParams.Add("sourceFile", this.Configuration.ApiClient.ParameterToFile("sourceFile", sourceFile));
+            if (destinationFile != null) localVarFileParams.Add("destinationFile", this.Configuration.ApiClient.ParameterToFile("destinationFile", destinationFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditPdfInsertPagesBatchJob", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<EditPdfBatchJobCreateResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EditPdfBatchJobCreateResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EditPdfBatchJobCreateResult)));
+        }
+
+        /// <summary>
         /// Linearize and optimize a PDF for streaming download Linearizes the content of a PDF to optimize it for streaming download, particularly over web streaming.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2934,10 +3641,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="dpi">Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. (optional)</param>
         /// <returns>byte[]</returns>
-        public byte[] EditPdfRasterize (System.IO.Stream inputFile)
+        public byte[] EditPdfRasterize (System.IO.Stream inputFile, int? dpi = null)
         {
-             ApiResponse<byte[]> localVarResponse = EditPdfRasterizeWithHttpInfo(inputFile);
+             ApiResponse<byte[]> localVarResponse = EditPdfRasterizeWithHttpInfo(inputFile, dpi);
              return localVarResponse.Data;
         }
 
@@ -2946,14 +3654,164 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="dpi">Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
-        public ApiResponse< byte[] > EditPdfRasterizeWithHttpInfo (System.IO.Stream inputFile)
+        public ApiResponse< byte[] > EditPdfRasterizeWithHttpInfo (System.IO.Stream inputFile, int? dpi = null)
         {
             // verify the required parameter 'inputFile' is set
             if (inputFile == null)
                 throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditPdfApi->EditPdfRasterize");
 
             var localVarPath = "/convert/edit/pdf/rasterize";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (dpi != null) localVarHeaderParams.Add("dpi", this.Configuration.ApiClient.ParameterToString(dpi)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditPdfRasterize", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Rasterize a PDF to an image-based PDF Rasterize a PDF into an image-based PDF.  The output is a PDF where each page is comprised of a high-resolution image, with all text, figures and other components removed.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="dpi">Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. (optional)</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> EditPdfRasterizeAsync (System.IO.Stream inputFile, int? dpi = null)
+        {
+             ApiResponse<byte[]> localVarResponse = await EditPdfRasterizeAsyncWithHttpInfo(inputFile, dpi);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Rasterize a PDF to an image-based PDF Rasterize a PDF into an image-based PDF.  The output is a PDF where each page is comprised of a high-resolution image, with all text, figures and other components removed.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="dpi">Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. (optional)</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfRasterizeAsyncWithHttpInfo (System.IO.Stream inputFile, int? dpi = null)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditPdfApi->EditPdfRasterize");
+
+            var localVarPath = "/convert/edit/pdf/rasterize";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (dpi != null) localVarHeaderParams.Add("dpi", this.Configuration.ApiClient.ParameterToString(dpi)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditPdfRasterize", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Rasterize a PDF to an image-based PDF as Batch Job Rasterize a PDF into an image-based PDF.  The output is a PDF where each page is comprised of a high-resolution image, with all text, figures and other components removed.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>EditPdfBatchJobCreateResult</returns>
+        public EditPdfBatchJobCreateResult EditPdfRasterizeBatchJob (System.IO.Stream inputFile)
+        {
+             ApiResponse<EditPdfBatchJobCreateResult> localVarResponse = EditPdfRasterizeBatchJobWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Rasterize a PDF to an image-based PDF as Batch Job Rasterize a PDF into an image-based PDF.  The output is a PDF where each page is comprised of a high-resolution image, with all text, figures and other components removed.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of EditPdfBatchJobCreateResult</returns>
+        public ApiResponse< EditPdfBatchJobCreateResult > EditPdfRasterizeBatchJobWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditPdfApi->EditPdfRasterizeBatchJob");
+
+            var localVarPath = "/convert/edit/pdf/rasterize/batch-job";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2992,41 +3850,41 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("EditPdfRasterize", localVarResponse);
+                Exception exception = ExceptionFactory("EditPdfRasterizeBatchJob", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<byte[]>(localVarStatusCode,
+            return new ApiResponse<EditPdfBatchJobCreateResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+                (EditPdfBatchJobCreateResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EditPdfBatchJobCreateResult)));
         }
 
         /// <summary>
-        /// Rasterize a PDF to an image-based PDF Rasterize a PDF into an image-based PDF.  The output is a PDF where each page is comprised of a high-resolution image, with all text, figures and other components removed.
+        /// Rasterize a PDF to an image-based PDF as Batch Job Rasterize a PDF into an image-based PDF.  The output is a PDF where each page is comprised of a high-resolution image, with all text, figures and other components removed.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <returns>Task of byte[]</returns>
-        public async System.Threading.Tasks.Task<byte[]> EditPdfRasterizeAsync (System.IO.Stream inputFile)
+        /// <returns>Task of EditPdfBatchJobCreateResult</returns>
+        public async System.Threading.Tasks.Task<EditPdfBatchJobCreateResult> EditPdfRasterizeBatchJobAsync (System.IO.Stream inputFile)
         {
-             ApiResponse<byte[]> localVarResponse = await EditPdfRasterizeAsyncWithHttpInfo(inputFile);
+             ApiResponse<EditPdfBatchJobCreateResult> localVarResponse = await EditPdfRasterizeBatchJobAsyncWithHttpInfo(inputFile);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Rasterize a PDF to an image-based PDF Rasterize a PDF into an image-based PDF.  The output is a PDF where each page is comprised of a high-resolution image, with all text, figures and other components removed.
+        /// Rasterize a PDF to an image-based PDF as Batch Job Rasterize a PDF into an image-based PDF.  The output is a PDF where each page is comprised of a high-resolution image, with all text, figures and other components removed.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <returns>Task of ApiResponse (byte[])</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfRasterizeAsyncWithHttpInfo (System.IO.Stream inputFile)
+        /// <returns>Task of ApiResponse (EditPdfBatchJobCreateResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EditPdfBatchJobCreateResult>> EditPdfRasterizeBatchJobAsyncWithHttpInfo (System.IO.Stream inputFile)
         {
             // verify the required parameter 'inputFile' is set
             if (inputFile == null)
-                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditPdfApi->EditPdfRasterize");
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditPdfApi->EditPdfRasterizeBatchJob");
 
-            var localVarPath = "/convert/edit/pdf/rasterize";
+            var localVarPath = "/convert/edit/pdf/rasterize/batch-job";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3065,13 +3923,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("EditPdfRasterize", localVarResponse);
+                Exception exception = ExceptionFactory("EditPdfRasterizeBatchJob", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<byte[]>(localVarStatusCode,
+            return new ApiResponse<EditPdfBatchJobCreateResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+                (EditPdfBatchJobCreateResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EditPdfBatchJobCreateResult)));
         }
 
         /// <summary>

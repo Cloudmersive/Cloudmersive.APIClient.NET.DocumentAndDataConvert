@@ -84,7 +84,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //System.IO.Stream inputFile = null;
-            //var response = instance.EditDocumentDocxAcceptAllTrackChanges(inputFile);
+            //bool? autorepair = null;
+            //var response = instance.EditDocumentDocxAcceptAllTrackChanges(inputFile, autorepair);
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
@@ -605,6 +606,21 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test EditDocumentPptxEditSizeAndOrientation
+        /// </summary>
+        [Test]
+        public void EditDocumentPptxEditSizeAndOrientationTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //string orientation = null;
+            //int? width = null;
+            //int? height = null;
+            //var response = instance.EditDocumentPptxEditSizeAndOrientation(inputFile, orientation, width, height);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
         /// Test EditDocumentPptxGetMacroInformation
         /// </summary>
         [Test]
@@ -614,6 +630,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //System.IO.Stream inputFile = null;
             //var response = instance.EditDocumentPptxGetMacroInformation(inputFile);
             //Assert.IsInstanceOf<GetMacrosResponse> (response, "response is GetMacrosResponse");
+        }
+        
+        /// <summary>
+        /// Test EditDocumentPptxGetSizeAndOrientation
+        /// </summary>
+        [Test]
+        public void EditDocumentPptxGetSizeAndOrientationTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.EditDocumentPptxGetSizeAndOrientation(inputFile);
+            //Assert.IsInstanceOf<PptxPageLayoutInformation> (response, "response is PptxPageLayoutInformation");
         }
         
         /// <summary>

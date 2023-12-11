@@ -113,7 +113,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //string format1 = null;
             //string format2 = null;
             //System.IO.Stream inputFile = null;
-            //var response = instance.ConvertImageMultipageImageFormatConvert(format1, format2, inputFile);
+            //int? dpi = null;
+            //var response = instance.ConvertImageMultipageImageFormatConvert(format1, format2, inputFile, dpi);
             //Assert.IsInstanceOf<MultipageImageFormatConversionResult> (response, "response is MultipageImageFormatConversionResult");
         }
         

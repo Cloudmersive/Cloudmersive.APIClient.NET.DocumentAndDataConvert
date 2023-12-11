@@ -90,6 +90,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> ConvertDocumentAutodetectToPdfWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
+        /// Convert Document to PDF as Batch Job
+        /// </summary>
+        /// <remarks>
+        /// Automatically detect file type and convert it to PDF.  Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, text files, and even multi-page TIFF files.  This API is designed for large jobs that could take a long time to create and so runs as a batch job that returns a Job ID that you can use with the GetAsyncJobStatus API to check on the status of the Job and ultimately get the output result.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ConvertDocumentBatchJobCreateResult</returns>
+        ConvertDocumentBatchJobCreateResult ConvertDocumentAutodetectToPdfBatchJob (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Convert Document to PDF as Batch Job
+        /// </summary>
+        /// <remarks>
+        /// Automatically detect file type and convert it to PDF.  Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, text files, and even multi-page TIFF files.  This API is designed for large jobs that could take a long time to create and so runs as a batch job that returns a Job ID that you can use with the GetAsyncJobStatus API to check on the status of the Job and ultimately get the output result.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of ConvertDocumentBatchJobCreateResult</returns>
+        ApiResponse<ConvertDocumentBatchJobCreateResult> ConvertDocumentAutodetectToPdfBatchJobWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
         /// Convert Document to PNG array
         /// </summary>
         /// <remarks>
@@ -599,6 +620,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>ApiResponse of EmlToPngResult</returns>
         ApiResponse<EmlToPngResult> ConvertDocumentEmlToPngWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// Get the status and result of a Convert Document Batch Job
+        /// </summary>
+        /// <remarks>
+        /// Returns the result of the Async Job - possible states can be STARTED or COMPLETED.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="asyncJobID"></param>
+        /// <returns>ConvertDocumentJobStatusResult</returns>
+        ConvertDocumentJobStatusResult ConvertDocumentGetAsyncJobStatus (string asyncJobID);
+
+        /// <summary>
+        /// Get the status and result of a Convert Document Batch Job
+        /// </summary>
+        /// <remarks>
+        /// Returns the result of the Async Job - possible states can be STARTED or COMPLETED.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="asyncJobID"></param>
+        /// <returns>ApiResponse of ConvertDocumentJobStatusResult</returns>
+        ApiResponse<ConvertDocumentJobStatusResult> ConvertDocumentGetAsyncJobStatusWithHttpInfo (string asyncJobID);
         /// <summary>
         /// Get PNG icon file for the file extension
         /// </summary>
@@ -1221,8 +1263,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="dpi">Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. (optional)</param>
         /// <returns>PdfToPngResult</returns>
-        PdfToPngResult ConvertDocumentPdfToPngArray (System.IO.Stream inputFile);
+        PdfToPngResult ConvertDocumentPdfToPngArray (System.IO.Stream inputFile, int? dpi = null);
 
         /// <summary>
         /// Convert PDF to PNG Image Array
@@ -1232,8 +1275,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="dpi">Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. (optional)</param>
         /// <returns>ApiResponse of PdfToPngResult</returns>
-        ApiResponse<PdfToPngResult> ConvertDocumentPdfToPngArrayWithHttpInfo (System.IO.Stream inputFile);
+        ApiResponse<PdfToPngResult> ConvertDocumentPdfToPngArrayWithHttpInfo (System.IO.Stream inputFile, int? dpi = null);
         /// <summary>
         /// Convert PDF to PNG Image Array (Direct)
         /// </summary>
@@ -1242,8 +1286,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="dpi">Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. (optional)</param>
         /// <returns>PdfToPngDirectResult</returns>
-        PdfToPngDirectResult ConvertDocumentPdfToPngArrayDirect (System.IO.Stream inputFile);
+        PdfToPngDirectResult ConvertDocumentPdfToPngArrayDirect (System.IO.Stream inputFile, int? dpi = null);
 
         /// <summary>
         /// Convert PDF to PNG Image Array (Direct)
@@ -1253,8 +1298,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="dpi">Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. (optional)</param>
         /// <returns>ApiResponse of PdfToPngDirectResult</returns>
-        ApiResponse<PdfToPngDirectResult> ConvertDocumentPdfToPngArrayDirectWithHttpInfo (System.IO.Stream inputFile);
+        ApiResponse<PdfToPngDirectResult> ConvertDocumentPdfToPngArrayDirectWithHttpInfo (System.IO.Stream inputFile, int? dpi = null);
         /// <summary>
         /// Convert PDF to Single PNG image
         /// </summary>
@@ -1297,6 +1343,31 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> ConvertDocumentPdfToPptxWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// Convert PDF to TIFF image
+        /// </summary>
+        /// <remarks>
+        /// Converts a PDF Document to a TIFF image.  If the PDF contains multiple pages, these pages will be represented as separate pages within the output TIFF image.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="dpi">Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. (optional)</param>
+        /// <param name="lzwCompression">Optional; Enables LZW compression to reduce the size of the output image. (optional)</param>
+        /// <returns>byte[]</returns>
+        byte[] ConvertDocumentPdfToTiff (System.IO.Stream inputFile, int? dpi = null, bool? lzwCompression = null);
+
+        /// <summary>
+        /// Convert PDF to TIFF image
+        /// </summary>
+        /// <remarks>
+        /// Converts a PDF Document to a TIFF image.  If the PDF contains multiple pages, these pages will be represented as separate pages within the output TIFF image.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="dpi">Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. (optional)</param>
+        /// <param name="lzwCompression">Optional; Enables LZW compression to reduce the size of the output image. (optional)</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> ConvertDocumentPdfToTiffWithHttpInfo (System.IO.Stream inputFile, int? dpi = null, bool? lzwCompression = null);
         /// <summary>
         /// Convert PDF Document to Text (txt)
         /// </summary>
@@ -1359,6 +1430,25 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> ConvertDocumentPngArrayToPdfWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
+        /// <summary>
+        /// Convert PNG Array to PDF and remove transparency
+        /// </summary>
+        /// <remarks>
+        /// Convert an array of PNG images, remove transparency in source images, one image per page, into a newly-created PDF.  Supports images of different sizes as input.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Object</returns>
+        Object ConvertDocumentPngArrayToPdfFlattenTransparency ();
+
+        /// <summary>
+        /// Convert PNG Array to PDF and remove transparency
+        /// </summary>
+        /// <remarks>
+        /// Convert an array of PNG images, remove transparency in source images, one image per page, into a newly-created PDF.  Supports images of different sizes as input.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> ConvertDocumentPngArrayToPdfFlattenTransparencyWithHttpInfo ();
         /// <summary>
         /// Convert PowerPoint PPT (97-03) Presentation to PDF
         /// </summary>
@@ -1450,8 +1540,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Convert/downgrade modern Office PowerPoint PPTX Presentation to the legacy PowerPoint PPT (97-2003 Format) format
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Object</returns>
-        Object ConvertDocumentPptxToPpt ();
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>byte[]</returns>
+        byte[] ConvertDocumentPptxToPpt (System.IO.Stream inputFile);
 
         /// <summary>
         /// Convert PowerPoint PPTX presentation to Legacy PowerPoint PPT (97-03)
@@ -1460,8 +1551,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Convert/downgrade modern Office PowerPoint PPTX Presentation to the legacy PowerPoint PPT (97-2003 Format) format
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> ConvertDocumentPptxToPptWithHttpInfo ();
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> ConvertDocumentPptxToPptWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
         /// Convert PowerPoint PPTX Presentation to Text (txt)
         /// </summary>
@@ -1894,6 +1986,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentAutodetectToPdfAsyncWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// Convert Document to PDF as Batch Job
+        /// </summary>
+        /// <remarks>
+        /// Automatically detect file type and convert it to PDF.  Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, text files, and even multi-page TIFF files.  This API is designed for large jobs that could take a long time to create and so runs as a batch job that returns a Job ID that you can use with the GetAsyncJobStatus API to check on the status of the Job and ultimately get the output result.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ConvertDocumentBatchJobCreateResult</returns>
+        System.Threading.Tasks.Task<ConvertDocumentBatchJobCreateResult> ConvertDocumentAutodetectToPdfBatchJobAsync (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Convert Document to PDF as Batch Job
+        /// </summary>
+        /// <remarks>
+        /// Automatically detect file type and convert it to PDF.  Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, text files, and even multi-page TIFF files.  This API is designed for large jobs that could take a long time to create and so runs as a batch job that returns a Job ID that you can use with the GetAsyncJobStatus API to check on the status of the Job and ultimately get the output result.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (ConvertDocumentBatchJobCreateResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ConvertDocumentBatchJobCreateResult>> ConvertDocumentAutodetectToPdfBatchJobAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
         /// Convert Document to PNG array
         /// </summary>
@@ -2404,6 +2517,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>Task of ApiResponse (EmlToPngResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<EmlToPngResult>> ConvertDocumentEmlToPngAsyncWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// Get the status and result of a Convert Document Batch Job
+        /// </summary>
+        /// <remarks>
+        /// Returns the result of the Async Job - possible states can be STARTED or COMPLETED.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="asyncJobID"></param>
+        /// <returns>Task of ConvertDocumentJobStatusResult</returns>
+        System.Threading.Tasks.Task<ConvertDocumentJobStatusResult> ConvertDocumentGetAsyncJobStatusAsync (string asyncJobID);
+
+        /// <summary>
+        /// Get the status and result of a Convert Document Batch Job
+        /// </summary>
+        /// <remarks>
+        /// Returns the result of the Async Job - possible states can be STARTED or COMPLETED.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="asyncJobID"></param>
+        /// <returns>Task of ApiResponse (ConvertDocumentJobStatusResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ConvertDocumentJobStatusResult>> ConvertDocumentGetAsyncJobStatusAsyncWithHttpInfo (string asyncJobID);
         /// <summary>
         /// Get PNG icon file for the file extension
         /// </summary>
@@ -3026,8 +3160,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="dpi">Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. (optional)</param>
         /// <returns>Task of PdfToPngResult</returns>
-        System.Threading.Tasks.Task<PdfToPngResult> ConvertDocumentPdfToPngArrayAsync (System.IO.Stream inputFile);
+        System.Threading.Tasks.Task<PdfToPngResult> ConvertDocumentPdfToPngArrayAsync (System.IO.Stream inputFile, int? dpi = null);
 
         /// <summary>
         /// Convert PDF to PNG Image Array
@@ -3037,8 +3172,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="dpi">Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. (optional)</param>
         /// <returns>Task of ApiResponse (PdfToPngResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PdfToPngResult>> ConvertDocumentPdfToPngArrayAsyncWithHttpInfo (System.IO.Stream inputFile);
+        System.Threading.Tasks.Task<ApiResponse<PdfToPngResult>> ConvertDocumentPdfToPngArrayAsyncWithHttpInfo (System.IO.Stream inputFile, int? dpi = null);
         /// <summary>
         /// Convert PDF to PNG Image Array (Direct)
         /// </summary>
@@ -3047,8 +3183,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="dpi">Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. (optional)</param>
         /// <returns>Task of PdfToPngDirectResult</returns>
-        System.Threading.Tasks.Task<PdfToPngDirectResult> ConvertDocumentPdfToPngArrayDirectAsync (System.IO.Stream inputFile);
+        System.Threading.Tasks.Task<PdfToPngDirectResult> ConvertDocumentPdfToPngArrayDirectAsync (System.IO.Stream inputFile, int? dpi = null);
 
         /// <summary>
         /// Convert PDF to PNG Image Array (Direct)
@@ -3058,8 +3195,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="dpi">Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. (optional)</param>
         /// <returns>Task of ApiResponse (PdfToPngDirectResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PdfToPngDirectResult>> ConvertDocumentPdfToPngArrayDirectAsyncWithHttpInfo (System.IO.Stream inputFile);
+        System.Threading.Tasks.Task<ApiResponse<PdfToPngDirectResult>> ConvertDocumentPdfToPngArrayDirectAsyncWithHttpInfo (System.IO.Stream inputFile, int? dpi = null);
         /// <summary>
         /// Convert PDF to Single PNG image
         /// </summary>
@@ -3102,6 +3240,31 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentPdfToPptxAsyncWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// Convert PDF to TIFF image
+        /// </summary>
+        /// <remarks>
+        /// Converts a PDF Document to a TIFF image.  If the PDF contains multiple pages, these pages will be represented as separate pages within the output TIFF image.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="dpi">Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. (optional)</param>
+        /// <param name="lzwCompression">Optional; Enables LZW compression to reduce the size of the output image. (optional)</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> ConvertDocumentPdfToTiffAsync (System.IO.Stream inputFile, int? dpi = null, bool? lzwCompression = null);
+
+        /// <summary>
+        /// Convert PDF to TIFF image
+        /// </summary>
+        /// <remarks>
+        /// Converts a PDF Document to a TIFF image.  If the PDF contains multiple pages, these pages will be represented as separate pages within the output TIFF image.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="dpi">Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. (optional)</param>
+        /// <param name="lzwCompression">Optional; Enables LZW compression to reduce the size of the output image. (optional)</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentPdfToTiffAsyncWithHttpInfo (System.IO.Stream inputFile, int? dpi = null, bool? lzwCompression = null);
         /// <summary>
         /// Convert PDF Document to Text (txt)
         /// </summary>
@@ -3164,6 +3327,25 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentPngArrayToPdfAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
+        /// <summary>
+        /// Convert PNG Array to PDF and remove transparency
+        /// </summary>
+        /// <remarks>
+        /// Convert an array of PNG images, remove transparency in source images, one image per page, into a newly-created PDF.  Supports images of different sizes as input.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> ConvertDocumentPngArrayToPdfFlattenTransparencyAsync ();
+
+        /// <summary>
+        /// Convert PNG Array to PDF and remove transparency
+        /// </summary>
+        /// <remarks>
+        /// Convert an array of PNG images, remove transparency in source images, one image per page, into a newly-created PDF.  Supports images of different sizes as input.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> ConvertDocumentPngArrayToPdfFlattenTransparencyAsyncWithHttpInfo ();
         /// <summary>
         /// Convert PowerPoint PPT (97-03) Presentation to PDF
         /// </summary>
@@ -3255,8 +3437,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Convert/downgrade modern Office PowerPoint PPTX Presentation to the legacy PowerPoint PPT (97-2003 Format) format
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> ConvertDocumentPptxToPptAsync ();
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> ConvertDocumentPptxToPptAsync (System.IO.Stream inputFile);
 
         /// <summary>
         /// Convert PowerPoint PPTX presentation to Legacy PowerPoint PPT (97-03)
@@ -3265,8 +3448,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Convert/downgrade modern Office PowerPoint PPTX Presentation to the legacy PowerPoint PPT (97-2003 Format) format
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ConvertDocumentPptxToPptAsyncWithHttpInfo ();
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentPptxToPptAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
         /// Convert PowerPoint PPTX Presentation to Text (txt)
         /// </summary>
@@ -4183,6 +4367,151 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Convert Document to PDF as Batch Job Automatically detect file type and convert it to PDF.  Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, text files, and even multi-page TIFF files.  This API is designed for large jobs that could take a long time to create and so runs as a batch job that returns a Job ID that you can use with the GetAsyncJobStatus API to check on the status of the Job and ultimately get the output result.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ConvertDocumentBatchJobCreateResult</returns>
+        public ConvertDocumentBatchJobCreateResult ConvertDocumentAutodetectToPdfBatchJob (System.IO.Stream inputFile)
+        {
+             ApiResponse<ConvertDocumentBatchJobCreateResult> localVarResponse = ConvertDocumentAutodetectToPdfBatchJobWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Convert Document to PDF as Batch Job Automatically detect file type and convert it to PDF.  Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, text files, and even multi-page TIFF files.  This API is designed for large jobs that could take a long time to create and so runs as a batch job that returns a Job ID that you can use with the GetAsyncJobStatus API to check on the status of the Job and ultimately get the output result.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of ConvertDocumentBatchJobCreateResult</returns>
+        public ApiResponse< ConvertDocumentBatchJobCreateResult > ConvertDocumentAutodetectToPdfBatchJobWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentAutodetectToPdfBatchJob");
+
+            var localVarPath = "/convert/autodetect/to/pdf/batch-job";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentAutodetectToPdfBatchJob", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ConvertDocumentBatchJobCreateResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ConvertDocumentBatchJobCreateResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConvertDocumentBatchJobCreateResult)));
+        }
+
+        /// <summary>
+        /// Convert Document to PDF as Batch Job Automatically detect file type and convert it to PDF.  Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, text files, and even multi-page TIFF files.  This API is designed for large jobs that could take a long time to create and so runs as a batch job that returns a Job ID that you can use with the GetAsyncJobStatus API to check on the status of the Job and ultimately get the output result.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ConvertDocumentBatchJobCreateResult</returns>
+        public async System.Threading.Tasks.Task<ConvertDocumentBatchJobCreateResult> ConvertDocumentAutodetectToPdfBatchJobAsync (System.IO.Stream inputFile)
+        {
+             ApiResponse<ConvertDocumentBatchJobCreateResult> localVarResponse = await ConvertDocumentAutodetectToPdfBatchJobAsyncWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Convert Document to PDF as Batch Job Automatically detect file type and convert it to PDF.  Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, text files, and even multi-page TIFF files.  This API is designed for large jobs that could take a long time to create and so runs as a batch job that returns a Job ID that you can use with the GetAsyncJobStatus API to check on the status of the Job and ultimately get the output result.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (ConvertDocumentBatchJobCreateResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ConvertDocumentBatchJobCreateResult>> ConvertDocumentAutodetectToPdfBatchJobAsyncWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentAutodetectToPdfBatchJob");
+
+            var localVarPath = "/convert/autodetect/to/pdf/batch-job";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentAutodetectToPdfBatchJob", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ConvertDocumentBatchJobCreateResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ConvertDocumentBatchJobCreateResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConvertDocumentBatchJobCreateResult)));
         }
 
         /// <summary>
@@ -7583,6 +7912,155 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<EmlToPngResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (EmlToPngResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmlToPngResult)));
+        }
+
+        /// <summary>
+        /// Get the status and result of a Convert Document Batch Job Returns the result of the Async Job - possible states can be STARTED or COMPLETED.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="asyncJobID"></param>
+        /// <returns>ConvertDocumentJobStatusResult</returns>
+        public ConvertDocumentJobStatusResult ConvertDocumentGetAsyncJobStatus (string asyncJobID)
+        {
+             ApiResponse<ConvertDocumentJobStatusResult> localVarResponse = ConvertDocumentGetAsyncJobStatusWithHttpInfo(asyncJobID);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the status and result of a Convert Document Batch Job Returns the result of the Async Job - possible states can be STARTED or COMPLETED.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="asyncJobID"></param>
+        /// <returns>ApiResponse of ConvertDocumentJobStatusResult</returns>
+        public ApiResponse< ConvertDocumentJobStatusResult > ConvertDocumentGetAsyncJobStatusWithHttpInfo (string asyncJobID)
+        {
+            // verify the required parameter 'asyncJobID' is set
+            if (asyncJobID == null)
+                throw new ApiException(400, "Missing required parameter 'asyncJobID' when calling ConvertDocumentApi->ConvertDocumentGetAsyncJobStatus");
+
+            var localVarPath = "/convert/batch-job/status";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (asyncJobID != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AsyncJobID", asyncJobID)); // query parameter
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentGetAsyncJobStatus", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ConvertDocumentJobStatusResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ConvertDocumentJobStatusResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConvertDocumentJobStatusResult)));
+        }
+
+        /// <summary>
+        /// Get the status and result of a Convert Document Batch Job Returns the result of the Async Job - possible states can be STARTED or COMPLETED.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="asyncJobID"></param>
+        /// <returns>Task of ConvertDocumentJobStatusResult</returns>
+        public async System.Threading.Tasks.Task<ConvertDocumentJobStatusResult> ConvertDocumentGetAsyncJobStatusAsync (string asyncJobID)
+        {
+             ApiResponse<ConvertDocumentJobStatusResult> localVarResponse = await ConvertDocumentGetAsyncJobStatusAsyncWithHttpInfo(asyncJobID);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the status and result of a Convert Document Batch Job Returns the result of the Async Job - possible states can be STARTED or COMPLETED.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="asyncJobID"></param>
+        /// <returns>Task of ApiResponse (ConvertDocumentJobStatusResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ConvertDocumentJobStatusResult>> ConvertDocumentGetAsyncJobStatusAsyncWithHttpInfo (string asyncJobID)
+        {
+            // verify the required parameter 'asyncJobID' is set
+            if (asyncJobID == null)
+                throw new ApiException(400, "Missing required parameter 'asyncJobID' when calling ConvertDocumentApi->ConvertDocumentGetAsyncJobStatus");
+
+            var localVarPath = "/convert/batch-job/status";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (asyncJobID != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AsyncJobID", asyncJobID)); // query parameter
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentGetAsyncJobStatus", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ConvertDocumentJobStatusResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ConvertDocumentJobStatusResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConvertDocumentJobStatusResult)));
         }
 
         /// <summary>
@@ -11814,10 +12292,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="dpi">Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. (optional)</param>
         /// <returns>PdfToPngResult</returns>
-        public PdfToPngResult ConvertDocumentPdfToPngArray (System.IO.Stream inputFile)
+        public PdfToPngResult ConvertDocumentPdfToPngArray (System.IO.Stream inputFile, int? dpi = null)
         {
-             ApiResponse<PdfToPngResult> localVarResponse = ConvertDocumentPdfToPngArrayWithHttpInfo(inputFile);
+             ApiResponse<PdfToPngResult> localVarResponse = ConvertDocumentPdfToPngArrayWithHttpInfo(inputFile, dpi);
              return localVarResponse.Data;
         }
 
@@ -11826,8 +12305,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="dpi">Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. (optional)</param>
         /// <returns>ApiResponse of PdfToPngResult</returns>
-        public ApiResponse< PdfToPngResult > ConvertDocumentPdfToPngArrayWithHttpInfo (System.IO.Stream inputFile)
+        public ApiResponse< PdfToPngResult > ConvertDocumentPdfToPngArrayWithHttpInfo (System.IO.Stream inputFile, int? dpi = null)
         {
             // verify the required parameter 'inputFile' is set
             if (inputFile == null)
@@ -11858,6 +12338,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (dpi != null) localVarHeaderParams.Add("dpi", this.Configuration.ApiClient.ParameterToString(dpi)); // header parameter
             if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
 
             // authentication (Apikey) required
@@ -11889,10 +12370,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="dpi">Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. (optional)</param>
         /// <returns>Task of PdfToPngResult</returns>
-        public async System.Threading.Tasks.Task<PdfToPngResult> ConvertDocumentPdfToPngArrayAsync (System.IO.Stream inputFile)
+        public async System.Threading.Tasks.Task<PdfToPngResult> ConvertDocumentPdfToPngArrayAsync (System.IO.Stream inputFile, int? dpi = null)
         {
-             ApiResponse<PdfToPngResult> localVarResponse = await ConvertDocumentPdfToPngArrayAsyncWithHttpInfo(inputFile);
+             ApiResponse<PdfToPngResult> localVarResponse = await ConvertDocumentPdfToPngArrayAsyncWithHttpInfo(inputFile, dpi);
              return localVarResponse.Data;
 
         }
@@ -11902,8 +12384,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="dpi">Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. (optional)</param>
         /// <returns>Task of ApiResponse (PdfToPngResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PdfToPngResult>> ConvertDocumentPdfToPngArrayAsyncWithHttpInfo (System.IO.Stream inputFile)
+        public async System.Threading.Tasks.Task<ApiResponse<PdfToPngResult>> ConvertDocumentPdfToPngArrayAsyncWithHttpInfo (System.IO.Stream inputFile, int? dpi = null)
         {
             // verify the required parameter 'inputFile' is set
             if (inputFile == null)
@@ -11934,6 +12417,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (dpi != null) localVarHeaderParams.Add("dpi", this.Configuration.ApiClient.ParameterToString(dpi)); // header parameter
             if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
 
             // authentication (Apikey) required
@@ -11965,10 +12449,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="dpi">Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. (optional)</param>
         /// <returns>PdfToPngDirectResult</returns>
-        public PdfToPngDirectResult ConvertDocumentPdfToPngArrayDirect (System.IO.Stream inputFile)
+        public PdfToPngDirectResult ConvertDocumentPdfToPngArrayDirect (System.IO.Stream inputFile, int? dpi = null)
         {
-             ApiResponse<PdfToPngDirectResult> localVarResponse = ConvertDocumentPdfToPngArrayDirectWithHttpInfo(inputFile);
+             ApiResponse<PdfToPngDirectResult> localVarResponse = ConvertDocumentPdfToPngArrayDirectWithHttpInfo(inputFile, dpi);
              return localVarResponse.Data;
         }
 
@@ -11977,8 +12462,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="dpi">Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. (optional)</param>
         /// <returns>ApiResponse of PdfToPngDirectResult</returns>
-        public ApiResponse< PdfToPngDirectResult > ConvertDocumentPdfToPngArrayDirectWithHttpInfo (System.IO.Stream inputFile)
+        public ApiResponse< PdfToPngDirectResult > ConvertDocumentPdfToPngArrayDirectWithHttpInfo (System.IO.Stream inputFile, int? dpi = null)
         {
             // verify the required parameter 'inputFile' is set
             if (inputFile == null)
@@ -12009,6 +12495,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (dpi != null) localVarHeaderParams.Add("dpi", this.Configuration.ApiClient.ParameterToString(dpi)); // header parameter
             if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
 
             // authentication (Apikey) required
@@ -12040,10 +12527,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="dpi">Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. (optional)</param>
         /// <returns>Task of PdfToPngDirectResult</returns>
-        public async System.Threading.Tasks.Task<PdfToPngDirectResult> ConvertDocumentPdfToPngArrayDirectAsync (System.IO.Stream inputFile)
+        public async System.Threading.Tasks.Task<PdfToPngDirectResult> ConvertDocumentPdfToPngArrayDirectAsync (System.IO.Stream inputFile, int? dpi = null)
         {
-             ApiResponse<PdfToPngDirectResult> localVarResponse = await ConvertDocumentPdfToPngArrayDirectAsyncWithHttpInfo(inputFile);
+             ApiResponse<PdfToPngDirectResult> localVarResponse = await ConvertDocumentPdfToPngArrayDirectAsyncWithHttpInfo(inputFile, dpi);
              return localVarResponse.Data;
 
         }
@@ -12053,8 +12541,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="dpi">Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. (optional)</param>
         /// <returns>Task of ApiResponse (PdfToPngDirectResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PdfToPngDirectResult>> ConvertDocumentPdfToPngArrayDirectAsyncWithHttpInfo (System.IO.Stream inputFile)
+        public async System.Threading.Tasks.Task<ApiResponse<PdfToPngDirectResult>> ConvertDocumentPdfToPngArrayDirectAsyncWithHttpInfo (System.IO.Stream inputFile, int? dpi = null)
         {
             // verify the required parameter 'inputFile' is set
             if (inputFile == null)
@@ -12085,6 +12574,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (dpi != null) localVarHeaderParams.Add("dpi", this.Configuration.ApiClient.ParameterToString(dpi)); // header parameter
             if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
 
             // authentication (Apikey) required
@@ -12393,6 +12883,169 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("ConvertDocumentPdfToPptx", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Convert PDF to TIFF image Converts a PDF Document to a TIFF image.  If the PDF contains multiple pages, these pages will be represented as separate pages within the output TIFF image.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="dpi">Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. (optional)</param>
+        /// <param name="lzwCompression">Optional; Enables LZW compression to reduce the size of the output image. (optional)</param>
+        /// <returns>byte[]</returns>
+        public byte[] ConvertDocumentPdfToTiff (System.IO.Stream inputFile, int? dpi = null, bool? lzwCompression = null)
+        {
+             ApiResponse<byte[]> localVarResponse = ConvertDocumentPdfToTiffWithHttpInfo(inputFile, dpi, lzwCompression);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Convert PDF to TIFF image Converts a PDF Document to a TIFF image.  If the PDF contains multiple pages, these pages will be represented as separate pages within the output TIFF image.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="dpi">Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. (optional)</param>
+        /// <param name="lzwCompression">Optional; Enables LZW compression to reduce the size of the output image. (optional)</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > ConvertDocumentPdfToTiffWithHttpInfo (System.IO.Stream inputFile, int? dpi = null, bool? lzwCompression = null)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentPdfToTiff");
+
+            var localVarPath = "/convert/pdf/to/tiff";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (dpi != null) localVarHeaderParams.Add("dpi", this.Configuration.ApiClient.ParameterToString(dpi)); // header parameter
+            if (lzwCompression != null) localVarHeaderParams.Add("lzwCompression", this.Configuration.ApiClient.ParameterToString(lzwCompression)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentPdfToTiff", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Convert PDF to TIFF image Converts a PDF Document to a TIFF image.  If the PDF contains multiple pages, these pages will be represented as separate pages within the output TIFF image.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="dpi">Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. (optional)</param>
+        /// <param name="lzwCompression">Optional; Enables LZW compression to reduce the size of the output image. (optional)</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> ConvertDocumentPdfToTiffAsync (System.IO.Stream inputFile, int? dpi = null, bool? lzwCompression = null)
+        {
+             ApiResponse<byte[]> localVarResponse = await ConvertDocumentPdfToTiffAsyncWithHttpInfo(inputFile, dpi, lzwCompression);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Convert PDF to TIFF image Converts a PDF Document to a TIFF image.  If the PDF contains multiple pages, these pages will be represented as separate pages within the output TIFF image.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="dpi">Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. (optional)</param>
+        /// <param name="lzwCompression">Optional; Enables LZW compression to reduce the size of the output image. (optional)</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentPdfToTiffAsyncWithHttpInfo (System.IO.Stream inputFile, int? dpi = null, bool? lzwCompression = null)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentPdfToTiff");
+
+            var localVarPath = "/convert/pdf/to/tiff";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (dpi != null) localVarHeaderParams.Add("dpi", this.Configuration.ApiClient.ParameterToString(dpi)); // header parameter
+            if (lzwCompression != null) localVarHeaderParams.Add("lzwCompression", this.Configuration.ApiClient.ParameterToString(lzwCompression)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentPdfToTiff", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -12761,6 +13414,137 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Convert PNG Array to PDF and remove transparency Convert an array of PNG images, remove transparency in source images, one image per page, into a newly-created PDF.  Supports images of different sizes as input.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Object</returns>
+        public Object ConvertDocumentPngArrayToPdfFlattenTransparency ()
+        {
+             ApiResponse<Object> localVarResponse = ConvertDocumentPngArrayToPdfFlattenTransparencyWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Convert PNG Array to PDF and remove transparency Convert an array of PNG images, remove transparency in source images, one image per page, into a newly-created PDF.  Supports images of different sizes as input.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > ConvertDocumentPngArrayToPdfFlattenTransparencyWithHttpInfo ()
+        {
+
+            var localVarPath = "/convert/png/to/pdf/remove-transparency";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentPngArrayToPdfFlattenTransparency", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Convert PNG Array to PDF and remove transparency Convert an array of PNG images, remove transparency in source images, one image per page, into a newly-created PDF.  Supports images of different sizes as input.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> ConvertDocumentPngArrayToPdfFlattenTransparencyAsync ()
+        {
+             ApiResponse<Object> localVarResponse = await ConvertDocumentPngArrayToPdfFlattenTransparencyAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Convert PNG Array to PDF and remove transparency Convert an array of PNG images, remove transparency in source images, one image per page, into a newly-created PDF.  Supports images of different sizes as input.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ConvertDocumentPngArrayToPdfFlattenTransparencyAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/convert/png/to/pdf/remove-transparency";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ConvertDocumentPngArrayToPdfFlattenTransparency", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -13353,10 +14137,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Convert PowerPoint PPTX presentation to Legacy PowerPoint PPT (97-03) Convert/downgrade modern Office PowerPoint PPTX Presentation to the legacy PowerPoint PPT (97-2003 Format) format
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Object</returns>
-        public Object ConvertDocumentPptxToPpt ()
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>byte[]</returns>
+        public byte[] ConvertDocumentPptxToPpt (System.IO.Stream inputFile)
         {
-             ApiResponse<Object> localVarResponse = ConvertDocumentPptxToPptWithHttpInfo();
+             ApiResponse<byte[]> localVarResponse = ConvertDocumentPptxToPptWithHttpInfo(inputFile);
              return localVarResponse.Data;
         }
 
@@ -13364,9 +14149,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Convert PowerPoint PPTX presentation to Legacy PowerPoint PPT (97-03) Convert/downgrade modern Office PowerPoint PPTX Presentation to the legacy PowerPoint PPT (97-2003 Format) format
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > ConvertDocumentPptxToPptWithHttpInfo ()
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > ConvertDocumentPptxToPptWithHttpInfo (System.IO.Stream inputFile)
         {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentPptxToPpt");
 
             var localVarPath = "/convert/pptx/to/ppt";
             var localVarPathParams = new Dictionary<String, String>();
@@ -13378,6 +14167,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -13389,6 +14179,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
 
             // authentication (Apikey) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
@@ -13409,19 +14200,20 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
         /// Convert PowerPoint PPTX presentation to Legacy PowerPoint PPT (97-03) Convert/downgrade modern Office PowerPoint PPTX Presentation to the legacy PowerPoint PPT (97-2003 Format) format
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> ConvertDocumentPptxToPptAsync ()
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> ConvertDocumentPptxToPptAsync (System.IO.Stream inputFile)
         {
-             ApiResponse<Object> localVarResponse = await ConvertDocumentPptxToPptAsyncWithHttpInfo();
+             ApiResponse<byte[]> localVarResponse = await ConvertDocumentPptxToPptAsyncWithHttpInfo(inputFile);
              return localVarResponse.Data;
 
         }
@@ -13430,9 +14222,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Convert PowerPoint PPTX presentation to Legacy PowerPoint PPT (97-03) Convert/downgrade modern Office PowerPoint PPTX Presentation to the legacy PowerPoint PPT (97-2003 Format) format
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ConvertDocumentPptxToPptAsyncWithHttpInfo ()
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentPptxToPptAsyncWithHttpInfo (System.IO.Stream inputFile)
         {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling ConvertDocumentApi->ConvertDocumentPptxToPpt");
 
             var localVarPath = "/convert/pptx/to/ppt";
             var localVarPathParams = new Dictionary<String, String>();
@@ -13444,6 +14240,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -13455,6 +14252,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
 
             // authentication (Apikey) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
@@ -13475,9 +14273,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
@@ -15002,7 +15800,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/octet-stream"
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -15078,7 +15879,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/octet-stream"
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)

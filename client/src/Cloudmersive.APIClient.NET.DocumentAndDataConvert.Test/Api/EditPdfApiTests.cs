@@ -117,6 +117,20 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test EditPdfDeletePagesBatchJob
+        /// </summary>
+        [Test]
+        public void EditPdfDeletePagesBatchJobTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //int? pageStart = null;
+            //int? pageEnd = null;
+            //var response = instance.EditPdfDeletePagesBatchJob(inputFile, pageStart, pageEnd);
+            //Assert.IsInstanceOf<EditPdfBatchJobCreateResult> (response, "response is EditPdfBatchJobCreateResult");
+        }
+        
+        /// <summary>
         /// Test EditPdfEncrypt
         /// </summary>
         [Test]
@@ -141,6 +155,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //System.IO.Stream inputFile = null;
             //var response = instance.EditPdfGetAnnotations(inputFile);
             //Assert.IsInstanceOf<GetPdfAnnotationsResult> (response, "response is GetPdfAnnotationsResult");
+        }
+        
+        /// <summary>
+        /// Test EditPdfGetAsyncJobStatus
+        /// </summary>
+        [Test]
+        public void EditPdfGetAsyncJobStatusTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string asyncJobID = null;
+            //var response = instance.EditPdfGetAsyncJobStatus(asyncJobID);
+            //Assert.IsInstanceOf<EditPdfJobStatusResult> (response, "response is EditPdfJobStatusResult");
         }
         
         /// <summary>
@@ -197,6 +223,22 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test EditPdfInsertPagesBatchJob
+        /// </summary>
+        [Test]
+        public void EditPdfInsertPagesBatchJobTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream sourceFile = null;
+            //System.IO.Stream destinationFile = null;
+            //int? pageStartSource = null;
+            //int? pageEndSource = null;
+            //int? pageInsertBeforeDesitnation = null;
+            //var response = instance.EditPdfInsertPagesBatchJob(sourceFile, destinationFile, pageStartSource, pageEndSource, pageInsertBeforeDesitnation);
+            //Assert.IsInstanceOf<EditPdfBatchJobCreateResult> (response, "response is EditPdfBatchJobCreateResult");
+        }
+        
+        /// <summary>
         /// Test EditPdfLinearize
         /// </summary>
         [Test]
@@ -216,8 +258,21 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //System.IO.Stream inputFile = null;
-            //var response = instance.EditPdfRasterize(inputFile);
+            //int? dpi = null;
+            //var response = instance.EditPdfRasterize(inputFile, dpi);
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
+        /// Test EditPdfRasterizeBatchJob
+        /// </summary>
+        [Test]
+        public void EditPdfRasterizeBatchJobTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.EditPdfRasterizeBatchJob(inputFile);
+            //Assert.IsInstanceOf<EditPdfBatchJobCreateResult> (response, "response is EditPdfBatchJobCreateResult");
         }
         
         /// <summary>

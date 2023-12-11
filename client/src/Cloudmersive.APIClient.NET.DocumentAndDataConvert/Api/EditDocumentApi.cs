@@ -53,8 +53,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is true) (optional)</param>
         /// <returns>byte[]</returns>
-        byte[] EditDocumentDocxAcceptAllTrackChanges (System.IO.Stream inputFile);
+        byte[] EditDocumentDocxAcceptAllTrackChanges (System.IO.Stream inputFile, bool? autorepair = null);
 
         /// <summary>
         /// Accept all tracked changes, revisions in a Word DOCX document
@@ -64,8 +65,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is true) (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
-        ApiResponse<byte[]> EditDocumentDocxAcceptAllTrackChangesWithHttpInfo (System.IO.Stream inputFile);
+        ApiResponse<byte[]> EditDocumentDocxAcceptAllTrackChangesWithHttpInfo (System.IO.Stream inputFile, bool? autorepair = null);
         /// <summary>
         /// Get body from a Word DOCX document
         /// </summary>
@@ -970,6 +972,33 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> EditDocumentPptxDeleteSlidesWithHttpInfo (RemovePptxSlidesRequest reqConfig);
         /// <summary>
+        /// Set the size and/or orientation of a PowerPoint PPTX presentation document
+        /// </summary>
+        /// <remarks>
+        /// Edits the input PowerPoint PPTX presentation document to be a different orientation and/or size
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="orientation">Optional: The desired slide orientation; can be landscape or portrait. (optional)</param>
+        /// <param name="width">Optional: The desired slide width in Emu, where 1 inch equals 914400 emu. (optional)</param>
+        /// <param name="height">Optional: The desired slide height in Emu, where 1 inch equals 914400 emu (optional)</param>
+        /// <returns>byte[]</returns>
+        byte[] EditDocumentPptxEditSizeAndOrientation (System.IO.Stream inputFile, string orientation = null, int? width = null, int? height = null);
+
+        /// <summary>
+        /// Set the size and/or orientation of a PowerPoint PPTX presentation document
+        /// </summary>
+        /// <remarks>
+        /// Edits the input PowerPoint PPTX presentation document to be a different orientation and/or size
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="orientation">Optional: The desired slide orientation; can be landscape or portrait. (optional)</param>
+        /// <param name="width">Optional: The desired slide width in Emu, where 1 inch equals 914400 emu. (optional)</param>
+        /// <param name="height">Optional: The desired slide height in Emu, where 1 inch equals 914400 emu (optional)</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> EditDocumentPptxEditSizeAndOrientationWithHttpInfo (System.IO.Stream inputFile, string orientation = null, int? width = null, int? height = null);
+        /// <summary>
         /// Get macro information from a PowerPoint PPTX/PPTM presentation document
         /// </summary>
         /// <remarks>
@@ -990,6 +1019,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>ApiResponse of GetMacrosResponse</returns>
         ApiResponse<GetMacrosResponse> EditDocumentPptxGetMacroInformationWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// Get the page layout information, including size and orientation of a PowerPoint PPTX presentation document
+        /// </summary>
+        /// <remarks>
+        /// Gets size and orientation of an input PowerPoint PPTX presentation
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>PptxPageLayoutInformation</returns>
+        PptxPageLayoutInformation EditDocumentPptxGetSizeAndOrientation (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Get the page layout information, including size and orientation of a PowerPoint PPTX presentation document
+        /// </summary>
+        /// <remarks>
+        /// Gets size and orientation of an input PowerPoint PPTX presentation
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of PptxPageLayoutInformation</returns>
+        ApiResponse<PptxPageLayoutInformation> EditDocumentPptxGetSizeAndOrientationWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
         /// Replace string in PowerPoint PPTX presentation
         /// </summary>
@@ -1483,8 +1533,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is true) (optional)</param>
         /// <returns>Task of byte[]</returns>
-        System.Threading.Tasks.Task<byte[]> EditDocumentDocxAcceptAllTrackChangesAsync (System.IO.Stream inputFile);
+        System.Threading.Tasks.Task<byte[]> EditDocumentDocxAcceptAllTrackChangesAsync (System.IO.Stream inputFile, bool? autorepair = null);
 
         /// <summary>
         /// Accept all tracked changes, revisions in a Word DOCX document
@@ -1494,8 +1545,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is true) (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDocumentDocxAcceptAllTrackChangesAsyncWithHttpInfo (System.IO.Stream inputFile);
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDocumentDocxAcceptAllTrackChangesAsyncWithHttpInfo (System.IO.Stream inputFile, bool? autorepair = null);
         /// <summary>
         /// Get body from a Word DOCX document
         /// </summary>
@@ -2400,6 +2452,33 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDocumentPptxDeleteSlidesAsyncWithHttpInfo (RemovePptxSlidesRequest reqConfig);
         /// <summary>
+        /// Set the size and/or orientation of a PowerPoint PPTX presentation document
+        /// </summary>
+        /// <remarks>
+        /// Edits the input PowerPoint PPTX presentation document to be a different orientation and/or size
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="orientation">Optional: The desired slide orientation; can be landscape or portrait. (optional)</param>
+        /// <param name="width">Optional: The desired slide width in Emu, where 1 inch equals 914400 emu. (optional)</param>
+        /// <param name="height">Optional: The desired slide height in Emu, where 1 inch equals 914400 emu (optional)</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> EditDocumentPptxEditSizeAndOrientationAsync (System.IO.Stream inputFile, string orientation = null, int? width = null, int? height = null);
+
+        /// <summary>
+        /// Set the size and/or orientation of a PowerPoint PPTX presentation document
+        /// </summary>
+        /// <remarks>
+        /// Edits the input PowerPoint PPTX presentation document to be a different orientation and/or size
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="orientation">Optional: The desired slide orientation; can be landscape or portrait. (optional)</param>
+        /// <param name="width">Optional: The desired slide width in Emu, where 1 inch equals 914400 emu. (optional)</param>
+        /// <param name="height">Optional: The desired slide height in Emu, where 1 inch equals 914400 emu (optional)</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDocumentPptxEditSizeAndOrientationAsyncWithHttpInfo (System.IO.Stream inputFile, string orientation = null, int? width = null, int? height = null);
+        /// <summary>
         /// Get macro information from a PowerPoint PPTX/PPTM presentation document
         /// </summary>
         /// <remarks>
@@ -2420,6 +2499,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>Task of ApiResponse (GetMacrosResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GetMacrosResponse>> EditDocumentPptxGetMacroInformationAsyncWithHttpInfo (System.IO.Stream inputFile);
+        /// <summary>
+        /// Get the page layout information, including size and orientation of a PowerPoint PPTX presentation document
+        /// </summary>
+        /// <remarks>
+        /// Gets size and orientation of an input PowerPoint PPTX presentation
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of PptxPageLayoutInformation</returns>
+        System.Threading.Tasks.Task<PptxPageLayoutInformation> EditDocumentPptxGetSizeAndOrientationAsync (System.IO.Stream inputFile);
+
+        /// <summary>
+        /// Get the page layout information, including size and orientation of a PowerPoint PPTX presentation document
+        /// </summary>
+        /// <remarks>
+        /// Gets size and orientation of an input PowerPoint PPTX presentation
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (PptxPageLayoutInformation)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PptxPageLayoutInformation>> EditDocumentPptxGetSizeAndOrientationAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
         /// Replace string in PowerPoint PPTX presentation
         /// </summary>
@@ -3138,10 +3238,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is true) (optional)</param>
         /// <returns>byte[]</returns>
-        public byte[] EditDocumentDocxAcceptAllTrackChanges (System.IO.Stream inputFile)
+        public byte[] EditDocumentDocxAcceptAllTrackChanges (System.IO.Stream inputFile, bool? autorepair = null)
         {
-             ApiResponse<byte[]> localVarResponse = EditDocumentDocxAcceptAllTrackChangesWithHttpInfo(inputFile);
+             ApiResponse<byte[]> localVarResponse = EditDocumentDocxAcceptAllTrackChangesWithHttpInfo(inputFile, autorepair);
              return localVarResponse.Data;
         }
 
@@ -3150,8 +3251,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is true) (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
-        public ApiResponse< byte[] > EditDocumentDocxAcceptAllTrackChangesWithHttpInfo (System.IO.Stream inputFile)
+        public ApiResponse< byte[] > EditDocumentDocxAcceptAllTrackChangesWithHttpInfo (System.IO.Stream inputFile, bool? autorepair = null)
         {
             // verify the required parameter 'inputFile' is set
             if (inputFile == null)
@@ -3182,6 +3284,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (autorepair != null) localVarHeaderParams.Add("autorepair", this.Configuration.ApiClient.ParameterToString(autorepair)); // header parameter
             if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
 
             // authentication (Apikey) required
@@ -3213,10 +3316,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is true) (optional)</param>
         /// <returns>Task of byte[]</returns>
-        public async System.Threading.Tasks.Task<byte[]> EditDocumentDocxAcceptAllTrackChangesAsync (System.IO.Stream inputFile)
+        public async System.Threading.Tasks.Task<byte[]> EditDocumentDocxAcceptAllTrackChangesAsync (System.IO.Stream inputFile, bool? autorepair = null)
         {
-             ApiResponse<byte[]> localVarResponse = await EditDocumentDocxAcceptAllTrackChangesAsyncWithHttpInfo(inputFile);
+             ApiResponse<byte[]> localVarResponse = await EditDocumentDocxAcceptAllTrackChangesAsyncWithHttpInfo(inputFile, autorepair);
              return localVarResponse.Data;
 
         }
@@ -3226,8 +3330,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is true) (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDocumentDocxAcceptAllTrackChangesAsyncWithHttpInfo (System.IO.Stream inputFile)
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDocumentDocxAcceptAllTrackChangesAsyncWithHttpInfo (System.IO.Stream inputFile, bool? autorepair = null)
         {
             // verify the required parameter 'inputFile' is set
             if (inputFile == null)
@@ -3258,6 +3363,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (autorepair != null) localVarHeaderParams.Add("autorepair", this.Configuration.ApiClient.ParameterToString(autorepair)); // header parameter
             if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
 
             // authentication (Apikey) required
@@ -10540,6 +10646,175 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
+        /// Set the size and/or orientation of a PowerPoint PPTX presentation document Edits the input PowerPoint PPTX presentation document to be a different orientation and/or size
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="orientation">Optional: The desired slide orientation; can be landscape or portrait. (optional)</param>
+        /// <param name="width">Optional: The desired slide width in Emu, where 1 inch equals 914400 emu. (optional)</param>
+        /// <param name="height">Optional: The desired slide height in Emu, where 1 inch equals 914400 emu (optional)</param>
+        /// <returns>byte[]</returns>
+        public byte[] EditDocumentPptxEditSizeAndOrientation (System.IO.Stream inputFile, string orientation = null, int? width = null, int? height = null)
+        {
+             ApiResponse<byte[]> localVarResponse = EditDocumentPptxEditSizeAndOrientationWithHttpInfo(inputFile, orientation, width, height);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Set the size and/or orientation of a PowerPoint PPTX presentation document Edits the input PowerPoint PPTX presentation document to be a different orientation and/or size
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="orientation">Optional: The desired slide orientation; can be landscape or portrait. (optional)</param>
+        /// <param name="width">Optional: The desired slide width in Emu, where 1 inch equals 914400 emu. (optional)</param>
+        /// <param name="height">Optional: The desired slide height in Emu, where 1 inch equals 914400 emu (optional)</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > EditDocumentPptxEditSizeAndOrientationWithHttpInfo (System.IO.Stream inputFile, string orientation = null, int? width = null, int? height = null)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditDocumentApi->EditDocumentPptxEditSizeAndOrientation");
+
+            var localVarPath = "/convert/edit/pptx/set-size-and-orientation";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (orientation != null) localVarHeaderParams.Add("orientation", this.Configuration.ApiClient.ParameterToString(orientation)); // header parameter
+            if (width != null) localVarHeaderParams.Add("width", this.Configuration.ApiClient.ParameterToString(width)); // header parameter
+            if (height != null) localVarHeaderParams.Add("height", this.Configuration.ApiClient.ParameterToString(height)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentPptxEditSizeAndOrientation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Set the size and/or orientation of a PowerPoint PPTX presentation document Edits the input PowerPoint PPTX presentation document to be a different orientation and/or size
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="orientation">Optional: The desired slide orientation; can be landscape or portrait. (optional)</param>
+        /// <param name="width">Optional: The desired slide width in Emu, where 1 inch equals 914400 emu. (optional)</param>
+        /// <param name="height">Optional: The desired slide height in Emu, where 1 inch equals 914400 emu (optional)</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> EditDocumentPptxEditSizeAndOrientationAsync (System.IO.Stream inputFile, string orientation = null, int? width = null, int? height = null)
+        {
+             ApiResponse<byte[]> localVarResponse = await EditDocumentPptxEditSizeAndOrientationAsyncWithHttpInfo(inputFile, orientation, width, height);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Set the size and/or orientation of a PowerPoint PPTX presentation document Edits the input PowerPoint PPTX presentation document to be a different orientation and/or size
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="orientation">Optional: The desired slide orientation; can be landscape or portrait. (optional)</param>
+        /// <param name="width">Optional: The desired slide width in Emu, where 1 inch equals 914400 emu. (optional)</param>
+        /// <param name="height">Optional: The desired slide height in Emu, where 1 inch equals 914400 emu (optional)</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDocumentPptxEditSizeAndOrientationAsyncWithHttpInfo (System.IO.Stream inputFile, string orientation = null, int? width = null, int? height = null)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditDocumentApi->EditDocumentPptxEditSizeAndOrientation");
+
+            var localVarPath = "/convert/edit/pptx/set-size-and-orientation";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (orientation != null) localVarHeaderParams.Add("orientation", this.Configuration.ApiClient.ParameterToString(orientation)); // header parameter
+            if (width != null) localVarHeaderParams.Add("width", this.Configuration.ApiClient.ParameterToString(width)); // header parameter
+            if (height != null) localVarHeaderParams.Add("height", this.Configuration.ApiClient.ParameterToString(height)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentPptxEditSizeAndOrientation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
         /// Get macro information from a PowerPoint PPTX/PPTM presentation document Returns information about the Macros (e.g. VBA) defined in the PowerPoint Document
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10688,6 +10963,157 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<GetMacrosResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (GetMacrosResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetMacrosResponse)));
+        }
+
+        /// <summary>
+        /// Get the page layout information, including size and orientation of a PowerPoint PPTX presentation document Gets size and orientation of an input PowerPoint PPTX presentation
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>PptxPageLayoutInformation</returns>
+        public PptxPageLayoutInformation EditDocumentPptxGetSizeAndOrientation (System.IO.Stream inputFile)
+        {
+             ApiResponse<PptxPageLayoutInformation> localVarResponse = EditDocumentPptxGetSizeAndOrientationWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the page layout information, including size and orientation of a PowerPoint PPTX presentation document Gets size and orientation of an input PowerPoint PPTX presentation
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>ApiResponse of PptxPageLayoutInformation</returns>
+        public ApiResponse< PptxPageLayoutInformation > EditDocumentPptxGetSizeAndOrientationWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditDocumentApi->EditDocumentPptxGetSizeAndOrientation");
+
+            var localVarPath = "/convert/edit/pptx/get-size-and-orientation";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentPptxGetSizeAndOrientation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<PptxPageLayoutInformation>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PptxPageLayoutInformation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PptxPageLayoutInformation)));
+        }
+
+        /// <summary>
+        /// Get the page layout information, including size and orientation of a PowerPoint PPTX presentation document Gets size and orientation of an input PowerPoint PPTX presentation
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of PptxPageLayoutInformation</returns>
+        public async System.Threading.Tasks.Task<PptxPageLayoutInformation> EditDocumentPptxGetSizeAndOrientationAsync (System.IO.Stream inputFile)
+        {
+             ApiResponse<PptxPageLayoutInformation> localVarResponse = await EditDocumentPptxGetSizeAndOrientationAsyncWithHttpInfo(inputFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the page layout information, including size and orientation of a PowerPoint PPTX presentation document Gets size and orientation of an input PowerPoint PPTX presentation
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <returns>Task of ApiResponse (PptxPageLayoutInformation)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PptxPageLayoutInformation>> EditDocumentPptxGetSizeAndOrientationAsyncWithHttpInfo (System.IO.Stream inputFile)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditDocumentApi->EditDocumentPptxGetSizeAndOrientation");
+
+            var localVarPath = "/convert/edit/pptx/get-size-and-orientation";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentPptxGetSizeAndOrientation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<PptxPageLayoutInformation>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PptxPageLayoutInformation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PptxPageLayoutInformation)));
         }
 
         /// <summary>

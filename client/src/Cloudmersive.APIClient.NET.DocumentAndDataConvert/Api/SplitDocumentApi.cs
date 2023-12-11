@@ -25,6 +25,29 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Split a single Document into Separate Documents by Page as a Batch Job
+        /// </summary>
+        /// <remarks>
+        /// Split a Document (PPTX supported), comprised of multiple pages into separate files, with each containing exactly one page.  This API is designed for large jobs that could take a long time to create and so runs as a batch job that returns a Job ID that you can use with the GetAsyncJobStatus API to check on the status of the Job and ultimately get the output result.  This API automatically detects the document type and then performs the split by using the document type-specific API needed to perform the split.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="returnDocumentContents">Set to true to return the contents of each presentation directly, set to false to only return URLs to each resulting presentation.  Default is true. (optional)</param>
+        /// <returns>SplitBatchJobCreateResult</returns>
+        SplitBatchJobCreateResult SplitDocumentBatchJobCreate (System.IO.Stream inputFile, bool? returnDocumentContents = null);
+
+        /// <summary>
+        /// Split a single Document into Separate Documents by Page as a Batch Job
+        /// </summary>
+        /// <remarks>
+        /// Split a Document (PPTX supported), comprised of multiple pages into separate files, with each containing exactly one page.  This API is designed for large jobs that could take a long time to create and so runs as a batch job that returns a Job ID that you can use with the GetAsyncJobStatus API to check on the status of the Job and ultimately get the output result.  This API automatically detects the document type and then performs the split by using the document type-specific API needed to perform the split.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="returnDocumentContents">Set to true to return the contents of each presentation directly, set to false to only return URLs to each resulting presentation.  Default is true. (optional)</param>
+        /// <returns>ApiResponse of SplitBatchJobCreateResult</returns>
+        ApiResponse<SplitBatchJobCreateResult> SplitDocumentBatchJobCreateWithHttpInfo (System.IO.Stream inputFile, bool? returnDocumentContents = null);
+        /// <summary>
         /// Split a single Word Document DOCX into Separate Documents by Page
         /// </summary>
         /// <remarks>
@@ -47,6 +70,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="returnDocumentContents">Set to true to return the contents of each Worksheet directly, set to false to only return URLs to each resulting document.  Default is true. (optional)</param>
         /// <returns>ApiResponse of SplitDocxDocumentResult</returns>
         ApiResponse<SplitDocxDocumentResult> SplitDocumentDocxWithHttpInfo (System.IO.Stream inputFile, bool? returnDocumentContents = null);
+        /// <summary>
+        /// Get the status and result of a Split Document Batch Job
+        /// </summary>
+        /// <remarks>
+        /// Returns the result of the Async Job - possible states can be STARTED or COMPLETED.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="asyncJobID"></param>
+        /// <returns>JobStatusResult</returns>
+        JobStatusResult SplitDocumentGetAsyncJobStatus (string asyncJobID);
+
+        /// <summary>
+        /// Get the status and result of a Split Document Batch Job
+        /// </summary>
+        /// <remarks>
+        /// Returns the result of the Async Job - possible states can be STARTED or COMPLETED.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="asyncJobID"></param>
+        /// <returns>ApiResponse of JobStatusResult</returns>
+        ApiResponse<JobStatusResult> SplitDocumentGetAsyncJobStatusWithHttpInfo (string asyncJobID);
         /// <summary>
         /// Split a PDF file into separate PDF files, one per page
         /// </summary>
@@ -93,6 +137,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="returnDocumentContents">Set to true to return the contents of each presentation directly, set to false to only return URLs to each resulting presentation.  Default is true. (optional)</param>
         /// <returns>ApiResponse of SplitPptxPresentationResult</returns>
         ApiResponse<SplitPptxPresentationResult> SplitDocumentPptxWithHttpInfo (System.IO.Stream inputFile, bool? returnDocumentContents = null);
+        /// <summary>
+        /// Split a single PowerPoint Presentation PPTX into Separate Presentations
+        /// </summary>
+        /// <remarks>
+        /// Split a PowerPoint PPTX Presentation, comprised of multiple slides into separate PowerPoint PPTX presentations of customizeable size.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>PptxSplitAdvancedResponse</returns>
+        PptxSplitAdvancedResponse SplitDocumentPptxAdvanced (PptxSplitAdvancedRequest request);
+
+        /// <summary>
+        /// Split a single PowerPoint Presentation PPTX into Separate Presentations
+        /// </summary>
+        /// <remarks>
+        /// Split a PowerPoint PPTX Presentation, comprised of multiple slides into separate PowerPoint PPTX presentations of customizeable size.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>ApiResponse of PptxSplitAdvancedResponse</returns>
+        ApiResponse<PptxSplitAdvancedResponse> SplitDocumentPptxAdvancedWithHttpInfo (PptxSplitAdvancedRequest request);
         /// <summary>
         /// Split a single Text file (txt) into lines
         /// </summary>
@@ -165,6 +230,29 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
+        /// Split a single Document into Separate Documents by Page as a Batch Job
+        /// </summary>
+        /// <remarks>
+        /// Split a Document (PPTX supported), comprised of multiple pages into separate files, with each containing exactly one page.  This API is designed for large jobs that could take a long time to create and so runs as a batch job that returns a Job ID that you can use with the GetAsyncJobStatus API to check on the status of the Job and ultimately get the output result.  This API automatically detects the document type and then performs the split by using the document type-specific API needed to perform the split.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="returnDocumentContents">Set to true to return the contents of each presentation directly, set to false to only return URLs to each resulting presentation.  Default is true. (optional)</param>
+        /// <returns>Task of SplitBatchJobCreateResult</returns>
+        System.Threading.Tasks.Task<SplitBatchJobCreateResult> SplitDocumentBatchJobCreateAsync (System.IO.Stream inputFile, bool? returnDocumentContents = null);
+
+        /// <summary>
+        /// Split a single Document into Separate Documents by Page as a Batch Job
+        /// </summary>
+        /// <remarks>
+        /// Split a Document (PPTX supported), comprised of multiple pages into separate files, with each containing exactly one page.  This API is designed for large jobs that could take a long time to create and so runs as a batch job that returns a Job ID that you can use with the GetAsyncJobStatus API to check on the status of the Job and ultimately get the output result.  This API automatically detects the document type and then performs the split by using the document type-specific API needed to perform the split.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="returnDocumentContents">Set to true to return the contents of each presentation directly, set to false to only return URLs to each resulting presentation.  Default is true. (optional)</param>
+        /// <returns>Task of ApiResponse (SplitBatchJobCreateResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SplitBatchJobCreateResult>> SplitDocumentBatchJobCreateAsyncWithHttpInfo (System.IO.Stream inputFile, bool? returnDocumentContents = null);
+        /// <summary>
         /// Split a single Word Document DOCX into Separate Documents by Page
         /// </summary>
         /// <remarks>
@@ -187,6 +275,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="returnDocumentContents">Set to true to return the contents of each Worksheet directly, set to false to only return URLs to each resulting document.  Default is true. (optional)</param>
         /// <returns>Task of ApiResponse (SplitDocxDocumentResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<SplitDocxDocumentResult>> SplitDocumentDocxAsyncWithHttpInfo (System.IO.Stream inputFile, bool? returnDocumentContents = null);
+        /// <summary>
+        /// Get the status and result of a Split Document Batch Job
+        /// </summary>
+        /// <remarks>
+        /// Returns the result of the Async Job - possible states can be STARTED or COMPLETED.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="asyncJobID"></param>
+        /// <returns>Task of JobStatusResult</returns>
+        System.Threading.Tasks.Task<JobStatusResult> SplitDocumentGetAsyncJobStatusAsync (string asyncJobID);
+
+        /// <summary>
+        /// Get the status and result of a Split Document Batch Job
+        /// </summary>
+        /// <remarks>
+        /// Returns the result of the Async Job - possible states can be STARTED or COMPLETED.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="asyncJobID"></param>
+        /// <returns>Task of ApiResponse (JobStatusResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<JobStatusResult>> SplitDocumentGetAsyncJobStatusAsyncWithHttpInfo (string asyncJobID);
         /// <summary>
         /// Split a PDF file into separate PDF files, one per page
         /// </summary>
@@ -233,6 +342,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="returnDocumentContents">Set to true to return the contents of each presentation directly, set to false to only return URLs to each resulting presentation.  Default is true. (optional)</param>
         /// <returns>Task of ApiResponse (SplitPptxPresentationResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<SplitPptxPresentationResult>> SplitDocumentPptxAsyncWithHttpInfo (System.IO.Stream inputFile, bool? returnDocumentContents = null);
+        /// <summary>
+        /// Split a single PowerPoint Presentation PPTX into Separate Presentations
+        /// </summary>
+        /// <remarks>
+        /// Split a PowerPoint PPTX Presentation, comprised of multiple slides into separate PowerPoint PPTX presentations of customizeable size.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>Task of PptxSplitAdvancedResponse</returns>
+        System.Threading.Tasks.Task<PptxSplitAdvancedResponse> SplitDocumentPptxAdvancedAsync (PptxSplitAdvancedRequest request);
+
+        /// <summary>
+        /// Split a single PowerPoint Presentation PPTX into Separate Presentations
+        /// </summary>
+        /// <remarks>
+        /// Split a PowerPoint PPTX Presentation, comprised of multiple slides into separate PowerPoint PPTX presentations of customizeable size.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>Task of ApiResponse (PptxSplitAdvancedResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PptxSplitAdvancedResponse>> SplitDocumentPptxAdvancedAsyncWithHttpInfo (PptxSplitAdvancedRequest request);
         /// <summary>
         /// Split a single Text file (txt) into lines
         /// </summary>
@@ -403,6 +533,163 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
+        /// Split a single Document into Separate Documents by Page as a Batch Job Split a Document (PPTX supported), comprised of multiple pages into separate files, with each containing exactly one page.  This API is designed for large jobs that could take a long time to create and so runs as a batch job that returns a Job ID that you can use with the GetAsyncJobStatus API to check on the status of the Job and ultimately get the output result.  This API automatically detects the document type and then performs the split by using the document type-specific API needed to perform the split.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="returnDocumentContents">Set to true to return the contents of each presentation directly, set to false to only return URLs to each resulting presentation.  Default is true. (optional)</param>
+        /// <returns>SplitBatchJobCreateResult</returns>
+        public SplitBatchJobCreateResult SplitDocumentBatchJobCreate (System.IO.Stream inputFile, bool? returnDocumentContents = null)
+        {
+             ApiResponse<SplitBatchJobCreateResult> localVarResponse = SplitDocumentBatchJobCreateWithHttpInfo(inputFile, returnDocumentContents);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Split a single Document into Separate Documents by Page as a Batch Job Split a Document (PPTX supported), comprised of multiple pages into separate files, with each containing exactly one page.  This API is designed for large jobs that could take a long time to create and so runs as a batch job that returns a Job ID that you can use with the GetAsyncJobStatus API to check on the status of the Job and ultimately get the output result.  This API automatically detects the document type and then performs the split by using the document type-specific API needed to perform the split.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="returnDocumentContents">Set to true to return the contents of each presentation directly, set to false to only return URLs to each resulting presentation.  Default is true. (optional)</param>
+        /// <returns>ApiResponse of SplitBatchJobCreateResult</returns>
+        public ApiResponse< SplitBatchJobCreateResult > SplitDocumentBatchJobCreateWithHttpInfo (System.IO.Stream inputFile, bool? returnDocumentContents = null)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling SplitDocumentApi->SplitDocumentBatchJobCreate");
+
+            var localVarPath = "/convert/split/batch-job/create";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (returnDocumentContents != null) localVarHeaderParams.Add("returnDocumentContents", this.Configuration.ApiClient.ParameterToString(returnDocumentContents)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SplitDocumentBatchJobCreate", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SplitBatchJobCreateResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SplitBatchJobCreateResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SplitBatchJobCreateResult)));
+        }
+
+        /// <summary>
+        /// Split a single Document into Separate Documents by Page as a Batch Job Split a Document (PPTX supported), comprised of multiple pages into separate files, with each containing exactly one page.  This API is designed for large jobs that could take a long time to create and so runs as a batch job that returns a Job ID that you can use with the GetAsyncJobStatus API to check on the status of the Job and ultimately get the output result.  This API automatically detects the document type and then performs the split by using the document type-specific API needed to perform the split.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="returnDocumentContents">Set to true to return the contents of each presentation directly, set to false to only return URLs to each resulting presentation.  Default is true. (optional)</param>
+        /// <returns>Task of SplitBatchJobCreateResult</returns>
+        public async System.Threading.Tasks.Task<SplitBatchJobCreateResult> SplitDocumentBatchJobCreateAsync (System.IO.Stream inputFile, bool? returnDocumentContents = null)
+        {
+             ApiResponse<SplitBatchJobCreateResult> localVarResponse = await SplitDocumentBatchJobCreateAsyncWithHttpInfo(inputFile, returnDocumentContents);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Split a single Document into Separate Documents by Page as a Batch Job Split a Document (PPTX supported), comprised of multiple pages into separate files, with each containing exactly one page.  This API is designed for large jobs that could take a long time to create and so runs as a batch job that returns a Job ID that you can use with the GetAsyncJobStatus API to check on the status of the Job and ultimately get the output result.  This API automatically detects the document type and then performs the split by using the document type-specific API needed to perform the split.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="returnDocumentContents">Set to true to return the contents of each presentation directly, set to false to only return URLs to each resulting presentation.  Default is true. (optional)</param>
+        /// <returns>Task of ApiResponse (SplitBatchJobCreateResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SplitBatchJobCreateResult>> SplitDocumentBatchJobCreateAsyncWithHttpInfo (System.IO.Stream inputFile, bool? returnDocumentContents = null)
+        {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling SplitDocumentApi->SplitDocumentBatchJobCreate");
+
+            var localVarPath = "/convert/split/batch-job/create";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (returnDocumentContents != null) localVarHeaderParams.Add("returnDocumentContents", this.Configuration.ApiClient.ParameterToString(returnDocumentContents)); // header parameter
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SplitDocumentBatchJobCreate", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SplitBatchJobCreateResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SplitBatchJobCreateResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SplitBatchJobCreateResult)));
+        }
+
+        /// <summary>
         /// Split a single Word Document DOCX into Separate Documents by Page Split a Word DOCX Document, comprised of multiple pages into separate Word DOCX document files, with each containing exactly one page.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
@@ -557,6 +844,155 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<SplitDocxDocumentResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (SplitDocxDocumentResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SplitDocxDocumentResult)));
+        }
+
+        /// <summary>
+        /// Get the status and result of a Split Document Batch Job Returns the result of the Async Job - possible states can be STARTED or COMPLETED.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="asyncJobID"></param>
+        /// <returns>JobStatusResult</returns>
+        public JobStatusResult SplitDocumentGetAsyncJobStatus (string asyncJobID)
+        {
+             ApiResponse<JobStatusResult> localVarResponse = SplitDocumentGetAsyncJobStatusWithHttpInfo(asyncJobID);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the status and result of a Split Document Batch Job Returns the result of the Async Job - possible states can be STARTED or COMPLETED.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="asyncJobID"></param>
+        /// <returns>ApiResponse of JobStatusResult</returns>
+        public ApiResponse< JobStatusResult > SplitDocumentGetAsyncJobStatusWithHttpInfo (string asyncJobID)
+        {
+            // verify the required parameter 'asyncJobID' is set
+            if (asyncJobID == null)
+                throw new ApiException(400, "Missing required parameter 'asyncJobID' when calling SplitDocumentApi->SplitDocumentGetAsyncJobStatus");
+
+            var localVarPath = "/convert/split/batch-job/status";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (asyncJobID != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AsyncJobID", asyncJobID)); // query parameter
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SplitDocumentGetAsyncJobStatus", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<JobStatusResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (JobStatusResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JobStatusResult)));
+        }
+
+        /// <summary>
+        /// Get the status and result of a Split Document Batch Job Returns the result of the Async Job - possible states can be STARTED or COMPLETED.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="asyncJobID"></param>
+        /// <returns>Task of JobStatusResult</returns>
+        public async System.Threading.Tasks.Task<JobStatusResult> SplitDocumentGetAsyncJobStatusAsync (string asyncJobID)
+        {
+             ApiResponse<JobStatusResult> localVarResponse = await SplitDocumentGetAsyncJobStatusAsyncWithHttpInfo(asyncJobID);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the status and result of a Split Document Batch Job Returns the result of the Async Job - possible states can be STARTED or COMPLETED.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="asyncJobID"></param>
+        /// <returns>Task of ApiResponse (JobStatusResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<JobStatusResult>> SplitDocumentGetAsyncJobStatusAsyncWithHttpInfo (string asyncJobID)
+        {
+            // verify the required parameter 'asyncJobID' is set
+            if (asyncJobID == null)
+                throw new ApiException(400, "Missing required parameter 'asyncJobID' when calling SplitDocumentApi->SplitDocumentGetAsyncJobStatus");
+
+            var localVarPath = "/convert/split/batch-job/status";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (asyncJobID != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AsyncJobID", asyncJobID)); // query parameter
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SplitDocumentGetAsyncJobStatus", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<JobStatusResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (JobStatusResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JobStatusResult)));
         }
 
         /// <summary>
@@ -871,6 +1307,179 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<SplitPptxPresentationResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (SplitPptxPresentationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SplitPptxPresentationResult)));
+        }
+
+        /// <summary>
+        /// Split a single PowerPoint Presentation PPTX into Separate Presentations Split a PowerPoint PPTX Presentation, comprised of multiple slides into separate PowerPoint PPTX presentations of customizeable size.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>PptxSplitAdvancedResponse</returns>
+        public PptxSplitAdvancedResponse SplitDocumentPptxAdvanced (PptxSplitAdvancedRequest request)
+        {
+             ApiResponse<PptxSplitAdvancedResponse> localVarResponse = SplitDocumentPptxAdvancedWithHttpInfo(request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Split a single PowerPoint Presentation PPTX into Separate Presentations Split a PowerPoint PPTX Presentation, comprised of multiple slides into separate PowerPoint PPTX presentations of customizeable size.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>ApiResponse of PptxSplitAdvancedResponse</returns>
+        public ApiResponse< PptxSplitAdvancedResponse > SplitDocumentPptxAdvancedWithHttpInfo (PptxSplitAdvancedRequest request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling SplitDocumentApi->SplitDocumentPptxAdvanced");
+
+            var localVarPath = "/convert/split/pptx/advanced";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SplitDocumentPptxAdvanced", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<PptxSplitAdvancedResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PptxSplitAdvancedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PptxSplitAdvancedResponse)));
+        }
+
+        /// <summary>
+        /// Split a single PowerPoint Presentation PPTX into Separate Presentations Split a PowerPoint PPTX Presentation, comprised of multiple slides into separate PowerPoint PPTX presentations of customizeable size.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>Task of PptxSplitAdvancedResponse</returns>
+        public async System.Threading.Tasks.Task<PptxSplitAdvancedResponse> SplitDocumentPptxAdvancedAsync (PptxSplitAdvancedRequest request)
+        {
+             ApiResponse<PptxSplitAdvancedResponse> localVarResponse = await SplitDocumentPptxAdvancedAsyncWithHttpInfo(request);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Split a single PowerPoint Presentation PPTX into Separate Presentations Split a PowerPoint PPTX Presentation, comprised of multiple slides into separate PowerPoint PPTX presentations of customizeable size.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>Task of ApiResponse (PptxSplitAdvancedResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PptxSplitAdvancedResponse>> SplitDocumentPptxAdvancedAsyncWithHttpInfo (PptxSplitAdvancedRequest request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling SplitDocumentApi->SplitDocumentPptxAdvanced");
+
+            var localVarPath = "/convert/split/pptx/advanced";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SplitDocumentPptxAdvanced", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<PptxSplitAdvancedResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PptxSplitAdvancedResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PptxSplitAdvancedResponse)));
         }
 
         /// <summary>

@@ -32,8 +32,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is true) (optional)</param>
         /// <returns>byte[]</returns>
-        byte[] CompareDocumentDocx (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+        byte[] CompareDocumentDocx (System.IO.Stream inputFile1, System.IO.Stream inputFile2, bool? autorepair = null);
 
         /// <summary>
         /// Compare Two Word DOCX
@@ -44,8 +45,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is true) (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
-        ApiResponse<byte[]> CompareDocumentDocxWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+        ApiResponse<byte[]> CompareDocumentDocxWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, bool? autorepair = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -57,8 +59,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is true) (optional)</param>
         /// <returns>Task of byte[]</returns>
-        System.Threading.Tasks.Task<byte[]> CompareDocumentDocxAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+        System.Threading.Tasks.Task<byte[]> CompareDocumentDocxAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2, bool? autorepair = null);
 
         /// <summary>
         /// Compare Two Word DOCX
@@ -69,8 +72,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is true) (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        System.Threading.Tasks.Task<ApiResponse<byte[]>> CompareDocumentDocxAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> CompareDocumentDocxAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, bool? autorepair = null);
         #endregion Asynchronous Operations
     }
 
@@ -177,10 +181,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is true) (optional)</param>
         /// <returns>byte[]</returns>
-        public byte[] CompareDocumentDocx (System.IO.Stream inputFile1, System.IO.Stream inputFile2)
+        public byte[] CompareDocumentDocx (System.IO.Stream inputFile1, System.IO.Stream inputFile2, bool? autorepair = null)
         {
-             ApiResponse<byte[]> localVarResponse = CompareDocumentDocxWithHttpInfo(inputFile1, inputFile2);
+             ApiResponse<byte[]> localVarResponse = CompareDocumentDocxWithHttpInfo(inputFile1, inputFile2, autorepair);
              return localVarResponse.Data;
         }
 
@@ -190,8 +195,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is true) (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
-        public ApiResponse< byte[] > CompareDocumentDocxWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2)
+        public ApiResponse< byte[] > CompareDocumentDocxWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, bool? autorepair = null)
         {
             // verify the required parameter 'inputFile1' is set
             if (inputFile1 == null)
@@ -222,6 +228,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (autorepair != null) localVarHeaderParams.Add("autorepair", this.Configuration.ApiClient.ParameterToString(autorepair)); // header parameter
             if (inputFile1 != null) localVarFileParams.Add("inputFile1", this.Configuration.ApiClient.ParameterToFile("inputFile1", inputFile1));
             if (inputFile2 != null) localVarFileParams.Add("inputFile2", this.Configuration.ApiClient.ParameterToFile("inputFile2", inputFile2));
 
@@ -255,10 +262,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is true) (optional)</param>
         /// <returns>Task of byte[]</returns>
-        public async System.Threading.Tasks.Task<byte[]> CompareDocumentDocxAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2)
+        public async System.Threading.Tasks.Task<byte[]> CompareDocumentDocxAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2, bool? autorepair = null)
         {
-             ApiResponse<byte[]> localVarResponse = await CompareDocumentDocxAsyncWithHttpInfo(inputFile1, inputFile2);
+             ApiResponse<byte[]> localVarResponse = await CompareDocumentDocxAsyncWithHttpInfo(inputFile1, inputFile2, autorepair);
              return localVarResponse.Data;
 
         }
@@ -269,8 +277,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is true) (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> CompareDocumentDocxAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2)
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> CompareDocumentDocxAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, bool? autorepair = null)
         {
             // verify the required parameter 'inputFile1' is set
             if (inputFile1 == null)
@@ -301,6 +310,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (autorepair != null) localVarHeaderParams.Add("autorepair", this.Configuration.ApiClient.ParameterToString(autorepair)); // header parameter
             if (inputFile1 != null) localVarFileParams.Add("inputFile1", this.Configuration.ApiClient.ParameterToFile("inputFile1", inputFile1));
             if (inputFile2 != null) localVarFileParams.Add("inputFile2", this.Configuration.ApiClient.ParameterToFile("inputFile2", inputFile2));
 

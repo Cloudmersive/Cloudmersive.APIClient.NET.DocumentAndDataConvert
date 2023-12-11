@@ -72,7 +72,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             // TODO uncomment below to test the method and replace null with proper value
             //System.IO.Stream inputFile1 = null;
             //System.IO.Stream inputFile2 = null;
-            //var response = instance.CompareDocumentDocx(inputFile1, inputFile2);
+            //bool? autorepair = null;
+            //var response = instance.CompareDocumentDocx(inputFile1, inputFile2, autorepair);
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         

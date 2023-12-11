@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**ConvertDocumentAutodetectGetInfo**](ConvertDocumentApi.md#convertdocumentautodetectgetinfo) | **POST** /convert/autodetect/get-info | Get document type information
 [**ConvertDocumentAutodetectToJpg**](ConvertDocumentApi.md#convertdocumentautodetecttojpg) | **POST** /convert/autodetect/to/jpg | Convert Document to JPG/JPEG image array
 [**ConvertDocumentAutodetectToPdf**](ConvertDocumentApi.md#convertdocumentautodetecttopdf) | **POST** /convert/autodetect/to/pdf | Convert Document to PDF
+[**ConvertDocumentAutodetectToPdfBatchJob**](ConvertDocumentApi.md#convertdocumentautodetecttopdfbatchjob) | **POST** /convert/autodetect/to/pdf/batch-job | Convert Document to PDF as Batch Job
 [**ConvertDocumentAutodetectToPngArray**](ConvertDocumentApi.md#convertdocumentautodetecttopngarray) | **POST** /convert/autodetect/to/png | Convert Document to PNG array
 [**ConvertDocumentAutodetectToThumbnail**](ConvertDocumentApi.md#convertdocumentautodetecttothumbnail) | **POST** /convert/autodetect/to/thumbnail | Convert File to Thumbnail Image
 [**ConvertDocumentAutodetectToThumbnailsAdvanced**](ConvertDocumentApi.md#convertdocumentautodetecttothumbnailsadvanced) | **POST** /convert/autodetect/to/thumbnail/advanced | Convert File to Thumbnail Image Object
@@ -29,6 +30,7 @@ Method | HTTP request | Description
 [**ConvertDocumentEmlToJpg**](ConvertDocumentApi.md#convertdocumentemltojpg) | **POST** /convert/eml/to/jpg | Convert Email EML file to JPG/JPEG image array
 [**ConvertDocumentEmlToPdf**](ConvertDocumentApi.md#convertdocumentemltopdf) | **POST** /convert/eml/to/pdf | Convert Email EML file to PDF document
 [**ConvertDocumentEmlToPng**](ConvertDocumentApi.md#convertdocumentemltopng) | **POST** /convert/eml/to/png | Convert Email EML file to PNG image array
+[**ConvertDocumentGetAsyncJobStatus**](ConvertDocumentApi.md#convertdocumentgetasyncjobstatus) | **GET** /convert/batch-job/status | Get the status and result of a Convert Document Batch Job
 [**ConvertDocumentGetFileTypeIcon**](ConvertDocumentApi.md#convertdocumentgetfiletypeicon) | **POST** /convert/autodetect/get-icon | Get PNG icon file for the file extension
 [**ConvertDocumentGetFileTypeIconAdvanced**](ConvertDocumentApi.md#convertdocumentgetfiletypeiconadvanced) | **POST** /convert/autodetect/get-icon/advanced | Get PNG icon byte array for the file extension
 [**ConvertDocumentHtmlToPdf**](ConvertDocumentApi.md#convertdocumenthtmltopdf) | **POST** /convert/html/to/pdf | Convert HTML document file to PDF Document
@@ -61,8 +63,10 @@ Method | HTTP request | Description
 [**ConvertDocumentPdfToPngArrayDirect**](ConvertDocumentApi.md#convertdocumentpdftopngarraydirect) | **POST** /convert/pdf/to/png/direct | Convert PDF to PNG Image Array (Direct)
 [**ConvertDocumentPdfToPngSingle**](ConvertDocumentApi.md#convertdocumentpdftopngsingle) | **POST** /convert/pdf/to/png/merge-single | Convert PDF to Single PNG image
 [**ConvertDocumentPdfToPptx**](ConvertDocumentApi.md#convertdocumentpdftopptx) | **POST** /convert/pdf/to/pptx | Convert PDF to PowerPoint PPTX Presentation
+[**ConvertDocumentPdfToTiff**](ConvertDocumentApi.md#convertdocumentpdftotiff) | **POST** /convert/pdf/to/tiff | Convert PDF to TIFF image
 [**ConvertDocumentPdfToTxt**](ConvertDocumentApi.md#convertdocumentpdftotxt) | **POST** /convert/pdf/to/txt | Convert PDF Document to Text (txt)
 [**ConvertDocumentPngArrayToPdf**](ConvertDocumentApi.md#convertdocumentpngarraytopdf) | **POST** /convert/png/to/pdf | Convert PNG Array to PDF
+[**ConvertDocumentPngArrayToPdfFlattenTransparency**](ConvertDocumentApi.md#convertdocumentpngarraytopdfflattentransparency) | **POST** /convert/png/to/pdf/remove-transparency | Convert PNG Array to PDF and remove transparency
 [**ConvertDocumentPptToPdf**](ConvertDocumentApi.md#convertdocumentppttopdf) | **POST** /convert/ppt/to/pdf | Convert PowerPoint PPT (97-03) Presentation to PDF
 [**ConvertDocumentPptToPptx**](ConvertDocumentApi.md#convertdocumentppttopptx) | **POST** /convert/ppt/to/pptx | Convert PowerPoint PPT (97-03) Presentation to PPTX
 [**ConvertDocumentPptxToPdf**](ConvertDocumentApi.md#convertdocumentpptxtopdf) | **POST** /convert/pptx/to/pdf | Convert PowerPoint PPTX Presentation to PDF
@@ -275,6 +279,72 @@ Name | Type | Description  | Notes
 ### Return type
 
 **byte[]**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/octet-stream
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="convertdocumentautodetecttopdfbatchjob"></a>
+# **ConvertDocumentAutodetectToPdfBatchJob**
+> ConvertDocumentBatchJobCreateResult ConvertDocumentAutodetectToPdfBatchJob (System.IO.Stream inputFile)
+
+Convert Document to PDF as Batch Job
+
+Automatically detect file type and convert it to PDF.  Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, text files, and even multi-page TIFF files.  This API is designed for large jobs that could take a long time to create and so runs as a batch job that returns a Job ID that you can use with the GetAsyncJobStatus API to check on the status of the Job and ultimately get the output result.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class ConvertDocumentAutodetectToPdfBatchJobExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new ConvertDocumentApi();
+            var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
+
+            try
+            {
+                // Convert Document to PDF as Batch Job
+                ConvertDocumentBatchJobCreateResult result = apiInstance.ConvertDocumentAutodetectToPdfBatchJob(inputFile);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConvertDocumentApi.ConvertDocumentAutodetectToPdfBatchJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
+
+### Return type
+
+[**ConvertDocumentBatchJobCreateResult**](ConvertDocumentBatchJobCreateResult.md)
 
 ### Authorization
 
@@ -1783,6 +1853,72 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="convertdocumentgetasyncjobstatus"></a>
+# **ConvertDocumentGetAsyncJobStatus**
+> ConvertDocumentJobStatusResult ConvertDocumentGetAsyncJobStatus (string asyncJobID)
+
+Get the status and result of a Convert Document Batch Job
+
+Returns the result of the Async Job - possible states can be STARTED or COMPLETED.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class ConvertDocumentGetAsyncJobStatusExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new ConvertDocumentApi();
+            var asyncJobID = asyncJobID_example;  // string | 
+
+            try
+            {
+                // Get the status and result of a Convert Document Batch Job
+                ConvertDocumentJobStatusResult result = apiInstance.ConvertDocumentGetAsyncJobStatus(asyncJobID);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConvertDocumentApi.ConvertDocumentGetAsyncJobStatus: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **asyncJobID** | **string**|  | 
+
+### Return type
+
+[**ConvertDocumentJobStatusResult**](ConvertDocumentJobStatusResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -3663,7 +3799,7 @@ Name | Type | Description  | Notes
 
 <a name="convertdocumentpdftopngarray"></a>
 # **ConvertDocumentPdfToPngArray**
-> PdfToPngResult ConvertDocumentPdfToPngArray (System.IO.Stream inputFile)
+> PdfToPngResult ConvertDocumentPdfToPngArray (System.IO.Stream inputFile, int? dpi = null)
 
 Convert PDF to PNG Image Array
 
@@ -3690,11 +3826,12 @@ namespace Example
 
             var apiInstance = new ConvertDocumentApi();
             var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
+            var dpi = 56;  // int? | Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. (optional) 
 
             try
             {
                 // Convert PDF to PNG Image Array
-                PdfToPngResult result = apiInstance.ConvertDocumentPdfToPngArray(inputFile);
+                PdfToPngResult result = apiInstance.ConvertDocumentPdfToPngArray(inputFile, dpi);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3711,6 +3848,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
+ **dpi** | **int?**| Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. | [optional] 
 
 ### Return type
 
@@ -3729,7 +3867,7 @@ Name | Type | Description  | Notes
 
 <a name="convertdocumentpdftopngarraydirect"></a>
 # **ConvertDocumentPdfToPngArrayDirect**
-> PdfToPngDirectResult ConvertDocumentPdfToPngArrayDirect (System.IO.Stream inputFile)
+> PdfToPngDirectResult ConvertDocumentPdfToPngArrayDirect (System.IO.Stream inputFile, int? dpi = null)
 
 Convert PDF to PNG Image Array (Direct)
 
@@ -3756,11 +3894,12 @@ namespace Example
 
             var apiInstance = new ConvertDocumentApi();
             var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
+            var dpi = 56;  // int? | Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. (optional) 
 
             try
             {
                 // Convert PDF to PNG Image Array (Direct)
-                PdfToPngDirectResult result = apiInstance.ConvertDocumentPdfToPngArrayDirect(inputFile);
+                PdfToPngDirectResult result = apiInstance.ConvertDocumentPdfToPngArrayDirect(inputFile, dpi);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3777,6 +3916,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
+ **dpi** | **int?**| Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. | [optional] 
 
 ### Return type
 
@@ -3922,6 +4062,76 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: multipart/form-data
  - **Accept**: application/octet-stream
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="convertdocumentpdftotiff"></a>
+# **ConvertDocumentPdfToTiff**
+> byte[] ConvertDocumentPdfToTiff (System.IO.Stream inputFile, int? dpi = null, bool? lzwCompression = null)
+
+Convert PDF to TIFF image
+
+Converts a PDF Document to a TIFF image.  If the PDF contains multiple pages, these pages will be represented as separate pages within the output TIFF image.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class ConvertDocumentPdfToTiffExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new ConvertDocumentApi();
+            var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
+            var dpi = 56;  // int? | Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. (optional) 
+            var lzwCompression = true;  // bool? | Optional; Enables LZW compression to reduce the size of the output image. (optional) 
+
+            try
+            {
+                // Convert PDF to TIFF image
+                byte[] result = apiInstance.ConvertDocumentPdfToTiff(inputFile, dpi, lzwCompression);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConvertDocumentApi.ConvertDocumentPdfToTiff: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
+ **dpi** | **int?**| Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. | [optional] 
+ **lzwCompression** | **bool?**| Optional; Enables LZW compression to reduce the size of the output image. | [optional] 
+
+### Return type
+
+**byte[]**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -4073,6 +4283,68 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
+ - **Accept**: application/octet-stream
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="convertdocumentpngarraytopdfflattentransparency"></a>
+# **ConvertDocumentPngArrayToPdfFlattenTransparency**
+> Object ConvertDocumentPngArrayToPdfFlattenTransparency ()
+
+Convert PNG Array to PDF and remove transparency
+
+Convert an array of PNG images, remove transparency in source images, one image per page, into a newly-created PDF.  Supports images of different sizes as input.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class ConvertDocumentPngArrayToPdfFlattenTransparencyExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new ConvertDocumentApi();
+
+            try
+            {
+                // Convert PNG Array to PDF and remove transparency
+                Object result = apiInstance.ConvertDocumentPngArrayToPdfFlattenTransparency();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConvertDocumentApi.ConvertDocumentPngArrayToPdfFlattenTransparency: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/octet-stream
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -4343,7 +4615,7 @@ Name | Type | Description  | Notes
 
 <a name="convertdocumentpptxtoppt"></a>
 # **ConvertDocumentPptxToPpt**
-> Object ConvertDocumentPptxToPpt ()
+> byte[] ConvertDocumentPptxToPpt (System.IO.Stream inputFile)
 
 Convert PowerPoint PPTX presentation to Legacy PowerPoint PPT (97-03)
 
@@ -4369,11 +4641,12 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new ConvertDocumentApi();
+            var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
 
             try
             {
                 // Convert PowerPoint PPTX presentation to Legacy PowerPoint PPT (97-03)
-                Object result = apiInstance.ConvertDocumentPptxToPpt();
+                byte[] result = apiInstance.ConvertDocumentPptxToPpt(inputFile);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4386,11 +4659,14 @@ namespace Example
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
 
 ### Return type
 
-**Object**
+**byte[]**
 
 ### Authorization
 
@@ -4398,7 +4674,7 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: multipart/form-data
  - **Accept**: application/octet-stream
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -5131,7 +5407,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
- - **Accept**: application/octet-stream
+ - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

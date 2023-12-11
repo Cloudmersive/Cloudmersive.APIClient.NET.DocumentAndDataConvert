@@ -19,6 +19,7 @@ using NUnit.Framework;
 
 using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
 using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
 
 namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
 {
@@ -64,6 +65,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
 
         
         /// <summary>
+        /// Test MergeDocumentBatchJobCreate
+        /// </summary>
+        [Test]
+        public void MergeDocumentBatchJobCreateTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //DocumentArrayInput input = null;
+            //var response = instance.MergeDocumentBatchJobCreate(input);
+            //Assert.IsInstanceOf<MergeBatchJobCreateResult> (response, "response is MergeBatchJobCreateResult");
+        }
+        
+        /// <summary>
         /// Test MergeDocumentDocx
         /// </summary>
         [Test]
@@ -95,6 +108,30 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //System.IO.Stream inputFile10 = null;
             //var response = instance.MergeDocumentDocxMulti(inputFile1, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
+        /// Test MergeDocumentDocxMultiArray
+        /// </summary>
+        [Test]
+        public void MergeDocumentDocxMultiArrayTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //DocumentArrayInput input = null;
+            //var response = instance.MergeDocumentDocxMultiArray(input);
+            //Assert.IsInstanceOf<Object> (response, "response is Object");
+        }
+        
+        /// <summary>
+        /// Test MergeDocumentGetAsyncJobStatus
+        /// </summary>
+        [Test]
+        public void MergeDocumentGetAsyncJobStatusTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string asyncJobID = null;
+            //var response = instance.MergeDocumentGetAsyncJobStatus(asyncJobID);
+            //Assert.IsInstanceOf<MergeJobStatusResult> (response, "response is MergeJobStatusResult");
         }
         
         /// <summary>
@@ -132,6 +169,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test MergeDocumentHtmlMultiArray
+        /// </summary>
+        [Test]
+        public void MergeDocumentHtmlMultiArrayTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //DocumentArrayInput input = null;
+            //var response = instance.MergeDocumentHtmlMultiArray(input);
+            //Assert.IsInstanceOf<Object> (response, "response is Object");
+        }
+        
+        /// <summary>
         /// Test MergeDocumentPdf
         /// </summary>
         [Test]
@@ -163,6 +212,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //System.IO.Stream inputFile10 = null;
             //var response = instance.MergeDocumentPdfMulti(inputFile1, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
+        /// Test MergeDocumentPdfMultiArray
+        /// </summary>
+        [Test]
+        public void MergeDocumentPdfMultiArrayTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //DocumentArrayInput input = null;
+            //var response = instance.MergeDocumentPdfMultiArray(input);
+            //Assert.IsInstanceOf<Object> (response, "response is Object");
         }
         
         /// <summary>
@@ -200,6 +261,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test MergeDocumentPngMultiArray
+        /// </summary>
+        [Test]
+        public void MergeDocumentPngMultiArrayTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //DocumentArrayInput input = null;
+            //var response = instance.MergeDocumentPngMultiArray(input);
+            //Assert.IsInstanceOf<Object> (response, "response is Object");
+        }
+        
+        /// <summary>
         /// Test MergeDocumentPptx
         /// </summary>
         [Test]
@@ -231,6 +304,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //System.IO.Stream inputFile10 = null;
             //var response = instance.MergeDocumentPptxMulti(inputFile1, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
+        /// Test MergeDocumentPptxMultiArray
+        /// </summary>
+        [Test]
+        public void MergeDocumentPptxMultiArrayTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //DocumentArrayInput input = null;
+            //var response = instance.MergeDocumentPptxMultiArray(input);
+            //Assert.IsInstanceOf<Object> (response, "response is Object");
         }
         
         /// <summary>
@@ -299,6 +384,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //System.IO.Stream inputFile10 = null;
             //var response = instance.MergeDocumentXlsxMulti(inputFile1, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
+        /// Test MergeDocumentXlsxMultiArray
+        /// </summary>
+        [Test]
+        public void MergeDocumentXlsxMultiArrayTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //DocumentArrayInput input = null;
+            //var response = instance.MergeDocumentXlsxMultiArray(input);
+            //Assert.IsInstanceOf<Object> (response, "response is Object");
         }
         
     }

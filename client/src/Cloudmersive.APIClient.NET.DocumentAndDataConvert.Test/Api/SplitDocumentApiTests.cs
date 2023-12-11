@@ -65,6 +65,19 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
 
         
         /// <summary>
+        /// Test SplitDocumentBatchJobCreate
+        /// </summary>
+        [Test]
+        public void SplitDocumentBatchJobCreateTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //bool? returnDocumentContents = null;
+            //var response = instance.SplitDocumentBatchJobCreate(inputFile, returnDocumentContents);
+            //Assert.IsInstanceOf<SplitBatchJobCreateResult> (response, "response is SplitBatchJobCreateResult");
+        }
+        
+        /// <summary>
         /// Test SplitDocumentDocx
         /// </summary>
         [Test]
@@ -75,6 +88,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //bool? returnDocumentContents = null;
             //var response = instance.SplitDocumentDocx(inputFile, returnDocumentContents);
             //Assert.IsInstanceOf<SplitDocxDocumentResult> (response, "response is SplitDocxDocumentResult");
+        }
+        
+        /// <summary>
+        /// Test SplitDocumentGetAsyncJobStatus
+        /// </summary>
+        [Test]
+        public void SplitDocumentGetAsyncJobStatusTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string asyncJobID = null;
+            //var response = instance.SplitDocumentGetAsyncJobStatus(asyncJobID);
+            //Assert.IsInstanceOf<JobStatusResult> (response, "response is JobStatusResult");
         }
         
         /// <summary>
@@ -101,6 +126,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //bool? returnDocumentContents = null;
             //var response = instance.SplitDocumentPptx(inputFile, returnDocumentContents);
             //Assert.IsInstanceOf<SplitPptxPresentationResult> (response, "response is SplitPptxPresentationResult");
+        }
+        
+        /// <summary>
+        /// Test SplitDocumentPptxAdvanced
+        /// </summary>
+        [Test]
+        public void SplitDocumentPptxAdvancedTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //PptxSplitAdvancedRequest request = null;
+            //var response = instance.SplitDocumentPptxAdvanced(request);
+            //Assert.IsInstanceOf<PptxSplitAdvancedResponse> (response, "response is PptxSplitAdvancedResponse");
         }
         
         /// <summary>
