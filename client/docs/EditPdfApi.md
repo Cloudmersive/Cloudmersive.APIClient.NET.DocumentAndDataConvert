@@ -26,6 +26,7 @@ Method | HTTP request | Description
 [**EditPdfResize**](EditPdfApi.md#editpdfresize) | **POST** /convert/edit/pdf/resize | Change PDF Document&#39;s Paper Size
 [**EditPdfRotateAllPages**](EditPdfApi.md#editpdfrotateallpages) | **POST** /convert/edit/pdf/pages/rotate/all | Rotate all pages in a PDF document
 [**EditPdfRotatePageRange**](EditPdfApi.md#editpdfrotatepagerange) | **POST** /convert/edit/pdf/pages/rotate/page-range | Rotate a range, subset of pages in a PDF document
+[**EditPdfSanitize**](EditPdfApi.md#editpdfsanitize) | **POST** /convert/edit/pdf/sanitize | Sanitize a PDF by removing embedded JavaScript
 [**EditPdfSetFormFields**](EditPdfApi.md#editpdfsetformfields) | **POST** /convert/edit/pdf/form/set-fields | Sets ands fills PDF Form field values
 [**EditPdfSetMetadata**](EditPdfApi.md#editpdfsetmetadata) | **POST** /convert/edit/pdf/set-metadata | Sets PDF document metadata
 [**EditPdfSetPermissions**](EditPdfApi.md#editpdfsetpermissions) | **POST** /convert/edit/pdf/encrypt/set-permissions | Encrypt, password-protect and set restricted permissions on a PDF
@@ -1357,7 +1358,7 @@ namespace Example
 
             var apiInstance = new EditPdfApi();
             var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
-            var paperSize = paperSize_example;  // string | The desired paper size for the resized PDF document. Size ranges from A7 (smallest) to A0 (largest).
+            var paperSize = paperSize_example;  // string | The desired paper size for the resized PDF document. Size ranges from A7 (smallest) to A0 (largest), and Letter, Legal, Tabloid, Ledger and B5.
 
             try
             {
@@ -1379,7 +1380,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
- **paperSize** | **string**| The desired paper size for the resized PDF document. Size ranges from A7 (smallest) to A0 (largest). | 
+ **paperSize** | **string**| The desired paper size for the resized PDF document. Size ranges from A7 (smallest) to A0 (largest), and Letter, Legal, Tabloid, Ledger and B5. | 
 
 ### Return type
 
@@ -1532,6 +1533,68 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
+ - **Accept**: application/octet-stream
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="editpdfsanitize"></a>
+# **EditPdfSanitize**
+> Object EditPdfSanitize ()
+
+Sanitize a PDF by removing embedded JavaScript
+
+Removes embedded JavaScript from a PDF file.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class EditPdfSanitizeExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new EditPdfApi();
+
+            try
+            {
+                // Sanitize a PDF by removing embedded JavaScript
+                Object result = apiInstance.EditPdfSanitize();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling EditPdfApi.EditPdfSanitize: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/octet-stream
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

@@ -77,6 +77,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test EditDocumentBeginEditingChunk
+        /// </summary>
+        [Test]
+        public void EditDocumentBeginEditingChunkTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //BeginEditingChunkRequest input = null;
+            //var response = instance.EditDocumentBeginEditingChunk(input);
+            //Assert.IsInstanceOf<BeginEditingChunkResponse> (response, "response is BeginEditingChunkResponse");
+        }
+        
+        /// <summary>
         /// Test EditDocumentDocxAcceptAllTrackChanges
         /// </summary>
         [Test]

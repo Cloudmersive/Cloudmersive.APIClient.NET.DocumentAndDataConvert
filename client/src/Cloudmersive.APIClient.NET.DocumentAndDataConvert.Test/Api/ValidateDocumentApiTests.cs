@@ -114,6 +114,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test ValidateDocumentDocxUpgrade
+        /// </summary>
+        [Test]
+        public void ValidateDocumentDocxUpgradeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.ValidateDocumentDocxUpgrade(inputFile);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
         /// Test ValidateDocumentDocxValidation
         /// </summary>
         [Test]

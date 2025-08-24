@@ -5,6 +5,7 @@ All URIs are relative to *https://api.cloudmersive.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**EditDocumentBeginEditing**](EditDocumentApi.md#editdocumentbeginediting) | **POST** /convert/edit/begin-editing | Begin editing a document
+[**EditDocumentBeginEditingChunk**](EditDocumentApi.md#editdocumentbegineditingchunk) | **POST** /convert/edit/begin-editing/chunk | Begin editing a document that is broken up until multiple chunks
 [**EditDocumentDocxAcceptAllTrackChanges**](EditDocumentApi.md#editdocumentdocxacceptalltrackchanges) | **POST** /convert/edit/docx/track-changes/accept-all | Accept all tracked changes, revisions in a Word DOCX document
 [**EditDocumentDocxBody**](EditDocumentApi.md#editdocumentdocxbody) | **POST** /convert/edit/docx/get-body | Get body from a Word DOCX document
 [**EditDocumentDocxCreateBlankDocument**](EditDocumentApi.md#editdocumentdocxcreateblankdocument) | **POST** /convert/edit/docx/create/blank | Create a blank Word DOCX document
@@ -142,6 +143,72 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="editdocumentbegineditingchunk"></a>
+# **EditDocumentBeginEditingChunk**
+> BeginEditingChunkResponse EditDocumentBeginEditingChunk (BeginEditingChunkRequest input)
+
+Begin editing a document that is broken up until multiple chunks
+
+Requires Cloudmersive Private Cloud or Managed Instance.  When working with systems that have small file size limits, enables processing of large files above this limit.  Uploads a chunk of a document in Base64; once all chunks are received a document URL is returned.  The editing URL is temporary and only stored in-memory cache, and will automatically expire from the cache after 30 minutes, and cannot be directly accessed.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class EditDocumentBeginEditingChunkExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new EditDocumentApi();
+            var input = new BeginEditingChunkRequest(); // BeginEditingChunkRequest | 
+
+            try
+            {
+                // Begin editing a document that is broken up until multiple chunks
+                BeginEditingChunkResponse result = apiInstance.EditDocumentBeginEditingChunk(input);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling EditDocumentApi.EditDocumentBeginEditingChunk: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **input** | [**BeginEditingChunkRequest**](BeginEditingChunkRequest.md)|  | 
+
+### Return type
+
+[**BeginEditingChunkResponse**](BeginEditingChunkResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="editdocumentdocxacceptalltrackchanges"></a>
 # **EditDocumentDocxAcceptAllTrackChanges**
 > byte[] EditDocumentDocxAcceptAllTrackChanges (System.IO.Stream inputFile, bool? autorepair = null)
@@ -171,7 +238,7 @@ namespace Example
 
             var apiInstance = new EditDocumentApi();
             var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
-            var autorepair = true;  // bool? | Optional; automatically repair input documents that have errors (default is true) (optional) 
+            var autorepair = true;  // bool? | Optional; automatically repair input documents that have errors (default is false) (optional) 
 
             try
             {
@@ -193,7 +260,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
- **autorepair** | **bool?**| Optional; automatically repair input documents that have errors (default is true) | [optional] 
+ **autorepair** | **bool?**| Optional; automatically repair input documents that have errors (default is false) | [optional] 
 
 ### Return type
 

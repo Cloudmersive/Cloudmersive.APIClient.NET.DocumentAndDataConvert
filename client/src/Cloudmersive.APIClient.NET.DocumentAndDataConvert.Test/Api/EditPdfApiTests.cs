@@ -355,6 +355,17 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test EditPdfSanitize
+        /// </summary>
+        [Test]
+        public void EditPdfSanitizeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.EditPdfSanitize();
+            //Assert.IsInstanceOf<Object> (response, "response is Object");
+        }
+        
+        /// <summary>
         /// Test EditPdfSetFormFields
         /// </summary>
         [Test]

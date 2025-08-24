@@ -24,6 +24,39 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Compare Two Word DOC (Legacy 97-2003 Format)
+        /// </summary>
+        /// <remarks>
+        /// Compare two Office Word Documents (doc) legacy 97-2003 format files and highlight the differences
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="comparisonMode">Optional; set to basic for a basic comparison, and advanced for advanced comparison mode.  Advanced comparison mode requires Managed Instance or Private Cloud deployment. (optional)</param>
+        /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is true) (optional)</param>
+        /// <param name="changeOutlines">Optional; highlight changes with a blue outline (default is true) (optional)</param>
+        /// <param name="headersAndFooters">Optional; include headers and footers (default is false) (optional)</param>
+        /// <param name="acceptAllChanges">Optional; accept all changes before comparison (default is false) (optional)</param>
+        /// <returns>byte[]</returns>
+        byte[] CompareDocumentDoc (System.IO.Stream inputFile1, System.IO.Stream inputFile2, string comparisonMode = null, bool? autorepair = null, bool? changeOutlines = null, bool? headersAndFooters = null, bool? acceptAllChanges = null);
+
+        /// <summary>
+        /// Compare Two Word DOC (Legacy 97-2003 Format)
+        /// </summary>
+        /// <remarks>
+        /// Compare two Office Word Documents (doc) legacy 97-2003 format files and highlight the differences
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="comparisonMode">Optional; set to basic for a basic comparison, and advanced for advanced comparison mode.  Advanced comparison mode requires Managed Instance or Private Cloud deployment. (optional)</param>
+        /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is true) (optional)</param>
+        /// <param name="changeOutlines">Optional; highlight changes with a blue outline (default is true) (optional)</param>
+        /// <param name="headersAndFooters">Optional; include headers and footers (default is false) (optional)</param>
+        /// <param name="acceptAllChanges">Optional; accept all changes before comparison (default is false) (optional)</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> CompareDocumentDocWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, string comparisonMode = null, bool? autorepair = null, bool? changeOutlines = null, bool? headersAndFooters = null, bool? acceptAllChanges = null);
+        /// <summary>
         /// Compare Two Word DOCX
         /// </summary>
         /// <remarks>
@@ -32,9 +65,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="comparisonMode">Optional; set to basic for a basic comparison, and advanced for advanced comparison mode.  Advanced comparison mode requires Managed Instance or Private Cloud deployment. (optional)</param>
         /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is true) (optional)</param>
+        /// <param name="changeOutlines">Optional; highlight changes with a blue outline (default is true) (optional)</param>
+        /// <param name="headersAndFooters">Optional; include headers and footers (default is false) (optional)</param>
+        /// <param name="acceptAllChanges">Optional; accept all changes before comparison (default is false) (optional)</param>
         /// <returns>byte[]</returns>
-        byte[] CompareDocumentDocx (System.IO.Stream inputFile1, System.IO.Stream inputFile2, bool? autorepair = null);
+        byte[] CompareDocumentDocx (System.IO.Stream inputFile1, System.IO.Stream inputFile2, string comparisonMode = null, bool? autorepair = null, bool? changeOutlines = null, bool? headersAndFooters = null, bool? acceptAllChanges = null);
 
         /// <summary>
         /// Compare Two Word DOCX
@@ -45,12 +82,49 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="comparisonMode">Optional; set to basic for a basic comparison, and advanced for advanced comparison mode.  Advanced comparison mode requires Managed Instance or Private Cloud deployment. (optional)</param>
         /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is true) (optional)</param>
+        /// <param name="changeOutlines">Optional; highlight changes with a blue outline (default is true) (optional)</param>
+        /// <param name="headersAndFooters">Optional; include headers and footers (default is false) (optional)</param>
+        /// <param name="acceptAllChanges">Optional; accept all changes before comparison (default is false) (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
-        ApiResponse<byte[]> CompareDocumentDocxWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, bool? autorepair = null);
+        ApiResponse<byte[]> CompareDocumentDocxWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, string comparisonMode = null, bool? autorepair = null, bool? changeOutlines = null, bool? headersAndFooters = null, bool? acceptAllChanges = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
+        /// Compare Two Word DOC (Legacy 97-2003 Format)
+        /// </summary>
+        /// <remarks>
+        /// Compare two Office Word Documents (doc) legacy 97-2003 format files and highlight the differences
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="comparisonMode">Optional; set to basic for a basic comparison, and advanced for advanced comparison mode.  Advanced comparison mode requires Managed Instance or Private Cloud deployment. (optional)</param>
+        /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is true) (optional)</param>
+        /// <param name="changeOutlines">Optional; highlight changes with a blue outline (default is true) (optional)</param>
+        /// <param name="headersAndFooters">Optional; include headers and footers (default is false) (optional)</param>
+        /// <param name="acceptAllChanges">Optional; accept all changes before comparison (default is false) (optional)</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> CompareDocumentDocAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2, string comparisonMode = null, bool? autorepair = null, bool? changeOutlines = null, bool? headersAndFooters = null, bool? acceptAllChanges = null);
+
+        /// <summary>
+        /// Compare Two Word DOC (Legacy 97-2003 Format)
+        /// </summary>
+        /// <remarks>
+        /// Compare two Office Word Documents (doc) legacy 97-2003 format files and highlight the differences
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="comparisonMode">Optional; set to basic for a basic comparison, and advanced for advanced comparison mode.  Advanced comparison mode requires Managed Instance or Private Cloud deployment. (optional)</param>
+        /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is true) (optional)</param>
+        /// <param name="changeOutlines">Optional; highlight changes with a blue outline (default is true) (optional)</param>
+        /// <param name="headersAndFooters">Optional; include headers and footers (default is false) (optional)</param>
+        /// <param name="acceptAllChanges">Optional; accept all changes before comparison (default is false) (optional)</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> CompareDocumentDocAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, string comparisonMode = null, bool? autorepair = null, bool? changeOutlines = null, bool? headersAndFooters = null, bool? acceptAllChanges = null);
+        /// <summary>
         /// Compare Two Word DOCX
         /// </summary>
         /// <remarks>
@@ -59,9 +133,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="comparisonMode">Optional; set to basic for a basic comparison, and advanced for advanced comparison mode.  Advanced comparison mode requires Managed Instance or Private Cloud deployment. (optional)</param>
         /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is true) (optional)</param>
+        /// <param name="changeOutlines">Optional; highlight changes with a blue outline (default is true) (optional)</param>
+        /// <param name="headersAndFooters">Optional; include headers and footers (default is false) (optional)</param>
+        /// <param name="acceptAllChanges">Optional; accept all changes before comparison (default is false) (optional)</param>
         /// <returns>Task of byte[]</returns>
-        System.Threading.Tasks.Task<byte[]> CompareDocumentDocxAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2, bool? autorepair = null);
+        System.Threading.Tasks.Task<byte[]> CompareDocumentDocxAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2, string comparisonMode = null, bool? autorepair = null, bool? changeOutlines = null, bool? headersAndFooters = null, bool? acceptAllChanges = null);
 
         /// <summary>
         /// Compare Two Word DOCX
@@ -72,9 +150,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="comparisonMode">Optional; set to basic for a basic comparison, and advanced for advanced comparison mode.  Advanced comparison mode requires Managed Instance or Private Cloud deployment. (optional)</param>
         /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is true) (optional)</param>
+        /// <param name="changeOutlines">Optional; highlight changes with a blue outline (default is true) (optional)</param>
+        /// <param name="headersAndFooters">Optional; include headers and footers (default is false) (optional)</param>
+        /// <param name="acceptAllChanges">Optional; accept all changes before comparison (default is false) (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        System.Threading.Tasks.Task<ApiResponse<byte[]>> CompareDocumentDocxAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, bool? autorepair = null);
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> CompareDocumentDocxAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, string comparisonMode = null, bool? autorepair = null, bool? changeOutlines = null, bool? headersAndFooters = null, bool? acceptAllChanges = null);
         #endregion Asynchronous Operations
     }
 
@@ -176,16 +258,207 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
+        /// Compare Two Word DOC (Legacy 97-2003 Format) Compare two Office Word Documents (doc) legacy 97-2003 format files and highlight the differences
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="comparisonMode">Optional; set to basic for a basic comparison, and advanced for advanced comparison mode.  Advanced comparison mode requires Managed Instance or Private Cloud deployment. (optional)</param>
+        /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is true) (optional)</param>
+        /// <param name="changeOutlines">Optional; highlight changes with a blue outline (default is true) (optional)</param>
+        /// <param name="headersAndFooters">Optional; include headers and footers (default is false) (optional)</param>
+        /// <param name="acceptAllChanges">Optional; accept all changes before comparison (default is false) (optional)</param>
+        /// <returns>byte[]</returns>
+        public byte[] CompareDocumentDoc (System.IO.Stream inputFile1, System.IO.Stream inputFile2, string comparisonMode = null, bool? autorepair = null, bool? changeOutlines = null, bool? headersAndFooters = null, bool? acceptAllChanges = null)
+        {
+             ApiResponse<byte[]> localVarResponse = CompareDocumentDocWithHttpInfo(inputFile1, inputFile2, comparisonMode, autorepair, changeOutlines, headersAndFooters, acceptAllChanges);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Compare Two Word DOC (Legacy 97-2003 Format) Compare two Office Word Documents (doc) legacy 97-2003 format files and highlight the differences
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="comparisonMode">Optional; set to basic for a basic comparison, and advanced for advanced comparison mode.  Advanced comparison mode requires Managed Instance or Private Cloud deployment. (optional)</param>
+        /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is true) (optional)</param>
+        /// <param name="changeOutlines">Optional; highlight changes with a blue outline (default is true) (optional)</param>
+        /// <param name="headersAndFooters">Optional; include headers and footers (default is false) (optional)</param>
+        /// <param name="acceptAllChanges">Optional; accept all changes before comparison (default is false) (optional)</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > CompareDocumentDocWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, string comparisonMode = null, bool? autorepair = null, bool? changeOutlines = null, bool? headersAndFooters = null, bool? acceptAllChanges = null)
+        {
+            // verify the required parameter 'inputFile1' is set
+            if (inputFile1 == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile1' when calling CompareDocumentApi->CompareDocumentDoc");
+            // verify the required parameter 'inputFile2' is set
+            if (inputFile2 == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile2' when calling CompareDocumentApi->CompareDocumentDoc");
+
+            var localVarPath = "/convert/compare/doc";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (comparisonMode != null) localVarHeaderParams.Add("comparisonMode", this.Configuration.ApiClient.ParameterToString(comparisonMode)); // header parameter
+            if (autorepair != null) localVarHeaderParams.Add("autorepair", this.Configuration.ApiClient.ParameterToString(autorepair)); // header parameter
+            if (changeOutlines != null) localVarHeaderParams.Add("changeOutlines", this.Configuration.ApiClient.ParameterToString(changeOutlines)); // header parameter
+            if (headersAndFooters != null) localVarHeaderParams.Add("headersAndFooters", this.Configuration.ApiClient.ParameterToString(headersAndFooters)); // header parameter
+            if (acceptAllChanges != null) localVarHeaderParams.Add("acceptAllChanges", this.Configuration.ApiClient.ParameterToString(acceptAllChanges)); // header parameter
+            if (inputFile1 != null) localVarFileParams.Add("inputFile1", this.Configuration.ApiClient.ParameterToFile("inputFile1", inputFile1));
+            if (inputFile2 != null) localVarFileParams.Add("inputFile2", this.Configuration.ApiClient.ParameterToFile("inputFile2", inputFile2));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CompareDocumentDoc", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Compare Two Word DOC (Legacy 97-2003 Format) Compare two Office Word Documents (doc) legacy 97-2003 format files and highlight the differences
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="comparisonMode">Optional; set to basic for a basic comparison, and advanced for advanced comparison mode.  Advanced comparison mode requires Managed Instance or Private Cloud deployment. (optional)</param>
+        /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is true) (optional)</param>
+        /// <param name="changeOutlines">Optional; highlight changes with a blue outline (default is true) (optional)</param>
+        /// <param name="headersAndFooters">Optional; include headers and footers (default is false) (optional)</param>
+        /// <param name="acceptAllChanges">Optional; accept all changes before comparison (default is false) (optional)</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> CompareDocumentDocAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2, string comparisonMode = null, bool? autorepair = null, bool? changeOutlines = null, bool? headersAndFooters = null, bool? acceptAllChanges = null)
+        {
+             ApiResponse<byte[]> localVarResponse = await CompareDocumentDocAsyncWithHttpInfo(inputFile1, inputFile2, comparisonMode, autorepair, changeOutlines, headersAndFooters, acceptAllChanges);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Compare Two Word DOC (Legacy 97-2003 Format) Compare two Office Word Documents (doc) legacy 97-2003 format files and highlight the differences
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile1">First input file to perform the operation on.</param>
+        /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="comparisonMode">Optional; set to basic for a basic comparison, and advanced for advanced comparison mode.  Advanced comparison mode requires Managed Instance or Private Cloud deployment. (optional)</param>
+        /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is true) (optional)</param>
+        /// <param name="changeOutlines">Optional; highlight changes with a blue outline (default is true) (optional)</param>
+        /// <param name="headersAndFooters">Optional; include headers and footers (default is false) (optional)</param>
+        /// <param name="acceptAllChanges">Optional; accept all changes before comparison (default is false) (optional)</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> CompareDocumentDocAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, string comparisonMode = null, bool? autorepair = null, bool? changeOutlines = null, bool? headersAndFooters = null, bool? acceptAllChanges = null)
+        {
+            // verify the required parameter 'inputFile1' is set
+            if (inputFile1 == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile1' when calling CompareDocumentApi->CompareDocumentDoc");
+            // verify the required parameter 'inputFile2' is set
+            if (inputFile2 == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile2' when calling CompareDocumentApi->CompareDocumentDoc");
+
+            var localVarPath = "/convert/compare/doc";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (comparisonMode != null) localVarHeaderParams.Add("comparisonMode", this.Configuration.ApiClient.ParameterToString(comparisonMode)); // header parameter
+            if (autorepair != null) localVarHeaderParams.Add("autorepair", this.Configuration.ApiClient.ParameterToString(autorepair)); // header parameter
+            if (changeOutlines != null) localVarHeaderParams.Add("changeOutlines", this.Configuration.ApiClient.ParameterToString(changeOutlines)); // header parameter
+            if (headersAndFooters != null) localVarHeaderParams.Add("headersAndFooters", this.Configuration.ApiClient.ParameterToString(headersAndFooters)); // header parameter
+            if (acceptAllChanges != null) localVarHeaderParams.Add("acceptAllChanges", this.Configuration.ApiClient.ParameterToString(acceptAllChanges)); // header parameter
+            if (inputFile1 != null) localVarFileParams.Add("inputFile1", this.Configuration.ApiClient.ParameterToFile("inputFile1", inputFile1));
+            if (inputFile2 != null) localVarFileParams.Add("inputFile2", this.Configuration.ApiClient.ParameterToFile("inputFile2", inputFile2));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CompareDocumentDoc", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
         /// Compare Two Word DOCX Compare two Office Word Documents (docx) files and highlight the differences
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="comparisonMode">Optional; set to basic for a basic comparison, and advanced for advanced comparison mode.  Advanced comparison mode requires Managed Instance or Private Cloud deployment. (optional)</param>
         /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is true) (optional)</param>
+        /// <param name="changeOutlines">Optional; highlight changes with a blue outline (default is true) (optional)</param>
+        /// <param name="headersAndFooters">Optional; include headers and footers (default is false) (optional)</param>
+        /// <param name="acceptAllChanges">Optional; accept all changes before comparison (default is false) (optional)</param>
         /// <returns>byte[]</returns>
-        public byte[] CompareDocumentDocx (System.IO.Stream inputFile1, System.IO.Stream inputFile2, bool? autorepair = null)
+        public byte[] CompareDocumentDocx (System.IO.Stream inputFile1, System.IO.Stream inputFile2, string comparisonMode = null, bool? autorepair = null, bool? changeOutlines = null, bool? headersAndFooters = null, bool? acceptAllChanges = null)
         {
-             ApiResponse<byte[]> localVarResponse = CompareDocumentDocxWithHttpInfo(inputFile1, inputFile2, autorepair);
+             ApiResponse<byte[]> localVarResponse = CompareDocumentDocxWithHttpInfo(inputFile1, inputFile2, comparisonMode, autorepair, changeOutlines, headersAndFooters, acceptAllChanges);
              return localVarResponse.Data;
         }
 
@@ -195,9 +468,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="comparisonMode">Optional; set to basic for a basic comparison, and advanced for advanced comparison mode.  Advanced comparison mode requires Managed Instance or Private Cloud deployment. (optional)</param>
         /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is true) (optional)</param>
+        /// <param name="changeOutlines">Optional; highlight changes with a blue outline (default is true) (optional)</param>
+        /// <param name="headersAndFooters">Optional; include headers and footers (default is false) (optional)</param>
+        /// <param name="acceptAllChanges">Optional; accept all changes before comparison (default is false) (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
-        public ApiResponse< byte[] > CompareDocumentDocxWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, bool? autorepair = null)
+        public ApiResponse< byte[] > CompareDocumentDocxWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, string comparisonMode = null, bool? autorepair = null, bool? changeOutlines = null, bool? headersAndFooters = null, bool? acceptAllChanges = null)
         {
             // verify the required parameter 'inputFile1' is set
             if (inputFile1 == null)
@@ -228,7 +505,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (comparisonMode != null) localVarHeaderParams.Add("comparisonMode", this.Configuration.ApiClient.ParameterToString(comparisonMode)); // header parameter
             if (autorepair != null) localVarHeaderParams.Add("autorepair", this.Configuration.ApiClient.ParameterToString(autorepair)); // header parameter
+            if (changeOutlines != null) localVarHeaderParams.Add("changeOutlines", this.Configuration.ApiClient.ParameterToString(changeOutlines)); // header parameter
+            if (headersAndFooters != null) localVarHeaderParams.Add("headersAndFooters", this.Configuration.ApiClient.ParameterToString(headersAndFooters)); // header parameter
+            if (acceptAllChanges != null) localVarHeaderParams.Add("acceptAllChanges", this.Configuration.ApiClient.ParameterToString(acceptAllChanges)); // header parameter
             if (inputFile1 != null) localVarFileParams.Add("inputFile1", this.Configuration.ApiClient.ParameterToFile("inputFile1", inputFile1));
             if (inputFile2 != null) localVarFileParams.Add("inputFile2", this.Configuration.ApiClient.ParameterToFile("inputFile2", inputFile2));
 
@@ -262,11 +543,15 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="comparisonMode">Optional; set to basic for a basic comparison, and advanced for advanced comparison mode.  Advanced comparison mode requires Managed Instance or Private Cloud deployment. (optional)</param>
         /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is true) (optional)</param>
+        /// <param name="changeOutlines">Optional; highlight changes with a blue outline (default is true) (optional)</param>
+        /// <param name="headersAndFooters">Optional; include headers and footers (default is false) (optional)</param>
+        /// <param name="acceptAllChanges">Optional; accept all changes before comparison (default is false) (optional)</param>
         /// <returns>Task of byte[]</returns>
-        public async System.Threading.Tasks.Task<byte[]> CompareDocumentDocxAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2, bool? autorepair = null)
+        public async System.Threading.Tasks.Task<byte[]> CompareDocumentDocxAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2, string comparisonMode = null, bool? autorepair = null, bool? changeOutlines = null, bool? headersAndFooters = null, bool? acceptAllChanges = null)
         {
-             ApiResponse<byte[]> localVarResponse = await CompareDocumentDocxAsyncWithHttpInfo(inputFile1, inputFile2, autorepair);
+             ApiResponse<byte[]> localVarResponse = await CompareDocumentDocxAsyncWithHttpInfo(inputFile1, inputFile2, comparisonMode, autorepair, changeOutlines, headersAndFooters, acceptAllChanges);
              return localVarResponse.Data;
 
         }
@@ -277,9 +562,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="comparisonMode">Optional; set to basic for a basic comparison, and advanced for advanced comparison mode.  Advanced comparison mode requires Managed Instance or Private Cloud deployment. (optional)</param>
         /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is true) (optional)</param>
+        /// <param name="changeOutlines">Optional; highlight changes with a blue outline (default is true) (optional)</param>
+        /// <param name="headersAndFooters">Optional; include headers and footers (default is false) (optional)</param>
+        /// <param name="acceptAllChanges">Optional; accept all changes before comparison (default is false) (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> CompareDocumentDocxAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, bool? autorepair = null)
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> CompareDocumentDocxAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, string comparisonMode = null, bool? autorepair = null, bool? changeOutlines = null, bool? headersAndFooters = null, bool? acceptAllChanges = null)
         {
             // verify the required parameter 'inputFile1' is set
             if (inputFile1 == null)
@@ -310,7 +599,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (comparisonMode != null) localVarHeaderParams.Add("comparisonMode", this.Configuration.ApiClient.ParameterToString(comparisonMode)); // header parameter
             if (autorepair != null) localVarHeaderParams.Add("autorepair", this.Configuration.ApiClient.ParameterToString(autorepair)); // header parameter
+            if (changeOutlines != null) localVarHeaderParams.Add("changeOutlines", this.Configuration.ApiClient.ParameterToString(changeOutlines)); // header parameter
+            if (headersAndFooters != null) localVarHeaderParams.Add("headersAndFooters", this.Configuration.ApiClient.ParameterToString(headersAndFooters)); // header parameter
+            if (acceptAllChanges != null) localVarHeaderParams.Add("acceptAllChanges", this.Configuration.ApiClient.ParameterToString(acceptAllChanges)); // header parameter
             if (inputFile1 != null) localVarFileParams.Add("inputFile1", this.Configuration.ApiClient.ParameterToFile("inputFile1", inputFile1));
             if (inputFile2 != null) localVarFileParams.Add("inputFile2", this.Configuration.ApiClient.ParameterToFile("inputFile2", inputFile2));
 

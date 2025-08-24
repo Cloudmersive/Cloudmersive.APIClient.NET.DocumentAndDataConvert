@@ -22,6 +22,7 @@ Method | HTTP request | Description
 [**ConvertDocumentDocxToDoc**](ConvertDocumentApi.md#convertdocumentdocxtodoc) | **POST** /convert/docx/to/doc | Convert Word DOCX Document to Legacy Word DOC (97-03)
 [**ConvertDocumentDocxToHtml**](ConvertDocumentApi.md#convertdocumentdocxtohtml) | **POST** /convert/docx/to/html | Convert Word DOCX Document to HTML Document
 [**ConvertDocumentDocxToJpg**](ConvertDocumentApi.md#convertdocumentdocxtojpg) | **POST** /convert/docx/to/jpg | Convert Word DOCX Document to JPG/JPEG image array
+[**ConvertDocumentDocxToOdt**](ConvertDocumentApi.md#convertdocumentdocxtoodt) | **POST** /convert/docx/to/odt | Convert Word DOCX Document to ODT
 [**ConvertDocumentDocxToPdf**](ConvertDocumentApi.md#convertdocumentdocxtopdf) | **POST** /convert/docx/to/pdf | Convert Word DOCX Document to PDF
 [**ConvertDocumentDocxToPng**](ConvertDocumentApi.md#convertdocumentdocxtopng) | **POST** /convert/docx/to/png | Convert Word DOCX Document to PNG image array
 [**ConvertDocumentDocxToRtf**](ConvertDocumentApi.md#convertdocumentdocxtortf) | **POST** /convert/docx/to/rtf | Convert Word DOCX Document to RTF
@@ -1319,9 +1320,75 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="convertdocumentdocxtoodt"></a>
+# **ConvertDocumentDocxToOdt**
+> byte[] ConvertDocumentDocxToOdt (System.IO.Stream inputFile)
+
+Convert Word DOCX Document to ODT
+
+Convert Office Word Documents (docx) to ODT format
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client;
+using Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model;
+
+namespace Example
+{
+    public class ConvertDocumentDocxToOdtExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new ConvertDocumentApi();
+            var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
+
+            try
+            {
+                // Convert Word DOCX Document to ODT
+                byte[] result = apiInstance.ConvertDocumentDocxToOdt(inputFile);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConvertDocumentApi.ConvertDocumentDocxToOdt: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
+
+### Return type
+
+**byte[]**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/pdf
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="convertdocumentdocxtopdf"></a>
 # **ConvertDocumentDocxToPdf**
-> byte[] ConvertDocumentDocxToPdf (System.IO.Stream inputFile)
+> byte[] ConvertDocumentDocxToPdf (System.IO.Stream inputFile, string compatabilityMode = null)
 
 Convert Word DOCX Document to PDF
 
@@ -1348,11 +1415,12 @@ namespace Example
 
             var apiInstance = new ConvertDocumentApi();
             var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
+            var compatabilityMode = compatabilityMode_example;  // string | Set to 'maximum' to maximize compatability, or leave blank for default behavior (optional) 
 
             try
             {
                 // Convert Word DOCX Document to PDF
-                byte[] result = apiInstance.ConvertDocumentDocxToPdf(inputFile);
+                byte[] result = apiInstance.ConvertDocumentDocxToPdf(inputFile, compatabilityMode);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1369,6 +1437,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
+ **compatabilityMode** | **string**| Set to &#39;maximum&#39; to maximize compatability, or leave blank for default behavior | [optional] 
 
 ### Return type
 
@@ -1381,7 +1450,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
- - **Accept**: application/octet-stream
+ - **Accept**: application/pdf
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

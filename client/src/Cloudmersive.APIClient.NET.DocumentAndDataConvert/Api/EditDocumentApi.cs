@@ -46,6 +46,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> EditDocumentBeginEditingWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
+        /// Begin editing a document that is broken up until multiple chunks
+        /// </summary>
+        /// <remarks>
+        /// Requires Cloudmersive Private Cloud or Managed Instance.  When working with systems that have small file size limits, enables processing of large files above this limit.  Uploads a chunk of a document in Base64; once all chunks are received a document URL is returned.  The editing URL is temporary and only stored in-memory cache, and will automatically expire from the cache after 30 minutes, and cannot be directly accessed.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>BeginEditingChunkResponse</returns>
+        BeginEditingChunkResponse EditDocumentBeginEditingChunk (BeginEditingChunkRequest input);
+
+        /// <summary>
+        /// Begin editing a document that is broken up until multiple chunks
+        /// </summary>
+        /// <remarks>
+        /// Requires Cloudmersive Private Cloud or Managed Instance.  When working with systems that have small file size limits, enables processing of large files above this limit.  Uploads a chunk of a document in Base64; once all chunks are received a document URL is returned.  The editing URL is temporary and only stored in-memory cache, and will automatically expire from the cache after 30 minutes, and cannot be directly accessed.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>ApiResponse of BeginEditingChunkResponse</returns>
+        ApiResponse<BeginEditingChunkResponse> EditDocumentBeginEditingChunkWithHttpInfo (BeginEditingChunkRequest input);
+        /// <summary>
         /// Accept all tracked changes, revisions in a Word DOCX document
         /// </summary>
         /// <remarks>
@@ -53,7 +74,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is true) (optional)</param>
+        /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is false) (optional)</param>
         /// <returns>byte[]</returns>
         byte[] EditDocumentDocxAcceptAllTrackChanges (System.IO.Stream inputFile, bool? autorepair = null);
 
@@ -65,7 +86,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is true) (optional)</param>
+        /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is false) (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> EditDocumentDocxAcceptAllTrackChangesWithHttpInfo (System.IO.Stream inputFile, bool? autorepair = null);
         /// <summary>
@@ -1526,6 +1547,27 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> EditDocumentBeginEditingAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
+        /// Begin editing a document that is broken up until multiple chunks
+        /// </summary>
+        /// <remarks>
+        /// Requires Cloudmersive Private Cloud or Managed Instance.  When working with systems that have small file size limits, enables processing of large files above this limit.  Uploads a chunk of a document in Base64; once all chunks are received a document URL is returned.  The editing URL is temporary and only stored in-memory cache, and will automatically expire from the cache after 30 minutes, and cannot be directly accessed.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>Task of BeginEditingChunkResponse</returns>
+        System.Threading.Tasks.Task<BeginEditingChunkResponse> EditDocumentBeginEditingChunkAsync (BeginEditingChunkRequest input);
+
+        /// <summary>
+        /// Begin editing a document that is broken up until multiple chunks
+        /// </summary>
+        /// <remarks>
+        /// Requires Cloudmersive Private Cloud or Managed Instance.  When working with systems that have small file size limits, enables processing of large files above this limit.  Uploads a chunk of a document in Base64; once all chunks are received a document URL is returned.  The editing URL is temporary and only stored in-memory cache, and will automatically expire from the cache after 30 minutes, and cannot be directly accessed.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>Task of ApiResponse (BeginEditingChunkResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BeginEditingChunkResponse>> EditDocumentBeginEditingChunkAsyncWithHttpInfo (BeginEditingChunkRequest input);
+        /// <summary>
         /// Accept all tracked changes, revisions in a Word DOCX document
         /// </summary>
         /// <remarks>
@@ -1533,7 +1575,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is true) (optional)</param>
+        /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is false) (optional)</param>
         /// <returns>Task of byte[]</returns>
         System.Threading.Tasks.Task<byte[]> EditDocumentDocxAcceptAllTrackChangesAsync (System.IO.Stream inputFile, bool? autorepair = null);
 
@@ -1545,7 +1587,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is true) (optional)</param>
+        /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is false) (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDocumentDocxAcceptAllTrackChangesAsyncWithHttpInfo (System.IO.Stream inputFile, bool? autorepair = null);
         /// <summary>
@@ -3234,11 +3276,184 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         }
 
         /// <summary>
+        /// Begin editing a document that is broken up until multiple chunks Requires Cloudmersive Private Cloud or Managed Instance.  When working with systems that have small file size limits, enables processing of large files above this limit.  Uploads a chunk of a document in Base64; once all chunks are received a document URL is returned.  The editing URL is temporary and only stored in-memory cache, and will automatically expire from the cache after 30 minutes, and cannot be directly accessed.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>BeginEditingChunkResponse</returns>
+        public BeginEditingChunkResponse EditDocumentBeginEditingChunk (BeginEditingChunkRequest input)
+        {
+             ApiResponse<BeginEditingChunkResponse> localVarResponse = EditDocumentBeginEditingChunkWithHttpInfo(input);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Begin editing a document that is broken up until multiple chunks Requires Cloudmersive Private Cloud or Managed Instance.  When working with systems that have small file size limits, enables processing of large files above this limit.  Uploads a chunk of a document in Base64; once all chunks are received a document URL is returned.  The editing URL is temporary and only stored in-memory cache, and will automatically expire from the cache after 30 minutes, and cannot be directly accessed.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>ApiResponse of BeginEditingChunkResponse</returns>
+        public ApiResponse< BeginEditingChunkResponse > EditDocumentBeginEditingChunkWithHttpInfo (BeginEditingChunkRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling EditDocumentApi->EditDocumentBeginEditingChunk");
+
+            var localVarPath = "/convert/edit/begin-editing/chunk";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentBeginEditingChunk", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<BeginEditingChunkResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (BeginEditingChunkResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BeginEditingChunkResponse)));
+        }
+
+        /// <summary>
+        /// Begin editing a document that is broken up until multiple chunks Requires Cloudmersive Private Cloud or Managed Instance.  When working with systems that have small file size limits, enables processing of large files above this limit.  Uploads a chunk of a document in Base64; once all chunks are received a document URL is returned.  The editing URL is temporary and only stored in-memory cache, and will automatically expire from the cache after 30 minutes, and cannot be directly accessed.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>Task of BeginEditingChunkResponse</returns>
+        public async System.Threading.Tasks.Task<BeginEditingChunkResponse> EditDocumentBeginEditingChunkAsync (BeginEditingChunkRequest input)
+        {
+             ApiResponse<BeginEditingChunkResponse> localVarResponse = await EditDocumentBeginEditingChunkAsyncWithHttpInfo(input);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Begin editing a document that is broken up until multiple chunks Requires Cloudmersive Private Cloud or Managed Instance.  When working with systems that have small file size limits, enables processing of large files above this limit.  Uploads a chunk of a document in Base64; once all chunks are received a document URL is returned.  The editing URL is temporary and only stored in-memory cache, and will automatically expire from the cache after 30 minutes, and cannot be directly accessed.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input"></param>
+        /// <returns>Task of ApiResponse (BeginEditingChunkResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<BeginEditingChunkResponse>> EditDocumentBeginEditingChunkAsyncWithHttpInfo (BeginEditingChunkRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling EditDocumentApi->EditDocumentBeginEditingChunk");
+
+            var localVarPath = "/convert/edit/begin-editing/chunk";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDocumentBeginEditingChunk", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<BeginEditingChunkResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (BeginEditingChunkResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BeginEditingChunkResponse)));
+        }
+
+        /// <summary>
         /// Accept all tracked changes, revisions in a Word DOCX document Accepts all tracked changes and revisions in a Word DOCX document.  This will accept all pending changes in the document when tracked changes is turned on.  Track changes will remain on (if it is on) after this oepration is completed.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is true) (optional)</param>
+        /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is false) (optional)</param>
         /// <returns>byte[]</returns>
         public byte[] EditDocumentDocxAcceptAllTrackChanges (System.IO.Stream inputFile, bool? autorepair = null)
         {
@@ -3251,7 +3466,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is true) (optional)</param>
+        /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is false) (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
         public ApiResponse< byte[] > EditDocumentDocxAcceptAllTrackChangesWithHttpInfo (System.IO.Stream inputFile, bool? autorepair = null)
         {
@@ -3316,7 +3531,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is true) (optional)</param>
+        /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is false) (optional)</param>
         /// <returns>Task of byte[]</returns>
         public async System.Threading.Tasks.Task<byte[]> EditDocumentDocxAcceptAllTrackChangesAsync (System.IO.Stream inputFile, bool? autorepair = null)
         {
@@ -3330,7 +3545,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is true) (optional)</param>
+        /// <param name="autorepair">Optional; automatically repair input documents that have errors (default is false) (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDocumentDocxAcceptAllTrackChangesAsyncWithHttpInfo (System.IO.Stream inputFile, bool? autorepair = null)
         {

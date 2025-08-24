@@ -473,7 +473,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <param name="paperSize">The desired paper size for the resized PDF document. Size ranges from A7 (smallest) to A0 (largest).</param>
+        /// <param name="paperSize">The desired paper size for the resized PDF document. Size ranges from A7 (smallest) to A0 (largest), and Letter, Legal, Tabloid, Ledger and B5.</param>
         /// <returns>byte[]</returns>
         byte[] EditPdfResize (System.IO.Stream inputFile, string paperSize);
 
@@ -485,7 +485,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <param name="paperSize">The desired paper size for the resized PDF document. Size ranges from A7 (smallest) to A0 (largest).</param>
+        /// <param name="paperSize">The desired paper size for the resized PDF document. Size ranges from A7 (smallest) to A0 (largest), and Letter, Legal, Tabloid, Ledger and B5.</param>
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> EditPdfResizeWithHttpInfo (System.IO.Stream inputFile, string paperSize);
         /// <summary>
@@ -538,6 +538,25 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="pageEnd">Page number (1 based) to stop rotating pages from (inclusive).</param>
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> EditPdfRotatePageRangeWithHttpInfo (System.IO.Stream inputFile, int? rotationAngle, int? pageStart, int? pageEnd);
+        /// <summary>
+        /// Sanitize a PDF by removing embedded JavaScript
+        /// </summary>
+        /// <remarks>
+        /// Removes embedded JavaScript from a PDF file.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Object</returns>
+        Object EditPdfSanitize ();
+
+        /// <summary>
+        /// Sanitize a PDF by removing embedded JavaScript
+        /// </summary>
+        /// <remarks>
+        /// Removes embedded JavaScript from a PDF file.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> EditPdfSanitizeWithHttpInfo ();
         /// <summary>
         /// Sets ands fills PDF Form field values
         /// </summary>
@@ -1103,7 +1122,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <param name="paperSize">The desired paper size for the resized PDF document. Size ranges from A7 (smallest) to A0 (largest).</param>
+        /// <param name="paperSize">The desired paper size for the resized PDF document. Size ranges from A7 (smallest) to A0 (largest), and Letter, Legal, Tabloid, Ledger and B5.</param>
         /// <returns>Task of byte[]</returns>
         System.Threading.Tasks.Task<byte[]> EditPdfResizeAsync (System.IO.Stream inputFile, string paperSize);
 
@@ -1115,7 +1134,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <param name="paperSize">The desired paper size for the resized PDF document. Size ranges from A7 (smallest) to A0 (largest).</param>
+        /// <param name="paperSize">The desired paper size for the resized PDF document. Size ranges from A7 (smallest) to A0 (largest), and Letter, Legal, Tabloid, Ledger and B5.</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfResizeAsyncWithHttpInfo (System.IO.Stream inputFile, string paperSize);
         /// <summary>
@@ -1168,6 +1187,25 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="pageEnd">Page number (1 based) to stop rotating pages from (inclusive).</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfRotatePageRangeAsyncWithHttpInfo (System.IO.Stream inputFile, int? rotationAngle, int? pageStart, int? pageEnd);
+        /// <summary>
+        /// Sanitize a PDF by removing embedded JavaScript
+        /// </summary>
+        /// <remarks>
+        /// Removes embedded JavaScript from a PDF file.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> EditPdfSanitizeAsync ();
+
+        /// <summary>
+        /// Sanitize a PDF by removing embedded JavaScript
+        /// </summary>
+        /// <remarks>
+        /// Removes embedded JavaScript from a PDF file.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> EditPdfSanitizeAsyncWithHttpInfo ();
         /// <summary>
         /// Sets ands fills PDF Form field values
         /// </summary>
@@ -4390,7 +4428,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <param name="paperSize">The desired paper size for the resized PDF document. Size ranges from A7 (smallest) to A0 (largest).</param>
+        /// <param name="paperSize">The desired paper size for the resized PDF document. Size ranges from A7 (smallest) to A0 (largest), and Letter, Legal, Tabloid, Ledger and B5.</param>
         /// <returns>byte[]</returns>
         public byte[] EditPdfResize (System.IO.Stream inputFile, string paperSize)
         {
@@ -4403,7 +4441,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <param name="paperSize">The desired paper size for the resized PDF document. Size ranges from A7 (smallest) to A0 (largest).</param>
+        /// <param name="paperSize">The desired paper size for the resized PDF document. Size ranges from A7 (smallest) to A0 (largest), and Letter, Legal, Tabloid, Ledger and B5.</param>
         /// <returns>ApiResponse of byte[]</returns>
         public ApiResponse< byte[] > EditPdfResizeWithHttpInfo (System.IO.Stream inputFile, string paperSize)
         {
@@ -4468,7 +4506,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <param name="paperSize">The desired paper size for the resized PDF document. Size ranges from A7 (smallest) to A0 (largest).</param>
+        /// <param name="paperSize">The desired paper size for the resized PDF document. Size ranges from A7 (smallest) to A0 (largest), and Letter, Legal, Tabloid, Ledger and B5.</param>
         /// <returns>Task of byte[]</returns>
         public async System.Threading.Tasks.Task<byte[]> EditPdfResizeAsync (System.IO.Stream inputFile, string paperSize)
         {
@@ -4482,7 +4520,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <param name="paperSize">The desired paper size for the resized PDF document. Size ranges from A7 (smallest) to A0 (largest).</param>
+        /// <param name="paperSize">The desired paper size for the resized PDF document. Size ranges from A7 (smallest) to A0 (largest), and Letter, Legal, Tabloid, Ledger and B5.</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfResizeAsyncWithHttpInfo (System.IO.Stream inputFile, string paperSize)
         {
@@ -4878,6 +4916,137 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Sanitize a PDF by removing embedded JavaScript Removes embedded JavaScript from a PDF file.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Object</returns>
+        public Object EditPdfSanitize ()
+        {
+             ApiResponse<Object> localVarResponse = EditPdfSanitizeWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Sanitize a PDF by removing embedded JavaScript Removes embedded JavaScript from a PDF file.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > EditPdfSanitizeWithHttpInfo ()
+        {
+
+            var localVarPath = "/convert/edit/pdf/sanitize";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditPdfSanitize", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Sanitize a PDF by removing embedded JavaScript Removes embedded JavaScript from a PDF file.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> EditPdfSanitizeAsync ()
+        {
+             ApiResponse<Object> localVarResponse = await EditPdfSanitizeAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Sanitize a PDF by removing embedded JavaScript Removes embedded JavaScript from a PDF file.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> EditPdfSanitizeAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/convert/edit/pdf/sanitize";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditPdfSanitize", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>

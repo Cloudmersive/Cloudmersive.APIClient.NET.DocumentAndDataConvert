@@ -301,6 +301,18 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         }
         
         /// <summary>
+        /// Test ConvertDocumentDocxToOdt
+        /// </summary>
+        [Test]
+        public void ConvertDocumentDocxToOdtTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile = null;
+            //var response = instance.ConvertDocumentDocxToOdt(inputFile);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
         /// Test ConvertDocumentDocxToPdf
         /// </summary>
         [Test]
@@ -308,7 +320,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //System.IO.Stream inputFile = null;
-            //var response = instance.ConvertDocumentDocxToPdf(inputFile);
+            //string compatabilityMode = null;
+            //var response = instance.ConvertDocumentDocxToPdf(inputFile, compatabilityMode);
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         

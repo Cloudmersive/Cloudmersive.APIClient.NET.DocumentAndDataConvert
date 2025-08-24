@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 This C# SDK is for the [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api):
 
 - API version: v1
-- SDK version: 3.6.0
+- SDK version: 3.6.1
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -78,17 +78,21 @@ namespace Example
             var apiInstance = new CompareDocumentApi();
             var inputFile1 = new System.IO.Stream(); // System.IO.Stream | First input file to perform the operation on.
             var inputFile2 = new System.IO.Stream(); // System.IO.Stream | Second input file to perform the operation on (more than 2 can be supplied).
+            var comparisonMode = comparisonMode_example;  // string | Optional; set to basic for a basic comparison, and advanced for advanced comparison mode.  Advanced comparison mode requires Managed Instance or Private Cloud deployment. (optional) 
             var autorepair = true;  // bool? | Optional; automatically repair input documents that have errors (default is true) (optional) 
+            var changeOutlines = true;  // bool? | Optional; highlight changes with a blue outline (default is true) (optional) 
+            var headersAndFooters = true;  // bool? | Optional; include headers and footers (default is false) (optional) 
+            var acceptAllChanges = true;  // bool? | Optional; accept all changes before comparison (default is false) (optional) 
 
             try
             {
-                // Compare Two Word DOCX
-                byte[] result = apiInstance.CompareDocumentDocx(inputFile1, inputFile2, autorepair);
+                // Compare Two Word DOC (Legacy 97-2003 Format)
+                byte[] result = apiInstance.CompareDocumentDoc(inputFile1, inputFile2, comparisonMode, autorepair, changeOutlines, headersAndFooters, acceptAllChanges);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling CompareDocumentApi.CompareDocumentDocx: " + e.Message );
+                Debug.Print("Exception when calling CompareDocumentApi.CompareDocumentDoc: " + e.Message );
             }
 
         }
@@ -103,6 +107,7 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*CompareDocumentApi* | [**CompareDocumentDoc**](docs/CompareDocumentApi.md#comparedocumentdoc) | **POST** /convert/compare/doc | Compare Two Word DOC (Legacy 97-2003 Format)
 *CompareDocumentApi* | [**CompareDocumentDocx**](docs/CompareDocumentApi.md#comparedocumentdocx) | **POST** /convert/compare/docx | Compare Two Word DOCX
 *ConvertDataApi* | [**ConvertDataCsvToJson**](docs/ConvertDataApi.md#convertdatacsvtojson) | **POST** /convert/csv/to/json | Convert CSV to JSON conversion
 *ConvertDataApi* | [**ConvertDataCsvToXml**](docs/ConvertDataApi.md#convertdatacsvtoxml) | **POST** /convert/csv/to/xml | Convert CSV to XML conversion
@@ -140,6 +145,7 @@ Class | Method | HTTP request | Description
 *ConvertDocumentApi* | [**ConvertDocumentDocxToDoc**](docs/ConvertDocumentApi.md#convertdocumentdocxtodoc) | **POST** /convert/docx/to/doc | Convert Word DOCX Document to Legacy Word DOC (97-03)
 *ConvertDocumentApi* | [**ConvertDocumentDocxToHtml**](docs/ConvertDocumentApi.md#convertdocumentdocxtohtml) | **POST** /convert/docx/to/html | Convert Word DOCX Document to HTML Document
 *ConvertDocumentApi* | [**ConvertDocumentDocxToJpg**](docs/ConvertDocumentApi.md#convertdocumentdocxtojpg) | **POST** /convert/docx/to/jpg | Convert Word DOCX Document to JPG/JPEG image array
+*ConvertDocumentApi* | [**ConvertDocumentDocxToOdt**](docs/ConvertDocumentApi.md#convertdocumentdocxtoodt) | **POST** /convert/docx/to/odt | Convert Word DOCX Document to ODT
 *ConvertDocumentApi* | [**ConvertDocumentDocxToPdf**](docs/ConvertDocumentApi.md#convertdocumentdocxtopdf) | **POST** /convert/docx/to/pdf | Convert Word DOCX Document to PDF
 *ConvertDocumentApi* | [**ConvertDocumentDocxToPng**](docs/ConvertDocumentApi.md#convertdocumentdocxtopng) | **POST** /convert/docx/to/png | Convert Word DOCX Document to PNG image array
 *ConvertDocumentApi* | [**ConvertDocumentDocxToRtf**](docs/ConvertDocumentApi.md#convertdocumentdocxtortf) | **POST** /convert/docx/to/rtf | Convert Word DOCX Document to RTF
@@ -222,6 +228,7 @@ Class | Method | HTTP request | Description
 *ConvertWebApi* | [**ConvertWebUrlToScreenshot**](docs/ConvertWebApi.md#convertweburltoscreenshot) | **POST** /convert/web/url/to/screenshot | Take screenshot of URL
 *ConvertWebApi* | [**ConvertWebUrlToTxt**](docs/ConvertWebApi.md#convertweburltotxt) | **POST** /convert/web/url/to/txt | Convert website URL page to text (txt)
 *EditDocumentApi* | [**EditDocumentBeginEditing**](docs/EditDocumentApi.md#editdocumentbeginediting) | **POST** /convert/edit/begin-editing | Begin editing a document
+*EditDocumentApi* | [**EditDocumentBeginEditingChunk**](docs/EditDocumentApi.md#editdocumentbegineditingchunk) | **POST** /convert/edit/begin-editing/chunk | Begin editing a document that is broken up until multiple chunks
 *EditDocumentApi* | [**EditDocumentDocxAcceptAllTrackChanges**](docs/EditDocumentApi.md#editdocumentdocxacceptalltrackchanges) | **POST** /convert/edit/docx/track-changes/accept-all | Accept all tracked changes, revisions in a Word DOCX document
 *EditDocumentApi* | [**EditDocumentDocxBody**](docs/EditDocumentApi.md#editdocumentdocxbody) | **POST** /convert/edit/docx/get-body | Get body from a Word DOCX document
 *EditDocumentApi* | [**EditDocumentDocxCreateBlankDocument**](docs/EditDocumentApi.md#editdocumentdocxcreateblankdocument) | **POST** /convert/edit/docx/create/blank | Create a blank Word DOCX document
@@ -326,6 +333,7 @@ Class | Method | HTTP request | Description
 *EditPdfApi* | [**EditPdfResize**](docs/EditPdfApi.md#editpdfresize) | **POST** /convert/edit/pdf/resize | Change PDF Document's Paper Size
 *EditPdfApi* | [**EditPdfRotateAllPages**](docs/EditPdfApi.md#editpdfrotateallpages) | **POST** /convert/edit/pdf/pages/rotate/all | Rotate all pages in a PDF document
 *EditPdfApi* | [**EditPdfRotatePageRange**](docs/EditPdfApi.md#editpdfrotatepagerange) | **POST** /convert/edit/pdf/pages/rotate/page-range | Rotate a range, subset of pages in a PDF document
+*EditPdfApi* | [**EditPdfSanitize**](docs/EditPdfApi.md#editpdfsanitize) | **POST** /convert/edit/pdf/sanitize | Sanitize a PDF by removing embedded JavaScript
 *EditPdfApi* | [**EditPdfSetFormFields**](docs/EditPdfApi.md#editpdfsetformfields) | **POST** /convert/edit/pdf/form/set-fields | Sets ands fills PDF Form field values
 *EditPdfApi* | [**EditPdfSetMetadata**](docs/EditPdfApi.md#editpdfsetmetadata) | **POST** /convert/edit/pdf/set-metadata | Sets PDF document metadata
 *EditPdfApi* | [**EditPdfSetPermissions**](docs/EditPdfApi.md#editpdfsetpermissions) | **POST** /convert/edit/pdf/encrypt/set-permissions | Encrypt, password-protect and set restricted permissions on a PDF
@@ -384,6 +392,7 @@ Class | Method | HTTP request | Description
 *ValidateDocumentApi* | [**ValidateDocumentCsvValidation**](docs/ValidateDocumentApi.md#validatedocumentcsvvalidation) | **POST** /convert/validate/csv | Validate a CSV file document (CSV)
 *ValidateDocumentApi* | [**ValidateDocumentDocValidation**](docs/ValidateDocumentApi.md#validatedocumentdocvalidation) | **POST** /convert/validate/doc | Validate a Word 97-2003 Legacy document (DOC)
 *ValidateDocumentApi* | [**ValidateDocumentDocxRepair**](docs/ValidateDocumentApi.md#validatedocumentdocxrepair) | **POST** /convert/validate/docx/repair | Repair a Word document (DOCX) that contains errors
+*ValidateDocumentApi* | [**ValidateDocumentDocxUpgrade**](docs/ValidateDocumentApi.md#validatedocumentdocxupgrade) | **POST** /convert/validate/docx/upgrade | Upgrade a Word document (DOCX) to Office 2010 Format
 *ValidateDocumentApi* | [**ValidateDocumentDocxValidation**](docs/ValidateDocumentApi.md#validatedocumentdocxvalidation) | **POST** /convert/validate/docx | Validate a Word document (DOCX)
 *ValidateDocumentApi* | [**ValidateDocumentEmlValidation**](docs/ValidateDocumentApi.md#validatedocumentemlvalidation) | **POST** /convert/validate/eml | Validate if input file is a valid EML file
 *ValidateDocumentApi* | [**ValidateDocumentExecutableValidation**](docs/ValidateDocumentApi.md#validatedocumentexecutablevalidation) | **POST** /convert/validate/executable | Validate if a file is executable
@@ -437,6 +446,8 @@ Class | Method | HTTP request | Description
  - [Model.Base64DetectResponse](docs/Base64DetectResponse.md)
  - [Model.Base64EncodeRequest](docs/Base64EncodeRequest.md)
  - [Model.Base64EncodeResponse](docs/Base64EncodeResponse.md)
+ - [Model.BeginEditingChunkRequest](docs/BeginEditingChunkRequest.md)
+ - [Model.BeginEditingChunkResponse](docs/BeginEditingChunkResponse.md)
  - [Model.ChangeLineEndingResponse](docs/ChangeLineEndingResponse.md)
  - [Model.ClearXlsxCellRequest](docs/ClearXlsxCellRequest.md)
  - [Model.ClearXlsxCellResponse](docs/ClearXlsxCellResponse.md)

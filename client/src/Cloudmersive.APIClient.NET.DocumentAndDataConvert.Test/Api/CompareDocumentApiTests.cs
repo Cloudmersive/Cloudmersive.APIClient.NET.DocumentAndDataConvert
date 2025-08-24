@@ -64,6 +64,24 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
 
         
         /// <summary>
+        /// Test CompareDocumentDoc
+        /// </summary>
+        [Test]
+        public void CompareDocumentDocTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputFile1 = null;
+            //System.IO.Stream inputFile2 = null;
+            //string comparisonMode = null;
+            //bool? autorepair = null;
+            //bool? changeOutlines = null;
+            //bool? headersAndFooters = null;
+            //bool? acceptAllChanges = null;
+            //var response = instance.CompareDocumentDoc(inputFile1, inputFile2, comparisonMode, autorepair, changeOutlines, headersAndFooters, acceptAllChanges);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
         /// Test CompareDocumentDocx
         /// </summary>
         [Test]
@@ -72,8 +90,12 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             // TODO uncomment below to test the method and replace null with proper value
             //System.IO.Stream inputFile1 = null;
             //System.IO.Stream inputFile2 = null;
+            //string comparisonMode = null;
             //bool? autorepair = null;
-            //var response = instance.CompareDocumentDocx(inputFile1, inputFile2, autorepair);
+            //bool? changeOutlines = null;
+            //bool? headersAndFooters = null;
+            //bool? acceptAllChanges = null;
+            //var response = instance.CompareDocumentDocx(inputFile1, inputFile2, comparisonMode, autorepair, changeOutlines, headersAndFooters, acceptAllChanges);
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
