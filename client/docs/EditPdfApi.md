@@ -1,6 +1,6 @@
 # Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api.EditPdfApi
 
-All URIs are relative to *http://api.cloudmersive.com*
+All URIs are relative to *https://api.cloudmersive.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

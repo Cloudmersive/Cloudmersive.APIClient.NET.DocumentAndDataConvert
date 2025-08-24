@@ -1,4 +1,4 @@
-{
+﻿{
   "swagger": "2.0",
   "info": {
     "version": "v1",
@@ -7,7 +7,7 @@
   },
   "host": "api.cloudmersive.com",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/convert/compare/docx": {
@@ -21376,3 +21376,4 @@
     }
   }
 }
+
