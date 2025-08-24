@@ -13,7 +13,7 @@
 
         <!-- Owners are typically nuget.org identities that allow gallery
              users to earily find other packages by the same owners.  -->
-        <owners>Cloudmersive</owners>
+        <owners>$author$</owners>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <developmentDependency>false</developmentDependency>
 

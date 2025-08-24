@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 This C# SDK is for the [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api):
 
 - API version: v1
-- SDK version: 3.6.1
+- SDK version: 3.6.2
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -103,7 +103,7 @@ namespace Example
 <a name="documentation-for-api-endpoints"></a>
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://api.cloudmersive.com*
+All URIs are relative to *http://api.cloudmersive.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------

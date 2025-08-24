@@ -7,7 +7,7 @@
   },
   "host": "api.cloudmersive.com",
   "schemes": [
-    "https"
+    "http"
   ],
   "paths": {
     "/convert/compare/docx": {
@@ -11049,11 +11049,21 @@
         "summary": "Sanitize a PDF by removing embedded JavaScript",
         "description": "Removes embedded JavaScript from a PDF file.",
         "operationId": "EditPdf_Sanitize",
-        "consumes": [],
+        "consumes": [
+          "multipart/form-data"
+        ],
         "produces": [
           "application/octet-stream"
         ],
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "inputFile",
+            "in": "formData",
+            "description": "Input file to perform the operation on.",
+            "required": true,
+            "type": "file"
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK",

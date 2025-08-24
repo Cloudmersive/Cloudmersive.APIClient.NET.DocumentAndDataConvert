@@ -1,6 +1,6 @@
 # Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api.EditPdfApi
 
-All URIs are relative to *https://api.cloudmersive.com*
+All URIs are relative to *http://api.cloudmersive.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -1539,7 +1539,7 @@ Name | Type | Description  | Notes
 
 <a name="editpdfsanitize"></a>
 # **EditPdfSanitize**
-> Object EditPdfSanitize ()
+> Object EditPdfSanitize (System.IO.Stream inputFile)
 
 Sanitize a PDF by removing embedded JavaScript
 
@@ -1565,11 +1565,12 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new EditPdfApi();
+            var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
 
             try
             {
                 // Sanitize a PDF by removing embedded JavaScript
-                Object result = apiInstance.EditPdfSanitize();
+                Object result = apiInstance.EditPdfSanitize(inputFile);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1582,7 +1583,10 @@ namespace Example
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
 
 ### Return type
 
@@ -1594,7 +1598,7 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: multipart/form-data
  - **Accept**: application/octet-stream
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

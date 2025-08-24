@@ -545,8 +545,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Removes embedded JavaScript from a PDF file.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>Object</returns>
-        Object EditPdfSanitize ();
+        Object EditPdfSanitize (System.IO.Stream inputFile);
 
         /// <summary>
         /// Sanitize a PDF by removing embedded JavaScript
@@ -555,8 +556,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Removes embedded JavaScript from a PDF file.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> EditPdfSanitizeWithHttpInfo ();
+        ApiResponse<Object> EditPdfSanitizeWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
         /// Sets ands fills PDF Form field values
         /// </summary>
@@ -1194,8 +1196,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Removes embedded JavaScript from a PDF file.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> EditPdfSanitizeAsync ();
+        System.Threading.Tasks.Task<Object> EditPdfSanitizeAsync (System.IO.Stream inputFile);
 
         /// <summary>
         /// Sanitize a PDF by removing embedded JavaScript
@@ -1204,8 +1207,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Removes embedded JavaScript from a PDF file.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> EditPdfSanitizeAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<Object>> EditPdfSanitizeAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
         /// Sets ands fills PDF Form field values
         /// </summary>
@@ -4922,10 +4926,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Sanitize a PDF by removing embedded JavaScript Removes embedded JavaScript from a PDF file.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>Object</returns>
-        public Object EditPdfSanitize ()
+        public Object EditPdfSanitize (System.IO.Stream inputFile)
         {
-             ApiResponse<Object> localVarResponse = EditPdfSanitizeWithHttpInfo();
+             ApiResponse<Object> localVarResponse = EditPdfSanitizeWithHttpInfo(inputFile);
              return localVarResponse.Data;
         }
 
@@ -4933,9 +4938,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Sanitize a PDF by removing embedded JavaScript Removes embedded JavaScript from a PDF file.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > EditPdfSanitizeWithHttpInfo ()
+        public ApiResponse< Object > EditPdfSanitizeWithHttpInfo (System.IO.Stream inputFile)
         {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditPdfApi->EditPdfSanitize");
 
             var localVarPath = "/convert/edit/pdf/sanitize";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4947,6 +4956,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -4958,6 +4968,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
 
             // authentication (Apikey) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
@@ -4987,10 +4998,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Sanitize a PDF by removing embedded JavaScript Removes embedded JavaScript from a PDF file.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> EditPdfSanitizeAsync ()
+        public async System.Threading.Tasks.Task<Object> EditPdfSanitizeAsync (System.IO.Stream inputFile)
         {
-             ApiResponse<Object> localVarResponse = await EditPdfSanitizeAsyncWithHttpInfo();
+             ApiResponse<Object> localVarResponse = await EditPdfSanitizeAsyncWithHttpInfo(inputFile);
              return localVarResponse.Data;
 
         }
@@ -4999,9 +5011,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// Sanitize a PDF by removing embedded JavaScript Removes embedded JavaScript from a PDF file.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> EditPdfSanitizeAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> EditPdfSanitizeAsyncWithHttpInfo (System.IO.Stream inputFile)
         {
+            // verify the required parameter 'inputFile' is set
+            if (inputFile == null)
+                throw new ApiException(400, "Missing required parameter 'inputFile' when calling EditPdfApi->EditPdfSanitize");
 
             var localVarPath = "/convert/edit/pdf/sanitize";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5013,6 +5029,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -5024,6 +5041,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
 
             // authentication (Apikey) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
