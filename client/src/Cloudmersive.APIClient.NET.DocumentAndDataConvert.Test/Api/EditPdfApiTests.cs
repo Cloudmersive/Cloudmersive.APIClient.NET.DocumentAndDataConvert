@@ -363,7 +363,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             // TODO uncomment below to test the method and replace null with proper value
             //System.IO.Stream inputFile = null;
             //var response = instance.EditPdfSanitize(inputFile);
-            //Assert.IsInstanceOf<Object> (response, "response is Object");
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
         /// <summary>

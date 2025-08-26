@@ -11068,7 +11068,10 @@
           "200": {
             "description": "OK",
             "schema": {
-              "type": "object"
+              "format": "byte",
+              "title": "OutputContent",
+              "description": "Output file content from the operation",
+              "type": "string"
             }
           }
         },

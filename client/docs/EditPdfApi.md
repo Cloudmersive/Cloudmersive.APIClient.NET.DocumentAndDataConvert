@@ -1539,7 +1539,7 @@ Name | Type | Description  | Notes
 
 <a name="editpdfsanitize"></a>
 # **EditPdfSanitize**
-> Object EditPdfSanitize (System.IO.Stream inputFile)
+> byte[] EditPdfSanitize (System.IO.Stream inputFile)
 
 Sanitize a PDF by removing embedded JavaScript
 
@@ -1570,7 +1570,7 @@ namespace Example
             try
             {
                 // Sanitize a PDF by removing embedded JavaScript
-                Object result = apiInstance.EditPdfSanitize(inputFile);
+                byte[] result = apiInstance.EditPdfSanitize(inputFile);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1590,7 +1590,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**byte[]**
 
 ### Authorization
 

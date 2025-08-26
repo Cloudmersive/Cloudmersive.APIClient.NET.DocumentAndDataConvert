@@ -546,8 +546,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <returns>Object</returns>
-        Object EditPdfSanitize (System.IO.Stream inputFile);
+        /// <returns>byte[]</returns>
+        byte[] EditPdfSanitize (System.IO.Stream inputFile);
 
         /// <summary>
         /// Sanitize a PDF by removing embedded JavaScript
@@ -557,8 +557,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> EditPdfSanitizeWithHttpInfo (System.IO.Stream inputFile);
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> EditPdfSanitizeWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
         /// Sets ands fills PDF Form field values
         /// </summary>
@@ -1197,8 +1197,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> EditPdfSanitizeAsync (System.IO.Stream inputFile);
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> EditPdfSanitizeAsync (System.IO.Stream inputFile);
 
         /// <summary>
         /// Sanitize a PDF by removing embedded JavaScript
@@ -1208,8 +1208,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> EditPdfSanitizeAsyncWithHttpInfo (System.IO.Stream inputFile);
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfSanitizeAsyncWithHttpInfo (System.IO.Stream inputFile);
         /// <summary>
         /// Sets ands fills PDF Form field values
         /// </summary>
@@ -4927,10 +4927,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <returns>Object</returns>
-        public Object EditPdfSanitize (System.IO.Stream inputFile)
+        /// <returns>byte[]</returns>
+        public byte[] EditPdfSanitize (System.IO.Stream inputFile)
         {
-             ApiResponse<Object> localVarResponse = EditPdfSanitizeWithHttpInfo(inputFile);
+             ApiResponse<byte[]> localVarResponse = EditPdfSanitizeWithHttpInfo(inputFile);
              return localVarResponse.Data;
         }
 
@@ -4939,8 +4939,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > EditPdfSanitizeWithHttpInfo (System.IO.Stream inputFile)
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > EditPdfSanitizeWithHttpInfo (System.IO.Stream inputFile)
         {
             // verify the required parameter 'inputFile' is set
             if (inputFile == null)
@@ -4989,9 +4989,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
@@ -4999,10 +4999,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> EditPdfSanitizeAsync (System.IO.Stream inputFile)
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> EditPdfSanitizeAsync (System.IO.Stream inputFile)
         {
-             ApiResponse<Object> localVarResponse = await EditPdfSanitizeAsyncWithHttpInfo(inputFile);
+             ApiResponse<byte[]> localVarResponse = await EditPdfSanitizeAsyncWithHttpInfo(inputFile);
              return localVarResponse.Data;
 
         }
@@ -5012,8 +5012,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> EditPdfSanitizeAsyncWithHttpInfo (System.IO.Stream inputFile)
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfSanitizeAsyncWithHttpInfo (System.IO.Stream inputFile)
         {
             // verify the required parameter 'inputFile' is set
             if (inputFile == null)
@@ -5062,9 +5062,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
