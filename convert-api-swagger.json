@@ -3780,6 +3780,13 @@
             "description": "Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false.",
             "required": false,
             "type": "boolean"
+          },
+          {
+            "name": "PageSize",
+            "in": "header",
+            "description": "Optional: Page size for the PDF output.  Default is Letter.  Allowed values: Letter, Legal, Tabloid, Ledger, A0, A1, A2, A3, A4, A5, A6.",
+            "required": false,
+            "type": "string"
           }
         ],
         "responses": {
@@ -10877,6 +10884,13 @@
             "description": "Input file to perform the operation on.",
             "required": true,
             "type": "file"
+          },
+          {
+            "name": "removeFormElements",
+            "in": "header",
+            "description": "Optional; Set to true to remove form elements, false to keep form elements.  Default is true.",
+            "required": false,
+            "type": "boolean"
           }
         ],
         "responses": {
@@ -10973,6 +10987,20 @@
             "description": "Optional: Select the conformance level for PDF/A - specify '1b' for PDF/A-1b or specify '2b' for PDF/A-2b; default is PDF/A-1b",
             "required": false,
             "type": "string"
+          },
+          {
+            "name": "conversionMode",
+            "in": "header",
+            "description": "Optional: Select the conversion mode for PDF/A 2b - default is Normal.  Use Advanced for improved support for edge cases such as different page sizes, AdvancedAutoRasterized to automatically detect which pages to rasterize, and AdvancedRasterized for highly visual documents that utilize layers or other advanced PDF features",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "rasterizeDpi",
+            "in": "header",
+            "description": "Optional: Set the DPI for the rasterization if using AdvancedRasterized conversion mode.  Default is 300 DPI.",
+            "required": false,
+            "type": "int"
           }
         ],
         "responses": {
@@ -12330,6 +12358,13 @@
         ],
         "parameters": [
           {
+            "name": "compatabilityMode",
+            "in": "header",
+            "description": "Optional: Set to 'Advanced' to maximize compatability, 'Normal' for default compatability; leave blank for default behavior (Normal)",
+            "required": false,
+            "type": "string"
+          },
+          {
             "name": "inputFile1",
             "in": "formData",
             "description": "First input file to perform the operation on.",
@@ -12377,6 +12412,13 @@
           "application/octet-stream"
         ],
         "parameters": [
+          {
+            "name": "compatabilityMode",
+            "in": "header",
+            "description": "Optional: Set to 'Advanced' to maximize compatability, 'Normal' for default compatability; leave blank for default behavior (Normal)",
+            "required": false,
+            "type": "string"
+          },
           {
             "name": "inputFile1",
             "in": "formData",
@@ -12493,13 +12535,23 @@
             "schema": {
               "$ref": "#/definitions/DocumentArrayInput"
             }
+          },
+          {
+            "name": "compatabilityMode",
+            "in": "header",
+            "description": "Optional: Set to 'Advanced' to maximize compatability, 'Normal' for default compatability; leave blank for default behavior (Normal)",
+            "required": false,
+            "type": "string"
           }
         ],
         "responses": {
           "200": {
             "description": "OK",
             "schema": {
-              "type": "object"
+              "format": "byte",
+              "title": "OutputContent",
+              "description": "Output file content from the operation",
+              "type": "string"
             }
           }
         },
@@ -16915,6 +16967,14 @@
           "format": "int32",
           "description": "Optional: Set to 100 to scale at 100%, set to 50% to scale down to 50% scale, set to 200% to scale up to 200% scale, etc.  Default is 100%. Maximum is 1000%.",
           "type": "integer"
+        },
+        "AutoSanitize": {
+          "description": "Optional: Automatically sanitize unsafe elements from the input HTML.  If disabled, and unsafe elements remain in the input HTML, the request will be blocked.  Default is true.",
+          "type": "boolean"
+        },
+        "PageSize": {
+          "description": "Optional: Page size for the PDF output.  Default is Letter.  Allowed values: Letter, Legal, Tabloid, Ledger, A0, A1, A2, A3, A4, A5, A6.",
+          "type": "string"
         }
       }
     },
@@ -20641,6 +20701,10 @@
           "items": {
             "$ref": "#/definitions/DocumentItem"
           }
+        },
+        "CompatabilityMode": {
+          "description": "Optional: Possible values are Normal (default) and Advanced, setting merge compatability mode",
+          "type": "string"
         }
       }
     },

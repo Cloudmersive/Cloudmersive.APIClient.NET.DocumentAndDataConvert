@@ -598,7 +598,7 @@ Name | Type | Description  | Notes
 
 <a name="mergedocumentpdf"></a>
 # **MergeDocumentPdf**
-> byte[] MergeDocumentPdf (System.IO.Stream inputFile1, System.IO.Stream inputFile2)
+> byte[] MergeDocumentPdf (System.IO.Stream inputFile1, System.IO.Stream inputFile2, string compatabilityMode = null)
 
 Merge Two PDF Files Together
 
@@ -626,11 +626,12 @@ namespace Example
             var apiInstance = new MergeDocumentApi();
             var inputFile1 = new System.IO.Stream(); // System.IO.Stream | First input file to perform the operation on.
             var inputFile2 = new System.IO.Stream(); // System.IO.Stream | Second input file to perform the operation on (more than 2 can be supplied).
+            var compatabilityMode = compatabilityMode_example;  // string | Optional: Set to 'Advanced' to maximize compatability, 'Normal' for default compatability; leave blank for default behavior (Normal) (optional) 
 
             try
             {
                 // Merge Two PDF Files Together
-                byte[] result = apiInstance.MergeDocumentPdf(inputFile1, inputFile2);
+                byte[] result = apiInstance.MergeDocumentPdf(inputFile1, inputFile2, compatabilityMode);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -648,6 +649,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **inputFile1** | **System.IO.Stream**| First input file to perform the operation on. | 
  **inputFile2** | **System.IO.Stream**| Second input file to perform the operation on (more than 2 can be supplied). | 
+ **compatabilityMode** | **string**| Optional: Set to &#39;Advanced&#39; to maximize compatability, &#39;Normal&#39; for default compatability; leave blank for default behavior (Normal) | [optional] 
 
 ### Return type
 
@@ -666,7 +668,7 @@ Name | Type | Description  | Notes
 
 <a name="mergedocumentpdfmulti"></a>
 # **MergeDocumentPdfMulti**
-> byte[] MergeDocumentPdfMulti (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null)
+> byte[] MergeDocumentPdfMulti (System.IO.Stream inputFile1, System.IO.Stream inputFile2, string compatabilityMode = null, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null)
 
 Merge Multple PDF Files Together
 
@@ -694,6 +696,7 @@ namespace Example
             var apiInstance = new MergeDocumentApi();
             var inputFile1 = new System.IO.Stream(); // System.IO.Stream | First input file to perform the operation on.
             var inputFile2 = new System.IO.Stream(); // System.IO.Stream | Second input file to perform the operation on.
+            var compatabilityMode = compatabilityMode_example;  // string | Optional: Set to 'Advanced' to maximize compatability, 'Normal' for default compatability; leave blank for default behavior (Normal) (optional) 
             var inputFile3 = new System.IO.Stream(); // System.IO.Stream | Third input file to perform the operation on. (optional) 
             var inputFile4 = new System.IO.Stream(); // System.IO.Stream | Fourth input file to perform the operation on. (optional) 
             var inputFile5 = new System.IO.Stream(); // System.IO.Stream | Fifth input file to perform the operation on. (optional) 
@@ -706,7 +709,7 @@ namespace Example
             try
             {
                 // Merge Multple PDF Files Together
-                byte[] result = apiInstance.MergeDocumentPdfMulti(inputFile1, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
+                byte[] result = apiInstance.MergeDocumentPdfMulti(inputFile1, inputFile2, compatabilityMode, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -724,6 +727,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **inputFile1** | **System.IO.Stream**| First input file to perform the operation on. | 
  **inputFile2** | **System.IO.Stream**| Second input file to perform the operation on. | 
+ **compatabilityMode** | **string**| Optional: Set to &#39;Advanced&#39; to maximize compatability, &#39;Normal&#39; for default compatability; leave blank for default behavior (Normal) | [optional] 
  **inputFile3** | **System.IO.Stream**| Third input file to perform the operation on. | [optional] 
  **inputFile4** | **System.IO.Stream**| Fourth input file to perform the operation on. | [optional] 
  **inputFile5** | **System.IO.Stream**| Fifth input file to perform the operation on. | [optional] 
@@ -750,7 +754,7 @@ Name | Type | Description  | Notes
 
 <a name="mergedocumentpdfmultiarray"></a>
 # **MergeDocumentPdfMultiArray**
-> Object MergeDocumentPdfMultiArray (DocumentArrayInput input)
+> byte[] MergeDocumentPdfMultiArray (DocumentArrayInput input, string compatabilityMode = null)
 
 Merge Multple PDF Files Together from an array
 
@@ -777,11 +781,12 @@ namespace Example
 
             var apiInstance = new MergeDocumentApi();
             var input = new DocumentArrayInput(); // DocumentArrayInput | Array of input files
+            var compatabilityMode = compatabilityMode_example;  // string | Optional: Set to 'Advanced' to maximize compatability, 'Normal' for default compatability; leave blank for default behavior (Normal) (optional) 
 
             try
             {
                 // Merge Multple PDF Files Together from an array
-                Object result = apiInstance.MergeDocumentPdfMultiArray(input);
+                byte[] result = apiInstance.MergeDocumentPdfMultiArray(input, compatabilityMode);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -798,10 +803,11 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **input** | [**DocumentArrayInput**](DocumentArrayInput.md)| Array of input files | 
+ **compatabilityMode** | **string**| Optional: Set to &#39;Advanced&#39; to maximize compatability, &#39;Normal&#39; for default compatability; leave blank for default behavior (Normal) | [optional] 
 
 ### Return type
 
-**Object**
+**byte[]**
 
 ### Authorization
 

@@ -37,12 +37,16 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// <param name="extraLoadingWait">Optional: Additional number of milliseconds to wait once the web page has finished loading before taking the screenshot.  Can be helpful for highly asynchronous websites. Provide a value of 0 for the default of 5000 milliseconds (5 seconds). Maximum is 30000 milliseconds (30 seconds)..</param>
         /// <param name="includeBackgroundGraphics">Optional: Set to true to include background graphics in the PDF, or false to not include.  Default is true..</param>
         /// <param name="scaleFactor">Optional: Set to 100 to scale at 100%, set to 50% to scale down to 50% scale, set to 200% to scale up to 200% scale, etc.  Default is 100%. Maximum is 1000%..</param>
-        public HtmlToPdfRequest(string html = default(string), int? extraLoadingWait = default(int?), bool? includeBackgroundGraphics = default(bool?), int? scaleFactor = default(int?))
+        /// <param name="autoSanitize">Optional: Automatically sanitize unsafe elements from the input HTML.  If disabled, and unsafe elements remain in the input HTML, the request will be blocked.  Default is true..</param>
+        /// <param name="pageSize">Optional: Page size for the PDF output.  Default is Letter.  Allowed values: Letter, Legal, Tabloid, Ledger, A0, A1, A2, A3, A4, A5, A6..</param>
+        public HtmlToPdfRequest(string html = default(string), int? extraLoadingWait = default(int?), bool? includeBackgroundGraphics = default(bool?), int? scaleFactor = default(int?), bool? autoSanitize = default(bool?), string pageSize = default(string))
         {
             this.Html = html;
             this.ExtraLoadingWait = extraLoadingWait;
             this.IncludeBackgroundGraphics = includeBackgroundGraphics;
             this.ScaleFactor = scaleFactor;
+            this.AutoSanitize = autoSanitize;
+            this.PageSize = pageSize;
         }
         
         /// <summary>
@@ -74,6 +78,20 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         public int? ScaleFactor { get; set; }
 
         /// <summary>
+        /// Optional: Automatically sanitize unsafe elements from the input HTML.  If disabled, and unsafe elements remain in the input HTML, the request will be blocked.  Default is true.
+        /// </summary>
+        /// <value>Optional: Automatically sanitize unsafe elements from the input HTML.  If disabled, and unsafe elements remain in the input HTML, the request will be blocked.  Default is true.</value>
+        [DataMember(Name="AutoSanitize", EmitDefaultValue=false)]
+        public bool? AutoSanitize { get; set; }
+
+        /// <summary>
+        /// Optional: Page size for the PDF output.  Default is Letter.  Allowed values: Letter, Legal, Tabloid, Ledger, A0, A1, A2, A3, A4, A5, A6.
+        /// </summary>
+        /// <value>Optional: Page size for the PDF output.  Default is Letter.  Allowed values: Letter, Legal, Tabloid, Ledger, A0, A1, A2, A3, A4, A5, A6.</value>
+        [DataMember(Name="PageSize", EmitDefaultValue=false)]
+        public string PageSize { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -85,6 +103,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
             sb.Append("  ExtraLoadingWait: ").Append(ExtraLoadingWait).Append("\n");
             sb.Append("  IncludeBackgroundGraphics: ").Append(IncludeBackgroundGraphics).Append("\n");
             sb.Append("  ScaleFactor: ").Append(ScaleFactor).Append("\n");
+            sb.Append("  AutoSanitize: ").Append(AutoSanitize).Append("\n");
+            sb.Append("  PageSize: ").Append(PageSize).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -138,6 +158,16 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                     this.ScaleFactor == input.ScaleFactor ||
                     (this.ScaleFactor != null &&
                     this.ScaleFactor.Equals(input.ScaleFactor))
+                ) && 
+                (
+                    this.AutoSanitize == input.AutoSanitize ||
+                    (this.AutoSanitize != null &&
+                    this.AutoSanitize.Equals(input.AutoSanitize))
+                ) && 
+                (
+                    this.PageSize == input.PageSize ||
+                    (this.PageSize != null &&
+                    this.PageSize.Equals(input.PageSize))
                 );
         }
 
@@ -158,6 +188,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                     hashCode = hashCode * 59 + this.IncludeBackgroundGraphics.GetHashCode();
                 if (this.ScaleFactor != null)
                     hashCode = hashCode * 59 + this.ScaleFactor.GetHashCode();
+                if (this.AutoSanitize != null)
+                    hashCode = hashCode * 59 + this.AutoSanitize.GetHashCode();
+                if (this.PageSize != null)
+                    hashCode = hashCode * 59 + this.PageSize.GetHashCode();
                 return hashCode;
             }
         }

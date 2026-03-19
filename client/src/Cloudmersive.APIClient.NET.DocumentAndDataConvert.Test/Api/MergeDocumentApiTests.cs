@@ -189,7 +189,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             // TODO uncomment below to test the method and replace null with proper value
             //System.IO.Stream inputFile1 = null;
             //System.IO.Stream inputFile2 = null;
-            //var response = instance.MergeDocumentPdf(inputFile1, inputFile2);
+            //string compatabilityMode = null;
+            //var response = instance.MergeDocumentPdf(inputFile1, inputFile2, compatabilityMode);
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
@@ -202,6 +203,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             // TODO uncomment below to test the method and replace null with proper value
             //System.IO.Stream inputFile1 = null;
             //System.IO.Stream inputFile2 = null;
+            //string compatabilityMode = null;
             //System.IO.Stream inputFile3 = null;
             //System.IO.Stream inputFile4 = null;
             //System.IO.Stream inputFile5 = null;
@@ -210,7 +212,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             //System.IO.Stream inputFile8 = null;
             //System.IO.Stream inputFile9 = null;
             //System.IO.Stream inputFile10 = null;
-            //var response = instance.MergeDocumentPdfMulti(inputFile1, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
+            //var response = instance.MergeDocumentPdfMulti(inputFile1, inputFile2, compatabilityMode, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
@@ -222,8 +224,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //DocumentArrayInput input = null;
-            //var response = instance.MergeDocumentPdfMultiArray(input);
-            //Assert.IsInstanceOf<Object> (response, "response is Object");
+            //string compatabilityMode = null;
+            //var response = instance.MergeDocumentPdfMultiArray(input, compatabilityMode);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
         /// <summary>

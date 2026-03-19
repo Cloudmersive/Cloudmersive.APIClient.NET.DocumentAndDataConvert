@@ -34,9 +34,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         /// Initializes a new instance of the <see cref="DocumentArrayInput" /> class.
         /// </summary>
         /// <param name="documents">Array of document objects.</param>
-        public DocumentArrayInput(List<DocumentItem> documents = default(List<DocumentItem>))
+        /// <param name="compatabilityMode">Optional: Possible values are Normal (default) and Advanced, setting merge compatability mode.</param>
+        public DocumentArrayInput(List<DocumentItem> documents = default(List<DocumentItem>), string compatabilityMode = default(string))
         {
             this.Documents = documents;
+            this.CompatabilityMode = compatabilityMode;
         }
         
         /// <summary>
@@ -47,6 +49,13 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
         public List<DocumentItem> Documents { get; set; }
 
         /// <summary>
+        /// Optional: Possible values are Normal (default) and Advanced, setting merge compatability mode
+        /// </summary>
+        /// <value>Optional: Possible values are Normal (default) and Advanced, setting merge compatability mode</value>
+        [DataMember(Name="CompatabilityMode", EmitDefaultValue=false)]
+        public string CompatabilityMode { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -55,6 +64,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
             var sb = new StringBuilder();
             sb.Append("class DocumentArrayInput {\n");
             sb.Append("  Documents: ").Append(Documents).Append("\n");
+            sb.Append("  CompatabilityMode: ").Append(CompatabilityMode).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -93,6 +103,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                     this.Documents == input.Documents ||
                     this.Documents != null &&
                     this.Documents.SequenceEqual(input.Documents)
+                ) && 
+                (
+                    this.CompatabilityMode == input.CompatabilityMode ||
+                    (this.CompatabilityMode != null &&
+                    this.CompatabilityMode.Equals(input.CompatabilityMode))
                 );
         }
 
@@ -107,6 +122,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Model
                 int hashCode = 41;
                 if (this.Documents != null)
                     hashCode = hashCode * 59 + this.Documents.GetHashCode();
+                if (this.CompatabilityMode != null)
+                    hashCode = hashCode * 59 + this.CompatabilityMode.GetHashCode();
                 return hashCode;
             }
         }

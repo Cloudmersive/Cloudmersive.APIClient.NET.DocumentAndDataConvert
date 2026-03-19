@@ -241,8 +241,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="compatabilityMode">Optional: Set to &#39;Advanced&#39; to maximize compatability, &#39;Normal&#39; for default compatability; leave blank for default behavior (Normal) (optional)</param>
         /// <returns>byte[]</returns>
-        byte[] MergeDocumentPdf (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+        byte[] MergeDocumentPdf (System.IO.Stream inputFile1, System.IO.Stream inputFile2, string compatabilityMode = null);
 
         /// <summary>
         /// Merge Two PDF Files Together
@@ -253,8 +254,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="compatabilityMode">Optional: Set to &#39;Advanced&#39; to maximize compatability, &#39;Normal&#39; for default compatability; leave blank for default behavior (Normal) (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
-        ApiResponse<byte[]> MergeDocumentPdfWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+        ApiResponse<byte[]> MergeDocumentPdfWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, string compatabilityMode = null);
         /// <summary>
         /// Merge Multple PDF Files Together
         /// </summary>
@@ -264,6 +266,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="compatabilityMode">Optional: Set to &#39;Advanced&#39; to maximize compatability, &#39;Normal&#39; for default compatability; leave blank for default behavior (Normal) (optional)</param>
         /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
         /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
         /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
@@ -273,7 +276,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
         /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
         /// <returns>byte[]</returns>
-        byte[] MergeDocumentPdfMulti (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
+        byte[] MergeDocumentPdfMulti (System.IO.Stream inputFile1, System.IO.Stream inputFile2, string compatabilityMode = null, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
 
         /// <summary>
         /// Merge Multple PDF Files Together
@@ -284,6 +287,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="compatabilityMode">Optional: Set to &#39;Advanced&#39; to maximize compatability, &#39;Normal&#39; for default compatability; leave blank for default behavior (Normal) (optional)</param>
         /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
         /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
         /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
@@ -293,7 +297,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
         /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
-        ApiResponse<byte[]> MergeDocumentPdfMultiWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
+        ApiResponse<byte[]> MergeDocumentPdfMultiWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, string compatabilityMode = null, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
         /// <summary>
         /// Merge Multple PDF Files Together from an array
         /// </summary>
@@ -302,8 +306,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Array of input files</param>
-        /// <returns>Object</returns>
-        Object MergeDocumentPdfMultiArray (DocumentArrayInput input);
+        /// <param name="compatabilityMode">Optional: Set to &#39;Advanced&#39; to maximize compatability, &#39;Normal&#39; for default compatability; leave blank for default behavior (Normal) (optional)</param>
+        /// <returns>byte[]</returns>
+        byte[] MergeDocumentPdfMultiArray (DocumentArrayInput input, string compatabilityMode = null);
 
         /// <summary>
         /// Merge Multple PDF Files Together from an array
@@ -313,8 +318,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Array of input files</param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> MergeDocumentPdfMultiArrayWithHttpInfo (DocumentArrayInput input);
+        /// <param name="compatabilityMode">Optional: Set to &#39;Advanced&#39; to maximize compatability, &#39;Normal&#39; for default compatability; leave blank for default behavior (Normal) (optional)</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> MergeDocumentPdfMultiArrayWithHttpInfo (DocumentArrayInput input, string compatabilityMode = null);
         /// <summary>
         /// Merge Two PNG Files Together
         /// </summary>
@@ -845,8 +851,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="compatabilityMode">Optional: Set to &#39;Advanced&#39; to maximize compatability, &#39;Normal&#39; for default compatability; leave blank for default behavior (Normal) (optional)</param>
         /// <returns>Task of byte[]</returns>
-        System.Threading.Tasks.Task<byte[]> MergeDocumentPdfAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+        System.Threading.Tasks.Task<byte[]> MergeDocumentPdfAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2, string compatabilityMode = null);
 
         /// <summary>
         /// Merge Two PDF Files Together
@@ -857,8 +864,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="compatabilityMode">Optional: Set to &#39;Advanced&#39; to maximize compatability, &#39;Normal&#39; for default compatability; leave blank for default behavior (Normal) (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        System.Threading.Tasks.Task<ApiResponse<byte[]>> MergeDocumentPdfAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2);
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> MergeDocumentPdfAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, string compatabilityMode = null);
         /// <summary>
         /// Merge Multple PDF Files Together
         /// </summary>
@@ -868,6 +876,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="compatabilityMode">Optional: Set to &#39;Advanced&#39; to maximize compatability, &#39;Normal&#39; for default compatability; leave blank for default behavior (Normal) (optional)</param>
         /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
         /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
         /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
@@ -877,7 +886,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
         /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
         /// <returns>Task of byte[]</returns>
-        System.Threading.Tasks.Task<byte[]> MergeDocumentPdfMultiAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
+        System.Threading.Tasks.Task<byte[]> MergeDocumentPdfMultiAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2, string compatabilityMode = null, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
 
         /// <summary>
         /// Merge Multple PDF Files Together
@@ -888,6 +897,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="compatabilityMode">Optional: Set to &#39;Advanced&#39; to maximize compatability, &#39;Normal&#39; for default compatability; leave blank for default behavior (Normal) (optional)</param>
         /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
         /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
         /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
@@ -897,7 +907,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
         /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        System.Threading.Tasks.Task<ApiResponse<byte[]>> MergeDocumentPdfMultiAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> MergeDocumentPdfMultiAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, string compatabilityMode = null, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null);
         /// <summary>
         /// Merge Multple PDF Files Together from an array
         /// </summary>
@@ -906,8 +916,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Array of input files</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> MergeDocumentPdfMultiArrayAsync (DocumentArrayInput input);
+        /// <param name="compatabilityMode">Optional: Set to &#39;Advanced&#39; to maximize compatability, &#39;Normal&#39; for default compatability; leave blank for default behavior (Normal) (optional)</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> MergeDocumentPdfMultiArrayAsync (DocumentArrayInput input, string compatabilityMode = null);
 
         /// <summary>
         /// Merge Multple PDF Files Together from an array
@@ -917,8 +928,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Array of input files</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> MergeDocumentPdfMultiArrayAsyncWithHttpInfo (DocumentArrayInput input);
+        /// <param name="compatabilityMode">Optional: Set to &#39;Advanced&#39; to maximize compatability, &#39;Normal&#39; for default compatability; leave blank for default behavior (Normal) (optional)</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> MergeDocumentPdfMultiArrayAsyncWithHttpInfo (DocumentArrayInput input, string compatabilityMode = null);
         /// <summary>
         /// Merge Two PNG Files Together
         /// </summary>
@@ -2716,10 +2728,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="compatabilityMode">Optional: Set to &#39;Advanced&#39; to maximize compatability, &#39;Normal&#39; for default compatability; leave blank for default behavior (Normal) (optional)</param>
         /// <returns>byte[]</returns>
-        public byte[] MergeDocumentPdf (System.IO.Stream inputFile1, System.IO.Stream inputFile2)
+        public byte[] MergeDocumentPdf (System.IO.Stream inputFile1, System.IO.Stream inputFile2, string compatabilityMode = null)
         {
-             ApiResponse<byte[]> localVarResponse = MergeDocumentPdfWithHttpInfo(inputFile1, inputFile2);
+             ApiResponse<byte[]> localVarResponse = MergeDocumentPdfWithHttpInfo(inputFile1, inputFile2, compatabilityMode);
              return localVarResponse.Data;
         }
 
@@ -2729,8 +2742,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="compatabilityMode">Optional: Set to &#39;Advanced&#39; to maximize compatability, &#39;Normal&#39; for default compatability; leave blank for default behavior (Normal) (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
-        public ApiResponse< byte[] > MergeDocumentPdfWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2)
+        public ApiResponse< byte[] > MergeDocumentPdfWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, string compatabilityMode = null)
         {
             // verify the required parameter 'inputFile1' is set
             if (inputFile1 == null)
@@ -2761,6 +2775,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (compatabilityMode != null) localVarHeaderParams.Add("compatabilityMode", this.Configuration.ApiClient.ParameterToString(compatabilityMode)); // header parameter
             if (inputFile1 != null) localVarFileParams.Add("inputFile1", this.Configuration.ApiClient.ParameterToFile("inputFile1", inputFile1));
             if (inputFile2 != null) localVarFileParams.Add("inputFile2", this.Configuration.ApiClient.ParameterToFile("inputFile2", inputFile2));
 
@@ -2794,10 +2809,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="compatabilityMode">Optional: Set to &#39;Advanced&#39; to maximize compatability, &#39;Normal&#39; for default compatability; leave blank for default behavior (Normal) (optional)</param>
         /// <returns>Task of byte[]</returns>
-        public async System.Threading.Tasks.Task<byte[]> MergeDocumentPdfAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2)
+        public async System.Threading.Tasks.Task<byte[]> MergeDocumentPdfAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2, string compatabilityMode = null)
         {
-             ApiResponse<byte[]> localVarResponse = await MergeDocumentPdfAsyncWithHttpInfo(inputFile1, inputFile2);
+             ApiResponse<byte[]> localVarResponse = await MergeDocumentPdfAsyncWithHttpInfo(inputFile1, inputFile2, compatabilityMode);
              return localVarResponse.Data;
 
         }
@@ -2808,8 +2824,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on (more than 2 can be supplied).</param>
+        /// <param name="compatabilityMode">Optional: Set to &#39;Advanced&#39; to maximize compatability, &#39;Normal&#39; for default compatability; leave blank for default behavior (Normal) (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> MergeDocumentPdfAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2)
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> MergeDocumentPdfAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, string compatabilityMode = null)
         {
             // verify the required parameter 'inputFile1' is set
             if (inputFile1 == null)
@@ -2840,6 +2857,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (compatabilityMode != null) localVarHeaderParams.Add("compatabilityMode", this.Configuration.ApiClient.ParameterToString(compatabilityMode)); // header parameter
             if (inputFile1 != null) localVarFileParams.Add("inputFile1", this.Configuration.ApiClient.ParameterToFile("inputFile1", inputFile1));
             if (inputFile2 != null) localVarFileParams.Add("inputFile2", this.Configuration.ApiClient.ParameterToFile("inputFile2", inputFile2));
 
@@ -2873,6 +2891,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="compatabilityMode">Optional: Set to &#39;Advanced&#39; to maximize compatability, &#39;Normal&#39; for default compatability; leave blank for default behavior (Normal) (optional)</param>
         /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
         /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
         /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
@@ -2882,9 +2901,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
         /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
         /// <returns>byte[]</returns>
-        public byte[] MergeDocumentPdfMulti (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null)
+        public byte[] MergeDocumentPdfMulti (System.IO.Stream inputFile1, System.IO.Stream inputFile2, string compatabilityMode = null, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null)
         {
-             ApiResponse<byte[]> localVarResponse = MergeDocumentPdfMultiWithHttpInfo(inputFile1, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
+             ApiResponse<byte[]> localVarResponse = MergeDocumentPdfMultiWithHttpInfo(inputFile1, inputFile2, compatabilityMode, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
              return localVarResponse.Data;
         }
 
@@ -2894,6 +2913,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="compatabilityMode">Optional: Set to &#39;Advanced&#39; to maximize compatability, &#39;Normal&#39; for default compatability; leave blank for default behavior (Normal) (optional)</param>
         /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
         /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
         /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
@@ -2903,7 +2923,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
         /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
-        public ApiResponse< byte[] > MergeDocumentPdfMultiWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null)
+        public ApiResponse< byte[] > MergeDocumentPdfMultiWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, string compatabilityMode = null, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null)
         {
             // verify the required parameter 'inputFile1' is set
             if (inputFile1 == null)
@@ -2934,6 +2954,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (compatabilityMode != null) localVarHeaderParams.Add("compatabilityMode", this.Configuration.ApiClient.ParameterToString(compatabilityMode)); // header parameter
             if (inputFile1 != null) localVarFileParams.Add("inputFile1", this.Configuration.ApiClient.ParameterToFile("inputFile1", inputFile1));
             if (inputFile2 != null) localVarFileParams.Add("inputFile2", this.Configuration.ApiClient.ParameterToFile("inputFile2", inputFile2));
             if (inputFile3 != null) localVarFileParams.Add("inputFile3", this.Configuration.ApiClient.ParameterToFile("inputFile3", inputFile3));
@@ -2975,6 +2996,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="compatabilityMode">Optional: Set to &#39;Advanced&#39; to maximize compatability, &#39;Normal&#39; for default compatability; leave blank for default behavior (Normal) (optional)</param>
         /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
         /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
         /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
@@ -2984,9 +3006,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
         /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
         /// <returns>Task of byte[]</returns>
-        public async System.Threading.Tasks.Task<byte[]> MergeDocumentPdfMultiAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null)
+        public async System.Threading.Tasks.Task<byte[]> MergeDocumentPdfMultiAsync (System.IO.Stream inputFile1, System.IO.Stream inputFile2, string compatabilityMode = null, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null)
         {
-             ApiResponse<byte[]> localVarResponse = await MergeDocumentPdfMultiAsyncWithHttpInfo(inputFile1, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
+             ApiResponse<byte[]> localVarResponse = await MergeDocumentPdfMultiAsyncWithHttpInfo(inputFile1, inputFile2, compatabilityMode, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
              return localVarResponse.Data;
 
         }
@@ -2997,6 +3019,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile1">First input file to perform the operation on.</param>
         /// <param name="inputFile2">Second input file to perform the operation on.</param>
+        /// <param name="compatabilityMode">Optional: Set to &#39;Advanced&#39; to maximize compatability, &#39;Normal&#39; for default compatability; leave blank for default behavior (Normal) (optional)</param>
         /// <param name="inputFile3">Third input file to perform the operation on. (optional)</param>
         /// <param name="inputFile4">Fourth input file to perform the operation on. (optional)</param>
         /// <param name="inputFile5">Fifth input file to perform the operation on. (optional)</param>
@@ -3006,7 +3029,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <param name="inputFile9">Ninth input file to perform the operation on. (optional)</param>
         /// <param name="inputFile10">Tenth input file to perform the operation on. (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> MergeDocumentPdfMultiAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null)
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> MergeDocumentPdfMultiAsyncWithHttpInfo (System.IO.Stream inputFile1, System.IO.Stream inputFile2, string compatabilityMode = null, System.IO.Stream inputFile3 = null, System.IO.Stream inputFile4 = null, System.IO.Stream inputFile5 = null, System.IO.Stream inputFile6 = null, System.IO.Stream inputFile7 = null, System.IO.Stream inputFile8 = null, System.IO.Stream inputFile9 = null, System.IO.Stream inputFile10 = null)
         {
             // verify the required parameter 'inputFile1' is set
             if (inputFile1 == null)
@@ -3037,6 +3060,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (compatabilityMode != null) localVarHeaderParams.Add("compatabilityMode", this.Configuration.ApiClient.ParameterToString(compatabilityMode)); // header parameter
             if (inputFile1 != null) localVarFileParams.Add("inputFile1", this.Configuration.ApiClient.ParameterToFile("inputFile1", inputFile1));
             if (inputFile2 != null) localVarFileParams.Add("inputFile2", this.Configuration.ApiClient.ParameterToFile("inputFile2", inputFile2));
             if (inputFile3 != null) localVarFileParams.Add("inputFile3", this.Configuration.ApiClient.ParameterToFile("inputFile3", inputFile3));
@@ -3077,10 +3101,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Array of input files</param>
-        /// <returns>Object</returns>
-        public Object MergeDocumentPdfMultiArray (DocumentArrayInput input)
+        /// <param name="compatabilityMode">Optional: Set to &#39;Advanced&#39; to maximize compatability, &#39;Normal&#39; for default compatability; leave blank for default behavior (Normal) (optional)</param>
+        /// <returns>byte[]</returns>
+        public byte[] MergeDocumentPdfMultiArray (DocumentArrayInput input, string compatabilityMode = null)
         {
-             ApiResponse<Object> localVarResponse = MergeDocumentPdfMultiArrayWithHttpInfo(input);
+             ApiResponse<byte[]> localVarResponse = MergeDocumentPdfMultiArrayWithHttpInfo(input, compatabilityMode);
              return localVarResponse.Data;
         }
 
@@ -3089,8 +3114,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Array of input files</param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > MergeDocumentPdfMultiArrayWithHttpInfo (DocumentArrayInput input)
+        /// <param name="compatabilityMode">Optional: Set to &#39;Advanced&#39; to maximize compatability, &#39;Normal&#39; for default compatability; leave blank for default behavior (Normal) (optional)</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > MergeDocumentPdfMultiArrayWithHttpInfo (DocumentArrayInput input, string compatabilityMode = null)
         {
             // verify the required parameter 'input' is set
             if (input == null)
@@ -3122,6 +3148,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (compatabilityMode != null) localVarHeaderParams.Add("compatabilityMode", this.Configuration.ApiClient.ParameterToString(compatabilityMode)); // header parameter
             if (input != null && input.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
@@ -3150,9 +3177,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
@@ -3160,10 +3187,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Array of input files</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> MergeDocumentPdfMultiArrayAsync (DocumentArrayInput input)
+        /// <param name="compatabilityMode">Optional: Set to &#39;Advanced&#39; to maximize compatability, &#39;Normal&#39; for default compatability; leave blank for default behavior (Normal) (optional)</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> MergeDocumentPdfMultiArrayAsync (DocumentArrayInput input, string compatabilityMode = null)
         {
-             ApiResponse<Object> localVarResponse = await MergeDocumentPdfMultiArrayAsyncWithHttpInfo(input);
+             ApiResponse<byte[]> localVarResponse = await MergeDocumentPdfMultiArrayAsyncWithHttpInfo(input, compatabilityMode);
              return localVarResponse.Data;
 
         }
@@ -3173,8 +3201,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Array of input files</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> MergeDocumentPdfMultiArrayAsyncWithHttpInfo (DocumentArrayInput input)
+        /// <param name="compatabilityMode">Optional: Set to &#39;Advanced&#39; to maximize compatability, &#39;Normal&#39; for default compatability; leave blank for default behavior (Normal) (optional)</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> MergeDocumentPdfMultiArrayAsyncWithHttpInfo (DocumentArrayInput input, string compatabilityMode = null)
         {
             // verify the required parameter 'input' is set
             if (input == null)
@@ -3206,6 +3235,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (compatabilityMode != null) localVarHeaderParams.Add("compatabilityMode", this.Configuration.ApiClient.ParameterToString(compatabilityMode)); // header parameter
             if (input != null && input.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
@@ -3234,9 +3264,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>

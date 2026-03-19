@@ -54,8 +54,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <param name="conformanceLevel">Optional: Select the conformance level for PDF/A - specify &#39;1b&#39; for PDF/A-1b or specify &#39;2b&#39; for PDF/A-2b; default is PDF/A-1b (optional)</param>
+        /// <param name="conversionMode">Optional: Select the conversion mode for PDF/A 2b - default is Normal.  Use Advanced for improved support for edge cases such as different page sizes, AdvancedAutoRasterized to automatically detect which pages to rasterize, and AdvancedRasterized for highly visual documents that utilize layers or other advanced PDF features (optional)</param>
+        /// <param name="rasterizeDpi">Optional: Set the DPI for the rasterization if using AdvancedRasterized conversion mode.  Default is 300 DPI. (optional)</param>
         /// <returns>byte[]</returns>
-        byte[] EditPdfConvertToPdfA (System.IO.Stream inputFile, string conformanceLevel = null);
+        byte[] EditPdfConvertToPdfA (System.IO.Stream inputFile, string conformanceLevel = null, string conversionMode = null, Object rasterizeDpi = null);
 
         /// <summary>
         /// Convert a PDF file to PDF/A
@@ -66,8 +68,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <param name="conformanceLevel">Optional: Select the conformance level for PDF/A - specify &#39;1b&#39; for PDF/A-1b or specify &#39;2b&#39; for PDF/A-2b; default is PDF/A-1b (optional)</param>
+        /// <param name="conversionMode">Optional: Select the conversion mode for PDF/A 2b - default is Normal.  Use Advanced for improved support for edge cases such as different page sizes, AdvancedAutoRasterized to automatically detect which pages to rasterize, and AdvancedRasterized for highly visual documents that utilize layers or other advanced PDF features (optional)</param>
+        /// <param name="rasterizeDpi">Optional: Set the DPI for the rasterization if using AdvancedRasterized conversion mode.  Default is 300 DPI. (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
-        ApiResponse<byte[]> EditPdfConvertToPdfAWithHttpInfo (System.IO.Stream inputFile, string conformanceLevel = null);
+        ApiResponse<byte[]> EditPdfConvertToPdfAWithHttpInfo (System.IO.Stream inputFile, string conformanceLevel = null, string conversionMode = null, Object rasterizeDpi = null);
         /// <summary>
         /// Decrypt and password-protect a PDF
         /// </summary>
@@ -429,8 +433,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="removeFormElements">Optional; Set to true to remove form elements, false to keep form elements.  Default is true. (optional)</param>
         /// <returns>byte[]</returns>
-        byte[] EditPdfRemoveAllAnnotations (System.IO.Stream inputFile);
+        byte[] EditPdfRemoveAllAnnotations (System.IO.Stream inputFile, bool? removeFormElements = null);
 
         /// <summary>
         /// Remove all PDF annotations, including comments in the document
@@ -440,8 +445,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="removeFormElements">Optional; Set to true to remove form elements, false to keep form elements.  Default is true. (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
-        ApiResponse<byte[]> EditPdfRemoveAllAnnotationsWithHttpInfo (System.IO.Stream inputFile);
+        ApiResponse<byte[]> EditPdfRemoveAllAnnotationsWithHttpInfo (System.IO.Stream inputFile, bool? removeFormElements = null);
         /// <summary>
         /// Remove a specific PDF annotation, comment in the document
         /// </summary>
@@ -705,8 +711,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <param name="conformanceLevel">Optional: Select the conformance level for PDF/A - specify &#39;1b&#39; for PDF/A-1b or specify &#39;2b&#39; for PDF/A-2b; default is PDF/A-1b (optional)</param>
+        /// <param name="conversionMode">Optional: Select the conversion mode for PDF/A 2b - default is Normal.  Use Advanced for improved support for edge cases such as different page sizes, AdvancedAutoRasterized to automatically detect which pages to rasterize, and AdvancedRasterized for highly visual documents that utilize layers or other advanced PDF features (optional)</param>
+        /// <param name="rasterizeDpi">Optional: Set the DPI for the rasterization if using AdvancedRasterized conversion mode.  Default is 300 DPI. (optional)</param>
         /// <returns>Task of byte[]</returns>
-        System.Threading.Tasks.Task<byte[]> EditPdfConvertToPdfAAsync (System.IO.Stream inputFile, string conformanceLevel = null);
+        System.Threading.Tasks.Task<byte[]> EditPdfConvertToPdfAAsync (System.IO.Stream inputFile, string conformanceLevel = null, string conversionMode = null, Object rasterizeDpi = null);
 
         /// <summary>
         /// Convert a PDF file to PDF/A
@@ -717,8 +725,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <param name="conformanceLevel">Optional: Select the conformance level for PDF/A - specify &#39;1b&#39; for PDF/A-1b or specify &#39;2b&#39; for PDF/A-2b; default is PDF/A-1b (optional)</param>
+        /// <param name="conversionMode">Optional: Select the conversion mode for PDF/A 2b - default is Normal.  Use Advanced for improved support for edge cases such as different page sizes, AdvancedAutoRasterized to automatically detect which pages to rasterize, and AdvancedRasterized for highly visual documents that utilize layers or other advanced PDF features (optional)</param>
+        /// <param name="rasterizeDpi">Optional: Set the DPI for the rasterization if using AdvancedRasterized conversion mode.  Default is 300 DPI. (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfConvertToPdfAAsyncWithHttpInfo (System.IO.Stream inputFile, string conformanceLevel = null);
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfConvertToPdfAAsyncWithHttpInfo (System.IO.Stream inputFile, string conformanceLevel = null, string conversionMode = null, Object rasterizeDpi = null);
         /// <summary>
         /// Decrypt and password-protect a PDF
         /// </summary>
@@ -1080,8 +1090,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="removeFormElements">Optional; Set to true to remove form elements, false to keep form elements.  Default is true. (optional)</param>
         /// <returns>Task of byte[]</returns>
-        System.Threading.Tasks.Task<byte[]> EditPdfRemoveAllAnnotationsAsync (System.IO.Stream inputFile);
+        System.Threading.Tasks.Task<byte[]> EditPdfRemoveAllAnnotationsAsync (System.IO.Stream inputFile, bool? removeFormElements = null);
 
         /// <summary>
         /// Remove all PDF annotations, including comments in the document
@@ -1091,8 +1102,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="removeFormElements">Optional; Set to true to remove form elements, false to keep form elements.  Default is true. (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfRemoveAllAnnotationsAsyncWithHttpInfo (System.IO.Stream inputFile);
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfRemoveAllAnnotationsAsyncWithHttpInfo (System.IO.Stream inputFile, bool? removeFormElements = null);
         /// <summary>
         /// Remove a specific PDF annotation, comment in the document
         /// </summary>
@@ -1597,10 +1609,12 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <param name="conformanceLevel">Optional: Select the conformance level for PDF/A - specify &#39;1b&#39; for PDF/A-1b or specify &#39;2b&#39; for PDF/A-2b; default is PDF/A-1b (optional)</param>
+        /// <param name="conversionMode">Optional: Select the conversion mode for PDF/A 2b - default is Normal.  Use Advanced for improved support for edge cases such as different page sizes, AdvancedAutoRasterized to automatically detect which pages to rasterize, and AdvancedRasterized for highly visual documents that utilize layers or other advanced PDF features (optional)</param>
+        /// <param name="rasterizeDpi">Optional: Set the DPI for the rasterization if using AdvancedRasterized conversion mode.  Default is 300 DPI. (optional)</param>
         /// <returns>byte[]</returns>
-        public byte[] EditPdfConvertToPdfA (System.IO.Stream inputFile, string conformanceLevel = null)
+        public byte[] EditPdfConvertToPdfA (System.IO.Stream inputFile, string conformanceLevel = null, string conversionMode = null, Object rasterizeDpi = null)
         {
-             ApiResponse<byte[]> localVarResponse = EditPdfConvertToPdfAWithHttpInfo(inputFile, conformanceLevel);
+             ApiResponse<byte[]> localVarResponse = EditPdfConvertToPdfAWithHttpInfo(inputFile, conformanceLevel, conversionMode, rasterizeDpi);
              return localVarResponse.Data;
         }
 
@@ -1610,8 +1624,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <param name="conformanceLevel">Optional: Select the conformance level for PDF/A - specify &#39;1b&#39; for PDF/A-1b or specify &#39;2b&#39; for PDF/A-2b; default is PDF/A-1b (optional)</param>
+        /// <param name="conversionMode">Optional: Select the conversion mode for PDF/A 2b - default is Normal.  Use Advanced for improved support for edge cases such as different page sizes, AdvancedAutoRasterized to automatically detect which pages to rasterize, and AdvancedRasterized for highly visual documents that utilize layers or other advanced PDF features (optional)</param>
+        /// <param name="rasterizeDpi">Optional: Set the DPI for the rasterization if using AdvancedRasterized conversion mode.  Default is 300 DPI. (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
-        public ApiResponse< byte[] > EditPdfConvertToPdfAWithHttpInfo (System.IO.Stream inputFile, string conformanceLevel = null)
+        public ApiResponse< byte[] > EditPdfConvertToPdfAWithHttpInfo (System.IO.Stream inputFile, string conformanceLevel = null, string conversionMode = null, Object rasterizeDpi = null)
         {
             // verify the required parameter 'inputFile' is set
             if (inputFile == null)
@@ -1640,6 +1656,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (conformanceLevel != null) localVarHeaderParams.Add("conformanceLevel", this.Configuration.ApiClient.ParameterToString(conformanceLevel)); // header parameter
+            if (conversionMode != null) localVarHeaderParams.Add("conversionMode", this.Configuration.ApiClient.ParameterToString(conversionMode)); // header parameter
+            if (rasterizeDpi != null) localVarHeaderParams.Add("rasterizeDpi", this.Configuration.ApiClient.ParameterToString(rasterizeDpi)); // header parameter
             if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
 
             // authentication (Apikey) required
@@ -1672,10 +1690,12 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <param name="conformanceLevel">Optional: Select the conformance level for PDF/A - specify &#39;1b&#39; for PDF/A-1b or specify &#39;2b&#39; for PDF/A-2b; default is PDF/A-1b (optional)</param>
+        /// <param name="conversionMode">Optional: Select the conversion mode for PDF/A 2b - default is Normal.  Use Advanced for improved support for edge cases such as different page sizes, AdvancedAutoRasterized to automatically detect which pages to rasterize, and AdvancedRasterized for highly visual documents that utilize layers or other advanced PDF features (optional)</param>
+        /// <param name="rasterizeDpi">Optional: Set the DPI for the rasterization if using AdvancedRasterized conversion mode.  Default is 300 DPI. (optional)</param>
         /// <returns>Task of byte[]</returns>
-        public async System.Threading.Tasks.Task<byte[]> EditPdfConvertToPdfAAsync (System.IO.Stream inputFile, string conformanceLevel = null)
+        public async System.Threading.Tasks.Task<byte[]> EditPdfConvertToPdfAAsync (System.IO.Stream inputFile, string conformanceLevel = null, string conversionMode = null, Object rasterizeDpi = null)
         {
-             ApiResponse<byte[]> localVarResponse = await EditPdfConvertToPdfAAsyncWithHttpInfo(inputFile, conformanceLevel);
+             ApiResponse<byte[]> localVarResponse = await EditPdfConvertToPdfAAsyncWithHttpInfo(inputFile, conformanceLevel, conversionMode, rasterizeDpi);
              return localVarResponse.Data;
 
         }
@@ -1686,8 +1706,10 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <param name="conformanceLevel">Optional: Select the conformance level for PDF/A - specify &#39;1b&#39; for PDF/A-1b or specify &#39;2b&#39; for PDF/A-2b; default is PDF/A-1b (optional)</param>
+        /// <param name="conversionMode">Optional: Select the conversion mode for PDF/A 2b - default is Normal.  Use Advanced for improved support for edge cases such as different page sizes, AdvancedAutoRasterized to automatically detect which pages to rasterize, and AdvancedRasterized for highly visual documents that utilize layers or other advanced PDF features (optional)</param>
+        /// <param name="rasterizeDpi">Optional: Set the DPI for the rasterization if using AdvancedRasterized conversion mode.  Default is 300 DPI. (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfConvertToPdfAAsyncWithHttpInfo (System.IO.Stream inputFile, string conformanceLevel = null)
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfConvertToPdfAAsyncWithHttpInfo (System.IO.Stream inputFile, string conformanceLevel = null, string conversionMode = null, Object rasterizeDpi = null)
         {
             // verify the required parameter 'inputFile' is set
             if (inputFile == null)
@@ -1716,6 +1738,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (conformanceLevel != null) localVarHeaderParams.Add("conformanceLevel", this.Configuration.ApiClient.ParameterToString(conformanceLevel)); // header parameter
+            if (conversionMode != null) localVarHeaderParams.Add("conversionMode", this.Configuration.ApiClient.ParameterToString(conversionMode)); // header parameter
+            if (rasterizeDpi != null) localVarHeaderParams.Add("rasterizeDpi", this.Configuration.ApiClient.ParameterToString(rasterizeDpi)); // header parameter
             if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
 
             // authentication (Apikey) required
@@ -4130,10 +4154,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="removeFormElements">Optional; Set to true to remove form elements, false to keep form elements.  Default is true. (optional)</param>
         /// <returns>byte[]</returns>
-        public byte[] EditPdfRemoveAllAnnotations (System.IO.Stream inputFile)
+        public byte[] EditPdfRemoveAllAnnotations (System.IO.Stream inputFile, bool? removeFormElements = null)
         {
-             ApiResponse<byte[]> localVarResponse = EditPdfRemoveAllAnnotationsWithHttpInfo(inputFile);
+             ApiResponse<byte[]> localVarResponse = EditPdfRemoveAllAnnotationsWithHttpInfo(inputFile, removeFormElements);
              return localVarResponse.Data;
         }
 
@@ -4142,8 +4167,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="removeFormElements">Optional; Set to true to remove form elements, false to keep form elements.  Default is true. (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
-        public ApiResponse< byte[] > EditPdfRemoveAllAnnotationsWithHttpInfo (System.IO.Stream inputFile)
+        public ApiResponse< byte[] > EditPdfRemoveAllAnnotationsWithHttpInfo (System.IO.Stream inputFile, bool? removeFormElements = null)
         {
             // verify the required parameter 'inputFile' is set
             if (inputFile == null)
@@ -4171,6 +4197,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (removeFormElements != null) localVarHeaderParams.Add("removeFormElements", this.Configuration.ApiClient.ParameterToString(removeFormElements)); // header parameter
             if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
 
             // authentication (Apikey) required
@@ -4202,10 +4229,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="removeFormElements">Optional; Set to true to remove form elements, false to keep form elements.  Default is true. (optional)</param>
         /// <returns>Task of byte[]</returns>
-        public async System.Threading.Tasks.Task<byte[]> EditPdfRemoveAllAnnotationsAsync (System.IO.Stream inputFile)
+        public async System.Threading.Tasks.Task<byte[]> EditPdfRemoveAllAnnotationsAsync (System.IO.Stream inputFile, bool? removeFormElements = null)
         {
-             ApiResponse<byte[]> localVarResponse = await EditPdfRemoveAllAnnotationsAsyncWithHttpInfo(inputFile);
+             ApiResponse<byte[]> localVarResponse = await EditPdfRemoveAllAnnotationsAsyncWithHttpInfo(inputFile, removeFormElements);
              return localVarResponse.Data;
 
         }
@@ -4215,8 +4243,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
+        /// <param name="removeFormElements">Optional; Set to true to remove form elements, false to keep form elements.  Default is true. (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfRemoveAllAnnotationsAsyncWithHttpInfo (System.IO.Stream inputFile)
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditPdfRemoveAllAnnotationsAsyncWithHttpInfo (System.IO.Stream inputFile, bool? removeFormElements = null)
         {
             // verify the required parameter 'inputFile' is set
             if (inputFile == null)
@@ -4244,6 +4273,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (removeFormElements != null) localVarHeaderParams.Add("removeFormElements", this.Configuration.ApiClient.ParameterToString(removeFormElements)); // header parameter
             if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
 
             // authentication (Apikey) required

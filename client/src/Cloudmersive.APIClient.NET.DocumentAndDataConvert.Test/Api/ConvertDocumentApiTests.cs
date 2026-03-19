@@ -398,7 +398,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             // TODO uncomment below to test the method and replace null with proper value
             //System.IO.Stream inputFile = null;
             //bool? bodyOnly = null;
-            //var response = instance.ConvertDocumentEmlToPdf(inputFile, bodyOnly);
+            //string pageSize = null;
+            //var response = instance.ConvertDocumentEmlToPdf(inputFile, bodyOnly, pageSize);
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         

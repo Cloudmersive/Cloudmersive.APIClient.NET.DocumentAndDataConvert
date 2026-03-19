@@ -1794,7 +1794,7 @@ Name | Type | Description  | Notes
 
 <a name="convertdocumentemltopdf"></a>
 # **ConvertDocumentEmlToPdf**
-> byte[] ConvertDocumentEmlToPdf (System.IO.Stream inputFile, bool? bodyOnly = null)
+> byte[] ConvertDocumentEmlToPdf (System.IO.Stream inputFile, bool? bodyOnly = null, string pageSize = null)
 
 Convert Email EML file to PDF document
 
@@ -1822,11 +1822,12 @@ namespace Example
             var apiInstance = new ConvertDocumentApi();
             var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
             var bodyOnly = true;  // bool? | Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional) 
+            var pageSize = pageSize_example;  // string | Optional: Page size for the PDF output.  Default is Letter.  Allowed values: Letter, Legal, Tabloid, Ledger, A0, A1, A2, A3, A4, A5, A6. (optional) 
 
             try
             {
                 // Convert Email EML file to PDF document
-                byte[] result = apiInstance.ConvertDocumentEmlToPdf(inputFile, bodyOnly);
+                byte[] result = apiInstance.ConvertDocumentEmlToPdf(inputFile, bodyOnly, pageSize);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1844,6 +1845,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
  **bodyOnly** | **bool?**| Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. | [optional] 
+ **pageSize** | **string**| Optional: Page size for the PDF output.  Default is Letter.  Allowed values: Letter, Legal, Tabloid, Ledger, A0, A1, A2, A3, A4, A5, A6. | [optional] 
 
 ### Return type
 

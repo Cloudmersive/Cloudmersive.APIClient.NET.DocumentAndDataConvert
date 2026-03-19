@@ -74,6 +74,14 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         {
             // TODO unit test for the property 'Documents'
         }
+        /// <summary>
+        /// Test the property 'CompatabilityMode'
+        /// </summary>
+        [Test]
+        public void CompatabilityModeTest()
+        {
+            // TODO unit test for the property 'CompatabilityMode'
+        }
 
     }
 

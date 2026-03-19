@@ -98,6 +98,22 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         {
             // TODO unit test for the property 'ScaleFactor'
         }
+        /// <summary>
+        /// Test the property 'AutoSanitize'
+        /// </summary>
+        [Test]
+        public void AutoSanitizeTest()
+        {
+            // TODO unit test for the property 'AutoSanitize'
+        }
+        /// <summary>
+        /// Test the property 'PageSize'
+        /// </summary>
+        [Test]
+        public void PageSizeTest()
+        {
+            // TODO unit test for the property 'PageSize'
+        }
 
     }
 

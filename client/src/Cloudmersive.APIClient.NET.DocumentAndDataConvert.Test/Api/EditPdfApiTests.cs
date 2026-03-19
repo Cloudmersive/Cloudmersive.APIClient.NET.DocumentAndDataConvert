@@ -85,7 +85,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
             // TODO uncomment below to test the method and replace null with proper value
             //System.IO.Stream inputFile = null;
             //string conformanceLevel = null;
-            //var response = instance.EditPdfConvertToPdfA(inputFile, conformanceLevel);
+            //string conversionMode = null;
+            //Object rasterizeDpi = null;
+            //var response = instance.EditPdfConvertToPdfA(inputFile, conformanceLevel, conversionMode, rasterizeDpi);
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
@@ -296,7 +298,8 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //System.IO.Stream inputFile = null;
-            //var response = instance.EditPdfRemoveAllAnnotations(inputFile);
+            //bool? removeFormElements = null;
+            //var response = instance.EditPdfRemoveAllAnnotations(inputFile, removeFormElements);
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         

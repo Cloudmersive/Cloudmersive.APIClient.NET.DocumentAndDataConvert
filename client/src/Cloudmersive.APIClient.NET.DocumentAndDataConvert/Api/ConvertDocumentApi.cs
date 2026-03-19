@@ -608,8 +608,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
+        /// <param name="pageSize">Optional: Page size for the PDF output.  Default is Letter.  Allowed values: Letter, Legal, Tabloid, Ledger, A0, A1, A2, A3, A4, A5, A6. (optional)</param>
         /// <returns>byte[]</returns>
-        byte[] ConvertDocumentEmlToPdf (System.IO.Stream inputFile, bool? bodyOnly = null);
+        byte[] ConvertDocumentEmlToPdf (System.IO.Stream inputFile, bool? bodyOnly = null, string pageSize = null);
 
         /// <summary>
         /// Convert Email EML file to PDF document
@@ -620,8 +621,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
+        /// <param name="pageSize">Optional: Page size for the PDF output.  Default is Letter.  Allowed values: Letter, Legal, Tabloid, Ledger, A0, A1, A2, A3, A4, A5, A6. (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
-        ApiResponse<byte[]> ConvertDocumentEmlToPdfWithHttpInfo (System.IO.Stream inputFile, bool? bodyOnly = null);
+        ApiResponse<byte[]> ConvertDocumentEmlToPdfWithHttpInfo (System.IO.Stream inputFile, bool? bodyOnly = null, string pageSize = null);
         /// <summary>
         /// Convert Email EML file to PNG image array
         /// </summary>
@@ -2528,8 +2530,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
+        /// <param name="pageSize">Optional: Page size for the PDF output.  Default is Letter.  Allowed values: Letter, Legal, Tabloid, Ledger, A0, A1, A2, A3, A4, A5, A6. (optional)</param>
         /// <returns>Task of byte[]</returns>
-        System.Threading.Tasks.Task<byte[]> ConvertDocumentEmlToPdfAsync (System.IO.Stream inputFile, bool? bodyOnly = null);
+        System.Threading.Tasks.Task<byte[]> ConvertDocumentEmlToPdfAsync (System.IO.Stream inputFile, bool? bodyOnly = null, string pageSize = null);
 
         /// <summary>
         /// Convert Email EML file to PDF document
@@ -2540,8 +2543,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
+        /// <param name="pageSize">Optional: Page size for the PDF output.  Default is Letter.  Allowed values: Letter, Legal, Tabloid, Ledger, A0, A1, A2, A3, A4, A5, A6. (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentEmlToPdfAsyncWithHttpInfo (System.IO.Stream inputFile, bool? bodyOnly = null);
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentEmlToPdfAsyncWithHttpInfo (System.IO.Stream inputFile, bool? bodyOnly = null, string pageSize = null);
         /// <summary>
         /// Convert Email EML file to PNG image array
         /// </summary>
@@ -7815,10 +7819,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
+        /// <param name="pageSize">Optional: Page size for the PDF output.  Default is Letter.  Allowed values: Letter, Legal, Tabloid, Ledger, A0, A1, A2, A3, A4, A5, A6. (optional)</param>
         /// <returns>byte[]</returns>
-        public byte[] ConvertDocumentEmlToPdf (System.IO.Stream inputFile, bool? bodyOnly = null)
+        public byte[] ConvertDocumentEmlToPdf (System.IO.Stream inputFile, bool? bodyOnly = null, string pageSize = null)
         {
-             ApiResponse<byte[]> localVarResponse = ConvertDocumentEmlToPdfWithHttpInfo(inputFile, bodyOnly);
+             ApiResponse<byte[]> localVarResponse = ConvertDocumentEmlToPdfWithHttpInfo(inputFile, bodyOnly, pageSize);
              return localVarResponse.Data;
         }
 
@@ -7828,8 +7833,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
+        /// <param name="pageSize">Optional: Page size for the PDF output.  Default is Letter.  Allowed values: Letter, Legal, Tabloid, Ledger, A0, A1, A2, A3, A4, A5, A6. (optional)</param>
         /// <returns>ApiResponse of byte[]</returns>
-        public ApiResponse< byte[] > ConvertDocumentEmlToPdfWithHttpInfo (System.IO.Stream inputFile, bool? bodyOnly = null)
+        public ApiResponse< byte[] > ConvertDocumentEmlToPdfWithHttpInfo (System.IO.Stream inputFile, bool? bodyOnly = null, string pageSize = null)
         {
             // verify the required parameter 'inputFile' is set
             if (inputFile == null)
@@ -7858,6 +7864,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (bodyOnly != null) localVarHeaderParams.Add("bodyOnly", this.Configuration.ApiClient.ParameterToString(bodyOnly)); // header parameter
+            if (pageSize != null) localVarHeaderParams.Add("PageSize", this.Configuration.ApiClient.ParameterToString(pageSize)); // header parameter
             if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
 
             // authentication (Apikey) required
@@ -7890,10 +7897,11 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
+        /// <param name="pageSize">Optional: Page size for the PDF output.  Default is Letter.  Allowed values: Letter, Legal, Tabloid, Ledger, A0, A1, A2, A3, A4, A5, A6. (optional)</param>
         /// <returns>Task of byte[]</returns>
-        public async System.Threading.Tasks.Task<byte[]> ConvertDocumentEmlToPdfAsync (System.IO.Stream inputFile, bool? bodyOnly = null)
+        public async System.Threading.Tasks.Task<byte[]> ConvertDocumentEmlToPdfAsync (System.IO.Stream inputFile, bool? bodyOnly = null, string pageSize = null)
         {
-             ApiResponse<byte[]> localVarResponse = await ConvertDocumentEmlToPdfAsyncWithHttpInfo(inputFile, bodyOnly);
+             ApiResponse<byte[]> localVarResponse = await ConvertDocumentEmlToPdfAsyncWithHttpInfo(inputFile, bodyOnly, pageSize);
              return localVarResponse.Data;
 
         }
@@ -7904,8 +7912,9 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
         /// <exception cref="Cloudmersive.APIClient.NET.DocumentAndDataConvert.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inputFile">Input file to perform the operation on.</param>
         /// <param name="bodyOnly">Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false. (optional)</param>
+        /// <param name="pageSize">Optional: Page size for the PDF output.  Default is Letter.  Allowed values: Letter, Legal, Tabloid, Ledger, A0, A1, A2, A3, A4, A5, A6. (optional)</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentEmlToPdfAsyncWithHttpInfo (System.IO.Stream inputFile, bool? bodyOnly = null)
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> ConvertDocumentEmlToPdfAsyncWithHttpInfo (System.IO.Stream inputFile, bool? bodyOnly = null, string pageSize = null)
         {
             // verify the required parameter 'inputFile' is set
             if (inputFile == null)
@@ -7934,6 +7943,7 @@ namespace Cloudmersive.APIClient.NET.DocumentAndDataConvert.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (bodyOnly != null) localVarHeaderParams.Add("bodyOnly", this.Configuration.ApiClient.ParameterToString(bodyOnly)); // header parameter
+            if (pageSize != null) localVarHeaderParams.Add("PageSize", this.Configuration.ApiClient.ParameterToString(pageSize)); // header parameter
             if (inputFile != null) localVarFileParams.Add("inputFile", this.Configuration.ApiClient.ParameterToFile("inputFile", inputFile));
 
             // authentication (Apikey) required

@@ -101,7 +101,7 @@ Name | Type | Description  | Notes
 
 <a name="editpdfconverttopdfa"></a>
 # **EditPdfConvertToPdfA**
-> byte[] EditPdfConvertToPdfA (System.IO.Stream inputFile, string conformanceLevel = null)
+> byte[] EditPdfConvertToPdfA (System.IO.Stream inputFile, string conformanceLevel = null, string conversionMode = null, Object rasterizeDpi = null)
 
 Convert a PDF file to PDF/A
 
@@ -129,11 +129,13 @@ namespace Example
             var apiInstance = new EditPdfApi();
             var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
             var conformanceLevel = conformanceLevel_example;  // string | Optional: Select the conformance level for PDF/A - specify '1b' for PDF/A-1b or specify '2b' for PDF/A-2b; default is PDF/A-1b (optional) 
+            var conversionMode = conversionMode_example;  // string | Optional: Select the conversion mode for PDF/A 2b - default is Normal.  Use Advanced for improved support for edge cases such as different page sizes, AdvancedAutoRasterized to automatically detect which pages to rasterize, and AdvancedRasterized for highly visual documents that utilize layers or other advanced PDF features (optional) 
+            var rasterizeDpi = new Object(); // Object | Optional: Set the DPI for the rasterization if using AdvancedRasterized conversion mode.  Default is 300 DPI. (optional) 
 
             try
             {
                 // Convert a PDF file to PDF/A
-                byte[] result = apiInstance.EditPdfConvertToPdfA(inputFile, conformanceLevel);
+                byte[] result = apiInstance.EditPdfConvertToPdfA(inputFile, conformanceLevel, conversionMode, rasterizeDpi);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -151,6 +153,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
  **conformanceLevel** | **string**| Optional: Select the conformance level for PDF/A - specify &#39;1b&#39; for PDF/A-1b or specify &#39;2b&#39; for PDF/A-2b; default is PDF/A-1b | [optional] 
+ **conversionMode** | **string**| Optional: Select the conversion mode for PDF/A 2b - default is Normal.  Use Advanced for improved support for edge cases such as different page sizes, AdvancedAutoRasterized to automatically detect which pages to rasterize, and AdvancedRasterized for highly visual documents that utilize layers or other advanced PDF features | [optional] 
+ **rasterizeDpi** | [**Object**](Object.md)| Optional: Set the DPI for the rasterization if using AdvancedRasterized conversion mode.  Default is 300 DPI. | [optional] 
 
 ### Return type
 
@@ -1197,7 +1201,7 @@ Name | Type | Description  | Notes
 
 <a name="editpdfremoveallannotations"></a>
 # **EditPdfRemoveAllAnnotations**
-> byte[] EditPdfRemoveAllAnnotations (System.IO.Stream inputFile)
+> byte[] EditPdfRemoveAllAnnotations (System.IO.Stream inputFile, bool? removeFormElements = null)
 
 Remove all PDF annotations, including comments in the document
 
@@ -1224,11 +1228,12 @@ namespace Example
 
             var apiInstance = new EditPdfApi();
             var inputFile = new System.IO.Stream(); // System.IO.Stream | Input file to perform the operation on.
+            var removeFormElements = true;  // bool? | Optional; Set to true to remove form elements, false to keep form elements.  Default is true. (optional) 
 
             try
             {
                 // Remove all PDF annotations, including comments in the document
-                byte[] result = apiInstance.EditPdfRemoveAllAnnotations(inputFile);
+                byte[] result = apiInstance.EditPdfRemoveAllAnnotations(inputFile, removeFormElements);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1245,6 +1250,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **inputFile** | **System.IO.Stream**| Input file to perform the operation on. | 
+ **removeFormElements** | **bool?**| Optional; Set to true to remove form elements, false to keep form elements.  Default is true. | [optional] 
 
 ### Return type
 
